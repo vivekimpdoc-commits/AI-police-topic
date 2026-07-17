@@ -305,6 +305,16 @@ const ModulePage = () => {
                     navigate('/public-safety');
                   } else if (moduleId === 'module-35') {
                     navigate('/emerging-tech');
+                  } else if (moduleId === 'module-36') {
+                    navigate('/tech-services');
+                  } else if (moduleId === 'module-37') {
+                    navigate('/infrastructure');
+                  } else if (moduleId === 'module-38') {
+                    navigate('/internal-security');
+                  } else if (moduleId === 'module-39') {
+                    navigate('/armoury');
+                  } else if (moduleId === 'module-40') {
+                    navigate('/legal-process');
                   } else if (moduleId === 'module-06') {
                     navigate('/command-center');
                   } else {

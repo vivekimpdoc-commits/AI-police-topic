@@ -45,6 +45,11 @@ import FleetDetailed from './pages/FleetDetailed';
 import RadioCommsDetailed from './pages/RadioCommsDetailed';
 import PublicSafetyDetailed from './pages/PublicSafetyDetailed';
 import EmergingTechDetailed from './pages/EmergingTechDetailed';
+import TechServicesDetailed from './pages/TechServicesDetailed';
+import InfrastructureDetailed from './pages/InfrastructureDetailed';
+import InternalSecurityDetailed from './pages/InternalSecurityDetailed';
+import ArmouryDetailed from './pages/ArmouryDetailed';
+import LegalProcessDetailed from './pages/LegalProcessDetailed';
 import CommandCenterDetailed from './pages/CommandCenterDetailed';
 import TopicContent from './pages/TopicContent';
 import TopicDetail from './pages/TopicDetail';
@@ -301,6 +306,31 @@ const AnimatedRoutes = () => {
         <Route path="/emerging-tech" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
             <EmergingTechDetailed />
+          </motion.div>
+        } />
+        <Route path="/tech-services" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <TechServicesDetailed />
+          </motion.div>
+        } />
+        <Route path="/infrastructure" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <InfrastructureDetailed />
+          </motion.div>
+        } />
+        <Route path="/internal-security" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <InternalSecurityDetailed />
+          </motion.div>
+        } />
+        <Route path="/armoury" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ArmouryDetailed />
+          </motion.div>
+        } />
+        <Route path="/legal-process" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <LegalProcessDetailed />
           </motion.div>
         } />
         <Route path="/command-center" element={

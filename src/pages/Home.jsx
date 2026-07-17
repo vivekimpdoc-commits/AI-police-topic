@@ -98,6 +98,11 @@ const Home = () => {
       case 'module-31': return '/radio-comms';
       case 'module-34': return '/public-safety';
       case 'module-35': return '/emerging-tech';
+      case 'module-36': return '/tech-services';
+      case 'module-37': return '/infrastructure';
+      case 'module-38': return '/internal-security';
+      case 'module-39': return '/armoury';
+      case 'module-40': return '/legal-process';
       default: return `/module/${id}`;
     }
   };
