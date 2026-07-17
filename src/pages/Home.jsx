@@ -93,6 +93,11 @@ const Home = () => {
       case 'module-26': return '/anti-terror';
       case 'module-27': return '/financial-crime';
       case 'module-28': return '/narcotics';
+      case 'module-29': return '/police-station';
+      case 'module-30': return '/fleet-logistics';
+      case 'module-31': return '/radio-comms';
+      case 'module-34': return '/public-safety';
+      case 'module-35': return '/emerging-tech';
       default: return `/module/${id}`;
     }
   };

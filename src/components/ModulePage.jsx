@@ -295,6 +295,16 @@ const ModulePage = () => {
                     navigate('/financial-crime');
                   } else if (moduleId === 'module-28') {
                     navigate('/narcotics');
+                  } else if (moduleId === 'module-29') {
+                    navigate('/police-station');
+                  } else if (moduleId === 'module-30') {
+                    navigate('/fleet-logistics');
+                  } else if (moduleId === 'module-31') {
+                    navigate('/radio-comms');
+                  } else if (moduleId === 'module-34') {
+                    navigate('/public-safety');
+                  } else if (moduleId === 'module-35') {
+                    navigate('/emerging-tech');
                   } else if (moduleId === 'module-06') {
                     navigate('/command-center');
                   } else {
