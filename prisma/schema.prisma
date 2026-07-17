@@ -1,0 +1,173 @@
+// Enterprise AI Command Platform - Database Schema
+// Focus: Command & Control, AIOps, Governance, Analytics, Executive Dashboard
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ------------------------------------------------------
+// 1. OPERATIONS (AIOps & Command Center)
+// ------------------------------------------------------
+
+model Incident {
+  id              String   @id @default(uuid())
+  incidentNumber  String   @unique
+  title           String
+  description     String
+  severity        SeverityLevel @default(LOW)
+  status          IncidentStatus @default(OPEN)
+  
+  rootCause       String?
+  aiRecommendation String?
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+enum SeverityLevel {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}
+
+enum IncidentStatus {
+  OPEN
+  IN_PROGRESS
+  RESOLVED
+  CLOSED
+}
+
+model Asset {
+  id           String   @id @default(uuid())
+  assetName    String
+  assetType    String   // e.g., "SERVER", "DATABASE", "AI_MODEL"
+  ipAddress    String?
+  status       String   @default("ACTIVE")
+  
+  createdAt    DateTime @default(now())
+}
+
+model CMDB {
+  id           String   @id @default(uuid())
+  configItem   String
+  version      String
+  dependencies Json?    // Stores relationships to other assets
+  lastUpdated  DateTime @default(now())
+}
+
+model ServiceTicket {
+  id           String   @id @default(uuid())
+  ticketId     String   @unique
+  requester    String
+  issueType    String
+  status       String   @default("NEW")
+  createdAt    DateTime @default(now())
+}
+
+// ------------------------------------------------------
+// 2. GOVERNANCE & COMPLIANCE
+// ------------------------------------------------------
+
+model AuditLog {
+  id          String   @id @default(uuid())
+  action      String   
+  entityType  String?  
+  details     Json?    
+  ipAddress   String?
+  userId      String?
+  createdAt   DateTime @default(now())
+}
+
+model Policy {
+  id          String   @id @default(uuid())
+  policyName  String
+  version     String
+  status      String   @default("DRAFT") // DRAFT, APPROVED, RETIRED
+  approvedBy  String?
+  createdAt   DateTime @default(now())
+}
+
+model RiskMatrix {
+  id           String   @id @default(uuid())
+  riskName     String
+  likelihood   Int      // 1-5 scale
+  impact       Int      // 1-5 scale
+  mitigation   String?
+  createdAt    DateTime @default(now())
+}
+
+model ComplianceStandard {
+  id             String   @id @default(uuid())
+  standardName   String   @unique // e.g., "ISO 42001", "SOC2"
+  complianceScore Float   // e.g., 98.5
+  lastAuditDate  DateTime
+  nextAuditDate  DateTime?
+}
+
+// ------------------------------------------------------
+// 3. TELEMETRY (Real-time Command & Control)
+// ------------------------------------------------------
+
+model ServerMetric {
+  id           String   @id @default(uuid())
+  serverId     String
+  cpuUsage     Float
+  memoryUsage  Float
+  diskIO       Float
+  timestamp    DateTime @default(now())
+}
+
+model GPULoad {
+  id           String   @id @default(uuid())
+  clusterId    String
+  gpuUtilization Float
+  temperature  Float
+  memoryAlloc  Float
+  timestamp    DateTime @default(now())
+}
+
+model ContainerHealth {
+  id           String   @id @default(uuid())
+  podName      String
+  namespace    String
+  status       String   // RUNNING, PENDING, CRASH_LOOP
+  restartCount Int      @default(0)
+  timestamp    DateTime @default(now())
+}
+
+// ------------------------------------------------------
+// 4. ENTERPRISE ANALYTICS & EXECUTIVE DASHBOARD
+// ------------------------------------------------------
+
+model KPI {
+  id           String   @id @default(uuid())
+  kpiName      String
+  currentValue Float
+  targetValue  Float
+  department   String
+  recordedAt   DateTime @default(now())
+}
+
+model StrategicGoal {
+  id           String   @id @default(uuid())
+  goalTitle    String
+  owner        String
+  progress     Float    // 0 to 100 percentage
+  dueDate      DateTime
+  createdAt    DateTime @default(now())
+}
+
+model OKR {
+  id           String   @id @default(uuid())
+  objective    String
+  keyResult    String
+  status       String   // ON_TRACK, AT_RISK, COMPLETED
+  score        Float
+  createdAt    DateTime @default(now())
+}

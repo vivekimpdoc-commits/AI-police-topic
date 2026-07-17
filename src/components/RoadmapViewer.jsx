@@ -1,0 +1,205 @@
+import React, { useState, useEffect } from 'react';
+import { CheckCircle, Circle, BrainCircuit, ArrowRight, BookOpen, Settings, AlertCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+const RoadmapViewer = ({ topic }) => {
+  const [roadmap, setRoadmap] = useState(null);
+  const [completedSteps, setCompletedSteps] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+  const [usingMockData, setUsingMockData] = useState(false);
+
+  // In local dev, assuming FastAPI is running on port 8000
+  const API_BASE_URL = 'http://localhost:8000/api';
+  const userId = "demo_user_001"; // Simulated user
+
+  useEffect(() => {
+    fetchData();
+  }, [topic]);
+
+  const fetchData = async () => {
+    setLoading(true);
+    setError('');
+    try {
+      // 1. Fetch or Generate Roadmap
+      const roadmapRes = await fetch(`${API_BASE_URL}/generate-roadmap`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ topic, userId })
+      });
+      
+      if (!roadmapRes.ok) {
+        throw new Error("FastAPI Backend is not running or failed to generate.");
+      }
+      
+      const roadmapData = await roadmapRes.json();
+      setRoadmap(roadmapData);
+
+      // Check if it's the mock response meaning no API key was provided
+      if (roadmapData.steps && roadmapData.steps[0].id === 'step_1' && roadmapData.steps[0].title.startsWith('Introduction to')) {
+         setUsingMockData(true);
+      } else {
+         setUsingMockData(false);
+      }
+
+      // 2. Fetch User Progress
+      const progressRes = await fetch(`${API_BASE_URL}/progress/${userId}/${topic}`);
+      if (progressRes.ok) {
+        const progressData = await progressRes.json();
+        setCompletedSteps(progressData.completed_steps || []);
+      }
+    } catch (err) {
+      setError('Unable to connect to the AI Roadmap server. Make sure FastAPI is running on port 8000.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const toggleStep = async (stepId, isCompleted) => {
+    // Optimistic UI update
+    const newCompleted = isCompleted 
+      ? [...completedSteps, stepId] 
+      : completedSteps.filter(id => id !== stepId);
+    setCompletedSteps(newCompleted);
+
+    // Save to backend
+    try {
+      await fetch(`${API_BASE_URL}/progress`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          userId,
+          topic,
+          stepId,
+          completed: isCompleted
+        })
+      });
+    } catch (e) {
+      console.error("Failed to sync progress:", e);
+    }
+  };
+
+  if (loading) {
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '4rem', color: '#06b6d4' }}>
+        <motion.div animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 2, ease: "linear" }}>
+          <BrainCircuit size={48} />
+        </motion.div>
+        <h3 style={{ marginTop: '1.5rem', letterSpacing: '2px' }}>AI IS GENERATING YOUR ROADMAP...</h3>
+        <p style={{ color: '#64748b', fontSize: '0.9rem' }}>Analyzing "{topic}" using Gemini 1.5 Pro</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div style={{ background: 'rgba(239, 68, 68, 0.1)', border: '1px solid #ef4444', padding: '2rem', borderRadius: '12px', color: '#ef4444', textAlign: 'center', margin: '2rem 0' }}>
+        <AlertCircle size={32} style={{ margin: '0 auto 1rem' }} />
+        <h3 style={{ margin: '0 0 0.5rem' }}>Connection Error</h3>
+        <p style={{ margin: 0, color: '#fca5a5' }}>{error}</p>
+        <p style={{ marginTop: '1rem', fontSize: '0.85rem' }}>Please start the Python backend: <code>cd fastapi-backend && uvicorn main:app --reload</code></p>
+      </div>
+    );
+  }
+
+  if (!roadmap) return null;
+
+  // Calculate Progress
+  const totalSteps = roadmap.steps.length;
+  const progressPercentage = totalSteps === 0 ? 0 : Math.round((completedSteps.length / totalSteps) * 100);
+
+  return (
+    <div style={{ background: 'rgba(15, 23, 42, 0.8)', border: '1px solid rgba(6, 182, 212, 0.2)', borderRadius: '16px', overflow: 'hidden' }}>
+      
+      {/* Header */}
+      <div style={{ background: 'rgba(6, 182, 212, 0.1)', padding: '2rem', borderBottom: '1px solid rgba(6, 182, 212, 0.2)' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+          <div>
+            <span style={{ color: '#06b6d4', fontSize: '0.8rem', fontWeight: 'bold', letterSpacing: '2px', textTransform: 'uppercase' }}>
+              AI Learning Roadmap
+            </span>
+            <h1 style={{ margin: '0.5rem 0', color: '#fff', fontSize: '2.5rem', textTransform: 'capitalize' }}>
+              {roadmap.topic || topic}
+            </h1>
+            <p style={{ color: '#94a3b8', margin: 0, maxWidth: '600px' }}>
+              Step-by-step interactive syllabus generated by AI. Track your progress below.
+            </p>
+          </div>
+          <div style={{ textAlign: 'right' }}>
+            <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#10b981' }}>{progressPercentage}%</div>
+            <div style={{ color: '#64748b', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Completed</div>
+          </div>
+        </div>
+
+        {usingMockData && (
+          <div style={{ marginTop: '1.5rem', background: 'rgba(245, 158, 11, 0.1)', border: '1px solid #f59e0b', padding: '0.75rem', borderRadius: '8px', color: '#fcd34d', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <Settings size={16} />
+            <span>Currently showing a <strong>Mock Roadmap</strong> because GEMINI_API_KEY is missing in the backend .env file. Add your key to generate real dynamic roadmaps.</span>
+          </div>
+        )}
+      </div>
+      
+      {/* Progress Bar */}
+      <div style={{ height: '4px', background: '#1e293b', width: '100%' }}>
+        <div style={{ 
+          width: `${progressPercentage}%`, 
+          background: 'linear-gradient(90deg, #06b6d4, #10b981)', 
+          height: '100%', 
+          transition: 'width 0.5s ease-in-out'
+        }}></div>
+      </div>
+
+      {/* Tree View */}
+      <div style={{ padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+        {roadmap.steps.map((step, index) => {
+          const isDone = completedSteps.includes(step.id);
+          
+          return (
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: index * 0.1 }}
+              key={step.id} 
+              style={{ 
+                display: 'flex', gap: '1.5rem', background: isDone ? 'rgba(16, 185, 129, 0.05)' : '#1e293b', 
+                padding: '1.5rem', borderRadius: '12px', border: '1px solid',
+                borderColor: isDone ? 'rgba(16, 185, 129, 0.3)' : 'rgba(255,255,255,0.05)',
+                transition: 'all 0.3s'
+              }}
+            >
+              
+              <div 
+                onClick={() => toggleStep(step.id, !isDone)}
+                style={{ cursor: 'pointer', marginTop: '2px', color: isDone ? '#10b981' : '#475569' }}
+              >
+                {isDone ? <CheckCircle size={28} /> : <Circle size={28} />}
+              </div>
+              
+              <div style={{ flex: 1 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
+                  <span style={{ color: isDone ? '#10b981' : '#06b6d4', fontSize: '0.85rem', fontWeight: 'bold' }}>STEP {index + 1}</span>
+                  <ArrowRight size={14} color="#64748b" />
+                  <h3 style={{ margin: 0, color: isDone ? '#fff' : '#f8fafc', fontSize: '1.2rem' }}>{step.title}</h3>
+                </div>
+                
+                <p style={{ margin: '0 0 1rem 0', color: '#94a3b8', lineHeight: '1.6' }}>{step.description}</p>
+                
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+                  {step.subtopics && step.subtopics.map((sub, i) => (
+                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '6px', background: 'rgba(0,0,0,0.2)', padding: '6px 12px', borderRadius: '6px', fontSize: '0.85rem', color: '#cbd5e1', border: '1px solid rgba(255,255,255,0.05)' }}>
+                      <BookOpen size={14} color="#06b6d4" />
+                      <span>{sub}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </motion.div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default RoadmapViewer;

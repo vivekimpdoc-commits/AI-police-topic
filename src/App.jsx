@@ -5,8 +5,23 @@ import './index.css';
 import { modules } from './data/modules';
 import ModulePage from './components/ModulePage';
 import Home from './pages/Home';
-import HrmsLanding from './pages/HrmsLanding';
-import FinanceLanding from './pages/FinanceLanding';
+import HRMSDetailed from './pages/HrmsDetailed';
+import FinanceDetailed from './pages/FinanceDetailed';
+import ProcurementDetailed from './pages/ProcurementDetailed';
+import AuditDetailed from './pages/AuditDetailed';
+import DocumentDetailed from './pages/DocumentDetailed';
+import AgentDetailed from './pages/AgentDetailed';
+import KnowledgeDetailed from './pages/KnowledgeDetailed';
+import DecisionDetailed from './pages/DecisionDetailed';
+import TwinDetailed from './pages/TwinDetailed';
+import InvestigationLanding from './pages/InvestigationLanding';
+import CopilotLanding from './pages/CopilotLanding';
+import MultimodalLanding from './pages/MultimodalLanding';
+import ModelManagementLanding from './pages/ModelManagementLanding';
+import DataLakeDetailed from './pages/DataLakeDetailed';
+import ResearchLabLanding from './pages/ResearchLabLanding';
+import CommandCenterDetailed from './pages/CommandCenterDetailed';
+import TopicContent from './pages/TopicContent';
 import TopicDetail from './pages/TopicDetail';
 import { LanguageProvider, useLanguage } from './context/LanguageContext';
 import { Globe, ShieldAlert } from 'lucide-react';
@@ -65,12 +80,87 @@ const AnimatedRoutes = () => {
         } />
         <Route path="/hrms" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
-            <HrmsLanding />
+            <HRMSDetailed />
           </motion.div>
         } />
         <Route path="/finance" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
-            <FinanceLanding />
+            <FinanceDetailed />
+          </motion.div>
+        } />
+        <Route path="/procurement" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ProcurementDetailed />
+          </motion.div>
+        } />
+        <Route path="/audit" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <AuditDetailed />
+          </motion.div>
+        } />
+        <Route path="/document" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <DocumentDetailed />
+          </motion.div>
+        } />
+        <Route path="/multi-agent" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <AgentDetailed />
+          </motion.div>
+        } />
+        <Route path="/knowledge-graph" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <KnowledgeDetailed />
+          </motion.div>
+        } />
+        <Route path="/decision-support" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <DecisionDetailed />
+          </motion.div>
+        } />
+        <Route path="/digital-twin" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <TwinDetailed />
+          </motion.div>
+        } />
+        <Route path="/investigation-assistant" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <InvestigationLanding />
+          </motion.div>
+        } />
+        <Route path="/copilot" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CopilotLanding />
+          </motion.div>
+        } />
+        <Route path="/multimodal" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <MultimodalLanding />
+          </motion.div>
+        } />
+        <Route path="/model-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ModelManagementLanding />
+          </motion.div>
+        } />
+        <Route path="/data-lake" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <DataLakeDetailed />
+          </motion.div>
+        } />
+        <Route path="/research-lab" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ResearchLabLanding />
+          </motion.div>
+        } />
+        <Route path="/command-center" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CommandCenterDetailed />
+          </motion.div>
+        } />
+        <Route path="/topic/:topicName/content" element={
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }} className="page-transition">
+            <TopicContent />
           </motion.div>
         } />
         <Route path="/topic/:topicName" element={

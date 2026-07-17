@@ -24,7 +24,7 @@ const CyberCard = ({ topic, description, onClick }) => {
       style={{
         width: '100%',
         maxWidth: '420px',
-        height: '300px',
+        minHeight: '320px',
         background: 'rgba(15, 23, 42, 0.6)', // Police Blue / Navy Glass
         backdropFilter: 'blur(16px)',
         border: '1px solid rgba(6, 182, 212, 0.3)',
@@ -47,12 +47,12 @@ const CyberCard = ({ topic, description, onClick }) => {
           <Cpu size={24} color="#06b6d4" style={{ marginRight: '12px' }} />
           <h3 style={{ margin: 0, fontSize: '1.1rem', letterSpacing: '1px', textTransform: 'uppercase', color: '#fff' }}>{topic}</h3>
         </div>
-        
+
         <p style={{ color: '#94a3b8', fontSize: '0.85rem', lineHeight: '1.6' }}>
           {description}
         </p>
       </div>
-      
+
       <div style={{ zIndex: 1, marginTop: 'auto' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '0.8rem' }}>
           <span style={{ fontSize: '0.75rem', color: '#06b6d4', letterSpacing: '1px', textTransform: 'uppercase', display: 'flex', alignItems: 'center' }}>
@@ -60,16 +60,16 @@ const CyberCard = ({ topic, description, onClick }) => {
           </span>
           <span style={{ fontSize: '0.85rem', fontWeight: 'bold', color: '#fff' }}>{load}%</span>
         </div>
-        
+
         <div style={{ width: '100%', height: '6px', background: 'rgba(255,255,255,0.1)', borderRadius: '3px', overflow: 'hidden', marginBottom: '1.5rem' }}>
-          <motion.div 
-            animate={{ width: `${load}%` }} 
+          <motion.div
+            animate={{ width: `${load}%` }}
             transition={{ duration: 1, ease: 'easeInOut' }}
             style={{ height: '100%', background: '#06b6d4', boxShadow: '0 0 10px #06b6d4' }}
           ></motion.div>
         </div>
 
-        <button 
+        <button
           onClick={onClick}
           onMouseOver={(e) => {
             e.currentTarget.style.background = 'rgba(6, 182, 212, 0.1)';
@@ -81,8 +81,8 @@ const CyberCard = ({ topic, description, onClick }) => {
             e.currentTarget.style.boxShadow = 'none';
             e.currentTarget.style.transform = 'scale(1)';
           }}
-          style={{ 
-            background: 'transparent', border: '1px solid #06b6d4', 
+          style={{
+            background: 'transparent', border: '1px solid #06b6d4',
             color: '#06b6d4', padding: '0.6rem 1.2rem', borderRadius: '8px',
             cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
             textTransform: 'uppercase', fontSize: '0.75rem', letterSpacing: '1px',
@@ -121,8 +121,8 @@ const ModulePage = () => {
   const subTopics = language === 'en' ? mod.subTopicsEn : mod.subTopicsHi;
 
   return (
-    <div style={{ 
-      minHeight: '100vh', 
+    <div style={{
+      minHeight: '100vh',
       background: 'transparent', // Uses global index.css background
       color: '#f8fafc',
       padding: '2rem',
@@ -141,7 +141,7 @@ const ModulePage = () => {
 
       <div style={{ position: 'relative', zIndex: 1, marginBottom: '3rem', borderBottom: '1px solid rgba(6, 182, 212, 0.2)', paddingBottom: '1.5rem', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
         <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-          <button 
+          <button
             onClick={() => navigate(-1)}
             style={{
               background: 'rgba(15, 23, 42, 0.8)',
@@ -161,7 +161,7 @@ const ModulePage = () => {
           >
             <ArrowLeft size={20} />
           </button>
-          
+
           <div>
             <h2 style={{ fontSize: '2.5rem', margin: 0, letterSpacing: '2px', textTransform: 'uppercase', color: '#fff', textShadow: '0 0 15px rgba(6, 182, 212, 0.5)' }}>
               {moduleName}
@@ -173,7 +173,7 @@ const ModulePage = () => {
         </div>
       </div>
 
-      <motion.div 
+      <motion.div
         style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
@@ -188,23 +188,75 @@ const ModulePage = () => {
         animate="show"
       >
         {subTopics.map((topic, idx) => {
-          // Construct a dynamic description
-          let desc = `${t.executingAlgos} ${topic}. Real-time monitoring, telemetry analysis, and secure configurations active for ${moduleName} subsystems.`;
-          
-          if (moduleName.toUpperCase().includes('HUMAN RESOURCE') || moduleName.toUpperCase().includes('मानव संसाधन')) {
-            desc = `Managing police personnel through Artificial Intelligence. Real-time monitoring of service records, attendance, duty allocation, transfers, promotions, training, performance, workforce analytics, and HR intelligence for ${topic}.`;
-          }
-          
+          // Dynamic Description Generator for 1000+ Topics
+          const generateDescription = (modName, topicName) => {
+            const isHindi = language === 'hi';
+            const m = modName.toUpperCase();
+            
+            if (isHindi) {
+              if (m.includes('मानव संसाधन') || m.includes('HRMS')) return `कृत्रिम बुद्धिमत्ता (AI) के माध्यम से पुलिस कर्मियों का प्रबंधन। ${topicName} के लिए रीयल-टाइम ट्रैकिंग।`;
+              if (m.includes('कमांड')) return `${topicName} के लिए उन्नत AI एल्गोरिदम। सिस्टम की निगरानी और सुरक्षित कॉन्फ़िगरेशन।`;
+              if (m.includes('नागरिक')) return `नागरिकों के लिए बेहतर सुविधाएँ। ${topicName} के माध्यम से त्वरित और पारदर्शी सेवाएं।`;
+              if (m.includes('शिकायत') || m.includes('एफआईआर')) return `${topicName} के लिए स्वचालित प्रणाली। त्वरित समाधान और AI-आधारित विश्लेषण।`;
+              if (m.includes('यातायात')) return `${topicName} के जरिए स्मार्ट ट्रैफिक मैनेजमेंट और एआई आधारित चालान सिस्टम।`;
+              return `${topicName} के लिए AI-संचालित मॉड्यूल। रीयल-टाइम डेटा मॉनिटरिंग और उन्नत मशीन लर्निंग का उपयोग करके ${modName} को सशक्त बनाना।`;
+            } else {
+              if (m.includes('HUMAN RESOURCE') || m.includes('HRMS')) return `Managing police personnel through Artificial Intelligence. Real-time monitoring of service records and duty allocation for ${topicName}.`;
+              if (m.includes('COMMAND') || m.includes('GOVERNANCE')) return `Executing advanced AI algorithms for ${topicName}. Ensuring real-time monitoring, telemetry analysis, and secure configurations.`;
+              if (m.includes('CITIZEN')) return `Enhancing public service delivery. ${topicName} provides transparent, fast, and AI-driven interfaces for citizens.`;
+              if (m.includes('COMPLAINT') || m.includes('FIR')) return `Automated grievance redressal via ${topicName}. Featuring NLP for instant FIR classification and analytics.`;
+              if (m.includes('INTELLIGENCE') || m.includes('INVESTIGATION') || m.includes('CRIME')) return `Powering investigative operations with ${topicName}. Utilizing deep learning to cross-reference databases and generate actionable intelligence.`;
+              if (m.includes('CYBER')) return `Securing digital infrastructure via ${topicName}. Continuous threat hunting, anomaly detection, and automated mitigation.`;
+              if (m.includes('TRAFFIC')) return `Optimizing city mobility with ${topicName}. Smart traffic routing, automated challan generation, and predictive analytics.`;
+              if (m.includes('FORENSIC') || m.includes('EVIDENCE')) return `Digitizing evidence management through ${topicName}. Immutable records and AI-assisted forensic analysis.`;
+              if (m.includes('FINANCE') || m.includes('PROCUREMENT') || m.includes('AUDIT')) return `Streamlining financial operations using ${topicName}. AI-driven budget forecasting, automated auditing, and fraud detection.`;
+              
+              // Default English
+              return `Enterprise AI module for ${topicName}. Leveraging machine learning and real-time data analytics to optimize workflows within the ${modName} division.`;
+            }
+          };
+
+          const desc = generateDescription(moduleName, topic);
+
           return (
             <motion.div key={idx} variants={itemVars} style={{ display: 'flex', justifyContent: 'center' }}>
-              <CyberCard 
+              <CyberCard
                 topic={topic}
                 description={desc}
                 onClick={() => {
-                  if (topic.includes('FINANCE & BUDGET') || topic.includes('वित्त और बजट')) {
+                  const upperTopic = topic.toUpperCase();
+                  if (moduleId === 'module-33' || moduleId === 'module-85' || upperTopic.includes('FINANCE') || topic.includes('वित्त')) {
                     navigate('/finance');
-                  } else if (topic.includes('AI HRMS') || topic.includes('एआई एचआरएमएस')) {
+                  } else if (moduleId === 'module-32' || upperTopic.includes('HRMS') || topic.includes('एचआरएमएस')) {
                     navigate('/hrms');
+                  } else if (upperTopic.includes('PROCUREMENT') || topic.includes('खरीद')) {
+                    navigate('/procurement');
+                  } else if (upperTopic.includes('AUDIT') || topic.includes('ऑडिट')) {
+                    navigate('/audit');
+                  } else if (upperTopic.includes('DOCUMENT') || upperTopic.includes('DMS') || topic.includes('दस्तावेज़')) {
+                    navigate('/document');
+                  } else if (upperTopic.includes('MULTI-AGENT') || upperTopic.includes('MULTI AGENT')) {
+                    navigate('/multi-agent');
+                  } else if (upperTopic.includes('KNOWLEDGE GRAPH') || upperTopic.includes('KNOWLEDGE')) {
+                    navigate('/knowledge-graph');
+                  } else if (upperTopic.includes('DECISION SUPPORT') || upperTopic.includes('DECISION')) {
+                    navigate('/decision-support');
+                  } else if (upperTopic.includes('DIGITAL TWIN')) {
+                    navigate('/digital-twin');
+                  } else if (upperTopic.includes('INVESTIGATION') || upperTopic.includes('AUTONOMOUS')) {
+                    navigate('/investigation-assistant');
+                  } else if (upperTopic.includes('COPILOT') || upperTopic.includes('CONVERSATIONAL')) {
+                    navigate('/copilot');
+                  } else if (upperTopic.includes('MULTIMODAL')) {
+                    navigate('/multimodal');
+                  } else if (upperTopic.includes('MODEL MANAGEMENT')) {
+                    navigate('/model-management');
+                  } else if (upperTopic.includes('DATA LAKE') || upperTopic.includes('BIG DATA')) {
+                    navigate('/data-lake');
+                  } else if (upperTopic.includes('RESEARCH') || upperTopic.includes('INNOVATION')) {
+                    navigate('/research-lab');
+                  } else if (moduleId === 'module-06') {
+                    navigate('/command-center');
                   } else {
                     navigate(`/topic/${encodeURIComponent(topic)}`);
                   }

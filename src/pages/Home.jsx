@@ -22,12 +22,12 @@ const LiveTelemetry = () => {
   }, []);
 
   return (
-    <div style={{ display: 'flex', gap: '2rem', padding: '1.5rem', background: 'rgba(23, 37, 69, 0.6)', backdropFilter: 'blur(10px)', border: '1px solid rgba(6, 182, 212, 0.3)', borderRadius: '12px', marginBottom: '2rem', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>
+    <div style={{ display: 'flex', gap: '2rem', padding: '1.5rem', background: 'var(--color-panel)', backdropFilter: 'blur(10px)', border: '1px solid var(--glass-border)', borderRadius: '12px', marginBottom: '2rem', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>
       <div style={{ flex: 1, display: 'flex', alignItems: 'center', gap: '15px', borderRight: '1px solid rgba(255,255,255,0.1)' }}>
-        <Network size={32} color="#06b6d4" />
+        <Network size={32} color="var(--color-primary)" />
         <div>
           <div style={{ fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px' }}>Active AI Nodes</div>
-          <div style={{ fontSize: '1.5rem', fontWeight: 800, color: '#fff', textShadow: '0 0 10px rgba(6, 182, 212, 0.5)' }}>{nodes.toLocaleString()}</div>
+          <div style={{ fontSize: '1.5rem', fontWeight: 800, color: '#fff', textShadow: '0 0 10px var(--glass-border)' }}>{nodes.toLocaleString()}</div>
         </div>
       </div>
       <div style={{ flex: 1, display: 'flex', alignItems: 'center', gap: '15px', borderRight: '1px solid rgba(255,255,255,0.1)' }}>
@@ -84,17 +84,17 @@ const Home = () => {
         
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2rem' }}>
           <div>
-            <h1 className="neon-text" style={{ fontSize: '3rem', margin: 0, letterSpacing: '2px', textShadow: '0 0 20px rgba(6, 182, 212, 0.5)' }}>
+            <h1 className="neon-text" style={{ fontSize: '3rem', margin: 0, letterSpacing: '2px', textShadow: '0 0 20px var(--glass-border)' }}>
               CENTRAL COMMAND
             </h1>
-            <div style={{ color: '#06b6d4', fontSize: '1rem', marginTop: '0.5rem', letterSpacing: '3px', textTransform: 'uppercase', fontWeight: 600 }}>
-              <span style={{ display: 'inline-block', width: '8px', height: '8px', background: '#06b6d4', borderRadius: '50%', marginRight: '10px', boxShadow: '0 0 10px #06b6d4' }}></span>
+            <div style={{ color: 'var(--color-primary)', fontSize: '1rem', marginTop: '0.5rem', letterSpacing: '3px', textTransform: 'uppercase', fontWeight: 600 }}>
+              <span style={{ display: 'inline-block', width: '8px', height: '8px', background: 'var(--color-primary)', borderRadius: '50%', marginRight: '10px', boxShadow: '0 0 10px var(--color-primary)' }}></span>
               NEURAL NETWORK SUBSYSTEMS
             </div>
           </div>
           
           <div style={{ position: 'relative', width: '400px' }}>
-            <Search size={20} style={{ position: 'absolute', left: '20px', top: '50%', transform: 'translateY(-50%)', color: '#06b6d4' }} />
+            <Search size={20} style={{ position: 'absolute', left: '20px', top: '50%', transform: 'translateY(-50%)', color: 'var(--color-primary)' }} />
             <input 
               type="text" 
               placeholder={language === 'en' ? "Search 106 AI Modules..." : "106 एआई मॉड्यूल खोजें..."}
@@ -104,16 +104,16 @@ const Home = () => {
                 width: '100%',
                 padding: '1rem 1rem 1rem 3.5rem',
                 borderRadius: '30px',
-                border: '1px solid rgba(6, 182, 212, 0.5)',
-                background: 'rgba(23, 37, 69, 0.8)',
+                border: '1px solid var(--glass-border)',
+                background: 'var(--color-panel)',
                 color: '#fff',
                 fontSize: '1rem',
                 outline: 'none',
                 boxShadow: '0 0 20px rgba(0,0,0,0.5)',
                 transition: 'all 0.3s'
               }}
-              onFocus={(e) => { e.target.style.borderColor = '#06b6d4'; e.target.style.boxShadow = '0 0 20px rgba(6, 182, 212, 0.4)'; }}
-              onBlur={(e) => { e.target.style.borderColor = 'rgba(6, 182, 212, 0.5)'; e.target.style.boxShadow = '0 0 20px rgba(0,0,0,0.5)'; }}
+              onFocus={(e) => { e.target.style.borderColor = 'var(--color-primary)'; e.target.style.boxShadow = '0 0 20px var(--glass-border)'; }}
+              onBlur={(e) => { e.target.style.borderColor = 'var(--glass-border)'; e.target.style.boxShadow = '0 0 20px rgba(0,0,0,0.5)'; }}
             />
           </div>
         </div>
@@ -135,13 +135,13 @@ const Home = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, delay: Math.min(index * 0.02, 0.3) }}
               >
-                <Link to={mod.id === 'module-33' ? '/finance' : `/module/${mod.id}`} style={{ display: 'block', textDecoration: 'none' }}>
+                <Link to={(mod.id === 'module-33' || mod.id === 'module-85') ? '/finance' : (mod.id === 'module-32' ? '/hrms' : `/module/${mod.id}`)} style={{ display: 'block', textDecoration: 'none' }}>
                   <div 
                     style={{ 
                       padding: '2rem', cursor: 'pointer', height: '100%', display: 'flex', flexDirection: 'column',
-                      background: 'rgba(23, 37, 69, 0.6)',
+                      background: 'var(--color-panel)',
                       backdropFilter: 'blur(16px)',
-                      border: '1px solid rgba(6, 182, 212, 0.2)',
+                      border: '1px solid var(--glass-border)',
                       borderRadius: '16px',
                       transition: 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
                       boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4)',
@@ -150,28 +150,28 @@ const Home = () => {
                     }}
                     onMouseOver={(e) => {
                       e.currentTarget.style.transform = 'translateY(-8px) scale(1.02)';
-                      e.currentTarget.style.borderColor = 'rgba(6, 182, 212, 0.8)';
-                      e.currentTarget.style.boxShadow = '0 15px 40px rgba(6, 182, 212, 0.3)';
+                      e.currentTarget.style.borderColor = 'var(--glass-border)';
+                      e.currentTarget.style.boxShadow = '0 15px 40px var(--glass-border)';
                     }}
                     onMouseOut={(e) => {
                       e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                      e.currentTarget.style.borderColor = 'rgba(6, 182, 212, 0.2)';
+                      e.currentTarget.style.borderColor = 'var(--glass-border)';
                       e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.4)';
                     }}
                   >
                     {/* Glowing background accent */}
-                    <div style={{ position: 'absolute', top: '-30px', right: '-30px', width: '100px', height: '100px', background: 'rgba(6, 182, 212, 0.1)', borderRadius: '50%', filter: 'blur(30px)', zIndex: 0 }}></div>
+                    <div style={{ position: 'absolute', top: '-30px', right: '-30px', width: '100px', height: '100px', background: 'var(--color-primary-glow)', borderRadius: '50%', filter: 'blur(40px)', zIndex: 0 }}></div>
 
                     <div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '1.5rem', zIndex: 1 }}>
                       <div style={{ 
                         width: '50px', height: '50px', 
                         borderRadius: '12px', 
-                        background: 'rgba(6, 182, 212, 0.1)', 
+                        background: 'rgba(56, 189, 248, 0.1)', 
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
-                        color: '#06b6d4',
+                        color: 'var(--color-primary)',
                         marginRight: '15px',
-                        border: '1px solid rgba(6, 182, 212, 0.3)',
-                        boxShadow: '0 0 15px rgba(6, 182, 212, 0.2)'
+                        border: '1px solid var(--color-primary-glow)',
+                        boxShadow: '0 0 15px var(--color-primary-glow)'
                       }}>
                         {getIcon(mod.id)}
                       </div>
@@ -190,9 +190,9 @@ const Home = () => {
                         </span>
                       </div>
                       <div style={{ 
-                        fontSize: '0.75rem', color: '#000', fontWeight: '800', background: '#06b6d4', 
+                        fontSize: '0.75rem', color: '#000', fontWeight: '800', background: 'var(--color-primary)', 
                         padding: '0.5rem 1rem', borderRadius: '4px', letterSpacing: '1px', textTransform: 'uppercase',
-                        boxShadow: '0 0 10px rgba(6, 182, 212, 0.5)'
+                        boxShadow: '0 0 10px var(--color-primary-glow)'
                       }}>
                         INITIALIZE
                       </div>

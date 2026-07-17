@@ -2,25 +2,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Futuristic Dark Palette - Enterprise AI Command Center */
-  --color-bg-dark: #0b1426; /* Softer Navy Blue */
-  --color-bg-police: #172545; /* Richer Police Blue */
+  /* Futuristic Dark Palette - Ultra Premium High-Class Enterprise AI */
+  --color-bg-dark: #030712; /* Obsidian Black */
+  --color-bg-police: #081121; /* Rich Cinematic Midnight */
   
-  --color-panel: rgba(23, 37, 69, 0.75); 
-  --color-panel-hover: rgba(23, 37, 69, 0.95); 
+  --color-panel: linear-gradient(145deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.9) 100%); /* Rich 3D Gradient Box */
+  --color-panel-hover: linear-gradient(145deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 1) 100%); 
   
-  --color-primary: #06b6d4; /* Neon Cyan */
-  --color-primary-glow: rgba(6, 182, 212, 0.5);
-  --color-secondary: #3b82f6; /* Blue Neon */
-  --color-secondary-glow: rgba(59, 130, 246, 0.5);
-  --color-accent: #10b981; /* Emerald Cyber Green */
+  --color-primary: #38bdf8; /* Elegant Sky Blue */
+  --color-primary-glow: rgba(56, 189, 248, 0.4);
+  --color-secondary: #818cf8; /* Elegant Indigo */
+  --color-secondary-glow: rgba(129, 140, 248, 0.4);
+  --color-accent: #34d399; /* Premium Mint Green */
   
-  --color-text: #f8fafc; /* Slate 50 */
+  --color-text: #ffffff; /* Pure White */
   --color-text-muted: #94a3b8; /* Slate 400 */
   
   --font-family: 'Inter', 'Outfit', -apple-system, sans-serif;
-  --glass-border: 1px solid rgba(6, 182, 212, 0.25);
-  --glass-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.08); /* Sophisticated thin border */
+  --glass-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8); /* Deep cinematic shadow */
 }
 
 html, body, #root {

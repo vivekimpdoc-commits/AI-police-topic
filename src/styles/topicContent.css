@@ -1,0 +1,158 @@
+.topic-content-page {
+  min-height: 100vh;
+  padding: 3rem 2rem;
+  background: radial-gradient(circle at center, #0b1120 0%, #050810 100%);
+  color: #e2e8f0;
+  font-family: 'Inter', 'Roboto', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background grid effect */
+.topic-content-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(6, 182, 212, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.topic-content-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+.generated-html {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.generated-html h1, 
+.generated-html h2, 
+.generated-html h3 {
+  color: #06b6d4;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.generated-html h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+}
+
+.generated-html h2 {
+  font-size: 1.8rem;
+  border-bottom: 1px solid rgba(6, 182, 212, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+.generated-html p {
+  line-height: 1.7;
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin-bottom: 1.2rem;
+}
+
+.generated-html ul, 
+.generated-html ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #cbd5e1;
+}
+
+.generated-html li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.generated-html a {
+  color: #38bdf8;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.generated-html a:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: #06b6d4;
+  background: #050810;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: pulse 1.5s infinite;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: #ef4444;
+  background: #050810;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.5), transparent);
+  margin: 3rem 0;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .generated-html {
+    padding: 1.5rem;
+  }
+  
+  .generated-html h1 {
+    font-size: 2rem;
+  }
+}
