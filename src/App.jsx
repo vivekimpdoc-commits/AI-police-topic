@@ -30,6 +30,11 @@ import MissingPersonsDetailed from './pages/MissingPersonsDetailed';
 import SafetyDetailed from './pages/SafetyDetailed';
 import TrafficDetailed from './pages/TrafficDetailed';
 import LawOrderDetailed from './pages/LawOrderDetailed';
+import LegalCourtDetailed from './pages/LegalCourtDetailed';
+import TrainingDetailed from './pages/TrainingDetailed';
+import LogisticsDetailed from './pages/LogisticsDetailed';
+import SmartCityDetailed from './pages/SmartCityDetailed';
+import CommunicationDetailed from './pages/CommunicationDetailed';
 import CommandCenterDetailed from './pages/CommandCenterDetailed';
 import TopicContent from './pages/TopicContent';
 import TopicDetail from './pages/TopicDetail';
@@ -211,6 +216,31 @@ const AnimatedRoutes = () => {
         <Route path="/law-order" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
             <LawOrderDetailed />
+          </motion.div>
+        } />
+        <Route path="/legal-court" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <LegalCourtDetailed />
+          </motion.div>
+        } />
+        <Route path="/training-academy" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <TrainingDetailed />
+          </motion.div>
+        } />
+        <Route path="/logistics" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <LogisticsDetailed />
+          </motion.div>
+        } />
+        <Route path="/smart-city" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <SmartCityDetailed />
+          </motion.div>
+        } />
+        <Route path="/communication" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CommunicationDetailed />
           </motion.div>
         } />
         <Route path="/command-center" element={

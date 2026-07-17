@@ -275,6 +275,16 @@ const ModulePage = () => {
                     navigate('/traffic');
                   } else if (moduleId === 'module-18') {
                     navigate('/law-order');
+                  } else if (moduleId === 'module-19') {
+                    navigate('/legal-court');
+                  } else if (moduleId === 'module-20') {
+                    navigate('/training-academy');
+                  } else if (moduleId === 'module-21') {
+                    navigate('/logistics');
+                  } else if (moduleId === 'module-22') {
+                    navigate('/smart-city');
+                  } else if (moduleId === 'module-23') {
+                    navigate('/communication');
                   } else if (moduleId === 'module-06') {
                     navigate('/command-center');
                   } else {

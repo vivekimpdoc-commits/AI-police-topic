@@ -83,6 +83,11 @@ const Home = () => {
       case 'module-16': return '/women-child-safety';
       case 'module-17': return '/traffic';
       case 'module-18': return '/law-order';
+      case 'module-19': return '/legal-court';
+      case 'module-20': return '/training-academy';
+      case 'module-21': return '/logistics';
+      case 'module-22': return '/smart-city';
+      case 'module-23': return '/communication';
       default: return `/module/${id}`;
     }
   };
