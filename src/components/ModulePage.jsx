@@ -255,6 +255,16 @@ const ModulePage = () => {
                     navigate('/data-lake');
                   } else if (upperTopic.includes('RESEARCH') || upperTopic.includes('INNOVATION')) {
                     navigate('/research-lab');
+                  } else if (moduleId === 'module-07') {
+                    navigate('/citizen-services');
+                  } else if (moduleId === 'module-08') {
+                    navigate('/complaint-fir');
+                  } else if (moduleId === 'module-10') {
+                    navigate('/intelligence');
+                  } else if (moduleId === 'module-11') {
+                    navigate('/predictive-policing');
+                  } else if (moduleId === 'module-13') {
+                    navigate('/cyber-crime');
                   } else if (moduleId === 'module-06') {
                     navigate('/command-center');
                   } else {

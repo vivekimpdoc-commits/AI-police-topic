@@ -64,6 +64,24 @@ const Home = () => {
     }
   };
 
+  const getDirectRoute = (id) => {
+    switch(id) {
+      case 'module-32': return '/hrms';
+      case 'module-33':
+      case 'module-85': return '/finance';
+      case 'module-71': return '/procurement';
+      case 'module-99': return '/audit';
+      case 'module-52': return '/document';
+      case 'module-06': return '/command-center';
+      case 'module-07': return '/citizen-services';
+      case 'module-08': return '/complaint-fir';
+      case 'module-10': return '/intelligence';
+      case 'module-11': return '/predictive-policing';
+      case 'module-13': return '/cyber-crime';
+      default: return `/module/${id}`;
+    }
+  };
+
   const sortedModules = [...modules].sort((a, b) => {
     const nameA = language === 'en' ? a.nameEn : a.nameHi;
     const nameB = language === 'en' ? b.nameEn : b.nameHi;
@@ -135,7 +153,7 @@ const Home = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, delay: Math.min(index * 0.02, 0.3) }}
               >
-                <Link to={(mod.id === 'module-33' || mod.id === 'module-85') ? '/finance' : (mod.id === 'module-32' ? '/hrms' : `/module/${mod.id}`)} style={{ display: 'block', textDecoration: 'none' }}>
+                <Link to={getDirectRoute(mod.id)} style={{ display: 'block', textDecoration: 'none' }}>
                   <div 
                     style={{ 
                       padding: '2rem', cursor: 'pointer', height: '100%', display: 'flex', flexDirection: 'column',
