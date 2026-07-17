@@ -78,6 +78,11 @@ const Home = () => {
       case 'module-10': return '/intelligence';
       case 'module-11': return '/predictive-policing';
       case 'module-13': return '/cyber-crime';
+      case 'module-14': return '/digital-evidence';
+      case 'module-15': return '/missing-persons';
+      case 'module-16': return '/women-child-safety';
+      case 'module-17': return '/traffic';
+      case 'module-18': return '/law-order';
       default: return `/module/${id}`;
     }
   };

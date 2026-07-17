@@ -265,6 +265,16 @@ const ModulePage = () => {
                     navigate('/predictive-policing');
                   } else if (moduleId === 'module-13') {
                     navigate('/cyber-crime');
+                  } else if (moduleId === 'module-14') {
+                    navigate('/digital-evidence');
+                  } else if (moduleId === 'module-15') {
+                    navigate('/missing-persons');
+                  } else if (moduleId === 'module-16') {
+                    navigate('/women-child-safety');
+                  } else if (moduleId === 'module-17') {
+                    navigate('/traffic');
+                  } else if (moduleId === 'module-18') {
+                    navigate('/law-order');
                   } else if (moduleId === 'module-06') {
                     navigate('/command-center');
                   } else {
