@@ -14,12 +14,12 @@ import AgentDetailed from './pages/AgentDetailed';
 import KnowledgeDetailed from './pages/KnowledgeDetailed';
 import DecisionDetailed from './pages/DecisionDetailed';
 import TwinDetailed from './pages/TwinDetailed';
-import InvestigationLanding from './pages/InvestigationLanding';
-import CopilotLanding from './pages/CopilotLanding';
-import MultimodalLanding from './pages/MultimodalLanding';
-import ModelManagementLanding from './pages/ModelManagementLanding';
+import InvestigationDetailed from './pages/InvestigationDetailed';
+import CopilotDetailed from './pages/CopilotDetailed';
+import MultimodalDetailed from './pages/MultimodalDetailed';
+import ModelManagementDetailed from './pages/ModelManagementDetailed';
 import DataLakeDetailed from './pages/DataLakeDetailed';
-import ResearchLabLanding from './pages/ResearchLabLanding';
+import ResearchLabDetailed from './pages/ResearchLabDetailed';
 import CommandCenterDetailed from './pages/CommandCenterDetailed';
 import TopicContent from './pages/TopicContent';
 import TopicDetail from './pages/TopicDetail';
@@ -125,22 +125,22 @@ const AnimatedRoutes = () => {
         } />
         <Route path="/investigation-assistant" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
-            <InvestigationLanding />
+            <InvestigationDetailed />
           </motion.div>
         } />
         <Route path="/copilot" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
-            <CopilotLanding />
+            <CopilotDetailed />
           </motion.div>
         } />
         <Route path="/multimodal" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
-            <MultimodalLanding />
+            <MultimodalDetailed />
           </motion.div>
         } />
         <Route path="/model-management" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
-            <ModelManagementLanding />
+            <ModelManagementDetailed />
           </motion.div>
         } />
         <Route path="/data-lake" element={
@@ -150,7 +150,7 @@ const AnimatedRoutes = () => {
         } />
         <Route path="/research-lab" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
-            <ResearchLabLanding />
+            <ResearchLabDetailed />
           </motion.div>
         } />
         <Route path="/command-center" element={
