@@ -88,6 +88,11 @@ const Home = () => {
       case 'module-21': return '/logistics';
       case 'module-22': return '/smart-city';
       case 'module-23': return '/communication';
+      case 'module-24': return '/border-security';
+      case 'module-25': return '/prison-management';
+      case 'module-26': return '/anti-terror';
+      case 'module-27': return '/financial-crime';
+      case 'module-28': return '/narcotics';
       default: return `/module/${id}`;
     }
   };

@@ -285,6 +285,16 @@ const ModulePage = () => {
                     navigate('/smart-city');
                   } else if (moduleId === 'module-23') {
                     navigate('/communication');
+                  } else if (moduleId === 'module-24') {
+                    navigate('/border-security');
+                  } else if (moduleId === 'module-25') {
+                    navigate('/prison-management');
+                  } else if (moduleId === 'module-26') {
+                    navigate('/anti-terror');
+                  } else if (moduleId === 'module-27') {
+                    navigate('/financial-crime');
+                  } else if (moduleId === 'module-28') {
+                    navigate('/narcotics');
                   } else if (moduleId === 'module-06') {
                     navigate('/command-center');
                   } else {

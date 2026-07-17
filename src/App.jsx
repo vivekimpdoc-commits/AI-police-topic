@@ -35,6 +35,11 @@ import TrainingDetailed from './pages/TrainingDetailed';
 import LogisticsDetailed from './pages/LogisticsDetailed';
 import SmartCityDetailed from './pages/SmartCityDetailed';
 import CommunicationDetailed from './pages/CommunicationDetailed';
+import BorderSecurityDetailed from './pages/BorderSecurityDetailed';
+import PrisonDetailed from './pages/PrisonDetailed';
+import AntiTerrorDetailed from './pages/AntiTerrorDetailed';
+import FinancialCrimeDetailed from './pages/FinancialCrimeDetailed';
+import NarcoticsDetailed from './pages/NarcoticsDetailed';
 import CommandCenterDetailed from './pages/CommandCenterDetailed';
 import TopicContent from './pages/TopicContent';
 import TopicDetail from './pages/TopicDetail';
@@ -241,6 +246,31 @@ const AnimatedRoutes = () => {
         <Route path="/communication" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
             <CommunicationDetailed />
+          </motion.div>
+        } />
+        <Route path="/border-security" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <BorderSecurityDetailed />
+          </motion.div>
+        } />
+        <Route path="/prison-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PrisonDetailed />
+          </motion.div>
+        } />
+        <Route path="/anti-terror" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <AntiTerrorDetailed />
+          </motion.div>
+        } />
+        <Route path="/financial-crime" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <FinancialCrimeDetailed />
+          </motion.div>
+        } />
+        <Route path="/narcotics" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <NarcoticsDetailed />
           </motion.div>
         } />
         <Route path="/command-center" element={
