@@ -285,15 +285,15 @@ const ModulePage = () => {
                     navigate('/smart-city');
                   } else if (moduleId === 'module-23') {
                     navigate('/communication');
-                  } else if (moduleId === 'module-24') {
+                  } else if (upperTopic.includes('BORDER SECURITY') || topic.includes('सीमा सुरक्षा')) {
                     navigate('/border-security');
-                  } else if (moduleId === 'module-25') {
+                  } else if (upperTopic.includes('PRISON') || topic.includes('जेल')) {
                     navigate('/prison-management');
-                  } else if (moduleId === 'module-26') {
+                  } else if (upperTopic.includes('TERROR') || topic.includes('आतंक')) {
                     navigate('/anti-terror');
-                  } else if (moduleId === 'module-27') {
+                  } else if (upperTopic.includes('FINANCIAL CRIME') || topic.includes('वित्तीय अपराध')) {
                     navigate('/financial-crime');
-                  } else if (moduleId === 'module-28') {
+                  } else if (upperTopic.includes('NARCOTICS') || topic.includes('नारकोटिक्स')) {
                     navigate('/narcotics');
                   } else if (moduleId === 'module-29') {
                     navigate('/police-station');
@@ -315,6 +315,16 @@ const ModulePage = () => {
                     navigate('/armoury');
                   } else if (moduleId === 'module-40') {
                     navigate('/legal-process');
+                  } else if (moduleId === 'module-41') {
+                    navigate('/community-policing');
+                  } else if (moduleId === 'module-42') {
+                    navigate('/intelligence-support');
+                  } else if (moduleId === 'module-43') {
+                    navigate('/disaster-logistics');
+                  } else if (moduleId === 'module-44') {
+                    navigate('/police-admin');
+                  } else if (moduleId === 'module-45') {
+                    navigate('/training-quality');
                   } else if (moduleId === 'module-06') {
                     navigate('/command-center');
                   } else {

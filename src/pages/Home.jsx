@@ -88,11 +88,6 @@ const Home = () => {
       case 'module-21': return '/logistics';
       case 'module-22': return '/smart-city';
       case 'module-23': return '/communication';
-      case 'module-24': return '/border-security';
-      case 'module-25': return '/prison-management';
-      case 'module-26': return '/anti-terror';
-      case 'module-27': return '/financial-crime';
-      case 'module-28': return '/narcotics';
       case 'module-29': return '/police-station';
       case 'module-30': return '/fleet-logistics';
       case 'module-31': return '/radio-comms';
@@ -103,6 +98,11 @@ const Home = () => {
       case 'module-38': return '/internal-security';
       case 'module-39': return '/armoury';
       case 'module-40': return '/legal-process';
+      case 'module-41': return '/community-policing';
+      case 'module-42': return '/intelligence-support';
+      case 'module-43': return '/disaster-logistics';
+      case 'module-44': return '/police-admin';
+      case 'module-45': return '/training-quality';
       default: return `/module/${id}`;
     }
   };
