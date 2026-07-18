@@ -325,6 +325,16 @@ const ModulePage = () => {
                     navigate('/police-admin');
                   } else if (moduleId === 'module-45') {
                     navigate('/training-quality');
+                  } else if (moduleId === 'module-46') {
+                    navigate('/international-coordination');
+                  } else if (moduleId === 'module-47') {
+                    navigate('/research-innovation');
+                  } else if (moduleId === 'module-48') {
+                    navigate('/police-hq');
+                  } else if (moduleId === 'module-49') {
+                    navigate('/correspondence');
+                  } else if (moduleId === 'module-50') {
+                    navigate('/police-inspection');
                   } else if (moduleId === 'module-06') {
                     navigate('/command-center');
                   } else {

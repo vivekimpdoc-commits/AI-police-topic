@@ -103,6 +103,11 @@ const Home = () => {
       case 'module-43': return '/disaster-logistics';
       case 'module-44': return '/police-admin';
       case 'module-45': return '/training-quality';
+      case 'module-46': return '/international-coordination';
+      case 'module-47': return '/research-innovation';
+      case 'module-48': return '/police-hq';
+      case 'module-49': return '/correspondence';
+      case 'module-50': return '/police-inspection';
       default: return `/module/${id}`;
     }
   };
