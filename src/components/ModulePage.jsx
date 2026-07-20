@@ -351,7 +351,20 @@ const ModulePage = () => {
                     'AI Prison Management': '/prison-management', 'एआई जेल प्रबंधन': '/prison-management',
                     'AI Anti-Terror Intelligence': '/anti-terror', 'एआई आतंकवाद निरोधक इंटेलिजेंस': '/anti-terror',
                     'AI Financial Crime Intelligence': '/financial-crime', 'एआई वित्तीय अपराध इंटेलिजेंस': '/financial-crime',
-                    'AI Narcotics Intelligence': '/narcotics', 'एआई नारकोटिक्स इंटेलिजेंस': '/narcotics'
+                    'AI Narcotics Intelligence': '/narcotics', 'एआई नारकोटिक्स इंटेलिजेंस': '/narcotics',
+
+                    // Module 27: Investigation & Intelligence
+                    'AI Informer Management System': '/informer-management', 'एआई मुखबिर प्रबंधन प्रणाली': '/informer-management',
+                    'AI Secret Information Analysis': '/secret-info', 'एआई गुप्त सूचना विश्लेषण': '/secret-info',
+                    'AI Intelligence Verification': '/intelligence-verification', 'एआई इंटेलिजेंस सत्यापन': '/intelligence-verification',
+                    'AI Source Reliability Scoring': '/source-reliability', 'एआई स्रोत विश्वसनीयता स्कोरिंग': '/source-reliability',
+                    'AI Criminal Relationship Mapping': '/criminal-relationship', 'एआई आपराधिक संबंध मैपिंग': '/criminal-relationship',
+                    'AI Alias & Nickname Matching': '/alias-nickname', 'एआई उपनाम और निकनेम मिलान': '/alias-nickname',
+                    'AI Cross-Case Link Analysis': '/cross-case-link', 'एआई क्रॉस-केस लिंक विश्लेषण': '/cross-case-link',
+                    'AI Case Similarity Engine': '/case-similarity', 'एआई केस समानता इंजन': '/case-similarity',
+                    'AI Suspect Movement Timeline': '/suspect-movement', 'एआई संदिग्ध गतिविधि टाइमलाइन': '/suspect-movement',
+                    'AI Investigation Quality Review': '/investigation-quality', 'एआई जांच गुणवत्ता समीक्षा': '/investigation-quality'
+
                   };
 
                   if (topicMap[topic]) {
