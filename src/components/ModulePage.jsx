@@ -385,6 +385,16 @@ const ModulePage = () => {
                     navigate('/police-intelligence');
                   } else if (moduleId === 'module-75') {
                     navigate('/disaster-emergency');
+                  } else if (moduleId === 'module-76') {
+                    navigate('/vip-protocol');
+                  } else if (moduleId === 'module-77') {
+                    navigate('/specialized-registers');
+                  } else if (moduleId === 'module-78') {
+                    navigate('/internal-admin');
+                  } else if (moduleId === 'module-79') {
+                    navigate('/police-welfare-unique');
+                  } else if (moduleId === 'module-80') {
+                    navigate('/scientific-technical');
                   } else if (moduleId === 'module-06') {
                     navigate('/command-center');
                   } else {

@@ -84,6 +84,11 @@ import PoliceLaboratoriesDetailed from './pages/PoliceLaboratoriesDetailed';
 import PoliceLibraryDetailed from './pages/PoliceLibraryDetailed';
 import PoliceIntelligenceDetailed from './pages/PoliceIntelligenceDetailed';
 import DisasterEmergencyDetailed from './pages/DisasterEmergencyDetailed';
+import VIPProtocolDetailed from './pages/VIPProtocolDetailed';
+import SpecializedRegistersDetailed from './pages/SpecializedRegistersDetailed';
+import InternalAdminDetailed from './pages/InternalAdminDetailed';
+import PoliceWelfareUniqueDetailed from './pages/PoliceWelfareUniqueDetailed';
+import ScientificTechnicalDetailed from './pages/ScientificTechnicalDetailed';
 import CommandCenterDetailed from './pages/CommandCenterDetailed';
 import TopicContent from './pages/TopicContent';
 import TopicDetail from './pages/TopicDetail';
@@ -540,6 +545,31 @@ const AnimatedRoutes = () => {
         <Route path="/disaster-emergency" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
             <DisasterEmergencyDetailed />
+          </motion.div>
+        } />
+        <Route path="/vip-protocol" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <VIPProtocolDetailed />
+          </motion.div>
+        } />
+        <Route path="/specialized-registers" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <SpecializedRegistersDetailed />
+          </motion.div>
+        } />
+        <Route path="/internal-admin" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <InternalAdminDetailed />
+          </motion.div>
+        } />
+        <Route path="/police-welfare-unique" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PoliceWelfareUniqueDetailed />
+          </motion.div>
+        } />
+        <Route path="/scientific-technical" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ScientificTechnicalDetailed />
           </motion.div>
         } />
         <Route path="/command-center" element={

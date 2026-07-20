@@ -133,6 +133,11 @@ const Home = () => {
       case 'module-73': return '/police-library';
       case 'module-74': return '/police-intelligence';
       case 'module-75': return '/disaster-emergency';
+      case 'module-76': return '/vip-protocol';
+      case 'module-77': return '/specialized-registers';
+      case 'module-78': return '/internal-admin';
+      case 'module-79': return '/police-welfare-unique';
+      case 'module-80': return '/scientific-technical';
       default: return `/module/${id}`;
     }
   };
