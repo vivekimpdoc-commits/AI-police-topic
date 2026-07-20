@@ -94,6 +94,11 @@ import InternationalRelationsDetailed from './pages/InternationalRelationsDetail
 import PoliceLegs2Detailed from './pages/PoliceLegs2Detailed';
 import PoliceBuildingsDetailed from './pages/PoliceBuildingsDetailed';
 import PoliceFinanceDetailed from './pages/PoliceFinanceDetailed';
+import PoliceEnvironmentDetailed from './pages/PoliceEnvironmentDetailed';
+import PoliceTechnologyDetailed from './pages/PoliceTechnologyDetailed';
+import PoliceAdmin88Detailed from './pages/PoliceAdmin88Detailed';
+import PoliceSportsDetailed from './pages/PoliceSportsDetailed';
+import PoliceProtocolDetailed from './pages/PoliceProtocolDetailed';
 import CommandCenterDetailed from './pages/CommandCenterDetailed';
 import TopicContent from './pages/TopicContent';
 import TopicDetail from './pages/TopicDetail';
@@ -620,6 +625,31 @@ const AnimatedRoutes = () => {
         <Route path="/module/:moduleId" element={
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }} className="page-transition">
             <ModulePage modules={modules} />
+          </motion.div>
+        } />
+        <Route path="/police-environment" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PoliceEnvironmentDetailed />
+          </motion.div>
+        } />
+        <Route path="/police-technology" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PoliceTechnologyDetailed />
+          </motion.div>
+        } />
+        <Route path="/police-administration" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PoliceAdmin88Detailed />
+          </motion.div>
+        } />
+        <Route path="/police-sports" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PoliceSportsDetailed />
+          </motion.div>
+        } />
+        <Route path="/police-protocol" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PoliceProtocolDetailed />
           </motion.div>
         } />
       </Routes>
