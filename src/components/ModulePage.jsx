@@ -139,7 +139,7 @@ const ModulePage = () => {
         pointerEvents: 'none'
       }}></div>
 
-      <div style={{ position: 'relative', zIndex: 1, marginBottom: '3rem', borderBottom: '1px solid rgba(6, 182, 212, 0.2)', paddingBottom: '1.5rem', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
+      <div style={{ position: 'relative', zIndex: 1, marginBottom: '3rem', borderBottom: '1px solid rgba(6, 182, 212, 0.2)', paddingBottom: '1.5rem', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
         <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
           <button
             onClick={() => navigate(-1)}
@@ -167,10 +167,48 @@ const ModulePage = () => {
               {moduleName}
             </h2>
             <p style={{ color: '#06b6d4', marginTop: '0.5rem', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem' }}>
-              // NEURAL NETWORK INTERFACE ACTIVE
+              // NEURAL NETWORK INTERFACE ACTIVE — SELECT A TOPIC BELOW
             </p>
           </div>
         </div>
+
+        {/* Full AI Dashboard Button — for modules with dedicated detailed pages */}
+        {(['module-71','module-72','module-73','module-74','module-75','module-76','module-77','module-78','module-79','module-80','module-81','module-82','module-83','module-84','module-85'].includes(moduleId)) && (
+          <button
+            onClick={() => {
+              const dashMap = {
+                'module-71': '/police-procurement', 'module-72': '/police-laboratories', 'module-73': '/police-library',
+                'module-74': '/police-intelligence', 'module-75': '/disaster-emergency', 'module-76': '/vip-protocol',
+                'module-77': '/specialized-registers', 'module-78': '/internal-admin', 'module-79': '/police-welfare-unique',
+                'module-80': '/scientific-technical', 'module-81': '/planning-strategy', 'module-82': '/international-relations',
+                'module-83': '/police-legal-process-2', 'module-84': '/police-buildings', 'module-85': '/police-finance'
+              };
+              navigate(dashMap[moduleId]);
+            }}
+            style={{
+              background: 'linear-gradient(135deg, rgba(6,182,212,0.2), rgba(139,92,246,0.2))',
+              border: '1px solid rgba(6, 182, 212, 0.6)',
+              color: '#06b6d4',
+              padding: '0.8rem 1.5rem',
+              borderRadius: '12px',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px',
+              transition: 'all 0.3s',
+              boxShadow: '0 0 20px rgba(6, 182, 212, 0.3)',
+              fontWeight: 'bold',
+              letterSpacing: '1px',
+              fontSize: '0.85rem',
+              textTransform: 'uppercase',
+              whiteSpace: 'nowrap'
+            }}
+            onMouseOver={(e) => { e.currentTarget.style.background = 'linear-gradient(135deg, rgba(6,182,212,0.4), rgba(139,92,246,0.4))'; e.currentTarget.style.boxShadow = '0 0 30px rgba(6, 182, 212, 0.6)'; }}
+            onMouseOut={(e) => { e.currentTarget.style.background = 'linear-gradient(135deg, rgba(6,182,212,0.2), rgba(139,92,246,0.2))'; e.currentTarget.style.boxShadow = '0 0 20px rgba(6, 182, 212, 0.3)'; }}
+          >
+            <Zap size={18} /> OPEN FULL AI DASHBOARD
+          </button>
+        )}
       </div>
 
       <motion.div
@@ -376,35 +414,35 @@ const ModulePage = () => {
                   } else if (moduleId === 'module-70') {
                     navigate('/police-transfers');
                   } else if (moduleId === 'module-71') {
-                    navigate('/police-procurement');
+                    navigate(`/topic/${encodeURIComponent(topic)}`);
                   } else if (moduleId === 'module-72') {
-                    navigate('/police-laboratories');
+                    navigate(`/topic/${encodeURIComponent(topic)}`);
                   } else if (moduleId === 'module-73') {
-                    navigate('/police-library');
+                    navigate(`/topic/${encodeURIComponent(topic)}`);
                   } else if (moduleId === 'module-74') {
-                    navigate('/police-intelligence');
+                    navigate(`/topic/${encodeURIComponent(topic)}`);
                   } else if (moduleId === 'module-75') {
-                    navigate('/disaster-emergency');
+                    navigate(`/topic/${encodeURIComponent(topic)}`);
                   } else if (moduleId === 'module-76') {
-                    navigate('/vip-protocol');
+                    navigate(`/topic/${encodeURIComponent(topic)}`);
                   } else if (moduleId === 'module-77') {
-                    navigate('/specialized-registers');
+                    navigate(`/topic/${encodeURIComponent(topic)}`);
                   } else if (moduleId === 'module-78') {
-                    navigate('/internal-admin');
+                    navigate(`/topic/${encodeURIComponent(topic)}`);
                   } else if (moduleId === 'module-79') {
-                    navigate('/police-welfare-unique');
+                    navigate(`/topic/${encodeURIComponent(topic)}`);
                   } else if (moduleId === 'module-80') {
-                    navigate('/scientific-technical');
+                    navigate(`/topic/${encodeURIComponent(topic)}`);
                   } else if (moduleId === 'module-81') {
-                    navigate('/planning-strategy');
+                    navigate(`/topic/${encodeURIComponent(topic)}`);
                   } else if (moduleId === 'module-82') {
-                    navigate('/international-relations');
+                    navigate(`/topic/${encodeURIComponent(topic)}`);
                   } else if (moduleId === 'module-83') {
-                    navigate('/police-legal-process-2');
+                    navigate(`/topic/${encodeURIComponent(topic)}`);
                   } else if (moduleId === 'module-84') {
-                    navigate('/police-buildings');
+                    navigate(`/topic/${encodeURIComponent(topic)}`);
                   } else if (moduleId === 'module-85') {
-                    navigate('/police-finance');
+                    navigate(`/topic/${encodeURIComponent(topic)}`);
                   } else if (moduleId === 'module-06') {
                     navigate('/command-center');
                   } else {

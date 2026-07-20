@@ -128,21 +128,6 @@ const Home = () => {
       case 'module-68': return '/recruitment-ecosystem';
       case 'module-69': return '/police-promotions';
       case 'module-70': return '/police-transfers';
-      case 'module-71': return '/police-procurement';
-      case 'module-72': return '/police-laboratories';
-      case 'module-73': return '/police-library';
-      case 'module-74': return '/police-intelligence';
-      case 'module-75': return '/disaster-emergency';
-      case 'module-76': return '/vip-protocol';
-      case 'module-77': return '/specialized-registers';
-      case 'module-78': return '/internal-admin';
-      case 'module-79': return '/police-welfare-unique';
-      case 'module-80': return '/scientific-technical';
-      case 'module-81': return '/planning-strategy';
-      case 'module-82': return '/international-relations';
-      case 'module-83': return '/police-legal-process-2';
-      case 'module-84': return '/police-buildings';
-      case 'module-85': return '/police-finance';
       default: return `/module/${id}`;
     }
   };
