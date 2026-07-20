@@ -345,6 +345,16 @@ const ModulePage = () => {
                     navigate('/comms-docs');
                   } else if (moduleId === 'module-55') {
                     navigate('/police-welfare');
+                  } else if (moduleId === 'module-56') {
+                    navigate('/tech-admin');
+                  } else if (moduleId === 'module-57') {
+                    navigate('/strategic-planning');
+                  } else if (moduleId === 'module-58') {
+                    navigate('/licensing-regulation');
+                  } else if (moduleId === 'module-59') {
+                    navigate('/verification-services');
+                  } else if (moduleId === 'module-60') {
+                    navigate('/election-management');
                   } else if (moduleId === 'module-06') {
                     navigate('/command-center');
                   } else {

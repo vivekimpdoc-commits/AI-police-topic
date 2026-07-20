@@ -65,6 +65,11 @@ import OfficialDocsDetailed from './pages/OfficialDocsDetailed';
 import PoliceVehiclesDetailed from './pages/PoliceVehiclesDetailed';
 import CommsDocsDetailed from './pages/CommsDocsDetailed';
 import PoliceWelfareDetailed from './pages/PoliceWelfareDetailed';
+import TechAdminDetailed from './pages/TechAdminDetailed';
+import StrategicPlanningDetailed from './pages/StrategicPlanningDetailed';
+import LicensingRegDetailed from './pages/LicensingRegDetailed';
+import VerificationServicesDetailed from './pages/VerificationServicesDetailed';
+import ElectionManagementDetailed from './pages/ElectionManagementDetailed';
 import CommandCenterDetailed from './pages/CommandCenterDetailed';
 import TopicContent from './pages/TopicContent';
 import TopicDetail from './pages/TopicDetail';
@@ -421,6 +426,31 @@ const AnimatedRoutes = () => {
         <Route path="/police-welfare" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
             <PoliceWelfareDetailed />
+          </motion.div>
+        } />
+        <Route path="/tech-admin" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <TechAdminDetailed />
+          </motion.div>
+        } />
+        <Route path="/strategic-planning" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <StrategicPlanningDetailed />
+          </motion.div>
+        } />
+        <Route path="/licensing-regulation" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <LicensingRegDetailed />
+          </motion.div>
+        } />
+        <Route path="/verification-services" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <VerificationServicesDetailed />
+          </motion.div>
+        } />
+        <Route path="/election-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ElectionManagementDetailed />
           </motion.div>
         } />
         <Route path="/command-center" element={

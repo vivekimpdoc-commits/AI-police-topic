@@ -113,6 +113,11 @@ const Home = () => {
       case 'module-53': return '/police-vehicles';
       case 'module-54': return '/comms-docs';
       case 'module-55': return '/police-welfare';
+      case 'module-56': return '/tech-admin';
+      case 'module-57': return '/strategic-planning';
+      case 'module-58': return '/licensing-regulation';
+      case 'module-59': return '/verification-services';
+      case 'module-60': return '/election-management';
       default: return `/module/${id}`;
     }
   };
