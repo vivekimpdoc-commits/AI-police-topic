@@ -326,7 +326,27 @@ const ModulePage = () => {
                     'module-69': '/police-promotions', 'module-70': '/police-transfers'
                   };
 
-                  if (dashMap[moduleId]) {
+                  const topicMap = {
+                    'AI Multi-Agent Platform': '/multi-agent',
+                    'AI Knowledge Graph': '/knowledge-graph',
+                    'AI Decision Support System': '/decision-support',
+                    'AI Digital Twin of Police Operations': '/digital-twin',
+                    'AI Autonomous Investigation Assistant': '/investigation-assistant',
+                    'AI Conversational Copilot': '/copilot',
+                    'AI Multimodal Intelligence (Voice + Image + Video + Text)': '/multimodal',
+                    'AI Model Management Platform': '/model-management',
+                    'AI Data Lake & Analytics': '/data-lake',
+                    'AI Research Lab & Sandbox': '/research-lab',
+                    'एआई एचआरएमएस (HRMS)': '/hrms',
+                    'एआई वित्त और बजट': '/finance',
+                    'एआई खरीद (Procurement)': '/procurement',
+                    'एआई ऑडिट प्रबंधन': '/audit',
+                    'एआई दस्तावेज़ प्रबंधन': '/document'
+                  };
+
+                  if (topicMap[topic]) {
+                    navigate(topicMap[topic]);
+                  } else if (dashMap[moduleId]) {
                     navigate(dashMap[moduleId]);
                   } else {
                     navigate(`/topic/${encodeURIComponent(topic)}`);
