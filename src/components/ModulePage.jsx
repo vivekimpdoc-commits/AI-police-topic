@@ -327,21 +327,31 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
-                    'AI Multi-Agent Platform': '/multi-agent',
-                    'AI Knowledge Graph': '/knowledge-graph',
-                    'AI Decision Support System': '/decision-support',
-                    'AI Digital Twin of Police Operations': '/digital-twin',
-                    'AI Autonomous Investigation Assistant': '/investigation-assistant',
-                    'AI Conversational Copilot': '/copilot',
-                    'AI Multimodal Intelligence (Voice + Image + Video + Text)': '/multimodal',
-                    'AI Model Management Platform': '/model-management',
-                    'AI Data Lake & Analytics': '/data-lake',
-                    'AI Research Lab & Sandbox': '/research-lab',
-                    'एआई एचआरएमएस (HRMS)': '/hrms',
-                    'एआई वित्त और बजट': '/finance',
-                    'एआई खरीद (Procurement)': '/procurement',
-                    'एआई ऑडिट प्रबंधन': '/audit',
-                    'एआई दस्तावेज़ प्रबंधन': '/document'
+                    // Module 24: Administration
+                    'AI HRMS': '/hrms', 'एआई एचआरएमएस (HRMS)': '/hrms',
+                    'AI Finance & Budget': '/finance', 'एआई वित्त और बजट': '/finance',
+                    'AI Procurement': '/procurement', 'एआई खरीद (Procurement)': '/procurement',
+                    'AI Audit Management': '/audit', 'एआई ऑडिट प्रबंधन': '/audit',
+                    'AI Document Management': '/document', 'एआई दस्तावेज़ प्रबंधन': '/document',
+
+                    // Module 25: Advanced AI Systems
+                    'AI Multi-Agent Platform': '/multi-agent', 'एआई मल्टी-एजेंट प्लेटफॉर्म': '/multi-agent',
+                    'AI Knowledge Graph': '/knowledge-graph', 'एआई नॉलेज ग्राफ': '/knowledge-graph',
+                    'AI Decision Support System': '/decision-support', 'एआई निर्णय समर्थन (Decision Support) सिस्टम': '/decision-support',
+                    'AI Digital Twin of Police Operations': '/digital-twin', 'पुलिस संचालन का एआई डिजिटल ट्विन': '/digital-twin',
+                    'AI Autonomous Investigation Assistant': '/investigation-assistant', 'एआई स्वायत्त जांच सहायक': '/investigation-assistant',
+                    'AI Conversational Copilot': '/copilot', 'एआई संवादी कोपायलट': '/copilot',
+                    'AI Multimodal Intelligence (Voice + Image + Video + Text)': '/multimodal', 'एआई मल्टीमॉडल इंटेलिजेंस (वॉयस + इमेज + वीडियो + टेक्स्ट)': '/multimodal',
+                    'AI Model Management Platform': '/model-management', 'एआई मॉडल प्रबंधन प्लेटफॉर्म': '/model-management',
+                    'AI Data Lake & Big Data Platform': '/data-lake', 'एआई डेटा लेक और बिग डेटा प्लेटफॉर्म': '/data-lake',
+                    'AI Research & Innovation Lab': '/research-lab', 'एआई अनुसंधान और नवाचार लैब': '/research-lab',
+
+                    // Module 26: Future Vision Modules (Mapped ones)
+                    'AI Border Security': '/border-security', 'एआई सीमा सुरक्षा (Border Security)': '/border-security',
+                    'AI Prison Management': '/prison-management', 'एआई जेल प्रबंधन': '/prison-management',
+                    'AI Anti-Terror Intelligence': '/anti-terror', 'एआई आतंकवाद निरोधक इंटेलिजेंस': '/anti-terror',
+                    'AI Financial Crime Intelligence': '/financial-crime', 'एआई वित्तीय अपराध इंटेलिजेंस': '/financial-crime',
+                    'AI Narcotics Intelligence': '/narcotics', 'एआई नारकोटिक्स इंटेलिजेंस': '/narcotics'
                   };
 
                   if (topicMap[topic]) {
