@@ -118,6 +118,11 @@ const Home = () => {
       case 'module-58': return '/licensing-regulation';
       case 'module-59': return '/verification-services';
       case 'module-60': return '/election-management';
+      case 'module-61': return '/prisoner-custody';
+      case 'module-62': return '/border-check-post';
+      case 'module-63': return '/business-compliance';
+      case 'module-64': return '/special-operations';
+      case 'module-65': return '/documentation-compliance';
       default: return `/module/${id}`;
     }
   };

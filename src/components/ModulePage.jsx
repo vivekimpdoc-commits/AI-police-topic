@@ -355,6 +355,16 @@ const ModulePage = () => {
                     navigate('/verification-services');
                   } else if (moduleId === 'module-60') {
                     navigate('/election-management');
+                  } else if (moduleId === 'module-61') {
+                    navigate('/prisoner-custody');
+                  } else if (moduleId === 'module-62') {
+                    navigate('/border-check-post');
+                  } else if (moduleId === 'module-63') {
+                    navigate('/business-compliance');
+                  } else if (moduleId === 'module-64') {
+                    navigate('/special-operations');
+                  } else if (moduleId === 'module-65') {
+                    navigate('/documentation-compliance');
                   } else if (moduleId === 'module-06') {
                     navigate('/command-center');
                   } else {

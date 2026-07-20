@@ -70,6 +70,11 @@ import StrategicPlanningDetailed from './pages/StrategicPlanningDetailed';
 import LicensingRegDetailed from './pages/LicensingRegDetailed';
 import VerificationServicesDetailed from './pages/VerificationServicesDetailed';
 import ElectionManagementDetailed from './pages/ElectionManagementDetailed';
+import PrisonerCustodyDetailed from './pages/PrisonerCustodyDetailed';
+import BorderCheckPostDetailed from './pages/BorderCheckPostDetailed';
+import BusinessComplianceDetailed from './pages/BusinessComplianceDetailed';
+import SpecialOperationsDetailed from './pages/SpecialOperationsDetailed';
+import DocumentationComplianceDetailed from './pages/DocumentationComplianceDetailed';
 import CommandCenterDetailed from './pages/CommandCenterDetailed';
 import TopicContent from './pages/TopicContent';
 import TopicDetail from './pages/TopicDetail';
@@ -451,6 +456,31 @@ const AnimatedRoutes = () => {
         <Route path="/election-management" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
             <ElectionManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/prisoner-custody" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PrisonerCustodyDetailed />
+          </motion.div>
+        } />
+        <Route path="/border-check-post" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <BorderCheckPostDetailed />
+          </motion.div>
+        } />
+        <Route path="/business-compliance" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <BusinessComplianceDetailed />
+          </motion.div>
+        } />
+        <Route path="/special-operations" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <SpecialOperationsDetailed />
+          </motion.div>
+        } />
+        <Route path="/documentation-compliance" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <DocumentationComplianceDetailed />
           </motion.div>
         } />
         <Route path="/command-center" element={
