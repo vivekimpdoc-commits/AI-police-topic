@@ -18,7 +18,7 @@ const protocolModules = [
   {
     title: "VIP & Dignitary Ops",
     icon: <Star size={20} />,
-    items: ["AI VIP Route Clearance", "Dignitary Protocol Database", "Automated Security Briefings"]
+    items: ["AI Guard of Honour Planner","AI Flag Ceremony Scheduler","AI National Event Protocol"]
   },
   {
     title: "Ceremonial Management",

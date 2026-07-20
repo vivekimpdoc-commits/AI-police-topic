@@ -18,7 +18,7 @@ const utilityModules = [
   {
     title: "Water & Sanitation",
     icon: <Droplet size={20} />,
-    items: ["AI Drinking Water Quality Compliance", "Sewer Line Maintenance Predictor", "Smart Water Metering"]
+    items: ["AI Drinking Water Quality Compliance","AI Sewer Line Maintenance","AI Rainwater Drain Inspection"]
   },
   {
     title: "Power & Electrical",

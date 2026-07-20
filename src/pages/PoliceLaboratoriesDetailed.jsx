@@ -20,7 +20,7 @@ const labModules = [
   {
     title: "Sample & Evidence Tracking",
     icon: <Database size={20} />,
-    items: ["RFID Sample Dispatch/Receipt", "Chain of Custody Blockchain", "Cold Storage Temperature Monitor", "Automated Case Linking"]
+    items: ["AI Forensics Analyzer","AI DNA Matcher","AI Ballistics Predictor"]
   },
   {
     title: "Forensic Analysis",

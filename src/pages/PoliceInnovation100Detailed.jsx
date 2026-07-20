@@ -18,7 +18,7 @@ const innovationModules = [
   {
     title: "Idea Crowdsourcing",
     icon: <Lightbulb size={20} />,
-    items: ["AI Idea Submission Portal", "Internal Brainstorming Hub", "Citizen Feedback Integration"]
+    items: ["AI Idea Submission Portal","AI Hackathon Management","AI Pilot Deployment Tracker"]
   },
   {
     title: "Hackathons & Challenges",

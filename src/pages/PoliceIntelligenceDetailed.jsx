@@ -20,7 +20,7 @@ const intelModules = [
   {
     title: "Informant & Source Management",
     icon: <Search size={20} />,
-    items: ["Confidential Informant Registry", "Automated Reward Disbursement", "Source Reliability Scoring", "Burned Source Alerts"]
+    items: ["AI Undercover Ops Sync","AI Informant Verifier","AI Inter-Agency Intel Sharing"]
   },
   {
     title: "Threat & Zone Monitoring",

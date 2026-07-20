@@ -18,7 +18,7 @@ const mediaModules = [
   {
     title: "Public Relations & Press",
     icon: <Mic size={20} />,
-    items: ["AI Media Query Register", "Press Release Generator", "Interview Request Manager"]
+    items: ["AI Media Query Register","AI Interview Request Manager","AI Press Accreditation Tracker"]
   },
   {
     title: "Social Media & Sentiment",

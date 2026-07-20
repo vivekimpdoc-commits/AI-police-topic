@@ -18,7 +18,7 @@ const sportsModules = [
   {
     title: "Event & Tournament Ops",
     icon: <Trophy size={20} />,
-    items: ["AI Police Sports Tournament Manager", "Automated Fixture Generator", "Venue Availability Tracker"]
+    items: ["AI Police Sports Tournament Manager","AI Sports Team Selection Assistant","AI Shooting Competition Records"]
   },
   {
     title: "Athlete Performance",

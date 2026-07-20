@@ -22,7 +22,7 @@ const auditModules = [
   {
     title: "Financial Audits",
     icon: <Calculator size={20} />,
-    items: ["Secret Fund (SS Fund) Audit", "Expense Claims Verification", "Payroll Audits", "Budget Utilization Auditing", "Tender & Procurement Audit"]
+    items: ["AI Vendor Blacklist Monitor","AI Bid Evaluation History","AI Contract Milestone Tracker"]
   },
   {
     title: "Armoury & Logistics Audits",

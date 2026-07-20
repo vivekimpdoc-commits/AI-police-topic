@@ -20,7 +20,7 @@ const welfareModules = [
   {
     title: "Family & Emergency Support",
     icon: <Heart size={20} />,
-    items: ["Family Emergency Assistance", "Martyrdom Benefit Processing", "Medical Emergency Fund", "Housing Assistance Portal"]
+    items: ["AI Health Camp Scheduler","AI Loan Eligibility Checker","AI Merit Scholarship Selector"]
   },
   {
     title: "Education & Scholarships",

@@ -18,7 +18,7 @@ const knowledgeModules = [
   {
     title: "Experience Archiving",
     icon: <FileArchive size={20} />,
-    items: ["AI Retired Officer Experience Archive", "Oral History Transcription", "Tacit Knowledge Database"]
+    items: ["AI Retired Officer Experience Archive","AI Best Investigation Practices Library","AI Standard Templates Repository"]
   },
   {
     title: "Best Practices & SOPs",

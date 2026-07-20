@@ -18,7 +18,7 @@ const techModules = [
   {
     title: "Asset & Inventory Management",
     icon: <QrCode size={20} />,
-    items: ["AI QR Asset Labeling", "AI Barcode Inventory", "Hardware Lifecycle Tracker"]
+    items: ["AI QR Asset Labeling","AI Barcode Inventory","AI RFID Equipment Tracking"]
   },
   {
     title: "IT Support & Maintenance",

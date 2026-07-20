@@ -20,7 +20,7 @@ const borderModules = [
   {
     title: "Marine & Coastal Security",
     icon: <Ship size={20} />,
-    items: ["AIS (Vessel Tracking) Anomaly Alert", "Unregistered Boat Detection", "Sonar Sub-surface Scanning", "Coastal Radar Integration"]
+    items: ["AI Infiltration Predictor","AI Satellite Terrain Mapping","AI Border Fence Breach Detector"]
   },
   {
     title: "Drone Perimeter Defense",

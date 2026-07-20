@@ -20,7 +20,7 @@ const procurementModules = [
   {
     title: "Tender & Requisition",
     icon: <ShoppingCart size={20} />,
-    items: ["AI Tender Document Parsing", "Automated Requisition Approval", "Global Price Benchmarking", "Bidder Background Check"]
+    items: ["AI e-Tendering Bot","AI Vendor Reliability Score","AI Price Trend Predictor"]
   },
   {
     title: "Inventory & Replenishment",

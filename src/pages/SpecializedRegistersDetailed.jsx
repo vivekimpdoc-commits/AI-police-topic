@@ -20,7 +20,7 @@ const registerModules = [
   {
     title: "Missing & Lost Tracking",
     icon: <MapPin size={20} />,
-    items: ["AI Lost Children Register", "Missing Livestock Report", "Unknown/Abandoned Vehicle Register", "Amnesia/Unknown Persons"]
+    items: ["AI Arms License Verifier","AI Missing Person Matcher","AI Stolen Vehicle Tracer"]
   },
   {
     title: "Property & Assets",
