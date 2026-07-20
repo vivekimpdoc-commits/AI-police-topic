@@ -716,6 +716,57 @@ const AnimatedRoutes = () => {
             <PoliceInnovation100Detailed />
           </motion.div>
         } />
+
+        <Route path="/informer-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <InformerManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/secret-info" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <SecretInfoDetailed />
+          </motion.div>
+        } />
+        <Route path="/intelligence-verification" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <IntelligenceVerificationDetailed />
+          </motion.div>
+        } />
+        <Route path="/source-reliability" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <SourceReliabilityDetailed />
+          </motion.div>
+        } />
+        <Route path="/criminal-relationship" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CriminalRelationshipDetailed />
+          </motion.div>
+        } />
+        <Route path="/alias-nickname" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <AliasNicknameDetailed />
+          </motion.div>
+        } />
+        <Route path="/cross-case-link" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CrossCaseLinkDetailed />
+          </motion.div>
+        } />
+        <Route path="/case-similarity" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CaseSimilarityDetailed />
+          </motion.div>
+        } />
+        <Route path="/suspect-movement" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <SuspectMovementDetailed />
+          </motion.div>
+        } />
+        <Route path="/investigation-quality" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <InvestigationQualityDetailed />
+          </motion.div>
+        } />
       </Routes>
     </AnimatePresence>
   );
