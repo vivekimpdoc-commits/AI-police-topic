@@ -23,12 +23,12 @@ const utilityModules = [
   {
     title: "Power & Electrical",
     icon: <Zap size={20} />,
-    items: ["Uninterrupted Power Ops", "Solar Grid Integration", "Electrical Load Balancing AI"]
+    items: ["AI Sewer Line Maintenance", "Solar Grid Integration", "Electrical Load Balancing AI"]
   },
   {
     title: "Maintenance & Fixes",
     icon: <Wrench size={20} />,
-    items: ["Automated Utility Repair Ticketing", "HVAC Lifecycle Monitor", "Facilities Management Sync"]
+    items: ["AI Rainwater Drain Inspection", "HVAC Lifecycle Monitor", "Facilities Management Sync"]
   },
   {
     title: "Resource Auditing",

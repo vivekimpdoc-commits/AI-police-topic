@@ -20,17 +20,17 @@ const labModules = [
   {
     title: "Sample & Evidence Tracking",
     icon: <Database size={20} />,
-    items: ["RFID Sample Dispatch/Receipt", "Chain of Custody Blockchain", "Cold Storage Temperature Monitor", "Automated Case Linking"]
+    items: ["AI Forensics Analyzer", "Chain of Custody Blockchain", "Cold Storage Temperature Monitor", "Automated Case Linking"]
   },
   {
     title: "Forensic Analysis",
     icon: <FlaskConical size={20} />,
-    items: ["AI DNA Profile Matching", "Digital Forensics Queue", "Toxicology Report Auto-Gen", "Ballistics Image Recognition"]
+    items: ["AI DNA Matcher", "Digital Forensics Queue", "Toxicology Report Auto-Gen", "Ballistics Image Recognition"]
   },
   {
     title: "Lab Operations & QA",
     icon: <Activity size={20} />,
-    items: ["Instrument Calibration Scheduler", "Chemical Reagent Inventory", "NABL Quality Assurance Sync", "Bio-waste Disposal Logs"]
+    items: ["AI Ballistics Predictor", "Chemical Reagent Inventory", "NABL Quality Assurance Sync", "Bio-waste Disposal Logs"]
   },
   {
     title: "Reporting & Legal",

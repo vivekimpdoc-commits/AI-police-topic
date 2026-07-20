@@ -20,17 +20,17 @@ const narcoticsModules = [
   {
     title: "Narcotics Supply Chain",
     icon: <Syringe size={20} />,
-    items: ["Dark Net Market Scraping", "Courier/Mule Travel Patterns", "Chemical Precursor Tracking", "Seizure Purity Analytics"]
+    items: ["AI Drug Syndicate Mapper", "Courier/Mule Travel Patterns", "Chemical Precursor Tracking", "Seizure Purity Analytics"]
   },
   {
     title: "Wildlife Crime Intelligence",
     icon: <TreePine size={20} />,
-    items: ["Ivory/Tiger-Skin Trafficking Routes", "Social Media Exotic Pet Scraper", "Poacher Acoustic Triangulation", "Forest Drone Patrols"]
+    items: ["AI Dark Web Drug Cartel Scanner", "Social Media Exotic Pet Scraper", "Poacher Acoustic Triangulation", "Forest Drone Patrols"]
   },
   {
     title: "Environmental Crime",
     icon: <Biohazard size={20} />,
-    items: ["Illegal Sand Mining Detection", "Toxic Waste Dumping Heatmaps", "Satellite Deforestation Tracking", "Water Pollution IoT Sensors"]
+    items: ["AI Chemical Precursor Tracker", "Toxic Waste Dumping Heatmaps", "Satellite Deforestation Tracking", "Water Pollution IoT Sensors"]
   },
   {
     title: "Organized Crime Syndicates",

@@ -20,17 +20,17 @@ const planningModules = [
   {
     title: "Long-Term Force Planning",
     icon: <Target size={20} />,
-    items: ["5-Year Strategic Goals", "Demographic Shift Projections", "Recruitment Wave Planning", "Retirement Gap Analysis"]
+    items: ["AI Budget Forecaster", "Demographic Shift Projections", "Recruitment Wave Planning", "Retirement Gap Analysis"]
   },
   {
     title: "Budget & Modernization",
     icon: <TrendingUp size={20} />,
-    items: ["Budget Utilization Forecasting", "Modernization Fund Tracking", "ROI on Tech Investments", "Grant Proposal Generator"]
+    items: ["AI Force Deployment Planner", "Modernization Fund Tracking", "ROI on Tech Investments", "Grant Proposal Generator"]
   },
   {
     title: "Infrastructure Expansion",
     icon: <LayoutDashboard size={20} />,
-    items: ["New Police Station Locator", "Crime-to-Station Distance Mapping", "Barrack Expansion Planner", "Land Acquisition Tracker"]
+    items: ["AI Modernization Fund Tracker", "Crime-to-Station Distance Mapping", "Barrack Expansion Planner", "Land Acquisition Tracker"]
   },
   {
     title: "Smart Police Indexing",

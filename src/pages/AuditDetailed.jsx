@@ -22,17 +22,17 @@ const auditModules = [
   {
     title: "Financial Audits",
     icon: <Calculator size={20} />,
-    items: ["Secret Fund (SS Fund) Audit", "Expense Claims Verification", "Payroll Audits", "Budget Utilization Auditing", "Tender & Procurement Audit"]
+    items: ["AI Vendor Blacklist Monitor", "Expense Claims Verification", "Payroll Audits", "Budget Utilization Auditing", "Tender & Procurement Audit"]
   },
   {
     title: "Armoury & Logistics Audits",
     icon: <Target size={20} />,
-    items: ["Weapon Issue & Return Logs", "Ammunition Depletion Audits", "Vehicle Mileage vs Fuel Checks", "Uniform Stock Auditing"]
+    items: ["AI Bid Evaluation History", "Ammunition Depletion Audits", "Vehicle Mileage vs Fuel Checks", "Uniform Stock Auditing"]
   },
   {
     title: "Disciplinary & Admin Audits",
     icon: <Scale size={20} />,
-    items: ["Suspension Records Audit", "ACR Fairness Verification", "Departmental Enquiry Logs", "Leave Abuse Detection"]
+    items: ["AI Contract Milestone Tracker", "ACR Fairness Verification", "Departmental Enquiry Logs", "Leave Abuse Detection"]
   },
   {
     title: "Station & Malkhana (Evidence) Audits",

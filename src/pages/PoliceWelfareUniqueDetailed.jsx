@@ -20,17 +20,17 @@ const welfareModules = [
   {
     title: "Family & Emergency Support",
     icon: <Heart size={20} />,
-    items: ["Family Emergency Assistance", "Martyrdom Benefit Processing", "Medical Emergency Fund", "Housing Assistance Portal"]
+    items: ["AI Health Camp Scheduler", "Martyrdom Benefit Processing", "Medical Emergency Fund", "Housing Assistance Portal"]
   },
   {
     title: "Education & Scholarships",
     icon: <Trophy size={20} />,
-    items: ["AI Children Scholarship Tracker", "Police School Admissions", "Higher Education Loans", "Sports Excellence Awards"]
+    items: ["AI Loan Eligibility Checker", "Police School Admissions", "Higher Education Loans", "Sports Excellence Awards"]
   },
   {
     title: "Retirement & Counselling",
     icon: <Activity size={20} />,
-    items: ["Pre-Retirement Counselling", "Pension Calculation AI", "Post-Retirement Knowledge Repo", "Second Career Guidance"]
+    items: ["AI Merit Scholarship Selector", "Pension Calculation AI", "Post-Retirement Knowledge Repo", "Second Career Guidance"]
   },
   {
     title: "Recognition & Community",

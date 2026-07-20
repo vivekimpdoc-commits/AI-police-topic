@@ -20,17 +20,17 @@ const libraryModules = [
   {
     title: "Digital Library & Archives",
     icon: <BookOpen size={20} />,
-    items: ["AI Searchable Case Law Index", "Historical Circular Archive", "Digitized Police Magazines", "Judgement Repository"]
+    items: ["AI Case Law Search", "Historical Circular Archive", "Digitized Police Magazines", "Judgement Repository"]
   },
   {
     title: "SOP & Policy Control",
     icon: <FileText size={20} />,
-    items: ["SOP Versioning Tracker", "Drafting & Approval Workflow", "Policy Dissemination Alerts", "Compliance Acknowledgement"]
+    items: ["AI Legal Precedent Bot", "Drafting & Approval Workflow", "Policy Dissemination Alerts", "Compliance Acknowledgement"]
   },
   {
     title: "Training & Knowledge",
     icon: <GraduationCap size={20} />,
-    items: ["Video Lecture Repository", "Interactive Case Studies", "Skill-based Reading Lists", "Virtual Simulation Scenarios"]
+    items: ["AI Digital Book Archive", "Interactive Case Studies", "Skill-based Reading Lists", "Virtual Simulation Scenarios"]
   },
   {
     title: "Expert Network",

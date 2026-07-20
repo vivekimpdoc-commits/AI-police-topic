@@ -23,12 +23,12 @@ const telecomModules = [
   {
     title: "Telecom & Telephony",
     icon: <Phone size={20} />,
-    items: ["Police Telecom Bill Analytics", "CUG (Closed User Group) Optimization", "VoIP Gateway Monitor"]
+    items: ["AI Wireless Call Log Archive", "CUG (Closed User Group) Optimization", "VoIP Gateway Monitor"]
   },
   {
     title: "Network Infrastructure",
     icon: <Satellite size={20} />,
-    items: ["AI Telecom Tower Maintenance", "Satellite Comms Sync", "Dead-Zone Predictor"]
+    items: ["AI Frequency Interference Analyzer", "Satellite Comms Sync", "Dead-Zone Predictor"]
   },
   {
     title: "Comms Auditing",

@@ -20,17 +20,17 @@ const registerModules = [
   {
     title: "Missing & Lost Tracking",
     icon: <MapPin size={20} />,
-    items: ["AI Lost Children Register", "Missing Livestock Report", "Unknown/Abandoned Vehicle Register", "Amnesia/Unknown Persons"]
+    items: ["AI Arms License Verifier", "Missing Livestock Report", "Unknown/Abandoned Vehicle Register", "Amnesia/Unknown Persons"]
   },
   {
     title: "Property & Assets",
     icon: <Database size={20} />,
-    items: ["AI Property Marking Registry", "Critical Asset Register", "Seized Property Tracking", "Unclaimed Property Auction"]
+    items: ["AI Missing Person Matcher", "Critical Asset Register", "Seized Property Tracking", "Unclaimed Property Auction"]
   },
   {
     title: "Incident & Hazard Zones",
     icon: <ShieldAlert size={20} />,
-    items: ["Repeat Incident Location Register", "Hazardous Location Register", "Disaster-Prone Area Register", "Illegal Encroachment Complaints"]
+    items: ["AI Stolen Vehicle Tracer", "Hazardous Location Register", "Disaster-Prone Area Register", "Illegal Encroachment Complaints"]
   },
   {
     title: "Infrastructure & Public",

@@ -20,17 +20,17 @@ const legalModules = [
   {
     title: "Warrants & Summons",
     icon: <FileSignature size={20} />,
-    items: ["Automated Warrant Routing to IO", "Geotagged Summons Delivery", "Non-Bailable Warrant (NBW) Alerts", "Absconder Analytics"]
+    items: ["AI Summons Generator", "Geotagged Summons Delivery", "Non-Bailable Warrant (NBW) Alerts", "Absconder Analytics"]
   },
   {
     title: "Bail & Remand Compliance",
     icon: <Scale size={20} />,
-    items: ["Bail Condition Violation Flags", "Max Remand Period Tracker", "Surety Verification AI", "Default Bail Prevention Alerts"]
+    items: ["AI Warrant Execution Tracker", "Max Remand Period Tracker", "Surety Verification AI", "Default Bail Prevention Alerts"]
   },
   {
     title: "Court Production & Escort",
     icon: <Gavel size={20} />,
-    items: ["Virtual Court Video Links", "High-Risk Prisoner Escort Planner", "Court Date Sync (e-Courts)", "Vehicle Ambush Risk Modeling"]
+    items: ["AI Court Outcome Predictor", "High-Risk Prisoner Escort Planner", "Court Date Sync (e-Courts)", "Vehicle Ambush Risk Modeling"]
   },
   {
     title: "Judicial Orders & Notices",

@@ -20,17 +20,17 @@ const techModules = [
   {
     title: "Drone & Robot Fleet",
     icon: <Zap size={20} />,
-    items: ["Drone Fleet Maintenance AI", "Robot Equipment Register", "Mission Payload Tracker", "Autonomous Vehicle Registry"]
+    items: ["AI Drone Footage Analyzer", "Robot Equipment Register", "Mission Payload Tracker", "Autonomous Vehicle Registry"]
   },
   {
     title: "IoT & Sensor Networks",
     icon: <Wifi size={20} />,
-    items: ["IoT Device Management", "Sensor Calibration Monitoring", "Edge Device Health Dashboard", "Smart City Sensor Sync"]
+    items: ["AI Cyber Forensics Bot", "Sensor Calibration Monitoring", "Edge Device Health Dashboard", "Smart City Sensor Sync"]
   },
   {
     title: "Communications",
     icon: <Network size={20} />,
-    items: ["Satellite Comms Coordination", "Mobile Network Coverage Assessment", "Radio Frequency Management", "Encrypted Mesh Network"]
+    items: ["AI Telecom Intercept Analyzer", "Mobile Network Coverage Assessment", "Radio Frequency Management", "Encrypted Mesh Network"]
   },
   {
     title: "Security & Certification",

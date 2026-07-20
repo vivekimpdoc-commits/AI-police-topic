@@ -28,7 +28,7 @@ const knowledgeModules = [
   {
     title: "Mentorship & Transfer",
     icon: <GraduationCap size={20} />,
-    items: ["AI Mentor-Mentee Matcher", "Knowledge Transfer Tracking", "Virtual Legacy Advisors"]
+    items: ["AI Standard Templates Repository", "Knowledge Transfer Tracking", "Virtual Legacy Advisors"]
   },
   {
     title: "Case Law & History",

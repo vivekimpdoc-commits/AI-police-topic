@@ -23,12 +23,12 @@ const techModules = [
   {
     title: "IT Support & Maintenance",
     icon: <Monitor size={20} />,
-    items: ["AI IT Helpdesk Chatbot", "Automated Issue Routing", "Remote Diagnostic AI"]
+    items: ["AI Barcode Inventory", "Automated Issue Routing", "Remote Diagnostic AI"]
   },
   {
     title: "Deployment & Distribution",
     icon: <Laptop size={20} />,
-    items: ["Tech Gear Allocation DB", "Field Tech Deployment Map", "AI Hardware Replenishment"]
+    items: ["AI RFID Equipment Tracking", "Field Tech Deployment Map", "AI Hardware Replenishment"]
   },
   {
     title: "Network & Compliance",

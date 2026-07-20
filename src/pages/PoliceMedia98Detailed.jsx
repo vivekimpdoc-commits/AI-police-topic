@@ -23,12 +23,12 @@ const mediaModules = [
   {
     title: "Social Media & Sentiment",
     icon: <Share2 size={20} />,
-    items: ["Public Sentiment Analyzer", "Viral Fake News Predictor", "Automated Citizen Advisories"]
+    items: ["AI Interview Request Manager", "Viral Fake News Predictor", "Automated Citizen Advisories"]
   },
   {
     title: "Broadcasting & Outreach",
     icon: <Tv size={20} />,
-    items: ["AI Police Podcast Studio", "Crisis Comms Broadcast", "Digital Billboard Sync"]
+    items: ["AI Press Accreditation Tracker", "Crisis Comms Broadcast", "Digital Billboard Sync"]
   },
   {
     title: "Analytics & Monitoring",

@@ -23,12 +23,12 @@ const infraModules = [
   {
     title: "Construction & Expansion",
     icon: <Hammer size={20} />,
-    items: ["AI Police Station Blueprint Gen", "Construction Progress Tracker", "Material Cost Estimator"]
+    items: ["AI Earthquake Safety Inspection", "Construction Progress Tracker", "Material Cost Estimator"]
   },
   {
     title: "Land & Real Estate",
     icon: <MapPin size={20} />,
-    items: ["Police Land Encroachment Alert", "Title Deed Verification DB", "Geo-Fencing Police Lands"]
+    items: ["AI Fire Exit Readiness Monitor", "Title Deed Verification DB", "Geo-Fencing Police Lands"]
   },
   {
     title: "Smart Maintenance",

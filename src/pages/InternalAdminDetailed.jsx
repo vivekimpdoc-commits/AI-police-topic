@@ -20,17 +20,17 @@ const adminModules = [
   {
     title: "Space & Resource Booking",
     icon: <Calendar size={20} />,
-    items: ["Meeting Room Booking System", "Conference Hall Scheduler", "Official Vehicle Booking", "Office Asset Reservation"]
+    items: ["AI Canteen Inventory", "Conference Hall Scheduler", "Official Vehicle Booking", "Office Asset Reservation"]
   },
   {
     title: "Visitor & Queue Management",
     icon: <Activity size={20} />,
-    items: ["Visitor Registration Kiosk", "AI-based Queue Token System", "VIP/Senior Officer Fast Track", "Digital Reception Dashboard"]
+    items: ["AI Uniform Issuance Tracker", "AI-based Queue Token System", "VIP/Senior Officer Fast Track", "Digital Reception Dashboard"]
   },
   {
     title: "Digital Office Tools",
     icon: <FileText size={20} />,
-    items: ["Digital Notice Board", "AI Intercom Directory", "Digital Memo/Circular System", "Department-wise Calendar"]
+    items: ["AI Departmental Leave Manager", "AI Intercom Directory", "Digital Memo/Circular System", "Department-wise Calendar"]
   },
   {
     title: "Consumables & Stationery",

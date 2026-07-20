@@ -28,7 +28,7 @@ const sportsModules = [
   {
     title: "Health & Nutrition",
     icon: <HeartPulse size={20} />,
-    items: ["AI Diet Planner", "Sports Injury Prediction", "Recovery Phase Monitor"]
+    items: ["AI Shooting Competition Records", "Sports Injury Prediction", "Recovery Phase Monitor"]
   },
   {
     title: "Logistics & Equipment",

@@ -6,9 +6,9 @@ import '../styles/hrmsDetailed.css';
 
 const aiExperts = ["Salary Projection AI", "Overtime Calculator Bot", "Budget Planner AI", "Electricity Analytics Bot", "Fuel Budget Optimizer", "Cost Center AI", "Allowance Manager Bot", "Internet Cost Monitor", "Building Budget AI", "Expenditure Anomaly Detector", "Finance Audit Bot", "Backend Developer AI", "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"];
 const financeModules = [
-  { title: "Salary & Allowances", icon: <DollarSign size={20} />, items: ["AI Salary Projection Model", "Overtime Calculator", "Uniform Allowance Management", "DA/HRA Revision Impact Analysis"] },
-  { title: "Operational Budgets", icon: <BarChart2 size={20} />, items: ["Fuel Budget Planner", "Building Maintenance Budget", "Vehicle Repair Budget Tracker", "Operations Expense Monitor"] },
-  { title: "Utility Analytics", icon: <Activity size={20} />, items: ["Electricity Bill Analytics", "Water Bill Analytics", "Telephone Expense Analytics", "Internet Expense Monitoring"] },
+  { title: "Salary & Allowances", icon: <DollarSign size={20} />, items: ["AI Budget Allocator", "Overtime Calculator", "Uniform Allowance Management", "DA/HRA Revision Impact Analysis"] },
+  { title: "Operational Budgets", icon: <BarChart2 size={20} />, items: ["AI Expenditure Predictor", "Building Maintenance Budget", "Vehicle Repair Budget Tracker", "Operations Expense Monitor"] },
+  { title: "Utility Analytics", icon: <Activity size={20} />, items: ["AI Financial Irregularity Alert", "Water Bill Analytics", "Telephone Expense Analytics", "Internet Expense Monitoring"] },
   { title: "Financial Controls", icon: <Shield size={20} />, items: ["Cost Center Dashboard", "Budget Variance Analysis", "Expenditure Anomaly Alerts", "Annual Accounts Reconciliation"] }
 ];
 const aiFeatures = ["AI Salary Projection with Upcoming Increment and DA Hike Modeling", "AI Anomaly Detection in Utility Bills (Theft/Wastage)", "AI Optimization of Fuel Budget across Zones based on Crime Pattern", "AI Forecasting of Overtime Expenditure during Elections/Festivals", "AI Automated Budget Variance Reports for PAC (Public Accounts Committee)", "AI Cost Center Benchmarking across Districts", "AI Fraud Detection in Contractor Bills (Duplicate/Inflated)", "AI Real-time Budget Depletion Alerts to DG/ADG"];

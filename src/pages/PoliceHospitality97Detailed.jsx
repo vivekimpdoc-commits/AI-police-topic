@@ -18,17 +18,17 @@ const hospitalityModules = [
   {
     title: "Event & Conference Hosting",
     icon: <Users size={20} />,
-    items: ["AI Conference Hospitality Planner", "Seating Arrangement Optimizer", "Event Check-in Kiosks"]
+    items: ["AI VIP Lounge Management", "Seating Arrangement Optimizer", "Event Check-in Kiosks"]
   },
   {
     title: "Catering & Mess Management",
     icon: <Utensils size={20} />,
-    items: ["Police Mess Inventory Predictor", "Automated Menu Planner", "Nutritional Value Tracker"]
+    items: ["AI Conference Hospitality Planner", "Automated Menu Planner", "Nutritional Value Tracker"]
   },
   {
     title: "VIP Lounge & Accommodations",
     icon: <Coffee size={20} />,
-    items: ["AI VIP Lounge Management", "Guest House Booking System", "Room Service Automation"]
+    items: ["AI Guest Refreshment Inventory", "Guest House Booking System", "Room Service Automation"]
   },
   {
     title: "Billing & Feedback",

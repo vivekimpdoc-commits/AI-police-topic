@@ -20,17 +20,17 @@ const disasterModules = [
   {
     title: "Agency Coordination",
     icon: <Network size={20} />,
-    items: ["NDRF/SDRF Deployment Sync", "Civil Defence Volunteer Call-up", "Home Guard Mobilization", "Multi-Agency Comms Bridge"]
+    items: ["AI Disaster Evacuation Router", "Civil Defence Volunteer Call-up", "Home Guard Mobilization", "Multi-Agency Comms Bridge"]
   },
   {
     title: "Evacuation & Shelters",
     icon: <Wind size={20} />,
-    items: ["AI Evacuation Route Mapping", "Emergency Shelter Security", "Refugee Registration Portal", "Stampede Prevention Grid"]
+    items: ["AI Resource Mobilization", "Emergency Shelter Security", "Refugee Registration Portal", "Stampede Prevention Grid"]
   },
   {
     title: "Resource & Relief",
     icon: <Database size={20} />,
-    items: ["Disaster Resource Inventory", "Relief Convoy Escort Routing", "Food/Medical Drop Coordination", "Helicopter Landing Zone Sec"]
+    items: ["AI Relief Material Tracker", "Relief Convoy Escort Routing", "Food/Medical Drop Coordination", "Helicopter Landing Zone Sec"]
   },
   {
     title: "Casualty & Comms",

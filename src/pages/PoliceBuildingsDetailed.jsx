@@ -6,9 +6,9 @@ import '../styles/hrmsDetailed.css';
 
 const aiExperts = ["Structural Inspector AI", "Roof Maintenance Bot", "Water Tank Scheduler", "Lift Safety Monitor", "AC Maintenance AI", "CCTV Pole Inspector", "Boundary Wall AI", "Electrical Safety Bot", "Drainage Inspector AI", "Solar Power Monitor", "Energy Audit AI", "Backend Developer AI", "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"];
 const buildingModules = [
-  { title: "Structural Maintenance", icon: <Building2 size={20} />, items: ["Building Structural Inspection", "Boundary Wall Inspection", "Roof Maintenance Planner", "Foundation Crack Detector"] },
-  { title: "Mechanical & Electrical", icon: <Wrench size={20} />, items: ["Lift Maintenance Monitor", "AC Maintenance Planner", "Electrical Safety Inspection", "Generator Health Monitor"] },
-  { title: "Utilities & Sanitation", icon: <Activity size={20} />, items: ["Water Tank Cleaning Schedule", "Drainage Inspection AI", "Solar Power Monitoring", "Rainwater Harvesting Tracking"] },
+  { title: "Structural Maintenance", icon: <Building2 size={20} />, items: ["AI Police Station Layout Planner", "Boundary Wall Inspection", "Roof Maintenance Planner", "Foundation Crack Detector"] },
+  { title: "Mechanical & Electrical", icon: <Wrench size={20} />, items: ["AI Maintenance Predictor", "AC Maintenance Planner", "Electrical Safety Inspection", "Generator Health Monitor"] },
+  { title: "Utilities & Sanitation", icon: <Activity size={20} />, items: ["AI Energy Efficiency Monitor", "Drainage Inspection AI", "Solar Power Monitoring", "Rainwater Harvesting Tracking"] },
   { title: "Security Infrastructure", icon: <Shield size={20} />, items: ["CCTV Pole Maintenance", "Barricade & Gate Upkeep", "Sentry Post Upkeep", "Perimeter Lighting Audit"] }
 ];
 const aiFeatures = ["AI Structural Health Monitoring via IoT Vibration Sensors", "AI Prediction of AC Failure based on Power Consumption Trends", "AI Solar Panel Efficiency Degradation Forecasting", "AI Water Tank Contamination Detection via IoT Sensors", "AI Drone Inspection of Roof and Boundary Walls", "AI Energy Consumption Anomaly Detection", "AI Automated PPM (Planned Preventive Maintenance) Scheduling", "AI Prioritization of Maintenance Based on Safety Criticality"];

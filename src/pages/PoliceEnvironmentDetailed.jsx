@@ -23,12 +23,12 @@ const environmentModules = [
   {
     title: "Resource Conservation",
     icon: <Droplet size={20} />,
-    items: ["AI Rainwater Harvesting Monitor", "AI Water Quality Monitoring", "Energy Efficiency Dash"]
+    items: ["AI Tree Plantation Tracker", "AI Water Quality Monitoring", "Energy Efficiency Dash"]
   },
   {
     title: "Pollution Monitoring",
     icon: <Wind size={20} />,
-    items: ["AI Air Quality Dashboard", "AI Noise Monitoring", "Carbon Footprint Tracker"]
+    items: ["AI Rainwater Harvesting Monitor", "AI Noise Monitoring", "Carbon Footprint Tracker"]
   },
   {
     title: "Environmental Audits",

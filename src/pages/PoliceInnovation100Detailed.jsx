@@ -28,7 +28,7 @@ const innovationModules = [
   {
     title: "Startup & Vendor Incubation",
     icon: <TrendingUp size={20} />,
-    items: ["Police Startup Incubator", "Tech Vendor Matchmaking", "Prototype Deployment Tracker"]
+    items: ["AI Pilot Deployment Tracker", "Tech Vendor Matchmaking", "Prototype Deployment Tracker"]
   },
   {
     title: "Trend & IP Management",

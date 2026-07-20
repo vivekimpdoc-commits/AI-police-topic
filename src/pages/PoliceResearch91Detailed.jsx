@@ -28,7 +28,7 @@ const researchModules = [
   {
     title: "Policy & Strategy",
     icon: <FileText size={20} />,
-    items: ["AI Policy Impact Simulator", "Draft Legislation Reviewer", "Global Police Doctrine DB"]
+    items: ["AI Research Grant Tracker", "Draft Legislation Reviewer", "Global Police Doctrine DB"]
   },
   {
     title: "Academic Collaboration",

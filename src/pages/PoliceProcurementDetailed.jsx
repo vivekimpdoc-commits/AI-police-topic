@@ -20,17 +20,17 @@ const procurementModules = [
   {
     title: "Tender & Requisition",
     icon: <ShoppingCart size={20} />,
-    items: ["AI Tender Document Parsing", "Automated Requisition Approval", "Global Price Benchmarking", "Bidder Background Check"]
+    items: ["AI e-Tendering Bot", "Automated Requisition Approval", "Global Price Benchmarking", "Bidder Background Check"]
   },
   {
     title: "Inventory & Replenishment",
     icon: <Database size={20} />,
-    items: ["Predictive Ammo Restocking", "Uniform & Gear Sizing DB", "Perishable Stock Decay Alerts", "Barcode/RFID Goods Receipt"]
+    items: ["AI Vendor Reliability Score", "Uniform & Gear Sizing DB", "Perishable Stock Decay Alerts", "Barcode/RFID Goods Receipt"]
   },
   {
     title: "Vendor Management",
     icon: <Target size={20} />,
-    items: ["Vendor Risk Scoring", "Automated SLA Tracking", "Blacklist Syndicate Detection", "Digital Payment Sync"]
+    items: ["AI Price Trend Predictor", "Automated SLA Tracking", "Blacklist Syndicate Detection", "Digital Payment Sync"]
   },
   {
     title: "Contracts & Audits",

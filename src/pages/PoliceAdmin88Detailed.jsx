@@ -23,12 +23,12 @@ const adminModules = [
   {
     title: "Officer Welfare & Grievance",
     icon: <Users size={20} />,
-    items: ["AI Officer Grievance Portal", "Welfare Scheme Matcher", "Stress Pattern Analysis"]
+    items: ["AI Holiday Duty Rotation", "Welfare Scheme Matcher", "Stress Pattern Analysis"]
   },
   {
     title: "Attendance & Metrics",
     icon: <Clock size={20} />,
-    items: ["Biometric Attendance Sync", "AI Fatigue Prediction", "Overtime Compensation Dash"]
+    items: ["AI Official Diary Management", "AI Fatigue Prediction", "Overtime Compensation Dash"]
   },
   {
     title: "Policy & Directives",

@@ -6,9 +6,9 @@ import '../styles/hrmsDetailed.css';
 
 const aiExperts = ["Intl Training Coordinator", "Exchange Program Bot", "Delegation Manager AI", "UN Standards Tracker", "Bilateral Cooperation AI", "Diplomacy Dashboard Bot", "Conference Manager AI", "Foreign Study Visit AI", "Research Hub Bot", "Global Best Practices AI", "Police Attaché Bot", "Backend Developer AI", "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"];
 const intlModules = [
-  { title: "Training & Exchange", icon: <Globe size={20} />, items: ["International Training Coordination", "Police Exchange Program", "Foreign Study Visit Management", "Joint Simulation Exercises"] },
-  { title: "Delegation Management", icon: <Handshake size={20} />, items: ["International Delegation Visits", "State Guest Intel Briefs", "Protocol Management", "Foreign Delegate Profiling"] },
-  { title: "Knowledge & Standards", icon: <FileText size={20} />, items: ["Global Best Practices Library", "UN Policing Standards Repository", "Interpol Working Group Sync", "Global Security Research Hub"] },
+  { title: "Training & Exchange", icon: <Globe size={20} />, items: ["AI Interpol Sync Bot", "Police Exchange Program", "Foreign Study Visit Management", "Joint Simulation Exercises"] },
+  { title: "Delegation Management", icon: <Handshake size={20} />, items: ["AI Extradition Tracker", "State Guest Intel Briefs", "Protocol Management", "Foreign Delegate Profiling"] },
+  { title: "Knowledge & Standards", icon: <FileText size={20} />, items: ["AI Global Terror Database", "UN Policing Standards Repository", "Interpol Working Group Sync", "Global Security Research Hub"] },
   { title: "Diplomacy & Cooperation", icon: <Activity size={20} />, items: ["Bilateral Cooperation Tracker", "International Conference Management", "Police Diplomacy Dashboard", "Treaty Compliance Monitoring"] }
 ];
 const aiFeatures = ["AI NLP Translation for International Police Reports", "AI Matching of Indian Officers to UN Peacekeeping Roles", "AI Profiling of Visiting Foreign Delegations for Protocol", "AI Knowledge Extraction from Interpol Research Papers", "AI Automated Compliance Check against UN Policing Standards", "AI Conference Agenda Optimization from Past Proceedings", "AI Tracking of International Obligations and Deadlines", "AI Recommending Global Training Opportunities for Specialists"];

@@ -20,17 +20,17 @@ const borderModules = [
   {
     title: "Marine & Coastal Security",
     icon: <Ship size={20} />,
-    items: ["AIS (Vessel Tracking) Anomaly Alert", "Unregistered Boat Detection", "Sonar Sub-surface Scanning", "Coastal Radar Integration"]
+    items: ["AI Marine Border Patrol", "Unregistered Boat Detection", "Sonar Sub-surface Scanning", "Coastal Radar Integration"]
   },
   {
     title: "Drone Perimeter Defense",
     icon: <Crosshair size={20} />,
-    items: ["Autonomous UAV Patrols", "Thermal Human Detection (Night)", "Anti-Drone Jamming AI", "Laser Fence Breach Alerts"]
+    items: ["AI Smuggler Route Predictor", "Thermal Human Detection (Night)", "Anti-Drone Jamming AI", "Laser Fence Breach Alerts"]
   },
   {
     title: "Satellite & Terrain Intelligence",
     icon: <Radar size={20} />,
-    items: ["Militant Camp Heatmaps", "Cross-Border Tunnel Detection", "Deforestation (Smuggling Trails)", "Topographical Advantage Mapping"]
+    items: ["AI Coastal Radar Sync", "Cross-Border Tunnel Detection", "Deforestation (Smuggling Trails)", "Topographical Advantage Mapping"]
   },
   {
     title: "Signal Intelligence (SIGINT)",

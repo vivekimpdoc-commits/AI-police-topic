@@ -18,17 +18,17 @@ const protocolModules = [
   {
     title: "VIP & Dignitary Ops",
     icon: <Star size={20} />,
-    items: ["AI VIP Route Clearance", "Dignitary Protocol Database", "Automated Security Briefings"]
+    items: ["AI Guard of Honour Planner", "Dignitary Protocol Database", "Automated Security Briefings"]
   },
   {
     title: "Ceremonial Management",
     icon: <Flag size={20} />,
-    items: ["AI Guard of Honour Planner", "Flag Ceremony Scheduler", "Police Band Roster AI"]
+    items: ["AI Flag Ceremony Scheduler", "Flag Ceremony Scheduler", "Police Band Roster AI"]
   },
   {
     title: "Event & Resource Sync",
     icon: <MapPin size={20} />,
-    items: ["Ceremonial Venue Booking", "Traffic Diverter AI", "Event Resource Optimization"]
+    items: ["AI National Event Protocol", "Traffic Diverter AI", "Event Resource Optimization"]
   },
   {
     title: "Logistics & Compliance",

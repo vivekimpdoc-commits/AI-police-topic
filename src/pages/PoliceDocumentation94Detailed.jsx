@@ -23,12 +23,12 @@ const docModules = [
   {
     title: "Drafting & Vetting",
     icon: <PenTool size={20} />,
-    items: ["AI Legal Vetting for Circulars", "Automated Policy Drafting", "Version History Tracker"]
+    items: ["AI Circular Impact Analyzer", "Automated Policy Drafting", "Version History Tracker"]
   },
   {
     title: "Document Classification",
     icon: <Files size={20} />,
-    items: ["AI Auto-Tagger", "Semantic Search & Retrieval", "Redundancy Detector"]
+    items: ["AI Standing Order Management", "Semantic Search & Retrieval", "Redundancy Detector"]
   },
   {
     title: "Compliance & Auditing",

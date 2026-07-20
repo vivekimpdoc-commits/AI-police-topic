@@ -20,17 +20,17 @@ const intelModules = [
   {
     title: "Informant & Source Management",
     icon: <Search size={20} />,
-    items: ["Confidential Informant Registry", "Automated Reward Disbursement", "Source Reliability Scoring", "Burned Source Alerts"]
+    items: ["AI Undercover Ops Sync", "Automated Reward Disbursement", "Source Reliability Scoring", "Burned Source Alerts"]
   },
   {
     title: "Threat & Zone Monitoring",
     icon: <Eye size={20} />,
-    items: ["High-Risk Village/Urban Mapping", "Radicalization Heatmaps", "VIP Threat Assessment", "Communal Tension Radar"]
+    items: ["AI Informant Verifier", "Radicalization Heatmaps", "VIP Threat Assessment", "Communal Tension Radar"]
   },
   {
     title: "Multi-Agency Coordination",
     icon: <Network size={20} />,
-    items: ["IB/RAW Intel Sync", "Cross-Border Smuggling Alerts", "NIA Terror Watchlist Sync", "Joint Operation Dashboards"]
+    items: ["AI Inter-Agency Intel Sharing", "Cross-Border Smuggling Alerts", "NIA Terror Watchlist Sync", "Joint Operation Dashboards"]
   },
   {
     title: "Intel Dissemination",

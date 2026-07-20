@@ -20,17 +20,17 @@ const vipModules = [
   {
     title: "Movement & Convoy Planning",
     icon: <Car size={20} />,
-    items: ["AI Route Risk Assessment", "Dynamic Convoy Formation", "Alternate Route Planner", "ETA Prediction Engine"]
+    items: ["AI VVIP Route Optimizer", "Dynamic Convoy Formation", "Alternate Route Planner", "ETA Prediction Engine"]
   },
   {
     title: "Venue & Zone Security",
     icon: <Shield size={20} />,
-    items: ["Venue Threat Audit", "Temporary Security Zone Setup", "Access Control Points", "CCTV Coverage Mapper"]
+    items: ["AI Threat Level Assessor", "Temporary Security Zone Setup", "Access Control Points", "CCTV Coverage Mapper"]
   },
   {
     title: "Guest Management",
     icon: <Star size={20} />,
-    items: ["State Guest Threat Profile", "Foreign Delegate Briefings", "Accommodation Security", "Medical Readiness Sync"]
+    items: ["AI Convoy Security Sync", "Foreign Delegate Briefings", "Accommodation Security", "Medical Readiness Sync"]
   },
   {
     title: "Escort & Protocol",
