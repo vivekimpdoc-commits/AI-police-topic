@@ -286,7 +286,39 @@ const ModulePage = () => {
                 topic={topic}
                 description={desc}
                 onClick={() => {
-                  navigate(`/topic/${encodeURIComponent(topic)}`);
+                  const dashMap = {
+                    'module-32': '/hrms', 'module-33': '/finance', 'module-85': '/police-finance',
+                    'module-71': '/police-procurement', 'module-72': '/police-laboratories', 'module-73': '/police-library',
+                    'module-74': '/police-intelligence', 'module-75': '/disaster-emergency', 'module-76': '/vip-protocol',
+                    'module-77': '/specialized-registers', 'module-78': '/internal-admin', 'module-79': '/police-welfare-unique',
+                    'module-80': '/scientific-technical', 'module-81': '/planning-strategy', 'module-82': '/international-relations',
+                    'module-83': '/police-legal-process-2', 'module-84': '/police-buildings', 'module-99': '/audit',
+                    'module-52': '/document', 'module-06': '/command-center', 'module-07': '/citizen-services',
+                    'module-08': '/complaint-fir', 'module-10': '/intelligence', 'module-11': '/predictive-policing',
+                    'module-13': '/cyber-crime', 'module-14': '/digital-evidence', 'module-15': '/missing-persons',
+                    'module-16': '/women-child-safety', 'module-17': '/traffic', 'module-18': '/law-order',
+                    'module-19': '/legal-court', 'module-20': '/training-academy', 'module-21': '/logistics',
+                    'module-22': '/smart-city', 'module-23': '/communication', 'module-29': '/police-station',
+                    'module-30': '/fleet-logistics', 'module-31': '/radio-comms', 'module-34': '/public-safety',
+                    'module-35': '/emerging-tech', 'module-36': '/tech-services', 'module-37': '/infrastructure',
+                    'module-38': '/internal-security', 'module-39': '/armoury', 'module-40': '/legal-process',
+                    'module-41': '/community-policing', 'module-42': '/intelligence-support', 'module-43': '/disaster-logistics',
+                    'module-44': '/police-admin', 'module-45': '/training-quality', 'module-46': '/international-coordination',
+                    'module-47': '/research-innovation', 'module-48': '/police-hq', 'module-49': '/correspondence',
+                    'module-50': '/police-inspection', 'module-51': '/police-lines', 'module-53': '/police-vehicles',
+                    'module-54': '/comms-docs', 'module-55': '/police-welfare', 'module-56': '/tech-admin',
+                    'module-57': '/strategic-planning', 'module-58': '/licensing-regulation', 'module-59': '/verification-services',
+                    'module-60': '/election-management', 'module-61': '/prisoner-custody', 'module-62': '/border-check-post',
+                    'module-63': '/business-compliance', 'module-64': '/special-operations', 'module-65': '/documentation-compliance',
+                    'module-66': '/public-interface', 'module-67': '/strategic-admin', 'module-68': '/recruitment-ecosystem',
+                    'module-69': '/police-promotions', 'module-70': '/police-transfers'
+                  };
+
+                  if (dashMap[moduleId]) {
+                    navigate(dashMap[moduleId]);
+                  } else {
+                    navigate(`/topic/${encodeURIComponent(topic)}`);
+                  }
                 }}
               />
             </motion.div>
