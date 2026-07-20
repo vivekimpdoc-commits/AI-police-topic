@@ -395,6 +395,16 @@ const ModulePage = () => {
                     navigate('/police-welfare-unique');
                   } else if (moduleId === 'module-80') {
                     navigate('/scientific-technical');
+                  } else if (moduleId === 'module-81') {
+                    navigate('/planning-strategy');
+                  } else if (moduleId === 'module-82') {
+                    navigate('/international-relations');
+                  } else if (moduleId === 'module-83') {
+                    navigate('/police-legal-process-2');
+                  } else if (moduleId === 'module-84') {
+                    navigate('/police-buildings');
+                  } else if (moduleId === 'module-85') {
+                    navigate('/police-finance');
                   } else if (moduleId === 'module-06') {
                     navigate('/command-center');
                   } else {

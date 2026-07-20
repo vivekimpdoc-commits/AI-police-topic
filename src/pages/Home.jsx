@@ -138,6 +138,11 @@ const Home = () => {
       case 'module-78': return '/internal-admin';
       case 'module-79': return '/police-welfare-unique';
       case 'module-80': return '/scientific-technical';
+      case 'module-81': return '/planning-strategy';
+      case 'module-82': return '/international-relations';
+      case 'module-83': return '/police-legal-process-2';
+      case 'module-84': return '/police-buildings';
+      case 'module-85': return '/police-finance';
       default: return `/module/${id}`;
     }
   };
