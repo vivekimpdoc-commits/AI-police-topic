@@ -335,6 +335,16 @@ const ModulePage = () => {
                     navigate('/correspondence');
                   } else if (moduleId === 'module-50') {
                     navigate('/police-inspection');
+                  } else if (moduleId === 'module-51') {
+                    navigate('/police-lines');
+                  } else if (moduleId === 'module-52') {
+                    navigate('/official-documents');
+                  } else if (moduleId === 'module-53') {
+                    navigate('/police-vehicles');
+                  } else if (moduleId === 'module-54') {
+                    navigate('/comms-docs');
+                  } else if (moduleId === 'module-55') {
+                    navigate('/police-welfare');
                   } else if (moduleId === 'module-06') {
                     navigate('/command-center');
                   } else {

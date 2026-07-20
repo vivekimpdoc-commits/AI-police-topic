@@ -108,6 +108,11 @@ const Home = () => {
       case 'module-48': return '/police-hq';
       case 'module-49': return '/correspondence';
       case 'module-50': return '/police-inspection';
+      case 'module-51': return '/police-lines';
+      case 'module-52': return '/official-documents';
+      case 'module-53': return '/police-vehicles';
+      case 'module-54': return '/comms-docs';
+      case 'module-55': return '/police-welfare';
       default: return `/module/${id}`;
     }
   };
