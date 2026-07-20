@@ -18,7 +18,7 @@ const infraModules = [
   {
     title: "Structural Health & Safety",
     icon: <Activity size={20} />,
-    items: ["AI Building Structural Health Index","AI Earthquake Safety Inspection","AI Fire Exit Readiness Monitor"]
+    items: ["AI Building Structural Health Index", "Earthquake Safety Inspection", "Fire Hazard Prediction"]
   },
   {
     title: "Construction & Expansion",

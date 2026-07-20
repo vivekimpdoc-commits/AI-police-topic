@@ -20,7 +20,7 @@ const libraryModules = [
   {
     title: "Digital Library & Archives",
     icon: <BookOpen size={20} />,
-    items: ["AI Case Law Search","AI Legal Precedent Bot","AI Digital Book Archive"]
+    items: ["AI Searchable Case Law Index", "Historical Circular Archive", "Digitized Police Magazines", "Judgement Repository"]
   },
   {
     title: "SOP & Policy Control",

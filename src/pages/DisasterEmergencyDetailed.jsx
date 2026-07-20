@@ -20,7 +20,7 @@ const disasterModules = [
   {
     title: "Agency Coordination",
     icon: <Network size={20} />,
-    items: ["AI Disaster Evacuation Router","AI Resource Mobilization","AI Relief Material Tracker"]
+    items: ["NDRF/SDRF Deployment Sync", "Civil Defence Volunteer Call-up", "Home Guard Mobilization", "Multi-Agency Comms Bridge"]
   },
   {
     title: "Evacuation & Shelters",

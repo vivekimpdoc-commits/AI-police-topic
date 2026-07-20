@@ -20,7 +20,7 @@ const planningModules = [
   {
     title: "Long-Term Force Planning",
     icon: <Target size={20} />,
-    items: ["AI Budget Forecaster","AI Force Deployment Planner","AI Modernization Fund Tracker"]
+    items: ["5-Year Strategic Goals", "Demographic Shift Projections", "Recruitment Wave Planning", "Retirement Gap Analysis"]
   },
   {
     title: "Budget & Modernization",

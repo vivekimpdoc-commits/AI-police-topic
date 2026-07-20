@@ -18,7 +18,7 @@ const docModules = [
   {
     title: "Government Orders & Circulars",
     icon: <BookOpen size={20} />,
-    items: ["AI Government Order Repository","AI Circular Impact Analyzer","AI Standing Order Management"]
+    items: ["AI Government Order Repository", "Circular Impact Analyzer", "Automated GO Translation"]
   },
   {
     title: "Drafting & Vetting",

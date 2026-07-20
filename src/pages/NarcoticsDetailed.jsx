@@ -20,7 +20,7 @@ const narcoticsModules = [
   {
     title: "Narcotics Supply Chain",
     icon: <Syringe size={20} />,
-    items: ["AI Drug Syndicate Mapper","AI Dark Web Drug Cartel Scanner","AI Chemical Precursor Tracker"]
+    items: ["Dark Net Market Scraping", "Courier/Mule Travel Patterns", "Chemical Precursor Tracking", "Seizure Purity Analytics"]
   },
   {
     title: "Wildlife Crime Intelligence",

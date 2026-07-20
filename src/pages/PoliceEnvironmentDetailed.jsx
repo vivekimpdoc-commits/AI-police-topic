@@ -18,7 +18,7 @@ const environmentModules = [
   {
     title: "Eco-Campus Management",
     icon: <Trees size={20} />,
-    items: ["AI Green Police Station","AI Tree Plantation Tracker","AI Rainwater Harvesting Monitor"]
+    items: ["AI Green Police Station", "AI Tree Plantation Tracker", "AI Plastic-Free Campus"]
   },
   {
     title: "Resource Conservation",

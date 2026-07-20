@@ -18,7 +18,7 @@ const adminModules = [
   {
     title: "Duty & Shift Scheduling",
     icon: <Calendar size={20} />,
-    items: ["AI Office Shift Calendar","AI Holiday Duty Rotation","AI Official Diary Management"]
+    items: ["AI Office Shift Calendar", "AI Holiday Duty Rotation", "Emergency Shift Override"]
   },
   {
     title: "Officer Welfare & Grievance",

@@ -20,7 +20,7 @@ const techModules = [
   {
     title: "Drone & Robot Fleet",
     icon: <Zap size={20} />,
-    items: ["AI Drone Footage Analyzer","AI Cyber Forensics Bot","AI Telecom Intercept Analyzer"]
+    items: ["Drone Fleet Maintenance AI", "Robot Equipment Register", "Mission Payload Tracker", "Autonomous Vehicle Registry"]
   },
   {
     title: "IoT & Sensor Networks",

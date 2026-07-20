@@ -18,7 +18,7 @@ const researchModules = [
   {
     title: "Crime Pattern Research",
     icon: <Search size={20} />,
-    items: ["AI Crime Research Repository","AI Operational Lessons Learned Library","AI Research Grant Tracker"]
+    items: ["AI Crime Research Repository", "Socio-Economic Crime Correlator", "Global Modus Operandi Tracker"]
   },
   {
     title: "Operational Lessons",

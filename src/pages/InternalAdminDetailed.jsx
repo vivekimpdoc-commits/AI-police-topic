@@ -20,7 +20,7 @@ const adminModules = [
   {
     title: "Space & Resource Booking",
     icon: <Calendar size={20} />,
-    items: ["AI Canteen Inventory","AI Uniform Issuance Tracker","AI Departmental Leave Manager"]
+    items: ["Meeting Room Booking System", "Conference Hall Scheduler", "Official Vehicle Booking", "Office Asset Reservation"]
   },
   {
     title: "Visitor & Queue Management",

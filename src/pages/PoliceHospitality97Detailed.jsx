@@ -18,7 +18,7 @@ const hospitalityModules = [
   {
     title: "Event & Conference Hosting",
     icon: <Users size={20} />,
-    items: ["AI VIP Lounge Management","AI Conference Hospitality Planner","AI Guest Refreshment Inventory"]
+    items: ["AI Conference Hospitality Planner", "Seating Arrangement Optimizer", "Event Check-in Kiosks"]
   },
   {
     title: "Catering & Mess Management",

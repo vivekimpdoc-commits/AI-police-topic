@@ -20,7 +20,7 @@ const vipModules = [
   {
     title: "Movement & Convoy Planning",
     icon: <Car size={20} />,
-    items: ["AI VVIP Route Optimizer","AI Threat Level Assessor","AI Convoy Security Sync"]
+    items: ["AI Route Risk Assessment", "Dynamic Convoy Formation", "Alternate Route Planner", "ETA Prediction Engine"]
   },
   {
     title: "Venue & Zone Security",

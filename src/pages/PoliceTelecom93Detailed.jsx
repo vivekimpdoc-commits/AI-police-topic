@@ -18,7 +18,7 @@ const telecomModules = [
   {
     title: "Radio & Wireless Comms",
     icon: <Radio size={20} />,
-    items: ["AI Call Sign Management","AI Wireless Call Log Archive","AI Frequency Interference Analyzer"]
+    items: ["AI Call Sign Management", "Wireless Call Log Archive", "UHF/VHF Tower Mapping"]
   },
   {
     title: "Telecom & Telephony",
