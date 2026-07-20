@@ -173,42 +173,66 @@ const ModulePage = () => {
         </div>
 
         {/* Full AI Dashboard Button — for modules with dedicated detailed pages */}
-        {(['module-71','module-72','module-73','module-74','module-75','module-76','module-77','module-78','module-79','module-80','module-81','module-82','module-83','module-84','module-85'].includes(moduleId)) && (
-          <button
-            onClick={() => {
-              const dashMap = {
-                'module-71': '/police-procurement', 'module-72': '/police-laboratories', 'module-73': '/police-library',
-                'module-74': '/police-intelligence', 'module-75': '/disaster-emergency', 'module-76': '/vip-protocol',
-                'module-77': '/specialized-registers', 'module-78': '/internal-admin', 'module-79': '/police-welfare-unique',
-                'module-80': '/scientific-technical', 'module-81': '/planning-strategy', 'module-82': '/international-relations',
-                'module-83': '/police-legal-process-2', 'module-84': '/police-buildings', 'module-85': '/police-finance'
-              };
-              navigate(dashMap[moduleId]);
-            }}
-            style={{
-              background: 'linear-gradient(135deg, rgba(6,182,212,0.2), rgba(139,92,246,0.2))',
-              border: '1px solid rgba(6, 182, 212, 0.6)',
-              color: '#06b6d4',
-              padding: '0.8rem 1.5rem',
-              borderRadius: '12px',
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '10px',
-              transition: 'all 0.3s',
-              boxShadow: '0 0 20px rgba(6, 182, 212, 0.3)',
-              fontWeight: 'bold',
-              letterSpacing: '1px',
-              fontSize: '0.85rem',
-              textTransform: 'uppercase',
-              whiteSpace: 'nowrap'
-            }}
-            onMouseOver={(e) => { e.currentTarget.style.background = 'linear-gradient(135deg, rgba(6,182,212,0.4), rgba(139,92,246,0.4))'; e.currentTarget.style.boxShadow = '0 0 30px rgba(6, 182, 212, 0.6)'; }}
-            onMouseOut={(e) => { e.currentTarget.style.background = 'linear-gradient(135deg, rgba(6,182,212,0.2), rgba(139,92,246,0.2))'; e.currentTarget.style.boxShadow = '0 0 20px rgba(6, 182, 212, 0.3)'; }}
-          >
-            <Zap size={18} /> OPEN FULL AI DASHBOARD
-          </button>
-        )}
+        {(() => {
+          const dashMap = {
+            'module-32': '/hrms', 'module-33': '/finance', 'module-85': '/police-finance',
+            'module-71': '/police-procurement', 'module-72': '/police-laboratories', 'module-73': '/police-library',
+            'module-74': '/police-intelligence', 'module-75': '/disaster-emergency', 'module-76': '/vip-protocol',
+            'module-77': '/specialized-registers', 'module-78': '/internal-admin', 'module-79': '/police-welfare-unique',
+            'module-80': '/scientific-technical', 'module-81': '/planning-strategy', 'module-82': '/international-relations',
+            'module-83': '/police-legal-process-2', 'module-84': '/police-buildings', 'module-99': '/audit',
+            'module-52': '/document', 'module-06': '/command-center', 'module-07': '/citizen-services',
+            'module-08': '/complaint-fir', 'module-10': '/intelligence', 'module-11': '/predictive-policing',
+            'module-13': '/cyber-crime', 'module-14': '/digital-evidence', 'module-15': '/missing-persons',
+            'module-16': '/women-child-safety', 'module-17': '/traffic', 'module-18': '/law-order',
+            'module-19': '/legal-court', 'module-20': '/training-academy', 'module-21': '/logistics',
+            'module-22': '/smart-city', 'module-23': '/communication', 'module-29': '/police-station',
+            'module-30': '/fleet-logistics', 'module-31': '/radio-comms', 'module-34': '/public-safety',
+            'module-35': '/emerging-tech', 'module-36': '/tech-services', 'module-37': '/infrastructure',
+            'module-38': '/internal-security', 'module-39': '/armoury', 'module-40': '/legal-process',
+            'module-41': '/community-policing', 'module-42': '/intelligence-support', 'module-43': '/disaster-logistics',
+            'module-44': '/police-admin', 'module-45': '/training-quality', 'module-46': '/international-coordination',
+            'module-47': '/research-innovation', 'module-48': '/police-hq', 'module-49': '/correspondence',
+            'module-50': '/police-inspection', 'module-51': '/police-lines', 'module-53': '/police-vehicles',
+            'module-54': '/comms-docs', 'module-55': '/police-welfare', 'module-56': '/tech-admin',
+            'module-57': '/strategic-planning', 'module-58': '/licensing-regulation', 'module-59': '/verification-services',
+            'module-60': '/election-management', 'module-61': '/prisoner-custody', 'module-62': '/border-check-post',
+            'module-63': '/business-compliance', 'module-64': '/special-operations', 'module-65': '/documentation-compliance',
+            'module-66': '/public-interface', 'module-67': '/strategic-admin', 'module-68': '/recruitment-ecosystem',
+            'module-69': '/police-promotions', 'module-70': '/police-transfers'
+          };
+          
+          if (dashMap[moduleId]) {
+            return (
+              <button
+                onClick={() => navigate(dashMap[moduleId])}
+                style={{
+                  background: 'linear-gradient(135deg, rgba(6,182,212,0.2), rgba(139,92,246,0.2))',
+                  border: '1px solid rgba(6, 182, 212, 0.6)',
+                  color: '#06b6d4',
+                  padding: '0.8rem 1.5rem',
+                  borderRadius: '12px',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                  transition: 'all 0.3s',
+                  boxShadow: '0 0 20px rgba(6, 182, 212, 0.3)',
+                  fontWeight: 'bold',
+                  letterSpacing: '1px',
+                  fontSize: '0.85rem',
+                  textTransform: 'uppercase',
+                  whiteSpace: 'nowrap'
+                }}
+                onMouseOver={(e) => { e.currentTarget.style.background = 'linear-gradient(135deg, rgba(6,182,212,0.4), rgba(139,92,246,0.4))'; e.currentTarget.style.boxShadow = '0 0 30px rgba(6, 182, 212, 0.6)'; }}
+                onMouseOut={(e) => { e.currentTarget.style.background = 'linear-gradient(135deg, rgba(6,182,212,0.2), rgba(139,92,246,0.2))'; e.currentTarget.style.boxShadow = '0 0 20px rgba(6, 182, 212, 0.3)'; }}
+              >
+                <Zap size={18} /> OPEN FULL AI DASHBOARD
+              </button>
+            );
+          }
+          return null;
+        })()}
       </div>
 
       <motion.div
@@ -262,192 +286,7 @@ const ModulePage = () => {
                 topic={topic}
                 description={desc}
                 onClick={() => {
-                  const upperTopic = topic.toUpperCase();
-                  if (moduleId === 'module-33' || moduleId === 'module-85' || upperTopic.includes('FINANCE') || topic.includes('वित्त')) {
-                    navigate('/finance');
-                  } else if (moduleId === 'module-32' || upperTopic.includes('HRMS') || topic.includes('एचआरएमएस')) {
-                    navigate('/hrms');
-                  } else if (upperTopic.includes('PROCUREMENT') || topic.includes('खरीद')) {
-                    navigate('/procurement');
-                  } else if (upperTopic.includes('AUDIT') || topic.includes('ऑडिट')) {
-                    navigate('/audit');
-                  } else if (upperTopic.includes('DOCUMENT') || upperTopic.includes('DMS') || topic.includes('दस्तावेज़')) {
-                    navigate('/document');
-                  } else if (upperTopic.includes('MULTI-AGENT') || upperTopic.includes('MULTI AGENT')) {
-                    navigate('/multi-agent');
-                  } else if (upperTopic.includes('KNOWLEDGE GRAPH') || upperTopic.includes('KNOWLEDGE')) {
-                    navigate('/knowledge-graph');
-                  } else if (upperTopic.includes('DECISION SUPPORT') || upperTopic.includes('DECISION')) {
-                    navigate('/decision-support');
-                  } else if (upperTopic.includes('DIGITAL TWIN')) {
-                    navigate('/digital-twin');
-                  } else if (upperTopic.includes('INVESTIGATION') || upperTopic.includes('AUTONOMOUS')) {
-                    navigate('/investigation-assistant');
-                  } else if (upperTopic.includes('COPILOT') || upperTopic.includes('CONVERSATIONAL')) {
-                    navigate('/copilot');
-                  } else if (upperTopic.includes('MULTIMODAL')) {
-                    navigate('/multimodal');
-                  } else if (upperTopic.includes('MODEL MANAGEMENT')) {
-                    navigate('/model-management');
-                  } else if (upperTopic.includes('DATA LAKE') || upperTopic.includes('BIG DATA')) {
-                    navigate('/data-lake');
-                  } else if (upperTopic.includes('RESEARCH') || upperTopic.includes('INNOVATION')) {
-                    navigate('/research-lab');
-                  } else if (moduleId === 'module-07') {
-                    navigate('/citizen-services');
-                  } else if (moduleId === 'module-08') {
-                    navigate('/complaint-fir');
-                  } else if (moduleId === 'module-10') {
-                    navigate('/intelligence');
-                  } else if (moduleId === 'module-11') {
-                    navigate('/predictive-policing');
-                  } else if (moduleId === 'module-13') {
-                    navigate('/cyber-crime');
-                  } else if (moduleId === 'module-14') {
-                    navigate('/digital-evidence');
-                  } else if (moduleId === 'module-15') {
-                    navigate('/missing-persons');
-                  } else if (moduleId === 'module-16') {
-                    navigate('/women-child-safety');
-                  } else if (moduleId === 'module-17') {
-                    navigate('/traffic');
-                  } else if (moduleId === 'module-18') {
-                    navigate('/law-order');
-                  } else if (moduleId === 'module-19') {
-                    navigate('/legal-court');
-                  } else if (moduleId === 'module-20') {
-                    navigate('/training-academy');
-                  } else if (moduleId === 'module-21') {
-                    navigate('/logistics');
-                  } else if (moduleId === 'module-22') {
-                    navigate('/smart-city');
-                  } else if (moduleId === 'module-23') {
-                    navigate('/communication');
-                  } else if (upperTopic.includes('BORDER SECURITY') || topic.includes('सीमा सुरक्षा')) {
-                    navigate('/border-security');
-                  } else if (upperTopic.includes('PRISON') || topic.includes('जेल')) {
-                    navigate('/prison-management');
-                  } else if (upperTopic.includes('TERROR') || topic.includes('आतंक')) {
-                    navigate('/anti-terror');
-                  } else if (upperTopic.includes('FINANCIAL CRIME') || topic.includes('वित्तीय अपराध')) {
-                    navigate('/financial-crime');
-                  } else if (upperTopic.includes('NARCOTICS') || topic.includes('नारकोटिक्स')) {
-                    navigate('/narcotics');
-                  } else if (moduleId === 'module-29') {
-                    navigate('/police-station');
-                  } else if (moduleId === 'module-30') {
-                    navigate('/fleet-logistics');
-                  } else if (moduleId === 'module-31') {
-                    navigate('/radio-comms');
-                  } else if (moduleId === 'module-34') {
-                    navigate('/public-safety');
-                  } else if (moduleId === 'module-35') {
-                    navigate('/emerging-tech');
-                  } else if (moduleId === 'module-36') {
-                    navigate('/tech-services');
-                  } else if (moduleId === 'module-37') {
-                    navigate('/infrastructure');
-                  } else if (moduleId === 'module-38') {
-                    navigate('/internal-security');
-                  } else if (moduleId === 'module-39') {
-                    navigate('/armoury');
-                  } else if (moduleId === 'module-40') {
-                    navigate('/legal-process');
-                  } else if (moduleId === 'module-41') {
-                    navigate('/community-policing');
-                  } else if (moduleId === 'module-42') {
-                    navigate('/intelligence-support');
-                  } else if (moduleId === 'module-43') {
-                    navigate('/disaster-logistics');
-                  } else if (moduleId === 'module-44') {
-                    navigate('/police-admin');
-                  } else if (moduleId === 'module-45') {
-                    navigate('/training-quality');
-                  } else if (moduleId === 'module-46') {
-                    navigate('/international-coordination');
-                  } else if (moduleId === 'module-47') {
-                    navigate('/research-innovation');
-                  } else if (moduleId === 'module-48') {
-                    navigate('/police-hq');
-                  } else if (moduleId === 'module-49') {
-                    navigate('/correspondence');
-                  } else if (moduleId === 'module-50') {
-                    navigate('/police-inspection');
-                  } else if (moduleId === 'module-51') {
-                    navigate('/police-lines');
-                  } else if (moduleId === 'module-52') {
-                    navigate('/official-documents');
-                  } else if (moduleId === 'module-53') {
-                    navigate('/police-vehicles');
-                  } else if (moduleId === 'module-54') {
-                    navigate('/comms-docs');
-                  } else if (moduleId === 'module-55') {
-                    navigate('/police-welfare');
-                  } else if (moduleId === 'module-56') {
-                    navigate('/tech-admin');
-                  } else if (moduleId === 'module-57') {
-                    navigate('/strategic-planning');
-                  } else if (moduleId === 'module-58') {
-                    navigate('/licensing-regulation');
-                  } else if (moduleId === 'module-59') {
-                    navigate('/verification-services');
-                  } else if (moduleId === 'module-60') {
-                    navigate('/election-management');
-                  } else if (moduleId === 'module-61') {
-                    navigate('/prisoner-custody');
-                  } else if (moduleId === 'module-62') {
-                    navigate('/border-check-post');
-                  } else if (moduleId === 'module-63') {
-                    navigate('/business-compliance');
-                  } else if (moduleId === 'module-64') {
-                    navigate('/special-operations');
-                  } else if (moduleId === 'module-65') {
-                    navigate('/documentation-compliance');
-                  } else if (moduleId === 'module-66') {
-                    navigate('/public-interface');
-                  } else if (moduleId === 'module-67') {
-                    navigate('/strategic-admin');
-                  } else if (moduleId === 'module-68') {
-                    navigate('/recruitment-ecosystem');
-                  } else if (moduleId === 'module-69') {
-                    navigate('/police-promotions');
-                  } else if (moduleId === 'module-70') {
-                    navigate('/police-transfers');
-                  } else if (moduleId === 'module-71') {
-                    navigate(`/topic/${encodeURIComponent(topic)}`);
-                  } else if (moduleId === 'module-72') {
-                    navigate(`/topic/${encodeURIComponent(topic)}`);
-                  } else if (moduleId === 'module-73') {
-                    navigate(`/topic/${encodeURIComponent(topic)}`);
-                  } else if (moduleId === 'module-74') {
-                    navigate(`/topic/${encodeURIComponent(topic)}`);
-                  } else if (moduleId === 'module-75') {
-                    navigate(`/topic/${encodeURIComponent(topic)}`);
-                  } else if (moduleId === 'module-76') {
-                    navigate(`/topic/${encodeURIComponent(topic)}`);
-                  } else if (moduleId === 'module-77') {
-                    navigate(`/topic/${encodeURIComponent(topic)}`);
-                  } else if (moduleId === 'module-78') {
-                    navigate(`/topic/${encodeURIComponent(topic)}`);
-                  } else if (moduleId === 'module-79') {
-                    navigate(`/topic/${encodeURIComponent(topic)}`);
-                  } else if (moduleId === 'module-80') {
-                    navigate(`/topic/${encodeURIComponent(topic)}`);
-                  } else if (moduleId === 'module-81') {
-                    navigate(`/topic/${encodeURIComponent(topic)}`);
-                  } else if (moduleId === 'module-82') {
-                    navigate(`/topic/${encodeURIComponent(topic)}`);
-                  } else if (moduleId === 'module-83') {
-                    navigate(`/topic/${encodeURIComponent(topic)}`);
-                  } else if (moduleId === 'module-84') {
-                    navigate(`/topic/${encodeURIComponent(topic)}`);
-                  } else if (moduleId === 'module-85') {
-                    navigate(`/topic/${encodeURIComponent(topic)}`);
-                  } else if (moduleId === 'module-06') {
-                    navigate('/command-center');
-                  } else {
-                    navigate(`/topic/${encodeURIComponent(topic)}`);
-                  }
+                  navigate(`/topic/${encodeURIComponent(topic)}`);
                 }}
               />
             </motion.div>

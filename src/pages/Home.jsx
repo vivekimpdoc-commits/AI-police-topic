@@ -65,71 +65,7 @@ const Home = () => {
   };
 
   const getDirectRoute = (id) => {
-    switch(id) {
-      case 'module-32': return '/hrms';
-      case 'module-33':
-      case 'module-85': return '/finance';
-      case 'module-71': return '/procurement';
-      case 'module-99': return '/audit';
-      case 'module-52': return '/document';
-      case 'module-06': return '/command-center';
-      case 'module-07': return '/citizen-services';
-      case 'module-08': return '/complaint-fir';
-      case 'module-10': return '/intelligence';
-      case 'module-11': return '/predictive-policing';
-      case 'module-13': return '/cyber-crime';
-      case 'module-14': return '/digital-evidence';
-      case 'module-15': return '/missing-persons';
-      case 'module-16': return '/women-child-safety';
-      case 'module-17': return '/traffic';
-      case 'module-18': return '/law-order';
-      case 'module-19': return '/legal-court';
-      case 'module-20': return '/training-academy';
-      case 'module-21': return '/logistics';
-      case 'module-22': return '/smart-city';
-      case 'module-23': return '/communication';
-      case 'module-29': return '/police-station';
-      case 'module-30': return '/fleet-logistics';
-      case 'module-31': return '/radio-comms';
-      case 'module-34': return '/public-safety';
-      case 'module-35': return '/emerging-tech';
-      case 'module-36': return '/tech-services';
-      case 'module-37': return '/infrastructure';
-      case 'module-38': return '/internal-security';
-      case 'module-39': return '/armoury';
-      case 'module-40': return '/legal-process';
-      case 'module-41': return '/community-policing';
-      case 'module-42': return '/intelligence-support';
-      case 'module-43': return '/disaster-logistics';
-      case 'module-44': return '/police-admin';
-      case 'module-45': return '/training-quality';
-      case 'module-46': return '/international-coordination';
-      case 'module-47': return '/research-innovation';
-      case 'module-48': return '/police-hq';
-      case 'module-49': return '/correspondence';
-      case 'module-50': return '/police-inspection';
-      case 'module-51': return '/police-lines';
-      case 'module-52': return '/official-documents';
-      case 'module-53': return '/police-vehicles';
-      case 'module-54': return '/comms-docs';
-      case 'module-55': return '/police-welfare';
-      case 'module-56': return '/tech-admin';
-      case 'module-57': return '/strategic-planning';
-      case 'module-58': return '/licensing-regulation';
-      case 'module-59': return '/verification-services';
-      case 'module-60': return '/election-management';
-      case 'module-61': return '/prisoner-custody';
-      case 'module-62': return '/border-check-post';
-      case 'module-63': return '/business-compliance';
-      case 'module-64': return '/special-operations';
-      case 'module-65': return '/documentation-compliance';
-      case 'module-66': return '/public-interface';
-      case 'module-67': return '/strategic-admin';
-      case 'module-68': return '/recruitment-ecosystem';
-      case 'module-69': return '/police-promotions';
-      case 'module-70': return '/police-transfers';
-      default: return `/module/${id}`;
-    }
+    return `/module/${id}`;
   };
 
   const sortedModules = [...modules].sort((a, b) => {
