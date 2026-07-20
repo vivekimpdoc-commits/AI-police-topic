@@ -365,6 +365,16 @@ const ModulePage = () => {
                     navigate('/special-operations');
                   } else if (moduleId === 'module-65') {
                     navigate('/documentation-compliance');
+                  } else if (moduleId === 'module-66') {
+                    navigate('/public-interface');
+                  } else if (moduleId === 'module-67') {
+                    navigate('/strategic-admin');
+                  } else if (moduleId === 'module-68') {
+                    navigate('/recruitment-ecosystem');
+                  } else if (moduleId === 'module-69') {
+                    navigate('/police-promotions');
+                  } else if (moduleId === 'module-70') {
+                    navigate('/police-transfers');
                   } else if (moduleId === 'module-06') {
                     navigate('/command-center');
                   } else {

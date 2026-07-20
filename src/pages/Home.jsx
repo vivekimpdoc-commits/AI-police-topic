@@ -123,6 +123,11 @@ const Home = () => {
       case 'module-63': return '/business-compliance';
       case 'module-64': return '/special-operations';
       case 'module-65': return '/documentation-compliance';
+      case 'module-66': return '/public-interface';
+      case 'module-67': return '/strategic-admin';
+      case 'module-68': return '/recruitment-ecosystem';
+      case 'module-69': return '/police-promotions';
+      case 'module-70': return '/police-transfers';
       default: return `/module/${id}`;
     }
   };
