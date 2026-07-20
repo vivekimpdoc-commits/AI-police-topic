@@ -375,6 +375,16 @@ const ModulePage = () => {
                     navigate('/police-promotions');
                   } else if (moduleId === 'module-70') {
                     navigate('/police-transfers');
+                  } else if (moduleId === 'module-71') {
+                    navigate('/police-procurement');
+                  } else if (moduleId === 'module-72') {
+                    navigate('/police-laboratories');
+                  } else if (moduleId === 'module-73') {
+                    navigate('/police-library');
+                  } else if (moduleId === 'module-74') {
+                    navigate('/police-intelligence');
+                  } else if (moduleId === 'module-75') {
+                    navigate('/disaster-emergency');
                   } else if (moduleId === 'module-06') {
                     navigate('/command-center');
                   } else {

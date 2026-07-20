@@ -52,7 +52,6 @@ import ArmouryDetailed from './pages/ArmouryDetailed';
 import LegalProcessDetailed from './pages/LegalProcessDetailed';
 import CommunityPolicingDetailed from './pages/CommunityPolicingDetailed';
 import IntelligenceSupportDetailed from './pages/IntelligenceSupportDetailed';
-import DisasterEmergencyDetailed from './pages/DisasterEmergencyDetailed';
 import PoliceAdminDetailed from './pages/PoliceAdminDetailed';
 import TrainingQualityDetailed from './pages/TrainingQualityDetailed';
 import IntlCoordinationDetailed from './pages/IntlCoordinationDetailed';
@@ -80,6 +79,11 @@ import StrategicAdminDetailed from './pages/StrategicAdminDetailed';
 import RecruitmentEcosystemDetailed from './pages/RecruitmentEcosystemDetailed';
 import PromotionsDetailed from './pages/PromotionsDetailed';
 import TransfersDetailed from './pages/TransfersDetailed';
+import PoliceProcurementDetailed from './pages/PoliceProcurementDetailed';
+import PoliceLaboratoriesDetailed from './pages/PoliceLaboratoriesDetailed';
+import PoliceLibraryDetailed from './pages/PoliceLibraryDetailed';
+import PoliceIntelligenceDetailed from './pages/PoliceIntelligenceDetailed';
+import DisasterEmergencyDetailed from './pages/DisasterEmergencyDetailed';
 import CommandCenterDetailed from './pages/CommandCenterDetailed';
 import TopicContent from './pages/TopicContent';
 import TopicDetail from './pages/TopicDetail';
@@ -511,6 +515,31 @@ const AnimatedRoutes = () => {
         <Route path="/police-transfers" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
             <TransfersDetailed />
+          </motion.div>
+        } />
+        <Route path="/police-procurement" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PoliceProcurementDetailed />
+          </motion.div>
+        } />
+        <Route path="/police-laboratories" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PoliceLaboratoriesDetailed />
+          </motion.div>
+        } />
+        <Route path="/police-library" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PoliceLibraryDetailed />
+          </motion.div>
+        } />
+        <Route path="/police-intelligence" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PoliceIntelligenceDetailed />
+          </motion.div>
+        } />
+        <Route path="/disaster-emergency" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <DisasterEmergencyDetailed />
           </motion.div>
         } />
         <Route path="/command-center" element={

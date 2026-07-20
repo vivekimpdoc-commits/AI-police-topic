@@ -4,89 +4,89 @@ import { useNavigate } from 'react-router-dom';
 import { 
   Bot, LayoutDashboard, Database, Shield, Rocket, 
   FileText, Activity, Network, ArrowLeft, Terminal, Cpu,
-  CheckCircle, ShieldAlert, PieChart, AlertTriangle, Wind
+  CheckCircle, ShieldAlert, PieChart, Eye, Search
 } from 'lucide-react';
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "NDRF Coordinator AI", "Evacuation Route Planner", "Convoy Security Bot", 
-  "Resource Inventory Bot", "Shelter Security AI", "Weather Prediction Sync", 
-  "Civil Defence Deployer", "Casualty Tracker AI", "Relief Distribution AI",
-  "Crowd Panic Predictor", "Telecom Outage Bot", "Backend Developer AI", 
+  "Informant Network AI", "Threat Level Predictor", "Cross-Border Intel Bot", 
+  "High-Risk Zone Analyzer", "Multi-Agency Router", "Confidential Source AI", 
+  "Extremism Sentiment Bot", "Financial Trail Analyzer", "Dissemination AI",
+  "Riot Probability Modeler", "Dark Web Scraper", "Backend Developer AI", 
   "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
 ];
 
-const disasterModules = [
+const intelModules = [
   {
-    title: "Agency Coordination",
+    title: "Informant & Source Management",
+    icon: <Search size={20} />,
+    items: ["Confidential Informant Registry", "Automated Reward Disbursement", "Source Reliability Scoring", "Burned Source Alerts"]
+  },
+  {
+    title: "Threat & Zone Monitoring",
+    icon: <Eye size={20} />,
+    items: ["High-Risk Village/Urban Mapping", "Radicalization Heatmaps", "VIP Threat Assessment", "Communal Tension Radar"]
+  },
+  {
+    title: "Multi-Agency Coordination",
     icon: <Network size={20} />,
-    items: ["NDRF/SDRF Deployment Sync", "Civil Defence Volunteer Call-up", "Home Guard Mobilization", "Multi-Agency Comms Bridge"]
+    items: ["IB/RAW Intel Sync", "Cross-Border Smuggling Alerts", "NIA Terror Watchlist Sync", "Joint Operation Dashboards"]
   },
   {
-    title: "Evacuation & Shelters",
-    icon: <Wind size={20} />,
-    items: ["AI Evacuation Route Mapping", "Emergency Shelter Security", "Refugee Registration Portal", "Stampede Prevention Grid"]
-  },
-  {
-    title: "Resource & Relief",
-    icon: <Database size={20} />,
-    items: ["Disaster Resource Inventory", "Relief Convoy Escort Routing", "Food/Medical Drop Coordination", "Helicopter Landing Zone Sec"]
-  },
-  {
-    title: "Casualty & Comms",
+    title: "Intel Dissemination",
     icon: <Activity size={20} />,
-    items: ["Missing Persons Tracker", "Hospital Bed Availability Sync", "Disaster Communication Log", "Public Emergency Broadcasts"]
+    items: ["Automated 'Need-to-Know' Routing", "Encrypted Intel Dossiers", "Field Officer Actionable Alerts", "Dissemination Audit Logs"]
   }
 ];
 
 const aiFeatures = [
-  "AI Prediction of Flood Inundation Zones using Satellite Data", "AI Dynamic Routing for Ambulances avoiding Debris", "AI Drone Swarm Coordination for Search & Rescue",
-  "AI Facial Recognition to Identify Unconscious Casualties", "AI Sentiment Analysis of SOS Calls for Prioritization", "AI Detection of Relief Material Black-Marketing",
-  "AI Automated Translation of Multi-Lingual Distress Signals", "AI Optimization of Civil Defence Volunteer Deployment based on Skills"
+  "AI Deep Web Scraping for Extremist Activity", "AI Predictive Modeling of Riot Probabilities during Festivals", "AI Financial Trail Analysis for Terror Funding",
+  "AI Cross-Referencing of Smuggling Routes with Border Force (BSF) Data", "AI Sentiment Analysis of Encrypted Chat Intercepts", "AI Automated Grading of Intelligence Reliability (A1 to F6)",
+  "AI Facial Recognition on CCTV for Watchlisted Suspects", "AI Automated Redaction of Source Identities in Shared Dossiers"
 ];
 
 const databases = [
-  "Evacuation_Status_Board", "Shelter_Occupancy_Ledger", "NDRF_SDRF_Deployment_Map", "Relief_Inventory_DB", "Missing_Persons_Index", 
-  "Casualty_Tracking_DB", "Emergency_Comms_Archive", "Volunteer_Roster"
+  "Confidential_Informants_DB", "Threat_Assessment_Lake", "Multi_Agency_Intel_Pool", "Extremist_Watchlist", "Financial_Trail_Ledger", 
+  "High_Risk_Zone_Map", "Intercept_Transcripts", "Dissemination_Logs"
 ];
 
 const dashboards = [
-  "Live Disaster Theater Map", "Evacuation Progress Tracker", "Relief Supply Burn Rate", 
-  "Multi-Agency Asset Locations", "Hospital Capacity Heatmap", "Network Outage Radar"
+  "Live State Threat Level", "Communal Tension Heatmap", "Informant Network ROI", 
+  "Cross-Border Smuggling Routes", "Multi-Agency Intel Overlap", "Radicalization Hotspots"
 ];
 
 const apis = [
-  "IMD (Indian Meteorological Dept) API", "NDMA (National Disaster Mgmt) Sync", "Google Crisis Response Maps", "Hospital Management Systems (HMIS)",
-  "Telecom Providers (Cell Tower Status)", "Ambulance GPS Gateways"
+  "NATGRID (National Intelligence Grid)", "CCTNS / ICJS Portal", "Financial Intelligence Unit (FIU) API", "Telecom Intercept Gateways",
+  "BSF/SSB Border Intel Feeds", "Interpol Secure Network"
 ];
 
 const reports = [
-  "Disaster Response Turnaround Time", "Evacuation Efficacy Report", "Relief Distribution Audit", 
-  "Agency Coordination Scorecard", "Missing Persons Resolution", "Asset Loss Estimation"
+  "Weekly State Security Assessment", "Informant Reward Audit", "Communal Harmony Index", 
+  "Terror Funding Flow Analysis", "VIP Security Threat Matrix", "Joint Task Force Effectiveness"
 ];
 
 const security = [
-  "Resilient Mesh-Network Comms (Off-grid)", "Encrypted Satellite Phone Linkages", "Strict RBAC for Broadcast Alerts", 
-  "Anti-Spoofing on SOS Signals", "Data Redaction of Casualty Identities", 
-  "DDoS Protection for Relief Portals", "Blockchain Logging of Relief Funds", "Failover Servers in Safe Zones"
+  "Air-Gapped Classified Networks", "Hardware Tokens for DB Access", "Self-Destructing Encrypted Intel Messages", 
+  "Strict 'Need-to-Know' RBAC", "Quantum-Resistant Encryption", 
+  "Biometric + Retina Scan Logins", "DLP (Data Loss Prevention) against USBs", "Audit Log of Every Search Query"
 ];
 
 const futureScope = [
-  "AI Robot Dogs for Navigating Rubble", "Holographic Triaging in Field Hospitals", "Low-Earth Orbit Satellite (Starlink) Integration",
-  "Predictive Digital Twins of Vulnerable Dams/Bridges", "Automated Airdrop Pathing algorithms", "Subterranean Sonar AI mapping"
+  "AI Swarm Drones for Border Reconnaissance", "Predictive Pre-Crime Modeling (Minority Report style)", "Satellite Imagery AI for Illegal Deforestation/Mining",
+  "Real-time Neural Translation of Intercepted Dialects", "Deepfake Detection in Propoganda Videos", "Automated Cyber-Warfare Defense"
 ];
 
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'Rescue Bots', icon: <Bot size={18} /> },
-  { id: 'modules', label: 'Emergency Modules', icon: <LayoutDashboard size={18} /> },
+  { id: 'experts', label: 'Intel Bots', icon: <Bot size={18} /> },
+  { id: 'modules', label: 'Spy Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
-  { id: 'reports', label: 'Crisis Dashboards', icon: <PieChart size={18} /> },
+  { id: 'reports', label: 'Threat Dashboards', icon: <PieChart size={18} /> },
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
-const DisasterEmergencyDetailed = () => {
+const PoliceIntelligenceDetailed = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('overview');
 
@@ -96,29 +96,29 @@ const DisasterEmergencyDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <AlertTriangle className="inline-icon" size={28} /> AI Disaster & Emergency Coordination
+              <Eye className="inline-icon" size={28} /> AI Police Intelligence & Coordination
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>Disaster & Emergency Coordination</strong> acts as the central nervous system during cyclones, floods, or mass casualty events. It seamlessly synchronizes the State Police with NDRF, SDRF, and Civil Defence, using AI to route rescue convoys and track missing persons in real-time.
+              <strong>Police Intelligence (CID/Special Branch)</strong> is the silent shield of the state. This highly classified module uses AI to process terabytes of intercepts, manage confidential informants, and predict communal riots before they happen by syncing data with central agencies like IB and NIA.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#3b82f6" /> Multi-Agency Sync</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Eliminates chaos by providing a single pane of glass for Police, NDRF, SDRF, and Home Guards. AI tracks the live GPS locations of all rescue assets to prevent duplicated efforts in disaster zones.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Search className="inline-icon" color="#3b82f6" /> Informant Network AI</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Manages the registry of Confidential Informants (Mukhbirs). AI tracks the accuracy of their tips over time, automatically assigning a reliability score and suggesting reward payouts while keeping their identities cryptographically hidden.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Wind className="inline-icon" color="#10b981" /> Smart Evacuations</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Integrates with meteorological data to predict flood or cyclone paths. AI automatically maps out the safest evacuation routes avoiding collapsed bridges, and manages security at relief shelters.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Eye className="inline-icon" color="#10b981" /> Riot & Threat Prediction</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>By analyzing social media sentiment, dark web chatter, and historical FIRs, the AI generates predictive heatmaps of high-risk urban and rural areas prone to communal tension during specific festivals.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><ShieldAlert className="inline-icon" color="#f59e0b" /> Relief Convoy Escorts</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>During disasters, relief trucks are often looted. The AI dynamically assigns armed police escorts to relief convoys, optimizing routes to ensure food and medicine reach the most critical zones safely.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#f59e0b" /> Multi-Agency Sync</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Breaks down silos between State Police, BSF, and NATGRID. If the BSF flags a cross-border drone dropping arms, the AI instantly cross-references local vehicle movements to identify the smugglers.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#ef4444" /> Missing & Casualty Tracking</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>A centralized portal where rescue workers upload photos of found individuals. AI facial recognition matches them against the 'Missing Persons' database, instantly notifying frantic families.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><ShieldAlert className="inline-icon" color="#ef4444" /> Smart Dissemination</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>When a raw intelligence report is processed, the AI determines exactly which field officers 'need to know'. It auto-redacts the source's name and sends self-destructing alerts to the relevant SPs.</p>
               </div>
             </div>
           </motion.div>
@@ -137,7 +137,7 @@ const DisasterEmergencyDetailed = () => {
       case 'modules':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="module-accordion">
-            {disasterModules.map((mod, i) => (
+            {intelModules.map((mod, i) => (
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} key={i} className="premium-module-panel">
                 <div className="module-header">
                   {mod.icon}
@@ -237,11 +237,11 @@ const DisasterEmergencyDetailed = () => {
         </button>
         <div className="header-titles">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="icon-wrapper">
-            <AlertTriangle size={40} color="#06b6d4" />
+            <Eye size={40} color="#06b6d4" />
           </motion.div>
           <div>
-            <h1 className="cyber-title">DISASTER & <span>EMERGENCY</span></h1>
-            <p className="cyber-subtitle">NDRF Sync, Evacuation Routes & Relief Management</p>
+            <h1 className="cyber-title">INTELLIGENCE & <span>COORDINATION</span></h1>
+            <p className="cyber-subtitle">Informant Networks, Riot Prediction & Agency Sync</p>
           </div>
         </div>
       </header>
@@ -274,4 +274,4 @@ const DisasterEmergencyDetailed = () => {
   );
 };
 
-export default DisasterEmergencyDetailed;
+export default PoliceIntelligenceDetailed;

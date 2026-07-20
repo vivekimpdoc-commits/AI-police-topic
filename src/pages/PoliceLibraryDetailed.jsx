@@ -4,89 +4,89 @@ import { useNavigate } from 'react-router-dom';
 import { 
   Bot, LayoutDashboard, Database, Shield, Rocket, 
   FileText, Activity, Network, ArrowLeft, Terminal, Cpu,
-  CheckCircle, ShieldAlert, PieChart, AlertTriangle, Wind
+  CheckCircle, ShieldAlert, PieChart, BookOpen, GraduationCap
 } from 'lucide-react';
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "NDRF Coordinator AI", "Evacuation Route Planner", "Convoy Security Bot", 
-  "Resource Inventory Bot", "Shelter Security AI", "Weather Prediction Sync", 
-  "Civil Defence Deployer", "Casualty Tracker AI", "Relief Distribution AI",
-  "Crowd Panic Predictor", "Telecom Outage Bot", "Backend Developer AI", 
+  "Case Law Matcher AI", "SOP Version Controller", "Training Video Recommender", 
+  "Circular NLP Analyzer", "Subject Expert Finder", "Reading Progress Bot", 
+  "Legal Citation Checker", "Knowledge Graph AI", "Query Resolution Bot",
+  "Summarization Engine AI", "Plagiarism Checker AI", "Backend Developer AI", 
   "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
 ];
 
-const disasterModules = [
+const libraryModules = [
   {
-    title: "Agency Coordination",
+    title: "Digital Library & Archives",
+    icon: <BookOpen size={20} />,
+    items: ["AI Searchable Case Law Index", "Historical Circular Archive", "Digitized Police Magazines", "Judgement Repository"]
+  },
+  {
+    title: "SOP & Policy Control",
+    icon: <FileText size={20} />,
+    items: ["SOP Versioning Tracker", "Drafting & Approval Workflow", "Policy Dissemination Alerts", "Compliance Acknowledgement"]
+  },
+  {
+    title: "Training & Knowledge",
+    icon: <GraduationCap size={20} />,
+    items: ["Video Lecture Repository", "Interactive Case Studies", "Skill-based Reading Lists", "Virtual Simulation Scenarios"]
+  },
+  {
+    title: "Expert Network",
     icon: <Network size={20} />,
-    items: ["NDRF/SDRF Deployment Sync", "Civil Defence Volunteer Call-up", "Home Guard Mobilization", "Multi-Agency Comms Bridge"]
-  },
-  {
-    title: "Evacuation & Shelters",
-    icon: <Wind size={20} />,
-    items: ["AI Evacuation Route Mapping", "Emergency Shelter Security", "Refugee Registration Portal", "Stampede Prevention Grid"]
-  },
-  {
-    title: "Resource & Relief",
-    icon: <Database size={20} />,
-    items: ["Disaster Resource Inventory", "Relief Convoy Escort Routing", "Food/Medical Drop Coordination", "Helicopter Landing Zone Sec"]
-  },
-  {
-    title: "Casualty & Comms",
-    icon: <Activity size={20} />,
-    items: ["Missing Persons Tracker", "Hospital Bed Availability Sync", "Disaster Communication Log", "Public Emergency Broadcasts"]
+    items: ["Subject Matter Expert Directory", "Peer-to-Peer Query Forum", "Mentorship Matchmaking", "Research Paper Publication"]
   }
 ];
 
 const aiFeatures = [
-  "AI Prediction of Flood Inundation Zones using Satellite Data", "AI Dynamic Routing for Ambulances avoiding Debris", "AI Drone Swarm Coordination for Search & Rescue",
-  "AI Facial Recognition to Identify Unconscious Casualties", "AI Sentiment Analysis of SOS Calls for Prioritization", "AI Detection of Relief Material Black-Marketing",
-  "AI Automated Translation of Multi-Lingual Distress Signals", "AI Optimization of Civil Defence Volunteer Deployment based on Skills"
+  "AI Natural Language Search across 50 years of Supreme Court Judgements", "AI Automatic Summarization of 100-page Legal Rulings", "AI Recommendation of Training Videos based on Officer's Current Case",
+  "AI Knowledge Graph mapping relationships between different SOPs", "AI Detection of Contradictions in newly drafted Policies against old ones", "AI Translation of Legal Jargon to Simple Regional Languages",
+  "AI Identification of Subject Matter Experts within the Force", "AI Plagiarism Detection in Departmental Research Papers"
 ];
 
 const databases = [
-  "Evacuation_Status_Board", "Shelter_Occupancy_Ledger", "NDRF_SDRF_Deployment_Map", "Relief_Inventory_DB", "Missing_Persons_Index", 
-  "Casualty_Tracking_DB", "Emergency_Comms_Archive", "Volunteer_Roster"
+  "Case_Law_Index", "SOP_Version_Ledger", "Training_Video_Lake", "Circulars_Archive", "Expert_Directory_DB", 
+  "Judgement_Summaries", "Officer_Reading_Logs", "Police_Magazine_Archive"
 ];
 
 const dashboards = [
-  "Live Disaster Theater Map", "Evacuation Progress Tracker", "Relief Supply Burn Rate", 
-  "Multi-Agency Asset Locations", "Hospital Capacity Heatmap", "Network Outage Radar"
+  "Force-wide Knowledge Consumption", "SOP Compliance Rates", "Top Searched Legal Topics", 
+  "Most Active Subject Experts", "New Judgement Alerts", "Training Content Engagement"
 ];
 
 const apis = [
-  "IMD (Indian Meteorological Dept) API", "NDMA (National Disaster Mgmt) Sync", "Google Crisis Response Maps", "Hospital Management Systems (HMIS)",
-  "Telecom Providers (Cell Tower Status)", "Ambulance GPS Gateways"
+  "e-Courts (Supreme/High Court) RSS Feeds", "BPR&D (Bureau of Police R&D) Knowledge Sync", "National Police Academy (NPA) Portal", "State Law Dept API",
+  "Video Streaming CDN", "SSO (Single Sign-On) Gateway"
 ];
 
 const reports = [
-  "Disaster Response Turnaround Time", "Evacuation Efficacy Report", "Relief Distribution Audit", 
-  "Agency Coordination Scorecard", "Missing Persons Resolution", "Asset Loss Estimation"
+  "Monthly Knowledge Consumption Report", "SOP Dissemination Audit", "Top Contributors to Knowledge Base", 
+  "Legal Query Trend Analysis", "Training Video ROI", "Policy Gap Analysis"
 ];
 
 const security = [
-  "Resilient Mesh-Network Comms (Off-grid)", "Encrypted Satellite Phone Linkages", "Strict RBAC for Broadcast Alerts", 
-  "Anti-Spoofing on SOS Signals", "Data Redaction of Casualty Identities", 
-  "DDoS Protection for Relief Portals", "Blockchain Logging of Relief Funds", "Failover Servers in Safe Zones"
+  "Digital Rights Management (DRM) on Training Videos", "Watermarking of Confidential SOPs", "Role-Based Access for Secret Circulars", 
+  "Audit Log of Document Downloads", "Data Loss Prevention (DLP)", 
+  "End-to-End Encrypted Peer Forums", "Off-grid Access for Field Officers", "Zero-Trust Document Viewer"
 ];
 
 const futureScope = [
-  "AI Robot Dogs for Navigating Rubble", "Holographic Triaging in Field Hospitals", "Low-Earth Orbit Satellite (Starlink) Integration",
-  "Predictive Digital Twins of Vulnerable Dams/Bridges", "Automated Airdrop Pathing algorithms", "Subterranean Sonar AI mapping"
+  "AI Conversational Tutor for Indian Penal Code (BNS)", "Holographic Crime Scene Reconstructions for Training", "Neural-link based rapid learning interfaces",
+  "Global Interpol Best Practice Auto-Translation", "Gamified Legal Knowledge Tournaments", "Automated Policy Drafting using Generative AI"
 ];
 
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'Rescue Bots', icon: <Bot size={18} /> },
-  { id: 'modules', label: 'Emergency Modules', icon: <LayoutDashboard size={18} /> },
+  { id: 'experts', label: 'Knowledge Bots', icon: <Bot size={18} /> },
+  { id: 'modules', label: 'Library Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
-  { id: 'reports', label: 'Crisis Dashboards', icon: <PieChart size={18} /> },
+  { id: 'reports', label: 'Usage Dashboards', icon: <PieChart size={18} /> },
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
-const DisasterEmergencyDetailed = () => {
+const PoliceLibraryDetailed = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('overview');
 
@@ -96,29 +96,29 @@ const DisasterEmergencyDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <AlertTriangle className="inline-icon" size={28} /> AI Disaster & Emergency Coordination
+              <BookOpen className="inline-icon" size={28} /> AI Police Library & Knowledge Hub
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>Disaster & Emergency Coordination</strong> acts as the central nervous system during cyclones, floods, or mass casualty events. It seamlessly synchronizes the State Police with NDRF, SDRF, and Civil Defence, using AI to route rescue convoys and track missing persons in real-time.
+              <strong>Police Library & Knowledge Hub</strong> is the intellectual backbone of the force. It uses AI to parse through decades of case laws, SOPs, and training manuals, delivering byte-sized, highly relevant knowledge directly to the Investigating Officer's mobile device exactly when they need it.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#3b82f6" /> Multi-Agency Sync</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Eliminates chaos by providing a single pane of glass for Police, NDRF, SDRF, and Home Guards. AI tracks the live GPS locations of all rescue assets to prevent duplicated efforts in disaster zones.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><BookOpen className="inline-icon" color="#3b82f6" /> AI Case Law Summarizer</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Instead of reading 100-page Supreme Court judgements, IOs can ask the AI questions. The NLP engine instantly searches the archive and provides a 3-bullet summary with exact legal citations.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Wind className="inline-icon" color="#10b981" /> Smart Evacuations</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Integrates with meteorological data to predict flood or cyclone paths. AI automatically maps out the safest evacuation routes avoiding collapsed bridges, and manages security at relief shelters.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><FileText className="inline-icon" color="#10b981" /> SOP Version Control</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Maintains a strict version history of all police circulars and Standard Operating Procedures. AI alerts officers if they are referencing an outdated policy and highlights exactly what changed in the new version.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><ShieldAlert className="inline-icon" color="#f59e0b" /> Relief Convoy Escorts</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>During disasters, relief trucks are often looted. The AI dynamically assigns armed police escorts to relief convoys, optimizing routes to ensure food and medicine reach the most critical zones safely.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><GraduationCap className="inline-icon" color="#f59e0b" /> Contextual Training</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>If an officer is assigned their first cyber-crime case, the AI automatically recommends a curated playlist of training videos and case studies specific to digital forensics and crypto-tracking.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#ef4444" /> Missing & Casualty Tracking</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>A centralized portal where rescue workers upload photos of found individuals. AI facial recognition matches them against the 'Missing Persons' database, instantly notifying frantic families.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#ef4444" /> Subject Expert Directory</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Creates a dynamic 'Yellow Pages' of the force. Need someone who speaks fluent Pashto or an expert in defusing IEDs? The AI searches officer profiles and connects you instantly.</p>
               </div>
             </div>
           </motion.div>
@@ -137,7 +137,7 @@ const DisasterEmergencyDetailed = () => {
       case 'modules':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="module-accordion">
-            {disasterModules.map((mod, i) => (
+            {libraryModules.map((mod, i) => (
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} key={i} className="premium-module-panel">
                 <div className="module-header">
                   {mod.icon}
@@ -237,11 +237,11 @@ const DisasterEmergencyDetailed = () => {
         </button>
         <div className="header-titles">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="icon-wrapper">
-            <AlertTriangle size={40} color="#06b6d4" />
+            <BookOpen size={40} color="#06b6d4" />
           </motion.div>
           <div>
-            <h1 className="cyber-title">DISASTER & <span>EMERGENCY</span></h1>
-            <p className="cyber-subtitle">NDRF Sync, Evacuation Routes & Relief Management</p>
+            <h1 className="cyber-title">LIBRARY & <span>KNOWLEDGE</span></h1>
+            <p className="cyber-subtitle">Case Law NLP, SOP Tracking & Expert Directory</p>
           </div>
         </div>
       </header>
@@ -274,4 +274,4 @@ const DisasterEmergencyDetailed = () => {
   );
 };
 
-export default DisasterEmergencyDetailed;
+export default PoliceLibraryDetailed;

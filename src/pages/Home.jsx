@@ -128,6 +128,11 @@ const Home = () => {
       case 'module-68': return '/recruitment-ecosystem';
       case 'module-69': return '/police-promotions';
       case 'module-70': return '/police-transfers';
+      case 'module-71': return '/police-procurement';
+      case 'module-72': return '/police-laboratories';
+      case 'module-73': return '/police-library';
+      case 'module-74': return '/police-intelligence';
+      case 'module-75': return '/disaster-emergency';
       default: return `/module/${id}`;
     }
   };
