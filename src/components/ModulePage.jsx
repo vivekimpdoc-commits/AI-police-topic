@@ -370,7 +370,15 @@ const ModulePage = () => {
                     'Cost Optimization': '/cost-optimization', 'लागत अनुकूलन': '/cost-optimization',
                     'Financial Risk Analysis': '/financial-risk-analysis', 'वित्तीय जोखिम विश्लेषण': '/financial-risk-analysis',
                     'Executive Dashboard': '/executive-dashboard-finance', 'कार्यकारी डैशबोर्ड': '/executive-dashboard-finance',
-                    'Notification Center': '/notification-center-finance', 'अधिसूचना केंद्र': '/notification-center-finance',
+                    'Notification Center': '/notification-center-finance', 'अधिसूचना केंद्र (Notification Center)': '/notification-center-finance',
+                    
+                    // AI Human Resource Management mappings
+                    'Police HR Domain Expert AI': '/police-hr-domain', 'पुलिस एचआर डोमेन विशेषज्ञ एआई': '/police-hr-domain',
+                    'Officer Recruitment Expert AI': '/officer-recruitment', 'अधिकारी भर्ती विशेषज्ञ एआई': '/officer-recruitment',
+                    'Duty & Leave Expert AI': '/duty-leave', 'ड्यूटी और अवकाश विशेषज्ञ एआई': '/duty-leave',
+                    'Payroll & Allowances Expert AI': '/payroll-allowances', 'पेरोल और भत्ते विशेषज्ञ एआई': '/payroll-allowances',
+                    'Performance & Medals Expert AI': '/performance-medals', 'प्रदर्शन और पदक विशेषज्ञ एआई': '/performance-medals',
+                    
                     'AI Procurement': '/procurement', 'एआई खरीद (Procurement)': '/procurement',
                     'AI Audit Management': '/audit', 'एआई ऑडिट प्रबंधन': '/audit',
                     'AI Document Management': '/document', 'एआई दस्तावेज़ प्रबंधन': '/document',
