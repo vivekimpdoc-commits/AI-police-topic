@@ -12,7 +12,23 @@ const aiExperts = [
   "Big Data Architect AI", "ETL Pipeline Optimizer", "Unstructured Data Parser AI", 
   "Metadata Tagging Engine", "Data Governance Auditor AI", "Dark Data Miner AI", 
   "Cross-Schema Query Optimizer", "Cold-Storage Archival Bot", "Data Lake Security Enforcer",
-  "Anomaly Detection Agent AI", "Semantic Lake Search AI"
+  "Anomaly Detection Agent AI", "Semantic Lake Search AI", "Batch Ingestion Coordinator",
+  "Real-Time Stream Processor AI", "Telecom CDR Parsing Bot", "Social Media Firehose Sync",
+  "Interrogation Audio Indexer", "Handwritten OCR Extraction AI", "Video Metadata Indexing Agent",
+  "Cross-DB Unified Search Bot", "Natural Language to SQL Agent", "Graph-Relational Join Optimizer",
+  "Millisecond Query Executor", "Automated Data Redaction AI", "PII Masking & Hashing Bot",
+  "Access Audit Logger AI", "Court-ordered Data Purge Bot", "Closed Case Archival AI",
+  "Automated Glacier Tiering Bot", "Data Compression Optimizer", "Digital Evidence Hashing AI",
+  "Auto-Schema Inference Bot", "PII Auto-Masking Coordinator", "Unstructured Text Structuring AI",
+  "Video Frame Indexing Bot", "Duplicate Record Merging AI", "Cold-Data Retrieval Predictor",
+  "Cross-lingual Metadata Translator", "Automated Data Quality Scorer", "NLP Database Query Agent",
+  "Hadoop Cluster Manager AI", "S3 Bucket Cost Optimizer", "Elasticsearch Index Manager",
+  "Vector Database Sync AI", "Relational CCTNS Bridge AI", "Graph DB Neo4j Integrator",
+  "Time-Series IoT Data Miner", "Metadata Catalog Organizer", "Ingestion Pipeline Monitor",
+  "Storage Cost Optimization Bot", "Cross-Department Access Auditor", "CCTNS State DB Sync AI",
+  "Telecom Bulk CDR Uploader", "Forensic Lab Integration Bot", "Transport RTO API Bridge",
+  "Bank Transaction Webhook AI", "OSINT Data Harvester Bot", "Federated GraphQL Resolver",
+  "Data Lake Health Indexer", "Zero-Trust Data Governor", "Blockchain Evidence Hasher"
 ];
 
 const dataLakeModules = [
@@ -82,7 +98,7 @@ const futureScope = [
 
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'Data Lake Agents', icon: <Bot size={18} /> },
+  { id: 'experts', label: `Data Lake Agents (${aiExperts.length})`, icon: <Bot size={18} /> },
   { id: 'modules', label: 'Lake Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },

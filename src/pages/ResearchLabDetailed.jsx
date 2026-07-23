@@ -12,7 +12,23 @@ const aiExperts = [
   "Quantum Cryptography AI", "Synthetic Criminal Data Generator", "Robotics K9 Pathfinding AI", 
   "Brain-Computer Interface Researcher", "Neuromorphic Vision Analyst", "Autonomous Drone Swarm R&D", 
   "Predictive Pre-Crime Theorist", "Holographic Evidence Mapper", "AI Legal Arbitrator Bot",
-  "Metaverse Police Academy Trainer", "Cyber-Warfare Simulation Bot"
+  "Metaverse Police Academy Trainer", "Cyber-Warfare Simulation Bot", "Quantum Key Distribution (QKD) Bot",
+  "Shor's Algorithm Defense AI", "Unhackable Evidence Chain AI", "Qubit Communication Grid Manager",
+  "AI-Generated Riot Simulator", "Deepfake Face Training Set Generator", "Synthetic Voice Clone R&D",
+  "Virtual Crime Scene Generator", "Robo-Dog Bomb Detection AI", "Autonomous Swarm Pursuit Modeler",
+  "Hostage Rescue Micro-Drone AI", "Bipedal Riot Control Bot R&D", "Brainwave Lie Detection (EEG) AI",
+  "Stress Biometric Wearables R&D", "Cognitive Load Monitoring AI", "Neural-Link Command Interface Bot",
+  "VR Active Shooter Trainer", "Holographic Forensic Lab Guide", "Global AI Interpol Sync R&D",
+  "Virtual Suspect Interrogation AI", "Quantum Probability Modeler", "Neuromorphic Computing Simulator",
+  "Holographic Ray-Tracing AI", "Predictive Behavior Theorist Bot", "Autonomous Lethal Decision Tree AI",
+  "Metaverse Voxel Rendering AI", "DNA/Genomic Data Integrator R&D", "Quantum-Safe Encryption R&D",
+  "Decentralized IPFS Evidence Chain AI", "Brain-Computer Search Interface AI", "Self-Healing Pipeline Theorist",
+  "Time-Temporal Policing R&D", "Cybernetic Officer Augmentation AI", "Orbital Command Satellite Sync AI",
+  "Telepathic Interrogation Interface", "AGI (Artificial General Intelligence) Sync", "Automated Justice System Simulator",
+  "Synthetic Bio-Signature Generator", "Exo-Skeleton Pursuit Enhancer AI", "Drone EMP Hardening R&D",
+  "Acoustic Weaponry Simulation AI", "Anti-Gravity Drone R&D", "Invisibility Cloak Metamaterial AI",
+  "Sub-dermal Tracker Chip R&D", "Neural Memory Extraction Theorist", "Smart-Bullet Trajectory Modeler",
+  "Cyber-Telepathy Comms R&D", "Virtual Reality Empathy Trainer", "Post-Quantum Cryptanalysis AI"
 ];
 
 const researchLabModules = [
@@ -82,7 +98,7 @@ const futureScope = [
 
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'R&D Researchers', icon: <Bot size={18} /> },
+  { id: 'experts', label: `R&D Researchers (${aiExperts.length})`, icon: <Bot size={18} /> },
   { id: 'modules', label: 'Research Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },

@@ -12,7 +12,23 @@ const aiExperts = [
   "ICCC Operations Commander AI", "Emergency Dispatch Priority AI", "City-wide Sensor Aggregator AI", 
   "Live Threat Triangulation AI", "Drone Fleet Over-watch AI", "Public Broadcast Controller AI", 
   "VIP Convoy Coordinator AI", "Riot Control Logistics AI", "Weather/Traffic Impact Analyzer",
-  "Cyber-Command Defense Bot", "Force Readiness Optimizer AI"
+  "Cyber-Command Defense Bot", "Force Readiness Optimizer AI", "112 Call Triage Bot",
+  "SOS Voice Stress Analyzer", "Nearest PCR Van Dispatcher", "Ambulance/Fire Co-routing AI",
+  "Traffic Light Override Manager", "Smart Streetlight Dimming AI", "Environmental Sensor Alert Bot",
+  "Body-Cam Feed Analyzer", "Helicopter FLIR (Thermal) Sync AI", "Sniper Scope Feed Integrator",
+  "Hostage Situation Command Bot", "Active Shooter Tracker AI", "Terrorist Siege Logistics Agent",
+  "Natural Disaster War-Room AI", "CM/DGP Briefing Mode Auto-Generator", "Multi-Screen Video Analytics Bot",
+  "Crowd Panic Detection AI", "Force Depletion Alert Agent", "112 Multi-lingual Live Translator",
+  "VIP Route Dynamic Threat Scorer", "Drone Swarm Target Locking AI", "Gunshot Acoustic Triangulator",
+  "Real-time Hospital Bed Sync AI", "City-wide Evacuation Router", "Cyber-Attack Tabletop AI",
+  "Fire Spread Predictor AI", "Flood Level Monitoring Agent", "High-Speed Chase Over-watch Bot",
+  "Automated Press Release Drafter", "Social Media Panic Assuager Bot", "Rogue Drone Interceptor AI",
+  "Subway/Metro System Sync Bot", "Power Grid Failure Over-watch", "Mobile Cell-Tower Deployment AI",
+  "SWAT Team Gear Readiness Bot", "Hostage Negotiation Prompter", "Airborne Bio-Threat Sensor AI",
+  "Radiation Leak Heatmapper", "Maritime Port Over-watch AI", "Airport Security Sync Agent",
+  "Border Checkpoint Integrator", "Public Sentiment Radar (Real-Time)", "Crisis Volunteer Coordinator AI",
+  "Automated Kill-Switch Executor", "ICCC EMP Failover AI", "Multi-agency Intel Fusion Bot",
+  "Geofence Breach Alert Agent", "Suspicious Vehicle Tracker AI", "City-wide Lockdown Coordinator"
 ];
 
 const commandCenterModules = [
@@ -82,7 +98,7 @@ const futureScope = [
 
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'Command Agents', icon: <Bot size={18} /> },
+  { id: 'experts', label: `Command Agents (${aiExperts.length})`, icon: <Bot size={18} /> },
   { id: 'modules', label: 'ICCC Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
@@ -100,7 +116,7 @@ const CommandCenterDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <MonitorPlay className="inline-icon" size={28} /> Integrated Command & Control Center (ICCC)
+              <MonitorPlay className="inline-icon" size={28} /> AI Command & Control Center
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
@@ -244,7 +260,7 @@ const CommandCenterDetailed = () => {
             <MonitorPlay size={40} color="#06b6d4" />
           </motion.div>
           <div>
-            <h1 className="cyber-title">INTEGRATED <span>COMMAND CENTER</span></h1>
+            <h1 className="cyber-title">AI COMMAND & <span>CONTROL CENTER</span></h1>
             <p className="cyber-subtitle">Real-time City-Wide Over-watch & Tactical War-Room</p>
           </div>
         </div>

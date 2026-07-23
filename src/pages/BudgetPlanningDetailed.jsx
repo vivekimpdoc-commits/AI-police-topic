@@ -2,111 +2,127 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bot, LayoutDashboard, Database, Shield, Rocket, 
+  Users, Bot, LayoutDashboard, Database, Shield, Rocket, 
   FileText, Activity, Network, ArrowLeft, Terminal, Cpu,
-  CheckCircle, ShieldAlert, PieChart, Users, Settings, GitBranch, RefreshCw
+  Briefcase, Calendar, Calculator, Target, BookOpen, Heart,
+  Smartphone, HardDrive, Bell, CheckCircle, ShieldAlert,
+  CreditCard, DollarSign, TrendingUp, PieChart, Landmark
 } from 'lucide-react';
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "Model Drift Detector AI", "Weight Encryption Specialist", "Hyperparameter Tuning Bot", 
-  "Bias & Fairness Auditor AI", "Edge Deployment Coordinator", "Federated Learning Sync Agent", 
-  "A/B Testing Evaluator AI", "GPU Resource Allocator", "Synthetic Data Generator AI",
-  "Model Rollback Agent", "Adversarial Attack Defender", "Concept Drift Alert Bot",
-  "Accuracy Degradation Monitor", "Real-world Metrics Validator", "Automated Retraining Trigger AI",
-  "Hardware-aware Quantization Bot", "Demographic Bias Scanner", "False-Positive Rate Tester",
-  "Legal Compliance Checker AI", "Explainability (XAI) Reporter", "Model Weight Hashing Agent",
-  "OTA Drone Update Coordinator", "Bodycam Edge Sync AI", "Smart CCTV Deployment Bot",
-  "LLM Fine-tuning Assistant", "NLP Pipeline Optimizer", "Computer Vision Retraining Agent",
-  "Zero-Downtime Hot Swapper", "Data Privacy Auditor AI", "Anonymization Pipeline Bot",
-  "Pipeline Telemetry Collector", "Model Registry Webhook AI", "Kubernetes GPU Scaler Bot",
-  "Triton Inference Optimizer", "HuggingFace Hub Sync Bot", "Poisoned Data Detector AI",
-  "Zero-Trust Edge Sync Agent", "Immutable Version Logger", "Air-gapped Training Supervisor",
-  "Cloud-to-Edge Bridge AI", "Self-Evolving Model Monitor", "Predictive Maintenance AI (GPU)",
-  "TensorRT Optimization Agent", "Sparsity & Pruning Specialist", "Dataset Balancing Bot",
-  "Out-of-Distribution Detector", "Multi-tenant Model Router", "Latency Benchmark Tester",
-  "Memory Leak Detector AI", "Model API Rate Limiter", "Feature Store Sync Agent",
-  "Training Cost Estimator AI", "Energy Efficiency Optimizer", "Gradient Vanishing Alert Bot",
-  "Overfitting Detection AI", "Continuous Integration (CI) Bot", "Artifact Registry Manager",
-  "Data Lineage Tracker", "Sandbox Testing Coordinator", "MLOps Workflow Orchestrator"
+  "Police Budget Planner AI", "Fund Allocation Expert AI", "Budget Forecast AI", 
+  "Budget Utilization Monitor AI", "Financial Planning AI", "Treasury Management AI", 
+  "Revenue & Grant Management AI", "Procurement Planning AI", "Vendor Payment Auditor AI", 
+  "Salary & Payroll AI", "Pension & Gratuity AI", "Fleet Expense AI", 
+  "Ammunition Cost Analyzer AI", "Expense Fraud Auditor AI", "Financial Compliance Bot AI", 
+  "Internal Audit AI", "Financial Risk Intelligence AI", "Executive Finance Copilot AI", 
+  "Financial Analytics AI", "Risk Allowance Predictor AI", "Station Upkeep Budget AI", 
+  "Tax Optimization Expert AI", "Contingency Fund Predictor", "Overtime Spend Forecaster",
+  "State Grant ROI Analyzer", "Central Funding Sync Bot", "Uniform & Kit Allowance AI",
+  "Travel DA/TA Optimizer", "Investigation Expense Tracker", "Secret Informant (SS Fund) Auditor",
+  "PCR Van Fuel Log AI", "Vehicle Maintenance Budget Bot", "Toll & Transport Expense AI",
+  "Fuel Card Integration Sync", "Post-Retirement Medical Fund AI", "Family Pension Calculator Bot",
+  "CAG Compliance Auditor", "Expense Anomaly Detector", "Fund Utilization Certificate Bot",
+  "Budget Deficit Alert AI", "Fake Bill OCR Scanner", "Vendor Overpricing Alert Bot",
+  "Multi-currency Forensic AI", "Smart Contract Payment Exec", "Crypto Asset Seizure Valuator",
+  "District-wise Allocation Optimizer", "Zone-wise Fund Distrubution AI", "Event Security Cost Predictor",
+  "Election Deployment Budget AI", "Specialized Unit Training Cost AI", "K9 Unit Upkeep Forecaster",
+  "Drone Fleet Depreciation Modeler", "Cyber Security Investment ROI AI", "Cloud Storage Billing Optimizer",
+  "Headquarters Utility Expense AI", "Officer Loan & Advance Tracker", "Financial Hardship Predictor Bot",
+  "Station Renovation Budget AI", "Reward & Bounty Payout Bot", "Future Inflation Adjustment AI"
 ];
 
-const modelManagementModules = [
+const financeModules = [
   {
-    title: "Model Training & Fine-Tuning",
-    icon: <Settings size={20} />,
-    items: ["Custom LLM Fine-tuning (BNS Data)", "Facial Recognition Retraining", "Hyperparameter Optimization", "GPU Cluster Management"]
+    title: "State Police Budgeting",
+    icon: <Landmark size={20} />,
+    items: ["Annual Budget Planning", "DGP Budget Forecasting", "District Allocation", "Zone-wise Fund Distribution", "Contingency Funds"]
   },
   {
-    title: "Edge Deployment (IoT)",
-    icon: <Network size={20} />,
-    items: ["Model Compression (Quantization)", "OTA Updates to Drones", "Deploy to Officer Bodycams", "Smart CCTV Edge Sync"]
+    title: "Payroll & Allowances",
+    icon: <Calculator size={20} />,
+    items: ["Rank-based Salary processing", "Risk & Hardship Allowances", "Uniform & Kit Allowances", "Travel DA/TA", "Overtime Compensation"]
   },
   {
-    title: "Bias & Fairness Auditing",
-    icon: <ShieldAlert size={20} />,
-    items: ["Demographic Bias Scanning", "False-Positive Rate Testing", "Legal Compliance Checks", "Explainability (XAI) Reports"]
+    title: "Station Expenses",
+    icon: <DollarSign size={20} />,
+    items: ["Station Maintenance Funds", "Investigation Expenses", "Secret Informant Funds (SS Fund)", "Stationery & Consumables"]
   },
   {
-    title: "Drift & Performance Monitoring",
-    icon: <Activity size={20} />,
-    items: ["Concept Drift Alerts", "Accuracy Degradation Tracking", "Real-world vs Validation Metrics", "Automated Retraining Triggers"]
+    title: "Fleet & Fuel Management",
+    icon: <Rocket size={20} />,
+    items: ["PCR Van Fuel Logs", "Vehicle Maintenance Budget", "Toll & Transport Expenses", "Fuel Card Integration"]
   },
   {
-    title: "Version Control & Rollback",
-    icon: <GitBranch size={20} />,
-    items: ["A/B Testing Models", "Instant Model Rollback", "Model Weight Hashing", "Staging to Production Pipeline"]
+    title: "Pension & Retirement",
+    icon: <Briefcase size={20} />,
+    items: ["Gratuity Calculation", "Pension Disbursement", "Post-Retirement Medical Funds", "Family Pension Management"]
+  },
+  {
+    title: "Vendor Payments",
+    icon: <CreditCard size={20} />,
+    items: ["Uniform Supplier Payments", "Ammunition Vendor Invoices", "Tech Equipment Procurement", "Contractor Billing"]
+  },
+  {
+    title: "Financial Audits",
+    icon: <Target size={20} />,
+    items: ["Internal Financial Audits", "CAG Report Compliance", "Expense Anomaly Detection", "Fund Utilization Certificates"]
   }
 ];
 
 const aiFeatures = [
-  "AI Automated Hyperparameter Tuning", "AI Federated Learning (Decentralized Sync)", "AI Zero-Downtime Hot Swapping",
-  "AI Explainable AI (LIME/SHAP)", "AI Synthetic Crime Data Generation", "AI Hardware-aware Quantization",
-  "AI Automated Bias Neutralization", "AI Adversarial Robustness Testing"
+  "AI Budget Shortfall Prediction", "AI Expense Fraud Detection", "AI Fuel Theft Recognition",
+  "AI Fake Bill OCR Scanner", "AI Risk Allowance Miscalculation Alert", "AI Predictive Fleet Maintenance Cost",
+  "AI Secret Fund Utilization Analysis", "AI Auto-Categorization of Station Expenses", "AI Vendor Overpricing Alert",
+  "AI Pension Disbursement Delay Predictor", "AI Compliance Chatbot", "AI Multi-currency Forensics"
 ];
 
 const databases = [
-  "Model_Weights_Registry", "Training_Hyperparameters", "Validation_Datasets", "Bias_Audit_Logs", "Edge_Device_Manifests", 
-  "A_B_Test_Metrics", "Drift_Alert_History", "GPU_Utilization_Stats", "Rollback_Snapshots", "Synthetic_Data_Vault"
+  "Budgets", "Allocations", "Expenses", "Invoices", "Vendors", "Salaries", 
+  "Allowances", "Pensions", "FuelLogs", "MaintenanceCosts", "AuditTrails", "TaxRecords", 
+  "InformantFunds", "Tenders", "Receipts", "Transactions"
 ];
 
 const dashboards = [
-  "Global Model Registry", "Active Training GPU Cluster", "Edge Deployment Topology", 
-  "Bias & Fairness Scorecard", "Live Model Accuracy (Drift)", "A/B Testing Arena"
+  "DGP Financial Overview Dashboard", "District SP Budget Dashboard", "Station SHO Expense Dashboard", 
+  "Payroll & Pension Dashboard", "Audit & Compliance Dashboard", "Real-time Fund Utilization Tracker"
 ];
 
 const apis = [
-  "NVIDIA Triton Inference APIs", "Kubernetes GPU Scaling APIs", "Edge Device OTA APIs", "HuggingFace Hub Sync APIs",
-  "CCTV Node Deployment APIs", "Model Registry Webhooks", "Telemetry Collection APIs"
+  "Treasury Sync APIs", "Banking Payment Gateway APIs", "Salary Disbursement APIs", "Fuel Card APIs",
+  "Vendor Invoice APIs", "Audit Log APIs", "Expense Submission APIs", "Tax Calculation APIs",
+  "Budget Forecasting AI APIs"
 ];
 
 const reports = [
-  "Model Fairness & Bias Audit", "Edge Deployment Success Rate", "GPU Utilization Efficiency", 
-  "Drift Degradation Alert Log", "A/B Test Winner Report", "Synthetic Data Quality Metrics"
+  "Annual Budget Report", "District-wise Fund Utilization", "Monthly Salary Register", 
+  "Fuel Consumption Audit", "Vendor Payment Status", "Pension Disbursal Report", 
+  "Secret Fund Audit Report", "CAG Compliance Report"
 ];
 
 const security = [
-  "Model Weight Encryption (AES-256)", "Adversarial Attack Filtering", "Gov-Grade JWT Auth for Deployment", 
-  "Immutable Version Hashes", "Air-gapped Training Environments", 
-  "Model Poisoning Detection", "Zero-Trust Edge Sync", "Strict Approval Workflows"
+  "Zero-Trust Financial Architecture", "Gov-Grade JWT Authentication", "Maker-Checker Approval Workflow", 
+  "Rank-Based Financial Access Control", "End-to-End Encryption (AES-256)", 
+  "Immutable Financial Audit Trails", "Secure Banking VPN Integration", "RBI/Gov Data Compliance"
 ];
 
 const futureScope = [
-  "Self-Evolving Autonomous Models", "Quantum Neural Network Training", "Global Interpol Federated Sync",
-  "Neuromorphic Chip Deployment", "Instant Edge Retraining via Swarm", "Zero-Shot Universal Models"
+  "Blockchain-based Secret Fund Ledger", "CBDC (Digital Rupee) Integration", "AI Automated Tax Filing",
+  "Voice-Based Expense Claims for Officers", "Real-time Predictive Inflation Adjustment", "Offline Financial Sync for Remote Stations"
 ];
 
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: `MLOps Agents (${aiExperts.length})`, icon: <Bot size={18} /> },
-  { id: 'modules', label: 'MLOps Modules', icon: <LayoutDashboard size={18} /> },
+  { id: 'experts', label: `Finance AI Agents (${aiExperts.length})`, icon: <Bot size={18} /> },
+  { id: 'modules', label: 'Finance Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
-  { id: 'reports', label: 'ML Dashboards', icon: <PieChart size={18} /> },
+  { id: 'reports', label: 'Financial Dashboards', icon: <PieChart size={18} /> },
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
-const ModelManagementDetailed = () => {
+const BudgetPlanningDetailed = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('overview');
 
@@ -116,29 +132,29 @@ const ModelManagementDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <GitBranch className="inline-icon" size={28} /> AI Model Management (MLOps)
+              <Landmark className="inline-icon" size={28} /> AI Budget Planning
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>AI Model Management (MLOps)</strong> is the engine room of the police AI ecosystem. It allows data scientists and AI engineers to securely train, audit, deploy, and monitor custom law-enforcement models (like facial recognition or predictive policing) across thousands of edge devices, ensuring zero bias and maximum accuracy.
+              <strong>AI Police Budget Planning</strong> is an enterprise-grade financial nervous system designed to handle the complex budgeting, payroll, and procurement funding of state police departments. It leverages AI to ensure zero fund leakage, predictive budgeting, and real-time audit compliance.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Settings className="inline-icon" color="#3b82f6" /> Custom Model Training</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Train localized Large Language Models (LLMs) on highly classified state police data (like local slang or regional BNS codes) in completely air-gapped GPU clusters.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><DollarSign className="inline-icon" color="#3b82f6" /> Predictive Budgeting</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>AI forecasts annual funding requirements by analyzing historical crime data, upcoming elections, and expected recruitments to prevent budget shortfalls.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><RefreshCw className="inline-icon" color="#10b981" /> Over-The-Air (OTA) Edge Deployment</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Instantly push compressed, optimized AI models (Quantization) to thousands of officer body-cams, drones, and smart CCTVs simultaneously without downtime.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#10b981" /> Expense Anomaly Detection</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Machine learning algorithms scan millions of invoices and fuel logs to instantly flag fake bills, overpriced vendor contracts, or fuel theft.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><ShieldAlert className="inline-icon" color="#f59e0b" /> Bias & Fairness Auditing</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Before any model goes live, AI Auditors strictly test it for demographic bias, ensuring the facial recognition algorithm does not unfairly target specific communities.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Target className="inline-icon" color="#f59e0b" /> Secret Fund Auditing</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Secure, encrypted ledgers for managing confidential investigation funds (SS Funds) with automated, pattern-based internal auditing.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#ef4444" /> Model Drift Monitoring</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Constantly monitors live models. If a predictive riot model's accuracy drops below 90% due to changing crowd behaviors (Concept Drift), it automatically triggers a rollback.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Shield className="inline-icon" color="#ef4444" /> Zero-Trust Security</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Gov-Grade Encryption and Maker-Checker workflows ensure that no financial transaction can be executed without verified, multi-level authorization.</p>
               </div>
             </div>
           </motion.div>
@@ -157,7 +173,7 @@ const ModelManagementDetailed = () => {
       case 'modules':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="module-accordion">
-            {modelManagementModules.map((mod, i) => (
+            {financeModules.map((mod, i) => (
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} key={i} className="premium-module-panel">
                 <div className="module-header">
                   {mod.icon}
@@ -257,11 +273,11 @@ const ModelManagementDetailed = () => {
         </button>
         <div className="header-titles">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="icon-wrapper">
-            <GitBranch size={40} color="#06b6d4" />
+            <Landmark size={40} color="#06b6d4" />
           </motion.div>
           <div>
-            <h1 className="cyber-title">AI MODEL <span>MANAGEMENT</span></h1>
-            <p className="cyber-subtitle">MLOps, Edge Deployment, Bias Auditing & Drift Monitoring</p>
+            <h1 className="cyber-title">AI BUDGET <span>PLANNING</span></h1>
+            <p className="cyber-subtitle">Next-Generation Financial Management powered by Agentic AI</p>
           </div>
         </div>
       </header>
@@ -294,4 +310,4 @@ const ModelManagementDetailed = () => {
   );
 };
 
-export default ModelManagementDetailed;
+export default BudgetPlanningDetailed;

@@ -7,6 +7,26 @@ import ModulePage from './components/ModulePage';
 import Home from './pages/Home';
 import HRMSDetailed from './pages/HrmsDetailed';
 import FinanceDetailed from './pages/FinanceDetailed';
+import BudgetPlanningDetailed from './pages/BudgetPlanningDetailed';
+import BudgetApprovalDetailed from './pages/BudgetApprovalDetailed';
+import FundAllocationDetailed from './pages/FundAllocationDetailed';
+import GrantManagementDetailed from './pages/GrantManagementDetailed';
+import DepartmentBudgetDetailed from './pages/DepartmentBudgetDetailed';
+import ProjectBudgetDetailed from './pages/ProjectBudgetDetailed';
+import RevenueManagementDetailed from './pages/RevenueManagementDetailed';
+import ExpenseManagementDetailed from './pages/ExpenseManagementDetailed';
+import PayrollIntegrationDetailed from './pages/PayrollIntegrationDetailed';
+import ProcurementManagementDetailed from './pages/ProcurementManagementDetailed';
+import VendorManagementDetailed from './pages/VendorManagementDetailed';
+import AssetFinanceDetailed from './pages/AssetFinanceDetailed';
+import AuditFinanceDetailed from './pages/AuditFinanceDetailed';
+import FinancialComplianceDetailed from './pages/FinancialComplianceDetailed';
+import FinancialReportsDetailed from './pages/FinancialReportsDetailed';
+import AIForecastingDetailed from './pages/AIForecastingDetailed';
+import CostOptimizationDetailed from './pages/CostOptimizationDetailed';
+import FinancialRiskAnalysisDetailed from './pages/FinancialRiskAnalysisDetailed';
+import ExecutiveDashboardFinanceDetailed from './pages/ExecutiveDashboardFinanceDetailed';
+import NotificationCenterFinanceDetailed from './pages/NotificationCenterFinanceDetailed';
 import ProcurementDetailed from './pages/ProcurementDetailed';
 import AuditDetailed from './pages/AuditDetailed';
 import DocumentDetailed from './pages/DocumentDetailed';
@@ -21,6 +41,10 @@ import MultimodalDetailed from './pages/MultimodalDetailed';
 import ModelManagementDetailed from './pages/ModelManagementDetailed';
 import DataLakeDetailed from './pages/DataLakeDetailed';
 import ResearchLabDetailed from './pages/ResearchLabDetailed';
+import OperationsCommandDetailed from './pages/OperationsCommandDetailed';
+import GovernanceDetailed from './pages/GovernanceDetailed';
+import EnterpriseAnalyticsDetailed from './pages/EnterpriseAnalyticsDetailed';
+import ExecutiveDashboardDetailed from './pages/ExecutiveDashboardDetailed';
 import CitizenDetailed from './pages/CitizenDetailed';
 import ComplaintDetailed from './pages/ComplaintDetailed';
 import IntelligenceDetailed from './pages/IntelligenceDetailed';
@@ -185,6 +209,106 @@ const AnimatedRoutes = () => {
         <Route path="/finance" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
             <FinanceDetailed />
+          </motion.div>
+        } />
+        <Route path="/budget-planning" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <BudgetPlanningDetailed />
+          </motion.div>
+        } />
+        <Route path="/budget-approval" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <BudgetApprovalDetailed />
+          </motion.div>
+        } />
+        <Route path="/fund-allocation" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <FundAllocationDetailed />
+          </motion.div>
+        } />
+        <Route path="/grant-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <GrantManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/department-budget" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <DepartmentBudgetDetailed />
+          </motion.div>
+        } />
+        <Route path="/project-budget" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ProjectBudgetDetailed />
+          </motion.div>
+        } />
+        <Route path="/revenue-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <RevenueManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/expense-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ExpenseManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/payroll-integration" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PayrollIntegrationDetailed />
+          </motion.div>
+        } />
+        <Route path="/procurement-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ProcurementManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/vendor-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <VendorManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/asset-finance" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <AssetFinanceDetailed />
+          </motion.div>
+        } />
+        <Route path="/audit-finance" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <AuditFinanceDetailed />
+          </motion.div>
+        } />
+        <Route path="/financial-compliance" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <FinancialComplianceDetailed />
+          </motion.div>
+        } />
+        <Route path="/financial-reports" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <FinancialReportsDetailed />
+          </motion.div>
+        } />
+        <Route path="/ai-forecasting" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <AIForecastingDetailed />
+          </motion.div>
+        } />
+        <Route path="/cost-optimization" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CostOptimizationDetailed />
+          </motion.div>
+        } />
+        <Route path="/financial-risk-analysis" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <FinancialRiskAnalysisDetailed />
+          </motion.div>
+        } />
+        <Route path="/executive-dashboard-finance" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ExecutiveDashboardFinanceDetailed />
+          </motion.div>
+        } />
+        <Route path="/notification-center-finance" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <NotificationCenterFinanceDetailed />
           </motion.div>
         } />
         <Route path="/procurement" element={
@@ -630,6 +754,26 @@ const AnimatedRoutes = () => {
         <Route path="/command-center" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
             <CommandCenterDetailed />
+          </motion.div>
+        } />
+        <Route path="/operations-command" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <OperationsCommandDetailed />
+          </motion.div>
+        } />
+        <Route path="/ai-governance" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <GovernanceDetailed />
+          </motion.div>
+        } />
+        <Route path="/enterprise-analytics" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <EnterpriseAnalyticsDetailed />
+          </motion.div>
+        } />
+        <Route path="/executive-dashboard" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ExecutiveDashboardDetailed />
           </motion.div>
         } />
         <Route path="/topic/:topicName/content" element={

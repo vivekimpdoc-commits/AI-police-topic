@@ -342,9 +342,35 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                    // Module 06: AI Command & Governance
+                    'AI Operations Command Center': '/operations-command', 'एआई ऑपरेशंस कमांड सेंटर': '/operations-command',
+                    'AI Governance & Compliance': '/ai-governance', 'एआई गवर्नेंस और अनुपालन': '/ai-governance',
+                    'AI Enterprise Analytics': '/enterprise-analytics', 'एआई एंटरप्राइज एनालिटिक्स': '/enterprise-analytics',
+                    'AI Executive Dashboard': '/executive-dashboard', 'एआई कार्यकारी डैशबोर्ड': '/executive-dashboard',
+
                     // Module 24: Administration
                     'AI HRMS': '/hrms', 'एआई एचआरएमएस (HRMS)': '/hrms',
                     'AI Finance & Budget': '/finance', 'एआई वित्त और बजट': '/finance',
+                    'Budget Planning': '/budget-planning', 'बजट प्लानिंग': '/budget-planning',
+                    'Budget Approval': '/budget-approval', 'बजट स्वीकृति': '/budget-approval',
+                    'Fund Allocation': '/fund-allocation', 'फंड आवंटन': '/fund-allocation',
+                    'Grant Management': '/grant-management', 'अनुदान प्रबंधन': '/grant-management',
+                    'Department Budget': '/department-budget', 'विभागीय बजट': '/department-budget',
+                    'Project Budget': '/project-budget', 'परियोजना बजट': '/project-budget',
+                    'Revenue Management': '/revenue-management', 'राजस्व प्रबंधन': '/revenue-management',
+                    'Expense Management': '/expense-management', 'व्यय प्रबंधन': '/expense-management',
+                    'Payroll Integration': '/payroll-integration', 'पेरोल एकीकरण': '/payroll-integration',
+                    'Procurement Management': '/procurement-management', 'खरीद प्रबंधन (Procurement Management)': '/procurement-management',
+                    'Vendor Management': '/vendor-management', 'विक्रेता प्रबंधन': '/vendor-management',
+                    'Asset Finance': '/asset-finance', 'संपत्ति वित्त': '/asset-finance',
+                    'Audit Management': '/audit-finance', 'ऑडिट प्रबंधन': '/audit-finance',
+                    'Financial Compliance': '/financial-compliance', 'वित्तीय अनुपालन': '/financial-compliance',
+                    'Financial Reports': '/financial-reports', 'वित्तीय रिपोर्ट': '/financial-reports',
+                    'AI Forecasting': '/ai-forecasting', 'एआई पूर्वानुमान': '/ai-forecasting',
+                    'Cost Optimization': '/cost-optimization', 'लागत अनुकूलन': '/cost-optimization',
+                    'Financial Risk Analysis': '/financial-risk-analysis', 'वित्तीय जोखिम विश्लेषण': '/financial-risk-analysis',
+                    'Executive Dashboard': '/executive-dashboard-finance', 'कार्यकारी डैशबोर्ड': '/executive-dashboard-finance',
+                    'Notification Center': '/notification-center-finance', 'अधिसूचना केंद्र': '/notification-center-finance',
                     'AI Procurement': '/procurement', 'एआई खरीद (Procurement)': '/procurement',
                     'AI Audit Management': '/audit', 'एआई ऑडिट प्रबंधन': '/audit',
                     'AI Document Management': '/document', 'एआई दस्तावेज़ प्रबंधन': '/document',
