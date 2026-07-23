@@ -9,11 +9,26 @@ import {
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "Semantic Link Predictor AI", "Syndicate Hierarchy Analyst", "CDR Network Mapper AI", 
-  "Financial Flow Tracer Agent", "Social Graph Deep-Dive AI", "Alias Resolution Expert", 
-  "Hidden Relationship Miner", "Temporal Link Analyst AI", "Geospatial Graph Coordinator",
-  "Telecom Metadata Expert AI", "Darknet Vendor Linker", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Entity Resolution AI", "Entity Extraction AI", "Semantic Entity Linking AI",
+  "Relationship Discovery AI", "Multi-Hop Relationship Explorer AI", "Graph Embedding AI",
+  "Knowledge Graph Builder AI", "Ontology Management AI", "Knowledge Base Manager AI",
+  "Criminal Network Analyzer AI", "Criminal Link Prediction AI", "Association Rule Mining AI",
+  "Community Detection AI", "Network Centrality Analyzer AI", "Influence Analysis AI",
+  "Unknown Entity Discovery AI", "Suspicious Cluster Detection AI", "Hidden Pattern Discovery AI",
+  "Graph Pattern Matching AI", "Graph Similarity AI", "Identity Resolution AI",
+  "Cross-Database Entity Matching AI", "Multi-Source Data Fusion AI", "Intelligence Fusion AI",
+  "Event Correlation AI", "Timeline Correlation AI", "Behavioral Pattern Analysis AI",
+  "Criminal Profile Builder AI", "Organization Relationship Mapper AI", "Social Network Intelligence AI",
+  "Communication Network Intelligence AI", "Financial Network Intelligence AI", "Location Intelligence AI",
+  "Mobility Pattern Analysis AI", "Device Correlation AI", "Digital Identity Correlation AI",
+  "Risk Scoring AI", "Threat Prediction AI", "Criminal Activity Prediction AI",
+  "Network Evolution Prediction AI", "AI Graph Search Assistant", "Natural Language Graph Query AI",
+  "Graph Recommendation Engine AI", "Graph Visualization AI", "Interactive Link Explorer AI",
+  "Explainable AI for Link Prediction", "Graph Analytics AI", "Knowledge Graph Quality Validator AI",
+  "Graph Consistency Checker AI", "Real-Time Knowledge Graph Update AI", "Streaming Data Correlation AI",
+  "Graph Version Control AI", "Knowledge Graph Governance AI", "Metadata Intelligence AI",
+  "Data Lineage AI", "AI Investigation Copilot", "Case Intelligence AI",
+  "Decision Support AI", "Strategic Intelligence AI", "Executive Knowledge Graph Dashboard AI"
 ];
 
 const knowledgeModules = [
@@ -84,7 +99,7 @@ const futureScope = [
 
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'Graph Analysts', icon: <Bot size={18} /> },
+  { id: 'experts', label: `Graph Analysts (${aiExperts.length})`, icon: <Bot size={18} /> },
   { id: 'modules', label: 'Graph Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },

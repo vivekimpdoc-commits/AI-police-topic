@@ -12,8 +12,7 @@ const aiExperts = [
   "Sample Tracker Bot", "Lab Capacity Analyzer", "DNA Matcher AI", 
   "Chemical Inventory Bot", "Instrument Calibrator", "Turnaround Predictor", 
   "Toxicology Analyzer AI", "Quality Assurance Bot", "Accreditation Sync AI",
-  "Bio-Hazard Alert Bot", "Evidentiary Chain Tracker", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Bio-Hazard Alert Bot", "Evidentiary Chain Tracker"
 ];
 
 const labModules = [

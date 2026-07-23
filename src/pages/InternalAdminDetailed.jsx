@@ -12,8 +12,7 @@ const aiExperts = [
   "Room Booking Optimizer", "Visitor Queue Manager", "Asset Reservation Bot", 
   "Digital Notice Board AI", "Office Consumables Tracker", "Vehicle Booking AI", 
   "Intercom Directory Bot", "Seating Allocation AI", "Conference Scheduler",
-  "Stationery Stock Bot", "Facility Maintenance AI", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Stationery Stock Bot", "Facility Maintenance AI"
 ];
 
 const adminModules = [

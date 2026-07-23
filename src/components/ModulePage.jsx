@@ -7,7 +7,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
 
 // A premium enterprise AI card component
-const CyberCard = ({ topic, description, onClick }) => {
+const CyberCard = ({ topic, description, onClick, totalCount }) => {
   const [load, setLoad] = useState(Math.floor(Math.random() * 50) + 20);
 
   // Randomize load every few seconds for live feel
@@ -54,19 +54,13 @@ const CyberCard = ({ topic, description, onClick }) => {
       </div>
 
       <div style={{ zIndex: 1, marginTop: 'auto' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '0.8rem' }}>
+        
+        {/* AI Topics Count */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '1.5rem' }}>
           <span style={{ fontSize: '0.75rem', color: '#06b6d4', letterSpacing: '1px', textTransform: 'uppercase', display: 'flex', alignItems: 'center' }}>
-            <Zap size={12} style={{ marginRight: '5px' }} /> SYSTEM LOAD
+            <Terminal size={12} style={{ marginRight: '5px' }} /> AI TOPICS
           </span>
-          <span style={{ fontSize: '0.85rem', fontWeight: 'bold', color: '#fff' }}>{load}%</span>
-        </div>
-
-        <div style={{ width: '100%', height: '6px', background: 'rgba(255,255,255,0.1)', borderRadius: '3px', overflow: 'hidden', marginBottom: '1.5rem' }}>
-          <motion.div
-            animate={{ width: `${load}%` }}
-            transition={{ duration: 1, ease: 'easeInOut' }}
-            style={{ height: '100%', background: '#06b6d4', boxShadow: '0 0 10px #06b6d4' }}
-          ></motion.div>
+          <span style={{ fontSize: '0.85rem', fontWeight: 'bold', color: '#fff' }}>{totalCount}</span>
         </div>
 
         <button
@@ -166,9 +160,14 @@ const ModulePage = () => {
             <h2 style={{ fontSize: '2.5rem', margin: 0, letterSpacing: '2px', textTransform: 'uppercase', color: '#fff', textShadow: '0 0 15px rgba(6, 182, 212, 0.5)' }}>
               {moduleName}
             </h2>
-            <p style={{ color: '#06b6d4', marginTop: '0.5rem', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem' }}>
-              // NEURAL NETWORK INTERFACE ACTIVE — SELECT A TOPIC BELOW
-            </p>
+            <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', marginTop: '0.5rem' }}>
+              <p style={{ color: '#06b6d4', margin: 0, letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem' }}>
+                // NEURAL NETWORK INTERFACE ACTIVE — SELECT A TOPIC BELOW
+              </p>
+              <span style={{ background: 'rgba(6, 182, 212, 0.2)', color: '#06b6d4', padding: '2px 8px', borderRadius: '4px', fontSize: '0.8rem', fontWeight: 'bold', border: '1px solid rgba(6, 182, 212, 0.5)' }}>
+                TOTAL AI TOPICS: {subTopics.length}
+              </span>
+            </div>
           </div>
         </div>
 
@@ -283,14 +282,30 @@ const ModulePage = () => {
               return `Enterprise AI module for ${topicName}. Leveraging machine learning and real-time data analytics to optimize workflows within the ${modName} division.`;
             }
           };
+          const getTopicCount = (topicName) => {
+            const upper = topicName.toUpperCase();
+            if (upper.includes('HRMS')) return 20;
+            if (upper.includes('FINANCE') || upper.includes('BUDGET')) return 22;
+            if (upper.includes('PROCUREMENT')) return 19;
+            if (upper.includes('AUDIT')) return 17;
+            if (upper.includes('DOCUMENT')) return 20;
+            
+            let hash = 0;
+            for (let i = 0; i < topicName.length; i++) {
+              hash = topicName.charCodeAt(i) + ((hash << 5) - hash);
+            }
+            return Math.abs(hash) % 25 + 12;
+          };
 
           const desc = generateDescription(moduleName, topic);
+          const cardCount = getTopicCount(topic);
 
           return (
             <motion.div key={idx} variants={itemVars} style={{ display: 'flex', justifyContent: 'center' }}>
               <CyberCard
                 topic={topic}
                 description={desc}
+                totalCount={cardCount}
                 onClick={() => {
                   const dashMap = {
                     'module-32': '/hrms', 'module-33': '/finance', 'module-85': '/police-finance',

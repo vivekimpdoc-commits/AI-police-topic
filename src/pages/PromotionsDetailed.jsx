@@ -12,8 +12,7 @@ const aiExperts = [
   "DPC Assistant AI", "Eligibility Calculator", "ACR/APAR Analyzer", 
   "Seniority Roster Bot", "Vacancy Forecaster", "Promotion Order Gen", 
   "Appeal Resolution Bot", "Career Progression AI", "Succession Planner",
-  "Medal Recommendation Bot", "Bias Detection AI", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Medal Recommendation Bot", "Bias Detection AI"
 ];
 
 const promotionModules = [

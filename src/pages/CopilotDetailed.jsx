@@ -12,8 +12,23 @@ const aiExperts = [
   "Beat Patrol Voice Copilot", "Traffic Stops Query Agent", "Suspect Verification Bot", 
   "Real-time Translator AI", "Emergency SOS Trigger Bot", "Warrant Database Fetcher", 
   "Vehicle Registration AI", "Mobile Fingerprint Matcher", "On-Scene Evidence Logger",
-  "Officer Shift Coordinator AI", "Mental Health Assessor Bot", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Officer Shift Coordinator AI", "Mental Health Assessor Bot", "Hands-Free Plate Scanner AI",
+  "AR Suspect Profiling Agent", "Secure Field Chatbot", "Conversational Roster AI",
+  "Gang Territory Intel Bot", "Crime Proximity Alert AI", "Stolen Vehicle History Bot",
+  "Live Interrogation Translator", "Cross-State Dialect Interpreter", "Tourist Complaint Copilot",
+  "Audio-to-Text Transcription AI", "Heart-Rate Monitor Sync Bot", "Automatic Gun-Drawn Alert AI",
+  "Dead-Zone GPS Tracker AI", "Backup Triangulation Bot", "Offline Edge Query AI",
+  "Whisper-Level Voice Recognizer", "Environmental Noise Canceler", "Automated Context Gatherer",
+  "De-escalation Strategy Bot", "Emotion Detection Assistant", "Real-Time Legal Advisor Bot",
+  "Field Note Dictation AI", "Crime Scene Perimeter AI", "Witness Statement Logger",
+  "Miranda Rights Prompter AI", "Traffic Ticket Auto-Drafter", "Body-Cam Sync Assistant",
+  "Drone Launch Coordinator Bot", "Highway Pursuit Nav AI", "Hostage Situation Whisperer",
+  "Riot Crowd Size Estimator", "Biometric Face-Match Assistant", "Fake ID Detector Bot",
+  "Substance Abuse Symptom AI", "Domestic Violence Protocol Bot", "Missing Child Alert Bot",
+  "Amber Alert Broadcaster AI", "Parolee Proximity Warner", "Off-Duty Threat Alert AI",
+  "Weapon Concealment Detector", "Suspicious Activity Logger", "Street-Cam Sync Copilot",
+  "Field Evidence Tagger AI", "First-Aid Guidance Bot", "K9 Unit Deployment Assessor",
+  "Multi-Lingual Miranda Bot", "Digital Evidence Uploader AI", "Virtual Partner AI"
 ];
 
 const copilotModules = [
@@ -83,7 +98,7 @@ const futureScope = [
 
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'Copilot Bots', icon: <Bot size={18} /> },
+  { id: 'experts', label: `Copilot Bots (${aiExperts.length})`, icon: <Bot size={18} /> },
   { id: 'modules', label: 'Field Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },

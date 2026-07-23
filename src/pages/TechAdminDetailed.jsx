@@ -12,8 +12,7 @@ const aiExperts = [
   "License Tracker Bot", "Software Asset AI", "Hardware Lifecycle Predictor", 
   "Printer Fleet Optimizer", "UPS Power Monitor AI", "Server Room Climate Bot", 
   "Backup Verification AI", "IT Helpdesk NLP", "Password Policy Enforcer",
-  "Device Inventory Sync", "Threat Surface Analyzer", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Device Inventory Sync", "Threat Surface Analyzer"
 ];
 
 const techModules = [

@@ -12,8 +12,7 @@ const aiExperts = [
   "Drone Fleet Manager AI", "IoT Device Monitor", "Satellite Comms Coordinator", 
   "Edge AI Deployer", "Certificate Lifecycle Bot", "Sensor Calibrator AI", 
   "Network Coverage Analyst", "Robot Register Bot", "Power Backup Monitor",
-  "Secure Hardware Auditor", "Digital Twin Modeler", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Secure Hardware Auditor", "Digital Twin Modeler"
 ];
 
 const techModules = [

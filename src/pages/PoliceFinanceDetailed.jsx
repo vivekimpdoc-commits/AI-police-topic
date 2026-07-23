@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, DollarSign, BarChart2 } from 'lucide-react';
 import '../styles/hrmsDetailed.css';
 
-const aiExperts = ["Salary Projection AI", "Overtime Calculator Bot", "Budget Planner AI", "Electricity Analytics Bot", "Fuel Budget Optimizer", "Cost Center AI", "Allowance Manager Bot", "Internet Cost Monitor", "Building Budget AI", "Expenditure Anomaly Detector", "Finance Audit Bot", "Backend Developer AI", "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"];
+const aiExperts = ["Salary Projection AI", "Overtime Calculator Bot", "Budget Planner AI", "Electricity Analytics Bot", "Fuel Budget Optimizer", "Cost Center AI", "Allowance Manager Bot", "Internet Cost Monitor", "Building Budget AI", "Expenditure Anomaly Detector", "Finance Audit Bot"];
 const financeModules = [
   { title: "Salary & Allowances", icon: <DollarSign size={20} />, items: ["AI Budget Allocator", "Overtime Calculator", "Uniform Allowance Management", "DA/HRA Revision Impact Analysis"] },
   { title: "Operational Budgets", icon: <BarChart2 size={20} />, items: ["AI Expenditure Predictor", "Building Maintenance Budget", "Vehicle Repair Budget Tracker", "Operations Expense Monitor"] },

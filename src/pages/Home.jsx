@@ -83,9 +83,9 @@ const Home = () => {
 
   return (
     <div style={{ position: 'relative', minHeight: '100%', padding: '1rem', maxWidth: '1600px', margin: '0 auto' }}>
-      
+
       <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-        
+
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2rem' }}>
           <div>
             <h1 className="neon-text" style={{ fontSize: '3rem', margin: 0, letterSpacing: '2px', textShadow: '0 0 20px var(--glass-border)' }}>
@@ -96,11 +96,11 @@ const Home = () => {
               NEURAL NETWORK SUBSYSTEMS
             </div>
           </div>
-          
+
           <div style={{ position: 'relative', width: '400px' }}>
             <Search size={20} style={{ position: 'absolute', left: '20px', top: '50%', transform: 'translateY(-50%)', color: 'var(--color-primary)' }} />
-            <input 
-              type="text" 
+            <input
+              type="text"
               placeholder={language === 'en' ? "Search 106 AI Modules..." : "106 एआई मॉड्यूल खोजें..."}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -125,23 +125,23 @@ const Home = () => {
         <LiveTelemetry />
 
         {/* Modules Grid */}
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', 
-          gap: '2rem', 
-          marginBottom: '4rem' 
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
+          gap: '2rem',
+          marginBottom: '4rem'
         }}>
           {filteredModules.length > 0 ? (
             filteredModules.map((mod, index) => (
-              <motion.div 
+              <motion.div
                 key={mod.id}
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, delay: Math.min(index * 0.02, 0.3) }}
               >
                 <Link to={getDirectRoute(mod.id)} style={{ display: 'block', textDecoration: 'none' }}>
-                  <div 
-                    style={{ 
+                  <div
+                    style={{
                       padding: '2rem', cursor: 'pointer', height: '100%', display: 'flex', flexDirection: 'column',
                       background: 'var(--color-panel)',
                       backdropFilter: 'blur(16px)',
@@ -167,10 +167,10 @@ const Home = () => {
                     <div style={{ position: 'absolute', top: '-30px', right: '-30px', width: '100px', height: '100px', background: 'var(--color-primary-glow)', borderRadius: '50%', filter: 'blur(40px)', zIndex: 0 }}></div>
 
                     <div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '1.5rem', zIndex: 1 }}>
-                      <div style={{ 
-                        width: '50px', height: '50px', 
-                        borderRadius: '12px', 
-                        background: 'rgba(56, 189, 248, 0.1)', 
+                      <div style={{
+                        width: '50px', height: '50px',
+                        borderRadius: '12px',
+                        background: 'rgba(56, 189, 248, 0.1)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                         color: 'var(--color-primary)',
                         marginRight: '15px',
@@ -183,7 +183,7 @@ const Home = () => {
                         {language === 'en' ? mod.nameEn : mod.nameHi}
                       </h3>
                     </div>
-                    
+
                     <div style={{ marginTop: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '1.2rem', zIndex: 1 }}>
                       <div style={{ display: 'flex', flexDirection: 'column' }}>
                         <span style={{ fontSize: '0.7rem', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '4px' }}>
@@ -193,8 +193,8 @@ const Home = () => {
                           {mod.subTopicsEn.length}
                         </span>
                       </div>
-                      <div style={{ 
-                        fontSize: '0.75rem', color: '#000', fontWeight: '800', background: 'var(--color-primary)', 
+                      <div style={{
+                        fontSize: '0.75rem', color: '#000', fontWeight: '800', background: 'var(--color-primary)',
                         padding: '0.5rem 1rem', borderRadius: '4px', letterSpacing: '1px', textTransform: 'uppercase',
                         boxShadow: '0 0 10px var(--color-primary-glow)'
                       }}>

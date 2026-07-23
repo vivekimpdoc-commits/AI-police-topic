@@ -12,8 +12,7 @@ const aiExperts = [
   "Raid Planner AI", "Search Grid Optimizer", "QRT Router Bot", 
   "Sniper Nest Calculator", "Hostage Situation Analyzer", "Cordon & Search Bot", 
   "Tactical Gear Allocator", "Debrief Synthesizer", "Drone Swarm Coordinator",
-  "Blueprint Analyzer AI", "Suspect Behavior Predictor", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Blueprint Analyzer AI", "Suspect Behavior Predictor"
 ];
 
 const opsModules = [

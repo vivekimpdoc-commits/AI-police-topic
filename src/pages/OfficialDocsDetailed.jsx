@@ -12,8 +12,7 @@ const aiExperts = [
   "Seal Guardian Bot", "Digital Stamp Authenticator", "Confidential Locker AI", 
   "Gazette Miner NLP", "Record Weeding AI", "Preservation Recommender", 
   "File Digitization Automator", "Access Rights Arbiter", "Historical Search Engine",
-  "Forgery Detector AI", "Audit Trail Keeper", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Forgery Detector AI", "Audit Trail Keeper"
 ];
 
 const docsModules = [

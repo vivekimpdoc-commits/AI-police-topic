@@ -11,11 +11,19 @@ import {
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
+  "Document Classification AI", "Smart OCR & Handwriting Recognition AI", 
+  "Intelligent Document Indexing AI", "Digital File Organizer AI", 
+  "Document Approval Workflow AI", "Document Access Control AI", 
+  "Document Lifecycle Management AI", "Record Archival AI", 
+  "Archive Retrieval AI", "Duplicate Document Detection AI", 
+  "Digital Signature Verification AI", "Chain of Custody Tracker AI", 
+  "Court Document Management AI", "Data Loss Prevention AI", 
+  "Tamper Detection AI", "AI Document Chat Assistant", "Knowledge Base AI", 
+  "Document Analytics AI", "Executive Document Dashboard AI", "Document KPI Dashboard AI",
   "FIR Digitization Expert AI", "Case File Summarization AI", "Confidential Vault Guardian AI", 
   "Semantic Search Assistant AI", "Old Records Restoration AI", "Forensic Document Analyst AI", 
   "Multi-lingual Translator AI", "Document Redaction Bot AI", "Cross-Reference Engine AI",
-  "Legal Act Cross-Checker AI", "Evidence Integrity Validator AI", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Legal Act Cross-Checker AI", "Evidence Integrity Validator AI"
 ];
 
 const documentModules = [
@@ -93,7 +101,7 @@ const futureScope = [
 
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'DMS AI Agents', icon: <Bot size={18} /> },
+  { id: 'experts', label: `Document AI Agents (${aiExperts.length})`, icon: <Bot size={18} /> },
   { id: 'modules', label: 'DMS Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },

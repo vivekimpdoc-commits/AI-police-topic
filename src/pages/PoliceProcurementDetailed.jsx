@@ -12,8 +12,7 @@ const aiExperts = [
   "Tender Evaluator AI", "Vendor Risk Profiler", "Stock Replenishment Bot", 
   "Price Anomaly Detector", "Contract Expiry Tracker", "Budget Optimizer AI", 
   "Logistics Router AI", "Quality Check AI", "Procurement KPI Monitor",
-  "Fraud Ring Detector", "Inventory Decay Predictor", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Fraud Ring Detector", "Inventory Decay Predictor"
 ];
 
 const procurementModules = [

@@ -12,8 +12,7 @@ const aiExperts = [
   "Daily Bulletin AI", "Morning Brief Generator", "SITREP NLP Engine", 
   "Crime Digest Synthesizer", "Newsletter Formatter Bot", "Knowledge Base Bot", 
   "Command Instruction Router", "Briefing Note Analyzer", "Order Book Digitizer",
-  "Voice-to-Text Scribe AI", "Sentiment Analyzer", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Voice-to-Text Scribe AI", "Sentiment Analyzer"
 ];
 
 const commsModules = [

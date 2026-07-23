@@ -12,8 +12,7 @@ const aiExperts = [
   "Weapon RFID Tracker", "Ammunition Forecaster AI", "Armoury Biometric Auth", 
   "Explosive Degeneration Bot", "Riot Gear Inventory Sync", "Ballistic Calibration AI", 
   "Tear Gas Expiry Notifier", "Firearm Maintenance Scheduler", "Missing Weapon Alert Bot",
-  "Armoury Audit Reconciler", "Officer Firearm Proficiency AI", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Armoury Audit Reconciler", "Officer Firearm Proficiency AI"
 ];
 
 const armouryModules = [

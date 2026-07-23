@@ -12,8 +12,7 @@ const aiExperts = [
   "Model Drift Detector AI", "Weight Encryption Specialist", "Hyperparameter Tuning Bot", 
   "Bias & Fairness Auditor AI", "Edge Deployment Coordinator", "Federated Learning Sync Agent", 
   "A/B Testing Evaluator AI", "GPU Resource Allocator", "Synthetic Data Generator AI",
-  "Model Rollback Agent", "Adversarial Attack Defender", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Model Rollback Agent", "Adversarial Attack Defender"
 ];
 
 const modelManagementModules = [

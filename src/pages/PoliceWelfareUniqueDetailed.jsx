@@ -12,8 +12,7 @@ const aiExperts = [
   "Family Emergency Bot", "Scholarship Tracker AI", "Retirement Counselor", 
   "Mentorship Matcher AI", "Sports Talent Spotter", "Cultural Activity AI", 
   "Recognition Wall Bot", "Welfare Camp Planner", "Grievance Redressal AI",
-  "PTSD Support Chatbot", "Legal Aid Advisor Bot", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "PTSD Support Chatbot", "Legal Aid Advisor Bot"
 ];
 
 const welfareModules = [

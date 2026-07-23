@@ -12,8 +12,7 @@ const aiExperts = [
   "Predictive Maintenance AI", "Fuel Fraud Detector", "Fleet Routing Optimizer", 
   "Tyre Wear Modeler", "OBD2 Telematics Bot", "Driver Fatigue Analyzer", 
   "Spare Parts Inventory Predictor", "Workshop Queuing AI", "Vehicle Depreciation Bot",
-  "Emergency Dispatch Router", "GPS Spoofing Detector", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Emergency Dispatch Router", "GPS Spoofing Detector"
 ];
 
 const fleetModules = [

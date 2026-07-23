@@ -12,8 +12,7 @@ const aiExperts = [
   "Dark Net Silk-Road Scraper", "Courier Routing Predictor", "Synthetic Drug Formula Matcher", 
   "Poacher Network Mapper", "Wildlife Trafficking AI", "Crypto-Payment Tracing Bot", 
   "Chemical Precursor Monitor", "Container X-Ray Scanner", "Deforestation Satellite Analyzer",
-  "Addict Demographics Modeler", "Informant Reliability Scorer", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Addict Demographics Modeler", "Informant Reliability Scorer"
 ];
 
 const narcoticsModules = [

@@ -12,8 +12,7 @@ const aiExperts = [
   "Facial Recognition AI", "Age Progression Modeler", "Unidentified Corpse Matcher", 
   "CCTV Crowd Scanner Bot", "Amber Alert Broadcaster", "Social Media Image Scraper", 
   "Tattoo & Scars Matching AI", "Dental Record Analyzer", "Biometric Gait Analysis Bot",
-  "Family DNA Profiler", "Trafficking Route Predictor", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Family DNA Profiler", "Trafficking Route Predictor"
 ];
 
 const missingModules = [

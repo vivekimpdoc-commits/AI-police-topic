@@ -12,8 +12,7 @@ const aiExperts = [
   "Quantum Encryption Integrator", "AR Crime Scene Constructor", "VR Hostage Simulator", 
   "Swarm Drone Coordinator AI", "Edge Computing Node Balancer", "Blockchain Evidence Hasher", 
   "Offline AI Sync Bot", "Brain-Computer Interface Modeler", "Robotics K9 Handler AI",
-  "Smart Sensor Fusion Engine", "Predictive Algorithm Auditor", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Smart Sensor Fusion Engine", "Predictive Algorithm Auditor"
 ];
 
 const emergingModules = [

@@ -12,8 +12,7 @@ const aiExperts = [
   "Applicant Screener AI", "Document Verifier Bot", "Physical Test Scheduler", 
   "Exam Cheating Predictor", "Merit List Generator", "Medical Exam Tracker", 
   "Background Vetting Bot", "Joining Formalities AI", "Recruitment Audit AI",
-  "Interview Sentiment Analyzer", "Impersonation Detector", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Interview Sentiment Analyzer", "Impersonation Detector"
 ];
 
 const recruitmentModules = [

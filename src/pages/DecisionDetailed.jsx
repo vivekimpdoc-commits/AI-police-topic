@@ -12,8 +12,23 @@ const aiExperts = [
   "Riot Prediction AI", "Force Deployment Scorer", "Real-Time Threat Assessor", 
   "Public Sentiment Analyst AI", "Event Security Planner AI", "Tactical Evacuation Agent", 
   "Emergency Triage Coordinator", "Resource Optimization AI", "Weather & Disaster Impact AI",
-  "VIP Route Security AI", "Backend Developer AI", "Database Engineer AI", 
-  "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "VIP Route Security AI", "Crowd Density Analyzer AI", "Flash Mob Predictor AI",
+  "Election Violence Heatmapper", "Festival Crowd Surge Forecaster", "Optimal Station Staffing AI",
+  "Anti-Riot Gear Allocator", "Rapid Action Force Dispatcher", "Beat Patrol Routing Optimizer",
+  "Emergency Call Prioritization Agent", "Active Shooter Triangulator AI", "Hostage Situation Modeler",
+  "Simultaneous Attack Correlator", "VVIP Route Vulnerability Assessor", "Convoy Speed Optimizer",
+  "Stadium Crowd Dynamics Modeler", "Sniper Over-watch Positioning AI", "Flood Evacuation Routing Agent",
+  "Earthquake Triage AI", "Hospital Bed Sync Coordinator", "Relief Material Supply Chain AI",
+  "Multi-Variable Threat Scorer", "Sentiment Shift Trigger AI", "Route Vulnerability Indexer",
+  "Optimal Pathfinding AI", "Automatic Escalation Protocol AI", "Drone Recon Deployment AI",
+  "Gunfire Acoustic Triangulator", "Predictive Force Exhaustion AI", "Legal Use-of-Force Prompter",
+  "DGP Decision Support Matrix AI", "Live Threat Heatmap Generator", "Force Readiness Board AI",
+  "VVIP Convoy Tracker AI", "Disaster Command Board AI", "Pre-Event Risk Assessor",
+  "Riot Post-Mortem Analyst", "Force Deployment Efficiency AI", "VVIP Security Auditor",
+  "Emergency Response Time Profiler", "Resource Depletion Forecaster", "Rank-Based Override Validator",
+  "Encrypted Tactical Comm Router", "Decision Audit Trail Analyzer", "Anti-Tamper Sensor Feed AI",
+  "Zero-Trust API Gateway Monitor", "Offline Fail-safe Mode Trigger", "Holographic Tactical Table Manager",
+  "Neural-Link Command Parser", "Autonomous Drone Coordinator", "Pre-Crime Legal Arbitrator"
 ];
 
 const decisionModules = [
@@ -84,7 +99,7 @@ const futureScope = [
 
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'Tactical AI Agents', icon: <Bot size={18} /> },
+  { id: 'experts', label: `Tactical AI Agents (${aiExperts.length})`, icon: <Bot size={18} /> },
   { id: 'modules', label: 'Decision Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },

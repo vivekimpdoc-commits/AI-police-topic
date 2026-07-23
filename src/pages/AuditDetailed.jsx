@@ -11,11 +11,14 @@ import {
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "Fraud Detection AI", "Station Audit Expert AI", "Asset Verification AI", 
-  "Compliance Checker AI", "Disciplinary Auditor AI", "Cyber Forensics Auditor AI", 
-  "Risk Management AI", "Fund Utilization Auditor AI", "Armoury Inspector AI",
-  "Legal Audit Bot AI", "Evidence Chain Auditor AI", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Internal Audit Planning AI", "Audit Workflow Manager AI", "Audit Scheduling AI",
+  "Audit Findings AI", "Corrective Action Tracker AI", "Audit Report Generator AI",
+  "Audit Analytics AI", "Executive Audit Dashboard AI", "Internal Control Assessment AI",
+  "Financial Audit AI", "Procurement Audit AI", "Inventory Audit AI",
+  "Data Integrity Audit AI", "Predictive Audit AI", "Audit KPI Dashboard AI",
+  "Fraud Detection AI", "Station Audit Expert AI", "Asset Verification AI",
+  "Compliance Checker AI", "Disciplinary Auditor AI", "Cyber Forensics Auditor AI",
+  "Risk Management AI", "Armoury Inspector AI", "Legal Audit Bot AI", "Evidence Chain Auditor AI"
 ];
 
 const auditModules = [
@@ -93,7 +96,7 @@ const futureScope = [
 
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'Audit AI Agents', icon: <Bot size={18} /> },
+  { id: 'experts', label: `Audit AI Agents (${aiExperts.length})`, icon: <Bot size={18} /> },
   { id: 'modules', label: 'Audit Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },

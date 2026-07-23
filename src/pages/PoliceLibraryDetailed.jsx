@@ -12,8 +12,7 @@ const aiExperts = [
   "Case Law Matcher AI", "SOP Version Controller", "Training Video Recommender", 
   "Circular NLP Analyzer", "Subject Expert Finder", "Reading Progress Bot", 
   "Legal Citation Checker", "Knowledge Graph AI", "Query Resolution Bot",
-  "Summarization Engine AI", "Plagiarism Checker AI", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Summarization Engine AI", "Plagiarism Checker AI"
 ];
 
 const libraryModules = [

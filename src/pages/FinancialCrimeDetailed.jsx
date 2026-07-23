@@ -12,8 +12,7 @@ const aiExperts = [
   "Hawala Network Mapper AI", "Shell Company Detector", "Crypto Wallet Tracer", 
   "Bank Fraud Anomaly Bot", "Money Laundering Predictor", "Tax Evasion Cross-Checker", 
   "Dark Web Financial Scraper", "Ponzi Scheme Modeler", "Insider Trading Analyzer",
-  "Extortion Flow Tracker", "Forged Document AI", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Extortion Flow Tracker", "Forged Document AI"
 ];
 
 const financialModules = [

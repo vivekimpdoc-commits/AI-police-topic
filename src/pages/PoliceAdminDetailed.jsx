@@ -12,8 +12,7 @@ const aiExperts = [
   "Office Order Generator Bot", "Circular Dispatch AI", "Meeting Agenda NLP", 
   "File Movement Tracker", "Gov Letter Priority Scorer", "Record Retention AI", 
   "RTI Query Auto-Responder", "Productivity Analytics Bot", "Attendance Tracking AI",
-  "Action Taken Report (ATR) AI", "Document Classifier Bot", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Action Taken Report (ATR) AI", "Document Classifier Bot"
 ];
 
 const adminModules = [

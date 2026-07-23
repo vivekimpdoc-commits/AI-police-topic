@@ -12,8 +12,7 @@ const aiExperts = [
   "Interpol Notice Sync Bot", "Embassy Liaison AI", "Border Crossing Analyst", 
   "Foreign National Case Manager", "Extradition Tracker Bot", "Cross-Border Intel Miner", 
   "Immigration Sync AI", "Global Crime Trend Scraper", "Mutual Legal Assist (MLAT) Bot",
-  "Language Translator NLP", "Cyber Espionage Monitor", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Language Translator NLP", "Cyber Espionage Monitor"
 ];
 
 const intlModules = [

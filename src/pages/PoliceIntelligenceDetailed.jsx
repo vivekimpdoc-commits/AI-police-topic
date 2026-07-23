@@ -12,8 +12,7 @@ const aiExperts = [
   "Informant Network AI", "Threat Level Predictor", "Cross-Border Intel Bot", 
   "High-Risk Zone Analyzer", "Multi-Agency Router", "Confidential Source AI", 
   "Extremism Sentiment Bot", "Financial Trail Analyzer", "Dissemination AI",
-  "Riot Probability Modeler", "Dark Web Scraper", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Riot Probability Modeler", "Dark Web Scraper"
 ];
 
 const intelModules = [

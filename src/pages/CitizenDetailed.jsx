@@ -12,8 +12,7 @@ const aiExperts = [
   "Jansunwai NLP Router AI", "Multilingual Voice Bot", "Citizen Feedback Sentiment AI", 
   "Emergency SOS Triangulator", "Public Portal Chatbot", "Lost & Found Matching Bot", 
   "Senior Citizen Well-being Checker", "RTI Query Automated Responder", "Traffic Challan Query Bot",
-  "Community Outreach Analyzer", "Verification Certificate Agent", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Community Outreach Analyzer", "Verification Certificate Agent"
 ];
 
 const citizenModules = [

@@ -12,8 +12,7 @@ const aiExperts = [
   "Highway Patrol AI", "Border Crossing Profiler", "Commercial Inspection Bot", 
   "Toll Plaza Sync AI", "Smuggling Predictor", "Mobile Checkpoint Router", 
   "ANPR (Plate Reader) Bot", "Interstate Alert Sync", "Goods Waybill Verifier",
-  "Traffic Density Analyst", "Border Clash Predictor", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Traffic Density Analyst", "Border Clash Predictor"
 ];
 
 const borderModules = [

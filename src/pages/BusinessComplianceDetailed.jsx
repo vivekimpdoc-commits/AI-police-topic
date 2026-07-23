@@ -12,8 +12,7 @@ const aiExperts = [
   "Pawn Shop Scraper", "Scrap Dealer Auditor", "Stolen Goods Matcher", 
   "Bank Security Profiler", "ATM Compliance Bot", "Cash Van Router AI", 
   "Warehouse Safety Analyst", "Critical Infra Guard", "Business NOC Bot",
-  "Threat Intelligence Bot", "Forgery Detector AI", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Threat Intelligence Bot", "Forgery Detector AI"
 ];
 
 const businessModules = [

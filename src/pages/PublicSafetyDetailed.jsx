@@ -12,8 +12,7 @@ const aiExperts = [
   "School Perimeter Sentinel AI", "Hospital VIP Escort Router", "Religious Crowd Modeler", 
   "Tourist Sentiment Tracker", "Industrial Hazmat Detector", "Metro Platform Safety AI", 
   "Railway Baggage Anomaly Bot", "Stampede Prevention Bot", "Lost Child Re-uniter AI",
-  "Aggressive Panning Detector", "Airport Facial Matcher", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Aggressive Panning Detector", "Airport Facial Matcher"
 ];
 
 const safetyModules = [

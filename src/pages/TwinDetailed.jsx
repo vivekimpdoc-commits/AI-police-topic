@@ -12,8 +12,23 @@ const aiExperts = [
   "3D City Simulator AI", "Traffic Grid Modeler AI", "Virtual Station Load Tester", 
   "Crowd Physics Simulator", "Disaster Impact Modeler AI", "VVIP Route Simulation Agent", 
   "Cyber-Twin Vulnerability Tester", "Emergency Response Optimizer", "Riot Control Simulator AI",
-  "Spatial Analytics Expert AI", "Tactical Breach Planner AI", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Spatial Analytics Expert AI", "Tactical Breach Planner AI", "Flood Dynamics Simulator AI",
+  "Earthquake Structural Integrity AI", "Drone Swarm Sandbox Modeler", "Autonomous Vehicle Traffic AI",
+  "Sniper Line-of-Sight Calculator", "Blast Radius Physics Engine", "Acoustic Reverberation Modeler",
+  "Tear-Gas Dispersion Physics AI", "Virtual VIP Decoy Simulator", "Escape Route Viability Tester",
+  "Cyber-Attack Tabletop Exerciser", "Subterranean Network Modeler", "Hospital Surge Capacity Simulator",
+  "Emergency Call Center Load Tester", "Evacuation Bottleneck Analyzer", "Cell-Block Capacity Predictor",
+  "Smart City Sensor Virtualizer", "Green-Corridor Timing Simulator", "Stadium Stampede Modeler",
+  "Festival Crowd Flow Predictor", "Flash-Mob Convergence AI", "Riot Gear Efficacy Tester",
+  "Active Shooter VR Scenario AI", "Hostage Negotiation VR Trainer", "Airborne Toxin Drift Modeler",
+  "Radio-Frequency Shadow Mapper", "CCTV Blind-Spot Identifier AI", "Telecom Network Overload Modeler",
+  "Power Grid Failure Simulator", "Virtual Interrogation Room AI", "Evidence Tampering Simulator",
+  "Crime Scene Recreation AI", "Bullet Trajectory Simulator", "High-Speed Chase Physics AI",
+  "Virtual Perimeter Security AI", "Facial Recognition Load Tester", "Border Infiltration Modeler",
+  "Smuggling Route Simulator AI", "Maritime Port Logistics Twin", "Airspace Violation Modeler AI",
+  "Weapon Issue Bottleneck AI", "Shift Handover Optimization AI", "Supply Chain Disruption Twin",
+  "Ransomware Blast Radius AI", "Multi-Agency Coordination Twin", "Real-Time Resource Mirror AI",
+  "Geolocation Spoofing Simulator", "Virtual Commando Trainer AI", "Future Crime Scenario Generator"
 ];
 
 const twinModules = [
@@ -84,7 +99,7 @@ const futureScope = [
 
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'Simulation Agents', icon: <Bot size={18} /> },
+  { id: 'experts', label: `Simulation Agents (${aiExperts.length})`, icon: <Bot size={18} /> },
   { id: 'modules', label: 'Twin Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },

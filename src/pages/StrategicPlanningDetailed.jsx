@@ -12,8 +12,7 @@ const aiExperts = [
   "5-Year Plan Modeler AI", "Budget Forecaster Bot", "Recruitment Analyzer", 
   "Smart Police Scorer", "Maturity Assessor Bot", "Modernization Tracker", 
   "Infrastructure Planner AI", "Innovation Sync Bot", "Policy Simulator",
-  "Demographic Analyst AI", "Risk Forecaster Bot", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Demographic Analyst AI", "Risk Forecaster Bot"
 ];
 
 const planningModules = [

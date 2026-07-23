@@ -12,8 +12,7 @@ const aiExperts = [
   "DGP Workflow Optimizer", "ADG/IG Priority Scorer", "Visitor Pass Automator", 
   "HQ Meeting Scheduler AI", "Approval Chain Bot", "Circular Monitor AI", 
   "File Room Locator", "VIP Security Routing", "Press Release Generator",
-  "Event Management AI", "Protocol Officer Bot", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Event Management AI", "Protocol Officer Bot"
 ];
 
 const hqModules = [

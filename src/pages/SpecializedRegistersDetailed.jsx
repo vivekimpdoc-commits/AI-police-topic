@@ -12,8 +12,7 @@ const aiExperts = [
   "Lost Children AI", "Unknown Vehicle Tracker", "Property Marking Bot", 
   "Repeat Incident Analyzer", "Encroachment Detector", "Hazard Zone Mapper", 
   "Asset Registry Bot", "Incident Pattern AI", "Register Auditor AI",
-  "Livestock Tracker Bot", "Infrastructure Monitor AI", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Livestock Tracker Bot", "Infrastructure Monitor AI"
 ];
 
 const registerModules = [

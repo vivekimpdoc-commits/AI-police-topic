@@ -12,8 +12,7 @@ const aiExperts = [
   "Fleet Allocation AI", "Weapon Tracking Bot", "Predictive Maintenance Agent", 
   "Fuel Consumption Analyzer", "Ammunition Expiry Tracker", "Drone Asset Manager", 
   "Uniform & Gear Distributor", "Route Fuel Optimizer", "Armory Security Sentinel",
-  "Riot Gear Stock Predictor", "Radio Network Diagnostic Bot", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Riot Gear Stock Predictor", "Radio Network Diagnostic Bot"
 ];
 
 const logisticsModules = [

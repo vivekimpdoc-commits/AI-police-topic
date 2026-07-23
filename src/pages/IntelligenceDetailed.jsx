@@ -12,8 +12,7 @@ const aiExperts = [
   "Hotspot Prediction AI", "Gang Network Mapper", "Financial Crime Tracker", 
   "Repeat Offender Analyst", "Modus Operandi (MO) Matcher", "Dark Web Chatter Monitor", 
   "Telecom CDR Analyzer", "Terrorism Funding Tracker", "Social Media Radicalization Bot",
-  "Arms Smuggling Predictor", "Criminal Profiler Agent", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Arms Smuggling Predictor", "Criminal Profiler Agent"
 ];
 
 const intelligenceModules = [

@@ -12,8 +12,7 @@ const aiExperts = [
   "Tetra Radio Intercept AI", "Emergency Broadcast Optimizer", "Signal Jamming Detector", 
   "Voice Stress Analyzer", "Background Noise Filter AI", "Call Dispatch Router", 
   "Multi-Channel Translator", "Dead-Zone Mapper", "Internal Messaging Auditor",
-  "Frequency Hopping Predictor", "Code-Word Decryptor", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Frequency Hopping Predictor", "Code-Word Decryptor"
 ];
 
 const commsModules = [

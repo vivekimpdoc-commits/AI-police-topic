@@ -12,8 +12,7 @@ const aiExperts = [
   "Firing Range Scorer Bot", "Physical Fitness Analyzer", "Mock Drill Evaluator", 
   "Course Recommendation AI", "Instructor Performance Modeler", "Certification Expiry Tracker", 
   "Skill Assessment AI", "VR Range Simulator Bot", "Trainee Retention Scorer",
-  "Riot Control VR Instructor", "Weapon Recoil Analyzer", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Riot Control VR Instructor", "Weapon Recoil Analyzer"
 ];
 
 const trainingModules = [

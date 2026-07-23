@@ -12,8 +12,7 @@ const aiExperts = [
   "e-FIR NLP Classifier AI", "Complaint Routing Bot", "Legal Precedent Matcher AI", 
   "Zero-FIR Triangulator", "Fake Complaint Detector", "Urgency Scorer AI", 
   "Cyber Crime Keyword Extractor", "Station Jurisdiction Mapper", "FIR Translation Agent",
-  "Victim Sentiment Analyzer", "Evidence Checklist Generator", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Victim Sentiment Analyzer", "Evidence Checklist Generator"
 ];
 
 const complaintModules = [

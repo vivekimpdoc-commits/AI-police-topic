@@ -12,8 +12,7 @@ const aiExperts = [
   "BNS Section Analyzer AI", "Case Precedent Matcher", "Charge-sheet Auto-Drafter", 
   "Court Hearing Scheduler", "Bail Prediction Bot", "Witness Testimony Cross-Checker", 
   "Judicial Bias Analyzer", "Evidentiary Value Scorer", "FIR Loophole Detector",
-  "Summons Dispatch Agent", "Lawyer Profiling AI", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Summons Dispatch Agent", "Lawyer Profiling AI"
 ];
 
 const legalModules = [

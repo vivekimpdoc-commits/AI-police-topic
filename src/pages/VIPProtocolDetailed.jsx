@@ -12,8 +12,7 @@ const aiExperts = [
   "Protocol AI Assistant", "VIP Route Planner", "Convoy Scheduler Bot", 
   "Venue Readiness Auditor", "Escort Rotation AI", "Threat Level Assessor", 
   "Guest Profiling Bot", "Security Zone Manager", "Movement Tracker AI",
-  "Foreign Intel Sync Bot", "Counter-Surveillance AI", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Foreign Intel Sync Bot", "Counter-Surveillance AI"
 ];
 
 const vipModules = [

@@ -1,96 +1,105 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { 
-  Bot, LayoutDashboard, Database, Shield, Rocket, 
+import {
+  Users, Bot, LayoutDashboard, Database, Shield, Rocket,
   FileText, Activity, Network, ArrowLeft, Terminal, Cpu,
-  CheckCircle, ShieldAlert, PieChart, Users, Megaphone, MapPin
+  Briefcase, Calendar, Calculator, Target, BookOpen, Heart,
+  Smartphone, HardDrive, Bell, CheckCircle, ShieldAlert
 } from 'lucide-react';
-import '../styles/hrmsDetailed.css'; 
+import '../styles/hrmsDetailed.css';
 
 const aiExperts = [
-  "Riot Risk Predictor AI", "Protest Sentiment Analyzer", "Drone Swarm Commander", 
-  "Crowd Density Estimator", "VVIP Threat Profiler", "Rumor Control Bot", 
-  "Tear Gas Inventory Manager", "Curfew Zone Enforcer", "Fake News Fact-Checker",
-  "Weapon Detection CCTV AI", "Social Media Radicalization Bot"
+  "Multi-Agent Orchestrator AI", "AI Workflow Coordinator AI", "Master Command AI",
+  "Mission Planner AI", "Resource Allocation AI", "Dynamic Task Allocation AI",
+  "Agent Performance Analyzer AI", "Situation Awareness AI", "Decision Support AI",
+  "Predictive Intelligence AI", "AI Collaboration Manager AI", "Communication Hub AI",
+  "Intelligence Fusion Center AI", "Human-in-the-Loop AI", "Security Policy AI",
+  "Integration Manager AI", "Risk Prediction AI", "Anomaly Detection AI",
+  "Executive Command Dashboard AI", "Audit Trail AI"
 ];
 
-const lawOrderModules = [
+const multiAgentModules = [
   {
-    title: "Riot & Unrest Prediction",
-    icon: <Megaphone size={20} />,
-    items: ["Social Media Sentiment (Hate Speech)", "Festival Sensitivity Mapping", "Protest Route Tracking", "Communal Tension Alerts"]
+    title: "Orchestration & Workflow",
+    icon: <Network size={20} />,
+    items: ["Multi-Agent Orchestrator AI", "AI Workflow Coordinator AI", "Master Command AI", "Mission Planner AI"]
   },
   {
-    title: "Crowd Control Analytics",
-    icon: <Users size={20} />,
-    items: ["CCTV Density Counting", "Stampede Risk Algorithms", "Drone Surveillance Integration", "Loudspeaker Auto-Warnings"]
-  },
-  {
-    title: "VVIP & Election Security",
-    icon: <ShieldAlert size={20} />,
-    items: ["Polling Booth Threat Modeling", "Convoy Anti-Sabotage Router", "Rally Perimeter Breach Detection", "Candidate Threat Index"]
-  },
-  {
-    title: "Weapon & Threat Detection",
+    title: "Resource & Task Management",
     icon: <Activity size={20} />,
-    items: ["Gun & Knife Object Detection (CCTV)", "Abandoned Baggage Alerts", "Gunshot Audio Triangulation", "Masked Face Flagging"]
+    items: ["Resource Allocation AI", "Dynamic Task Allocation AI", "Agent Performance Analyzer AI"]
   },
   {
-    title: "Curfew & Section 144 Mgmt",
-    icon: <MapPin size={20} />,
-    items: ["Automated Geo-fencing", "E-Pass Issuance System", "Illegal Gathering Alerts", "Drone-based Announcement Systems"]
+    title: "Intelligence & Decision",
+    icon: <Target size={20} />,
+    items: ["Situation Awareness AI", "Decision Support AI", "Predictive Intelligence AI", "Risk Prediction AI", "Anomaly Detection AI"]
+  },
+  {
+    title: "Collaboration & Communication",
+    icon: <Bot size={20} />,
+    items: ["AI Collaboration Manager AI", "Communication Hub AI", "Intelligence Fusion Center AI"]
+  },
+  {
+    title: "Security & Control",
+    icon: <ShieldAlert size={20} />,
+    items: ["Human-in-the-Loop AI", "Security Policy AI", "Integration Manager AI", "Executive Command Dashboard AI", "Audit Trail AI"]
   }
 ];
 
 const aiFeatures = [
-  "AI Multi-modal Sentiment Analysis", "AI Object Detection (Weapons/Luggage)", "AI Swarm Drone Coordination",
-  "AI Stampede Kinematics Prediction", "AI Acoustic Gunshot Recognition", "AI Rumor/Fake News Propagation Graphing",
-  "AI Automated E-Pass Approval via OCR", "AI Facial Disguise Penetration"
+  "Dynamic Agent Spawning", "Cross-Agent Communication Protocol", "Real-Time Resource Optimization",
+  "Automated Mission Planning", "Predictive Threat Modeling", "Agent Performance Benchmarking",
+  "Semantic Knowledge Fusion", "Human-AI Collaborative Decisioning", "Self-Healing Workflow Execution",
+  "Distributed Situation Awareness", "Anomaly Detection & Alerting", "Secure Audit Trailing"
 ];
 
 const databases = [
-  "Historical_Riots_DB", "Election_Booth_Sensitivity", "Weapon_Signatures", "Social_Media_Hate_Speech", "Drone_Flight_Logs", 
-  "Curfew_E_Pass_Ledger", "VVIP_Threat_Dossiers", "Festival_Calendar_Risk", "Riot_Gear_Inventory", "Geo_Fenced_Zones"
+  "AgentRegistry", "ActiveMissions", "TaskQueues", "ResourcePools", "IntelligenceGraph", "CommunicationLogs",
+  "PerformanceMetrics", "SecurityPolicies", "AuditTrails", "ThreatModels", "DecisionTrees", "KnowledgeBase"
 ];
 
 const dashboards = [
-  "Live City Threat Heatmap", "Protest & Rally Tracker", "Drone Swarm Live Feed", 
-  "Social Media Tension Index", "Curfew Zone Violations", "Election Booth Security Status"
+  "Executive Command Dashboard", "Mission Control Center", "Agent Performance Monitor",
+  "Resource Allocation View", "Threat Intelligence Board", "System Health & Audit Dashboard",
+  "Human-in-the-Loop Console"
 ];
 
 const apis = [
-  "Twitter/Meta Firehose APIs", "Election Commission Intel APIs", "National Disaster Management (NDMA) APIs", "Drone GCS (Ground Control) APIs",
-  "Telecom Internet Kill-Switch APIs", "Smart City PA System APIs"
+  "Agent Spawning APIs", "Task Delegation APIs", "Inter-Agent Comm APIs", "Intelligence Fusion APIs",
+  "Resource Management APIs", "Security Enforcement APIs", "Audit Logging APIs", "Mission Status APIs",
+  "External System Integration APIs", "Data Lake Sync APIs"
 ];
 
 const reports = [
-  "Pre-Election Vulnerability Audit", "Festival Deployment Strategy", "Riot Post-Mortem Analytics", 
-  "Weapon Detection Accuracy Rate", "Fake News Takedown Summary", "Curfew Economic Impact"
+  "Mission Success & Efficiency Report", "Agent Utilization & Performance Report", "Threat Intelligence Summary",
+  "Resource Allocation Audit", "System Anomaly & Incident Report", "Collaborative Decision Audit",
+  "Security Policy Compliance Report"
 ];
 
 const security = [
-  "Encrypted Drone Feeds", "Zero-Latency Edge Computing", "Classified VVIP Itineraries", 
-  "Social Media Takedown Authority", "Deep Packet Inspection (DPI) for Internet Bans", 
-  "Command Center Biometric Auth", "Redundant Radio Comms", "Tamper-Proof Audit Logs"
+  "Zero-Trust Agent Architecture", "Cryptographic Inter-Agent Comms", "Strict Human-in-the-Loop Override",
+  "Role-Based Agent Capabilities", "Immutable Blockchain Audit Trail",
+  "Real-Time Malicious Agent Detection", "Encrypted State Management", "Secure API Gateways"
 ];
 
 const futureScope = [
-  "Non-Lethal Microwave Crowd Dispersion", "Autonomous Robo-Dogs for Patrol", "Pre-Crime Behavioral Precincts",
-  "Holographic Barricades", "Real-time Brainwave Aggression Monitoring", "Smart Dust Surveillance"
+  "Quantum-Safe Agent Communications", "Swarm Intelligence Scaling", "Autonomous Cross-Agency Collaboration",
+  "Self-Evolving Threat Models", "Generative Mission Strategies", "Real-Time Edge Deployment",
+  "Cognitive Digital Twins Integration", "Global Intelligence Sync"
 ];
 
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'Tactical Bots', icon: <Bot size={18} /> },
-  { id: 'modules', label: 'Law & Order Modules', icon: <LayoutDashboard size={18} /> },
+  { id: 'experts', label: `Multi-Agent AI Experts (${aiExperts.length})`, icon: <Bot size={18} /> },
+  { id: 'modules', label: 'Multi-Agent Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
-  { id: 'reports', label: 'Tactical Dashboards', icon: <PieChart size={18} /> },
-  { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
+  { id: 'reports', label: 'Reports & Dashboards', icon: <FileText size={18} /> },
+  { id: 'security', label: 'Security & Future', icon: <Shield size={18} /> }
 ];
 
-const LawOrderDetailed = () => {
+const MultiAgentDetailed = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('overview');
 
@@ -100,29 +109,25 @@ const LawOrderDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <ShieldAlert className="inline-icon" size={28} /> AI Law & Order Management
+              <Network className="inline-icon" size={28} /> AI Multi-Agent Platform Overview
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>AI Law & Order Management</strong> is the ultimate tactical command tool. It prevents riots by detecting hate speech on social media, calculates stampede risks during festivals using drone swarms, and uses CCTV to instantly detect weapons and abandoned bags in crowded areas.
+              <strong>AI Multi-Agent Platform</strong> is an advanced orchestration system that coordinates multiple specialized AI agents. It ensures seamless communication, resource allocation, and mission planning across all intelligence and operational domains.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Megaphone className="inline-icon" color="#3b82f6" /> Riot & Protest Prediction</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Scans millions of social media posts to detect sudden spikes in communal hate speech. Warns commanders days before a planned violent protest can materialize.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Bot className="inline-icon" color="#3b82f6" /> Multi-Agent Orchestration</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Deploys and synchronizes numerous AI agents for complex operations, ensuring they work collaboratively towards a unified objective.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Users className="inline-icon" color="#10b981" /> Drone Swarm Crowd Control</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Deploys tethered and free-flying drones over mega-festivals (like Kumbh Mela). AI calculates crowd density per square meter to predict and prevent stampedes.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#10b981" /> Dynamic Task Allocation</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Automatically assigns tasks to the most suitable AI expert based on real-time situation awareness and resource availability.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#f59e0b" /> Weapon & Threat CCTV</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Turns ordinary CCTVs into smart sentries. If a person pulls out a firearm, a knife, or leaves a bag unattended at a railway station, an alarm triggers instantly.</p>
-              </div>
-              <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><MapPin className="inline-icon" color="#ef4444" /> Curfew & E-Pass Automation</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>During Section 144 or lockdowns, AI automatically processes thousands of E-Pass requests using OCR, rejecting invalid ones and approving emergency medical passes in seconds.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Target className="inline-icon" color="#f59e0b" /> Intelligence Fusion</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Fuses insights from various specialized AI agents to generate a holistic, predictive intelligence overview for command decisions.</p>
               </div>
             </div>
           </motion.div>
@@ -141,7 +146,7 @@ const LawOrderDetailed = () => {
       case 'modules':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="module-accordion">
-            {lawOrderModules.map((mod, i) => (
+            {multiAgentModules.map((mod, i) => (
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} key={i} className="premium-module-panel">
                 <div className="module-header">
                   {mod.icon}
@@ -189,17 +194,17 @@ const LawOrderDetailed = () => {
       case 'reports':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
-             <div className="split-section">
+            <div className="split-section">
               <div className="panel">
                 <h3><LayoutDashboard className="inline-icon" color="#3b82f6" /> Dashboards</h3>
                 <ul className="premium-list">
-                  {dashboards.map((d, i) => <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>)}
+                  {dashboards.map((d, i) => <li key={i}><CheckCircle size={16} color="#3b82f6" /> {d}</li>)}
                 </ul>
               </div>
               <div className="panel">
                 <h3><FileText className="inline-icon" color="#10b981" /> Generated Reports</h3>
                 <ul className="premium-list">
-                  {reports.map((r, i) => <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>)}
+                  {reports.map((r, i) => <li key={i}><CheckCircle size={16} color="#10b981" /> {r}</li>)}
                 </ul>
               </div>
             </div>
@@ -208,17 +213,17 @@ const LawOrderDetailed = () => {
       case 'security':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
-             <div className="split-section">
+            <div className="split-section">
               <div className="panel highlight-red">
                 <h3><ShieldAlert className="inline-icon" color="#ef4444" /> Security Protocols</h3>
                 <ul className="premium-list">
-                  {security.map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
+                  {security.map((s, i) => <li key={i}><Shield size={16} color="#ef4444" /> {s}</li>)}
                 </ul>
               </div>
               <div className="panel highlight-green">
                 <h3><Rocket className="inline-icon" color="#10b981" /> Future Enhancements</h3>
                 <ul className="premium-list">
-                  {futureScope.map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
+                  {futureScope.map((f, i) => <li key={i}><Terminal size={16} color="#10b981" /> {f}</li>)}
                 </ul>
               </div>
             </div>
@@ -233,7 +238,7 @@ const LawOrderDetailed = () => {
     <div className="hrms-detailed-page">
       <div className="hrms-bg-fx"></div>
       <div className="hrms-grid-overlay"></div>
-      
+
       {/* Header */}
       <header className="hrms-header">
         <button onClick={() => navigate(-1)} className="back-btn">
@@ -241,11 +246,11 @@ const LawOrderDetailed = () => {
         </button>
         <div className="header-titles">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="icon-wrapper">
-            <ShieldAlert size={40} color="#06b6d4" />
+            <Network size={40} color="#06b6d4" />
           </motion.div>
           <div>
-            <h1 className="cyber-title">AI LAW <span>& ORDER</span></h1>
-            <p className="cyber-subtitle">Riot Prediction, Drone Crowd Control & Threat Detection</p>
+            <h1 className="cyber-title">AI MULTI-AGENT <span>PLATFORM</span></h1>
+            <p className="cyber-subtitle">Advanced Orchestration and Dynamic Task Allocation</p>
           </div>
         </div>
       </header>
@@ -255,7 +260,7 @@ const LawOrderDetailed = () => {
         {/* Sidebar Nav */}
         <nav className="hrms-sidebar">
           {tabs.map(tab => (
-            <button 
+            <button
               key={tab.id}
               className={`tab-btn ${activeTab === tab.id ? 'active' : ''}`}
               onClick={() => setActiveTab(tab.id)}
@@ -278,4 +283,4 @@ const LawOrderDetailed = () => {
   );
 };
 
-export default LawOrderDetailed;
+export default MultiAgentDetailed;

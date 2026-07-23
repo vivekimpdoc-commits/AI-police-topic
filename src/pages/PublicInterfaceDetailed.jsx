@@ -12,8 +12,7 @@ const aiExperts = [
   "Citizen Query Chatbot", "Lost Property Matcher", "Grievance Classifier AI", 
   "Appointment Scheduler Bot", "Safety Advisory Gen AI", "Survey Sentiment Analyst", 
   "Kiosk Assistant Bot", "Emergency NLP Router", "Awareness Campaign Optimizer",
-  "Social Media Helpdesk Bot", "Multilingual Translator AI", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Social Media Helpdesk Bot", "Multilingual Translator AI"
 ];
 
 const interfaceModules = [

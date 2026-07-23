@@ -12,8 +12,7 @@ const aiExperts = [
   "Patrol Route Optimizer AI", "Riot Risk Assessor", "Event Crowd Modeler", 
   "Festival Deployment Planner", "Weather-Crime Correlator", "VVIP Convoy Simulator", 
   "Emergency Response Router", "Manpower Fatigue Predictor", "Supply Chain Disruption AI",
-  "Election Security Analyst", "Historical Crime Trend Bot", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Election Security Analyst", "Historical Crime Trend Bot"
 ];
 
 const predictiveModules = [

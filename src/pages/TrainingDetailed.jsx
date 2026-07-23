@@ -12,8 +12,7 @@ const aiExperts = [
   "VR Combat Simulator AI", "SOP Search Bot", "Legal Code Tutor AI", 
   "Cyber Security Trainer Bot", "Interrogation Tactics Coach", "Marksmanship Analyzer", 
   "Stress Inoculation AI", "New Recruit Onboarding Agent", "Policy Update Broadcaster",
-  "Riot Formation Simulator", "Forensic Collection Tutor", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Riot Formation Simulator", "Forensic Collection Tutor"
 ];
 
 const trainingModules = [

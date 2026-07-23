@@ -12,8 +12,7 @@ const aiExperts = [
   "Inmate Facial Recognition AI", "Gang Rivalry Predictor", "Contraband X-Ray Scanner", 
   "Parole Risk Assessor", "Jailbreak Trajectory Bot", "Visitor Background Check AI", 
   "Inmate Sentiment/Aggression Analyzer", "Smart Cell Lock Manager", "Suicide Prevention Bot",
-  "Crypto-Smuggling Intercept AI", "Rehabilitation Matcher Bot", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Crypto-Smuggling Intercept AI", "Rehabilitation Matcher Bot"
 ];
 
 const prisonModules = [

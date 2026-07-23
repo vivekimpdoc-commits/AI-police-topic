@@ -12,8 +12,7 @@ const aiExperts = [
   "Deepfake Detection AI", "Audio Noise Reduction Bot", "EXIF Data Analyzer", 
   "Blockchain Chain-of-Custody Bot", "Steganography Extractor", "OCR Handwriting Decoder", 
   "Video Object Tracking AI", "Deleted File Recovery Agent", "Malware Sandbox AI",
-  "Cloud Storage Scraper", "Digital Watermark Validator", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Cloud Storage Scraper", "Digital Watermark Validator"
 ];
 
 const evidenceModules = [

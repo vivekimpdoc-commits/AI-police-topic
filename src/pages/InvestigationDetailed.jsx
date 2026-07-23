@@ -12,8 +12,23 @@ const aiExperts = [
   "FIR Drafting Assistant AI", "Legal Code Matcher AI", "Charge-sheet Summarizer", 
   "Pre-Trial Evidence Scorer", "Interrogation Insight AI", "Cold-Case Correlation Bot", 
   "Witness Testimony Analyzer", "Jurisdiction Mapper AI", "Alibi Verification Agent",
-  "Court Precedent Search AI", "Bail Risk Assessor AI", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Court Precedent Search AI", "Bail Risk Assessor AI", "Voice-to-FIR Dictation AI",
+  "IPC/BNS Section Suggester", "Multi-lingual Statement Translator", "Suspect Entity Extractor",
+  "Timeline Reconstruction Agent", "Testimony Contradiction Detector", "Historical Judgement Analyzer",
+  "Bail Rejection Predictor AI", "Prosecution Strategy Prompter", "Modus Operandi Profiler",
+  "Forensic Report Parser AI", "Ballistics Pattern Matcher", "Digital Evidence Timestamp Analyzer",
+  "Micro-Expression Detector AI", "Voice Stress Analysis Bot", "Polygraph Data Interpreter",
+  "Case Solvability Scorer", "Audio Transcription Agent", "Emotion Classification AI",
+  "Witness Sentiment Analyzer", "Automated Evidence Tagger", "Cross-Case Similarity Matcher",
+  "Defense Argument Predictor", "Crime Scene Photo Analyzer", "Missing Persons Correlator",
+  "Unidentified Body Matcher AI", "Bank Statement Fraud Finder", "Cyber-Footprint Tracer AI",
+  "Deepfake Audio Detector", "Threat Letter Authorship AI", "Handwriting Analysis Assistant",
+  "Sketch-to-Mugshot AI", "Criminal Nickname Resolver", "Call Data Record (CDR) Summarizer",
+  "GPS Ping Triangulation AI", "Drone Footage Analyst AI", "Victim Vulnerability Scorer",
+  "Parole Violation Predictor", "Jailhouse Informant Credibility AI", "Evidence Chain-of-Custody Auditor",
+  "Post-Mortem Report Interpreter", "DNA Match Probability Calculator", "Surveillance Video Summarizer",
+  "Social Media Confession Scraper", "Dark Web Credential Searcher", "Legal Loophole Flagging AI",
+  "Judge Sentencing Trend Analyzer", "Warrant Application Drafter", "Virtual Jury Bias Modeler"
 ];
 
 const investigationModules = [
@@ -83,7 +98,7 @@ const futureScope = [
 
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'Investigation Agents', icon: <Bot size={18} /> },
+  { id: 'experts', label: `Investigation Agents (${aiExperts.length})`, icon: <Bot size={18} /> },
   { id: 'modules', label: 'Case Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },

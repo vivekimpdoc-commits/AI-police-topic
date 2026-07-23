@@ -12,8 +12,7 @@ const aiExperts = [
   "Surprise Audit Scheduler", "Deficiency Tracker AI", "Compliance Verification Bot", 
   "Vehicle Fleet Scorer", "Armoury Inspector Bot", "Cleanliness Evaluator", 
   "Record Room Auditor", "Scoring Engine NLP", "Historical Audit Analyzer",
-  "Roster Randomizer AI", "Officer Readiness Bot", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Roster Randomizer AI", "Officer Readiness Bot"
 ];
 
 const inspectionModules = [

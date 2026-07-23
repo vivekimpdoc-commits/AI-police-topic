@@ -12,8 +12,7 @@ const aiExperts = [
   "Martyr Family Support Bot", "Scholarship AI", "Medical Claim Processor", 
   "Stress Analysis NLP", "Insurance Liaison Bot", "Welfare Fund Allocator", 
   "Emergency Family Alert AI", "Therapist Matchmaker", "Financial Advisory Bot",
-  "Pension Sync AI", "Housing Allocation Bot", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Pension Sync AI", "Housing Allocation Bot"
 ];
 
 const welfareModules = [

@@ -12,8 +12,7 @@ const aiExperts = [
   "NDRF Coordinator AI", "Evacuation Route Planner", "Convoy Security Bot", 
   "Resource Inventory Bot", "Shelter Security AI", "Weather Prediction Sync", 
   "Civil Defence Deployer", "Casualty Tracker AI", "Relief Distribution AI",
-  "Crowd Panic Predictor", "Telecom Outage Bot", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Crowd Panic Predictor", "Telecom Outage Bot"
 ];
 
 const disasterModules = [

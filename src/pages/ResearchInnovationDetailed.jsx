@@ -12,8 +12,7 @@ const aiExperts = [
   "Prototype Tester Bot", "Startup Synergy AI", "Tech Evaluation Scorer", 
   "Patent & Paper Tracker", "Pilot Project Manager", "University Liaison Bot", 
   "Innovation Challenge Host", "Future Roadmap Modeler", "Hackathon Sync AI",
-  "Technology Assessment Bot", "Research Fund Allocator", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Technology Assessment Bot", "Research Fund Allocator"
 ];
 
 const researchModules = [

@@ -12,8 +12,7 @@ const aiExperts = [
   "Transfer Policy AI", "Tenure Monitor Bot", "Vacancy Matcher AI", 
   "Hard Area Rotator", "Mutual Transfer Bot", "Relieving Tracker AI", 
   "Skill-to-Zone Matcher", "Corruption Predictor AI", "Order Generation Bot",
-  "Grievance Redressal Bot", "Spouse Posting Aligner", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Grievance Redressal Bot", "Spouse Posting Aligner"
 ];
 
 const transferModules = [

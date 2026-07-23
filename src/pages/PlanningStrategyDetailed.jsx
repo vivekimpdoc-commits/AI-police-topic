@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Target, TrendingUp } from 'lucide-react';
 import '../styles/hrmsDetailed.css';
 
-const aiExperts = ["Annual Calendar AI", "Resource Readiness Scorer", "District Audit Bot", "Strategic Initiative Tracker", "Capability Gap Analyzer", "Innovation Index AI", "Benchmarking Bot", "Mission Dashboard AI", "Preparedness Auditor", "Long-Term Planner AI", "Strategic Review AI", "Backend Developer AI", "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"];
+const aiExperts = ["Annual Calendar AI", "Resource Readiness Scorer", "District Audit Bot", "Strategic Initiative Tracker", "Capability Gap Analyzer", "Innovation Index AI", "Benchmarking Bot", "Mission Dashboard AI", "Preparedness Auditor", "Long-Term Planner AI", "Strategic Review AI"];
 const planningModules = [
   { title: "Annual Planning", icon: <Target size={20} />, items: ["AI Annual Policing Calendar", "District Preparedness Audit", "Zone Resource Allocation", "Seasonal Crime Preparation"] },
   { title: "Strategic Initiatives", icon: <TrendingUp size={20} />, items: ["Strategic Initiative Tracker", "Mission Objective Dashboard", "5-Year Vision Roadmap", "Policy Impact Assessment"] },

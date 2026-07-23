@@ -12,8 +12,7 @@ const aiExperts = [
   "Arms License Bot", "Background Vetting AI", "Explosives Audit Bot", 
   "Event Permission Router", "Loudspeaker Monitor AI", "Hotel DB Sync Bot", 
   "Procession Safety Analyst", "Cinema Security Evaluator", "Renewal Predictor",
-  "Forgery Detector AI", "Risk Profiling Engine", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Forgery Detector AI", "Risk Profiling Engine"
 ];
 
 const licensingModules = [

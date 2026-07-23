@@ -12,8 +12,7 @@ const aiExperts = [
   "Coastal Radar Integrator AI", "Drone Swarm Border Patrol", "Satellite Encampment Detector", 
   "Submarine Signature Analyzer", "Smuggling Route Predictor", "Tunnel Detection Bot", 
   "Vessel Tracking ID Matcher", "Night-Vision Anomaly Detector", "Cross-Border Comms Interceptor",
-  "Refugee Flow Analyzer", "Marine Wildlife vs Threat AI", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Refugee Flow Analyzer", "Marine Wildlife vs Threat AI"
 ];
 
 const borderModules = [

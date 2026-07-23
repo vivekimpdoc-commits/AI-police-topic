@@ -12,8 +12,7 @@ const aiExperts = [
   "Lockup CCTV Monitor", "Medical Check Tracker", "High-Risk Profiler", 
   "Court Escort Router", "Escape Predictor AI", "Custody Meal Bot", 
   "Visitor Background Scanner", "Biometric Identity Guard", "Transfer Workflow Sync",
-  "Torture Prevention Bot", "Suicide Risk Analyst", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Torture Prevention Bot", "Suicide Risk Analyst"
 ];
 
 const custodyModules = [

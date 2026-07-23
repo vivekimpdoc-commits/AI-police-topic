@@ -12,8 +12,7 @@ const aiExperts = [
   "OSINT Web Scraper Bot", "Subject Dossier Compiler", "Geographic Intel Mapper", 
   "Anonymous Tip Verifier", "Social Graph Analyzer", "Event Correlation Engine", 
   "Dark Web Monitor Bot", "Threat Assessment AI", "Source Reliability Scorer",
-  "Intel Brief Generator", "NLP Language Translator", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Intel Brief Generator", "NLP Language Translator"
 ];
 
 const intelligenceModules = [

@@ -12,8 +12,7 @@ const aiExperts = [
   "Crime Trend Forecaster", "Budget Optimizer AI", "Policy Gap Analyzer", 
   "Innovation Scraper Bot", "Scheme Compliance Tracker", "Demographics Modeler", 
   "Resource Allocator AI", "Inter-Dept Coordinator", "Modernization Tracker",
-  "Threat Landscape Analyzer", "Public Sentiment Modeler", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Threat Landscape Analyzer", "Public Sentiment Modeler"
 ];
 
 const adminModules = [

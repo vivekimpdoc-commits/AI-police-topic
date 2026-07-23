@@ -12,8 +12,7 @@ const aiExperts = [
   "Swarm Intelligence Coordinator AI", "Cross-District Comm Agent AI", "Drone Swarm Navigator AI", 
   "Cyber-Patrol Multi-Agent", "Autonomous Negotiation Bot", "Threat Assessment Agent AI", 
   "Evidence Correlation Agent AI", "Traffic Grid Optimization Agent", "Fugitive Tracking Agent",
-  "Crowd Control Coordinator AI", "Undercover OSINT Agent", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Crowd Control Coordinator AI", "Undercover OSINT Agent"
 ];
 
 const agentModules = [

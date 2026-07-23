@@ -12,8 +12,7 @@ const aiExperts = [
   "ANPR Number Plate Bot", "Traffic Density Predictor", "Automated Challan Dispatcher", 
   "Hit & Run Trajectory AI", "Ambulance Green-Corridor AI", "Drunk Driving Camera AI", 
   "Pothole & Road Defect Scanner", "Toll Plaza Sync Agent", "Vehicle Registration Verifier",
-  "VIP Convoy Router", "Helmet/Seatbelt Detection Bot", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "VIP Convoy Router", "Helmet/Seatbelt Detection Bot"
 ];
 
 const trafficModules = [

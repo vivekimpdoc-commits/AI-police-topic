@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Globe, Handshake } from 'lucide-react';
 import '../styles/hrmsDetailed.css';
 
-const aiExperts = ["Intl Training Coordinator", "Exchange Program Bot", "Delegation Manager AI", "UN Standards Tracker", "Bilateral Cooperation AI", "Diplomacy Dashboard Bot", "Conference Manager AI", "Foreign Study Visit AI", "Research Hub Bot", "Global Best Practices AI", "Police Attaché Bot", "Backend Developer AI", "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"];
+const aiExperts = ["Intl Training Coordinator", "Exchange Program Bot", "Delegation Manager AI", "UN Standards Tracker", "Bilateral Cooperation AI", "Diplomacy Dashboard Bot", "Conference Manager AI", "Foreign Study Visit AI", "Research Hub Bot", "Global Best Practices AI", "Police Attaché Bot"];
 const intlModules = [
   { title: "Training & Exchange", icon: <Globe size={20} />, items: ["AI Interpol Sync Bot", "Police Exchange Program", "Foreign Study Visit Management", "Joint Simulation Exercises"] },
   { title: "Delegation Management", icon: <Handshake size={20} />, items: ["AI Extradition Tracker", "State Guest Intel Briefs", "Protocol Management", "Foreign Delegate Profiling"] },

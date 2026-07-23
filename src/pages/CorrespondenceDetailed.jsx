@@ -12,8 +12,7 @@ const aiExperts = [
   "Dak Dispatch Bot", "Receipt Classifier AI", "eOffice Integration AI", 
   "Confidential Mail Router", "Reminder Escalation Bot", "Pending Letter Scorer", 
   "Metadata Extractor NLP", "Gov Communication Tracker", "Memorandum Generator",
-  "Letter Sentiment Analyzer", "Priority Tagging AI", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Letter Sentiment Analyzer", "Priority Tagging AI"
 ];
 
 const correspondenceModules = [

@@ -12,8 +12,7 @@ const aiExperts = [
   "SOS Audio Classifier AI", "Human Trafficking Network Mapper", "Domestic Violence Sentiment Bot", 
   "Child Pornography (CSAM) Scanner", "Senior Citizen Check-in Agent", "Safe Route Generator", 
   "Dark Web Escort Ad Scraper", "School Zone Threat Monitor", "Gender Violence Predictor",
-  "Distress Signal Triangulator", "Victim Anonymizer Bot", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Distress Signal Triangulator", "Victim Anonymizer Bot"
 ];
 
 const safetyModules = [

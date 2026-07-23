@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Scale, Gavel } from 'lucide-react';
 import '../styles/hrmsDetailed.css';
 
-const aiExperts = ["Court Order Compliance AI", "Property Auction Bot", "Magistrate Comms Bot", "Warrant Scheduler AI", "Limitation Period Monitor", "Legal Notice Dispatch AI", "Disposal Tracker Bot", "Judicial Correspondence AI", "Unclaimed Property AI", "Case Property Auditor", "Legal Timeline Bot", "Backend Developer AI", "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"];
+const aiExperts = ["Court Order Compliance AI", "Property Auction Bot", "Magistrate Comms Bot", "Warrant Scheduler AI", "Limitation Period Monitor", "Legal Notice Dispatch AI", "Disposal Tracker Bot", "Judicial Correspondence AI", "Unclaimed Property AI", "Case Property Auditor", "Legal Timeline Bot"];
 const legalModules = [
   { title: "Court Compliance", icon: <Gavel size={20} />, items: ["Court Order Compliance Monitor", "Production Warrant Scheduler", "Magistrate Communication Portal", "Judicial Correspondence Tracker"] },
   { title: "Property Disposal", icon: <Scale size={20} />, items: ["Case Property Auction Management", "Court Property Disposal Monitor", "Seized Vehicle Disposal", "Unclaimed Property Management"] },

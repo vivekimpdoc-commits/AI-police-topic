@@ -11,12 +11,14 @@ import {
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "Police Budget Planner AI", "Fund Allocation Expert AI", "Risk Allowance Predictor AI", 
-  "Expense Fraud Auditor AI", "Pension & Gratuity Calculator AI", "Salary Disbursement AI", 
-  "Station Upkeep Budget AI", "Ammunition Cost Analyzer AI", "Fuel & Vehicle Expense AI",
-  "Financial Compliance Bot AI", "Tax Optimization Expert AI", "Vendor Payment Auditor AI", 
-  "Backend Developer AI", "Database Engineer AI", "AI/ML Engineer AI", 
-  "Cyber Security Engineer AI", "QA Engineer AI", "DevOps Engineer AI"
+  "Police Budget Planner AI", "Fund Allocation Expert AI", "Budget Forecast AI", 
+  "Budget Utilization Monitor AI", "Financial Planning AI", "Treasury Management AI", 
+  "Revenue & Grant Management AI", "Procurement Planning AI", "Vendor Payment Auditor AI", 
+  "Salary & Payroll AI", "Pension & Gratuity AI", "Fleet Expense AI", 
+  "Ammunition Cost Analyzer AI", "Expense Fraud Auditor AI", "Financial Compliance Bot AI", 
+  "Internal Audit AI", "Financial Risk Intelligence AI", "Executive Finance Copilot AI", 
+  "Financial Analytics AI", "Risk Allowance Predictor AI", "Station Upkeep Budget AI", 
+  "Tax Optimization Expert AI"
 ];
 
 const financeModules = [
@@ -100,7 +102,7 @@ const futureScope = [
 
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'Finance AI Agents', icon: <Bot size={18} /> },
+  { id: 'experts', label: `Finance AI Agents (${aiExperts.length})`, icon: <Bot size={18} /> },
   { id: 'modules', label: 'Finance Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },

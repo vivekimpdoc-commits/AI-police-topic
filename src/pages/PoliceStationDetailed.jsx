@@ -12,8 +12,7 @@ const aiExperts = [
   "Voice-to-Text GD Assistant", "Malkhana RFID Tracker", "Duty Roster Optimizer", 
   "Property Release Predictor", "Visitor Sentiment Scanner", "Office File Auto-Router", 
   "Station Health Scorer", "Utility Consumption Monitor", "Weapon Checkout Biometrics",
-  "Interrogation NLP Analyzer", "Beat Patrol Scheduler", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Interrogation NLP Analyzer", "Beat Patrol Scheduler"
 ];
 
 const stationModules = [

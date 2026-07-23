@@ -11,12 +11,13 @@ import {
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "Vendor Scoring AI", "Armoury Procurement Expert AI", "Tender Analysis AI", 
-  "Supply Chain Optimization AI", "Contract Risk Assessor AI", "Price Benchmarking AI", 
-  "Inventory Forecasting AI", "E-Bidding Fraud Detector AI", "Vehicle Sourcing Expert AI",
-  "Quality Control AI", "Legal Compliance Bot AI", "Asset Depreciation Predictor AI", 
-  "Backend Developer AI", "Database Engineer AI", "AI/ML Engineer AI", 
-  "Cyber Security Engineer AI", "QA Engineer AI", "DevOps Engineer AI"
+  "Procurement Planning AI", "Vendor Management AI", "Tender Analysis AI", 
+  "Vendor Scoring AI", "Bid Evaluation AI", "Inventory Forecasting AI", 
+  "Supply Chain Optimization AI", "Price Benchmarking AI", "Cost Optimization AI", 
+  "Armoury Procurement Expert AI", "Vehicle Sourcing Expert AI", "Legal Compliance Bot AI", 
+  "Contract Risk Assessor AI", "Procurement Fraud Detection AI", "Procurement Analytics AI", 
+  "Executive Procurement Dashboard AI", "AI Procurement Copilot", "Asset Lifecycle Management AI", 
+  "Quality Control AI"
 ];
 
 const procurementModules = [
@@ -99,7 +100,7 @@ const futureScope = [
 
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'Procurement AI Agents', icon: <Bot size={18} /> },
+  { id: 'experts', label: `Procurement AI Agents (${aiExperts.length})`, icon: <Bot size={18} /> },
   { id: 'modules', label: 'Procurement Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },

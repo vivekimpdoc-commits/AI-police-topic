@@ -12,8 +12,7 @@ const aiExperts = [
   "Force Allocator AI", "Booth Security Profiler", "EVM GPS Tracker", 
   "Strong Room Sentinel", "Flying Squad Router", "MCC Violation Scraper", 
   "Vulnerability Mapper AI", "Poll Day Incident Bot", "Route Optimizer Bot",
-  "Riot Predictor Engine", "Social Media Monitor AI", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Riot Predictor Engine", "Social Media Monitor AI"
 ];
 
 const electionModules = [

@@ -13,9 +13,10 @@ const aiExperts = [
   "Police HR Domain Expert AI", "Officer Recruitment Expert AI", "Duty & Leave Expert AI",
   "Payroll & Allowances Expert AI", "Performance & Medals Expert AI", "Police Training Expert AI",
   "Force Engagement Expert AI", "Police Act & Compliance Expert AI", "Armoury Management AI",
-  "Software Architect AI", "UI/UX Designer AI", "Frontend Developer AI",
-  "Backend Developer AI", "Database Engineer AI", "AI/ML Engineer AI",
-  "Cyber Security Engineer AI", "QA Engineer AI", "DevOps Engineer AI"
+  "Mental Health & Stress AI", "Physical Fitness Tracker AI", "Grievance Redressal AI",
+  "Smart Shift Optimization AI", "Fleet & Fuel Management AI", "K9 Unit Management AI",
+  "Court Summon & Legal Sync AI", "Cyber Security & Access AI", "Disciplinary Action Tracker AI",
+  "Pension & Gratuity Calculator AI", "Resettlement & Veteran Support AI"
 ];
 
 const hrModules = [
@@ -73,6 +74,26 @@ const hrModules = [
     title: "Force Helpdesk",
     icon: <Bell size={20} />,
     items: ["IT Support Tickets", "Barrack Maintenance Requests", "Admin Complaints", "Resolution Tracking"]
+  },
+  {
+    title: "Health & Wellness",
+    icon: <Activity size={20} />,
+    items: ["Mental Health & Stress AI", "Physical Fitness Tracker AI", "Grievance Redressal AI"]
+  },
+  {
+    title: "Field Operations & Intelligence",
+    icon: <Network size={20} />,
+    items: ["Smart Shift Optimization AI", "Fleet & Fuel Management AI", "K9 Unit Management AI"]
+  },
+  {
+    title: "Legal & Security Compliance",
+    icon: <ShieldAlert size={20} />,
+    items: ["Court Summon & Legal Sync AI", "Cyber Security & Access AI", "Disciplinary Action Tracker AI"]
+  },
+  {
+    title: "Retirement & Welfare",
+    icon: <Users size={20} />,
+    items: ["Pension & Gratuity Calculator AI", "Resettlement & Veteran Support AI"]
   }
 ];
 
@@ -123,8 +144,8 @@ const futureScope = [
 
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'Police AI Agents', icon: <Bot size={18} /> },
-  { id: 'modules', label: 'Police Admin Modules', icon: <LayoutDashboard size={18} /> },
+  { id: 'experts', label: `Police AI Agents (${aiExperts.length})`, icon: <Bot size={18} /> },
+  { id: 'modules', label: 'HR Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
   { id: 'reports', label: 'Reports & Dashboards', icon: <FileText size={18} /> },

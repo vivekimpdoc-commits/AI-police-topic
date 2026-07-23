@@ -12,8 +12,7 @@ const aiExperts = [
   "Press Note Generator AI", "Social Media Broadcaster", "Fake News Takedown Bot", 
   "Public Sentiment Analyzer", "Crisis Comm Strategist", "Rumor Control Agent", 
   "Multilingual Alert Translator", "Citizen Engagement Bot", "Troll Farm Detector",
-  "Media Impact Scorer", "Influencer Outreach Bot", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Media Impact Scorer", "Influencer Outreach Bot"
 ];
 
 const communicationModules = [

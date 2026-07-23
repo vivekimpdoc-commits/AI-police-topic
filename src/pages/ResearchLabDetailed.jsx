@@ -12,8 +12,7 @@ const aiExperts = [
   "Quantum Cryptography AI", "Synthetic Criminal Data Generator", "Robotics K9 Pathfinding AI", 
   "Brain-Computer Interface Researcher", "Neuromorphic Vision Analyst", "Autonomous Drone Swarm R&D", 
   "Predictive Pre-Crime Theorist", "Holographic Evidence Mapper", "AI Legal Arbitrator Bot",
-  "Metaverse Police Academy Trainer", "Cyber-Warfare Simulation Bot", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Metaverse Police Academy Trainer", "Cyber-Warfare Simulation Bot"
 ];
 
 const researchLabModules = [

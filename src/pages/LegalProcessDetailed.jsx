@@ -12,8 +12,7 @@ const aiExperts = [
   "Bail Default Predictor", "Warrant Execution Router", "Judicial Order Parser NLP", 
   "Prisoner Escort Allocator", "Summons OCR Scanner", "Court Deadline Tracker AI", 
   "Remand Expiry Alert Bot", "Habeas Corpus Prioritizer", "Legal Precedent Matcher",
-  "Evidence Chain Verifier", "Charge-sheet Drafter AI", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Evidence Chain Verifier", "Charge-sheet Drafter AI"
 ];
 
 const legalModules = [

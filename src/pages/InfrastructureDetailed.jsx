@@ -12,8 +12,7 @@ const aiExperts = [
   "Building Energy Optimizer", "Smart Water Meter AI", "Generator Auto-Start Bot", 
   "Fire Compliance Auditor", "Barrack Hygiene Tracker", "Campus Access Controller", 
   "HVAC Thermal Balancer", "Structural Health Monitor", "Solar Grid Sync AI",
-  "Rainwater Harvesting Bot", "Carbon Footprint Calculator", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Rainwater Harvesting Bot", "Carbon Footprint Calculator"
 ];
 
 const infraModules = [

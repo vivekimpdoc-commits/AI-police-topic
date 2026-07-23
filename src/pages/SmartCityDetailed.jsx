@@ -12,8 +12,7 @@ const aiExperts = [
   "3D Map Renderer AI", "Drone Flight Path Optimizer", "Satellite Heatmap Analyzer", 
   "Geo-Fence Trigger Bot", "Smart Streetlight Sync Agent", "Flood Risk Modeler", 
   "Urban Density Predictor", "Evacuation Route Planner", "Public WiFi Scraping Bot",
-  "Traffic Signal Sync Bot", "Infrastructure Defect AI", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Traffic Signal Sync Bot", "Infrastructure Defect AI"
 ];
 
 const smartCityModules = [

@@ -12,8 +12,7 @@ const aiExperts = [
   "Barrack Occupancy AI", "Parade Ground Allocator", "Quarter Guard Bot", 
   "Mess Attendance Scorer", "Sports Activity Tracker", "Police Band Manager", 
   "Inventory Optimizer", "Event Scheduler AI", "Sanitation Check Bot",
-  "Duty Roster Randomizer", "Line Discipline AI", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Duty Roster Randomizer", "Line Discipline AI"
 ];
 
 const linesModules = [

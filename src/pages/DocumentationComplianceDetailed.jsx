@@ -12,8 +12,7 @@ const aiExperts = [
   "Digitization Bot", "NLP Register Parser", "Compliance Calendar AI", 
   "Audit Trail Tracker", "Auto-Redaction Bot", "Retention Policy Enforcer", 
   "Historical Data Miner", "Regulatory Report Gen", "e-Signature Validator",
-  "Policy Gap Analyzer", "Data Masking Bot", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Policy Gap Analyzer", "Data Masking Bot"
 ];
 
 const docsModules = [

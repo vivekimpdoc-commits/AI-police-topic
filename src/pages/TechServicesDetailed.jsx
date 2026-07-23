@@ -12,8 +12,7 @@ const aiExperts = [
   "CCTV Health Auto-Healer", "Radio Tower Power Optimizer", "Data Center Cooling AI", 
   "Bandwidth Allocation Bot", "Mobile Command Router AI", "Network Anomaly Detector", 
   "Equipment Calibration Tracker", "Uptime Prediction Model", "Ransomware Air-gapper AI",
-  "Frequency Jamming Analyzer", "Cable Fault Locator", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Frequency Jamming Analyzer", "Cable Fault Locator"
 ];
 
 const techModules = [

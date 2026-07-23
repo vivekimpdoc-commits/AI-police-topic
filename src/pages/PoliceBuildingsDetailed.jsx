@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Building2, Wrench } from 'lucide-react';
 import '../styles/hrmsDetailed.css';
 
-const aiExperts = ["Structural Inspector AI", "Roof Maintenance Bot", "Water Tank Scheduler", "Lift Safety Monitor", "AC Maintenance AI", "CCTV Pole Inspector", "Boundary Wall AI", "Electrical Safety Bot", "Drainage Inspector AI", "Solar Power Monitor", "Energy Audit AI", "Backend Developer AI", "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"];
+const aiExperts = ["Structural Inspector AI", "Roof Maintenance Bot", "Water Tank Scheduler", "Lift Safety Monitor", "AC Maintenance AI", "CCTV Pole Inspector", "Boundary Wall AI", "Electrical Safety Bot", "Drainage Inspector AI", "Solar Power Monitor", "Energy Audit AI"];
 const buildingModules = [
   { title: "Structural Maintenance", icon: <Building2 size={20} />, items: ["AI Police Station Layout Planner", "Boundary Wall Inspection", "Roof Maintenance Planner", "Foundation Crack Detector"] },
   { title: "Mechanical & Electrical", icon: <Wrench size={20} />, items: ["AI Maintenance Predictor", "AC Maintenance Planner", "Electrical Safety Inspection", "Generator Health Monitor"] },

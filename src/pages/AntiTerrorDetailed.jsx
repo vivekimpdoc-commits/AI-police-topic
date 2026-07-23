@@ -12,8 +12,7 @@ const aiExperts = [
   "Sleeper Cell Network Mapper", "Crypto-Terror Funding Tracer", "Dark Web Radicalization Bot", 
   "Explosives Chemical Precursor Tracker", "Intercepted Audio Decoder", "Lone-Wolf Threat Predictor", 
   "Deep Packet Inspection AI", "Biometric Alias Matcher", "Hostage Rescue Tactics Bot",
-  "Social Media Propaganda Scraper", "High-Value Target Profiler", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Social Media Propaganda Scraper", "High-Value Target Profiler"
 ];
 
 const terrorModules = [

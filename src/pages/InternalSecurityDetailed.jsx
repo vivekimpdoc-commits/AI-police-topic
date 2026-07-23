@@ -12,8 +12,7 @@ const aiExperts = [
   "Internal Complaint Analyzer", "Misconduct Pattern Finder", "Departmental Inquiry Bot", 
   "Anonymous Tip Verifier", "Social Media Ethics Auditor", "Whistleblower Protection AI", 
   "Bribery Risk Profiler", "Evidence Tamper Detector", "Suspension Tracker Bot",
-  "Confidential Report Analyzer", "Financial Anomaly Flag", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Confidential Report Analyzer", "Financial Anomaly Flag"
 ];
 
 const vigilanceModules = [

@@ -12,8 +12,7 @@ const aiExperts = [
   "Fleet GPS Tracker Bot", "Dashcam Anomaly Detector", "Predictive Maintenance AI", 
   "Fuel Efficiency Analyzer", "Driver Behavior Scorer", "Spare Parts Optimizer", 
   "Accident Damage Estimator", "Route Optimization Bot", "Lifecycle Planner AI",
-  "Emergency Dispatch Router", "Service Scheduler Bot", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Emergency Dispatch Router", "Service Scheduler Bot"
 ];
 
 const vehicleModules = [

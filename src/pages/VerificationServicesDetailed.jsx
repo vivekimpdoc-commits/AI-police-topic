@@ -12,8 +12,7 @@ const aiExperts = [
   "Tenant Verifier AI", "Domestic Help Scrutiny Bot", "Employee Vetting AI", 
   "Passport Clearance Bot", "Vendor Background Bot", "Contractor Risk Assessor", 
   "Student Cert Validator", "Forgery Detection AI", "Cross-State Sync Bot",
-  "Biometric Matcher AI", "Criminal Record Scraper", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Biometric Matcher AI", "Criminal Record Scraper"
 ];
 
 const verificationModules = [

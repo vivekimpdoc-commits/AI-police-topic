@@ -12,8 +12,7 @@ const aiExperts = [
   "Dark Web Scraper AI", "Cryptocurrency Tracker Bot", "Phishing Link Analyzer", 
   "Malware Sandbox Evaluator", "OSINT Data Miner", "Social Media Impersonation Detector", 
   "Ransomware Negotiator AI", "IP Traceback Agent", "Financial Fraud Interceptor",
-  "Deepfake Video Auditor", "Cyber Attack Forensics Bot", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Deepfake Video Auditor", "Cyber Attack Forensics Bot"
 ];
 
 const cyberModules = [

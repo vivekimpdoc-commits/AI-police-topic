@@ -12,8 +12,7 @@ const aiExperts = [
   "Big Data Architect AI", "ETL Pipeline Optimizer", "Unstructured Data Parser AI", 
   "Metadata Tagging Engine", "Data Governance Auditor AI", "Dark Data Miner AI", 
   "Cross-Schema Query Optimizer", "Cold-Storage Archival Bot", "Data Lake Security Enforcer",
-  "Anomaly Detection Agent AI", "Semantic Lake Search AI", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Anomaly Detection Agent AI", "Semantic Lake Search AI"
 ];
 
 const dataLakeModules = [

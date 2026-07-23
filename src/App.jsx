@@ -11,6 +11,7 @@ import ProcurementDetailed from './pages/ProcurementDetailed';
 import AuditDetailed from './pages/AuditDetailed';
 import DocumentDetailed from './pages/DocumentDetailed';
 import AgentDetailed from './pages/AgentDetailed';
+import MultiAgentDetailed from './pages/MultiAgentDetailed';
 import KnowledgeDetailed from './pages/KnowledgeDetailed';
 import DecisionDetailed from './pages/DecisionDetailed';
 import TwinDetailed from './pages/TwinDetailed';
@@ -203,7 +204,7 @@ const AnimatedRoutes = () => {
         } />
         <Route path="/multi-agent" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
-            <AgentDetailed />
+            <MultiAgentDetailed />
           </motion.div>
         } />
         <Route path="/knowledge-graph" element={

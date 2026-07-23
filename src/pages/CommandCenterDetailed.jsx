@@ -12,8 +12,7 @@ const aiExperts = [
   "ICCC Operations Commander AI", "Emergency Dispatch Priority AI", "City-wide Sensor Aggregator AI", 
   "Live Threat Triangulation AI", "Drone Fleet Over-watch AI", "Public Broadcast Controller AI", 
   "VIP Convoy Coordinator AI", "Riot Control Logistics AI", "Weather/Traffic Impact Analyzer",
-  "Cyber-Command Defense Bot", "Force Readiness Optimizer AI", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Cyber-Command Defense Bot", "Force Readiness Optimizer AI"
 ];
 
 const commandCenterModules = [

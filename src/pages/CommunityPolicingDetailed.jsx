@@ -12,8 +12,7 @@ const aiExperts = [
   "Gram Chaupal Analyzer NLP", "Citizen Sentiment Scorer", "Police Mitra Vetting Bot", 
   "NGO Coordination AI", "Fake News Debunker Bot", "Community Risk Profiler", 
   "Public Trust Index Modeler", "Social Harmony Tracker", "Awareness Campaign Optimizer",
-  "Volunteer Roster AI", "Language Translation Bot", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Volunteer Roster AI", "Language Translation Bot"
 ];
 
 const communityModules = [

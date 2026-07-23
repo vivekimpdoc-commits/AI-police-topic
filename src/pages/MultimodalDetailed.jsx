@@ -9,11 +9,26 @@ import {
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "CCTV Facial Recognition Bot", "Audio Interrogation Parser", "Deepfake Video Detector AI", 
-  "Vehicle Number Plate AI (ANPR)", "Tattoo & Scars Matcher", "Gait (Walking) Analyzer AI", 
-  "Crowd Density Estimator AI", "Weapon Detection Vision Agent", "Audio Stress Profiler AI",
-  "Handwritten Diary OCR AI", "Cross-Camera Tracking Agent", "Backend Developer AI", 
-  "Database Engineer AI", "AI/ML Engineer AI", "Cyber Security Engineer AI"
+  "Video Analytics Engine AI", "Audio Forensics AI", "Geospatial Threat Mapper", 
+  "Dark Web Scraper Bot", "Live CCTV Anomaly Detector", "Facial Recognition AI", 
+  "Gait & Posture Analyzer", "Lip-Reading AI", "Deepfake Video Detector",
+  "Deepfake Audio Detector", "License Plate Recognition AI", "Crowd Sentiment Analyzer (Visual)",
+  "Social Media Image Scraper", "Voice-print Matching Agent", "Drone Video Summarizer",
+  "Satellite Imagery Correlator", "Object Tracking Bot (Across CCTVs)", "Weapon Detection AI",
+  "Hidden Compartment Identifier (X-Ray AI)", "Traffic Pattern Visualizer", "Abandoned Object Detector",
+  "Crowd Density Estimator", "Thermal Imaging Interpreter", "Infrared Night-Vision Enhancer AI",
+  "3D Spatial Reconstruction Bot", "Audio Distress Signal Detector", "Gunshot Acoustic Triangulator",
+  "Glass-Break Sensor AI", "Voice Emotion Analyzer", "Hate Speech Audio Detector",
+  "Social Network Graph Modeler", "Geolocation Spoofing Detector", "Crypto Wallet Transaction Tracer",
+  "Dark Web Vendor Linker AI", "Illicit Marketplace Scraper", "Cyber-Threat Intelligence Bot",
+  "Encrypted Chat Traffic Analyzer", "Phishing Domain Detector", "Botnet Traffic Analyzer",
+  "Open-Source Intelligence (OSINT) Bot", "Suspect Route Predictor", "Border Infiltration Visualizer",
+  "Maritime Smuggling Predictor", "Cargo Container Scanner AI", "Fake Currency Pattern Matcher",
+  "Document Forgery Detector", "Signature Verification AI", "Biometric Spoofing Detector",
+  "Multi-Camera Sync AI", "Cross-District Video Correlator", "News Broadcast Sentiment Bot",
+  "Radicalization Content Flagging AI", "Event Ticket Scalping Detector", "VIP Proximity Alert AI",
+  "Automated Redaction AI (Privacy)", "Visual Evidence Timeline Builder", "Body-Cam Footage Auditor",
+  "Forensic Blood-Spatter Analyzer AI", "Crime Scene Blueprint Generator", "Virtual Reality Reconstruction Agent"
 ];
 
 const multimodalModules = [
@@ -83,7 +98,7 @@ const futureScope = [
 
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'Vision/Audio Agents', icon: <Bot size={18} /> },
+  { id: 'experts', label: `Multimodal Analysts (${aiExperts.length})`, icon: <Bot size={18} /> },
   { id: 'modules', label: 'Multimodal Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
