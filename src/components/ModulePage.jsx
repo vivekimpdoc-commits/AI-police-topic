@@ -342,6 +342,18 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 39: Arms & Equipment
+                      'AI Weapon Issue & Return': '/weapon-issue',
+                      'AI Ammunition Consumption Analytics': '/ammunition-analytics',
+                      'AI Weapon Maintenance Scheduler': '/weapon-maintenance',
+                      'AI Bulletproof Jacket Inventory': '/bulletproof-jacket',
+                      'AI Helmet Inventory': '/helmet-inventory',
+                      'AI Riot Gear Tracking': '/riot-gear',
+                      'AI Tear Gas Inventory': '/tear-gas',
+                      'AI Explosive Storage Monitoring': '/explosive-storage',
+                      'AI Equipment Calibration Tracker': '/equipment-calibration',
+                      'AI Armoury Inspection': '/armoury-inspection',
+
                     // Module 06: AI Command & Governance
                     'AI Operations Command Center': '/operations-command', 'एआई ऑपरेशंस कमांड सेंटर': '/operations-command',
                     'AI Governance & Compliance': '/ai-governance', 'एआई गवर्नेंस और अनुपालन': '/ai-governance',

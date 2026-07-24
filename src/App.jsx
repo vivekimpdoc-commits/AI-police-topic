@@ -168,6 +168,16 @@ import CommandCenterDetailed from './pages/CommandCenterDetailed';
 import TopicContent from './pages/TopicContent';
 import TopicDetail from './pages/TopicDetail';
 import { LanguageProvider, useLanguage } from './context/LanguageContext';
+import WeaponIssueDetailed from './pages/WeaponIssueDetailed';
+import AmmunitionDetailed from './pages/AmmunitionDetailed';
+import WeaponMaintenanceDetailed from './pages/WeaponMaintenanceDetailed';
+import BulletproofJacketDetailed from './pages/BulletproofJacketDetailed';
+import HelmetInventoryDetailed from './pages/HelmetInventoryDetailed';
+import RiotGearDetailed from './pages/RiotGearDetailed';
+import TearGasDetailed from './pages/TearGasDetailed';
+import ExplosiveStorageDetailed from './pages/ExplosiveStorageDetailed';
+import EquipmentCalibrationDetailed from './pages/EquipmentCalibrationDetailed';
+import ArmouryInspectionDetailed from './pages/ArmouryInspectionDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -993,7 +1003,17 @@ const AnimatedRoutes = () => {
             <InvestigationQualityDetailed />
           </motion.div>
         } />
-      </Routes>
+              <Route path="/weapon-issue" element={<WeaponIssueDetailed />} />
+        <Route path="/ammunition-analytics" element={<AmmunitionDetailed />} />
+        <Route path="/weapon-maintenance" element={<WeaponMaintenanceDetailed />} />
+        <Route path="/bulletproof-jacket" element={<BulletproofJacketDetailed />} />
+        <Route path="/helmet-inventory" element={<HelmetInventoryDetailed />} />
+        <Route path="/riot-gear" element={<RiotGearDetailed />} />
+        <Route path="/tear-gas" element={<TearGasDetailed />} />
+        <Route path="/explosive-storage" element={<ExplosiveStorageDetailed />} />
+        <Route path="/equipment-calibration" element={<EquipmentCalibrationDetailed />} />
+        <Route path="/armoury-inspection" element={<ArmouryInspectionDetailed />} />
+</Routes>
     </AnimatePresence>
   );
 };

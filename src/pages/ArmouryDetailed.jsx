@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bot, LayoutDashboard, Database, Shield, Rocket, 
-  FileText, Activity, Network, ArrowLeft, Terminal, Cpu,
-  CheckCircle, ShieldAlert, PieChart, Crosshair, Package, Navigation
-} from 'lucide-react';
+  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Crosshair, Package, Navigation
+} from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
@@ -17,29 +15,54 @@ const aiExperts = [
 
 const armouryModules = [
   {
-    title: "Weapon Issue & Return",
+    title: "AI Weapon Issue & Return",
     icon: <Crosshair size={20} />,
     items: ["Biometric Checkout (Iris/Fingerprint)", "RFID Live Weapon Tracking", "Automated Return Reminders", "Missing Firearm Lockdown"]
   },
   {
-    title: "Ammunition & Explosives",
-    icon: <Package size={20} />,
-    items: ["Live Ammo Count per Officer", "Explosive Storage Temp Monitor", "Batch Expiry Prediction", "Blank vs Live Round Audits"]
+    title: "AI Ammunition Consumption Analytics",
+    icon: <PieChart size={20} />,
+    items: ["Live Ammo Count per Officer", "Batch Expiry Prediction", "Blank vs Live Round Audits", "Predictive Burn-Rate Modeling"]
   },
   {
-    title: "Riot Gear & Protective Armor",
-    icon: <Shield size={20} />,
-    items: ["Bulletproof Jacket Integrity Sync", "Helmet Inventory Mapping", "Tear Gas Shell Expiry", "Riot Shield Micro-crack Detection"]
-  },
-  {
-    title: "Maintenance & Calibration",
+    title: "AI Weapon Maintenance Scheduler",
     icon: <Activity size={20} />,
-    items: ["Barrel Cleaning Scheduler", "Sniper Scope Calibration AI", "Jamming Probability Modeler", "Spare Parts Procurement"]
+    items: ["Barrel Cleaning Scheduler", "Jamming Probability Modeler", "Spare Parts Procurement", "Usage-Based Alerts"]
   },
   {
-    title: "Armoury Security & Access",
+    title: "AI Bulletproof Jacket Inventory",
+    icon: <Shield size={20} />,
+    items: ["Kevlar Integrity Sync", "RFID Lifecycle Tracking", "Damage Reporting", "Auto-Replenishment"]
+  },
+  {
+    title: "AI Helmet Inventory",
+    icon: <Shield size={20} />,
+    items: ["Helmet Size Mapping", "Visor Micro-crack Detection", "Asset Distribution Map", "Damage Replacements"]
+  },
+  {
+    title: "AI Riot Gear Tracking",
     icon: <ShieldAlert size={20} />,
-    items: ["Multi-Factor Armoury Entry", "Anti-Tailgating Vault Sensors", "CCTV Object Recognition", "Air-Gapped Vault Networks"]
+    items: ["Riot Shield Integrity Check", "Baton Distribution Log", "Mass Deployment Sync", "Rapid Gear Recall"]
+  },
+  {
+    title: "AI Tear Gas Inventory",
+    icon: <Package size={20} />,
+    items: ["Chemical Expiry Notifier", "Temperature/Humidity Limits", "Safe Storage Audit", "Usage Heatmaps"]
+  },
+  {
+    title: "AI Explosive Storage Monitoring",
+    icon: <Network size={20} />,
+    items: ["Explosive Storage Temp Monitor", "Air-Gapped Vault Sensors", "Vibration Alert System", "Chemical Degeneration Bot"]
+  },
+  {
+    title: "AI Equipment Calibration Tracker",
+    icon: <Cpu size={20} />,
+    items: ["Sniper Scope Calibration AI", "Laser Sight Alignment Log", "Ballistic Telemetry", "Radar Gun Calibration"]
+  },
+  {
+    title: "AI Armoury Inspection",
+    icon: <CheckCircle size={20} />,
+    items: ["Multi-Factor Armoury Entry", "Automated Audit Reconciliation", "CCTV Object Recognition", "Anti-Tailgating Sensors"]
   }
 ];
 

@@ -2,12 +2,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Users, Bot, LayoutDashboard, Database, Shield, Rocket, 
-  FileText, Activity, Network, ArrowLeft, Terminal, Cpu,
-  Briefcase, Calendar, Calculator, Target, BookOpen, Heart,
-  Smartphone, HardDrive, Bell, CheckCircle, ShieldAlert,
-  ShoppingCart, Package, Truck, Box, PieChart
-} from 'lucide-react';
+  Users, Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, Briefcase, Calendar, Calculator, Target, BookOpen, Heart, Smartphone, HardDrive, Bell, CheckCircle, ShieldAlert, ShoppingCart, Package, Truck, Box, PieChart
+} from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [

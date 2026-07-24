@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bot, LayoutDashboard, Database, Shield, FileText, 
-  ArrowLeft, Cpu, Activity, Network, Target
-} from 'lucide-react';
+  Bot, LayoutDashboard, Database, Shield, FileText, ArrowLeft, Cpu, Activity, Network, Target
+} from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
 const AliasNicknameDetailed = () => {

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Scale, Gavel } from 'lucide-react';
+import { 
+  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Scale, Gavel
+} from "lucide-react";
 import '../styles/hrmsDetailed.css';
 
 const aiExperts = ["Court Order Compliance AI", "Property Auction Bot", "Magistrate Comms Bot", "Warrant Scheduler AI", "Limitation Period Monitor", "Legal Notice Dispatch AI", "Disposal Tracker Bot", "Judicial Correspondence AI", "Unclaimed Property AI", "Case Property Auditor", "Legal Timeline Bot"];
