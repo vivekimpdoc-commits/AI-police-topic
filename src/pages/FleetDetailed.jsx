@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { 
   Bot, LayoutDashboard, Database, Shield, Rocket, 
   FileText, Activity, Network, ArrowLeft, Terminal, Cpu,
-  CheckCircle, ShieldAlert, PieChart, Truck, Wrench, Fuel, Users, Map
+  CheckCircle, ShieldAlert, PieChart, Truck, Wrench, Fuel, Users, MapPin
 } from 'lucide-react';
 import '../styles/hrmsDetailed.css'; 
 
@@ -113,8 +113,8 @@ const FleetDetailed = () => {
                 <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Cross-references GPS mileage with fuel card swipes. If a vehicle travels 50 km but bills for 20 liters of fuel, the AI instantly flags it as potential fuel theft.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Wrench className="inline-icon" color="#10b981" /> Predictive Maintenance</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Ingests live OBD2 sensor data from the engine. Predicts brake pad wear or battery failure weeks in advance, automatically scheduling the vehicle for the workshop.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><MapPin className="inline-icon" color="#10b981" /> Live Routing</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Uses traffic data and historical incident density to dispatch the nearest and most appropriate vehicle (e.g. sending a heavily armored Vajra vs a standard Bolero).</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
                 <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#f59e0b" /> Driver Behavior Scoring</h3>
@@ -277,9 +277,5 @@ const FleetDetailed = () => {
     </div>
   );
 };
-
-// Mock import for Map icon since it wasn't in lucide-react list above
-import { Map } from 'lucide-react';
-import { Users } from 'lucide-react';
 
 export default FleetDetailed;
