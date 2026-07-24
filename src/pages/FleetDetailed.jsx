@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { 
   Bot, LayoutDashboard, Database, Shield, Rocket, 
   FileText, Activity, Network, ArrowLeft, Terminal, Cpu,
-  CheckCircle, ShieldAlert, PieChart, Truck, Wrench, Fuel
+  CheckCircle, ShieldAlert, PieChart, Truck, Wrench, Fuel, Users, Map
 } from 'lucide-react';
 import '../styles/hrmsDetailed.css'; 
 

@@ -41,6 +41,16 @@ import ForceEngagementExpertDetailed from './pages/ForceEngagementExpertDetailed
 import PoliceActComplianceExpertDetailed from './pages/PoliceActComplianceExpertDetailed';
 import ArmouryManagementDetailed from './pages/ArmouryManagementDetailed';
 import MentalHealthStressDetailed from './pages/MentalHealthStressDetailed';
+import PhysicalFitnessTrackerDetailed from './pages/PhysicalFitnessTrackerDetailed';
+import GrievanceRedressalDetailed from './pages/GrievanceRedressalDetailed';
+import SmartShiftOptimizationDetailed from './pages/SmartShiftOptimizationDetailed';
+import FleetFuelManagementDetailed from './pages/FleetFuelManagementDetailed';
+import K9UnitManagementDetailed from './pages/K9UnitManagementDetailed';
+import CourtSummonLegalSyncDetailed from './pages/CourtSummonLegalSyncDetailed';
+import CyberSecurityAccessDetailed from './pages/CyberSecurityAccessDetailed';
+import DisciplinaryActionTrackerDetailed from './pages/DisciplinaryActionTrackerDetailed';
+import PensionGratuityCalculatorDetailed from './pages/PensionGratuityCalculatorDetailed';
+import ResettlementVeteranSupportDetailed from './pages/ResettlementVeteranSupportDetailed';
 import AgentDetailed from './pages/AgentDetailed';
 import MultiAgentDetailed from './pages/MultiAgentDetailed';
 import KnowledgeDetailed from './pages/KnowledgeDetailed';
@@ -351,6 +361,36 @@ const AnimatedRoutes = () => {
         } />
         <Route path="/mental-health-stress" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><MentalHealthStressDetailed /></motion.div>
+        } />
+        <Route path="/physical-fitness" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PhysicalFitnessTrackerDetailed /></motion.div>
+        } />
+        <Route path="/grievance-redressal" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><GrievanceRedressalDetailed /></motion.div>
+        } />
+        <Route path="/smart-shift" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><SmartShiftOptimizationDetailed /></motion.div>
+        } />
+        <Route path="/fleet-fuel" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><FleetFuelManagementDetailed /></motion.div>
+        } />
+        <Route path="/k9-unit" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><K9UnitManagementDetailed /></motion.div>
+        } />
+        <Route path="/court-summon" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CourtSummonLegalSyncDetailed /></motion.div>
+        } />
+        <Route path="/cyber-security-access" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CyberSecurityAccessDetailed /></motion.div>
+        } />
+        <Route path="/disciplinary-action" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><DisciplinaryActionTrackerDetailed /></motion.div>
+        } />
+        <Route path="/pension-gratuity" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PensionGratuityCalculatorDetailed /></motion.div>
+        } />
+        <Route path="/resettlement-veteran" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ResettlementVeteranSupportDetailed /></motion.div>
         } />
         <Route path="/procurement" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
