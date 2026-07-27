@@ -444,6 +444,18 @@ const ModulePage = () => {
                       'AI MCC Monitoring Support': '/mcc-monitoring-support',
                       'AI Election Resource Dashboard': '/election-resource-dashboard',
 
+                      // Module 35: Emerging Technologies
+                      'AI Digital Evidence Vault': '/digital-evidence-vault',
+                      'AI Blockchain Evidence Registry': '/blockchain-evidence-registry',
+                      'AI Quantum-Ready Cryptography Planning': '/quantum-cryptography-planning',
+                      'AI Edge Computing Platform': '/edge-computing-platform',
+                      'AI Offline AI Assistant': '/offline-ai-assistant',
+                      'AI Augmented Reality Training': '/augmented-reality-training',
+                      'AI Virtual Reality Crime Scene Training': '/vr-crime-scene-training',
+                      'AI Robotics Coordination Platform': '/robotics-coordination-platform',
+                      'AI Autonomous Drone Coordination': '/autonomous-drone-coordination',
+                      'AI Smart Sensor Integration': '/smart-sensor-integration',
+
                       // Module 23: Communication
                       'AI Media Management': '/media-management',
                       'AI Press Note Generator': '/press-note-generator',

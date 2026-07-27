@@ -304,6 +304,16 @@ import ElectionVulnerabilityMappingDetailed from './pages/ElectionVulnerabilityM
 import FlyingSquadDashboardDetailed from './pages/FlyingSquadDashboardDetailed';
 import MCCMonitoringSupportDetailed from './pages/MCCMonitoringSupportDetailed';
 import ElectionResourceDashboardDetailed from './pages/ElectionResourceDashboardDetailed';
+import DigitalEvidenceVaultDetailed from './pages/DigitalEvidenceVaultDetailed';
+import BlockchainEvidenceRegistryDetailed from './pages/BlockchainEvidenceRegistryDetailed';
+import QuantumCryptographyPlanningDetailed from './pages/QuantumCryptographyPlanningDetailed';
+import EdgeComputingPlatformDetailed from './pages/EdgeComputingPlatformDetailed';
+import OfflineAIAssistantDetailed from './pages/OfflineAIAssistantDetailed';
+import AugmentedRealityTrainingDetailed from './pages/AugmentedRealityTrainingDetailed';
+import VRCrimeSceneTrainingDetailed from './pages/VRCrimeSceneTrainingDetailed';
+import RoboticsCoordinationPlatformDetailed from './pages/RoboticsCoordinationPlatformDetailed';
+import AutonomousDroneCoordinationDetailed from './pages/AutonomousDroneCoordinationDetailed';
+import SmartSensorIntegrationDetailed from './pages/SmartSensorIntegrationDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -1481,6 +1491,56 @@ const AnimatedRoutes = () => {
         <Route path="/election-resource-dashboard" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
             <ElectionResourceDashboardDetailed />
+          </motion.div>
+        } />
+        <Route path="/digital-evidence-vault" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <DigitalEvidenceVaultDetailed />
+          </motion.div>
+        } />
+        <Route path="/blockchain-evidence-registry" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <BlockchainEvidenceRegistryDetailed />
+          </motion.div>
+        } />
+        <Route path="/quantum-cryptography-planning" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <QuantumCryptographyPlanningDetailed />
+          </motion.div>
+        } />
+        <Route path="/edge-computing-platform" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <EdgeComputingPlatformDetailed />
+          </motion.div>
+        } />
+        <Route path="/offline-ai-assistant" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <OfflineAIAssistantDetailed />
+          </motion.div>
+        } />
+        <Route path="/augmented-reality-training" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <AugmentedRealityTrainingDetailed />
+          </motion.div>
+        } />
+        <Route path="/vr-crime-scene-training" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <VRCrimeSceneTrainingDetailed />
+          </motion.div>
+        } />
+        <Route path="/robotics-coordination-platform" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <RoboticsCoordinationPlatformDetailed />
+          </motion.div>
+        } />
+        <Route path="/autonomous-drone-coordination" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <AutonomousDroneCoordinationDetailed />
+          </motion.div>
+        } />
+        <Route path="/smart-sensor-integration" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <SmartSensorIntegrationDetailed />
           </motion.div>
         } />
         <Route path="/business-compliance" element={
