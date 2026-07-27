@@ -324,6 +324,16 @@ import VehicleInsuranceTrackingDetailed from './pages/VehicleInsuranceTrackingDe
 import VehicleFitnessMonitoringDetailed from './pages/VehicleFitnessMonitoringDetailed';
 import SparePartsInventoryDetailed from './pages/SparePartsInventoryDetailed';
 import FuelFraudDetectionDetailed from './pages/FuelFraudDetectionDetailed';
+import FingerprintAssistanceDetailed from './pages/FingerprintAssistanceDetailed';
+import BallisticsAnalysisSupportDetailed from './pages/BallisticsAnalysisSupportDetailed';
+import ForensicLabWorkflowDetailed from './pages/ForensicLabWorkflowDetailed';
+import DNACaseTrackingDetailed from './pages/DNACaseTrackingDetailed';
+import ToxicologyCaseManagementDetailed from './pages/ToxicologyCaseManagementDetailed';
+import HandwritingComparisonSupportDetailed from './pages/HandwritingComparisonSupportDetailed';
+import SignatureVerificationSupportDetailed from './pages/SignatureVerificationSupportDetailed';
+import ForensicEvidenceRequestManagementDetailed from './pages/ForensicEvidenceRequestManagementDetailed';
+import FSLReportTrackingDetailed from './pages/FSLReportTrackingDetailed';
+import EvidenceIntegrityMonitoringDetailed from './pages/EvidenceIntegrityMonitoringDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -1601,6 +1611,56 @@ const AnimatedRoutes = () => {
         <Route path="/fuel-fraud-detection" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
             <FuelFraudDetectionDetailed />
+          </motion.div>
+        } />
+        <Route path="/fingerprint-assistance" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <FingerprintAssistanceDetailed />
+          </motion.div>
+        } />
+        <Route path="/ballistics-analysis-support" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <BallisticsAnalysisSupportDetailed />
+          </motion.div>
+        } />
+        <Route path="/forensic-lab-workflow" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ForensicLabWorkflowDetailed />
+          </motion.div>
+        } />
+        <Route path="/dna-case-tracking" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <DNACaseTrackingDetailed />
+          </motion.div>
+        } />
+        <Route path="/toxicology-case-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ToxicologyCaseManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/handwriting-comparison-support" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <HandwritingComparisonSupportDetailed />
+          </motion.div>
+        } />
+        <Route path="/signature-verification-support" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <SignatureVerificationSupportDetailed />
+          </motion.div>
+        } />
+        <Route path="/forensic-evidence-request" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ForensicEvidenceRequestManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/fsl-report-tracking" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <FSLReportTrackingDetailed />
+          </motion.div>
+        } />
+        <Route path="/evidence-integrity-monitoring" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <EvidenceIntegrityMonitoringDetailed />
           </motion.div>
         } />
         <Route path="/business-compliance" element={

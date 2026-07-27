@@ -468,6 +468,18 @@ const ModulePage = () => {
                       'AI Spare Parts Inventory': '/spare-parts-inventory',
                       'AI Fuel Fraud Detection': '/fuel-fraud-detection',
 
+                      // Module 28: Forensic & Scientific Support
+                      'AI Fingerprint Assistance': '/fingerprint-assistance',
+                      'AI Ballistics Analysis Support': '/ballistics-analysis-support',
+                      'AI Forensic Laboratory Workflow': '/forensic-lab-workflow',
+                      'AI DNA Case Tracking': '/dna-case-tracking',
+                      'AI Toxicology Case Management': '/toxicology-case-management',
+                      'AI Handwriting Comparison Support': '/handwriting-comparison-support',
+                      'AI Signature Verification Support': '/signature-verification-support',
+                      'AI Forensic Evidence Request Management': '/forensic-evidence-request',
+                      'AI FSL Report Tracking': '/fsl-report-tracking',
+                      'AI Evidence Integrity Monitoring': '/evidence-integrity-monitoring',
+
                       // Module 23: Communication
                       'AI Media Management': '/media-management',
                       'AI Press Note Generator': '/press-note-generator',
