@@ -456,6 +456,18 @@ const ModulePage = () => {
                       'AI Autonomous Drone Coordination': '/autonomous-drone-coordination',
                       'AI Smart Sensor Integration': '/smart-sensor-integration',
 
+                      // Module 30: Fleet & Logistics
+                      'AI Fuel Management': '/fuel-management',
+                      'AI Vehicle Maintenance Prediction': '/vehicle-maintenance-prediction',
+                      'AI Driver Duty Management': '/driver-duty-management',
+                      'AI Fleet Utilization Analytics': '/fleet-utilization-analytics',
+                      'AI Workshop Management': '/workshop-management',
+                      'AI Tyre Lifecycle Tracking': '/tyre-lifecycle-tracking',
+                      'AI Vehicle Insurance Tracking': '/vehicle-insurance-tracking',
+                      'AI Vehicle Fitness Monitoring': '/vehicle-fitness-monitoring',
+                      'AI Spare Parts Inventory': '/spare-parts-inventory',
+                      'AI Fuel Fraud Detection': '/fuel-fraud-detection',
+
                       // Module 23: Communication
                       'AI Media Management': '/media-management',
                       'AI Press Note Generator': '/press-note-generator',

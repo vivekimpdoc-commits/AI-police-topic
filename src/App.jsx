@@ -314,6 +314,16 @@ import VRCrimeSceneTrainingDetailed from './pages/VRCrimeSceneTrainingDetailed';
 import RoboticsCoordinationPlatformDetailed from './pages/RoboticsCoordinationPlatformDetailed';
 import AutonomousDroneCoordinationDetailed from './pages/AutonomousDroneCoordinationDetailed';
 import SmartSensorIntegrationDetailed from './pages/SmartSensorIntegrationDetailed';
+import FuelManagementDetailed from './pages/FuelManagementDetailed';
+import VehicleMaintenancePredictionDetailed from './pages/VehicleMaintenancePredictionDetailed';
+import DriverDutyManagementDetailed from './pages/DriverDutyManagementDetailed';
+import FleetUtilizationAnalyticsDetailed from './pages/FleetUtilizationAnalyticsDetailed';
+import WorkshopManagementDetailed from './pages/WorkshopManagementDetailed';
+import TyreLifecycleTrackingDetailed from './pages/TyreLifecycleTrackingDetailed';
+import VehicleInsuranceTrackingDetailed from './pages/VehicleInsuranceTrackingDetailed';
+import VehicleFitnessMonitoringDetailed from './pages/VehicleFitnessMonitoringDetailed';
+import SparePartsInventoryDetailed from './pages/SparePartsInventoryDetailed';
+import FuelFraudDetectionDetailed from './pages/FuelFraudDetectionDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -1541,6 +1551,56 @@ const AnimatedRoutes = () => {
         <Route path="/smart-sensor-integration" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
             <SmartSensorIntegrationDetailed />
+          </motion.div>
+        } />
+        <Route path="/fuel-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <FuelManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/vehicle-maintenance-prediction" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <VehicleMaintenancePredictionDetailed />
+          </motion.div>
+        } />
+        <Route path="/driver-duty-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <DriverDutyManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/fleet-utilization-analytics" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <FleetUtilizationAnalyticsDetailed />
+          </motion.div>
+        } />
+        <Route path="/workshop-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <WorkshopManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/tyre-lifecycle-tracking" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <TyreLifecycleTrackingDetailed />
+          </motion.div>
+        } />
+        <Route path="/vehicle-insurance-tracking" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <VehicleInsuranceTrackingDetailed />
+          </motion.div>
+        } />
+        <Route path="/vehicle-fitness-monitoring" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <VehicleFitnessMonitoringDetailed />
+          </motion.div>
+        } />
+        <Route path="/spare-parts-inventory" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <SparePartsInventoryDetailed />
+          </motion.div>
+        } />
+        <Route path="/fuel-fraud-detection" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <FuelFraudDetectionDetailed />
           </motion.div>
         } />
         <Route path="/business-compliance" element={
