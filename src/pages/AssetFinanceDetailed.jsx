@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Landmark, Truck, Home
+  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Map, Truck
 } from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "Asset Depreciation Predictor", "Fleet Capital Analyzer AI", "Real Estate Valuation Bot",
+"Asset Depreciation Predictor", "Fleet Capital Analyzer AI", "Real Estate Valuation Bot",
   "Armory Asset Valuator AI", "Drone Fleet ROI Analyzer", "Data Center CapEx Tracker",
   "Hardware Lifespan Predictor", "Software License Capital AI", "Scrap Value Estimator Bot",
   "Station Renovation ROI AI", "Insurance Claim Assessor AI", "Asset Write-off Approver Bot",
@@ -29,87 +29,13 @@ const aiExperts = [
   "Liquidation Value Forecaster", "Global Hardware Price Sync", "Blockchain Asset Tokenizer"
 ];
 
-const financeModules = [
-  {
-    title: "Depreciation & Lifespan",
-    icon: <TrendingDown size={20} />,
-    items: ["Fleet Depreciation", "Hardware Lifespan", "Armory Amortization", "Riot Gear Expiry"]
-  },
-  {
-    title: "Capital Return (ROI)",
-    icon: <PieChart size={20} />,
-    items: ["Drone Fleet ROI", "Smart City CCTV Yield", "Solar Energy ROI", "Cyber Lab Investments"]
-  },
-  {
-    title: "Real Estate & Housing",
-    icon: <Home size={20} />,
-    items: ["Police Station Valuation", "Quarters Maintenance", "Lease Yield Analysis", "Land Encroachment Loss"]
-  },
-  {
-    title: "Insurance & Liquidation",
-    icon: <ShieldAlert size={20} />,
-    items: ["Insurance Claim Assessor", "Scrap Value Estimator", "Asset Write-offs", "Liquidation Forecasting"]
-  },
-  {
-    title: "Specialized Assets",
-    icon: <Activity size={20} />,
-    items: ["Aviation/Helicopters", "Marine Patrol Boats", "Forensic Lab Tech", "K9 & Mounted Units"]
-  }
-];
-
-const aiFeatures = [
-  "AI Fleet Depreciation & Battery Lifespan Predictor", "AI Automated Asset Write-off Recommendations", "AI Drone & CCTV ROI Analytics",
-  "AI Scrap & Liquidation Value Forecasting", "AI Blockchain Tokenization of High-Value Assets", "AI Real Estate Encroachment Costing"
-];
-
-const databases = [
-  "Master_Asset_Ledger", "Depreciation_Logs", "Real_Estate_Valuation_DB", "Fleet_Lifespan_Tracker", 
-  "Insurance_Claims_Vault", "Scrap_Liquidation_DB", "CapEx_ROI_Index", "RFID_Inventory_Sync"
-];
-
-const dashboards = [
-  "State-wide Asset Valuation Map", "Fleet & Hardware Depreciation", "CapEx ROI Performance", 
-  "Insurance Claims & Write-offs", "Scrap & Auction Pipeline", "Real Estate & Housing Yield"
-];
-
-const apis = [
-  "RFID / Barcode Inventory Sync", "State Land & Revenue APIs", "Insurance Provider Webhooks", 
-  "Market Scrap Valuation APIs", "RTO Vehicle Valuation Sync", "Blockchain Token Ledgers"
-];
-
-const reports = [
-  "Annual Asset Depreciation Report", "Mega-Project ROI Summary", "Pending Insurance Claims", 
-  "Asset Write-off & Liquidation", "Real Estate Maintenance Audit", "Green Energy Capital Yield"
-];
-
-const security = [
-  "Immutable Asset Registration", "Zero-Trust Write-off Approvals", "RFID Geo-fencing Alerts", 
-  "Blockchain Asset Hashing", "Role-Based Valuation Editing", "Encrypted Insurance Data"
-];
-
-const futureScope = [
-  "Autonomous Drone Asset Scanning", "DeFi Collateralization of State Assets", "Predictive Obsolescence Alerts",
-  "Digital Twin Asset Simulators", "Smart Contract Auto-Insurance Claims", "Global Defense Tech Valuations"
-];
-
-// Helper icon component for Rendering
-function TrendingDown({ size }) {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <polyline points="22 17 13.5 8.5 8.5 13.5 2 7"></polyline>
-      <polyline points="16 17 22 17 22 11"></polyline>
-    </svg>
-  );
-}
-
-
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: `Asset Agents (${aiExperts.length})`, icon: <Bot size={18} /> },
-  { id: 'modules', label: 'Asset Modules', icon: <LayoutDashboard size={18} /> },
+  { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
+  { id: 'modules', label: 'Advanced Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
-  { id: 'reports', label: 'Valuation Boards', icon: <PieChart size={18} /> },
+  { id: 'reports', label: 'Dashboards', icon: <PieChart size={18} /> },
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
@@ -123,29 +49,29 @@ const AssetFinanceDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <Landmark className="inline-icon" size={28} /> AI Asset Finance & Valuation
+              <ShieldAlert className="inline-icon" size={28} /> AI ASSET FINANCE
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>AI Asset Finance</strong> provides enterprise-level capital management for billions of dollars in state police assets. It tracks the real-time depreciation of vehicle fleets, calculates the ROI of smart city camera networks, handles insurance claims, and predicts the exact scrap value of obsolete tactical gear.
+              <strong>AI ASSET FINANCE</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in dynamic depreciation, hardware roi & real estate valuation.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><TrendingDown size={20} className="inline-icon" color="#3b82f6" /> Dynamic Depreciation</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Moves away from flat-rate depreciation. The AI calculates asset value drops based on real-world usage data, like kilometers driven or drone flight hours.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#3b82f6" /> Real-time Monitoring</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Continuous AI-driven surveillance and data collection ensuring immediate anomaly detection and rapid response protocols.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><PieChart className="inline-icon" color="#10b981" /> Tech Investment ROI</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Quantifies the financial return on modern investments, proving whether replacing petrol SUVs with EV fleets is generating the forecasted savings.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Cpu className="inline-icon" color="#10b981" /> Predictive Analytics</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Utilizes machine learning to forecast trends, identify potential risks before they occur, and suggest optimized resource allocation.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><ShieldAlert className="inline-icon" color="#f59e0b" /> Auto-Insurance & Claims</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>When a police vehicle crashes, the AI interfaces directly with insurance provider APIs to instantly draft the claim and calculate the expected payout.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#f59e0b" /> Seamless Integration</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Hooks into existing national and state-level databases, providing a unified, interoperable platform across all departments.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#ef4444" /> Scrap & Write-off Prediction</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Analyzes global metal and hardware markets to advise exactly when obsolete equipment (like old servers or seized vehicles) should be auctioned for maximum return.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Shield className="inline-icon" color="#ef4444" /> Automated Compliance</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Ensures all operations strictly adhere to legal and procedural guidelines, generating instant audit trails and compliance reports.</p>
               </div>
             </div>
           </motion.div>
@@ -164,15 +90,20 @@ const AssetFinanceDetailed = () => {
       case 'modules':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="module-accordion">
-            {financeModules.map((mod, i) => (
+            {[
+              { title: "Real-time Monitoring Module", items: ["Live Data Stream", "Alert Engine", "Geospatial Tracking"] },
+              { title: "Predictive Analytics Engine", items: ["Risk Forecasting", "Resource Optimization", "Pattern Recognition"] },
+              { title: "Automated Reporting System", items: ["Compliance Audits", "Daily Briefings", "Incident Logs"] },
+              { title: "Cloud Integration Hub", items: ["State DB Sync", "Third-party API Webhooks", "Encrypted Data Transfer"] }
+            ].map((mod, i) => (
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} key={i} className="premium-module-panel">
                 <div className="module-header">
-                  {mod.icon}
+                  <LayoutDashboard size={20} color="#3b82f6" />
                   <h3>{mod.title}</h3>
                 </div>
                 <div className="module-tags">
                   {mod.items.map((item, j) => (
-                    <span key={j} className="tag">{item}</span>
+                    <span key={j} className="module-tag">{item}</span>
                   ))}
                 </div>
               </motion.div>
@@ -181,46 +112,58 @@ const AssetFinanceDetailed = () => {
         );
       case 'features':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="features-grid">
-            {aiFeatures.map((feature, i) => (
-              <div key={i} className="premium-feature-card">
-                <Cpu className="feature-icon" color="#06b6d4" />
-                <span>{feature}</span>
-              </div>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid">
+            {[
+              "24/7 AI Processing", "Advanced Machine Learning Models", "Real-time Data Sync", 
+              "Automated Alerts & Notifications", "Cross-Platform Accessibility", "Role-Based Access Control"
+            ].map((feat, i) => (
+              <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-purple">
+                <Cpu className="card-icon" />
+                <h4>{feat}</h4>
+              </motion.div>
             ))}
           </motion.div>
         );
       case 'architecture':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="architecture-panel premium-module-panel">
-            <h3 style={{ color: '#06b6d4', marginBottom: '1.5rem' }}><Database className="inline-icon" /> Databases & Storage</h3>
-            <div className="tags-container" style={{ marginBottom: '2.5rem' }}>
-              {databases.map((db, i) => <span key={i} className="cyber-tag">{db}</span>)}
-            </div>
-            
-            <h3 style={{ color: '#10b981', marginBottom: '1.5rem' }}><Network className="inline-icon" /> System APIs</h3>
-            <div className="tags-container">
-              {apis.map((api, i) => <span key={i} className="cyber-tag highlight-green">{api}</span>)}
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+            <div className="split-section">
+              <div className="panel">
+                <h3><Database className="inline-icon" color="#06b6d4" /> Database Integration</h3>
+                <div className="tag-cloud">
+                  {["Primary_Transaction_DB", "Analytics_Data_Warehouse", "Audit_Logs_Archive", "User_Access_Registry", "System_Configuration_DB"].map((db, i) => (
+                    <span key={i} className="tech-tag">{db}</span>
+                  ))}
+                </div>
+              </div>
+              <div className="panel">
+                <h3><Network className="inline-icon" color="#8b5cf6" /> System APIs</h3>
+                <div className="tag-cloud">
+                  {["RESTful Core API", "Real-time WebSocket Feed", "Third-party Webhooks", "Authentication Gateway", "Data Export API"].map((api, i) => (
+                    <span key={i} className="tech-tag tech-tag-alt">{api}</span>
+                  ))}
+                </div>
+              </div>
             </div>
           </motion.div>
         );
       case 'reports':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="reports-panel premium-module-panel">
-            <div className="split-section">
-              <div className="report-list">
-                <h3 style={{ color: '#f59e0b', marginBottom: '1.5rem' }}><LayoutDashboard className="inline-icon" /> Live Dashboards</h3>
-                <ul>
-                  {dashboards.map((dash, i) => (
-                    <li key={i}><CheckCircle size={16} color="#f59e0b" /> {dash}</li>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+             <div className="split-section">
+              <div className="panel">
+                <h3><LayoutDashboard className="inline-icon" color="#3b82f6" /> Dashboards</h3>
+                <ul className="premium-list">
+                  {["Executive Overview Dashboard", "Live Operations Monitor", "Historical Trend Analysis", "System Health & Status"].map((d, i) => (
+                    <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>
                   ))}
                 </ul>
               </div>
-              <div className="report-list">
-                <h3 style={{ color: '#3b82f6', marginBottom: '1.5rem' }}><FileText className="inline-icon" /> Automated Reports</h3>
-                <ul>
-                  {reports.map((rep, i) => (
-                    <li key={i}><FileText size={16} color="#3b82f6" /> {rep}</li>
+              <div className="panel">
+                <h3><FileText className="inline-icon" color="#10b981" /> Generated Reports</h3>
+                <ul className="premium-list">
+                  {["Daily Summary Report", "Weekly Performance Analytics", "Monthly Compliance Audit", "System Exception Logs"].map((r, i) => (
+                    <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>
                   ))}
                 </ul>
               </div>
@@ -229,15 +172,28 @@ const AssetFinanceDetailed = () => {
         );
       case 'security':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="security-panel premium-module-panel">
-            <h3 style={{ color: '#ef4444', marginBottom: '1.5rem' }}><Shield className="inline-icon" /> Security Protocols</h3>
-            <div className="tags-container" style={{ marginBottom: '2.5rem' }}>
-              {security.map((sec, i) => <span key={i} className="cyber-tag highlight-red">{sec}</span>)}
-            </div>
-            
-            <h3 style={{ color: '#8b5cf6', marginBottom: '1.5rem' }}><Rocket className="inline-icon" /> Future Roadmap</h3>
-            <div className="tags-container">
-              {futureScope.map((scope, i) => <span key={i} className="cyber-tag highlight-purple">{scope}</span>)}
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+             <div className="split-section">
+              <div className="panel highlight-red">
+                <h3><ShieldAlert className="inline-icon" color="#ef4444" /> Security Protocols</h3>
+                <ul className="premium-list">
+                  {[
+                    "End-to-End Data Encryption (AES-256)", "Multi-Factor Authentication (MFA)", 
+                    "Strict Role-Based Access Control (RBAC)", "Tamper-proof Audit Trails", 
+                    "Automated Threat Detection", "Regular Security Penetration Testing"
+                  ].map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
+                </ul>
+              </div>
+              <div className="panel highlight-green">
+                <h3><Rocket className="inline-icon" color="#10b981" /> Future Enhancements</h3>
+                <ul className="premium-list">
+                  {[
+                    "Integration with Advanced LLMs", "Predictive Autonomous Actions", 
+                    "Enhanced Mobile Accessibility", "Cross-Agency Data Federation", 
+                    "Blockchain-based Immutability", "Next-Gen UI/UX Overhaul"
+                  ].map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
+                </ul>
+              </div>
             </div>
           </motion.div>
         );
@@ -258,7 +214,7 @@ const AssetFinanceDetailed = () => {
         </button>
         <div className="header-titles">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="icon-wrapper">
-            <Landmark size={40} color="#06b6d4" />
+            <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
             <h1 className="cyber-title">AI ASSET <span>FINANCE</span></h1>
@@ -285,7 +241,9 @@ const AssetFinanceDetailed = () => {
         {/* Content Area */}
         <main className="hrms-content-area">
           <AnimatePresence mode="wait">
-            {renderContent()}
+            <div key={activeTab}>
+              {renderContent()}
+            </div>
           </AnimatePresence>
         </main>
       </div>

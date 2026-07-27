@@ -2,89 +2,24 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, GraduationCap, FileCheck, Glasses
+  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Map, Truck
 } from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "VR Combat Simulator AI", "SOP Search Bot", "Legal Code Tutor AI", 
+"VR Combat Simulator AI", "SOP Search Bot", "Legal Code Tutor AI", 
   "Cyber Security Trainer Bot", "Interrogation Tactics Coach", "Marksmanship Analyzer", 
   "Stress Inoculation AI", "New Recruit Onboarding Agent", "Policy Update Broadcaster",
   "Riot Formation Simulator", "Forensic Collection Tutor"
 ];
 
-const trainingModules = [
-  {
-    title: "AI Knowledge Hub",
-    icon: <FileCheck size={20} />,
-    items: ["Centralized SOP Database", "Semantic Policy Search", "Circular & Ordinance Archive", "BNS/BNSS Transition Guides"]
-  },
-  {
-    title: "e-Learning & Certifications",
-    icon: <GraduationCap size={20} />,
-    items: ["Role-based Curriculum", "Automated Grading via AI", "Cyber Crime Investigation Certs", "Micro-learning Modules (5-min)"]
-  },
-  {
-    title: "Virtual Reality (VR) Academy",
-    icon: <Glasses size={20} />,
-    items: ["Active Shooter VR Drills", "Hostage Negotiation Simulator", "Crime Scene Walkthroughs", "Crowd Control Tactics"]
-  },
-  {
-    title: "Performance & Marksmanship",
-    icon: <Activity size={20} />,
-    items: ["AI Target Range Scoring", "Recruit Fatigue Monitoring", "Leadership Trait Assessment", "Physical Fitness Tracking"]
-  },
-  {
-    title: "SOP Assistant Bot",
-    icon: <Bot size={20} />,
-    items: ["In-field Procedural Queries", "Arrest Rights Checklist", "Evidence Packing Guidelines", "Jurisdictional Rule Lookups"]
-  }
-];
-
-const aiFeatures = [
-  "AI Natural Language Knowledge Graph", "AI Adaptive Learning Paths", "AI VR Scenario Generation",
-  "AI Cognitive Load Monitoring", "AI Biometric Stress Analysis", "AI Automated Quiz Generation",
-  "AI Multilingual Translation of Manuals", "AI Pose Estimation for Shooting Stance"
-];
-
-const databases = [
-  "Police_SOP_Vault", "BNS_Training_Modules", "Officer_Certification_Records", "VR_Combat_Scenarios", "Recruit_Assessment_Logs", 
-  "Marksmanship_Scores", "Circulars_And_Notices", "Interrogation_Transcripts_Repo", "Cyber_Sec_Curriculum", "Fitness_Metrics_DB"
-];
-
-const dashboards = [
-  "Academy Training Progress", "BNS Certification Completion", "Top Performing Recruits", 
-  "SOP Search Analytics (What are officers searching?)", "VR Simulation Success Rates", "Fitness & Marksmanship Leaderboard"
-];
-
-const apis = [
-  "BPR&D (Bureau of Police Research) APIs", "National Police Academy (SVPNPA) Sync", "VR Headset Telemetry APIs", "LMS (Learning Management System) APIs",
-  "Smart Range Scoring APIs", "Govt Circular RSS Feeds"
-];
-
-const reports = [
-  "Monthly Academy Graduation Report", "SOP Compliance Audit", "VR Training ROI", 
-  "New Law (BNS) Readiness Score", "Officer Skills Gap Analysis", "Training Budget Utilization"
-];
-
-const security = [
-  "Classified Training Material DRM", "Biometric Login for Exams", "Anti-Cheat AI Proctoring", 
-  "Role-Based SOP Access", "Encrypted VR Telemetry Data", 
-  "Secure Offline Sync for Field Bots", "Watermarked Document Downloads", "Audit Trails for Policy Views"
-];
-
-const futureScope = [
-  "Neural-ink Knowledge Uploads", "Holographic Interrogation Suspects", "AI Mindset Prediction for Promotions",
-  "Metaverse Police Academy", "Robotic Sparring Partners", "Brainwave Focused Accelerated Learning"
-];
-
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'Training Bots', icon: <Bot size={18} /> },
-  { id: 'modules', label: 'Academy Modules', icon: <LayoutDashboard size={18} /> },
+  { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
+  { id: 'modules', label: 'Advanced Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
-  { id: 'reports', label: 'Learning Dashboards', icon: <PieChart size={18} /> },
+  { id: 'reports', label: 'Dashboards', icon: <PieChart size={18} /> },
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
@@ -98,29 +33,29 @@ const TrainingDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <GraduationCap className="inline-icon" size={28} /> AI Knowledge & Training Academy
+              <ShieldAlert className="inline-icon" size={28} /> AI KNOWLEDGE & TRAINING
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>AI Knowledge & Training</strong> transforms the police force into a highly skilled, constantly learning organization. From Virtual Reality (VR) riot simulations to a ChatGPT-like SOP assistant that guides officers in the field, it ensures the force is always ready for modern challenges.
+              <strong>AI KNOWLEDGE & TRAINING</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in vr combat drills, sop assistants & law certifications.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Glasses className="inline-icon" color="#3b82f6" /> Virtual Reality (VR) Drills</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Officers use VR headsets to practice high-stress scenarios like active shooters, hostage negotiations, or riot crowd control safely before facing them in the real world.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#3b82f6" /> Real-time Monitoring</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Continuous AI-driven surveillance and data collection ensuring immediate anomaly detection and rapid response protocols.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Bot className="inline-icon" color="#10b981" /> AI SOP Assistant</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>A mobile-friendly AI bot that answers procedural questions instantly. (e.g. "What is the SOP for collecting a digital hard drive?" or "Under which BNS section should I book this crime?")</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Cpu className="inline-icon" color="#10b981" /> Predictive Analytics</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Utilizes machine learning to forecast trends, identify potential risks before they occur, and suggest optimized resource allocation.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><FileCheck className="inline-icon" color="#f59e0b" /> Central Knowledge Hub</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Digitizes decades of dusty police manuals, circulars, and laws into a single, semantic search engine. No more flipping through files to find the right ordinance.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#f59e0b" /> Seamless Integration</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Hooks into existing national and state-level databases, providing a unified, interoperable platform across all departments.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#ef4444" /> AI Marksmanship & Fitness</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Uses pose-estimation computer vision to analyze a recruit's shooting stance at the firing range and suggests micro-adjustments to improve accuracy.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Shield className="inline-icon" color="#ef4444" /> Automated Compliance</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Ensures all operations strictly adhere to legal and procedural guidelines, generating instant audit trails and compliance reports.</p>
               </div>
             </div>
           </motion.div>
@@ -139,10 +74,15 @@ const TrainingDetailed = () => {
       case 'modules':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="module-accordion">
-            {trainingModules.map((mod, i) => (
+            {[
+              { title: "Real-time Monitoring Module", items: ["Live Data Stream", "Alert Engine", "Geospatial Tracking"] },
+              { title: "Predictive Analytics Engine", items: ["Risk Forecasting", "Resource Optimization", "Pattern Recognition"] },
+              { title: "Automated Reporting System", items: ["Compliance Audits", "Daily Briefings", "Incident Logs"] },
+              { title: "Cloud Integration Hub", items: ["State DB Sync", "Third-party API Webhooks", "Encrypted Data Transfer"] }
+            ].map((mod, i) => (
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} key={i} className="premium-module-panel">
                 <div className="module-header">
-                  {mod.icon}
+                  <LayoutDashboard size={20} color="#3b82f6" />
                   <h3>{mod.title}</h3>
                 </div>
                 <div className="module-tags">
@@ -157,7 +97,10 @@ const TrainingDetailed = () => {
       case 'features':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid">
-            {aiFeatures.map((feat, i) => (
+            {[
+              "24/7 AI Processing", "Advanced Machine Learning Models", "Real-time Data Sync", 
+              "Automated Alerts & Notifications", "Cross-Platform Accessibility", "Role-Based Access Control"
+            ].map((feat, i) => (
               <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-purple">
                 <Cpu className="card-icon" />
                 <h4>{feat}</h4>
@@ -170,15 +113,19 @@ const TrainingDetailed = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
             <div className="split-section">
               <div className="panel">
-                <h3><Database className="inline-icon" color="#06b6d4" /> Database Tables</h3>
+                <h3><Database className="inline-icon" color="#06b6d4" /> Database Integration</h3>
                 <div className="tag-cloud">
-                  {databases.map((db, i) => <span key={i} className="tech-tag">{db}</span>)}
+                  {["Primary_Transaction_DB", "Analytics_Data_Warehouse", "Audit_Logs_Archive", "User_Access_Registry", "System_Configuration_DB"].map((db, i) => (
+                    <span key={i} className="tech-tag">{db}</span>
+                  ))}
                 </div>
               </div>
               <div className="panel">
                 <h3><Network className="inline-icon" color="#8b5cf6" /> System APIs</h3>
                 <div className="tag-cloud">
-                  {apis.map((api, i) => <span key={i} className="tech-tag tech-tag-alt">{api}</span>)}
+                  {["RESTful Core API", "Real-time WebSocket Feed", "Third-party Webhooks", "Authentication Gateway", "Data Export API"].map((api, i) => (
+                    <span key={i} className="tech-tag tech-tag-alt">{api}</span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -191,13 +138,17 @@ const TrainingDetailed = () => {
               <div className="panel">
                 <h3><LayoutDashboard className="inline-icon" color="#3b82f6" /> Dashboards</h3>
                 <ul className="premium-list">
-                  {dashboards.map((d, i) => <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>)}
+                  {["Executive Overview Dashboard", "Live Operations Monitor", "Historical Trend Analysis", "System Health & Status"].map((d, i) => (
+                    <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>
+                  ))}
                 </ul>
               </div>
               <div className="panel">
                 <h3><FileText className="inline-icon" color="#10b981" /> Generated Reports</h3>
                 <ul className="premium-list">
-                  {reports.map((r, i) => <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>)}
+                  {["Daily Summary Report", "Weekly Performance Analytics", "Monthly Compliance Audit", "System Exception Logs"].map((r, i) => (
+                    <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -210,13 +161,21 @@ const TrainingDetailed = () => {
               <div className="panel highlight-red">
                 <h3><ShieldAlert className="inline-icon" color="#ef4444" /> Security Protocols</h3>
                 <ul className="premium-list">
-                  {security.map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
+                  {[
+                    "End-to-End Data Encryption (AES-256)", "Multi-Factor Authentication (MFA)", 
+                    "Strict Role-Based Access Control (RBAC)", "Tamper-proof Audit Trails", 
+                    "Automated Threat Detection", "Regular Security Penetration Testing"
+                  ].map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
                 </ul>
               </div>
               <div className="panel highlight-green">
                 <h3><Rocket className="inline-icon" color="#10b981" /> Future Enhancements</h3>
                 <ul className="premium-list">
-                  {futureScope.map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
+                  {[
+                    "Integration with Advanced LLMs", "Predictive Autonomous Actions", 
+                    "Enhanced Mobile Accessibility", "Cross-Agency Data Federation", 
+                    "Blockchain-based Immutability", "Next-Gen UI/UX Overhaul"
+                  ].map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
                 </ul>
               </div>
             </div>
@@ -239,7 +198,7 @@ const TrainingDetailed = () => {
         </button>
         <div className="header-titles">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="icon-wrapper">
-            <GraduationCap size={40} color="#06b6d4" />
+            <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
             <h1 className="cyber-title">AI KNOWLEDGE & <span>TRAINING</span></h1>

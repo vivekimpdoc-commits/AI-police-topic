@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Landmark, Banknote, Calculator
+  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Map, Truck
 } from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "Old Pension Scheme (OPS) Calculator", "New Pension Scheme (NPS) Sync AI", "Gratuity Corpus Estimator AI",
+"Old Pension Scheme (OPS) Calculator", "New Pension Scheme (NPS) Sync AI", "Gratuity Corpus Estimator AI",
   "Leave Encashment Payout AI", "Commutation of Pension Calculator", "Family Pension Eligibility AI",
   "Unmarried Daughter Pension Sync", "Martyr (Ex-Gratia) Payout AI", "Disability Pension Assessor",
   "Service Book Verification AI", "No Dues Certificate (NDC) Automator", "Quarter Vacation Sync AI",
@@ -29,84 +29,13 @@ const aiExperts = [
   "Accountant General (AG) API Sync", "Pay Fixation Anomaly Rectifier", "Superannuation Countdown Alerter"
 ];
 
-const modules = [
-  {
-    title: "Retirement & Payouts",
-    icon: <Calculator size={20} />,
-    items: ["OPS/NPS Calculation", "Gratuity Estimation", "Leave Encashment", "PPO (Pension Order) Gen"]
-  },
-  {
-    title: "Verification & Clearance",
-    icon: <CheckCircle size={20} />,
-    items: ["No Dues Certificates (NDC)", "Quarter Vacation Sync", "Disciplinary Withholds", "Loan Settlements"]
-  },
-  {
-    title: "Life Cert & Compliance",
-    icon: <Fingerprint size={20} />,
-    items: ["Jeevan Pramaan Sync", "Ghost Pensioner Flags", "Biometric Verification", "TDS & Form 16"]
-  },
-  {
-    title: "Family & Special Pensions",
-    icon: <Heart size={20} />,
-    items: ["Ex-Gratia (Martyrs)", "Disability Pension", "Death in Harness", "Unmarried Daughter Sync"]
-  },
-  {
-    title: "Treasury & Revisions",
-    icon: <Landmark size={20} />,
-    items: ["AG Office API Sync", "Pay Commission Revisions", "DA Arrears", "Re-employment Offsets"]
-  }
-];
-
-const aiFeatures = [
-  "Zero-Touch PPO (Pension Payment Order) Generation", "Facial/Biometric Jeevan Pramaan (Life Cert) Sync", "Predictive Detection of Ghost Pensioners",
-  "Automated 'No Dues' Clearance across 15 Departments", "Instant Ex-Gratia Payout routing for Martyrs", "Algorithmic Pay Commission Arrear Calculation"
-];
-
-const databases = [
-  "Pension_Master_Ledger", "Treasury_Payout_Vault", "Life_Certificate_Archive", "No_Dues_Clearance_DB", 
-  "Family_Heir_Registry", "Disability_Medical_Board", "NPS_Corpus_Lake", "Tax_TDS_Ledger"
-];
-
-const dashboards = [
-  "State-wide Pension Disbursement", "Pending 'No Dues' Heatmap", "Ghost Pensioner/Fraud Alerts", 
-  "Martyr Family Ex-Gratia Tracker", "Jeevan Pramaan Compliance", "NPS vs OPS Financial Load"
-];
-
-const apis = [
-  "Accountant General (AG) Gateway", "Jeevan Pramaan (NIC) Sync", "DigiLocker PPO Push API", 
-  "RBI/Bank DBT Gateway", "Income Tax Dept (TDS) API", "State Treasury Sync"
-];
-
-const reports = [
-  "Monthly Disbursement Audit", "Retiring Officer Clearance Pendency", "Ghost Pensioner Financial Savings", 
-  "Pay Commission Revision Backlog", "Martyr Family Financial Support ROI", "Life Certificate Defaulters"
-];
-
-const security = [
-  "Biometric PPO Authorization", "Blockchain Financial Ledgers", "Role-Based Treasury Access", 
-  "Encrypted Legal Heir Docs", "Strict DBT Verification Limits", "Fraudulent Account Freeze Sync"
-];
-
-const futureScope = [
-  "Smart Contracts for Instant Gratuity Payouts", "AI Financial Planning Avatars for Retirees", "Blockchain-Verified Digital Wills",
-  "Predictive Actuarial Modeling for State Budgets", "Voice-Authenticated Life Certificates", "Decentralized Pension Wallets"
-];
-
-function Fingerprint({ size }) {
-  return <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12C2 6.5 6.5 2 12 2a10 10 0 0 1 8 4"></path><path d="M5 19.5C5.5 18 6 15 6 11.5a6 6 0 0 1 12.01-6"></path><path d="M8.5 22c0-4.5 1-9.5 3.5-12a3.5 3.5 0 0 1 6 .01"></path><path d="M12 22v-3.5a3.5 3.5 0 0 1 3.5-3.5c1.5 0 3-1.5 3-3"></path><path d="M16 22v-2a2 2 0 0 1 2-2c1.5 0 2.5-1.5 2.5-3"></path></svg>;
-}
-
-function Heart({ size }) {
-  return <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>;
-}
-
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: `Financial Agents (${aiExperts.length})`, icon: <Bot size={18} /> },
-  { id: 'modules', label: 'Payout Modules', icon: <LayoutDashboard size={18} /> },
+  { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
+  { id: 'modules', label: 'Advanced Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
-  { id: 'reports', label: 'Disbursement Dashboards', icon: <PieChart size={18} /> },
+  { id: 'reports', label: 'Dashboards', icon: <PieChart size={18} /> },
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
@@ -120,29 +49,29 @@ const PensionGratuityCalculatorDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <Banknote className="inline-icon" size={28} /> Pension & Gratuity Calculator AI
+              <ShieldAlert className="inline-icon" size={28} /> PENSION & GRATUITY CALCULATOR AI
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>Pension & Gratuity Calculator AI</strong> eliminates post-retirement financial harassment. It automates "No Dues Certificates," calculates complex OPS/NPS payouts instantly, generates digital PPOs via DigiLocker, and uses biometric Life Certificates (Jeevan Pramaan) to prevent ghost-pensioner fraud, ensuring dignity for retired personnel.
+              <strong>PENSION & GRATUITY CALCULATOR AI</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in zero-delay ppos, life certificate sync & ghost pensioner fraud ai.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Calculator className="inline-icon" color="#3b82f6" /> Financial Payouts</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Calculates Gratuity, Leave Encashment, and Commutation of Pension flawlessly. Automatically adjusts payouts based on new Pay Commission revisions or DA arrears.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#3b82f6" /> Real-time Monitoring</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Continuous AI-driven surveillance and data collection ensuring immediate anomaly detection and rapid response protocols.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><CheckCircle className="inline-icon" color="#10b981" /> No Dues & Clearance</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Triggers an automated clearance workflow 6 months before retirement, syncing with Quarter Allocation, Malkhana, and Disciplinary boards to issue a zero-delay NDC.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Cpu className="inline-icon" color="#10b981" /> Predictive Analytics</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Utilizes machine learning to forecast trends, identify potential risks before they occur, and suggest optimized resource allocation.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Heart className="inline-icon" color="#f59e0b" /> Ex-Gratia & Martyrs</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Provides a priority fast-track for Martyr families, instantly processing Death-in-Harness pensions, ex-gratia payouts, and compassionate appointment paperwork.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#f59e0b" /> Seamless Integration</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Hooks into existing national and state-level databases, providing a unified, interoperable platform across all departments.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><ShieldAlert className="inline-icon" color="#ef4444" /> Fraud & Life Certs</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Integrates with NIC's Jeevan Pramaan for biometric life verification. Deploys AI to detect ghost pensioners and halts payments for convicted retirees.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Shield className="inline-icon" color="#ef4444" /> Automated Compliance</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Ensures all operations strictly adhere to legal and procedural guidelines, generating instant audit trails and compliance reports.</p>
               </div>
             </div>
           </motion.div>
@@ -161,15 +90,20 @@ const PensionGratuityCalculatorDetailed = () => {
       case 'modules':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="module-accordion">
-            {modules.map((mod, i) => (
+            {[
+              { title: "Real-time Monitoring Module", items: ["Live Data Stream", "Alert Engine", "Geospatial Tracking"] },
+              { title: "Predictive Analytics Engine", items: ["Risk Forecasting", "Resource Optimization", "Pattern Recognition"] },
+              { title: "Automated Reporting System", items: ["Compliance Audits", "Daily Briefings", "Incident Logs"] },
+              { title: "Cloud Integration Hub", items: ["State DB Sync", "Third-party API Webhooks", "Encrypted Data Transfer"] }
+            ].map((mod, i) => (
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} key={i} className="premium-module-panel">
                 <div className="module-header">
-                  {mod.icon}
+                  <LayoutDashboard size={20} color="#3b82f6" />
                   <h3>{mod.title}</h3>
                 </div>
                 <div className="module-tags">
                   {mod.items.map((item, j) => (
-                    <span key={j} className="tag">{item}</span>
+                    <span key={j} className="module-tag">{item}</span>
                   ))}
                 </div>
               </motion.div>
@@ -178,46 +112,58 @@ const PensionGratuityCalculatorDetailed = () => {
         );
       case 'features':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="features-grid">
-            {aiFeatures.map((feature, i) => (
-              <div key={i} className="premium-feature-card">
-                <Cpu className="feature-icon" color="#06b6d4" />
-                <span>{feature}</span>
-              </div>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid">
+            {[
+              "24/7 AI Processing", "Advanced Machine Learning Models", "Real-time Data Sync", 
+              "Automated Alerts & Notifications", "Cross-Platform Accessibility", "Role-Based Access Control"
+            ].map((feat, i) => (
+              <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-purple">
+                <Cpu className="card-icon" />
+                <h4>{feat}</h4>
+              </motion.div>
             ))}
           </motion.div>
         );
       case 'architecture':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="architecture-panel premium-module-panel">
-            <h3 style={{ color: '#06b6d4', marginBottom: '1.5rem' }}><Database className="inline-icon" /> Data Ledgers</h3>
-            <div className="tags-container" style={{ marginBottom: '2.5rem' }}>
-              {databases.map((db, i) => <span key={i} className="cyber-tag">{db}</span>)}
-            </div>
-            
-            <h3 style={{ color: '#10b981', marginBottom: '1.5rem' }}><Network className="inline-icon" /> Integration APIs</h3>
-            <div className="tags-container">
-              {apis.map((api, i) => <span key={i} className="cyber-tag highlight-green">{api}</span>)}
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+            <div className="split-section">
+              <div className="panel">
+                <h3><Database className="inline-icon" color="#06b6d4" /> Database Integration</h3>
+                <div className="tag-cloud">
+                  {["Primary_Transaction_DB", "Analytics_Data_Warehouse", "Audit_Logs_Archive", "User_Access_Registry", "System_Configuration_DB"].map((db, i) => (
+                    <span key={i} className="tech-tag">{db}</span>
+                  ))}
+                </div>
+              </div>
+              <div className="panel">
+                <h3><Network className="inline-icon" color="#8b5cf6" /> System APIs</h3>
+                <div className="tag-cloud">
+                  {["RESTful Core API", "Real-time WebSocket Feed", "Third-party Webhooks", "Authentication Gateway", "Data Export API"].map((api, i) => (
+                    <span key={i} className="tech-tag tech-tag-alt">{api}</span>
+                  ))}
+                </div>
+              </div>
             </div>
           </motion.div>
         );
       case 'reports':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="reports-panel premium-module-panel">
-            <div className="split-section">
-              <div className="report-list">
-                <h3 style={{ color: '#f59e0b', marginBottom: '1.5rem' }}><LayoutDashboard className="inline-icon" /> Financial Dashboards</h3>
-                <ul>
-                  {dashboards.map((dash, i) => (
-                    <li key={i}><CheckCircle size={16} color="#f59e0b" /> {dash}</li>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+             <div className="split-section">
+              <div className="panel">
+                <h3><LayoutDashboard className="inline-icon" color="#3b82f6" /> Dashboards</h3>
+                <ul className="premium-list">
+                  {["Executive Overview Dashboard", "Live Operations Monitor", "Historical Trend Analysis", "System Health & Status"].map((d, i) => (
+                    <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>
                   ))}
                 </ul>
               </div>
-              <div className="report-list">
-                <h3 style={{ color: '#3b82f6', marginBottom: '1.5rem' }}><FileText className="inline-icon" /> Disbursement Reports</h3>
-                <ul>
-                  {reports.map((rep, i) => (
-                    <li key={i}><FileText size={16} color="#3b82f6" /> {rep}</li>
+              <div className="panel">
+                <h3><FileText className="inline-icon" color="#10b981" /> Generated Reports</h3>
+                <ul className="premium-list">
+                  {["Daily Summary Report", "Weekly Performance Analytics", "Monthly Compliance Audit", "System Exception Logs"].map((r, i) => (
+                    <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>
                   ))}
                 </ul>
               </div>
@@ -226,15 +172,28 @@ const PensionGratuityCalculatorDetailed = () => {
         );
       case 'security':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="security-panel premium-module-panel">
-            <h3 style={{ color: '#ef4444', marginBottom: '1.5rem' }}><Shield className="inline-icon" /> Treasury Security</h3>
-            <div className="tags-container" style={{ marginBottom: '2.5rem' }}>
-              {security.map((sec, i) => <span key={i} className="cyber-tag highlight-red">{sec}</span>)}
-            </div>
-            
-            <h3 style={{ color: '#8b5cf6', marginBottom: '1.5rem' }}><Rocket className="inline-icon" /> Future Roadmap</h3>
-            <div className="tags-container">
-              {futureScope.map((scope, i) => <span key={i} className="cyber-tag highlight-purple">{scope}</span>)}
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+             <div className="split-section">
+              <div className="panel highlight-red">
+                <h3><ShieldAlert className="inline-icon" color="#ef4444" /> Security Protocols</h3>
+                <ul className="premium-list">
+                  {[
+                    "End-to-End Data Encryption (AES-256)", "Multi-Factor Authentication (MFA)", 
+                    "Strict Role-Based Access Control (RBAC)", "Tamper-proof Audit Trails", 
+                    "Automated Threat Detection", "Regular Security Penetration Testing"
+                  ].map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
+                </ul>
+              </div>
+              <div className="panel highlight-green">
+                <h3><Rocket className="inline-icon" color="#10b981" /> Future Enhancements</h3>
+                <ul className="premium-list">
+                  {[
+                    "Integration with Advanced LLMs", "Predictive Autonomous Actions", 
+                    "Enhanced Mobile Accessibility", "Cross-Agency Data Federation", 
+                    "Blockchain-based Immutability", "Next-Gen UI/UX Overhaul"
+                  ].map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
+                </ul>
+              </div>
             </div>
           </motion.div>
         );
@@ -255,7 +214,7 @@ const PensionGratuityCalculatorDetailed = () => {
         </button>
         <div className="header-titles">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="icon-wrapper">
-            <Banknote size={40} color="#06b6d4" />
+            <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
             <h1 className="cyber-title">PENSION & GRATUITY <span>CALCULATOR AI</span></h1>
@@ -282,7 +241,9 @@ const PensionGratuityCalculatorDetailed = () => {
         {/* Content Area */}
         <main className="hrms-content-area">
           <AnimatePresence mode="wait">
-            {renderContent()}
+            <div key={activeTab}>
+              {renderContent()}
+            </div>
           </AnimatePresence>
         </main>
       </div>

@@ -2,84 +2,24 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, FlaskConical, Stethoscope
+  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Map, Truck
 } from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "Sample Tracker Bot", "Lab Capacity Analyzer", "DNA Matcher AI", 
+"Sample Tracker Bot", "Lab Capacity Analyzer", "DNA Matcher AI", 
   "Chemical Inventory Bot", "Instrument Calibrator", "Turnaround Predictor", 
   "Toxicology Analyzer AI", "Quality Assurance Bot", "Accreditation Sync AI",
   "Bio-Hazard Alert Bot", "Evidentiary Chain Tracker"
 ];
 
-const labModules = [
-  {
-    title: "Sample & Evidence Tracking",
-    icon: <Database size={20} />,
-    items: ["AI Forensics Analyzer", "Chain of Custody Blockchain", "Cold Storage Temperature Monitor", "Automated Case Linking"]
-  },
-  {
-    title: "Forensic Analysis",
-    icon: <FlaskConical size={20} />,
-    items: ["AI DNA Matcher", "Digital Forensics Queue", "Toxicology Report Auto-Gen", "Ballistics Image Recognition"]
-  },
-  {
-    title: "Lab Operations & QA",
-    icon: <Activity size={20} />,
-    items: ["AI Ballistics Predictor", "Chemical Reagent Inventory", "NABL Quality Assurance Sync", "Bio-waste Disposal Logs"]
-  },
-  {
-    title: "Reporting & Legal",
-    icon: <FileText size={20} />,
-    items: ["e-Signature Court Reports", "Turnaround Time (TAT) Analytics", "Virtual Court Testimony Link", "Expert Witness Roster"]
-  }
-];
-
-const aiFeatures = [
-  "AI Deep Learning for matching Ballistic Striations on Bullets", "AI Prediction of DNA Degradation based on Storage Temps", "AI Automated Generation of Medico-Legal Reports",
-  "AI Analysis of Toxicology Spectrometer Data", "AI Optimization of Sample Batching for Maximum Throughput", "AI Detection of Tampering in Digital Evidence Files",
-  "AI Chatbot for IOs (Investigating Officers) to check Sample Status", "AI Forecasting of Reagent Shortages"
-];
-
-const databases = [
-  "Evidence_RFID_Ledger", "DNA_Profile_Index", "Toxicology_Spectra_Lake", "Instrument_Calibration_Logs", "Reagent_Inventory_DB", 
-  "Court_Report_Archive", "BioHazard_Disposal_Logs", "NABL_Audit_Trails"
-];
-
-const dashboards = [
-  "State-wide Lab Capacity", "Sample Turnaround Time (TAT)", "DNA Match Success Rate", 
-  "Instrument Uptime/Downtime", "Pending Court Reports", "Cold Storage Integrity"
-];
-
-const apis = [
-  "CCTNS (Crime & Criminal Tracking Network)", "e-Courts Integration API", "NABL (National Accreditation Board) Sync", "Hospital Medico-Legal Gateway",
-  "IoT Sensors API (Fridges/Storage)", "Digital Signature Gateway (e-Hastakshar)"
-];
-
-const reports = [
-  "Monthly Forensic TAT Report", "Equipment Calibration Audit", "Quality Assurance (QA) Scorecard", 
-  "Inventory Expiry Alerts", "District-wise Evidence Submission", "Bio-waste Compliance Report"
-];
-
-const security = [
-  "Immutable Blockchain Chain of Custody", "Air-Gapped Networks for Digital Forensics", "Biometric Access Control to Lab Zones", 
-  "Strict Data Masking (Blinded Samples)", "Anti-Tamper Digital Signatures on Reports", 
-  "IoT Alerts for Fridge Temperature Drops", "Hardware Security Modules for DNA Data", "Zero-Trust API Sync with Courts"
-];
-
-const futureScope = [
-  "Robotic Process Automation (RPA) for Sample Sorting", "Mobile AI Forensic Vans with Edge Computing", "Holographic Reconstruction of Crime Scenes",
-  "Quantum Computing for Complex Cryptographic Breaking", "Brain Fingerprinting Integration", "Global Interpol DNA Database Sync"
-];
-
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'Lab Bots', icon: <Bot size={18} /> },
-  { id: 'modules', label: 'Forensic Modules', icon: <LayoutDashboard size={18} /> },
+  { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
+  { id: 'modules', label: 'Advanced Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
-  { id: 'reports', label: 'Lab Dashboards', icon: <PieChart size={18} /> },
+  { id: 'reports', label: 'Dashboards', icon: <PieChart size={18} /> },
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
@@ -93,29 +33,29 @@ const PoliceLaboratoriesDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <FlaskConical className="inline-icon" size={28} /> AI Forensic Laboratories
+              <ShieldAlert className="inline-icon" size={28} /> FORENSIC LABORATORIES
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>Police Forensic Laboratories</strong> digitizes the entire lifecycle of physical and digital evidence. From the moment an IO seals a sample with an RFID tag at the crime scene, to the AI-assisted DNA analysis, to the digitally signed court report, the chain of custody is unbroken and transparent.
+              <strong>FORENSIC LABORATORIES</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in evidence tracking, dna matching & iot cold storage.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Database className="inline-icon" color="#3b82f6" /> Blockchain Chain of Custody</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Samples are tracked via RFID. Every handover (Officer -&gt; Transport -&gt; Lab Reception -&gt; Scientist) is logged on an immutable blockchain, eliminating allegations of evidence tampering in court.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#3b82f6" /> Real-time Monitoring</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Continuous AI-driven surveillance and data collection ensuring immediate anomaly detection and rapid response protocols.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><FlaskConical className="inline-icon" color="#10b981" /> AI Forensic Matchers</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Instead of manual comparison, AI algorithms instantly match ballistic striations on fired bullets and run rapid probabilistic genotyping on complex, mixed DNA samples to find suspects.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Cpu className="inline-icon" color="#10b981" /> Predictive Analytics</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Utilizes machine learning to forecast trends, identify potential risks before they occur, and suggest optimized resource allocation.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#f59e0b" /> IoT Storage Integrity</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>IoT sensors in lab refrigerators constantly monitor temperature and humidity. If a freezer holding biological evidence fails, AI instantly alerts technicians and predicts the time until sample degradation.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#f59e0b" /> Seamless Integration</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Hooks into existing national and state-level databases, providing a unified, interoperable platform across all departments.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><FileText className="inline-icon" color="#ef4444" /> Automated Court Reports</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Once a test is complete, the system auto-generates the Medico-Legal report in the required judicial format. The scientist e-signs it, and it is instantly pushed to the e-Courts portal, reducing delays.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Shield className="inline-icon" color="#ef4444" /> Automated Compliance</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Ensures all operations strictly adhere to legal and procedural guidelines, generating instant audit trails and compliance reports.</p>
               </div>
             </div>
           </motion.div>
@@ -134,10 +74,15 @@ const PoliceLaboratoriesDetailed = () => {
       case 'modules':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="module-accordion">
-            {labModules.map((mod, i) => (
+            {[
+              { title: "Real-time Monitoring Module", items: ["Live Data Stream", "Alert Engine", "Geospatial Tracking"] },
+              { title: "Predictive Analytics Engine", items: ["Risk Forecasting", "Resource Optimization", "Pattern Recognition"] },
+              { title: "Automated Reporting System", items: ["Compliance Audits", "Daily Briefings", "Incident Logs"] },
+              { title: "Cloud Integration Hub", items: ["State DB Sync", "Third-party API Webhooks", "Encrypted Data Transfer"] }
+            ].map((mod, i) => (
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} key={i} className="premium-module-panel">
                 <div className="module-header">
-                  {mod.icon}
+                  <LayoutDashboard size={20} color="#3b82f6" />
                   <h3>{mod.title}</h3>
                 </div>
                 <div className="module-tags">
@@ -152,7 +97,10 @@ const PoliceLaboratoriesDetailed = () => {
       case 'features':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid">
-            {aiFeatures.map((feat, i) => (
+            {[
+              "24/7 AI Processing", "Advanced Machine Learning Models", "Real-time Data Sync", 
+              "Automated Alerts & Notifications", "Cross-Platform Accessibility", "Role-Based Access Control"
+            ].map((feat, i) => (
               <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-purple">
                 <Cpu className="card-icon" />
                 <h4>{feat}</h4>
@@ -165,15 +113,19 @@ const PoliceLaboratoriesDetailed = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
             <div className="split-section">
               <div className="panel">
-                <h3><Database className="inline-icon" color="#06b6d4" /> Database Tables</h3>
+                <h3><Database className="inline-icon" color="#06b6d4" /> Database Integration</h3>
                 <div className="tag-cloud">
-                  {databases.map((db, i) => <span key={i} className="tech-tag">{db}</span>)}
+                  {["Primary_Transaction_DB", "Analytics_Data_Warehouse", "Audit_Logs_Archive", "User_Access_Registry", "System_Configuration_DB"].map((db, i) => (
+                    <span key={i} className="tech-tag">{db}</span>
+                  ))}
                 </div>
               </div>
               <div className="panel">
                 <h3><Network className="inline-icon" color="#8b5cf6" /> System APIs</h3>
                 <div className="tag-cloud">
-                  {apis.map((api, i) => <span key={i} className="tech-tag tech-tag-alt">{api}</span>)}
+                  {["RESTful Core API", "Real-time WebSocket Feed", "Third-party Webhooks", "Authentication Gateway", "Data Export API"].map((api, i) => (
+                    <span key={i} className="tech-tag tech-tag-alt">{api}</span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -186,13 +138,17 @@ const PoliceLaboratoriesDetailed = () => {
               <div className="panel">
                 <h3><LayoutDashboard className="inline-icon" color="#3b82f6" /> Dashboards</h3>
                 <ul className="premium-list">
-                  {dashboards.map((d, i) => <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>)}
+                  {["Executive Overview Dashboard", "Live Operations Monitor", "Historical Trend Analysis", "System Health & Status"].map((d, i) => (
+                    <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>
+                  ))}
                 </ul>
               </div>
               <div className="panel">
                 <h3><FileText className="inline-icon" color="#10b981" /> Generated Reports</h3>
                 <ul className="premium-list">
-                  {reports.map((r, i) => <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>)}
+                  {["Daily Summary Report", "Weekly Performance Analytics", "Monthly Compliance Audit", "System Exception Logs"].map((r, i) => (
+                    <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -205,13 +161,21 @@ const PoliceLaboratoriesDetailed = () => {
               <div className="panel highlight-red">
                 <h3><ShieldAlert className="inline-icon" color="#ef4444" /> Security Protocols</h3>
                 <ul className="premium-list">
-                  {security.map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
+                  {[
+                    "End-to-End Data Encryption (AES-256)", "Multi-Factor Authentication (MFA)", 
+                    "Strict Role-Based Access Control (RBAC)", "Tamper-proof Audit Trails", 
+                    "Automated Threat Detection", "Regular Security Penetration Testing"
+                  ].map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
                 </ul>
               </div>
               <div className="panel highlight-green">
                 <h3><Rocket className="inline-icon" color="#10b981" /> Future Enhancements</h3>
                 <ul className="premium-list">
-                  {futureScope.map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
+                  {[
+                    "Integration with Advanced LLMs", "Predictive Autonomous Actions", 
+                    "Enhanced Mobile Accessibility", "Cross-Agency Data Federation", 
+                    "Blockchain-based Immutability", "Next-Gen UI/UX Overhaul"
+                  ].map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
                 </ul>
               </div>
             </div>
@@ -234,7 +198,7 @@ const PoliceLaboratoriesDetailed = () => {
         </button>
         <div className="header-titles">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="icon-wrapper">
-            <FlaskConical size={40} color="#06b6d4" />
+            <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
             <h1 className="cyber-title">FORENSIC <span>LABORATORIES</span></h1>

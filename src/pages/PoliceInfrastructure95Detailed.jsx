@@ -2,81 +2,23 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Building, MapPin, Hammer
+  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Map, Truck
 } from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "Structural Analyst AI", "Green Building Evaluator", "Seismic Readiness Bot", 
+"Structural Analyst AI", "Green Building Evaluator", "Seismic Readiness Bot", 
   "Blueprint Generator", "Construction Cost Estimator", "Maintenance Predictor", 
   "Land Record Authenticator", "Fire Safety Auditor", "Utilities Sync AI"
 ];
 
-const infraModules = [
-  {
-    title: "Structural Health & Safety",
-    icon: <Activity size={20} />,
-    items: ["AI Building Structural Health Index", "Earthquake Safety Inspection", "Fire Hazard Prediction"]
-  },
-  {
-    title: "Construction & Expansion",
-    icon: <Hammer size={20} />,
-    items: ["AI Earthquake Safety Inspection", "Construction Progress Tracker", "Material Cost Estimator"]
-  },
-  {
-    title: "Land & Real Estate",
-    icon: <MapPin size={20} />,
-    items: ["AI Fire Exit Readiness Monitor", "Title Deed Verification DB", "Geo-Fencing Police Lands"]
-  },
-  {
-    title: "Smart Maintenance",
-    icon: <Building size={20} />,
-    items: ["Predictive Plumbing/Electrical", "Solar Panel Efficiency Monitor", "Campus Waste Management"]
-  }
-];
-
-const aiFeatures = [
-  "IoT-based Structural Strain Detection", "Drone-assisted Construction Auditing", "Satellite Encroachment Detection",
-  "Automated Energy Efficiency Scoring", "Predictive Lifecycle Maintenance", "BIM (Building Info Modeling) Sync"
-];
-
-const databases = [
-  "Police_Land_Registry", "Structural_Health_Logs", "Blueprint_Archives", 
-  "Construction_Contracts", "Facility_Maintenance_DB"
-];
-
-const apis = [
-  "Municipal Corporation API", "PWD (Public Works) Sync Hook", "Satellite Imaging (ISRO)", 
-  "Smart City IoT Gateway", "Disaster Management APIs"
-];
-
-const dashboards = [
-  "Live Structural Health Map", "Encroachment Alerts", "Construction Budget Tracker", 
-  "Green Campus Index"
-];
-
-const reports = [
-  "Annual Facility Audit", "Seismic Vulnerability Report", "Land Asset Valuation",
-  "Maintenance Cost Savings"
-];
-
-const security = [
-  "Encrypted Land Deed Storage", "Drone Jamming at Sensitive Sites", "Strict RBAC for Blueprint Access",
-  "Tamper-proof IoT Sensor Networks"
-];
-
-const futureScope = [
-  "3D Printed Outposts", "Self-Healing Concrete Tech", "Digital Twin for every Station",
-  "Zero-Carbon Police HQs"
-];
-
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'Infra Bots', icon: <Bot size={18} /> },
-  { id: 'modules', label: 'Engineering Modules', icon: <LayoutDashboard size={18} /> },
+  { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
+  { id: 'modules', label: 'Advanced Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
-  { id: 'reports', label: 'Audit Dashboards', icon: <PieChart size={18} /> },
+  { id: 'reports', label: 'Dashboards', icon: <PieChart size={18} /> },
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
@@ -90,23 +32,29 @@ const PoliceInfrastructure95Detailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <Building className="inline-icon" size={28} /> AI Police Infrastructure Engineering
+              <ShieldAlert className="inline-icon" size={28} /> POLICE INFRASTRUCTURE
             </h2>
+            
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>Police Infrastructure Engineering</strong> manages the vast physical footprint of the police force. Using satellite imagery, IoT sensors, and advanced civil engineering AI, it tracks structural health, predicts maintenance needs, and protects police lands from encroachment.
+              <strong>POLICE INFRASTRUCTURE</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in structural ai, asset mapping & smart facilities.
             </p>
-            <div className="stats-grid">
-              <div className="stat-card">
-                <div className="stat-value">IoT</div>
-                <div className="stat-label">Structural Sensors</div>
+
+            <div className="split-section" style={{ gap: '1.5rem' }}>
+              <div className="panel" style={{ padding: '1.5rem' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#3b82f6" /> Real-time Monitoring</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Continuous AI-driven surveillance and data collection ensuring immediate anomaly detection and rapid response protocols.</p>
               </div>
-              <div className="stat-card">
-                <div className="stat-value">Zero</div>
-                <div className="stat-label">Encroachment</div>
+              <div className="panel" style={{ padding: '1.5rem' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Cpu className="inline-icon" color="#10b981" /> Predictive Analytics</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Utilizes machine learning to forecast trends, identify potential risks before they occur, and suggest optimized resource allocation.</p>
               </div>
-              <div className="stat-card">
-                <div className="stat-value">AI</div>
-                <div className="stat-label">Blueprint Gen</div>
+              <div className="panel" style={{ padding: '1.5rem' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#f59e0b" /> Seamless Integration</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Hooks into existing national and state-level databases, providing a unified, interoperable platform across all departments.</p>
+              </div>
+              <div className="panel" style={{ padding: '1.5rem' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Shield className="inline-icon" color="#ef4444" /> Automated Compliance</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Ensures all operations strictly adhere to legal and procedural guidelines, generating instant audit trails and compliance reports.</p>
               </div>
             </div>
           </motion.div>
@@ -125,10 +73,15 @@ const PoliceInfrastructure95Detailed = () => {
       case 'modules':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="module-accordion">
-            {infraModules.map((mod, i) => (
+            {[
+              { title: "Real-time Monitoring Module", items: ["Live Data Stream", "Alert Engine", "Geospatial Tracking"] },
+              { title: "Predictive Analytics Engine", items: ["Risk Forecasting", "Resource Optimization", "Pattern Recognition"] },
+              { title: "Automated Reporting System", items: ["Compliance Audits", "Daily Briefings", "Incident Logs"] },
+              { title: "Cloud Integration Hub", items: ["State DB Sync", "Third-party API Webhooks", "Encrypted Data Transfer"] }
+            ].map((mod, i) => (
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} key={i} className="premium-module-panel">
                 <div className="module-header">
-                  {mod.icon}
+                  <LayoutDashboard size={20} color="#3b82f6" />
                   <h3>{mod.title}</h3>
                 </div>
                 <div className="module-tags">
@@ -143,7 +96,10 @@ const PoliceInfrastructure95Detailed = () => {
       case 'features':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid">
-            {aiFeatures.map((feat, i) => (
+            {[
+              "24/7 AI Processing", "Advanced Machine Learning Models", "Real-time Data Sync", 
+              "Automated Alerts & Notifications", "Cross-Platform Accessibility", "Role-Based Access Control"
+            ].map((feat, i) => (
               <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-purple">
                 <Cpu className="card-icon" />
                 <h4>{feat}</h4>
@@ -156,15 +112,19 @@ const PoliceInfrastructure95Detailed = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
             <div className="split-section">
               <div className="panel">
-                <h3><Database className="inline-icon" color="#06b6d4" /> Database Tables</h3>
+                <h3><Database className="inline-icon" color="#06b6d4" /> Database Integration</h3>
                 <div className="tag-cloud">
-                  {databases.map((db, i) => <span key={i} className="tech-tag">{db}</span>)}
+                  {["Primary_Transaction_DB", "Analytics_Data_Warehouse", "Audit_Logs_Archive", "User_Access_Registry", "System_Configuration_DB"].map((db, i) => (
+                    <span key={i} className="tech-tag">{db}</span>
+                  ))}
                 </div>
               </div>
               <div className="panel">
                 <h3><Network className="inline-icon" color="#8b5cf6" /> System APIs</h3>
                 <div className="tag-cloud">
-                  {apis.map((api, i) => <span key={i} className="tech-tag tech-tag-alt">{api}</span>)}
+                  {["RESTful Core API", "Real-time WebSocket Feed", "Third-party Webhooks", "Authentication Gateway", "Data Export API"].map((api, i) => (
+                    <span key={i} className="tech-tag tech-tag-alt">{api}</span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -177,13 +137,17 @@ const PoliceInfrastructure95Detailed = () => {
               <div className="panel">
                 <h3><LayoutDashboard className="inline-icon" color="#3b82f6" /> Dashboards</h3>
                 <ul className="premium-list">
-                  {dashboards.map((d, i) => <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>)}
+                  {["Executive Overview Dashboard", "Live Operations Monitor", "Historical Trend Analysis", "System Health & Status"].map((d, i) => (
+                    <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>
+                  ))}
                 </ul>
               </div>
               <div className="panel">
                 <h3><FileText className="inline-icon" color="#10b981" /> Generated Reports</h3>
                 <ul className="premium-list">
-                  {reports.map((r, i) => <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>)}
+                  {["Daily Summary Report", "Weekly Performance Analytics", "Monthly Compliance Audit", "System Exception Logs"].map((r, i) => (
+                    <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -196,13 +160,21 @@ const PoliceInfrastructure95Detailed = () => {
               <div className="panel highlight-red">
                 <h3><ShieldAlert className="inline-icon" color="#ef4444" /> Security Protocols</h3>
                 <ul className="premium-list">
-                  {security.map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
+                  {[
+                    "End-to-End Data Encryption (AES-256)", "Multi-Factor Authentication (MFA)", 
+                    "Strict Role-Based Access Control (RBAC)", "Tamper-proof Audit Trails", 
+                    "Automated Threat Detection", "Regular Security Penetration Testing"
+                  ].map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
                 </ul>
               </div>
               <div className="panel highlight-green">
                 <h3><Rocket className="inline-icon" color="#10b981" /> Future Enhancements</h3>
                 <ul className="premium-list">
-                  {futureScope.map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
+                  {[
+                    "Integration with Advanced LLMs", "Predictive Autonomous Actions", 
+                    "Enhanced Mobile Accessibility", "Cross-Agency Data Federation", 
+                    "Blockchain-based Immutability", "Next-Gen UI/UX Overhaul"
+                  ].map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
                 </ul>
               </div>
             </div>
@@ -218,13 +190,14 @@ const PoliceInfrastructure95Detailed = () => {
       <div className="hrms-bg-fx"></div>
       <div className="hrms-grid-overlay"></div>
       
+      {/* Header */}
       <header className="hrms-header">
         <button onClick={() => navigate(-1)} className="back-btn">
           <ArrowLeft size={20} /> BACK TO MODULES
         </button>
         <div className="header-titles">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="icon-wrapper">
-            <Building size={40} color="#06b6d4" />
+            <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
             <h1 className="cyber-title">POLICE <span>INFRASTRUCTURE</span></h1>
@@ -233,10 +206,12 @@ const PoliceInfrastructure95Detailed = () => {
         </div>
       </header>
 
+      {/* Main Layout */}
       <div className="hrms-layout">
-        <aside className="hrms-sidebar">
+        {/* Sidebar Nav */}
+        <nav className="hrms-sidebar">
           {tabs.map(tab => (
-            <button
+            <button 
               key={tab.id}
               className={`tab-btn ${activeTab === tab.id ? 'active' : ''}`}
               onClick={() => setActiveTab(tab.id)}
@@ -244,10 +219,14 @@ const PoliceInfrastructure95Detailed = () => {
               {tab.icon} {tab.label}
             </button>
           ))}
-        </aside>
-        <main className="hrms-main-content scrollbar-hide">
+        </nav>
+
+        {/* Content Area */}
+        <main className="hrms-content-area">
           <AnimatePresence mode="wait">
-            {renderContent()}
+            <div key={activeTab}>
+              {renderContent()}
+            </div>
           </AnimatePresence>
         </main>
       </div>

@@ -2,31 +2,77 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Crosshair, Package, Fingerprint, Radio, RotateCcw, Box, Wrench, Users, Stethoscope, Target, Clock, Droplet, ClipboardCheck, Scan, UserCheck, RefreshCw, Truck, Wind, Zap, AlertTriangle, Share2, Briefcase, Hourglass, Thermometer, AlertOctagon, Maximize, Archive, Siren, Wifi, Scale, Key, Video
+  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Map, Truck
 } from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
-const aiExperts = ["Sniper Scope Calibration AI","Radar Gun Tuner Bot","Breathalyzer Accuracy Tracker","Laser Sight Alignment AI","Ballistic Telemetry Modeler","Legal Compliance Auditor","Drift Degradation Predictor","Acoustic Sensor Calibrator","Optical Clarity Analyzer","Night-Vision Phosphor AI","Drone Gimbal Stabilizer"];
-const aiFeatures = ["AI Predictive Sensor Drift Modeling","Automated Court-Defensible Calibration Logs","Sniper Ballistic Telemetry Sync","Optical Scanners for Night-Vision/Scopes","Radar Gun Doppler Frequency Checks","Breathalyzer Fuel-Cell Expiry Alerts","Automated Decommissioning of Out-of-Spec Gear","Integration with Metrology Labs"];
-const databases = ["Calibration_Master_Ledger","Sensor_Drift_Telemetry","Sniper_Ballistic_Profiles","Radar_Frequency_Logs","Breathalyzer_FuelCell_DB","Legal_Compliance_Certificates","Optical_Clarity_Scans","NightVision_Phosphor_DB","Metrology_Lab_Results","Decommission_Archive"];
-const dashboards = ["Overdue Calibration Alerts","Equipment Accuracy Scores","Sensor Drift Analytics","Sniper Scope Readiness","Legal Defensibility Index","Metrology Lab Pipeline"];
-const apis = ["National Metrology Standards API","Court Evidence Management Sync","Optical Testing Rigs","Traffic Department Radar DB","Quartermaster ERP","Supplier Diagnostic Portals"];
-const reports = ["Monthly Calibration Compliance","Court-Defensible Accuracy Certificates","Sensor Drift Degradation Study","Sniper Unit Ballistic Readiness","Breathalyzer Failure Rates","Supplier Defect Analytics"];
-const security = ["Blockchain Immutable Certificates","Digital Metrologist Signatures","Tamper-Evident Digital Seals","Air-Gapped Testing Rigs","Encrypted Ballistic Profiles","Biometric Lab Access","Automated Evidence Flagging (Uncalibrated Use)","Strict Version Control"];
-const futureScope = ["Self-Calibrating Smart Scopes","Quantum Doppler Radars","AI Optical Restoration","Cloud-based Ballistic Sync","Drone Laser Metrology","Neural-Linked Optics"];
-
-const modules = [
-  { title: "Precision Optics", icon: <Crosshair size={20} />, items: ["Sniper Scopes","Laser Alignment","Night-Vision Scans","Optical Clarity"] },
-  { title: "Traffic & Sensors", icon: <Wifi size={20} />, items: ["Radar Doppler Tuning","Breathalyzer Cells","Acoustic Sensors","Drift Prediction"] },
-  { title: "Legal Compliance", icon: <Scale size={20} />, items: ["Defensible Logs","Immutable Certificates","Evidence Flagging","Metrology Sync"] },
-  { title: "Lifecycle & Diagnostics", icon: <Stethoscope size={20} />, items: ["Decommissioning","Supplier Defects","Automated Testing","Usage Telemetry"] },
-  { title: "Advanced Ballistics", icon: <Target size={20} />, items: ["Telemetry Sync","Profile Matching","Drone Gimbals","Recoil Adjustments"] }
+const aiExperts = [
+"Predictive Equipment Calibration Tracker",
+  "Sniper Rifle Optical Alignment AI",
+  "Speed Radar Gun Calibration Modeler",
+  "Breathalyzer Sensor Accuracy Analyzer",
+  "Laser Range Finder Sync Bot",
+  "Ballistic Chronograph Calibration AI",
+  "Acoustic Shot-Spotter Sync AI",
+  "Night Vision Optic Focus Calibration Bot",
+  "Thermal Imaging Sensor Drift Analyzer",
+  "Metal Detector Sensitivity Calibrator",
+  "Explosive Sniffer Trace Analyzer AI",
+  "Weighing Scale Precision Modeler",
+  "Biometric Scanner Resolution Sync AI",
+  "Automated Expiry & Recalibration Notifier",
+  "Supplier SLA Calibration Tracker",
+  "Drone Camera Gimbal Calibration AI",
+  "Body-Cam Lens Focus Calibration AI",
+  "Police Vehicle Speedometer Sync Bot",
+  "Automated Equipment Show-Cause Generator",
+  "Missing Calibration Certificate Sentinel",
+  "Armoury Logistics & Dispatch Coordinator",
+  "CCTV Armoury Integration Sentinel",
+  "Digital Thermometer Calibration Sync",
+  "Laser Sight Defect Analyzer",
+  "Decibel Meter Sound Calibration AI",
+  "Radiation Dosimeter Sync AI",
+  "Gas Mask Filter Seal Tester AI",
+  "GPS Tracker Geolocation Accuracy AI",
+  "Mobile Radio Frequency Sync Bot",
+  "Handcuff Tension & Lock Tester AI",
+  "Taser Voltage Output Calibrator",
+  "Riot Shield Impact Sensor Calibration",
+  "Smart Baton Accelerometer Sync",
+  "Bomb Suit Vital Sensor Calibration",
+  "Air-Quality Monitor Calibration Bot",
+  "Digital Evidence Hash Validator AI",
+  "Forensic Lab Microscope Focus AI",
+  "Fingerprint Powder Adhesion Tester",
+  "K9 Scent-Kit Potency Calibrator",
+  "Polygraph Machine Baseline Sync AI",
+  "Automated Calibration Report Generator",
+  "Vendor Repair & Defect Profiler",
+  "Tactical Comm-link Sync Alert AI",
+  "Equipment Quarantine Alerter",
+  "Inter-Departmental Transfer Calibration Sync",
+  "Helicopter Altimeter Calibration Bot",
+  "Marine Patrol Sonar Calibration AI",
+  "Underwater Camera Lens Focus AI",
+  "Central Reserve Equipment Monitor",
+  "Next-Gen Smart Equipment Procurement AI",
+  "Budget Forecasting for Recalibration",
+  "Depreciation Value Calculator for Assets",
+  "Blockchain Calibration Certificate Ledger",
+  "Air-Gapped Inventory Verification Bot",
+  "Tamper-Evident Seal Registry AI",
+  "Biometric Calibration Access Authenticator",
+  "Automated Inter-Departmental Requisition AI",
+  "Mobile Calibration Dispatch Bot",
+  "Advanced Climate Wear Adjuster AI",
+  "Real-Time Equipment Readiness Dashboard AI"
 ];
 
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'AI Agents', icon: <Bot size={18} /> },
-  { id: 'modules', label: 'Core Modules', icon: <LayoutDashboard size={18} /> },
+  { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
+  { id: 'modules', label: 'Advanced Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
   { id: 'reports', label: 'Dashboards', icon: <PieChart size={18} /> },
@@ -43,20 +89,30 @@ const EquipmentCalibrationDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <Cpu className="inline-icon" size={28} /> AI EQUIPMENT CALIBRATION
+              <ShieldAlert className="inline-icon" size={28} /> EQUIPMENT CALIBRATION
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>AI EQUIPMENT CALIBRATION</strong> manages the precision tuning of specialized gear. From sniper rifle scopes to traffic radar guns and breathalyzers, this AI ensures every piece of technical equipment is mathematically calibrated to legally defensible standards.
+              <strong>EQUIPMENT CALIBRATION</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in sniper scope ai, radar guns & ballistic telemetry.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
-              {modules.slice(0,4).map((mod, i) => (
-                <div key={i} className="panel" style={{ padding: '1.5rem' }}>
-                  <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}>{mod.icon} {mod.title}</h3>
-                  <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Advanced AI algorithms and neural networks power the {mod.title.toLowerCase()} systems, ensuring highly precise and real-time operational efficiency.</p>
-                </div>
-              ))}
+              <div className="panel" style={{ padding: '1.5rem' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#3b82f6" /> Real-time Monitoring</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Continuous AI-driven surveillance and data collection ensuring immediate anomaly detection and rapid response protocols.</p>
+              </div>
+              <div className="panel" style={{ padding: '1.5rem' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Cpu className="inline-icon" color="#10b981" /> Predictive Analytics</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Utilizes machine learning to forecast trends, identify potential risks before they occur, and suggest optimized resource allocation.</p>
+              </div>
+              <div className="panel" style={{ padding: '1.5rem' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#f59e0b" /> Seamless Integration</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Hooks into existing national and state-level databases, providing a unified, interoperable platform across all departments.</p>
+              </div>
+              <div className="panel" style={{ padding: '1.5rem' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Shield className="inline-icon" color="#ef4444" /> Automated Compliance</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Ensures all operations strictly adhere to legal and procedural guidelines, generating instant audit trails and compliance reports.</p>
+              </div>
             </div>
           </motion.div>
         );
@@ -74,10 +130,15 @@ const EquipmentCalibrationDetailed = () => {
       case 'modules':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="module-accordion">
-            {modules.map((mod, i) => (
+            {[
+              { title: "Real-time Monitoring Module", items: ["Live Data Stream", "Alert Engine", "Geospatial Tracking"] },
+              { title: "Predictive Analytics Engine", items: ["Risk Forecasting", "Resource Optimization", "Pattern Recognition"] },
+              { title: "Automated Reporting System", items: ["Compliance Audits", "Daily Briefings", "Incident Logs"] },
+              { title: "Cloud Integration Hub", items: ["State DB Sync", "Third-party API Webhooks", "Encrypted Data Transfer"] }
+            ].map((mod, i) => (
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} key={i} className="premium-module-panel">
                 <div className="module-header">
-                  {mod.icon}
+                  <LayoutDashboard size={20} color="#3b82f6" />
                   <h3>{mod.title}</h3>
                 </div>
                 <div className="module-tags">
@@ -92,7 +153,10 @@ const EquipmentCalibrationDetailed = () => {
       case 'features':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid">
-            {aiFeatures.map((feat, i) => (
+            {[
+              "24/7 AI Processing", "Advanced Machine Learning Models", "Real-time Data Sync", 
+              "Automated Alerts & Notifications", "Cross-Platform Accessibility", "Role-Based Access Control"
+            ].map((feat, i) => (
               <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-purple">
                 <Cpu className="card-icon" />
                 <h4>{feat}</h4>
@@ -105,15 +169,19 @@ const EquipmentCalibrationDetailed = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
             <div className="split-section">
               <div className="panel">
-                <h3><Database className="inline-icon" color="#06b6d4" /> Database Tables</h3>
+                <h3><Database className="inline-icon" color="#06b6d4" /> Database Integration</h3>
                 <div className="tag-cloud">
-                  {databases.map((db, i) => <span key={i} className="tech-tag">{db}</span>)}
+                  {["Primary_Transaction_DB", "Analytics_Data_Warehouse", "Audit_Logs_Archive", "User_Access_Registry", "System_Configuration_DB"].map((db, i) => (
+                    <span key={i} className="tech-tag">{db}</span>
+                  ))}
                 </div>
               </div>
               <div className="panel">
                 <h3><Network className="inline-icon" color="#8b5cf6" /> System APIs</h3>
                 <div className="tag-cloud">
-                  {apis.map((api, i) => <span key={i} className="tech-tag tech-tag-alt">{api}</span>)}
+                  {["RESTful Core API", "Real-time WebSocket Feed", "Third-party Webhooks", "Authentication Gateway", "Data Export API"].map((api, i) => (
+                    <span key={i} className="tech-tag tech-tag-alt">{api}</span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -126,13 +194,17 @@ const EquipmentCalibrationDetailed = () => {
               <div className="panel">
                 <h3><LayoutDashboard className="inline-icon" color="#3b82f6" /> Dashboards</h3>
                 <ul className="premium-list">
-                  {dashboards.map((d, i) => <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>)}
+                  {["Executive Overview Dashboard", "Live Operations Monitor", "Historical Trend Analysis", "System Health & Status"].map((d, i) => (
+                    <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>
+                  ))}
                 </ul>
               </div>
               <div className="panel">
                 <h3><FileText className="inline-icon" color="#10b981" /> Generated Reports</h3>
                 <ul className="premium-list">
-                  {reports.map((r, i) => <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>)}
+                  {["Daily Summary Report", "Weekly Performance Analytics", "Monthly Compliance Audit", "System Exception Logs"].map((r, i) => (
+                    <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -145,13 +217,21 @@ const EquipmentCalibrationDetailed = () => {
               <div className="panel highlight-red">
                 <h3><ShieldAlert className="inline-icon" color="#ef4444" /> Security Protocols</h3>
                 <ul className="premium-list">
-                  {security.map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
+                  {[
+                    "End-to-End Data Encryption (AES-256)", "Multi-Factor Authentication (MFA)", 
+                    "Strict Role-Based Access Control (RBAC)", "Tamper-proof Audit Trails", 
+                    "Automated Threat Detection", "Regular Security Penetration Testing"
+                  ].map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
                 </ul>
               </div>
               <div className="panel highlight-green">
                 <h3><Rocket className="inline-icon" color="#10b981" /> Future Enhancements</h3>
                 <ul className="premium-list">
-                  {futureScope.map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
+                  {[
+                    "Integration with Advanced LLMs", "Predictive Autonomous Actions", 
+                    "Enhanced Mobile Accessibility", "Cross-Agency Data Federation", 
+                    "Blockchain-based Immutability", "Next-Gen UI/UX Overhaul"
+                  ].map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
                 </ul>
               </div>
             </div>
@@ -174,7 +254,7 @@ const EquipmentCalibrationDetailed = () => {
         </button>
         <div className="header-titles">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="icon-wrapper">
-            <Cpu size={40} color="#06b6d4" />
+            <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
             <h1 className="cyber-title">EQUIPMENT <span>CALIBRATION</span></h1>

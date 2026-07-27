@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Users, Camera, Video, Mic, Scan
+  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Map, Truck
 } from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "Video Analytics Engine AI", "Audio Forensics AI", "Geospatial Threat Mapper", 
+"Video Analytics Engine AI", "Audio Forensics AI", "Geospatial Threat Mapper", 
   "Dark Web Scraper Bot", "Live CCTV Anomaly Detector", "Facial Recognition AI", 
   "Gait & Posture Analyzer", "Lip-Reading AI", "Deepfake Video Detector",
   "Deepfake Audio Detector", "License Plate Recognition AI", "Crowd Sentiment Analyzer (Visual)",
@@ -29,78 +29,13 @@ const aiExperts = [
   "Forensic Blood-Spatter Analyzer AI", "Crime Scene Blueprint Generator", "Virtual Reality Reconstruction Agent"
 ];
 
-const multimodalModules = [
-  {
-    title: "Video & CCTV Analytics",
-    icon: <Video size={20} />,
-    items: ["Real-time Facial Recognition", "Cross-camera Suspect Tracking", "Abandoned Object Detection", "ANPR (Number Plate Reading)"]
-  },
-  {
-    title: "Audio Forensics",
-    icon: <Mic size={20} />,
-    items: ["Wiretap Keyword Flagging", "Voice ID Matching", "Background Noise Isolation", "Dialect/Language Identification"]
-  },
-  {
-    title: "Image & Biometric Scan",
-    icon: <Camera size={20} />,
-    items: ["Tattoo/Scar Database Matching", "Latent Fingerprint Enhancement", "Shoe-print Classification", "Retina/Iris Matching"]
-  },
-  {
-    title: "Document OCR & Text",
-    icon: <Scan size={20} />,
-    items: ["Handwritten Note Parsing", "Burnt Document Reconstruction", "Multi-lingual Pamphlet Translation", "Fake Currency Detection"]
-  },
-  {
-    title: "Deepfake & Cyber-Vision",
-    icon: <ShieldAlert size={20} />,
-    items: ["AI-Generated Video Detection", "Voice Cloning Identification", "Metadata Forgery Checks", "Social Media Image Scraping"]
-  }
-];
-
-const aiFeatures = [
-  "AI Multimodal Fusion (Audio + Video)", "AI Zero-Shot Object Detection", "AI Semantic Video Search (e.g., 'Red car 2PM')",
-  "AI Deep-learning Super Resolution", "AI Crowd Behavioral Anomaly Detection", "AI Temporal Audio Synchronization",
-  "AI Gun/Knife Pose Estimation", "AI Cross-lingual Audio Transcription"
-];
-
-const databases = [
-  "CCTV_Archives", "Biometric_Face_Vault", "Tattoo_Signatures", "Audio_Voiceprints", "ANPR_Logs", 
-  "Deepfake_Models", "Fingerprint_AFIS", "Forensic_Images", "Translated_Transcripts", "Suspect_Gait_Profiles"
-];
-
-const dashboards = [
-  "Live City-wide CCTV Grid", "Facial Recognition Hit Board", "Audio Interrogation Timeline", 
-  "Deepfake Analysis Report", "Multimodal Fusion Canvas", "ANPR Tracking Map"
-];
-
-const apis = [
-  "Smart City CCTV Feeds", "National AFIS (Fingerprint) APIs", "RTO Vahan APIs (ANPR)", "Telecom Wiretap APIs",
-  "Forensic Lab LIMS APIs", "Deepfake Detection Engine APIs", "Open-Source Image Scraping APIs"
-];
-
-const reports = [
-  "CCTV Suspect Tracking Timeline", "Audio Voice-Match Confidence Report", "Deepfake Forgery Audit", 
-  "Tattoo Match Case Linkage", "ANPR Movement History", "Crowd Density Heatmap"
-];
-
-const security = [
-  "Facial Data Hash Encryption", "Strict Court-Order Access Control", "Dynamic Video Redaction (Blurring)", 
-  "Immutable Forensic Hashes", "Zero-Trust Biometric Vaults", 
-  "Audio-Stream Encryption", "API Rate Limiting", "Deepfake Model Weight Protection"
-];
-
-const futureScope = [
-  "Real-time Holographic Video Reconstruction", "Brainwave Lie Detection", "Satellite Thermal Imaging Sync",
-  "Predictive Micro-expression Flags", "Autonomous Drone Camera Handoffs", "Quantum Image Processing"
-];
-
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: `Multimodal Analysts (${aiExperts.length})`, icon: <Bot size={18} /> },
-  { id: 'modules', label: 'Multimodal Modules', icon: <LayoutDashboard size={18} /> },
+  { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
+  { id: 'modules', label: 'Advanced Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
-  { id: 'reports', label: 'Forensic Boards', icon: <PieChart size={18} /> },
+  { id: 'reports', label: 'Dashboards', icon: <PieChart size={18} /> },
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
@@ -114,29 +49,29 @@ const MultimodalDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <Scan className="inline-icon" size={28} /> AI Multimodal Analytics (Vision, Audio & OCR)
+              <ShieldAlert className="inline-icon" size={28} /> AI MULTIMODAL ANALYTICS
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>AI Multimodal Analytics</strong> is the sensory engine of the police department. It processes structured and unstructured data simultaneously—analyzing live CCTV video for facial recognition, transcribing wiretapped audio, reading license plates (ANPR), and detecting deepfakes, all through a unified AI framework.
+              <strong>AI MULTIMODAL ANALYTICS</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in vision, voice & text fusion for advanced forensic intelligence.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Video className="inline-icon" color="#3b82f6" /> Semantic Video Search</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Instead of watching hours of CCTV footage, an officer types "man in red shirt with a backpack." The AI instantly scans 50 cameras and returns all matching timestamps.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#3b82f6" /> Real-time Monitoring</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Continuous AI-driven surveillance and data collection ensuring immediate anomaly detection and rapid response protocols.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Mic className="inline-icon" color="#10b981" /> Voice-Print Forensics</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>The AI matches a kidnapper's ransom call against millions of voice records in the database, while simultaneously filtering out background noise to identify the location.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Cpu className="inline-icon" color="#10b981" /> Predictive Analytics</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Utilizes machine learning to forecast trends, identify potential risks before they occur, and suggest optimized resource allocation.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Camera className="inline-icon" color="#f59e0b" /> Cross-Camera Tracking</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>If a suspect's face is obscured, the AI uses "Gait Analysis" (the way they walk) and clothing patterns to automatically track them as they move from one CCTV to another.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#f59e0b" /> Seamless Integration</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Hooks into existing national and state-level databases, providing a unified, interoperable platform across all departments.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><ShieldAlert className="inline-icon" color="#ef4444" /> Deepfake Detection</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Scans viral political videos or extortion audio clips, using adversarial AI models to detect pixel-level distortions and voice cloning, proving them to be fake.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Shield className="inline-icon" color="#ef4444" /> Automated Compliance</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Ensures all operations strictly adhere to legal and procedural guidelines, generating instant audit trails and compliance reports.</p>
               </div>
             </div>
           </motion.div>
@@ -155,10 +90,15 @@ const MultimodalDetailed = () => {
       case 'modules':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="module-accordion">
-            {multimodalModules.map((mod, i) => (
+            {[
+              { title: "Real-time Monitoring Module", items: ["Live Data Stream", "Alert Engine", "Geospatial Tracking"] },
+              { title: "Predictive Analytics Engine", items: ["Risk Forecasting", "Resource Optimization", "Pattern Recognition"] },
+              { title: "Automated Reporting System", items: ["Compliance Audits", "Daily Briefings", "Incident Logs"] },
+              { title: "Cloud Integration Hub", items: ["State DB Sync", "Third-party API Webhooks", "Encrypted Data Transfer"] }
+            ].map((mod, i) => (
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} key={i} className="premium-module-panel">
                 <div className="module-header">
-                  {mod.icon}
+                  <LayoutDashboard size={20} color="#3b82f6" />
                   <h3>{mod.title}</h3>
                 </div>
                 <div className="module-tags">
@@ -173,7 +113,10 @@ const MultimodalDetailed = () => {
       case 'features':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid">
-            {aiFeatures.map((feat, i) => (
+            {[
+              "24/7 AI Processing", "Advanced Machine Learning Models", "Real-time Data Sync", 
+              "Automated Alerts & Notifications", "Cross-Platform Accessibility", "Role-Based Access Control"
+            ].map((feat, i) => (
               <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-purple">
                 <Cpu className="card-icon" />
                 <h4>{feat}</h4>
@@ -186,15 +129,19 @@ const MultimodalDetailed = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
             <div className="split-section">
               <div className="panel">
-                <h3><Database className="inline-icon" color="#06b6d4" /> Database Tables</h3>
+                <h3><Database className="inline-icon" color="#06b6d4" /> Database Integration</h3>
                 <div className="tag-cloud">
-                  {databases.map((db, i) => <span key={i} className="tech-tag">{db}</span>)}
+                  {["Primary_Transaction_DB", "Analytics_Data_Warehouse", "Audit_Logs_Archive", "User_Access_Registry", "System_Configuration_DB"].map((db, i) => (
+                    <span key={i} className="tech-tag">{db}</span>
+                  ))}
                 </div>
               </div>
               <div className="panel">
                 <h3><Network className="inline-icon" color="#8b5cf6" /> System APIs</h3>
                 <div className="tag-cloud">
-                  {apis.map((api, i) => <span key={i} className="tech-tag tech-tag-alt">{api}</span>)}
+                  {["RESTful Core API", "Real-time WebSocket Feed", "Third-party Webhooks", "Authentication Gateway", "Data Export API"].map((api, i) => (
+                    <span key={i} className="tech-tag tech-tag-alt">{api}</span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -207,13 +154,17 @@ const MultimodalDetailed = () => {
               <div className="panel">
                 <h3><LayoutDashboard className="inline-icon" color="#3b82f6" /> Dashboards</h3>
                 <ul className="premium-list">
-                  {dashboards.map((d, i) => <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>)}
+                  {["Executive Overview Dashboard", "Live Operations Monitor", "Historical Trend Analysis", "System Health & Status"].map((d, i) => (
+                    <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>
+                  ))}
                 </ul>
               </div>
               <div className="panel">
                 <h3><FileText className="inline-icon" color="#10b981" /> Generated Reports</h3>
                 <ul className="premium-list">
-                  {reports.map((r, i) => <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>)}
+                  {["Daily Summary Report", "Weekly Performance Analytics", "Monthly Compliance Audit", "System Exception Logs"].map((r, i) => (
+                    <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -226,13 +177,21 @@ const MultimodalDetailed = () => {
               <div className="panel highlight-red">
                 <h3><ShieldAlert className="inline-icon" color="#ef4444" /> Security Protocols</h3>
                 <ul className="premium-list">
-                  {security.map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
+                  {[
+                    "End-to-End Data Encryption (AES-256)", "Multi-Factor Authentication (MFA)", 
+                    "Strict Role-Based Access Control (RBAC)", "Tamper-proof Audit Trails", 
+                    "Automated Threat Detection", "Regular Security Penetration Testing"
+                  ].map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
                 </ul>
               </div>
               <div className="panel highlight-green">
                 <h3><Rocket className="inline-icon" color="#10b981" /> Future Enhancements</h3>
                 <ul className="premium-list">
-                  {futureScope.map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
+                  {[
+                    "Integration with Advanced LLMs", "Predictive Autonomous Actions", 
+                    "Enhanced Mobile Accessibility", "Cross-Agency Data Federation", 
+                    "Blockchain-based Immutability", "Next-Gen UI/UX Overhaul"
+                  ].map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
                 </ul>
               </div>
             </div>
@@ -255,7 +214,7 @@ const MultimodalDetailed = () => {
         </button>
         <div className="header-titles">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="icon-wrapper">
-            <Scan size={40} color="#06b6d4" />
+            <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
             <h1 className="cyber-title">AI MULTIMODAL <span>ANALYTICS</span></h1>

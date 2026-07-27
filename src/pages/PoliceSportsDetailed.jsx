@@ -2,81 +2,23 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Trophy, Medal, HeartPulse
+  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Map, Truck
 } from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "Athlete Scout AI", "Diet Plan Generator", "Injury Predictor Bot", 
+"Athlete Scout AI", "Diet Plan Generator", "Injury Predictor Bot", 
   "Tournament Scheduler", "Performance Analyst AI", "Match Statistics Bot", 
   "Equipment Tracker AI", "Training Regime Optimizer", "Fitness Level Monitor"
 ];
 
-const sportsModules = [
-  {
-    title: "Event & Tournament Ops",
-    icon: <Trophy size={20} />,
-    items: ["AI Police Sports Tournament Manager", "Automated Fixture Generator", "Venue Availability Tracker"]
-  },
-  {
-    title: "Athlete Performance",
-    icon: <Activity size={20} />,
-    items: ["AI Sports Team Selection Assistant", "Player Metric Analytics", "Fitness Regimen Generator"]
-  },
-  {
-    title: "Health & Nutrition",
-    icon: <HeartPulse size={20} />,
-    items: ["AI Shooting Competition Records", "Sports Injury Prediction", "Recovery Phase Monitor"]
-  },
-  {
-    title: "Logistics & Equipment",
-    icon: <Medal size={20} />,
-    items: ["Sports Gear Inventory", "Event Logistics AI", "Team Travel Coordination"]
-  }
-];
-
-const aiFeatures = [
-  "Predictive Injury Modeling", "Automated Talent Scouting via Stats", "Real-time Match Analytics",
-  "Optimized Training Load Balancing", "Nutritional Gap Analysis", "Dynamic Bracket Generation"
-];
-
-const databases = [
-  "Athlete_Performance_DB", "Tournament_Fixtures", "Injury_Recovery_Logs", 
-  "Sports_Gear_Inventory", "Nutritional_Profiles"
-];
-
-const apis = [
-  "Wearable Fitness Sync API", "Sports Equipment Vendor Hook", "Hospital/Physio Connect API", 
-  "Live Match Scoring Gateway", "National Sports Registry Sync"
-];
-
-const dashboards = [
-  "Athlete Vitals Dashboard", "Tournament Bracket Overview", "Sports Budget & Expense", 
-  "Injury Heatmap"
-];
-
-const reports = [
-  "Quarterly Police Sports Report", "Athlete Progress Cards", "Tournament Expense Audit",
-  "Equipment Wear & Tear Analysis"
-];
-
-const security = [
-  "Athlete Medical Data Encryption", "RBAC for Selection Committees", "Immutable Match Result Logs",
-  "Secure Doping Control Records"
-];
-
-const futureScope = [
-  "VR-based Tactical Sports Training", "Computer Vision Referee Assist", "AI Biomechanical Analysis",
-  "Smart Stadium Crowd Management"
-];
-
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'Sports Bots', icon: <Bot size={18} /> },
-  { id: 'modules', label: 'Athletic Modules', icon: <LayoutDashboard size={18} /> },
+  { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
+  { id: 'modules', label: 'Advanced Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
-  { id: 'reports', label: 'Audit Dashboards', icon: <PieChart size={18} /> },
+  { id: 'reports', label: 'Dashboards', icon: <PieChart size={18} /> },
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
@@ -90,23 +32,29 @@ const PoliceSportsDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <Trophy className="inline-icon" size={28} /> AI Police Sports Overview
+              <ShieldAlert className="inline-icon" size={28} /> POLICE SPORTS
             </h2>
+            
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>Police Sports Module</strong> uses advanced AI to foster a culture of fitness and competitive sports within the department. It tracks athlete performance metrics, predicts potential injuries using wearable data, and completely automates the logistics of managing inter-departmental tournaments.
+              <strong>POLICE SPORTS</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in athlete analytics, injury prediction & tournaments.
             </p>
-            <div className="stats-grid">
-              <div className="stat-card">
-                <div className="stat-value">360°</div>
-                <div className="stat-label">Athlete Profiling</div>
+
+            <div className="split-section" style={{ gap: '1.5rem' }}>
+              <div className="panel" style={{ padding: '1.5rem' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#3b82f6" /> Real-time Monitoring</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Continuous AI-driven surveillance and data collection ensuring immediate anomaly detection and rapid response protocols.</p>
               </div>
-              <div className="stat-card">
-                <div className="stat-value">AI</div>
-                <div className="stat-label">Diet & Recovery</div>
+              <div className="panel" style={{ padding: '1.5rem' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Cpu className="inline-icon" color="#10b981" /> Predictive Analytics</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Utilizes machine learning to forecast trends, identify potential risks before they occur, and suggest optimized resource allocation.</p>
               </div>
-              <div className="stat-card">
-                <div className="stat-value">Live</div>
-                <div className="stat-label">Fixture Tracking</div>
+              <div className="panel" style={{ padding: '1.5rem' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#f59e0b" /> Seamless Integration</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Hooks into existing national and state-level databases, providing a unified, interoperable platform across all departments.</p>
+              </div>
+              <div className="panel" style={{ padding: '1.5rem' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Shield className="inline-icon" color="#ef4444" /> Automated Compliance</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Ensures all operations strictly adhere to legal and procedural guidelines, generating instant audit trails and compliance reports.</p>
               </div>
             </div>
           </motion.div>
@@ -125,10 +73,15 @@ const PoliceSportsDetailed = () => {
       case 'modules':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="module-accordion">
-            {sportsModules.map((mod, i) => (
+            {[
+              { title: "Real-time Monitoring Module", items: ["Live Data Stream", "Alert Engine", "Geospatial Tracking"] },
+              { title: "Predictive Analytics Engine", items: ["Risk Forecasting", "Resource Optimization", "Pattern Recognition"] },
+              { title: "Automated Reporting System", items: ["Compliance Audits", "Daily Briefings", "Incident Logs"] },
+              { title: "Cloud Integration Hub", items: ["State DB Sync", "Third-party API Webhooks", "Encrypted Data Transfer"] }
+            ].map((mod, i) => (
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} key={i} className="premium-module-panel">
                 <div className="module-header">
-                  {mod.icon}
+                  <LayoutDashboard size={20} color="#3b82f6" />
                   <h3>{mod.title}</h3>
                 </div>
                 <div className="module-tags">
@@ -143,7 +96,10 @@ const PoliceSportsDetailed = () => {
       case 'features':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid">
-            {aiFeatures.map((feat, i) => (
+            {[
+              "24/7 AI Processing", "Advanced Machine Learning Models", "Real-time Data Sync", 
+              "Automated Alerts & Notifications", "Cross-Platform Accessibility", "Role-Based Access Control"
+            ].map((feat, i) => (
               <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-purple">
                 <Cpu className="card-icon" />
                 <h4>{feat}</h4>
@@ -156,15 +112,19 @@ const PoliceSportsDetailed = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
             <div className="split-section">
               <div className="panel">
-                <h3><Database className="inline-icon" color="#06b6d4" /> Database Tables</h3>
+                <h3><Database className="inline-icon" color="#06b6d4" /> Database Integration</h3>
                 <div className="tag-cloud">
-                  {databases.map((db, i) => <span key={i} className="tech-tag">{db}</span>)}
+                  {["Primary_Transaction_DB", "Analytics_Data_Warehouse", "Audit_Logs_Archive", "User_Access_Registry", "System_Configuration_DB"].map((db, i) => (
+                    <span key={i} className="tech-tag">{db}</span>
+                  ))}
                 </div>
               </div>
               <div className="panel">
                 <h3><Network className="inline-icon" color="#8b5cf6" /> System APIs</h3>
                 <div className="tag-cloud">
-                  {apis.map((api, i) => <span key={i} className="tech-tag tech-tag-alt">{api}</span>)}
+                  {["RESTful Core API", "Real-time WebSocket Feed", "Third-party Webhooks", "Authentication Gateway", "Data Export API"].map((api, i) => (
+                    <span key={i} className="tech-tag tech-tag-alt">{api}</span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -177,13 +137,17 @@ const PoliceSportsDetailed = () => {
               <div className="panel">
                 <h3><LayoutDashboard className="inline-icon" color="#3b82f6" /> Dashboards</h3>
                 <ul className="premium-list">
-                  {dashboards.map((d, i) => <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>)}
+                  {["Executive Overview Dashboard", "Live Operations Monitor", "Historical Trend Analysis", "System Health & Status"].map((d, i) => (
+                    <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>
+                  ))}
                 </ul>
               </div>
               <div className="panel">
                 <h3><FileText className="inline-icon" color="#10b981" /> Generated Reports</h3>
                 <ul className="premium-list">
-                  {reports.map((r, i) => <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>)}
+                  {["Daily Summary Report", "Weekly Performance Analytics", "Monthly Compliance Audit", "System Exception Logs"].map((r, i) => (
+                    <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -196,13 +160,21 @@ const PoliceSportsDetailed = () => {
               <div className="panel highlight-red">
                 <h3><ShieldAlert className="inline-icon" color="#ef4444" /> Security Protocols</h3>
                 <ul className="premium-list">
-                  {security.map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
+                  {[
+                    "End-to-End Data Encryption (AES-256)", "Multi-Factor Authentication (MFA)", 
+                    "Strict Role-Based Access Control (RBAC)", "Tamper-proof Audit Trails", 
+                    "Automated Threat Detection", "Regular Security Penetration Testing"
+                  ].map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
                 </ul>
               </div>
               <div className="panel highlight-green">
                 <h3><Rocket className="inline-icon" color="#10b981" /> Future Enhancements</h3>
                 <ul className="premium-list">
-                  {futureScope.map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
+                  {[
+                    "Integration with Advanced LLMs", "Predictive Autonomous Actions", 
+                    "Enhanced Mobile Accessibility", "Cross-Agency Data Federation", 
+                    "Blockchain-based Immutability", "Next-Gen UI/UX Overhaul"
+                  ].map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
                 </ul>
               </div>
             </div>
@@ -218,13 +190,14 @@ const PoliceSportsDetailed = () => {
       <div className="hrms-bg-fx"></div>
       <div className="hrms-grid-overlay"></div>
       
+      {/* Header */}
       <header className="hrms-header">
         <button onClick={() => navigate(-1)} className="back-btn">
           <ArrowLeft size={20} /> BACK TO MODULES
         </button>
         <div className="header-titles">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="icon-wrapper">
-            <Trophy size={40} color="#06b6d4" />
+            <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
             <h1 className="cyber-title">POLICE <span>SPORTS</span></h1>
@@ -233,10 +206,12 @@ const PoliceSportsDetailed = () => {
         </div>
       </header>
 
+      {/* Main Layout */}
       <div className="hrms-layout">
-        <aside className="hrms-sidebar">
+        {/* Sidebar Nav */}
+        <nav className="hrms-sidebar">
           {tabs.map(tab => (
-            <button
+            <button 
               key={tab.id}
               className={`tab-btn ${activeTab === tab.id ? 'active' : ''}`}
               onClick={() => setActiveTab(tab.id)}
@@ -244,10 +219,14 @@ const PoliceSportsDetailed = () => {
               {tab.icon} {tab.label}
             </button>
           ))}
-        </aside>
-        <main className="hrms-main-content scrollbar-hide">
+        </nav>
+
+        {/* Content Area */}
+        <main className="hrms-content-area">
           <AnimatePresence mode="wait">
-            {renderContent()}
+            <div key={activeTab}>
+              {renderContent()}
+            </div>
           </AnimatePresence>
         </main>
       </div>

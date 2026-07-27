@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Users, HardDrive, Layers, Filter
+  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Map, Truck
 } from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "Big Data Architect AI", "ETL Pipeline Optimizer", "Unstructured Data Parser AI", 
+"Big Data Architect AI", "ETL Pipeline Optimizer", "Unstructured Data Parser AI", 
   "Metadata Tagging Engine", "Data Governance Auditor AI", "Dark Data Miner AI", 
   "Cross-Schema Query Optimizer", "Cold-Storage Archival Bot", "Data Lake Security Enforcer",
   "Anomaly Detection Agent AI", "Semantic Lake Search AI", "Batch Ingestion Coordinator",
@@ -29,78 +29,13 @@ const aiExperts = [
   "Data Lake Health Indexer", "Zero-Trust Data Governor", "Blockchain Evidence Hasher"
 ];
 
-const dataLakeModules = [
-  {
-    title: "Data Ingestion & ETL",
-    icon: <Filter size={20} />,
-    items: ["Real-time CCTV Stream Ingest", "Batch FIR Uploads", "Telecom CDR Parsing", "Social Media Firehose Sync"]
-  },
-  {
-    title: "Unstructured Data Mining",
-    icon: <Layers size={20} />,
-    items: ["Audio Interrogation Parsing", "Handwritten Diary OCR", "Dark Web Dump Indexing", "Video Metadata Extraction"]
-  },
-  {
-    title: "Federated Query Engine",
-    icon: <Activity size={20} />,
-    items: ["Cross-DB Unified Search", "Natural Language to SQL", "Graph/Relational Joins", "Millisecond Query Execution"]
-  },
-  {
-    title: "Data Governance & Compliance",
-    icon: <ShieldAlert size={20} />,
-    items: ["Automated Data Redaction", "PII Masking", "Access Audit Logging", "Court-ordered Data Purges"]
-  },
-  {
-    title: "Cold Storage Archival",
-    icon: <HardDrive size={20} />,
-    items: ["Closed Case Archival", "Automated Glacier Tiering", "Decade-old Record Compression", "Digital Evidence Hashing"]
-  }
-];
-
-const aiFeatures = [
-  "AI Auto-Schema Inference", "AI PII (Personal Info) Auto-Masking", "AI Unstructured Text Structuring",
-  "AI Audio/Video Indexing for Search", "AI Duplicate Record Merging", "AI Cold-Data Retrieval Prediction",
-  "AI Cross-lingual Metadata Translation", "AI Automated Quality Scoring", "AI NLP Database Querying"
-];
-
-const databases = [
-  "Hadoop_Clusters", "Amazon_S3_Buckets", "Elasticsearch_Indexes", "Vector_Databases", "Relational_CCTNS", 
-  "Graph_Neo4j", "Time_Series_IoT", "Cold_Glacier_Storage", "Metadata_Catalogs", "Audit_Vaults"
-];
-
-const dashboards = [
-  "Global Data Lake Topology", "Real-time Ingestion Pipeline Board", "Storage Cost Optimization Dashboard", 
-  "Data Quality & Health Index", "Cross-Department Access Logs", "Unstructured Mining Progress"
-];
-
-const apis = [
-  "CCTNS State DB Sync APIs", "Telecom Bulk CDR Upload APIs", "Forensic Lab Integration APIs", "Transport RTO APIs",
-  "Bank Transaction Webhooks", "Open-Source Intelligence (OSINT) APIs", "Federated GraphQL APIs"
-];
-
-const reports = [
-  "Data Ingestion Success/Failure Log", "Lake Storage Utilization Report", "PII Redaction Audit Trail", 
-  "Cold-Storage Archival Summary", "Cross-Agency Query Metrics", "Data Quality Anomalies"
-];
-
-const security = [
-  "Cell-Level Encryption (AES-256)", "Gov-Grade JWT & SSO", "Dynamic Data Masking (DDM)", 
-  "Attribute-Based Access Control (ABAC)", "Immutable Audit Trails", 
-  "Air-Gapped Backup Replication", "Zero-Trust Data Governance", "Blockchain Evidence Hashing"
-];
-
-const futureScope = [
-  "DNA/Genomic Data Integration", "Quantum-Safe Encryption Tiers", "Decentralized IPFS Evidence Chains",
-  "Global Interpol Federated Queries", "Brain-Computer Interface Searching", "Autonomous Self-Healing Pipelines"
-];
-
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: `Data Lake Agents (${aiExperts.length})`, icon: <Bot size={18} /> },
-  { id: 'modules', label: 'Lake Modules', icon: <LayoutDashboard size={18} /> },
+  { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
+  { id: 'modules', label: 'Advanced Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
-  { id: 'reports', label: 'Data Dashboards', icon: <PieChart size={18} /> },
+  { id: 'reports', label: 'Dashboards', icon: <PieChart size={18} /> },
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
@@ -114,29 +49,29 @@ const DataLakeDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <Database className="inline-icon" size={28} /> AI Police Data Lake & Big Data
+              <ShieldAlert className="inline-icon" size={28} /> AI POLICE DATA LAKE
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>AI Police Data Lake</strong> is the foundational bedrock of the entire digital ecosystem. It is a massive, unified repository capable of ingesting petabytes of structured (FIRs, Bank Records) and unstructured data (CCTV video, Interrogation audio, Handwritten diaries). The AI organizes, indexes, and makes this massive ocean of data instantly searchable.
+              <strong>AI POLICE DATA LAKE</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in unified big data storage, federated search & intelligence mining.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Filter className="inline-icon" color="#3b82f6" /> Unified Ingestion (ETL)</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Pulls data from isolated silos—Traffic Police, CCTNS, Prisons, Forensic Labs—into one centralized, deduplicated Big Data architecture.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#3b82f6" /> Real-time Monitoring</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Continuous AI-driven surveillance and data collection ensuring immediate anomaly detection and rapid response protocols.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Layers className="inline-icon" color="#10b981" /> Unstructured Mining</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>AI automatically transcribes audio files, runs OCR on scanned papers, and tags video frames so they can be queried alongside standard text databases.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Cpu className="inline-icon" color="#10b981" /> Predictive Analytics</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Utilizes machine learning to forecast trends, identify potential risks before they occur, and suggest optimized resource allocation.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><ShieldAlert className="inline-icon" color="#f59e0b" /> Data Governance & Privacy</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Automatically detects Personally Identifiable Information (PII) like names or addresses of victims and masks them dynamically based on the rank of the officer viewing the data.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#f59e0b" /> Seamless Integration</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Hooks into existing national and state-level databases, providing a unified, interoperable platform across all departments.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#ef4444" /> Federated Query Engine</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Allows investigators to search across Graph DBs, Relational DBs, and Vector DBs using a single search bar, returning results in milliseconds.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Shield className="inline-icon" color="#ef4444" /> Automated Compliance</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Ensures all operations strictly adhere to legal and procedural guidelines, generating instant audit trails and compliance reports.</p>
               </div>
             </div>
           </motion.div>
@@ -155,10 +90,15 @@ const DataLakeDetailed = () => {
       case 'modules':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="module-accordion">
-            {dataLakeModules.map((mod, i) => (
+            {[
+              { title: "Real-time Monitoring Module", items: ["Live Data Stream", "Alert Engine", "Geospatial Tracking"] },
+              { title: "Predictive Analytics Engine", items: ["Risk Forecasting", "Resource Optimization", "Pattern Recognition"] },
+              { title: "Automated Reporting System", items: ["Compliance Audits", "Daily Briefings", "Incident Logs"] },
+              { title: "Cloud Integration Hub", items: ["State DB Sync", "Third-party API Webhooks", "Encrypted Data Transfer"] }
+            ].map((mod, i) => (
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} key={i} className="premium-module-panel">
                 <div className="module-header">
-                  {mod.icon}
+                  <LayoutDashboard size={20} color="#3b82f6" />
                   <h3>{mod.title}</h3>
                 </div>
                 <div className="module-tags">
@@ -173,7 +113,10 @@ const DataLakeDetailed = () => {
       case 'features':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid">
-            {aiFeatures.map((feat, i) => (
+            {[
+              "24/7 AI Processing", "Advanced Machine Learning Models", "Real-time Data Sync", 
+              "Automated Alerts & Notifications", "Cross-Platform Accessibility", "Role-Based Access Control"
+            ].map((feat, i) => (
               <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-purple">
                 <Cpu className="card-icon" />
                 <h4>{feat}</h4>
@@ -186,15 +129,19 @@ const DataLakeDetailed = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
             <div className="split-section">
               <div className="panel">
-                <h3><Database className="inline-icon" color="#06b6d4" /> Database Tables</h3>
+                <h3><Database className="inline-icon" color="#06b6d4" /> Database Integration</h3>
                 <div className="tag-cloud">
-                  {databases.map((db, i) => <span key={i} className="tech-tag">{db}</span>)}
+                  {["Primary_Transaction_DB", "Analytics_Data_Warehouse", "Audit_Logs_Archive", "User_Access_Registry", "System_Configuration_DB"].map((db, i) => (
+                    <span key={i} className="tech-tag">{db}</span>
+                  ))}
                 </div>
               </div>
               <div className="panel">
                 <h3><Network className="inline-icon" color="#8b5cf6" /> System APIs</h3>
                 <div className="tag-cloud">
-                  {apis.map((api, i) => <span key={i} className="tech-tag tech-tag-alt">{api}</span>)}
+                  {["RESTful Core API", "Real-time WebSocket Feed", "Third-party Webhooks", "Authentication Gateway", "Data Export API"].map((api, i) => (
+                    <span key={i} className="tech-tag tech-tag-alt">{api}</span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -207,13 +154,17 @@ const DataLakeDetailed = () => {
               <div className="panel">
                 <h3><LayoutDashboard className="inline-icon" color="#3b82f6" /> Dashboards</h3>
                 <ul className="premium-list">
-                  {dashboards.map((d, i) => <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>)}
+                  {["Executive Overview Dashboard", "Live Operations Monitor", "Historical Trend Analysis", "System Health & Status"].map((d, i) => (
+                    <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>
+                  ))}
                 </ul>
               </div>
               <div className="panel">
                 <h3><FileText className="inline-icon" color="#10b981" /> Generated Reports</h3>
                 <ul className="premium-list">
-                  {reports.map((r, i) => <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>)}
+                  {["Daily Summary Report", "Weekly Performance Analytics", "Monthly Compliance Audit", "System Exception Logs"].map((r, i) => (
+                    <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -226,13 +177,21 @@ const DataLakeDetailed = () => {
               <div className="panel highlight-red">
                 <h3><ShieldAlert className="inline-icon" color="#ef4444" /> Security Protocols</h3>
                 <ul className="premium-list">
-                  {security.map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
+                  {[
+                    "End-to-End Data Encryption (AES-256)", "Multi-Factor Authentication (MFA)", 
+                    "Strict Role-Based Access Control (RBAC)", "Tamper-proof Audit Trails", 
+                    "Automated Threat Detection", "Regular Security Penetration Testing"
+                  ].map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
                 </ul>
               </div>
               <div className="panel highlight-green">
                 <h3><Rocket className="inline-icon" color="#10b981" /> Future Enhancements</h3>
                 <ul className="premium-list">
-                  {futureScope.map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
+                  {[
+                    "Integration with Advanced LLMs", "Predictive Autonomous Actions", 
+                    "Enhanced Mobile Accessibility", "Cross-Agency Data Federation", 
+                    "Blockchain-based Immutability", "Next-Gen UI/UX Overhaul"
+                  ].map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
                 </ul>
               </div>
             </div>
@@ -255,7 +214,7 @@ const DataLakeDetailed = () => {
         </button>
         <div className="header-titles">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="icon-wrapper">
-            <Database size={40} color="#06b6d4" />
+            <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
             <h1 className="cyber-title">AI POLICE <span>DATA LAKE</span></h1>

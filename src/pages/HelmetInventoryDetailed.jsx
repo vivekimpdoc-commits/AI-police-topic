@@ -2,31 +2,77 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Crosshair, Package, Fingerprint, Radio, RotateCcw, Box, Wrench, Users, Stethoscope, Target, Clock, Droplet, ClipboardCheck, Scan, UserCheck, RefreshCw, Truck, Wind, Zap, AlertTriangle, Share2, Briefcase, Hourglass, Thermometer, AlertOctagon, Maximize, Archive, Siren, Wifi, Scale, Key, Video
+  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Map, Truck
 } from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
-const aiExperts = ["Visor Micro-crack Scanner AI","Strapping Integrity Bot","Ballistic Helmet Lifecycle AI","Damage Replacement Scheduler","Helmet Sizing Predictor","Riot Squad Distribution AI","Cushion Degradation Modeler","Impact Telemetry Analyzer","Batch Defect Identifier","Cleaning Audit Bot","Inventory Deficit Forecaster"];
-const aiFeatures = ["AI Computer Vision Micro-crack Detection","Automated Impact Logging","Officer Head-Sizing Analytics","RFID Tracking of Specialized Ballistic Helmets","Predictive Inner-cushion Replacement","Visor Scratch/Visibility Assessment","Automated Procurement Requisitions","Batch Defect Flagging"];
-const databases = ["Helmet_RFID_Registry","Visor_Damage_Logs","Impact_Telemetry_DB","Cushion_Degradation_Models","Officer_Sizing_DB","Riot_Deployment_History","Procurement_Pipeline","Cleaning_Sanitation_Logs","Defect_Analytics_DB","Ballistic_Rating_Ledger"];
-const dashboards = ["Helmet Readiness Score","Micro-crack Detection Alerts","Visor Visibility Heatmap","Size Availability","Riot Unit Deployment Sync","Damage vs Supplier Analytics"];
-const apis = ["Computer Vision Kiosks","Quartermaster ERP","State HRMS (Sizing)","Riot Unit Duty Rosters","Supplier Defect Portals","Ballistic Testing Labs"];
-const reports = ["Monthly Helmet Damage Audit","Visor Scratch Visibility Study","Cushion Replacement Costs","Supplier Defect Rates","Riot Unit Readiness Report","Annual Asset Write-offs"];
-const security = ["Tamper-Evident RFID Tags","Biometric Kiosk Scans","Blockchain Damage Logs","Air-Gapped CV Scanners","Encrypted Sizing Data","Dual-Audit for Write-offs","Strict Storage Access","CCTV Armoury Integration"];
-const futureScope = ["AR Heads-Up Displays (HUD)","Built-in Neural Sensors","IoT Impact Accelerometers","Self-tinting Visors","Drone Helmet Delivery","3D Printed Custom Fits"];
-
-const modules = [
-  { title: "Damage Detection", icon: <Scan size={20} />, items: ["Visor Scans","Micro-crack AI","Scratch Visibility","Shell Integrity"] },
-  { title: "Fit & Ergonomics", icon: <UserCheck size={20} />, items: ["Head Sizing","Cushion Wear","Strap Tension","Custom Allocations"] },
-  { title: "Lifecycle Management", icon: <RefreshCw size={20} />, items: ["Age Tracking","Ballistic Rating","Auto-Replenishment","Safe Disposal"] },
-  { title: "Deployment Sync", icon: <Truck size={20} />, items: ["Riot Unit Rosters","Mass Issue Flow","Return Tracking","Deficit Alerts"] },
-  { title: "Audit & Hygiene", icon: <Wind size={20} />, items: ["Sanitation Logs","Supplier Defects","Budget Sync","Inventory Reconciliation"] }
+const aiExperts = [
+"Visor Micro-crack Scanner AI",
+  "Strapping & Buckle Integrity Bot",
+  "Ballistic Helmet Lifecycle Predictor",
+  "Damage & Replacement Scheduler AI",
+  "Helmet Sizing & Fit Optimizer",
+  "Riot Squad Mass Distribution AI",
+  "Inner Cushion Degradation Modeler",
+  "Impact Telemetry & Concussion Analyzer",
+  "Supplier Batch Defect Identifier",
+  "Cleaning & Sanitation Audit Bot",
+  "Inventory Deficit Forecaster",
+  "Helmet Expiry Alert Sentinel",
+  "RFID Wash Gateway Tracking AI",
+  "Night Vision Goggle Mount Stress AI",
+  "Helmet Camera Sync & Load Balancer",
+  "Biometric Helmet Checkout Authenticator",
+  "Regional Riot Threat vs Helmet Allocation",
+  "Polycarbonate Visor Scratch Analyzer",
+  "Kevlar Shell Integrity Scanner",
+  "Automated Defect Show-Cause Generator",
+  "Helmet Depreciation Value Calculator",
+  "Missing Helmet Geofencing Alert",
+  "Stolen Police Gear Dark-Web Scanner",
+  "Smart Helmet HUD Sync Coordinator",
+  "Emergency Riot Resupply Forecaster",
+  "Special Forces High-Cut Helmet Allocator",
+  "Sweat & Anti-bacterial Coating Degradation AI",
+  "Automated Wash Cycle Recommender",
+  "Supplier SLA & Defect Analytics AI",
+  "Tactical Comms Headset Sync AI",
+  "Helmet Weight vs Neck Strain Predictor",
+  "Female Officer Fitment Analytics Bot",
+  "Central Armoury Logistics & Transfer AI",
+  "Blockchain Asset Destruction Ledger",
+  "Safe Disposal & Recycling Planner",
+  "Helmet Modification & Tamper Detector",
+  "Motorcycle Police Helmet Sync AI",
+  "Budget Forecasting for New Helmets",
+  "Riot Control Helmet Reserve Monitor",
+  "Ballistic Lab Test Result Sync AI",
+  "Visor Fogging & Condensation Predictor",
+  "Face Shield Impact Resistance Tester",
+  "Automated Missing Asset Flagging Bot",
+  "Encrypted Officer Sizing Vault Sync",
+  "Helicopter Crew Helmet Audio Sync AI",
+  "Drone Battlefield Resupply Modeler",
+  "Armoury Personnel Access Validator",
+  "Vault Temperature/Humidity Anomaly AI",
+  "Third-Party Repair Vendor Sync AI",
+  "Gas Mask to Helmet Compatibility AI",
+  "Automated Helmet Audit Validator",
+  "Officer Head-Trauma Recovery AI",
+  "Self-Tinting Visor Degradation AI",
+  "K9 Unit Helmet/Goggle Allocation",
+  "Smart Fabric Vital Sensor Link AI",
+  "Marine Police Buoyant Helmet Analyzer",
+  "Ceramic Helmet Penetration Telemetry",
+  "3D Printed Custom Fit Forecaster",
+  "Next-Gen Armor Procurement Sync",
+  "Real-time Helmet Distribution Dashboard AI"
 ];
 
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'AI Agents', icon: <Bot size={18} /> },
-  { id: 'modules', label: 'Core Modules', icon: <LayoutDashboard size={18} /> },
+  { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
+  { id: 'modules', label: 'Advanced Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
   { id: 'reports', label: 'Dashboards', icon: <PieChart size={18} /> },
@@ -43,20 +89,30 @@ const HelmetInventoryDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <ShieldAlert className="inline-icon" size={28} /> AI HELMET INVENTORY
+              <ShieldAlert className="inline-icon" size={28} /> HELMET INVENTORY
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>AI HELMET INVENTORY</strong> specializes in the tracking and maintenance of Riot and Ballistic helmets. Using computer vision, it scans returned helmets for structural weaknesses or micro-cracks that would otherwise go unnoticed, preventing fatal failures in the field.
+              <strong>HELMET INVENTORY</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in visor micro-crack detection & damage replacements.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
-              {modules.slice(0,4).map((mod, i) => (
-                <div key={i} className="panel" style={{ padding: '1.5rem' }}>
-                  <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}>{mod.icon} {mod.title}</h3>
-                  <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Advanced AI algorithms and neural networks power the {mod.title.toLowerCase()} systems, ensuring highly precise and real-time operational efficiency.</p>
-                </div>
-              ))}
+              <div className="panel" style={{ padding: '1.5rem' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#3b82f6" /> Real-time Monitoring</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Continuous AI-driven surveillance and data collection ensuring immediate anomaly detection and rapid response protocols.</p>
+              </div>
+              <div className="panel" style={{ padding: '1.5rem' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Cpu className="inline-icon" color="#10b981" /> Predictive Analytics</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Utilizes machine learning to forecast trends, identify potential risks before they occur, and suggest optimized resource allocation.</p>
+              </div>
+              <div className="panel" style={{ padding: '1.5rem' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#f59e0b" /> Seamless Integration</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Hooks into existing national and state-level databases, providing a unified, interoperable platform across all departments.</p>
+              </div>
+              <div className="panel" style={{ padding: '1.5rem' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Shield className="inline-icon" color="#ef4444" /> Automated Compliance</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Ensures all operations strictly adhere to legal and procedural guidelines, generating instant audit trails and compliance reports.</p>
+              </div>
             </div>
           </motion.div>
         );
@@ -74,10 +130,15 @@ const HelmetInventoryDetailed = () => {
       case 'modules':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="module-accordion">
-            {modules.map((mod, i) => (
+            {[
+              { title: "Real-time Monitoring Module", items: ["Live Data Stream", "Alert Engine", "Geospatial Tracking"] },
+              { title: "Predictive Analytics Engine", items: ["Risk Forecasting", "Resource Optimization", "Pattern Recognition"] },
+              { title: "Automated Reporting System", items: ["Compliance Audits", "Daily Briefings", "Incident Logs"] },
+              { title: "Cloud Integration Hub", items: ["State DB Sync", "Third-party API Webhooks", "Encrypted Data Transfer"] }
+            ].map((mod, i) => (
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} key={i} className="premium-module-panel">
                 <div className="module-header">
-                  {mod.icon}
+                  <LayoutDashboard size={20} color="#3b82f6" />
                   <h3>{mod.title}</h3>
                 </div>
                 <div className="module-tags">
@@ -92,7 +153,10 @@ const HelmetInventoryDetailed = () => {
       case 'features':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid">
-            {aiFeatures.map((feat, i) => (
+            {[
+              "24/7 AI Processing", "Advanced Machine Learning Models", "Real-time Data Sync", 
+              "Automated Alerts & Notifications", "Cross-Platform Accessibility", "Role-Based Access Control"
+            ].map((feat, i) => (
               <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-purple">
                 <Cpu className="card-icon" />
                 <h4>{feat}</h4>
@@ -105,15 +169,19 @@ const HelmetInventoryDetailed = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
             <div className="split-section">
               <div className="panel">
-                <h3><Database className="inline-icon" color="#06b6d4" /> Database Tables</h3>
+                <h3><Database className="inline-icon" color="#06b6d4" /> Database Integration</h3>
                 <div className="tag-cloud">
-                  {databases.map((db, i) => <span key={i} className="tech-tag">{db}</span>)}
+                  {["Primary_Transaction_DB", "Analytics_Data_Warehouse", "Audit_Logs_Archive", "User_Access_Registry", "System_Configuration_DB"].map((db, i) => (
+                    <span key={i} className="tech-tag">{db}</span>
+                  ))}
                 </div>
               </div>
               <div className="panel">
                 <h3><Network className="inline-icon" color="#8b5cf6" /> System APIs</h3>
                 <div className="tag-cloud">
-                  {apis.map((api, i) => <span key={i} className="tech-tag tech-tag-alt">{api}</span>)}
+                  {["RESTful Core API", "Real-time WebSocket Feed", "Third-party Webhooks", "Authentication Gateway", "Data Export API"].map((api, i) => (
+                    <span key={i} className="tech-tag tech-tag-alt">{api}</span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -126,13 +194,17 @@ const HelmetInventoryDetailed = () => {
               <div className="panel">
                 <h3><LayoutDashboard className="inline-icon" color="#3b82f6" /> Dashboards</h3>
                 <ul className="premium-list">
-                  {dashboards.map((d, i) => <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>)}
+                  {["Executive Overview Dashboard", "Live Operations Monitor", "Historical Trend Analysis", "System Health & Status"].map((d, i) => (
+                    <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>
+                  ))}
                 </ul>
               </div>
               <div className="panel">
                 <h3><FileText className="inline-icon" color="#10b981" /> Generated Reports</h3>
                 <ul className="premium-list">
-                  {reports.map((r, i) => <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>)}
+                  {["Daily Summary Report", "Weekly Performance Analytics", "Monthly Compliance Audit", "System Exception Logs"].map((r, i) => (
+                    <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -145,13 +217,21 @@ const HelmetInventoryDetailed = () => {
               <div className="panel highlight-red">
                 <h3><ShieldAlert className="inline-icon" color="#ef4444" /> Security Protocols</h3>
                 <ul className="premium-list">
-                  {security.map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
+                  {[
+                    "End-to-End Data Encryption (AES-256)", "Multi-Factor Authentication (MFA)", 
+                    "Strict Role-Based Access Control (RBAC)", "Tamper-proof Audit Trails", 
+                    "Automated Threat Detection", "Regular Security Penetration Testing"
+                  ].map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
                 </ul>
               </div>
               <div className="panel highlight-green">
                 <h3><Rocket className="inline-icon" color="#10b981" /> Future Enhancements</h3>
                 <ul className="premium-list">
-                  {futureScope.map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
+                  {[
+                    "Integration with Advanced LLMs", "Predictive Autonomous Actions", 
+                    "Enhanced Mobile Accessibility", "Cross-Agency Data Federation", 
+                    "Blockchain-based Immutability", "Next-Gen UI/UX Overhaul"
+                  ].map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
                 </ul>
               </div>
             </div>

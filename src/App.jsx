@@ -178,6 +178,132 @@ import TearGasDetailed from './pages/TearGasDetailed';
 import ExplosiveStorageDetailed from './pages/ExplosiveStorageDetailed';
 import EquipmentCalibrationDetailed from './pages/EquipmentCalibrationDetailed';
 import ArmouryInspectionDetailed from './pages/ArmouryInspectionDetailed';
+import StateBorderCheckDetailed from './pages/StateBorderCheckDetailed';
+import CommercialVehicleInspectionDetailed from './pages/CommercialVehicleInspectionDetailed';
+import GoodsMovementVerificationDetailed from './pages/GoodsMovementVerificationDetailed';
+import TouristVehicleMonitoringDetailed from './pages/TouristVehicleMonitoringDetailed';
+import BorderIncidentRegisterDetailed from './pages/BorderIncidentRegisterDetailed';
+import HighwayPatrolAnalyticsDetailed from './pages/HighwayPatrolAnalyticsDetailed';
+import TollPlazaCoordinationDetailed from './pages/TollPlazaCoordinationDetailed';
+import InterstateVehicleAlertDetailed from './pages/InterstateVehicleAlertDetailed';
+import MobileCheckpointPlanningDetailed from './pages/MobileCheckpointPlanningDetailed';
+import JansunwaiDetailed from './pages/JansunwaiDetailed';
+import VoiceBotDetailed from './pages/VoiceBotDetailed';
+import CitizenPortalDetailed from './pages/CitizenPortalDetailed';
+import CitizenMobileAppDetailed from './pages/CitizenMobileAppDetailed';
+import FeedbackManagementDetailed from './pages/FeedbackManagementDetailed';
+import MediaManagementDetailed from './pages/MediaManagementDetailed';
+import PressNoteGeneratorDetailed from './pages/PressNoteGeneratorDetailed';
+import PublicCommunicationDetailed from './pages/PublicCommunicationDetailed';
+import SocialMediaManagementDetailed from './pages/SocialMediaManagementDetailed';
+import PublicAlertSystemDetailed from './pages/PublicAlertSystemDetailed';
+import DailyPoliceBulletinDetailed from './pages/DailyPoliceBulletinDetailed';
+import MorningBriefGeneratorDetailed from './pages/MorningBriefGeneratorDetailed';
+import EveningSituationReportDetailed from './pages/EveningSituationReportDetailed';
+import WeeklyCrimeDigestDetailed from './pages/WeeklyCrimeDigestDetailed';
+import MonthlyDistrictReviewDetailed from './pages/MonthlyDistrictReviewDetailed';
+import PoliceNewsletterDetailed from './pages/PoliceNewsletterDetailed';
+import InternalKnowledgeSharingDetailed from './pages/InternalKnowledgeSharingDetailed';
+import CommandInstructionsArchiveDetailed from './pages/CommandInstructionsArchiveDetailed';
+import BriefingNotesGeneratorDetailed from './pages/BriefingNotesGeneratorDetailed';
+import DailyOrderBookDetailed from './pages/DailyOrderBookDetailed';
+import WirelessCommunicationMonitoringDetailed from './pages/WirelessCommunicationMonitoringDetailed';
+import RadioLogAnalysisDetailed from './pages/RadioLogAnalysisDetailed';
+import EmergencyBroadcastManagementDetailed from './pages/EmergencyBroadcastManagementDetailed';
+import InternalMessagingAssistantDetailed from './pages/InternalMessagingAssistantDetailed';
+import SecureCommunicationAuditDetailed from './pages/SecureCommunicationAuditDetailed';
+import CommunicationFailureDetectionDetailed from './pages/CommunicationFailureDetectionDetailed';
+import CallDispatchOptimizationDetailed from './pages/CallDispatchOptimizationDetailed';
+import MultiChannelCommunicationHubDetailed from './pages/MultiChannelCommunicationHubDetailed';
+import IncidentBroadcastSystemDetailed from './pages/IncidentBroadcastSystemDetailed';
+import CommunicationPerformanceAnalyticsDetailed from './pages/CommunicationPerformanceAnalyticsDetailed';
+import GramChaupalManagementDetailed from './pages/GramChaupalManagementDetailed';
+import CitizenOutreachCalendarDetailed from './pages/CitizenOutreachCalendarDetailed';
+import PoliceMitraPortalDetailed from './pages/PoliceMitraPortalDetailed';
+import RWACoordinationDetailed from './pages/RWACoordinationDetailed';
+import NGOCoordinationDetailed from './pages/NGOCoordinationDetailed';
+import CommunityVolunteerNetworkDetailed from './pages/CommunityVolunteerNetworkDetailed';
+import PublicTrustIndexDetailed from './pages/PublicTrustIndexDetailed';
+import CommunityRiskSurveyDetailed from './pages/CommunityRiskSurveyDetailed';
+import PublicAwarenessCampaignManagerDetailed from './pages/PublicAwarenessCampaignManagerDetailed';
+import CitizenSuggestionPortalDetailed from './pages/CitizenSuggestionPortalDetailed';
+import ComplaintManagementDetailed from './pages/ComplaintManagementDetailed';
+import FIRAssistantDetailed from './pages/FIRAssistantDetailed';
+import EFIRSystemDetailed from './pages/EFIRSystemDetailed';
+import ComplaintRoutingDetailed from './pages/ComplaintRoutingDetailed';
+import ComplaintAnalyticsDetailed from './pages/ComplaintAnalyticsDetailed';
+import SealRegisterDetailed from './pages/SealRegisterDetailed';
+import StampRegisterDetailed from './pages/StampRegisterDetailed';
+import ConfidentialDocumentLockerDetailed from './pages/ConfidentialDocumentLockerDetailed';
+import GovernmentGazetteArchiveDetailed from './pages/GovernmentGazetteArchiveDetailed';
+import RecordWeedingScheduleDetailed from './pages/RecordWeedingScheduleDetailed';
+import DocumentPreservationDetailed from './pages/DocumentPreservationDetailed';
+import HistoricalRecordArchiveDetailed from './pages/HistoricalRecordArchiveDetailed';
+import FileDigitizationQueueDetailed from './pages/FileDigitizationQueueDetailed';
+import DigitalSignatureRegisterDetailed from './pages/DigitalSignatureRegisterDetailed';
+import RecordAccessApprovalDetailed from './pages/RecordAccessApprovalDetailed';
+import CrimeAnalyticsDetailed from './pages/CrimeAnalyticsDetailed';
+import CrimeMappingDetailed from './pages/CrimeMappingDetailed';
+import CrimeHotspotDetectionDetailed from './pages/CrimeHotspotDetectionDetailed';
+import CrimePredictionDetailed from './pages/CrimePredictionDetailed';
+import CrimePatternDiscoveryDetailed from './pages/CrimePatternDiscoveryDetailed';
+import RepeatOffenderAnalysisDetailed from './pages/RepeatOffenderAnalysisDetailed';
+import OrganizedCrimeIntelligenceDetailed from './pages/OrganizedCrimeIntelligenceDetailed';
+import GangIntelligenceDetailed from './pages/GangIntelligenceDetailed';
+import CriminalNetworkAnalysisDetailed from './pages/CriminalNetworkAnalysisDetailed';
+import IntelligenceFusionCenterDetailed from './pages/IntelligenceFusionCenterDetailed';
+import CyberCrimeInvestigationDetailed from './pages/CyberCrimeInvestigationDetailed';
+import DigitalFraudDetectionDetailed from './pages/DigitalFraudDetectionDetailed';
+import PhishingDetectionDetailed from './pages/PhishingDetectionDetailed';
+import SocialMediaCrimeAnalysisDetailed from './pages/SocialMediaCrimeAnalysisDetailed';
+import DarkWebIntelligenceDetailed from './pages/DarkWebIntelligenceDetailed';
+import DigitalEvidenceManagementDetailed from './pages/DigitalEvidenceManagementDetailed';
+import ImageAnalysisDetailed from './pages/ImageAnalysisDetailed';
+import VideoAnalyticsDetailed from './pages/VideoAnalyticsDetailed';
+import AudioForensicsDetailed from './pages/AudioForensicsDetailed';
+import OCRDocumentAnalysisDetailed from './pages/OCRDocumentAnalysisDetailed';
+import MetadataAnalysisDetailed from './pages/MetadataAnalysisDetailed';
+import ChainOfCustodyDetailed from './pages/ChainOfCustodyDetailed';
+import NDRFCoordinationDetailed from './pages/NDRFCoordinationDetailed';
+import SDRFCoordinationDetailed from './pages/SDRFCoordinationDetailed';
+import CivilDefenceCoordinationDetailed from './pages/CivilDefenceCoordinationDetailed';
+import HomeGuardDeploymentDetailed from './pages/HomeGuardDeploymentDetailed';
+import DisasterResourceInventoryDetailed from './pages/DisasterResourceInventoryDetailed';
+import EmergencyShelterSecurityDetailed from './pages/EmergencyShelterSecurityDetailed';
+import EmergencyEvacuationStatusBoardDetailed from './pages/EmergencyEvacuationStatusBoardDetailed';
+import ReliefConvoyEscortManagementDetailed from './pages/ReliefConvoyEscortManagementDetailed';
+import HumanitarianAssistanceCoordinationDetailed from './pages/HumanitarianAssistanceCoordinationDetailed';
+import DisasterCommunicationLogDetailed from './pages/DisasterCommunicationLogDetailed';
+import ReliefCampManagementDetailed from './pages/ReliefCampManagementDetailed';
+import RescueTeamAllocationDetailed from './pages/RescueTeamAllocationDetailed';
+import EmergencySupplyChainDetailed from './pages/EmergencySupplyChainDetailed';
+import ShelterOccupancyDashboardDetailed from './pages/ShelterOccupancyDashboardDetailed';
+import DisasterVolunteerManagementDetailed from './pages/DisasterVolunteerManagementDetailed';
+import ResourceDistributionTrackerDetailed from './pages/ResourceDistributionTrackerDetailed';
+import MedicalResponseCoordinationDetailed from './pages/MedicalResponseCoordinationDetailed';
+import EvacuationRoutePlannerDetailed from './pages/EvacuationRoutePlannerDetailed';
+import EmergencyStockMonitoringDetailed from './pages/EmergencyStockMonitoringDetailed';
+import ReliefMaterialAuditDetailed from './pages/ReliefMaterialAuditDetailed';
+import RegisterDigitizationDetailed from './pages/RegisterDigitizationDetailed';
+import ManualRegisterReplacementDetailed from './pages/ManualRegisterReplacementDetailed';
+import ComplianceCalendarDetailed from './pages/ComplianceCalendarDetailed';
+import InspectionEvidenceRepositoryDetailed from './pages/InspectionEvidenceRepositoryDetailed';
+import RecordAuthenticationDetailed from './pages/RecordAuthenticationDetailed';
+import DocumentExpiryTrackerDetailed from './pages/DocumentExpiryTrackerDetailed';
+import CircularComplianceDashboardDetailed from './pages/CircularComplianceDashboardDetailed';
+import PolicyRevisionTrackerDetailed from './pages/PolicyRevisionTrackerDetailed';
+import SOPUpdateDistributionDetailed from './pages/SOPUpdateDistributionDetailed';
+import LegalComplianceChecklistDetailed from './pages/LegalComplianceChecklistDetailed';
+import ElectionForceAllocationDetailed from './pages/ElectionForceAllocationDetailed';
+import PollingBoothSecurityPlanningDetailed from './pages/PollingBoothSecurityPlanningDetailed';
+import ElectionRouteManagementDetailed from './pages/ElectionRouteManagementDetailed';
+import EVMSecurityCoordinationDetailed from './pages/EVMSecurityCoordinationDetailed';
+import StrongRoomMonitoringDetailed from './pages/StrongRoomMonitoringDetailed';
+import PollDayIncidentTrackerDetailed from './pages/PollDayIncidentTrackerDetailed';
+import ElectionVulnerabilityMappingDetailed from './pages/ElectionVulnerabilityMappingDetailed';
+import FlyingSquadDashboardDetailed from './pages/FlyingSquadDashboardDetailed';
+import MCCMonitoringSupportDetailed from './pages/MCCMonitoringSupportDetailed';
+import ElectionResourceDashboardDetailed from './pages/ElectionResourceDashboardDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -725,6 +851,636 @@ const AnimatedRoutes = () => {
         <Route path="/border-check-post" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
             <BorderCheckPostDetailed />
+          </motion.div>
+        } />
+        <Route path="/state-border-check" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <StateBorderCheckDetailed />
+          </motion.div>
+        } />
+        <Route path="/commercial-vehicle-inspection" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CommercialVehicleInspectionDetailed />
+          </motion.div>
+        } />
+        <Route path="/goods-movement-verification" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <GoodsMovementVerificationDetailed />
+          </motion.div>
+        } />
+        <Route path="/tourist-vehicle-monitoring" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <TouristVehicleMonitoringDetailed />
+          </motion.div>
+        } />
+        <Route path="/border-incident-register" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <BorderIncidentRegisterDetailed />
+          </motion.div>
+        } />
+        <Route path="/highway-patrol-analytics" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <HighwayPatrolAnalyticsDetailed />
+          </motion.div>
+        } />
+        <Route path="/toll-plaza-coordination" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <TollPlazaCoordinationDetailed />
+          </motion.div>
+        } />
+        <Route path="/interstate-vehicle-alert" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <InterstateVehicleAlertDetailed />
+          </motion.div>
+        } />
+        <Route path="/mobile-checkpoint-planning" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <MobileCheckpointPlanningDetailed />
+          </motion.div>
+        } />
+        <Route path="/jansunwai" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <JansunwaiDetailed />
+          </motion.div>
+        } />
+        <Route path="/voice-bot" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <VoiceBotDetailed />
+          </motion.div>
+        } />
+        <Route path="/citizen-portal" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CitizenPortalDetailed />
+          </motion.div>
+        } />
+        <Route path="/citizen-mobile-app" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CitizenMobileAppDetailed />
+          </motion.div>
+        } />
+        <Route path="/feedback-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <FeedbackManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/media-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <MediaManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/press-note-generator" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PressNoteGeneratorDetailed />
+          </motion.div>
+        } />
+        <Route path="/public-communication" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PublicCommunicationDetailed />
+          </motion.div>
+        } />
+        <Route path="/social-media-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <SocialMediaManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/public-alert-system" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PublicAlertSystemDetailed />
+          </motion.div>
+        } />
+        <Route path="/daily-police-bulletin" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <DailyPoliceBulletinDetailed />
+          </motion.div>
+        } />
+        <Route path="/morning-brief-generator" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <MorningBriefGeneratorDetailed />
+          </motion.div>
+        } />
+        <Route path="/evening-situation-report" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <EveningSituationReportDetailed />
+          </motion.div>
+        } />
+        <Route path="/weekly-crime-digest" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <WeeklyCrimeDigestDetailed />
+          </motion.div>
+        } />
+        <Route path="/monthly-district-review" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <MonthlyDistrictReviewDetailed />
+          </motion.div>
+        } />
+        <Route path="/police-newsletter" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PoliceNewsletterDetailed />
+          </motion.div>
+        } />
+        <Route path="/internal-knowledge-sharing" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <InternalKnowledgeSharingDetailed />
+          </motion.div>
+        } />
+        <Route path="/command-instructions-archive" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CommandInstructionsArchiveDetailed />
+          </motion.div>
+        } />
+        <Route path="/briefing-notes-generator" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <BriefingNotesGeneratorDetailed />
+          </motion.div>
+        } />
+        <Route path="/daily-order-book" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <DailyOrderBookDetailed />
+          </motion.div>
+        } />
+        <Route path="/wireless-communication-monitoring" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <WirelessCommunicationMonitoringDetailed />
+          </motion.div>
+        } />
+        <Route path="/radio-log-analysis" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <RadioLogAnalysisDetailed />
+          </motion.div>
+        } />
+        <Route path="/emergency-broadcast-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <EmergencyBroadcastManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/internal-messaging-assistant" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <InternalMessagingAssistantDetailed />
+          </motion.div>
+        } />
+        <Route path="/secure-communication-audit" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <SecureCommunicationAuditDetailed />
+          </motion.div>
+        } />
+        <Route path="/communication-failure-detection" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CommunicationFailureDetectionDetailed />
+          </motion.div>
+        } />
+        <Route path="/call-dispatch-optimization" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CallDispatchOptimizationDetailed />
+          </motion.div>
+        } />
+        <Route path="/multi-channel-communication-hub" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <MultiChannelCommunicationHubDetailed />
+          </motion.div>
+        } />
+        <Route path="/incident-broadcast-system" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <IncidentBroadcastSystemDetailed />
+          </motion.div>
+        } />
+        <Route path="/communication-performance-analytics" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CommunicationPerformanceAnalyticsDetailed />
+          </motion.div>
+        } />
+        <Route path="/gram-chaupal-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <GramChaupalManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/citizen-outreach-calendar" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CitizenOutreachCalendarDetailed />
+          </motion.div>
+        } />
+        <Route path="/police-mitra-portal" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PoliceMitraPortalDetailed />
+          </motion.div>
+        } />
+        <Route path="/rwa-coordination" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <RWACoordinationDetailed />
+          </motion.div>
+        } />
+        <Route path="/ngo-coordination" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <NGOCoordinationDetailed />
+          </motion.div>
+        } />
+        <Route path="/community-volunteer-network" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CommunityVolunteerNetworkDetailed />
+          </motion.div>
+        } />
+        <Route path="/public-trust-index" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PublicTrustIndexDetailed />
+          </motion.div>
+        } />
+        <Route path="/community-risk-survey" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CommunityRiskSurveyDetailed />
+          </motion.div>
+        } />
+        <Route path="/public-awareness-campaign-manager" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PublicAwarenessCampaignManagerDetailed />
+          </motion.div>
+        } />
+        <Route path="/citizen-suggestion-portal" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CitizenSuggestionPortalDetailed />
+          </motion.div>
+        } />
+        <Route path="/complaint-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ComplaintManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/fir-assistant" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <FIRAssistantDetailed />
+          </motion.div>
+        } />
+        <Route path="/e-fir-system" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <EFIRSystemDetailed />
+          </motion.div>
+        } />
+        <Route path="/complaint-routing" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ComplaintRoutingDetailed />
+          </motion.div>
+        } />
+        <Route path="/complaint-analytics" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ComplaintAnalyticsDetailed />
+          </motion.div>
+        } />
+        <Route path="/seal-register" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <SealRegisterDetailed />
+          </motion.div>
+        } />
+        <Route path="/stamp-register" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <StampRegisterDetailed />
+          </motion.div>
+        } />
+        <Route path="/confidential-document-locker" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ConfidentialDocumentLockerDetailed />
+          </motion.div>
+        } />
+        <Route path="/government-gazette-archive" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <GovernmentGazetteArchiveDetailed />
+          </motion.div>
+        } />
+        <Route path="/record-weeding-schedule" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <RecordWeedingScheduleDetailed />
+          </motion.div>
+        } />
+        <Route path="/document-preservation" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <DocumentPreservationDetailed />
+          </motion.div>
+        } />
+        <Route path="/historical-record-archive" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <HistoricalRecordArchiveDetailed />
+          </motion.div>
+        } />
+        <Route path="/file-digitization-queue" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <FileDigitizationQueueDetailed />
+          </motion.div>
+        } />
+        <Route path="/digital-signature-register" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <DigitalSignatureRegisterDetailed />
+          </motion.div>
+        } />
+        <Route path="/record-access-approval" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <RecordAccessApprovalDetailed />
+          </motion.div>
+        } />
+        <Route path="/crime-analytics" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CrimeAnalyticsDetailed />
+          </motion.div>
+        } />
+        <Route path="/crime-mapping" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CrimeMappingDetailed />
+          </motion.div>
+        } />
+        <Route path="/crime-hotspot-detection" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CrimeHotspotDetectionDetailed />
+          </motion.div>
+        } />
+        <Route path="/crime-prediction" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CrimePredictionDetailed />
+          </motion.div>
+        } />
+        <Route path="/crime-pattern-discovery" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CrimePatternDiscoveryDetailed />
+          </motion.div>
+        } />
+        <Route path="/repeat-offender-analysis" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <RepeatOffenderAnalysisDetailed />
+          </motion.div>
+        } />
+        <Route path="/organized-crime-intelligence" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <OrganizedCrimeIntelligenceDetailed />
+          </motion.div>
+        } />
+        <Route path="/gang-intelligence" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <GangIntelligenceDetailed />
+          </motion.div>
+        } />
+        <Route path="/criminal-network-analysis" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CriminalNetworkAnalysisDetailed />
+          </motion.div>
+        } />
+        <Route path="/intelligence-fusion-center" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <IntelligenceFusionCenterDetailed />
+          </motion.div>
+        } />
+        <Route path="/cyber-crime-investigation" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CyberCrimeInvestigationDetailed />
+          </motion.div>
+        } />
+        <Route path="/digital-fraud-detection" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <DigitalFraudDetectionDetailed />
+          </motion.div>
+        } />
+        <Route path="/phishing-detection" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PhishingDetectionDetailed />
+          </motion.div>
+        } />
+        <Route path="/social-media-crime-analysis" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <SocialMediaCrimeAnalysisDetailed />
+          </motion.div>
+        } />
+        <Route path="/dark-web-intelligence" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <DarkWebIntelligenceDetailed />
+          </motion.div>
+        } />
+        <Route path="/digital-evidence-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <DigitalEvidenceManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/image-analysis" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ImageAnalysisDetailed />
+          </motion.div>
+        } />
+        <Route path="/video-analytics" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <VideoAnalyticsDetailed />
+          </motion.div>
+        } />
+        <Route path="/audio-forensics" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <AudioForensicsDetailed />
+          </motion.div>
+        } />
+        <Route path="/ocr-document-analysis" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <OCRDocumentAnalysisDetailed />
+          </motion.div>
+        } />
+        <Route path="/metadata-analysis" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <MetadataAnalysisDetailed />
+          </motion.div>
+        } />
+        <Route path="/chain-of-custody" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ChainOfCustodyDetailed />
+          </motion.div>
+        } />
+        <Route path="/ndrf-coordination" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <NDRFCoordinationDetailed />
+          </motion.div>
+        } />
+        <Route path="/sdrf-coordination" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <SDRFCoordinationDetailed />
+          </motion.div>
+        } />
+        <Route path="/civil-defence-coordination" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CivilDefenceCoordinationDetailed />
+          </motion.div>
+        } />
+        <Route path="/home-guard-deployment" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <HomeGuardDeploymentDetailed />
+          </motion.div>
+        } />
+        <Route path="/disaster-resource-inventory" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <DisasterResourceInventoryDetailed />
+          </motion.div>
+        } />
+        <Route path="/emergency-shelter-security" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <EmergencyShelterSecurityDetailed />
+          </motion.div>
+        } />
+        <Route path="/emergency-evacuation-status-board" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <EmergencyEvacuationStatusBoardDetailed />
+          </motion.div>
+        } />
+        <Route path="/relief-convoy-escort-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ReliefConvoyEscortManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/humanitarian-assistance-coordination" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <HumanitarianAssistanceCoordinationDetailed />
+          </motion.div>
+        } />
+        <Route path="/disaster-communication-log" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <DisasterCommunicationLogDetailed />
+          </motion.div>
+        } />
+        <Route path="/relief-camp-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ReliefCampManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/rescue-team-allocation" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <RescueTeamAllocationDetailed />
+          </motion.div>
+        } />
+        <Route path="/emergency-supply-chain" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <EmergencySupplyChainDetailed />
+          </motion.div>
+        } />
+        <Route path="/shelter-occupancy-dashboard" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ShelterOccupancyDashboardDetailed />
+          </motion.div>
+        } />
+        <Route path="/disaster-volunteer-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <DisasterVolunteerManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/resource-distribution-tracker" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ResourceDistributionTrackerDetailed />
+          </motion.div>
+        } />
+        <Route path="/medical-response-coordination" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <MedicalResponseCoordinationDetailed />
+          </motion.div>
+        } />
+        <Route path="/evacuation-route-planner" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <EvacuationRoutePlannerDetailed />
+          </motion.div>
+        } />
+        <Route path="/emergency-stock-monitoring" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <EmergencyStockMonitoringDetailed />
+          </motion.div>
+        } />
+        <Route path="/relief-material-audit" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ReliefMaterialAuditDetailed />
+          </motion.div>
+        } />
+        <Route path="/register-digitization" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <RegisterDigitizationDetailed />
+          </motion.div>
+        } />
+        <Route path="/manual-register-replacement" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ManualRegisterReplacementDetailed />
+          </motion.div>
+        } />
+        <Route path="/compliance-calendar" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ComplianceCalendarDetailed />
+          </motion.div>
+        } />
+        <Route path="/inspection-evidence-repository" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <InspectionEvidenceRepositoryDetailed />
+          </motion.div>
+        } />
+        <Route path="/record-authentication" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <RecordAuthenticationDetailed />
+          </motion.div>
+        } />
+        <Route path="/document-expiry-tracker" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <DocumentExpiryTrackerDetailed />
+          </motion.div>
+        } />
+        <Route path="/circular-compliance-dashboard" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CircularComplianceDashboardDetailed />
+          </motion.div>
+        } />
+        <Route path="/policy-revision-tracker" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PolicyRevisionTrackerDetailed />
+          </motion.div>
+        } />
+        <Route path="/sop-update-distribution" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <SOPUpdateDistributionDetailed />
+          </motion.div>
+        } />
+        <Route path="/legal-compliance-checklist" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <LegalComplianceChecklistDetailed />
+          </motion.div>
+        } />
+        <Route path="/election-force-allocation" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ElectionForceAllocationDetailed />
+          </motion.div>
+        } />
+        <Route path="/polling-booth-security-planning" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PollingBoothSecurityPlanningDetailed />
+          </motion.div>
+        } />
+        <Route path="/election-route-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ElectionRouteManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/evm-security-coordination" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <EVMSecurityCoordinationDetailed />
+          </motion.div>
+        } />
+        <Route path="/strong-room-monitoring" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <StrongRoomMonitoringDetailed />
+          </motion.div>
+        } />
+        <Route path="/poll-day-incident-tracker" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PollDayIncidentTrackerDetailed />
+          </motion.div>
+        } />
+        <Route path="/election-vulnerability-mapping" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ElectionVulnerabilityMappingDetailed />
+          </motion.div>
+        } />
+        <Route path="/flying-squad-dashboard" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <FlyingSquadDashboardDetailed />
+          </motion.div>
+        } />
+        <Route path="/mcc-monitoring-support" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <MCCMonitoringSupportDetailed />
+          </motion.div>
+        } />
+        <Route path="/election-resource-dashboard" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ElectionResourceDashboardDetailed />
           </motion.div>
         } />
         <Route path="/business-compliance" element={

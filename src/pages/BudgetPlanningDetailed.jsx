@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Users, Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, Briefcase, Calendar, Calculator, Target, BookOpen, Heart, Smartphone, HardDrive, Bell, CheckCircle, ShieldAlert, CreditCard, DollarSign, TrendingUp, PieChart, Landmark
+  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Map, Truck
 } from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "Police Budget Planner AI", "Fund Allocation Expert AI", "Budget Forecast AI", 
+"Police Budget Planner AI", "Fund Allocation Expert AI", "Budget Forecast AI", 
   "Budget Utilization Monitor AI", "Financial Planning AI", "Treasury Management AI", 
   "Revenue & Grant Management AI", "Procurement Planning AI", "Vendor Payment Auditor AI", 
   "Salary & Payroll AI", "Pension & Gratuity AI", "Fleet Expense AI", 
@@ -29,92 +29,13 @@ const aiExperts = [
   "Station Renovation Budget AI", "Reward & Bounty Payout Bot", "Future Inflation Adjustment AI"
 ];
 
-const financeModules = [
-  {
-    title: "State Police Budgeting",
-    icon: <Landmark size={20} />,
-    items: ["Annual Budget Planning", "DGP Budget Forecasting", "District Allocation", "Zone-wise Fund Distribution", "Contingency Funds"]
-  },
-  {
-    title: "Payroll & Allowances",
-    icon: <Calculator size={20} />,
-    items: ["Rank-based Salary processing", "Risk & Hardship Allowances", "Uniform & Kit Allowances", "Travel DA/TA", "Overtime Compensation"]
-  },
-  {
-    title: "Station Expenses",
-    icon: <DollarSign size={20} />,
-    items: ["Station Maintenance Funds", "Investigation Expenses", "Secret Informant Funds (SS Fund)", "Stationery & Consumables"]
-  },
-  {
-    title: "Fleet & Fuel Management",
-    icon: <Rocket size={20} />,
-    items: ["PCR Van Fuel Logs", "Vehicle Maintenance Budget", "Toll & Transport Expenses", "Fuel Card Integration"]
-  },
-  {
-    title: "Pension & Retirement",
-    icon: <Briefcase size={20} />,
-    items: ["Gratuity Calculation", "Pension Disbursement", "Post-Retirement Medical Funds", "Family Pension Management"]
-  },
-  {
-    title: "Vendor Payments",
-    icon: <CreditCard size={20} />,
-    items: ["Uniform Supplier Payments", "Ammunition Vendor Invoices", "Tech Equipment Procurement", "Contractor Billing"]
-  },
-  {
-    title: "Financial Audits",
-    icon: <Target size={20} />,
-    items: ["Internal Financial Audits", "CAG Report Compliance", "Expense Anomaly Detection", "Fund Utilization Certificates"]
-  }
-];
-
-const aiFeatures = [
-  "AI Budget Shortfall Prediction", "AI Expense Fraud Detection", "AI Fuel Theft Recognition",
-  "AI Fake Bill OCR Scanner", "AI Risk Allowance Miscalculation Alert", "AI Predictive Fleet Maintenance Cost",
-  "AI Secret Fund Utilization Analysis", "AI Auto-Categorization of Station Expenses", "AI Vendor Overpricing Alert",
-  "AI Pension Disbursement Delay Predictor", "AI Compliance Chatbot", "AI Multi-currency Forensics"
-];
-
-const databases = [
-  "Budgets", "Allocations", "Expenses", "Invoices", "Vendors", "Salaries", 
-  "Allowances", "Pensions", "FuelLogs", "MaintenanceCosts", "AuditTrails", "TaxRecords", 
-  "InformantFunds", "Tenders", "Receipts", "Transactions"
-];
-
-const dashboards = [
-  "DGP Financial Overview Dashboard", "District SP Budget Dashboard", "Station SHO Expense Dashboard", 
-  "Payroll & Pension Dashboard", "Audit & Compliance Dashboard", "Real-time Fund Utilization Tracker"
-];
-
-const apis = [
-  "Treasury Sync APIs", "Banking Payment Gateway APIs", "Salary Disbursement APIs", "Fuel Card APIs",
-  "Vendor Invoice APIs", "Audit Log APIs", "Expense Submission APIs", "Tax Calculation APIs",
-  "Budget Forecasting AI APIs"
-];
-
-const reports = [
-  "Annual Budget Report", "District-wise Fund Utilization", "Monthly Salary Register", 
-  "Fuel Consumption Audit", "Vendor Payment Status", "Pension Disbursal Report", 
-  "Secret Fund Audit Report", "CAG Compliance Report"
-];
-
-const security = [
-  "Zero-Trust Financial Architecture", "Gov-Grade JWT Authentication", "Maker-Checker Approval Workflow", 
-  "Rank-Based Financial Access Control", "End-to-End Encryption (AES-256)", 
-  "Immutable Financial Audit Trails", "Secure Banking VPN Integration", "RBI/Gov Data Compliance"
-];
-
-const futureScope = [
-  "Blockchain-based Secret Fund Ledger", "CBDC (Digital Rupee) Integration", "AI Automated Tax Filing",
-  "Voice-Based Expense Claims for Officers", "Real-time Predictive Inflation Adjustment", "Offline Financial Sync for Remote Stations"
-];
-
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: `Finance AI Agents (${aiExperts.length})`, icon: <Bot size={18} /> },
-  { id: 'modules', label: 'Finance Modules', icon: <LayoutDashboard size={18} /> },
+  { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
+  { id: 'modules', label: 'Advanced Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
-  { id: 'reports', label: 'Financial Dashboards', icon: <PieChart size={18} /> },
+  { id: 'reports', label: 'Dashboards', icon: <PieChart size={18} /> },
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
@@ -128,29 +49,29 @@ const BudgetPlanningDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <Landmark className="inline-icon" size={28} /> AI Budget Planning
+              <ShieldAlert className="inline-icon" size={28} /> AI BUDGET PLANNING
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>AI Police Budget Planning</strong> is an enterprise-grade financial nervous system designed to handle the complex budgeting, payroll, and procurement funding of state police departments. It leverages AI to ensure zero fund leakage, predictive budgeting, and real-time audit compliance.
+              <strong>AI BUDGET PLANNING</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in next-generation financial management powered by agentic ai.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><DollarSign className="inline-icon" color="#3b82f6" /> Predictive Budgeting</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>AI forecasts annual funding requirements by analyzing historical crime data, upcoming elections, and expected recruitments to prevent budget shortfalls.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#3b82f6" /> Real-time Monitoring</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Continuous AI-driven surveillance and data collection ensuring immediate anomaly detection and rapid response protocols.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#10b981" /> Expense Anomaly Detection</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Machine learning algorithms scan millions of invoices and fuel logs to instantly flag fake bills, overpriced vendor contracts, or fuel theft.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Cpu className="inline-icon" color="#10b981" /> Predictive Analytics</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Utilizes machine learning to forecast trends, identify potential risks before they occur, and suggest optimized resource allocation.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Target className="inline-icon" color="#f59e0b" /> Secret Fund Auditing</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Secure, encrypted ledgers for managing confidential investigation funds (SS Funds) with automated, pattern-based internal auditing.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#f59e0b" /> Seamless Integration</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Hooks into existing national and state-level databases, providing a unified, interoperable platform across all departments.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Shield className="inline-icon" color="#ef4444" /> Zero-Trust Security</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Gov-Grade Encryption and Maker-Checker workflows ensure that no financial transaction can be executed without verified, multi-level authorization.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Shield className="inline-icon" color="#ef4444" /> Automated Compliance</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Ensures all operations strictly adhere to legal and procedural guidelines, generating instant audit trails and compliance reports.</p>
               </div>
             </div>
           </motion.div>
@@ -169,10 +90,15 @@ const BudgetPlanningDetailed = () => {
       case 'modules':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="module-accordion">
-            {financeModules.map((mod, i) => (
+            {[
+              { title: "Real-time Monitoring Module", items: ["Live Data Stream", "Alert Engine", "Geospatial Tracking"] },
+              { title: "Predictive Analytics Engine", items: ["Risk Forecasting", "Resource Optimization", "Pattern Recognition"] },
+              { title: "Automated Reporting System", items: ["Compliance Audits", "Daily Briefings", "Incident Logs"] },
+              { title: "Cloud Integration Hub", items: ["State DB Sync", "Third-party API Webhooks", "Encrypted Data Transfer"] }
+            ].map((mod, i) => (
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} key={i} className="premium-module-panel">
                 <div className="module-header">
-                  {mod.icon}
+                  <LayoutDashboard size={20} color="#3b82f6" />
                   <h3>{mod.title}</h3>
                 </div>
                 <div className="module-tags">
@@ -187,7 +113,10 @@ const BudgetPlanningDetailed = () => {
       case 'features':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid">
-            {aiFeatures.map((feat, i) => (
+            {[
+              "24/7 AI Processing", "Advanced Machine Learning Models", "Real-time Data Sync", 
+              "Automated Alerts & Notifications", "Cross-Platform Accessibility", "Role-Based Access Control"
+            ].map((feat, i) => (
               <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-purple">
                 <Cpu className="card-icon" />
                 <h4>{feat}</h4>
@@ -200,15 +129,19 @@ const BudgetPlanningDetailed = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
             <div className="split-section">
               <div className="panel">
-                <h3><Database className="inline-icon" color="#06b6d4" /> Database Tables</h3>
+                <h3><Database className="inline-icon" color="#06b6d4" /> Database Integration</h3>
                 <div className="tag-cloud">
-                  {databases.map((db, i) => <span key={i} className="tech-tag">{db}</span>)}
+                  {["Primary_Transaction_DB", "Analytics_Data_Warehouse", "Audit_Logs_Archive", "User_Access_Registry", "System_Configuration_DB"].map((db, i) => (
+                    <span key={i} className="tech-tag">{db}</span>
+                  ))}
                 </div>
               </div>
               <div className="panel">
                 <h3><Network className="inline-icon" color="#8b5cf6" /> System APIs</h3>
                 <div className="tag-cloud">
-                  {apis.map((api, i) => <span key={i} className="tech-tag tech-tag-alt">{api}</span>)}
+                  {["RESTful Core API", "Real-time WebSocket Feed", "Third-party Webhooks", "Authentication Gateway", "Data Export API"].map((api, i) => (
+                    <span key={i} className="tech-tag tech-tag-alt">{api}</span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -221,13 +154,17 @@ const BudgetPlanningDetailed = () => {
               <div className="panel">
                 <h3><LayoutDashboard className="inline-icon" color="#3b82f6" /> Dashboards</h3>
                 <ul className="premium-list">
-                  {dashboards.map((d, i) => <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>)}
+                  {["Executive Overview Dashboard", "Live Operations Monitor", "Historical Trend Analysis", "System Health & Status"].map((d, i) => (
+                    <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>
+                  ))}
                 </ul>
               </div>
               <div className="panel">
                 <h3><FileText className="inline-icon" color="#10b981" /> Generated Reports</h3>
                 <ul className="premium-list">
-                  {reports.map((r, i) => <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>)}
+                  {["Daily Summary Report", "Weekly Performance Analytics", "Monthly Compliance Audit", "System Exception Logs"].map((r, i) => (
+                    <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -240,13 +177,21 @@ const BudgetPlanningDetailed = () => {
               <div className="panel highlight-red">
                 <h3><ShieldAlert className="inline-icon" color="#ef4444" /> Security Protocols</h3>
                 <ul className="premium-list">
-                  {security.map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
+                  {[
+                    "End-to-End Data Encryption (AES-256)", "Multi-Factor Authentication (MFA)", 
+                    "Strict Role-Based Access Control (RBAC)", "Tamper-proof Audit Trails", 
+                    "Automated Threat Detection", "Regular Security Penetration Testing"
+                  ].map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
                 </ul>
               </div>
               <div className="panel highlight-green">
                 <h3><Rocket className="inline-icon" color="#10b981" /> Future Enhancements</h3>
                 <ul className="premium-list">
-                  {futureScope.map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
+                  {[
+                    "Integration with Advanced LLMs", "Predictive Autonomous Actions", 
+                    "Enhanced Mobile Accessibility", "Cross-Agency Data Federation", 
+                    "Blockchain-based Immutability", "Next-Gen UI/UX Overhaul"
+                  ].map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
                 </ul>
               </div>
             </div>
@@ -269,7 +214,7 @@ const BudgetPlanningDetailed = () => {
         </button>
         <div className="header-titles">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="icon-wrapper">
-            <Landmark size={40} color="#06b6d4" />
+            <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
             <h1 className="cyber-title">AI BUDGET <span>PLANNING</span></h1>

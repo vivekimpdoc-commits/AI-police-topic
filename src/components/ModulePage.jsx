@@ -342,6 +342,163 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 62: Border & Check Posts
+                      'AI Highway Check Post Operations': '/border-check-post',
+                      'AI State Border Check Management': '/state-border-check',
+                      'AI Commercial Vehicle Inspection': '/commercial-vehicle-inspection',
+                      'AI Goods Movement Verification': '/goods-movement-verification',
+                      'AI Tourist Vehicle Monitoring': '/tourist-vehicle-monitoring',
+                      'AI Border Incident Register': '/border-incident-register',
+                      'AI Highway Patrol Analytics': '/highway-patrol-analytics',
+                      'AI Toll Plaza Coordination': '/toll-plaza-coordination',
+                      'AI Interstate Vehicle Alert Exchange': '/interstate-vehicle-alert',
+                      'AI Mobile Checkpoint Planning': '/mobile-checkpoint-planning',
+
+                      // Module 07: Citizen Services
+                      'AI Jansunwai': '/jansunwai',
+                      'AI Voice Bot': '/voice-bot',
+                      'AI Citizen Portal': '/citizen-portal',
+                      'AI Citizen Mobile App': '/citizen-mobile-app',
+                      'AI Feedback Management': '/feedback-management',
+
+                      // Module 08: Complaint & FIR
+                      'AI Complaint Management': '/complaint-management',
+                      'AI FIR Assistant': '/fir-assistant',
+                      'AI e-FIR System': '/e-fir-system',
+                      'AI Complaint Routing': '/complaint-routing',
+                      'AI Complaint Analytics': '/complaint-analytics',
+
+                      // Module 10: Crime Intelligence
+                      'AI Crime Analytics': '/crime-analytics',
+                      'AI Crime Mapping': '/crime-mapping',
+                      'AI Crime Hotspot Detection': '/crime-hotspot-detection',
+                      'AI Crime Prediction': '/crime-prediction',
+                      'AI Crime Pattern Discovery': '/crime-pattern-discovery',
+                      'AI Repeat Offender Analysis': '/repeat-offender-analysis',
+                      'AI Organized Crime Intelligence': '/organized-crime-intelligence',
+                      'AI Gang Intelligence': '/gang-intelligence',
+                      'AI Criminal Network Analysis': '/criminal-network-analysis',
+                      'AI Intelligence Fusion Center': '/intelligence-fusion-center',
+
+                      // Module 13: Cyber Crime
+                      'AI Cyber Crime Investigation': '/cyber-crime-investigation',
+                      'AI Digital Fraud Detection': '/digital-fraud-detection',
+                      'AI Phishing Detection': '/phishing-detection',
+                      'AI Social Media Crime Analysis': '/social-media-crime-analysis',
+                      'AI Dark Web Intelligence': '/dark-web-intelligence',
+
+                      // Module 14: Digital Evidence
+                      'AI Digital Evidence Management': '/digital-evidence-management',
+                      'AI Image Analysis': '/image-analysis',
+                      'AI Video Analytics': '/video-analytics',
+                      'AI Audio Forensics': '/audio-forensics',
+                      'AI OCR & Document Analysis': '/ocr-document-analysis',
+                      'AI Metadata Analysis': '/metadata-analysis',
+                      'AI Chain of Custody': '/chain-of-custody',
+
+                      // Module 75: Disaster & Emergency Coordination
+                      'AI NDRF Coordination': '/ndrf-coordination',
+                      'AI SDRF Coordination': '/sdrf-coordination',
+                      'AI Civil Defence Coordination': '/civil-defence-coordination',
+                      'AI Home Guard Deployment': '/home-guard-deployment',
+                      'AI Disaster Resource Inventory': '/disaster-resource-inventory',
+                      'AI Emergency Shelter Security': '/emergency-shelter-security',
+                      'AI Emergency Evacuation Status Board': '/emergency-evacuation-status-board',
+                      'AI Relief Convoy Escort Management': '/relief-convoy-escort-management',
+                      'AI Humanitarian Assistance Coordination': '/humanitarian-assistance-coordination',
+                      'AI Disaster Communication Log': '/disaster-communication-log',
+
+                      // Module 43: Disaster & Emergency Logistics
+                      'AI Relief Camp Management': '/relief-camp-management',
+                      'AI Rescue Team Allocation': '/rescue-team-allocation',
+                      'AI Emergency Supply Chain': '/emergency-supply-chain',
+                      'AI Shelter Occupancy Dashboard': '/shelter-occupancy-dashboard',
+                      'AI Disaster Volunteer Management': '/disaster-volunteer-management',
+                      'AI Resource Distribution Tracker': '/resource-distribution-tracker',
+                      'AI Medical Response Coordination': '/medical-response-coordination',
+                      'AI Evacuation Route Planner': '/evacuation-route-planner',
+                      'AI Emergency Stock Monitoring': '/emergency-stock-monitoring',
+                      'AI Relief Material Audit': '/relief-material-audit',
+
+                      // Module 65: Documentation & Compliance
+                      'AI Register Digitization': '/register-digitization',
+                      'AI Manual Register Replacement': '/manual-register-replacement',
+                      'AI Compliance Calendar': '/compliance-calendar',
+                      'AI Inspection Evidence Repository': '/inspection-evidence-repository',
+                      'AI Record Authentication': '/record-authentication',
+                      'AI Document Expiry Tracker': '/document-expiry-tracker',
+                      'AI Circular Compliance Dashboard': '/circular-compliance-dashboard',
+                      'AI Policy Revision Tracker': '/policy-revision-tracker',
+                      'AI SOP Update Distribution': '/sop-update-distribution',
+                      'AI Legal Compliance Checklist': '/legal-compliance-checklist',
+
+                      // Module 60: Election Management
+                      'AI Election Force Allocation': '/election-force-allocation',
+                      'AI Polling Booth Security Planning': '/polling-booth-security-planning',
+                      'AI Election Route Management': '/election-route-management',
+                      'AI EVM Security Coordination': '/evm-security-coordination',
+                      'AI Strong Room Monitoring': '/strong-room-monitoring',
+                      'AI Poll Day Incident Tracker': '/poll-day-incident-tracker',
+                      'AI Election Vulnerability Mapping': '/election-vulnerability-mapping',
+                      'AI Flying Squad Dashboard': '/flying-squad-dashboard',
+                      'AI MCC Monitoring Support': '/mcc-monitoring-support',
+                      'AI Election Resource Dashboard': '/election-resource-dashboard',
+
+                      // Module 23: Communication
+                      'AI Media Management': '/media-management',
+                      'AI Press Note Generator': '/press-note-generator',
+                      'AI Public Communication': '/public-communication',
+                      'AI Social Media Management': '/social-media-management',
+                      'AI Public Alert System': '/public-alert-system',
+
+                      // Module 54: Communication & Documentation
+                      'AI Daily Police Bulletin': '/daily-police-bulletin',
+                      'AI Morning Brief Generator': '/morning-brief-generator',
+                      'AI Evening Situation Report': '/evening-situation-report',
+                      'AI Weekly Crime Digest': '/weekly-crime-digest',
+                      'AI Monthly District Review': '/monthly-district-review',
+                      'AI Police Newsletter': '/police-newsletter',
+                      'AI Internal Knowledge Sharing': '/internal-knowledge-sharing',
+                      'AI Command Instructions Archive': '/command-instructions-archive',
+                      'AI Briefing Notes Generator': '/briefing-notes-generator',
+                      'AI Daily Order Book': '/daily-order-book',
+
+                      // Module 31: Communication Systems
+                      'AI Wireless Communication Monitoring': '/wireless-communication-monitoring',
+                      'AI Radio Log Analysis': '/radio-log-analysis',
+                      'AI Emergency Broadcast Management': '/emergency-broadcast-management',
+                      'AI Internal Messaging Assistant': '/internal-messaging-assistant',
+                      'AI Secure Communication Audit': '/secure-communication-audit',
+                      'AI Communication Failure Detection': '/communication-failure-detection',
+                      'AI Call Dispatch Optimization': '/call-dispatch-optimization',
+                      'AI Multi-Channel Communication Hub': '/multi-channel-communication-hub',
+                      'AI Incident Broadcast System': '/incident-broadcast-system',
+                      'AI Communication Performance Analytics': '/communication-performance-analytics',
+
+                      // Module 41: Community Policing
+                      'AI Gram Chaupal Management': '/gram-chaupal-management',
+                      'AI Citizen Outreach Calendar': '/citizen-outreach-calendar',
+                      'AI Police Mitra Portal': '/police-mitra-portal',
+                      'AI Resident Welfare Association Coordination': '/rwa-coordination',
+                      'AI NGO Coordination': '/ngo-coordination',
+                      'AI Community Volunteer Network': '/community-volunteer-network',
+                      'AI Public Trust Index': '/public-trust-index',
+                      'AI Community Risk Survey': '/community-risk-survey',
+                      'AI Public Awareness Campaign Manager': '/public-awareness-campaign-manager',
+                      'AI Citizen Suggestion Portal': '/citizen-suggestion-portal',
+
+                      // Module 52: Control of Official Documents
+                      'AI Seal Register': '/seal-register',
+                      'AI Stamp Register': '/stamp-register',
+                      'AI Confidential Document Locker': '/confidential-document-locker',
+                      'AI Government Gazette Archive': '/government-gazette-archive',
+                      'AI Record Weeding Schedule': '/record-weeding-schedule',
+                      'AI Document Preservation': '/document-preservation',
+                      'AI Historical Record Archive': '/historical-record-archive',
+                      'AI File Digitization Queue': '/file-digitization-queue',
+                      'AI Digital Signature Register': '/digital-signature-register',
+                      'AI Record Access Approval': '/record-access-approval',
+
                       // Module 39: Arms & Equipment
                       'AI Weapon Issue & Return': '/weapon-issue',
                       'AI Ammunition Consumption Analytics': '/ammunition-analytics',
@@ -350,6 +507,11 @@ const ModulePage = () => {
                       'AI Helmet Inventory': '/helmet-inventory',
                       'AI Riot Gear Tracking': '/riot-gear',
                       'AI Tear Gas Inventory': '/tear-gas',
+                        'AI Beat Management': '/beat-management',
+                        'AI Patrol Management': '/patrol-management',
+                        'AI GPS Tracking': '/gps-tracking',
+                        'AI Beat Book': '/beat-book',
+                        'AI Field Inspection': '/field-inspection',
                       'AI Explosive Storage Monitoring': '/explosive-storage',
                       'AI Equipment Calibration Tracker': '/equipment-calibration',
                       'AI Armoury Inspection': '/armoury-inspection',

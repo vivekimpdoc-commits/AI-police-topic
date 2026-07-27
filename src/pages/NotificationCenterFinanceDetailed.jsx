@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Landmark, Bell, MessageSquare
+  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Map, Truck
 } from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "Critical Deficit Pinger AI", "Treasury Bounce Alerter", "GeM Vendor Escalation Bot",
+"Critical Deficit Pinger AI", "Treasury Bounce Alerter", "GeM Vendor Escalation Bot",
   "SLA Penalty SMS Alerter", "Smart Contract Escrow Pinger", "Payroll Disbursal Notifier",
   "Pension Delay Escalator AI", "Tax Audit Red-Flag Bot", "GST Filing Deadline Alerter",
   "Grant Lapse Countdown AI", "Nirbhaya Fund Unspent Pinger", "March-Rush Spend Blocker",
@@ -29,82 +29,13 @@ const aiExperts = [
   "API Gateway Timeout Alerter", "Executive Summary Push Bot", "Daily Morning Briefing Alerter"
 ];
 
-const financeModules = [
-  {
-    title: "Critical Financial Alerts",
-    icon: <AlertTriangle size={20} />,
-    items: ["Treasury Bounce Alerts", "Deficit & Burn Warnings", "Grant Lapse Countdowns", "Payroll Disbursal Errors"]
-  },
-  {
-    title: "Fraud & Compliance",
-    icon: <ShieldAlert size={20} />,
-    items: ["Ghost Vendor Red-Flags", "Tender Cartel Warnings", "CVC Guideline Breaches", "Tax Filing Deadlines"]
-  },
-  {
-    title: "Operational Notifications",
-    icon: <Activity size={20} />,
-    items: ["Fuel Spike Alerter", "Utility Theft SMS", "Warranty Lapse Alerts", "Medical Supply Shortages"]
-  },
-  {
-    title: "Vendor & Contracts",
-    icon: <FileText size={20} />,
-    items: ["Escrow Payout Pings", "SLA Penalty SMS", "Guarantee Expiry Alerts", "EMD Refund Delays"]
-  },
-  {
-    title: "Executive Summaries",
-    icon: <MessageSquare size={20} />,
-    items: ["Daily Morning Brief Push", "RTI Deadline Escalation", "Macro-Inflation Pings", "Global Price Drops"]
-  }
-];
-
-const aiFeatures = [
-  "AI Omnichannel Alert Routing (SMS, WhatsApp, Email, Dash)", "AI Escalation Matrix (Station -> Zone -> DGP)", "AI Encrypted Ping for SS Funds",
-  "AI False-Positive Alert Suppression", "AI Actionable Notifications (1-Click Approve/Deny)", "AI Threat Prioritization Engine"
-];
-
-const databases = [
-  "Notification_Log_Vault", "Escalation_Matrix_DB", "Encrypted_Dispatch_Ledger", "User_Preference_Registry", 
-  "Actionable_Click_Logs", "False_Positive_Cache", "SMS_Gateway_Delivery_DB", "Audit_Trail_Pings"
-];
-
-const dashboards = [
-  "Live Alert Dispatch Center", "Escalation & Resolution Map", "False-Positive Suppression Log", 
-  "DGP Priority Notification Inbox", "System Health & Gateway Sync", "Pending Actionable Approvals"
-];
-
-const apis = [
-  "NIC SMS Gateways", "WhatsApp Business API", "Secure Email SMTP Sync", 
-  "Push Notification (FCM/APNS)", "State Treasury Alert Webhooks", "Vigilance DB Sync"
-];
-
-const reports = [
-  "Daily Alert Dispatch Summary", "Escalation Response Time Audit", "Critical Threat Ping Log", 
-  "Vendor Dispute Escalation", "False-Positive Filtration Stats", "Executive Action Turnaround"
-];
-
-const security = [
-  "End-to-End Encrypted Notifications", "Zero-Trust Approval Links", "Biometric Action Auth", 
-  "Anti-Spoofing SMS Headers", "Role-Based Alert Masking", "Air-Gapped Critical Pings"
-];
-
-const futureScope = [
-  "Autonomous Smartwatch/Wearable Pings", "Holographic AR Alert Interventions", "AI Voice Call Escalation (Robocall)",
-  "Decentralized Alert Relays", "Predictive Threat Pre-Alerting", "Quantum-Encrypted Comm Channels"
-];
-
-// Helper Icon
-function AlertTriangle({ size }) {
-  return <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>;
-}
-
-
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: `Notification Agents (${aiExperts.length})`, icon: <Bot size={18} /> },
-  { id: 'modules', label: 'Alert Modules', icon: <LayoutDashboard size={18} /> },
+  { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
+  { id: 'modules', label: 'Advanced Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
-  { id: 'reports', label: 'Dispatch Boards', icon: <PieChart size={18} /> },
+  { id: 'reports', label: 'Dashboards', icon: <PieChart size={18} /> },
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
@@ -118,29 +49,29 @@ const NotificationCenterFinanceDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <Bell className="inline-icon" size={28} /> AI Notification Center (Finance)
+              <ShieldAlert className="inline-icon" size={28} /> AI NOTIFICATION CENTER
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>AI Notification Center</strong> is the central nervous system for financial alerts. It actively monitors all 600+ financial modules and dispatches prioritized, actionable alerts—ranging from a routine SMS about an EMD refund to an encrypted DGP-level warning about an impending Rs 100-Crore grant lapse.
+              <strong>AI NOTIFICATION CENTER</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in escalation matrix, threat alerts & smart approvals.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><AlertTriangle className="inline-icon" color="#ef4444" /> Critical Threat Alerter</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Instantly pings top brass if the AI detects tender cartelization, ghost vendor invoices, or a severe liquidity crisis looming in the treasury.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#3b82f6" /> Real-time Monitoring</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Continuous AI-driven surveillance and data collection ensuring immediate anomaly detection and rapid response protocols.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#3b82f6" /> Actionable Approvals</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Alerts aren't just text; they contain secure, 1-click 'Approve' or 'Deny' buttons for fast-tracking smart contract payouts or travel DA sanctions.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Cpu className="inline-icon" color="#10b981" /> Predictive Analytics</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Utilizes machine learning to forecast trends, identify potential risks before they occur, and suggest optimized resource allocation.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#10b981" /> Escalation Matrix Sync</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>If a Station House Officer ignores a 'Fuel Burn-Rate Spike' alert for 24 hours, the AI automatically escalates the notification to the Zonal IG via WhatsApp and Email.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#f59e0b" /> Seamless Integration</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Hooks into existing national and state-level databases, providing a unified, interoperable platform across all departments.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><ShieldAlert className="inline-icon" color="#f59e0b" /> Encrypted SS Fund Pings</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Handles highly sensitive Secret Service (informant) payout approvals using end-to-end encrypted push notifications that auto-destruct after viewing.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Shield className="inline-icon" color="#ef4444" /> Automated Compliance</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Ensures all operations strictly adhere to legal and procedural guidelines, generating instant audit trails and compliance reports.</p>
               </div>
             </div>
           </motion.div>
@@ -159,15 +90,20 @@ const NotificationCenterFinanceDetailed = () => {
       case 'modules':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="module-accordion">
-            {financeModules.map((mod, i) => (
+            {[
+              { title: "Real-time Monitoring Module", items: ["Live Data Stream", "Alert Engine", "Geospatial Tracking"] },
+              { title: "Predictive Analytics Engine", items: ["Risk Forecasting", "Resource Optimization", "Pattern Recognition"] },
+              { title: "Automated Reporting System", items: ["Compliance Audits", "Daily Briefings", "Incident Logs"] },
+              { title: "Cloud Integration Hub", items: ["State DB Sync", "Third-party API Webhooks", "Encrypted Data Transfer"] }
+            ].map((mod, i) => (
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} key={i} className="premium-module-panel">
                 <div className="module-header">
-                  {mod.icon}
+                  <LayoutDashboard size={20} color="#3b82f6" />
                   <h3>{mod.title}</h3>
                 </div>
                 <div className="module-tags">
                   {mod.items.map((item, j) => (
-                    <span key={j} className="tag">{item}</span>
+                    <span key={j} className="module-tag">{item}</span>
                   ))}
                 </div>
               </motion.div>
@@ -176,46 +112,58 @@ const NotificationCenterFinanceDetailed = () => {
         );
       case 'features':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="features-grid">
-            {aiFeatures.map((feature, i) => (
-              <div key={i} className="premium-feature-card">
-                <Cpu className="feature-icon" color="#06b6d4" />
-                <span>{feature}</span>
-              </div>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid">
+            {[
+              "24/7 AI Processing", "Advanced Machine Learning Models", "Real-time Data Sync", 
+              "Automated Alerts & Notifications", "Cross-Platform Accessibility", "Role-Based Access Control"
+            ].map((feat, i) => (
+              <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-purple">
+                <Cpu className="card-icon" />
+                <h4>{feat}</h4>
+              </motion.div>
             ))}
           </motion.div>
         );
       case 'architecture':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="architecture-panel premium-module-panel">
-            <h3 style={{ color: '#06b6d4', marginBottom: '1.5rem' }}><Database className="inline-icon" /> Databases & Storage</h3>
-            <div className="tags-container" style={{ marginBottom: '2.5rem' }}>
-              {databases.map((db, i) => <span key={i} className="cyber-tag">{db}</span>)}
-            </div>
-            
-            <h3 style={{ color: '#10b981', marginBottom: '1.5rem' }}><Network className="inline-icon" /> System APIs</h3>
-            <div className="tags-container">
-              {apis.map((api, i) => <span key={i} className="cyber-tag highlight-green">{api}</span>)}
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+            <div className="split-section">
+              <div className="panel">
+                <h3><Database className="inline-icon" color="#06b6d4" /> Database Integration</h3>
+                <div className="tag-cloud">
+                  {["Primary_Transaction_DB", "Analytics_Data_Warehouse", "Audit_Logs_Archive", "User_Access_Registry", "System_Configuration_DB"].map((db, i) => (
+                    <span key={i} className="tech-tag">{db}</span>
+                  ))}
+                </div>
+              </div>
+              <div className="panel">
+                <h3><Network className="inline-icon" color="#8b5cf6" /> System APIs</h3>
+                <div className="tag-cloud">
+                  {["RESTful Core API", "Real-time WebSocket Feed", "Third-party Webhooks", "Authentication Gateway", "Data Export API"].map((api, i) => (
+                    <span key={i} className="tech-tag tech-tag-alt">{api}</span>
+                  ))}
+                </div>
+              </div>
             </div>
           </motion.div>
         );
       case 'reports':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="reports-panel premium-module-panel">
-            <div className="split-section">
-              <div className="report-list">
-                <h3 style={{ color: '#f59e0b', marginBottom: '1.5rem' }}><LayoutDashboard className="inline-icon" /> Live Dashboards</h3>
-                <ul>
-                  {dashboards.map((dash, i) => (
-                    <li key={i}><CheckCircle size={16} color="#f59e0b" /> {dash}</li>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+             <div className="split-section">
+              <div className="panel">
+                <h3><LayoutDashboard className="inline-icon" color="#3b82f6" /> Dashboards</h3>
+                <ul className="premium-list">
+                  {["Executive Overview Dashboard", "Live Operations Monitor", "Historical Trend Analysis", "System Health & Status"].map((d, i) => (
+                    <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>
                   ))}
                 </ul>
               </div>
-              <div className="report-list">
-                <h3 style={{ color: '#3b82f6', marginBottom: '1.5rem' }}><FileText className="inline-icon" /> Automated Reports</h3>
-                <ul>
-                  {reports.map((rep, i) => (
-                    <li key={i}><FileText size={16} color="#3b82f6" /> {rep}</li>
+              <div className="panel">
+                <h3><FileText className="inline-icon" color="#10b981" /> Generated Reports</h3>
+                <ul className="premium-list">
+                  {["Daily Summary Report", "Weekly Performance Analytics", "Monthly Compliance Audit", "System Exception Logs"].map((r, i) => (
+                    <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>
                   ))}
                 </ul>
               </div>
@@ -224,15 +172,28 @@ const NotificationCenterFinanceDetailed = () => {
         );
       case 'security':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="security-panel premium-module-panel">
-            <h3 style={{ color: '#ef4444', marginBottom: '1.5rem' }}><Shield className="inline-icon" /> Security Protocols</h3>
-            <div className="tags-container" style={{ marginBottom: '2.5rem' }}>
-              {security.map((sec, i) => <span key={i} className="cyber-tag highlight-red">{sec}</span>)}
-            </div>
-            
-            <h3 style={{ color: '#8b5cf6', marginBottom: '1.5rem' }}><Rocket className="inline-icon" /> Future Roadmap</h3>
-            <div className="tags-container">
-              {futureScope.map((scope, i) => <span key={i} className="cyber-tag highlight-purple">{scope}</span>)}
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+             <div className="split-section">
+              <div className="panel highlight-red">
+                <h3><ShieldAlert className="inline-icon" color="#ef4444" /> Security Protocols</h3>
+                <ul className="premium-list">
+                  {[
+                    "End-to-End Data Encryption (AES-256)", "Multi-Factor Authentication (MFA)", 
+                    "Strict Role-Based Access Control (RBAC)", "Tamper-proof Audit Trails", 
+                    "Automated Threat Detection", "Regular Security Penetration Testing"
+                  ].map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
+                </ul>
+              </div>
+              <div className="panel highlight-green">
+                <h3><Rocket className="inline-icon" color="#10b981" /> Future Enhancements</h3>
+                <ul className="premium-list">
+                  {[
+                    "Integration with Advanced LLMs", "Predictive Autonomous Actions", 
+                    "Enhanced Mobile Accessibility", "Cross-Agency Data Federation", 
+                    "Blockchain-based Immutability", "Next-Gen UI/UX Overhaul"
+                  ].map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
+                </ul>
+              </div>
             </div>
           </motion.div>
         );
@@ -253,7 +214,7 @@ const NotificationCenterFinanceDetailed = () => {
         </button>
         <div className="header-titles">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="icon-wrapper">
-            <Bell size={40} color="#06b6d4" />
+            <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
             <h1 className="cyber-title">AI NOTIFICATION <span>CENTER</span></h1>
@@ -280,7 +241,9 @@ const NotificationCenterFinanceDetailed = () => {
         {/* Content Area */}
         <main className="hrms-content-area">
           <AnimatePresence mode="wait">
-            {renderContent()}
+            <div key={activeTab}>
+              {renderContent()}
+            </div>
           </AnimatePresence>
         </main>
       </div>

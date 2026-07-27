@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Landmark, Building, Briefcase
+  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Map, Truck
 } from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "CID Budget Allocator AI", "Cyber Cell Funder Bot", "Traffic Police Budget AI",
+"CID Budget Allocator AI", "Cyber Cell Funder Bot", "Traffic Police Budget AI",
   "Special Task Force Funder", "Forensics Wing Budget AI", "Women Cell Grant Allocator",
   "Anti-Terrorism Squad Funder", "Economic Offenses Funder", "State Intel Bureau Budget",
   "Narcotics Control Funder", "Highway Patrol Budget AI", "Railway Police Funder Bot",
@@ -29,76 +29,13 @@ const aiExperts = [
   "Bomb Disposal Squad Funder", "SDRF/Disaster Wing Budget", "Dog Squad Pension Funder"
 ];
 
-const financeModules = [
-  {
-    title: "Wing-wise Slicing",
-    icon: <Briefcase size={20} />,
-    items: ["CID & Intel Budgets", "Cyber Cell Funding", "Traffic Wing Allocations", "Forensic Lab Slicing"]
-  },
-  {
-    title: "Armed & Special Forces",
-    icon: <ShieldAlert size={20} />,
-    items: ["ATS/STF Budgets", "Armed Constabulary (PAC)", "Bomb Disposal Squads", "Riot Control Funds"]
-  },
-  {
-    title: "Logistics & Tech Wing",
-    icon: <Building size={20} />,
-    items: ["IT & Cyber Budgets", "Fleet Management", "Armory & Weapons", "Communication/Radio Wing"]
-  },
-  {
-    title: "Welfare & Medical",
-    icon: <Activity size={20} />,
-    items: ["Police Hospital Funds", "Training Academy Budgets", "Housing & Quarters", "Sports Control Board"]
-  },
-  {
-    title: "Inter-Wing Reappropriation",
-    icon: <Network size={20} />,
-    items: ["Fund Transfers", "Surplus Sweeping", "Deficit Alerts", "Emergency Slicing"]
-  }
-];
-
-const aiFeatures = [
-  "AI Automated Surplus Sweeping", "AI Wing-wise CapEx Forecasting", "AI Fraud Diversion Monitoring",
-  "AI Inter-Department Budget Balancing", "AI ROI Analysis per Specialized Wing", "AI Utility Cost Prediction"
-];
-
-const databases = [
-  "Wing_Allocation_Ledger", "Special_Forces_Budgets", "Logistics_Expenditure_DB", "Reappropriation_Logs", 
-  "Surplus_Deficit_Tracker", "Medical_Fund_Vault", "Training_Academy_Budgets", "CapEx_ROI_Index"
-];
-
-const dashboards = [
-  "DGP Master Wing Overview", "Specialized Forces Budget Board", "Logistics & IT CapEx", 
-  "Welfare & Training Board", "Live Reappropriation Tracker", "Surplus & Deficit Heatmap"
-];
-
-const apis = [
-  "State Finance Sync APIs", "Internal Reappropriation Gateways", "Hospital/Medical Billing APIs", 
-  "Vendor Logistics Sync", "Utility Billing Webhooks", "Armory Inventory Sync"
-];
-
-const reports = [
-  "Monthly Wing-wise Expenditure", "Special Forces ROI Report", "Surplus Sweep Summary", 
-  "Training & Welfare Audit", "IT & Cyber CapEx Log", "Utility & Maintenance Report"
-];
-
-const security = [
-  "Wing-Commander RBAC Limits", "Encrypted Reappropriation", "Immutable Transfer Logs", 
-  "Zero-Trust Fund Slicing", "Strict Maker-Checker Approvals", "Anti-Siphoning Algorithms"
-];
-
-const futureScope = [
-  "Autonomous Cross-Wing Rebalancing", "Real-time Blockchain Tracing", "Predictive Threat-Based Slicing",
-  "AI Auto-Approval for Minor Transfers", "Smart Contract Utility Payments", "Fully Decentralized Wing Ledgers"
-];
-
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: `Department Agents (${aiExperts.length})`, icon: <Bot size={18} /> },
-  { id: 'modules', label: 'Wing Modules', icon: <LayoutDashboard size={18} /> },
+  { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
+  { id: 'modules', label: 'Advanced Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
-  { id: 'reports', label: 'Budget Boards', icon: <PieChart size={18} /> },
+  { id: 'reports', label: 'Dashboards', icon: <PieChart size={18} /> },
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
@@ -112,29 +49,29 @@ const DepartmentBudgetDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <Building className="inline-icon" size={28} /> AI Department (Wing) Budget
+              <ShieldAlert className="inline-icon" size={28} /> AI DEPARTMENT BUDGET
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>AI Department Budget</strong> focuses on the horizontal slicing of the state budget into specialized wings (e.g., Traffic, Cyber, Forensics, STF). It prevents siloed inefficiencies by automatically sweeping surplus funds from one department and reappropriating them to another department facing a deficit.
+              <strong>AI DEPARTMENT BUDGET</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in wing-wise allocations, reappropriation & specialized funding.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Briefcase className="inline-icon" color="#3b82f6" /> Wing-wise Horizontal Slicing</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Intelligently divides the global state budget across 40+ specialized wings based on historical expenditure, current threat levels, and priority goals.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#3b82f6" /> Real-time Monitoring</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Continuous AI-driven surveillance and data collection ensuring immediate anomaly detection and rapid response protocols.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#10b981" /> Automated Reappropriation</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>If the Traffic Wing exhausts its budget but the Training Academy has a massive surplus, the AI suggests and executes seamless intra-department fund transfers.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Cpu className="inline-icon" color="#10b981" /> Predictive Analytics</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Utilizes machine learning to forecast trends, identify potential risks before they occur, and suggest optimized resource allocation.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><ShieldAlert className="inline-icon" color="#f59e0b" /> Special Forces CapEx</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Provides dedicated, highly secure funding silos for elite units like the ATS and Bomb Disposal Squads, ensuring rapid procurement of critical gear.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#f59e0b" /> Seamless Integration</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Hooks into existing national and state-level databases, providing a unified, interoperable platform across all departments.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#ef4444" /> Welfare & Logistics Tracker</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Separates operational budgets from human-centric budgets like police hospitals, recruit training academies, and sports control boards.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Shield className="inline-icon" color="#ef4444" /> Automated Compliance</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Ensures all operations strictly adhere to legal and procedural guidelines, generating instant audit trails and compliance reports.</p>
               </div>
             </div>
           </motion.div>
@@ -153,15 +90,20 @@ const DepartmentBudgetDetailed = () => {
       case 'modules':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="module-accordion">
-            {financeModules.map((mod, i) => (
+            {[
+              { title: "Real-time Monitoring Module", items: ["Live Data Stream", "Alert Engine", "Geospatial Tracking"] },
+              { title: "Predictive Analytics Engine", items: ["Risk Forecasting", "Resource Optimization", "Pattern Recognition"] },
+              { title: "Automated Reporting System", items: ["Compliance Audits", "Daily Briefings", "Incident Logs"] },
+              { title: "Cloud Integration Hub", items: ["State DB Sync", "Third-party API Webhooks", "Encrypted Data Transfer"] }
+            ].map((mod, i) => (
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} key={i} className="premium-module-panel">
                 <div className="module-header">
-                  {mod.icon}
+                  <LayoutDashboard size={20} color="#3b82f6" />
                   <h3>{mod.title}</h3>
                 </div>
                 <div className="module-tags">
                   {mod.items.map((item, j) => (
-                    <span key={j} className="tag">{item}</span>
+                    <span key={j} className="module-tag">{item}</span>
                   ))}
                 </div>
               </motion.div>
@@ -170,46 +112,58 @@ const DepartmentBudgetDetailed = () => {
         );
       case 'features':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="features-grid">
-            {aiFeatures.map((feature, i) => (
-              <div key={i} className="premium-feature-card">
-                <Cpu className="feature-icon" color="#06b6d4" />
-                <span>{feature}</span>
-              </div>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid">
+            {[
+              "24/7 AI Processing", "Advanced Machine Learning Models", "Real-time Data Sync", 
+              "Automated Alerts & Notifications", "Cross-Platform Accessibility", "Role-Based Access Control"
+            ].map((feat, i) => (
+              <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-purple">
+                <Cpu className="card-icon" />
+                <h4>{feat}</h4>
+              </motion.div>
             ))}
           </motion.div>
         );
       case 'architecture':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="architecture-panel premium-module-panel">
-            <h3 style={{ color: '#06b6d4', marginBottom: '1.5rem' }}><Database className="inline-icon" /> Databases & Storage</h3>
-            <div className="tags-container" style={{ marginBottom: '2.5rem' }}>
-              {databases.map((db, i) => <span key={i} className="cyber-tag">{db}</span>)}
-            </div>
-            
-            <h3 style={{ color: '#10b981', marginBottom: '1.5rem' }}><Network className="inline-icon" /> System APIs</h3>
-            <div className="tags-container">
-              {apis.map((api, i) => <span key={i} className="cyber-tag highlight-green">{api}</span>)}
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+            <div className="split-section">
+              <div className="panel">
+                <h3><Database className="inline-icon" color="#06b6d4" /> Database Integration</h3>
+                <div className="tag-cloud">
+                  {["Primary_Transaction_DB", "Analytics_Data_Warehouse", "Audit_Logs_Archive", "User_Access_Registry", "System_Configuration_DB"].map((db, i) => (
+                    <span key={i} className="tech-tag">{db}</span>
+                  ))}
+                </div>
+              </div>
+              <div className="panel">
+                <h3><Network className="inline-icon" color="#8b5cf6" /> System APIs</h3>
+                <div className="tag-cloud">
+                  {["RESTful Core API", "Real-time WebSocket Feed", "Third-party Webhooks", "Authentication Gateway", "Data Export API"].map((api, i) => (
+                    <span key={i} className="tech-tag tech-tag-alt">{api}</span>
+                  ))}
+                </div>
+              </div>
             </div>
           </motion.div>
         );
       case 'reports':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="reports-panel premium-module-panel">
-            <div className="split-section">
-              <div className="report-list">
-                <h3 style={{ color: '#f59e0b', marginBottom: '1.5rem' }}><LayoutDashboard className="inline-icon" /> Live Dashboards</h3>
-                <ul>
-                  {dashboards.map((dash, i) => (
-                    <li key={i}><CheckCircle size={16} color="#f59e0b" /> {dash}</li>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+             <div className="split-section">
+              <div className="panel">
+                <h3><LayoutDashboard className="inline-icon" color="#3b82f6" /> Dashboards</h3>
+                <ul className="premium-list">
+                  {["Executive Overview Dashboard", "Live Operations Monitor", "Historical Trend Analysis", "System Health & Status"].map((d, i) => (
+                    <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>
                   ))}
                 </ul>
               </div>
-              <div className="report-list">
-                <h3 style={{ color: '#3b82f6', marginBottom: '1.5rem' }}><FileText className="inline-icon" /> Automated Reports</h3>
-                <ul>
-                  {reports.map((rep, i) => (
-                    <li key={i}><FileText size={16} color="#3b82f6" /> {rep}</li>
+              <div className="panel">
+                <h3><FileText className="inline-icon" color="#10b981" /> Generated Reports</h3>
+                <ul className="premium-list">
+                  {["Daily Summary Report", "Weekly Performance Analytics", "Monthly Compliance Audit", "System Exception Logs"].map((r, i) => (
+                    <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>
                   ))}
                 </ul>
               </div>
@@ -218,15 +172,28 @@ const DepartmentBudgetDetailed = () => {
         );
       case 'security':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="security-panel premium-module-panel">
-            <h3 style={{ color: '#ef4444', marginBottom: '1.5rem' }}><Shield className="inline-icon" /> Security Protocols</h3>
-            <div className="tags-container" style={{ marginBottom: '2.5rem' }}>
-              {security.map((sec, i) => <span key={i} className="cyber-tag highlight-red">{sec}</span>)}
-            </div>
-            
-            <h3 style={{ color: '#8b5cf6', marginBottom: '1.5rem' }}><Rocket className="inline-icon" /> Future Roadmap</h3>
-            <div className="tags-container">
-              {futureScope.map((scope, i) => <span key={i} className="cyber-tag highlight-purple">{scope}</span>)}
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+             <div className="split-section">
+              <div className="panel highlight-red">
+                <h3><ShieldAlert className="inline-icon" color="#ef4444" /> Security Protocols</h3>
+                <ul className="premium-list">
+                  {[
+                    "End-to-End Data Encryption (AES-256)", "Multi-Factor Authentication (MFA)", 
+                    "Strict Role-Based Access Control (RBAC)", "Tamper-proof Audit Trails", 
+                    "Automated Threat Detection", "Regular Security Penetration Testing"
+                  ].map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
+                </ul>
+              </div>
+              <div className="panel highlight-green">
+                <h3><Rocket className="inline-icon" color="#10b981" /> Future Enhancements</h3>
+                <ul className="premium-list">
+                  {[
+                    "Integration with Advanced LLMs", "Predictive Autonomous Actions", 
+                    "Enhanced Mobile Accessibility", "Cross-Agency Data Federation", 
+                    "Blockchain-based Immutability", "Next-Gen UI/UX Overhaul"
+                  ].map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
+                </ul>
+              </div>
             </div>
           </motion.div>
         );
@@ -247,7 +214,7 @@ const DepartmentBudgetDetailed = () => {
         </button>
         <div className="header-titles">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="icon-wrapper">
-            <Building size={40} color="#06b6d4" />
+            <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
             <h1 className="cyber-title">AI DEPARTMENT <span>BUDGET</span></h1>
@@ -274,7 +241,9 @@ const DepartmentBudgetDetailed = () => {
         {/* Content Area */}
         <main className="hrms-content-area">
           <AnimatePresence mode="wait">
-            {renderContent()}
+            <div key={activeTab}>
+              {renderContent()}
+            </div>
           </AnimatePresence>
         </main>
       </div>

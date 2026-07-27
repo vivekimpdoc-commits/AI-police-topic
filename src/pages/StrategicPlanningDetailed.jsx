@@ -2,89 +2,24 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Target, TrendingUp
+  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Map, Truck
 } from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "5-Year Plan Modeler AI", "Budget Forecaster Bot", "Recruitment Analyzer", 
+"5-Year Plan Modeler AI", "Budget Forecaster Bot", "Recruitment Analyzer", 
   "Smart Police Scorer", "Maturity Assessor Bot", "Modernization Tracker", 
   "Infrastructure Planner AI", "Innovation Sync Bot", "Policy Simulator",
   "Demographic Analyst AI", "Risk Forecaster Bot"
 ];
 
-const planningModules = [
-  {
-    title: "Long-Term Force Planning",
-    icon: <Target size={20} />,
-    items: ["AI Budget Forecaster", "Demographic Shift Projections", "Recruitment Wave Planning", "Retirement Gap Analysis"]
-  },
-  {
-    title: "Budget & Modernization",
-    icon: <TrendingUp size={20} />,
-    items: ["AI Force Deployment Planner", "Modernization Fund Tracking", "ROI on Tech Investments", "Grant Proposal Generator"]
-  },
-  {
-    title: "Infrastructure Expansion",
-    icon: <LayoutDashboard size={20} />,
-    items: ["AI Modernization Fund Tracker", "Crime-to-Station Distance Mapping", "Barrack Expansion Planner", "Land Acquisition Tracker"]
-  },
-  {
-    title: "Smart Police Indexing",
-    icon: <Activity size={20} />,
-    items: ["District-wise SMART Scoring", "Organizational Maturity Assessment", "Citizen Trust Index Tracker", "Digital Adoption Rate"]
-  },
-  {
-    title: "Innovation & Policy Simulation",
-    icon: <Cpu size={20} />,
-    items: ["AI Policy Impact Simulator", "New Tech Adoption Tracking", "Global Policing Trends", "Strategic Risk Assessment"]
-  }
-];
-
-const aiFeatures = [
-  "AI Forecasting of Budget Deficits", "AI Simulation of Station Relocation Impact", "AI Demographic-Driven Crime Forecasting",
-  "AI Analysis of Global Tech Trends", "AI Automated Generation of Annual Plans", "AI Sentiment Analysis on Trust Index",
-  "AI Identification of Skill Gaps", "AI Resource Misallocation Detection"
-];
-
-const databases = [
-  "Strategic_Five_Year_Plans", "Budget_Allocation_Ledger", "Demographic_Projections", "Infrastructure_Expansion_DB", "Smart_Police_Index_Scores", 
-  "Innovation_Adoption_Tracker", "Retirement_Schedules", "Global_Trend_Lake", "Trust_Index_Surveys"
-];
-
-const dashboards = [
-  "Strategic Plan Execution Radar", "Budget vs Actuals Tracker", "SMART Police District Rankings", 
-  "Infrastructure Gap Heatmap", "Force Strength Projections", "Modernization ROI"
-];
-
-const apis = [
-  "State Finance Dept (Treasury) APIs", "Census Bureau Data Feeds", "Public Sentiment Scraping APIs", "Real Estate (Land) APIs",
-  "HRMS Payroll & Retirement Sync", "CCTNS Crime Density Sync"
-];
-
-const reports = [
-  "Annual Strategic Achievements", "10-Year Recruitment Forecast", "Modernization Budget Audit", 
-  "Infrastructure Vulnerability Report", "SMART Police Progress Card", "Policy Simulation Verdict"
-];
-
-const security = [
-  "Executive-Only Access (DGP/Home Sec)", "Data Obfuscation for Future Plans", "Immutable Budget Ledgers", 
-  "Air-Gapped Simulation Engines", "Tamper-Evident Policy Drafts", 
-  "Biometric Strategic Briefing Locks", "Role-Based Budget Viewing", "Encrypted Finance Transmissions"
-];
-
-const futureScope = [
-  "AI Fully Autonomous Budget Allocation", "Digital Twin of the Entire State Police", "Predictive Citizen Uprising Modeling",
-  "Quantum Computing for Complex Planning", "Virtual Reality Infrastructure Walkthroughs", "Real-Time AI Policy Redrafting"
-];
-
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'Strategy Bots', icon: <Bot size={18} /> },
-  { id: 'modules', label: 'Planning Modules', icon: <LayoutDashboard size={18} /> },
+  { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
+  { id: 'modules', label: 'Advanced Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
-  { id: 'reports', label: 'Strategy Dashboards', icon: <PieChart size={18} /> },
+  { id: 'reports', label: 'Dashboards', icon: <PieChart size={18} /> },
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
@@ -98,29 +33,29 @@ const StrategicPlanningDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <Target className="inline-icon" size={28} /> AI Strategic Planning & Modernization
+              <ShieldAlert className="inline-icon" size={28} /> STRATEGIC PLANNING
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>Strategic Planning</strong> is the brain of the police department's future. It uses AI to forecast demographic shifts, simulate policy impacts, optimize billion-dollar budgets, and plan the physical and digital expansion of the force over the next decade.
+              <strong>STRATEGIC PLANNING</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in budget forecast, 5-year masterplans & policy sim.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><TrendingUp className="inline-icon" color="#3b82f6" /> Budget Forecasting</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Ingests historical expenditure and predicts future budget requirements. The AI optimizes the allocation of the Police Modernization Fund to yield the highest ROI on new technology.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#3b82f6" /> Real-time Monitoring</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Continuous AI-driven surveillance and data collection ensuring immediate anomaly detection and rapid response protocols.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><LayoutDashboard className="inline-icon" color="#10b981" /> Infrastructure Planner</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Overlays crime density maps with current police station locations to mathematically pinpoint where the next 5 police stations should be built to minimize emergency response times.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Cpu className="inline-icon" color="#10b981" /> Predictive Analytics</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Utilizes machine learning to forecast trends, identify potential risks before they occur, and suggest optimized resource allocation.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Target className="inline-icon" color="#f59e0b" /> Workforce Projection</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Analyzes current age demographics of the force to predict mass retirements. Automatically generates 5-year recruitment plans to ensure zero gap in operational strength.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#f59e0b" /> Seamless Integration</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Hooks into existing national and state-level databases, providing a unified, interoperable platform across all departments.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Cpu className="inline-icon" color="#ef4444" /> Policy Simulator</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Before deploying a new state-wide directive, the AI runs a 'Digital Twin' simulation to predict potential bottlenecks, financial costs, and public reception.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Shield className="inline-icon" color="#ef4444" /> Automated Compliance</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Ensures all operations strictly adhere to legal and procedural guidelines, generating instant audit trails and compliance reports.</p>
               </div>
             </div>
           </motion.div>
@@ -139,10 +74,15 @@ const StrategicPlanningDetailed = () => {
       case 'modules':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="module-accordion">
-            {planningModules.map((mod, i) => (
+            {[
+              { title: "Real-time Monitoring Module", items: ["Live Data Stream", "Alert Engine", "Geospatial Tracking"] },
+              { title: "Predictive Analytics Engine", items: ["Risk Forecasting", "Resource Optimization", "Pattern Recognition"] },
+              { title: "Automated Reporting System", items: ["Compliance Audits", "Daily Briefings", "Incident Logs"] },
+              { title: "Cloud Integration Hub", items: ["State DB Sync", "Third-party API Webhooks", "Encrypted Data Transfer"] }
+            ].map((mod, i) => (
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} key={i} className="premium-module-panel">
                 <div className="module-header">
-                  {mod.icon}
+                  <LayoutDashboard size={20} color="#3b82f6" />
                   <h3>{mod.title}</h3>
                 </div>
                 <div className="module-tags">
@@ -157,7 +97,10 @@ const StrategicPlanningDetailed = () => {
       case 'features':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid">
-            {aiFeatures.map((feat, i) => (
+            {[
+              "24/7 AI Processing", "Advanced Machine Learning Models", "Real-time Data Sync", 
+              "Automated Alerts & Notifications", "Cross-Platform Accessibility", "Role-Based Access Control"
+            ].map((feat, i) => (
               <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-purple">
                 <Cpu className="card-icon" />
                 <h4>{feat}</h4>
@@ -170,15 +113,19 @@ const StrategicPlanningDetailed = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
             <div className="split-section">
               <div className="panel">
-                <h3><Database className="inline-icon" color="#06b6d4" /> Database Tables</h3>
+                <h3><Database className="inline-icon" color="#06b6d4" /> Database Integration</h3>
                 <div className="tag-cloud">
-                  {databases.map((db, i) => <span key={i} className="tech-tag">{db}</span>)}
+                  {["Primary_Transaction_DB", "Analytics_Data_Warehouse", "Audit_Logs_Archive", "User_Access_Registry", "System_Configuration_DB"].map((db, i) => (
+                    <span key={i} className="tech-tag">{db}</span>
+                  ))}
                 </div>
               </div>
               <div className="panel">
                 <h3><Network className="inline-icon" color="#8b5cf6" /> System APIs</h3>
                 <div className="tag-cloud">
-                  {apis.map((api, i) => <span key={i} className="tech-tag tech-tag-alt">{api}</span>)}
+                  {["RESTful Core API", "Real-time WebSocket Feed", "Third-party Webhooks", "Authentication Gateway", "Data Export API"].map((api, i) => (
+                    <span key={i} className="tech-tag tech-tag-alt">{api}</span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -191,13 +138,17 @@ const StrategicPlanningDetailed = () => {
               <div className="panel">
                 <h3><LayoutDashboard className="inline-icon" color="#3b82f6" /> Dashboards</h3>
                 <ul className="premium-list">
-                  {dashboards.map((d, i) => <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>)}
+                  {["Executive Overview Dashboard", "Live Operations Monitor", "Historical Trend Analysis", "System Health & Status"].map((d, i) => (
+                    <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>
+                  ))}
                 </ul>
               </div>
               <div className="panel">
                 <h3><FileText className="inline-icon" color="#10b981" /> Generated Reports</h3>
                 <ul className="premium-list">
-                  {reports.map((r, i) => <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>)}
+                  {["Daily Summary Report", "Weekly Performance Analytics", "Monthly Compliance Audit", "System Exception Logs"].map((r, i) => (
+                    <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -210,13 +161,21 @@ const StrategicPlanningDetailed = () => {
               <div className="panel highlight-red">
                 <h3><ShieldAlert className="inline-icon" color="#ef4444" /> Security Protocols</h3>
                 <ul className="premium-list">
-                  {security.map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
+                  {[
+                    "End-to-End Data Encryption (AES-256)", "Multi-Factor Authentication (MFA)", 
+                    "Strict Role-Based Access Control (RBAC)", "Tamper-proof Audit Trails", 
+                    "Automated Threat Detection", "Regular Security Penetration Testing"
+                  ].map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
                 </ul>
               </div>
               <div className="panel highlight-green">
                 <h3><Rocket className="inline-icon" color="#10b981" /> Future Enhancements</h3>
                 <ul className="premium-list">
-                  {futureScope.map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
+                  {[
+                    "Integration with Advanced LLMs", "Predictive Autonomous Actions", 
+                    "Enhanced Mobile Accessibility", "Cross-Agency Data Federation", 
+                    "Blockchain-based Immutability", "Next-Gen UI/UX Overhaul"
+                  ].map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
                 </ul>
               </div>
             </div>
@@ -239,7 +198,7 @@ const StrategicPlanningDetailed = () => {
         </button>
         <div className="header-titles">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="icon-wrapper">
-            <Target size={40} color="#06b6d4" />
+            <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
             <h1 className="cyber-title">STRATEGIC <span>PLANNING</span></h1>

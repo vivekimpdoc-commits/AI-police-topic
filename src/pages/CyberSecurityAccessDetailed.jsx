@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Landmark, Lock, Key, Fingerprint
+  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Map, Truck
 } from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "Zero-Trust Architecture Enforcer AI", "CCTNS Role-Based Access AI", "Biometric Terminal Login AI",
+"Zero-Trust Architecture Enforcer AI", "CCTNS Role-Based Access AI", "Biometric Terminal Login AI",
   "Phishing Attack Simulator Bot", "Ransomware Behavior Alerter", "DDoS Mitigation Tracker AI",
   "Rogue USB/Drive Detector AI", "Unauthorized IP Geofencing AI", "Police Intranet Proxy Firewall AI",
   "Data Exfiltration (Leak) Detector", "Malware Sandbox Analyzer", "Dark Web Credential Leak Scanner",
@@ -29,76 +29,13 @@ const aiExperts = [
   "Admit Card Leak Prevention AI", "OMR Grading System Isolation AI", "Cyber Security Training Scorer"
 ];
 
-const modules = [
-  {
-    title: "Access & Identity (IAM)",
-    icon: <Fingerprint size={20} />,
-    items: ["Biometric Terminals", "MFA Enforcement", "Suspended Officer Wipes", "Role-Based CCTNS"]
-  },
-  {
-    title: "Threat & Intrusion",
-    icon: <ShieldAlert size={20} />,
-    items: ["Ransomware Alerts", "DDoS Mitigation", "Malware Sandboxing", "SQL Injection Shields"]
-  },
-  {
-    title: "Data Leak & Insider Threats",
-    icon: <Lock size={20} />,
-    items: ["Data Exfiltration Detectors", "Rogue USB Hunters", "Insider Threat Profiling", "Midnight Download Alerts"]
-  },
-  {
-    title: "Network & Hardware Security",
-    icon: <Network size={20} />,
-    items: ["Intranet Proxies", "Rogue Wi-Fi Hunters", "CCTV Hijack Detectors", "Mobile Device Wiper (MDM)"]
-  },
-  {
-    title: "Encrypted Operations",
-    icon: <Key size={20} />,
-    items: ["Case Diary Cloud Sync", "Blockchain Evidence", "VIP Itinerary Encryption", "Crypto Wallet Guards"]
-  }
-];
-
-const aiFeatures = [
-  "Zero-Trust Architecture for Police Intranet", "Behavioral Profiling for Insider Threat Detection", "Automated Device Wipe for Lost Police Tablets",
-  "Deep-Web Scanning for Leaked Police Credentials", "Blockchain-Verified Tamper Alerts for Body Cams", "Real-time AI Sandboxing of Suspicious Files"
-];
-
-const databases = [
-  "Zero_Trust_Access_Ledger", "Cyber_Threat_Intel_Feeds", "MDM_Device_Registry", "Biometric_Auth_Vault", 
-  "Intrusion_Detection_Logs", "Encrypted_VIP_Itineraries", "CCTNS_Audit_Trails", "Blockchain_Evidence_Ledger"
-];
-
-const dashboards = [
-  "State-wide Cyber Threat Map", "Active Intrusion Alerts", "Insider Threat Heatmap", 
-  "CCTNS Access & Authentication", "Rogue Device & Wi-Fi Alerts", "Network DDoS Mitigation"
-];
-
-const apis = [
-  "CERT-In Threat Intelligence Sync", "Interpol Cyber Gateway", "MHA Intelligence Tunnels", 
-  "Cloud Provider (AWS/Azure) WAF", "Biometric Identity Providers", "MDM Vendor Webhooks"
-];
-
-const reports = [
-  "Monthly Cyber Penetration Test", "Unauthorized Access Attempts", "Insider Threat Flag Audit", 
-  "Data Exfiltration Risk Report", "Phishing Simulation Success Rates", "Recruitment Portal Uptime & Security"
-];
-
-const security = [
-  "Strict Zero-Trust Enforcement", "Hardware Security Modules (HSM)", "Air-Gapped Forensic Labs", 
-  "Military-Grade Radio Encryption", "Quantum-Safe Key Exchanges", "Ephemeral Access Tokens"
-];
-
-const futureScope = [
-  "Quantum Computing Cryptography", "AI-Driven Autonomous Counter-Hacking", "Decentralized Mesh Networks for Patrols",
-  "Neuromorphic Chips for Instant Threat Detection", "Holographic Cyber Command Centers", "Predictive Global Cyber Warfare Modeling"
-];
-
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: `Cyber Agents (${aiExperts.length})`, icon: <Bot size={18} /> },
-  { id: 'modules', label: 'Security Modules', icon: <LayoutDashboard size={18} /> },
+  { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
+  { id: 'modules', label: 'Advanced Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
-  { id: 'reports', label: 'SOC Dashboards', icon: <PieChart size={18} /> },
+  { id: 'reports', label: 'Dashboards', icon: <PieChart size={18} /> },
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
@@ -112,29 +49,29 @@ const CyberSecurityAccessDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <Shield className="inline-icon" size={28} /> Cyber Security & Access AI
+              <ShieldAlert className="inline-icon" size={28} /> CYBER SECURITY & ACCESS AI
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>Cyber Security & Access AI</strong> is the digital fortress protecting police data. Implementing strict Zero-Trust architecture, it prevents ransomware, mitigates DDoS attacks, and uses behavioral profiling to stop insider threats. It guarantees that sensitive CCTNS data, VIP itineraries, and forensic evidence remain impenetrable.
+              <strong>CYBER SECURITY & ACCESS AI</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in zero-trust cctns, insider threat flags & mdm control.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Fingerprint className="inline-icon" color="#3b82f6" /> Zero-Trust Access</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Enforces multi-factor biometric authentication for CCTNS logins. Automatically revokes network access the moment an officer is suspended or retires.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#3b82f6" /> Real-time Monitoring</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Continuous AI-driven surveillance and data collection ensuring immediate anomaly detection and rapid response protocols.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Lock className="inline-icon" color="#10b981" /> Insider Threat Profiling</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Analyzes user behavior to detect anomalies, such as a constable attempting a midnight mass-download of sensitive case diaries or inserting a rogue USB drive.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Cpu className="inline-icon" color="#10b981" /> Predictive Analytics</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Utilizes machine learning to forecast trends, identify potential risks before they occur, and suggest optimized resource allocation.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><ShieldAlert className="inline-icon" color="#f59e0b" /> Intrusion & Ransomware</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Actively sandboxes suspicious files and shields police recruitment portals, Dial 112 servers, and e-Challan gateways from DDoS and SQL injection attacks.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#f59e0b" /> Seamless Integration</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Hooks into existing national and state-level databases, providing a unified, interoperable platform across all departments.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Key className="inline-icon" color="#ef4444" /> Encryption & Hardware</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Secures IoT endpoints, detecting CCTV hijacks and encrypting drone telemetry. Uses MDM to remotely wipe lost or stolen police tablets instantly.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Shield className="inline-icon" color="#ef4444" /> Automated Compliance</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Ensures all operations strictly adhere to legal and procedural guidelines, generating instant audit trails and compliance reports.</p>
               </div>
             </div>
           </motion.div>
@@ -153,15 +90,20 @@ const CyberSecurityAccessDetailed = () => {
       case 'modules':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="module-accordion">
-            {modules.map((mod, i) => (
+            {[
+              { title: "Real-time Monitoring Module", items: ["Live Data Stream", "Alert Engine", "Geospatial Tracking"] },
+              { title: "Predictive Analytics Engine", items: ["Risk Forecasting", "Resource Optimization", "Pattern Recognition"] },
+              { title: "Automated Reporting System", items: ["Compliance Audits", "Daily Briefings", "Incident Logs"] },
+              { title: "Cloud Integration Hub", items: ["State DB Sync", "Third-party API Webhooks", "Encrypted Data Transfer"] }
+            ].map((mod, i) => (
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} key={i} className="premium-module-panel">
                 <div className="module-header">
-                  {mod.icon}
+                  <LayoutDashboard size={20} color="#3b82f6" />
                   <h3>{mod.title}</h3>
                 </div>
                 <div className="module-tags">
                   {mod.items.map((item, j) => (
-                    <span key={j} className="tag">{item}</span>
+                    <span key={j} className="module-tag">{item}</span>
                   ))}
                 </div>
               </motion.div>
@@ -170,46 +112,58 @@ const CyberSecurityAccessDetailed = () => {
         );
       case 'features':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="features-grid">
-            {aiFeatures.map((feature, i) => (
-              <div key={i} className="premium-feature-card">
-                <Cpu className="feature-icon" color="#06b6d4" />
-                <span>{feature}</span>
-              </div>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid">
+            {[
+              "24/7 AI Processing", "Advanced Machine Learning Models", "Real-time Data Sync", 
+              "Automated Alerts & Notifications", "Cross-Platform Accessibility", "Role-Based Access Control"
+            ].map((feat, i) => (
+              <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-purple">
+                <Cpu className="card-icon" />
+                <h4>{feat}</h4>
+              </motion.div>
             ))}
           </motion.div>
         );
       case 'architecture':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="architecture-panel premium-module-panel">
-            <h3 style={{ color: '#06b6d4', marginBottom: '1.5rem' }}><Database className="inline-icon" /> Data Ledgers</h3>
-            <div className="tags-container" style={{ marginBottom: '2.5rem' }}>
-              {databases.map((db, i) => <span key={i} className="cyber-tag">{db}</span>)}
-            </div>
-            
-            <h3 style={{ color: '#10b981', marginBottom: '1.5rem' }}><Network className="inline-icon" /> Integration APIs</h3>
-            <div className="tags-container">
-              {apis.map((api, i) => <span key={i} className="cyber-tag highlight-green">{api}</span>)}
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+            <div className="split-section">
+              <div className="panel">
+                <h3><Database className="inline-icon" color="#06b6d4" /> Database Integration</h3>
+                <div className="tag-cloud">
+                  {["Primary_Transaction_DB", "Analytics_Data_Warehouse", "Audit_Logs_Archive", "User_Access_Registry", "System_Configuration_DB"].map((db, i) => (
+                    <span key={i} className="tech-tag">{db}</span>
+                  ))}
+                </div>
+              </div>
+              <div className="panel">
+                <h3><Network className="inline-icon" color="#8b5cf6" /> System APIs</h3>
+                <div className="tag-cloud">
+                  {["RESTful Core API", "Real-time WebSocket Feed", "Third-party Webhooks", "Authentication Gateway", "Data Export API"].map((api, i) => (
+                    <span key={i} className="tech-tag tech-tag-alt">{api}</span>
+                  ))}
+                </div>
+              </div>
             </div>
           </motion.div>
         );
       case 'reports':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="reports-panel premium-module-panel">
-            <div className="split-section">
-              <div className="report-list">
-                <h3 style={{ color: '#f59e0b', marginBottom: '1.5rem' }}><LayoutDashboard className="inline-icon" /> SOC Dashboards</h3>
-                <ul>
-                  {dashboards.map((dash, i) => (
-                    <li key={i}><CheckCircle size={16} color="#f59e0b" /> {dash}</li>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+             <div className="split-section">
+              <div className="panel">
+                <h3><LayoutDashboard className="inline-icon" color="#3b82f6" /> Dashboards</h3>
+                <ul className="premium-list">
+                  {["Executive Overview Dashboard", "Live Operations Monitor", "Historical Trend Analysis", "System Health & Status"].map((d, i) => (
+                    <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>
                   ))}
                 </ul>
               </div>
-              <div className="report-list">
-                <h3 style={{ color: '#3b82f6', marginBottom: '1.5rem' }}><FileText className="inline-icon" /> Audit Reports</h3>
-                <ul>
-                  {reports.map((rep, i) => (
-                    <li key={i}><FileText size={16} color="#3b82f6" /> {rep}</li>
+              <div className="panel">
+                <h3><FileText className="inline-icon" color="#10b981" /> Generated Reports</h3>
+                <ul className="premium-list">
+                  {["Daily Summary Report", "Weekly Performance Analytics", "Monthly Compliance Audit", "System Exception Logs"].map((r, i) => (
+                    <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>
                   ))}
                 </ul>
               </div>
@@ -218,15 +172,28 @@ const CyberSecurityAccessDetailed = () => {
         );
       case 'security':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="security-panel premium-module-panel">
-            <h3 style={{ color: '#ef4444', marginBottom: '1.5rem' }}><Shield className="inline-icon" /> Infrastructure Defenses</h3>
-            <div className="tags-container" style={{ marginBottom: '2.5rem' }}>
-              {security.map((sec, i) => <span key={i} className="cyber-tag highlight-red">{sec}</span>)}
-            </div>
-            
-            <h3 style={{ color: '#8b5cf6', marginBottom: '1.5rem' }}><Rocket className="inline-icon" /> Future Roadmap</h3>
-            <div className="tags-container">
-              {futureScope.map((scope, i) => <span key={i} className="cyber-tag highlight-purple">{scope}</span>)}
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+             <div className="split-section">
+              <div className="panel highlight-red">
+                <h3><ShieldAlert className="inline-icon" color="#ef4444" /> Security Protocols</h3>
+                <ul className="premium-list">
+                  {[
+                    "End-to-End Data Encryption (AES-256)", "Multi-Factor Authentication (MFA)", 
+                    "Strict Role-Based Access Control (RBAC)", "Tamper-proof Audit Trails", 
+                    "Automated Threat Detection", "Regular Security Penetration Testing"
+                  ].map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
+                </ul>
+              </div>
+              <div className="panel highlight-green">
+                <h3><Rocket className="inline-icon" color="#10b981" /> Future Enhancements</h3>
+                <ul className="premium-list">
+                  {[
+                    "Integration with Advanced LLMs", "Predictive Autonomous Actions", 
+                    "Enhanced Mobile Accessibility", "Cross-Agency Data Federation", 
+                    "Blockchain-based Immutability", "Next-Gen UI/UX Overhaul"
+                  ].map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
+                </ul>
+              </div>
             </div>
           </motion.div>
         );
@@ -247,7 +214,7 @@ const CyberSecurityAccessDetailed = () => {
         </button>
         <div className="header-titles">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="icon-wrapper">
-            <Shield size={40} color="#06b6d4" />
+            <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
             <h1 className="cyber-title">CYBER SECURITY & <span>ACCESS AI</span></h1>
@@ -274,7 +241,9 @@ const CyberSecurityAccessDetailed = () => {
         {/* Content Area */}
         <main className="hrms-content-area">
           <AnimatePresence mode="wait">
-            {renderContent()}
+            <div key={activeTab}>
+              {renderContent()}
+            </div>
           </AnimatePresence>
         </main>
       </div>

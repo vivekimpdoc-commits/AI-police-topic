@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Users, Share2, Link, Zap
+  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Map, Truck
 } from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "Entity Resolution AI", "Entity Extraction AI", "Semantic Entity Linking AI",
+"Entity Resolution AI", "Entity Extraction AI", "Semantic Entity Linking AI",
   "Relationship Discovery AI", "Multi-Hop Relationship Explorer AI", "Graph Embedding AI",
   "Knowledge Graph Builder AI", "Ontology Management AI", "Knowledge Base Manager AI",
   "Criminal Network Analyzer AI", "Criminal Link Prediction AI", "Association Rule Mining AI",
@@ -29,79 +29,13 @@ const aiExperts = [
   "Decision Support AI", "Strategic Intelligence AI", "Executive Knowledge Graph Dashboard AI"
 ];
 
-const knowledgeModules = [
-  {
-    title: "Criminal Syndicate Mapping",
-    icon: <Share2 size={20} />,
-    items: ["Gang Hierarchy Visualization", "Kingpin Identification", "Financier Network Links", "Rival Syndicate Clustering"]
-  },
-  {
-    title: "CDR & Telecom Networks",
-    icon: <Network size={20} />,
-    items: ["Phone-Call Network Graphs", "Tower Dump Correlation", "Burner Phone Linkage", "WhatsApp/VoIP Comm Chains"]
-  },
-  {
-    title: "Financial Graph Forensics",
-    icon: <Activity size={20} />,
-    items: ["Hawala Route Mapping", "Crypto-Wallet Trace Graphs", "Shell Company Linkages", "Money Laundering Cycles"]
-  },
-  {
-    title: "Cross-Case Linkage",
-    icon: <Link size={20} />,
-    items: ["Modus Operandi (MO) Clustering", "Unsolved Case Matching", "Weapon Ballistics Graphs", "Stolen Vehicle Transfer Chains"]
-  },
-  {
-    title: "Social Media Graphs",
-    icon: <Users size={20} />,
-    items: ["Radicalization Networks", "Cyber-bullying Syndicates", "Hate-Speech Spread Vectors", "Dark Web Vendor Ties"]
-  }
-];
-
-const aiFeatures = [
-  "AI Hidden Link Prediction", "AI Alias & Entity Resolution", "AI Temporal Network Evolution",
-  "AI Graph Neural Networks (GNN)", "AI Centrality & Influence Scoring", "AI Automated Graph Summarization",
-  "AI Cross-lingual Entity Matching", "AI Geolocation Overlay Graphing", "AI Money Mules Identification",
-  "AI Deepfake Ring Clustering", "AI Semantic Search over Graph DBs"
-];
-
-const databases = [
-  "Neo4j_GraphDB", "EntityNodes", "RelationshipEdges", "CDR_Graphs", "FinancialNodes", 
-  "AliasRegistries", "CaseLinkages", "SocialGraphs", "WeaponNodes", "VehicleNodes"
-];
-
-const dashboards = [
-  "Global Syndicate Overview", "Active Investigation Graph Canvas", "CDR Topography Dashboard", 
-  "Financial Flow Heatmap", "Threat Network Expansion Board", "Unsolved Cases Link Matrix"
-];
-
-const apis = [
-  "Telecom Provider Sync APIs", "Banking Transaction Graph APIs", "Social Media Graph APIs", "CCTNS Entity APIs",
-  "Forensic Lab Match APIs", "Graph Query (Cypher/GraphQL) APIs", "Visual Mapping Engine APIs"
-];
-
-const reports = [
-  "Syndicate Takedown Target List", "CDR Linkage Evidence Report", "Financial Flow Trace Report", 
-  "Unsolved Case Match Alert", "Alias Resolution Confidence Report", "Network Centrality Rankings"
-];
-
-const security = [
-  "Node-Level Access Control", "Encrypted Graph Storage", "Graph Poisoning Defense", 
-  "Dynamic Edge Redaction", "API Query Rate Limiting", 
-  "Immutable Graph Edit Trails", "Zero-Trust Visualization", "Anonymized Export Modes"
-];
-
-const futureScope = [
-  "Brain-Computer Graph Navigation", "Holographic 3D Network Visualization", "Quantum Graph Algorithms",
-  "Real-time Global Interpol Sync", "Predictive Syndicate Spawning", "Autonomous Takedown Routing"
-];
-
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: `Graph Analysts (${aiExperts.length})`, icon: <Bot size={18} /> },
-  { id: 'modules', label: 'Graph Modules', icon: <LayoutDashboard size={18} /> },
+  { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
+  { id: 'modules', label: 'Advanced Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
-  { id: 'reports', label: 'Graph Dashboards', icon: <PieChart size={18} /> },
+  { id: 'reports', label: 'Dashboards', icon: <PieChart size={18} /> },
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
@@ -115,29 +49,29 @@ const KnowledgeDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <Share2 className="inline-icon" size={28} /> AI Knowledge Graph & Network Analysis
+              <ShieldAlert className="inline-icon" size={28} /> AI KNOWLEDGE GRAPH
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>AI Knowledge Graph</strong> transforms millions of isolated data points—suspects, phone calls, bank transfers, and FIRs—into a massive, interconnected digital web. By leveraging Graph Neural Networks (GNN), the AI visually maps out criminal syndicates and predicts hidden relationships that human investigators might miss.
+              <strong>AI KNOWLEDGE GRAPH</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in advanced semantic network mapping & criminal link prediction.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Link className="inline-icon" color="#3b82f6" /> Semantic Link Prediction</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>The AI analyzes historical networks to predict unknown connections, revealing hidden financiers, burner phones, or stash houses linked to a known suspect.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#3b82f6" /> Real-time Monitoring</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Continuous AI-driven surveillance and data collection ensuring immediate anomaly detection and rapid response protocols.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#10b981" /> CDR & Telecom Topography</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Instantly visualize Call Detail Records (CDR) from thousands of tower dumps. The AI highlights the "Central Nodes" (kingpins) orchestrating the communication.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Cpu className="inline-icon" color="#10b981" /> Predictive Analytics</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Utilizes machine learning to forecast trends, identify potential risks before they occur, and suggest optimized resource allocation.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#f59e0b" /> Financial Flow Tracing</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Trace illicit money flows through a visual web of shell companies, crypto wallets, and hawala operators, making money laundering cycles entirely visible.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#f59e0b" /> Seamless Integration</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Hooks into existing national and state-level databases, providing a unified, interoperable platform across all departments.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Users className="inline-icon" color="#ef4444" /> Entity Resolution</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>The AI automatically merges aliases. If "John D", "J. Doe", and a specific phone number appear in different cases, the graph merges them into one master identity.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Shield className="inline-icon" color="#ef4444" /> Automated Compliance</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Ensures all operations strictly adhere to legal and procedural guidelines, generating instant audit trails and compliance reports.</p>
               </div>
             </div>
           </motion.div>
@@ -156,10 +90,15 @@ const KnowledgeDetailed = () => {
       case 'modules':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="module-accordion">
-            {knowledgeModules.map((mod, i) => (
+            {[
+              { title: "Real-time Monitoring Module", items: ["Live Data Stream", "Alert Engine", "Geospatial Tracking"] },
+              { title: "Predictive Analytics Engine", items: ["Risk Forecasting", "Resource Optimization", "Pattern Recognition"] },
+              { title: "Automated Reporting System", items: ["Compliance Audits", "Daily Briefings", "Incident Logs"] },
+              { title: "Cloud Integration Hub", items: ["State DB Sync", "Third-party API Webhooks", "Encrypted Data Transfer"] }
+            ].map((mod, i) => (
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} key={i} className="premium-module-panel">
                 <div className="module-header">
-                  {mod.icon}
+                  <LayoutDashboard size={20} color="#3b82f6" />
                   <h3>{mod.title}</h3>
                 </div>
                 <div className="module-tags">
@@ -174,7 +113,10 @@ const KnowledgeDetailed = () => {
       case 'features':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid">
-            {aiFeatures.map((feat, i) => (
+            {[
+              "24/7 AI Processing", "Advanced Machine Learning Models", "Real-time Data Sync", 
+              "Automated Alerts & Notifications", "Cross-Platform Accessibility", "Role-Based Access Control"
+            ].map((feat, i) => (
               <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-purple">
                 <Cpu className="card-icon" />
                 <h4>{feat}</h4>
@@ -187,15 +129,19 @@ const KnowledgeDetailed = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
             <div className="split-section">
               <div className="panel">
-                <h3><Database className="inline-icon" color="#06b6d4" /> Database Tables</h3>
+                <h3><Database className="inline-icon" color="#06b6d4" /> Database Integration</h3>
                 <div className="tag-cloud">
-                  {databases.map((db, i) => <span key={i} className="tech-tag">{db}</span>)}
+                  {["Primary_Transaction_DB", "Analytics_Data_Warehouse", "Audit_Logs_Archive", "User_Access_Registry", "System_Configuration_DB"].map((db, i) => (
+                    <span key={i} className="tech-tag">{db}</span>
+                  ))}
                 </div>
               </div>
               <div className="panel">
                 <h3><Network className="inline-icon" color="#8b5cf6" /> System APIs</h3>
                 <div className="tag-cloud">
-                  {apis.map((api, i) => <span key={i} className="tech-tag tech-tag-alt">{api}</span>)}
+                  {["RESTful Core API", "Real-time WebSocket Feed", "Third-party Webhooks", "Authentication Gateway", "Data Export API"].map((api, i) => (
+                    <span key={i} className="tech-tag tech-tag-alt">{api}</span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -208,13 +154,17 @@ const KnowledgeDetailed = () => {
               <div className="panel">
                 <h3><LayoutDashboard className="inline-icon" color="#3b82f6" /> Dashboards</h3>
                 <ul className="premium-list">
-                  {dashboards.map((d, i) => <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>)}
+                  {["Executive Overview Dashboard", "Live Operations Monitor", "Historical Trend Analysis", "System Health & Status"].map((d, i) => (
+                    <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>
+                  ))}
                 </ul>
               </div>
               <div className="panel">
                 <h3><FileText className="inline-icon" color="#10b981" /> Generated Reports</h3>
                 <ul className="premium-list">
-                  {reports.map((r, i) => <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>)}
+                  {["Daily Summary Report", "Weekly Performance Analytics", "Monthly Compliance Audit", "System Exception Logs"].map((r, i) => (
+                    <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -227,13 +177,21 @@ const KnowledgeDetailed = () => {
               <div className="panel highlight-red">
                 <h3><ShieldAlert className="inline-icon" color="#ef4444" /> Security Protocols</h3>
                 <ul className="premium-list">
-                  {security.map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
+                  {[
+                    "End-to-End Data Encryption (AES-256)", "Multi-Factor Authentication (MFA)", 
+                    "Strict Role-Based Access Control (RBAC)", "Tamper-proof Audit Trails", 
+                    "Automated Threat Detection", "Regular Security Penetration Testing"
+                  ].map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
                 </ul>
               </div>
               <div className="panel highlight-green">
                 <h3><Rocket className="inline-icon" color="#10b981" /> Future Enhancements</h3>
                 <ul className="premium-list">
-                  {futureScope.map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
+                  {[
+                    "Integration with Advanced LLMs", "Predictive Autonomous Actions", 
+                    "Enhanced Mobile Accessibility", "Cross-Agency Data Federation", 
+                    "Blockchain-based Immutability", "Next-Gen UI/UX Overhaul"
+                  ].map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
                 </ul>
               </div>
             </div>
@@ -256,7 +214,7 @@ const KnowledgeDetailed = () => {
         </button>
         <div className="header-titles">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="icon-wrapper">
-            <Share2 size={40} color="#06b6d4" />
+            <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
             <h1 className="cyber-title">AI KNOWLEDGE <span>GRAPH</span></h1>

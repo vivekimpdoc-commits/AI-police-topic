@@ -2,31 +2,77 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Crosshair, Package, Fingerprint, Radio, RotateCcw, Box, Wrench, Users, Stethoscope, Target, Clock, Droplet, ClipboardCheck, Scan, UserCheck, RefreshCw, Truck, Wind, Zap, AlertTriangle, Share2, Briefcase, Hourglass, Thermometer, AlertOctagon, Maximize, Archive, Siren, Wifi, Scale, Key, Video
+  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Map, Truck
 } from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
-const aiExperts = ["Kevlar Degradation Modeler","UV/Moisture Exposure AI","RFID Lifecycle Tracker","Damage Assessment Bot","Auto-Replenishment AI","Size/Fit Optimization AI","Expiration Notifier Bot","Ballistic Plate Integrity Scanner","Cleaning Schedule Enforcer","Asset Distribution Modeler","Recalled Batch Alert Bot"];
-const aiFeatures = ["AI Predictive Degradation Modeling","RFID Gate Tracking for Issued Armor","Computer Vision for Fabric Tears","Automated Expiry Replenishment","Officer Sizing/Fit Analytics","Environmental Exposure Logging","Digital Two-Man Audit for Destruction","Integration with Ballistic Testing Labs"];
-const databases = ["Jacket_RFID_Ledger","Kevlar_Degradation_Models","Officer_Sizing_DB","Environmental_Exposure_Logs","Damage_Incident_Reports","Ballistic_Plate_Integrity","Expiry_Timeline_DB","Replenishment_Pipeline","Cleaning_Logs","Destruction_Certificates"];
-const dashboards = ["Live Armor Distribution","Expiring Jacket Alerts","Damage/Tear Heatmap","Size Shortage Predictor","Environmental Risk Factors","Replenishment Pipeline"];
-const apis = ["Quartermaster ERP","State HRMS (Officer Sizes)","RFID Wash/Clean Gateways","Ballistic Lab Results","Supplier Procurement DB","Weather/Climate Sensors (UV)"];
-const reports = ["Annual Jacket Expiry Audit","Damage and Replacement Costs","Officer Sizing Deficits","Supplier Defect Analytics","Kevlar Degradation Study","Destruction Compliance Report"];
-const security = ["Tamper-proof RFID Sewing","Blockchain Destruction Logs","Strict Batch Recalls","Biometric Checkout","Auditor Digital Signatures","CCTV Storage Sync","Encrypted Fitment Data","Automated Hoarding Alerts"];
-const futureScope = ["Graphene Body Armor","Smart Fabric Vital Sensors","Self-healing Polymers","Drone Battlefield Resupply","Liquid Armor Upgrades","Real-time Impact Telemetry"];
-
-const modules = [
-  { title: "Lifecycle & Expiry", icon: <Clock size={20} />, items: ["Age Tracking","Degradation Models","Auto-Replenishment","Safe Destruction"] },
-  { title: "Integrity Tracking", icon: <Activity size={20} />, items: ["UV Exposure","Moisture Logs","Tear Detection","Plate Scanning"] },
-  { title: "Distribution & Fit", icon: <Users size={20} />, items: ["Size Matching","RFID Checkout","Unit Allocation","Deficit Prediction"] },
-  { title: "Maintenance & Care", icon: <Droplet size={20} />, items: ["Cleaning Schedules","Wash Gateways","Storage Climate","Repair Logs"] },
-  { title: "Audit & Procurement", icon: <ClipboardCheck size={20} />, items: ["Batch Defects","Supplier SLAs","Budget Forecasting","Compliance Checks"] }
+const aiExperts = [
+"Predictive Kevlar Degradation Modeler",
+  "UV & Moisture Exposure Analytics AI",
+  "RFID Lifecycle & Checkout Tracker",
+  "Computer Vision Damage Assessment Bot",
+  "Auto-Replenishment & Procurement AI",
+  "Officer Size & Fit Optimization AI",
+  "Jacket Expiration Notifier Sentinel",
+  "Ballistic Plate Micro-crack Scanner",
+  "Automated Wash & Cleaning Scheduler",
+  "State-wide Asset Distribution Modeler",
+  "Defective Batch Recall & Alert Bot",
+  "Level III/IV Armor Allocation AI",
+  "Sweat & Fabric Corrosion Predictor",
+  "Ceramic Plate Impact Telemetry Sync",
+  "Armoury Restocking Forecasting Engine",
+  "Jacket Weight vs Officer Fatigue AI",
+  "Bulletproof Vest Hoarding Detector",
+  "VIP Protection Gear Allocation AI",
+  "Riot Control Armor Sync Coordinator",
+  "Counter-Terror Kit Armor Optimizer",
+  "Biometric Armor Checkout Authenticator",
+  "Armour Logistics & Transfer Sync Bot",
+  "Supplier SLA & Defect Analytics AI",
+  "Blockchain Asset Destruction Ledger",
+  "Safe Disposal & Recycling Planner AI",
+  "Smart Fabric Vital Sensor Sync Bot",
+  "Body Armor Thermal Load Predictor",
+  "Acoustic Armor Penetration Analyzer",
+  "Armor Comfort & Mobility Scorer AI",
+  "CCTV Storage & Rack Sync Sentinel",
+  "Encrypted Fitment Data Vault Sync",
+  "Missing Armor Alert & Geofencing AI",
+  "Stolen Police Armor Dark-Web Scanner",
+  "Automated Missing Asset Show-Cause Bot",
+  "Budget Forecasting for New Jackets",
+  "Armor Depreciation Value Calculator",
+  "Kevlar Shelf-life vs Usage Analyzer",
+  "Officer Promotion Size-Change Predictor",
+  "Regional Climate Wear Adjuster AI",
+  "Wash Gateway RFID Validation Bot",
+  "Anti-Bacterial Coating Degradation AI",
+  "Female Officer Fitment Analytics",
+  "Special Forces High-Mobility Gear Sync",
+  "Concealed Armor Detection Validator",
+  "Armor Modification & Tamper Detector",
+  "Tactical Vest Pouch Loadout Optimizer",
+  "Helicopter Crew Armor Sync Bot",
+  "Marine Police Buoyant Armor Analyzer",
+  "Bulletproof Shield Sync & Tracker AI",
+  "K9 Unit Armor Allocation & Tracker",
+  "Automated Inventory Audit Validator",
+  "Central Reserve Threshold Monitor",
+  "Rapid Deployment Armor Allocator",
+  "Ballistic Lab Test Result Sync AI",
+  "Armor Penetration Incident Analyzer",
+  "Officer Trauma & Impact Recovery AI",
+  "Liquid Armor Upgrade Forecasting Bot",
+  "Graphene Vest Logistics Coordinator",
+  "Self-healing Polymer Tracking AI",
+  "Next-Gen Armor Procurement Sync"
 ];
 
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'AI Agents', icon: <Bot size={18} /> },
-  { id: 'modules', label: 'Core Modules', icon: <LayoutDashboard size={18} /> },
+  { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
+  { id: 'modules', label: 'Advanced Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
   { id: 'reports', label: 'Dashboards', icon: <PieChart size={18} /> },
@@ -43,20 +89,30 @@ const BulletproofJacketDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <Shield className="inline-icon" size={28} /> AI BULLETPROOF JACKET INVENTORY
+              <ShieldAlert className="inline-icon" size={28} /> BULLETPROOF JACKET INVENTORY
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>AI BULLETPROOF JACKET INVENTORY</strong> manages the distribution and health of body armor. Kevlar degrades over time and with exposure to moisture or UV light. This AI tracks the exact age, usage conditions, and ballistic integrity of every jacket to ensure officer safety.
+              <strong>BULLETPROOF JACKET INVENTORY</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in kevlar integrity sync & rfid lifecycle tracking.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
-              {modules.slice(0,4).map((mod, i) => (
-                <div key={i} className="panel" style={{ padding: '1.5rem' }}>
-                  <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}>{mod.icon} {mod.title}</h3>
-                  <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Advanced AI algorithms and neural networks power the {mod.title.toLowerCase()} systems, ensuring highly precise and real-time operational efficiency.</p>
-                </div>
-              ))}
+              <div className="panel" style={{ padding: '1.5rem' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#3b82f6" /> Real-time Monitoring</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Continuous AI-driven surveillance and data collection ensuring immediate anomaly detection and rapid response protocols.</p>
+              </div>
+              <div className="panel" style={{ padding: '1.5rem' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Cpu className="inline-icon" color="#10b981" /> Predictive Analytics</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Utilizes machine learning to forecast trends, identify potential risks before they occur, and suggest optimized resource allocation.</p>
+              </div>
+              <div className="panel" style={{ padding: '1.5rem' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#f59e0b" /> Seamless Integration</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Hooks into existing national and state-level databases, providing a unified, interoperable platform across all departments.</p>
+              </div>
+              <div className="panel" style={{ padding: '1.5rem' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Shield className="inline-icon" color="#ef4444" /> Automated Compliance</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Ensures all operations strictly adhere to legal and procedural guidelines, generating instant audit trails and compliance reports.</p>
+              </div>
             </div>
           </motion.div>
         );
@@ -74,10 +130,15 @@ const BulletproofJacketDetailed = () => {
       case 'modules':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="module-accordion">
-            {modules.map((mod, i) => (
+            {[
+              { title: "Real-time Monitoring Module", items: ["Live Data Stream", "Alert Engine", "Geospatial Tracking"] },
+              { title: "Predictive Analytics Engine", items: ["Risk Forecasting", "Resource Optimization", "Pattern Recognition"] },
+              { title: "Automated Reporting System", items: ["Compliance Audits", "Daily Briefings", "Incident Logs"] },
+              { title: "Cloud Integration Hub", items: ["State DB Sync", "Third-party API Webhooks", "Encrypted Data Transfer"] }
+            ].map((mod, i) => (
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} key={i} className="premium-module-panel">
                 <div className="module-header">
-                  {mod.icon}
+                  <LayoutDashboard size={20} color="#3b82f6" />
                   <h3>{mod.title}</h3>
                 </div>
                 <div className="module-tags">
@@ -92,7 +153,10 @@ const BulletproofJacketDetailed = () => {
       case 'features':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid">
-            {aiFeatures.map((feat, i) => (
+            {[
+              "24/7 AI Processing", "Advanced Machine Learning Models", "Real-time Data Sync", 
+              "Automated Alerts & Notifications", "Cross-Platform Accessibility", "Role-Based Access Control"
+            ].map((feat, i) => (
               <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-purple">
                 <Cpu className="card-icon" />
                 <h4>{feat}</h4>
@@ -105,15 +169,19 @@ const BulletproofJacketDetailed = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
             <div className="split-section">
               <div className="panel">
-                <h3><Database className="inline-icon" color="#06b6d4" /> Database Tables</h3>
+                <h3><Database className="inline-icon" color="#06b6d4" /> Database Integration</h3>
                 <div className="tag-cloud">
-                  {databases.map((db, i) => <span key={i} className="tech-tag">{db}</span>)}
+                  {["Primary_Transaction_DB", "Analytics_Data_Warehouse", "Audit_Logs_Archive", "User_Access_Registry", "System_Configuration_DB"].map((db, i) => (
+                    <span key={i} className="tech-tag">{db}</span>
+                  ))}
                 </div>
               </div>
               <div className="panel">
                 <h3><Network className="inline-icon" color="#8b5cf6" /> System APIs</h3>
                 <div className="tag-cloud">
-                  {apis.map((api, i) => <span key={i} className="tech-tag tech-tag-alt">{api}</span>)}
+                  {["RESTful Core API", "Real-time WebSocket Feed", "Third-party Webhooks", "Authentication Gateway", "Data Export API"].map((api, i) => (
+                    <span key={i} className="tech-tag tech-tag-alt">{api}</span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -126,13 +194,17 @@ const BulletproofJacketDetailed = () => {
               <div className="panel">
                 <h3><LayoutDashboard className="inline-icon" color="#3b82f6" /> Dashboards</h3>
                 <ul className="premium-list">
-                  {dashboards.map((d, i) => <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>)}
+                  {["Executive Overview Dashboard", "Live Operations Monitor", "Historical Trend Analysis", "System Health & Status"].map((d, i) => (
+                    <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>
+                  ))}
                 </ul>
               </div>
               <div className="panel">
                 <h3><FileText className="inline-icon" color="#10b981" /> Generated Reports</h3>
                 <ul className="premium-list">
-                  {reports.map((r, i) => <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>)}
+                  {["Daily Summary Report", "Weekly Performance Analytics", "Monthly Compliance Audit", "System Exception Logs"].map((r, i) => (
+                    <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -145,13 +217,21 @@ const BulletproofJacketDetailed = () => {
               <div className="panel highlight-red">
                 <h3><ShieldAlert className="inline-icon" color="#ef4444" /> Security Protocols</h3>
                 <ul className="premium-list">
-                  {security.map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
+                  {[
+                    "End-to-End Data Encryption (AES-256)", "Multi-Factor Authentication (MFA)", 
+                    "Strict Role-Based Access Control (RBAC)", "Tamper-proof Audit Trails", 
+                    "Automated Threat Detection", "Regular Security Penetration Testing"
+                  ].map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
                 </ul>
               </div>
               <div className="panel highlight-green">
                 <h3><Rocket className="inline-icon" color="#10b981" /> Future Enhancements</h3>
                 <ul className="premium-list">
-                  {futureScope.map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
+                  {[
+                    "Integration with Advanced LLMs", "Predictive Autonomous Actions", 
+                    "Enhanced Mobile Accessibility", "Cross-Agency Data Federation", 
+                    "Blockchain-based Immutability", "Next-Gen UI/UX Overhaul"
+                  ].map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
                 </ul>
               </div>
             </div>
@@ -174,7 +254,7 @@ const BulletproofJacketDetailed = () => {
         </button>
         <div className="header-titles">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="icon-wrapper">
-            <Shield size={40} color="#06b6d4" />
+            <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
             <h1 className="cyber-title">BULLETPROOF <span>JACKET INVENTORY</span></h1>

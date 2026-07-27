@@ -2,81 +2,23 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Radio, Phone, Satellite
+  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Map, Truck
 } from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "Spectrum Analyzer AI", "Call Sign Allocator", "Wireless Log Archiver", 
+"Spectrum Analyzer AI", "Call Sign Allocator", "Wireless Log Archiver", 
   "Tower Health Predictor", "UHF/VHF Jammer Detector", "Frequency Optimizer", 
   "Telecom Bill Auditor", "Emergency Routing Bot", "Comms Encryption AI"
 ];
 
-const telecomModules = [
-  {
-    title: "Radio & Wireless Comms",
-    icon: <Radio size={20} />,
-    items: ["AI Call Sign Management", "Wireless Call Log Archive", "UHF/VHF Tower Mapping"]
-  },
-  {
-    title: "Telecom & Telephony",
-    icon: <Phone size={20} />,
-    items: ["AI Wireless Call Log Archive", "CUG (Closed User Group) Optimization", "VoIP Gateway Monitor"]
-  },
-  {
-    title: "Network Infrastructure",
-    icon: <Satellite size={20} />,
-    items: ["AI Frequency Interference Analyzer", "Satellite Comms Sync", "Dead-Zone Predictor"]
-  },
-  {
-    title: "Comms Auditing",
-    icon: <FileText size={20} />,
-    items: ["Automated Radio Audit", "Telecom Expense Auditor", "Bandwidth Usage AI"]
-  }
-];
-
-const aiFeatures = [
-  "Predictive Tower Maintenance", "Automated Voice-to-Text for Radio Calls", "Real-Time Dead Zone Mapping",
-  "Smart CUG Plan Optimization", "Anomaly Detection in Telecom Billing", "Dynamic Frequency Hopping"
-];
-
-const databases = [
-  "Radio_Call_Logs", "Telecom_Billing_DB", "Tower_Health_Metrics", 
-  "CUG_Directory", "Spectrum_Allocation"
-];
-
-const apis = [
-  "Telecom Service Provider API", "Satellite Comms Gateway", "National Frequency Registry", 
-  "GIS Tower Mapping Sync", "Weather APIs for Signal Loss"
-];
-
-const dashboards = [
-  "Live Network Health", "Telecom Expense Overview", "Radio Traffic Heatmap", 
-  "Tower Maintenance Schedule"
-];
-
-const reports = [
-  "Monthly Telecom Expenditure", "UHF/VHF Uptime Audit", "CUG Usage Violations",
-  "Signal Dead Zone Analysis"
-];
-
-const security = [
-  "Quantum-Safe Radio Encryption", "Anti-Jamming Failover", "Strict VoIP Firewalling",
-  "Unauthorized Frequency Detection"
-];
-
-const futureScope = [
-  "Low Earth Orbit (LEO) Police Satellites", "AI Holographic Field Comms", "6G Police Private Networks",
-  "Telepathic-like BCI Comms"
-];
-
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'Comms Bots', icon: <Bot size={18} /> },
-  { id: 'modules', label: 'Telecom Modules', icon: <LayoutDashboard size={18} /> },
+  { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
+  { id: 'modules', label: 'Advanced Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
-  { id: 'reports', label: 'Audit Dashboards', icon: <PieChart size={18} /> },
+  { id: 'reports', label: 'Dashboards', icon: <PieChart size={18} /> },
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
@@ -90,23 +32,29 @@ const PoliceTelecom93Detailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <Radio className="inline-icon" size={28} /> AI Police Telecom & Comms
+              <ShieldAlert className="inline-icon" size={28} /> POLICE TELECOM
             </h2>
+            
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>Police Telecom & Communication</strong> manages the critical lifeline of the force. From maintaining UHF/VHF radio networks and predicting tower failures, to optimizing cellular CUG plans and auditing massive telecom bills, this AI ensures the force never goes offline.
+              <strong>POLICE TELECOM</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in spectrum ai, tower mapping & cug optimization.
             </p>
-            <div className="stats-grid">
-              <div className="stat-card">
-                <div className="stat-value">99.9%</div>
-                <div className="stat-label">Radio Uptime</div>
+
+            <div className="split-section" style={{ gap: '1.5rem' }}>
+              <div className="panel" style={{ padding: '1.5rem' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#3b82f6" /> Real-time Monitoring</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Continuous AI-driven surveillance and data collection ensuring immediate anomaly detection and rapid response protocols.</p>
               </div>
-              <div className="stat-card">
-                <div className="stat-value">Auto</div>
-                <div className="stat-label">Dead-Zone Mapping</div>
+              <div className="panel" style={{ padding: '1.5rem' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Cpu className="inline-icon" color="#10b981" /> Predictive Analytics</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Utilizes machine learning to forecast trends, identify potential risks before they occur, and suggest optimized resource allocation.</p>
               </div>
-              <div className="stat-card">
-                <div className="stat-value">30%</div>
-                <div className="stat-label">Telecom Cost Saved</div>
+              <div className="panel" style={{ padding: '1.5rem' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#f59e0b" /> Seamless Integration</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Hooks into existing national and state-level databases, providing a unified, interoperable platform across all departments.</p>
+              </div>
+              <div className="panel" style={{ padding: '1.5rem' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Shield className="inline-icon" color="#ef4444" /> Automated Compliance</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Ensures all operations strictly adhere to legal and procedural guidelines, generating instant audit trails and compliance reports.</p>
               </div>
             </div>
           </motion.div>
@@ -125,10 +73,15 @@ const PoliceTelecom93Detailed = () => {
       case 'modules':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="module-accordion">
-            {telecomModules.map((mod, i) => (
+            {[
+              { title: "Real-time Monitoring Module", items: ["Live Data Stream", "Alert Engine", "Geospatial Tracking"] },
+              { title: "Predictive Analytics Engine", items: ["Risk Forecasting", "Resource Optimization", "Pattern Recognition"] },
+              { title: "Automated Reporting System", items: ["Compliance Audits", "Daily Briefings", "Incident Logs"] },
+              { title: "Cloud Integration Hub", items: ["State DB Sync", "Third-party API Webhooks", "Encrypted Data Transfer"] }
+            ].map((mod, i) => (
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} key={i} className="premium-module-panel">
                 <div className="module-header">
-                  {mod.icon}
+                  <LayoutDashboard size={20} color="#3b82f6" />
                   <h3>{mod.title}</h3>
                 </div>
                 <div className="module-tags">
@@ -143,7 +96,10 @@ const PoliceTelecom93Detailed = () => {
       case 'features':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid">
-            {aiFeatures.map((feat, i) => (
+            {[
+              "24/7 AI Processing", "Advanced Machine Learning Models", "Real-time Data Sync", 
+              "Automated Alerts & Notifications", "Cross-Platform Accessibility", "Role-Based Access Control"
+            ].map((feat, i) => (
               <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-purple">
                 <Cpu className="card-icon" />
                 <h4>{feat}</h4>
@@ -156,15 +112,19 @@ const PoliceTelecom93Detailed = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
             <div className="split-section">
               <div className="panel">
-                <h3><Database className="inline-icon" color="#06b6d4" /> Database Tables</h3>
+                <h3><Database className="inline-icon" color="#06b6d4" /> Database Integration</h3>
                 <div className="tag-cloud">
-                  {databases.map((db, i) => <span key={i} className="tech-tag">{db}</span>)}
+                  {["Primary_Transaction_DB", "Analytics_Data_Warehouse", "Audit_Logs_Archive", "User_Access_Registry", "System_Configuration_DB"].map((db, i) => (
+                    <span key={i} className="tech-tag">{db}</span>
+                  ))}
                 </div>
               </div>
               <div className="panel">
                 <h3><Network className="inline-icon" color="#8b5cf6" /> System APIs</h3>
                 <div className="tag-cloud">
-                  {apis.map((api, i) => <span key={i} className="tech-tag tech-tag-alt">{api}</span>)}
+                  {["RESTful Core API", "Real-time WebSocket Feed", "Third-party Webhooks", "Authentication Gateway", "Data Export API"].map((api, i) => (
+                    <span key={i} className="tech-tag tech-tag-alt">{api}</span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -177,13 +137,17 @@ const PoliceTelecom93Detailed = () => {
               <div className="panel">
                 <h3><LayoutDashboard className="inline-icon" color="#3b82f6" /> Dashboards</h3>
                 <ul className="premium-list">
-                  {dashboards.map((d, i) => <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>)}
+                  {["Executive Overview Dashboard", "Live Operations Monitor", "Historical Trend Analysis", "System Health & Status"].map((d, i) => (
+                    <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>
+                  ))}
                 </ul>
               </div>
               <div className="panel">
                 <h3><FileText className="inline-icon" color="#10b981" /> Generated Reports</h3>
                 <ul className="premium-list">
-                  {reports.map((r, i) => <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>)}
+                  {["Daily Summary Report", "Weekly Performance Analytics", "Monthly Compliance Audit", "System Exception Logs"].map((r, i) => (
+                    <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -196,13 +160,21 @@ const PoliceTelecom93Detailed = () => {
               <div className="panel highlight-red">
                 <h3><ShieldAlert className="inline-icon" color="#ef4444" /> Security Protocols</h3>
                 <ul className="premium-list">
-                  {security.map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
+                  {[
+                    "End-to-End Data Encryption (AES-256)", "Multi-Factor Authentication (MFA)", 
+                    "Strict Role-Based Access Control (RBAC)", "Tamper-proof Audit Trails", 
+                    "Automated Threat Detection", "Regular Security Penetration Testing"
+                  ].map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
                 </ul>
               </div>
               <div className="panel highlight-green">
                 <h3><Rocket className="inline-icon" color="#10b981" /> Future Enhancements</h3>
                 <ul className="premium-list">
-                  {futureScope.map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
+                  {[
+                    "Integration with Advanced LLMs", "Predictive Autonomous Actions", 
+                    "Enhanced Mobile Accessibility", "Cross-Agency Data Federation", 
+                    "Blockchain-based Immutability", "Next-Gen UI/UX Overhaul"
+                  ].map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
                 </ul>
               </div>
             </div>
@@ -218,13 +190,14 @@ const PoliceTelecom93Detailed = () => {
       <div className="hrms-bg-fx"></div>
       <div className="hrms-grid-overlay"></div>
       
+      {/* Header */}
       <header className="hrms-header">
         <button onClick={() => navigate(-1)} className="back-btn">
           <ArrowLeft size={20} /> BACK TO MODULES
         </button>
         <div className="header-titles">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="icon-wrapper">
-            <Radio size={40} color="#06b6d4" />
+            <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
             <h1 className="cyber-title">POLICE <span>TELECOM</span></h1>
@@ -233,10 +206,12 @@ const PoliceTelecom93Detailed = () => {
         </div>
       </header>
 
+      {/* Main Layout */}
       <div className="hrms-layout">
-        <aside className="hrms-sidebar">
+        {/* Sidebar Nav */}
+        <nav className="hrms-sidebar">
           {tabs.map(tab => (
-            <button
+            <button 
               key={tab.id}
               className={`tab-btn ${activeTab === tab.id ? 'active' : ''}`}
               onClick={() => setActiveTab(tab.id)}
@@ -244,10 +219,14 @@ const PoliceTelecom93Detailed = () => {
               {tab.icon} {tab.label}
             </button>
           ))}
-        </aside>
-        <main className="hrms-main-content scrollbar-hide">
+        </nav>
+
+        {/* Content Area */}
+        <main className="hrms-content-area">
           <AnimatePresence mode="wait">
-            {renderContent()}
+            <div key={activeTab}>
+              {renderContent()}
+            </div>
           </AnimatePresence>
         </main>
       </div>

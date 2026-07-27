@@ -2,89 +2,24 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Users, MessageSquare, Handshake
+  Bot, LayoutDashboard, Database, Shield, Rocket, FileText, Activity, Network, ArrowLeft, Terminal, Cpu, CheckCircle, ShieldAlert, PieChart, Map, Truck
 } from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "Gram Chaupal Analyzer NLP", "Citizen Sentiment Scorer", "Police Mitra Vetting Bot", 
+"Gram Chaupal Analyzer NLP", "Citizen Sentiment Scorer", "Police Mitra Vetting Bot", 
   "NGO Coordination AI", "Fake News Debunker Bot", "Community Risk Profiler", 
   "Public Trust Index Modeler", "Social Harmony Tracker", "Awareness Campaign Optimizer",
   "Volunteer Roster AI", "Language Translation Bot"
 ];
 
-const communityModules = [
-  {
-    title: "Gram Chaupal & Outreach",
-    icon: <Users size={20} />,
-    items: ["AI Village Pulse Analytics", "Automated Chaupal Scheduling", "Local Grievance NLP Categorization", "Predictive Tension Mapping"]
-  },
-  {
-    title: "Police Mitra & Volunteers",
-    icon: <Handshake size={20} />,
-    items: ["AI Background Vetting (OSINT)", "Volunteer Skill Matching", "Digital ID Card Issuance", "Emergency Task Broadcasting"]
-  },
-  {
-    title: "Citizen Feedback & Trust",
-    icon: <MessageSquare size={20} />,
-    items: ["Public Trust Index (PTI) Score", "Sentiment Analysis on Feedback", "Anonymous Suggestion Portal", "Social Media Sentiment Sync"]
-  },
-  {
-    title: "NGO & RWA Coordination",
-    icon: <Network size={20} />,
-    items: ["RWA Meeting Calendar", "NGO Resource Mapping", "Community Policing Joint-Patrols", "Neighborhood Watch AI"]
-  },
-  {
-    title: "Awareness Campaigns",
-    icon: <Activity size={20} />,
-    items: ["Cyber Security Awareness ROI", "Targeted SMS Blasts (Geo-fenced)", "Traffic Rules Gamification", "Fake News Counters"]
-  }
-];
-
-const aiFeatures = [
-  "AI Multilingual NLP (Hindi/Bhojpuri/Awadhi)", "AI Sentiment Trend Prediction", "AI OSINT Vetting for Volunteers",
-  "AI Geo-spatial Community Risk Heatmaps", "AI Automated Public Trust Index Calculation", "AI Fake News Propagation Modeling",
-  "AI Deepfake Awareness Training", "AI Demographic-based Campaign Targeting"
-];
-
-const databases = [
-  "Gram_Chaupal_Transcripts", "Police_Mitra_Registry", "Public_Feedback_Lake", "RWA_NGO_Directory", "Trust_Index_Metrics", 
-  "Awareness_Campaign_ROI", "Local_Grievance_DB", "Volunteer_Task_Logs", "Social_Harmony_Indicators", "Fake_News_Blacklist"
-];
-
-const dashboards = [
-  "Live Public Trust Index", "Gram Chaupal Coverage Map", "Volunteer Deployment Radar", 
-  "Social Sentiment (District-wise)", "Awareness Campaign Reach", "Grievance Resolution Speed"
-];
-
-const apis = [
-  "WhatsApp Business API (Outreach)", "State Citizen Portal Sync", "Social Media Graph APIs (Twitter/FB)", "NGO Darpan API",
-  "Telecom Operator APIs (SMS Broadcasts)", "Local Panchayat Data Sync"
-];
-
-const reports = [
-  "Monthly Community Trust Scorecard", "Gram Chaupal Impact Analysis", "Police Mitra Activity Log", 
-  "Top Local Grievances by Demography", "Fake News Debunking Efficacy", "RWA Joint Patrol Hours"
-];
-
-const security = [
-  "Anonymized Feedback Data Vaults", "Strict PII Redaction for Volunteers", "End-to-End Encrypted Tips", 
-  "Role-Based Access for RWA Leaders", "Anti-Bot Captcha (Suggestion Portal)", 
-  "Immutable Trust Score Ledgers", "API Rate Limiting on SMS", "Secure OAuth for NGO Portals"
-];
-
-const futureScope = [
-  "AI Holographic Constables for Awareness", "VR Neighborhood Watch Simulations", "Decentralized Autonomous Community Policing",
-  "Predictive Harmony Indexes via Brainwaves", "Gamified Citizen Points (Blockchain)", "AI Empathy Training for Beat Officers"
-];
-
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'Community Bots', icon: <Bot size={18} /> },
-  { id: 'modules', label: 'Outreach Modules', icon: <LayoutDashboard size={18} /> },
+  { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
+  { id: 'modules', label: 'Advanced Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
-  { id: 'reports', label: 'Trust Dashboards', icon: <PieChart size={18} /> },
+  { id: 'reports', label: 'Dashboards', icon: <PieChart size={18} /> },
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
@@ -98,29 +33,29 @@ const CommunityPolicingDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <Handshake className="inline-icon" size={28} /> AI Community Policing & Outreach
+              <ShieldAlert className="inline-icon" size={28} /> COMMUNITY POLICING
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>AI Community Policing</strong> bridges the gap between citizens and the police force. By utilizing NLP to analyze Gram Chaupal meetings and calculating a live 'Public Trust Index', the AI ensures the police remain a friendly, approachable, and proactive community partner.
+              <strong>COMMUNITY POLICING</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in gram chaupal nlp, police mitra & public trust index.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Users className="inline-icon" color="#3b82f6" /> Gram Chaupal AI</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Transcribes rural village meetings (Gram Chaupals) in local dialects (Awadhi, Bhojpuri). AI automatically extracts the top 3 grievances raised by villagers and assigns them to the local Beat Officer.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#3b82f6" /> Real-time Monitoring</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Continuous AI-driven surveillance and data collection ensuring immediate anomaly detection and rapid response protocols.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Handshake className="inline-icon" color="#10b981" /> Police Mitra (Volunteers)</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Citizens can apply to be 'Police Mitras'. The AI conducts a rapid OSINT background check to ensure no criminal history, issues a digital ID, and broadcasts emergency tasks (like crowd control during festivals).</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Cpu className="inline-icon" color="#10b981" /> Predictive Analytics</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Utilizes machine learning to forecast trends, identify potential risks before they occur, and suggest optimized resource allocation.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><PieChart className="inline-icon" color="#f59e0b" /> Public Trust Index</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>A dynamic dashboard for the DGP. AI scrapes social media sentiment, feedback from police stations, and community surveys to calculate a live 'Trust Score' for every district.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#f59e0b" /> Seamless Integration</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Hooks into existing national and state-level databases, providing a unified, interoperable platform across all departments.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#ef4444" /> Fake News & Awareness</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Deploys targeted WhatsApp/SMS campaigns to specific geo-fences to debunk rapidly spreading fake news before it sparks communal tension.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Shield className="inline-icon" color="#ef4444" /> Automated Compliance</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Ensures all operations strictly adhere to legal and procedural guidelines, generating instant audit trails and compliance reports.</p>
               </div>
             </div>
           </motion.div>
@@ -139,10 +74,15 @@ const CommunityPolicingDetailed = () => {
       case 'modules':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="module-accordion">
-            {communityModules.map((mod, i) => (
+            {[
+              { title: "Real-time Monitoring Module", items: ["Live Data Stream", "Alert Engine", "Geospatial Tracking"] },
+              { title: "Predictive Analytics Engine", items: ["Risk Forecasting", "Resource Optimization", "Pattern Recognition"] },
+              { title: "Automated Reporting System", items: ["Compliance Audits", "Daily Briefings", "Incident Logs"] },
+              { title: "Cloud Integration Hub", items: ["State DB Sync", "Third-party API Webhooks", "Encrypted Data Transfer"] }
+            ].map((mod, i) => (
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} key={i} className="premium-module-panel">
                 <div className="module-header">
-                  {mod.icon}
+                  <LayoutDashboard size={20} color="#3b82f6" />
                   <h3>{mod.title}</h3>
                 </div>
                 <div className="module-tags">
@@ -157,7 +97,10 @@ const CommunityPolicingDetailed = () => {
       case 'features':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid">
-            {aiFeatures.map((feat, i) => (
+            {[
+              "24/7 AI Processing", "Advanced Machine Learning Models", "Real-time Data Sync", 
+              "Automated Alerts & Notifications", "Cross-Platform Accessibility", "Role-Based Access Control"
+            ].map((feat, i) => (
               <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-purple">
                 <Cpu className="card-icon" />
                 <h4>{feat}</h4>
@@ -170,15 +113,19 @@ const CommunityPolicingDetailed = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
             <div className="split-section">
               <div className="panel">
-                <h3><Database className="inline-icon" color="#06b6d4" /> Database Tables</h3>
+                <h3><Database className="inline-icon" color="#06b6d4" /> Database Integration</h3>
                 <div className="tag-cloud">
-                  {databases.map((db, i) => <span key={i} className="tech-tag">{db}</span>)}
+                  {["Primary_Transaction_DB", "Analytics_Data_Warehouse", "Audit_Logs_Archive", "User_Access_Registry", "System_Configuration_DB"].map((db, i) => (
+                    <span key={i} className="tech-tag">{db}</span>
+                  ))}
                 </div>
               </div>
               <div className="panel">
                 <h3><Network className="inline-icon" color="#8b5cf6" /> System APIs</h3>
                 <div className="tag-cloud">
-                  {apis.map((api, i) => <span key={i} className="tech-tag tech-tag-alt">{api}</span>)}
+                  {["RESTful Core API", "Real-time WebSocket Feed", "Third-party Webhooks", "Authentication Gateway", "Data Export API"].map((api, i) => (
+                    <span key={i} className="tech-tag tech-tag-alt">{api}</span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -191,13 +138,17 @@ const CommunityPolicingDetailed = () => {
               <div className="panel">
                 <h3><LayoutDashboard className="inline-icon" color="#3b82f6" /> Dashboards</h3>
                 <ul className="premium-list">
-                  {dashboards.map((d, i) => <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>)}
+                  {["Executive Overview Dashboard", "Live Operations Monitor", "Historical Trend Analysis", "System Health & Status"].map((d, i) => (
+                    <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>
+                  ))}
                 </ul>
               </div>
               <div className="panel">
                 <h3><FileText className="inline-icon" color="#10b981" /> Generated Reports</h3>
                 <ul className="premium-list">
-                  {reports.map((r, i) => <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>)}
+                  {["Daily Summary Report", "Weekly Performance Analytics", "Monthly Compliance Audit", "System Exception Logs"].map((r, i) => (
+                    <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -210,13 +161,21 @@ const CommunityPolicingDetailed = () => {
               <div className="panel highlight-red">
                 <h3><ShieldAlert className="inline-icon" color="#ef4444" /> Security Protocols</h3>
                 <ul className="premium-list">
-                  {security.map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
+                  {[
+                    "End-to-End Data Encryption (AES-256)", "Multi-Factor Authentication (MFA)", 
+                    "Strict Role-Based Access Control (RBAC)", "Tamper-proof Audit Trails", 
+                    "Automated Threat Detection", "Regular Security Penetration Testing"
+                  ].map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
                 </ul>
               </div>
               <div className="panel highlight-green">
                 <h3><Rocket className="inline-icon" color="#10b981" /> Future Enhancements</h3>
                 <ul className="premium-list">
-                  {futureScope.map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
+                  {[
+                    "Integration with Advanced LLMs", "Predictive Autonomous Actions", 
+                    "Enhanced Mobile Accessibility", "Cross-Agency Data Federation", 
+                    "Blockchain-based Immutability", "Next-Gen UI/UX Overhaul"
+                  ].map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
                 </ul>
               </div>
             </div>
@@ -239,7 +198,7 @@ const CommunityPolicingDetailed = () => {
         </button>
         <div className="header-titles">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="icon-wrapper">
-            <Handshake size={40} color="#06b6d4" />
+            <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
             <h1 className="cyber-title">COMMUNITY <span>POLICING</span></h1>
