@@ -412,6 +412,14 @@ import PoliceTrainingAcademyDetailed from './pages/PoliceTrainingAcademyDetailed
 import SOPAssistantDetailed from './pages/SOPAssistantDetailed';
 import PolicyCircularSearchDetailed from './pages/PolicyCircularSearchDetailed';
 import ELearningPlatformDetailed from './pages/ELearningPlatformDetailed';
+import EventManagementDetailed from './pages/EventManagementDetailed';
+import CrowdManagementDetailed from './pages/CrowdManagementDetailed';
+import RiotIntelligenceDetailed from './pages/RiotIntelligenceDetailed';
+import DisasterResponseDetailed from './pages/DisasterResponseDetailed';
+import EmergencyManagementDetailed from './pages/EmergencyManagementDetailed';
+import VIPSecurityDetailed from './pages/VIPSecurityDetailed';
+import ElectionDutyManagementDetailed from './pages/ElectionDutyManagementDetailed';
+import FestivalSecurityDetailed from './pages/FestivalSecurityDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2327,6 +2335,14 @@ const AnimatedRoutes = () => {
         <Route path="/sop-assistant" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><SOPAssistantDetailed /></motion.div>} />
         <Route path="/policy-circular-search" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PolicyCircularSearchDetailed /></motion.div>} />
         <Route path="/e-learning-platform" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ELearningPlatformDetailed /></motion.div>} />
+        <Route path="/event-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><EventManagementDetailed /></motion.div>} />
+        <Route path="/crowd-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CrowdManagementDetailed /></motion.div>} />
+        <Route path="/riot-intelligence" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><RiotIntelligenceDetailed /></motion.div>} />
+        <Route path="/disaster-response" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><DisasterResponseDetailed /></motion.div>} />
+        <Route path="/emergency-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><EmergencyManagementDetailed /></motion.div>} />
+        <Route path="/vip-security" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><VIPSecurityDetailed /></motion.div>} />
+        <Route path="/election-duty-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ElectionDutyManagementDetailed /></motion.div>} />
+        <Route path="/festival-security" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><FestivalSecurityDetailed /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );

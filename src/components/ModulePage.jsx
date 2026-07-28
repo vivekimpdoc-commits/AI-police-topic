@@ -342,6 +342,15 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 18: Law & Order
+                      'AI Event Management': '/event-management',
+                      'AI Crowd Management': '/crowd-management',
+                      'AI Riot Intelligence': '/riot-intelligence',
+                      'AI Disaster Response': '/disaster-response',
+                      'AI Emergency Management': '/emergency-management',
+                      'AI VIP Security': '/vip-security',
+                      'AI Election Duty Management': '/election-duty-management',
+                      'AI Festival Security': '/festival-security',
                       // Module 20: Knowledge & Training
                       'AI Knowledge Hub': '/knowledge-hub',
                       'AI Police Training Academy': '/police-training-academy',
