@@ -342,6 +342,17 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 92: Police Knowledge Preservation
+                      'AI Retired Officer Experience Archive': '/retired-officer-experience-archive',
+                      'AI Best Investigation Practices Library': '/best-investigation-practices-library',
+                      'AI Standard Templates Repository': '/standard-templates-repository',
+                      'AI Operational Playbook Manager': '/operational-playbook-manager',
+                      'AI Decision Casebook Library': '/decision-casebook-library',
+                      'AI Historical Incident Lessons': '/historical-incident-lessons',
+                      'AI Police Terminology Dictionary': '/police-terminology-dictionary',
+                      'AI Acronym Knowledge Base': '/acronym-knowledge-base',
+                      'AI Organizational Memory Platform': '/organizational-memory-platform',
+                      'AI Knowledge Continuity Manager': '/knowledge-continuity-manager',
                       // Module 74: Police Intelligence & Coordination
                       'AI Police Informant Reward Management': '/police-informant-reward-management',
                       'AI Sensitive Person Registry': '/sensitive-person-registry',

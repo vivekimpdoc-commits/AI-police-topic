@@ -600,6 +600,16 @@ import CrossBorderIntelligenceExchangeDashboardDetailed from './pages/CrossBorde
 import MultiAgencyCoordinationCenterDetailed from './pages/MultiAgencyCoordinationCenterDetailed';
 import IntelligenceDisseminationWorkflowDetailed from './pages/IntelligenceDisseminationWorkflowDetailed';
 import ConfidentialSourceAccessControlDetailed from './pages/ConfidentialSourceAccessControlDetailed';
+import RetiredOfficerExperienceArchiveDetailed from './pages/RetiredOfficerExperienceArchiveDetailed';
+import BestInvestigationPracticesLibraryDetailed from './pages/BestInvestigationPracticesLibraryDetailed';
+import StandardTemplatesRepositoryDetailed from './pages/StandardTemplatesRepositoryDetailed';
+import OperationalPlaybookManagerDetailed from './pages/OperationalPlaybookManagerDetailed';
+import DecisionCasebookLibraryDetailed from './pages/DecisionCasebookLibraryDetailed';
+import HistoricalIncidentLessonsDetailed from './pages/HistoricalIncidentLessonsDetailed';
+import PoliceTerminologyDictionaryDetailed from './pages/PoliceTerminologyDictionaryDetailed';
+import AcronymKnowledgeBaseDetailed from './pages/AcronymKnowledgeBaseDetailed';
+import OrganizationalMemoryPlatformDetailed from './pages/OrganizationalMemoryPlatformDetailed';
+import KnowledgeContinuityManagerDetailed from './pages/KnowledgeContinuityManagerDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2702,6 +2712,16 @@ const AnimatedRoutes = () => {
         <Route path="/multi-agency-coordination-center" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><MultiAgencyCoordinationCenterDetailed /></motion.div>} />
         <Route path="/intelligence-dissemination-workflow" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><IntelligenceDisseminationWorkflowDetailed /></motion.div>} />
         <Route path="/confidential-source-access-control" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ConfidentialSourceAccessControlDetailed /></motion.div>} />
+        <Route path="/retired-officer-experience-archive" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><RetiredOfficerExperienceArchiveDetailed /></motion.div>} />
+        <Route path="/best-investigation-practices-library" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><BestInvestigationPracticesLibraryDetailed /></motion.div>} />
+        <Route path="/standard-templates-repository" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><StandardTemplatesRepositoryDetailed /></motion.div>} />
+        <Route path="/operational-playbook-manager" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><OperationalPlaybookManagerDetailed /></motion.div>} />
+        <Route path="/decision-casebook-library" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><DecisionCasebookLibraryDetailed /></motion.div>} />
+        <Route path="/historical-incident-lessons" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><HistoricalIncidentLessonsDetailed /></motion.div>} />
+        <Route path="/police-terminology-dictionary" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PoliceTerminologyDictionaryDetailed /></motion.div>} />
+        <Route path="/acronym-knowledge-base" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><AcronymKnowledgeBaseDetailed /></motion.div>} />
+        <Route path="/organizational-memory-platform" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><OrganizationalMemoryPlatformDetailed /></motion.div>} />
+        <Route path="/knowledge-continuity-manager" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><KnowledgeContinuityManagerDetailed /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );
