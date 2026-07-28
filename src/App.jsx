@@ -510,6 +510,16 @@ import RecordClassificationEngineDetailed from './pages/RecordClassificationEngi
 import LegacyRecordConversionTrackerDetailed from './pages/LegacyRecordConversionTrackerDetailed';
 import MicrofilmDigitizationManagerDetailed from './pages/MicrofilmDigitizationManagerDetailed';
 import OfficialRecordAuthenticationDetailed from './pages/OfficialRecordAuthenticationDetailed';
+import SalaryProjectionDetailed from './pages/SalaryProjectionDetailed';
+import OvertimeCalculatorDetailed from './pages/OvertimeCalculatorDetailed';
+import UniformAllowanceManagementDetailed from './pages/UniformAllowanceManagementDetailed';
+import FuelBudgetPlannerDetailed from './pages/FuelBudgetPlannerDetailed';
+import BuildingMaintenanceBudgetDetailed from './pages/BuildingMaintenanceBudgetDetailed';
+import ElectricityBillAnalyticsDetailed from './pages/ElectricityBillAnalyticsDetailed';
+import WaterBillAnalyticsDetailed from './pages/WaterBillAnalyticsDetailed';
+import TelephoneExpenseAnalyticsDetailed from './pages/TelephoneExpenseAnalyticsDetailed';
+import InternetExpenseMonitoringDetailed from './pages/InternetExpenseMonitoringDetailed';
+import CostCenterDashboardDetailed from './pages/CostCenterDashboardDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2522,6 +2532,16 @@ const AnimatedRoutes = () => {
         <Route path="/legacy-record-conversion-tracker" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><LegacyRecordConversionTrackerDetailed /></motion.div>} />
         <Route path="/microfilm-digitization-manager" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><MicrofilmDigitizationManagerDetailed /></motion.div>} />
         <Route path="/official-record-authentication" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><OfficialRecordAuthenticationDetailed /></motion.div>} />
+        <Route path="/salary-projection" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><SalaryProjectionDetailed /></motion.div>} />
+        <Route path="/overtime-calculator" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><OvertimeCalculatorDetailed /></motion.div>} />
+        <Route path="/uniform-allowance-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><UniformAllowanceManagementDetailed /></motion.div>} />
+        <Route path="/fuel-budget-planner" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><FuelBudgetPlannerDetailed /></motion.div>} />
+        <Route path="/building-maintenance-budget" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><BuildingMaintenanceBudgetDetailed /></motion.div>} />
+        <Route path="/electricity-bill-analytics" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ElectricityBillAnalyticsDetailed /></motion.div>} />
+        <Route path="/water-bill-analytics" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><WaterBillAnalyticsDetailed /></motion.div>} />
+        <Route path="/telephone-expense-analytics" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><TelephoneExpenseAnalyticsDetailed /></motion.div>} />
+        <Route path="/internet-expense-monitoring" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><InternetExpenseMonitoringDetailed /></motion.div>} />
+        <Route path="/cost-center-dashboard" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CostCenterDashboardDetailed /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );

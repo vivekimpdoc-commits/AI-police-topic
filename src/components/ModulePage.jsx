@@ -342,6 +342,17 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 85: Police Finance
+                      'AI Salary Projection': '/salary-projection',
+                      'AI Overtime Calculator': '/overtime-calculator',
+                      'AI Uniform Allowance Management': '/uniform-allowance-management',
+                      'AI Fuel Budget Planner': '/fuel-budget-planner',
+                      'AI Building Maintenance Budget': '/building-maintenance-budget',
+                      'AI Electricity Bill Analytics': '/electricity-bill-analytics',
+                      'AI Water Bill Analytics': '/water-bill-analytics',
+                      'AI Telephone Expense Analytics': '/telephone-expense-analytics',
+                      'AI Internet Expense Monitoring': '/internet-expense-monitoring',
+                      'AI Cost Center Dashboard': '/cost-center-dashboard',
                       // Module 94: Police Documentation
                       'AI Government Order Repository': '/government-order-repository',
                       'AI Circular Impact Analyzer': '/circular-impact-analyzer',
