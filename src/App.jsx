@@ -357,6 +357,16 @@ import ConferenceHallSchedulerDetailed from './pages/ConferenceHallSchedulerDeta
 import IntercomDirectoryDetailed from './pages/IntercomDirectoryDetailed';
 import OfficeConsumablesTrackingDetailed from './pages/OfficeConsumablesTrackingDetailed';
 import StationeryDistributionManagementDetailed from './pages/StationeryDistributionManagementDetailed';
+import InternalVigilanceMonitoringDetailed from './pages/InternalVigilanceMonitoringDetailed';
+import InternalComplaintCellDetailed from './pages/InternalComplaintCellDetailed';
+import DepartmentalInquiryManagementDetailed from './pages/DepartmentalInquiryManagementDetailed';
+import SuspensionCaseTrackingDetailed from './pages/SuspensionCaseTrackingDetailed';
+import DisciplinaryActionManagementDetailed from './pages/DisciplinaryActionManagementDetailed';
+import ConfidentialReportManagementDetailed from './pages/ConfidentialReportManagementDetailed';
+import IntegrityMonitoringDashboardDetailed from './pages/IntegrityMonitoringDashboardDetailed';
+import InternalEthicsMonitoringDetailed from './pages/InternalEthicsMonitoringDetailed';
+import MisconductPatternAnalysisDetailed from './pages/MisconductPatternAnalysisDetailed';
+import InternalRiskRegisterDetailed from './pages/InternalRiskRegisterDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -1799,6 +1809,56 @@ const AnimatedRoutes = () => {
         <Route path="/stationery-distribution-management" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
             <StationeryDistributionManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/internal-vigilance-monitoring" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <InternalVigilanceMonitoringDetailed />
+          </motion.div>
+        } />
+        <Route path="/internal-complaint-cell" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <InternalComplaintCellDetailed />
+          </motion.div>
+        } />
+        <Route path="/departmental-inquiry-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <DepartmentalInquiryManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/suspension-case-tracking" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <SuspensionCaseTrackingDetailed />
+          </motion.div>
+        } />
+        <Route path="/disciplinary-action-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <DisciplinaryActionManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/confidential-report-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ConfidentialReportManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/integrity-monitoring-dashboard" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <IntegrityMonitoringDashboardDetailed />
+          </motion.div>
+        } />
+        <Route path="/internal-ethics-monitoring" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <InternalEthicsMonitoringDetailed />
+          </motion.div>
+        } />
+        <Route path="/misconduct-pattern-analysis" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <MisconductPatternAnalysisDetailed />
+          </motion.div>
+        } />
+        <Route path="/internal-risk-register" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <InternalRiskRegisterDetailed />
           </motion.div>
         } />
         <Route path="/business-compliance" element={

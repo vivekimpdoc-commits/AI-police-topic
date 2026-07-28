@@ -511,6 +511,18 @@ const ModulePage = () => {
                       'AI Office Consumables Tracking': '/office-consumables-tracking', 'एआई कार्यालय उपभोज्य (Consumables) ट्रैकिंग': '/office-consumables-tracking',
                       'AI Stationery Distribution Management': '/stationery-distribution-management', 'एआई स्टेशनरी वितरण प्रबंधन': '/stationery-distribution-management',
 
+                      // Module 38: Internal Security
+                      'AI Internal Vigilance Monitoring': '/internal-vigilance-monitoring', 'एआई आंतरिक सतर्कता (Vigilance) निगरानी': '/internal-vigilance-monitoring',
+                      'AI Internal Complaint Cell': '/internal-complaint-cell', 'एआई आंतरिक शिकायत सेल': '/internal-complaint-cell',
+                      'AI Departmental Inquiry Management': '/departmental-inquiry-management', 'एआई विभागीय जांच प्रबंधन': '/departmental-inquiry-management',
+                      'AI Suspension Case Tracking': '/suspension-case-tracking', 'एआई निलंबन (Suspension) केस ट्रैकिंग': '/suspension-case-tracking',
+                      'AI Disciplinary Action Management': '/disciplinary-action-management', 'एआई अनुशासनात्मक कार्रवाई प्रबंधन': '/disciplinary-action-management',
+                      'AI Confidential Report Management': '/confidential-report-management', 'एआई गोपनीय रिपोर्ट प्रबंधन': '/confidential-report-management',
+                      'AI Integrity Monitoring Dashboard': '/integrity-monitoring-dashboard', 'एआई सत्यनिष्ठा (Integrity) निगरानी डैशबोर्ड': '/integrity-monitoring-dashboard',
+                      'AI Internal Ethics Monitoring': '/internal-ethics-monitoring', 'एआई आंतरिक नैतिकता निगरानी': '/internal-ethics-monitoring',
+                      'AI Misconduct Pattern Analysis': '/misconduct-pattern-analysis', 'एआई कदाचार पैटर्न विश्लेषण': '/misconduct-pattern-analysis',
+                      'AI Internal Risk Register': '/internal-risk-register', 'एआई आंतरिक जोखिम रजिस्टर': '/internal-risk-register',
+
                       // Module 26: Future Vision Modules
                       'AI Border Security': '/border-security',
                       'AI Prison Management': '/prison-management',
