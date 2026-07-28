@@ -81,18 +81,6 @@ import TrainingDetailed from './pages/TrainingDetailed';
 import LogisticsDetailed from './pages/LogisticsDetailed';
 import SmartCityDetailed from './pages/SmartCityDetailed';
 import CommunicationDetailed from './pages/CommunicationDetailed';
-import BorderSecurityDetailed from './pages/BorderSecurityDetailed';
-import PrisonDetailed from './pages/PrisonDetailed';
-import AntiTerrorDetailed from './pages/AntiTerrorDetailed';
-import FinancialCrimeDetailed from './pages/FinancialCrimeDetailed';
-import NarcoticsDetailed from './pages/NarcoticsDetailed';
-import PoliceStationDetailed from './pages/PoliceStationDetailed';
-import FleetDetailed from './pages/FleetDetailed';
-import RadioCommsDetailed from './pages/RadioCommsDetailed';
-import PublicSafetyDetailed from './pages/PublicSafetyDetailed';
-import EmergingTechDetailed from './pages/EmergingTechDetailed';
-import TechServicesDetailed from './pages/TechServicesDetailed';
-import InfrastructureDetailed from './pages/InfrastructureDetailed';
 import InternalSecurityDetailed from './pages/InternalSecurityDetailed';
 import ArmouryDetailed from './pages/ArmouryDetailed';
 import LegalProcessDetailed from './pages/LegalProcessDetailed';
@@ -344,6 +332,11 @@ import NarcoticsIntelligenceDetailed from './pages/NarcoticsIntelligenceDetailed
 import EconomicOffenceWingAssistantDetailed from './pages/EconomicOffenceWingAssistantDetailed';
 import InterStateCoordinationPlatformDetailed from './pages/InterStateCoordinationPlatformDetailed';
 import InternationalCooperationDashboardDetailed from './pages/InternationalCooperationDashboardDetailed';
+import GISPlatformDetailed from './pages/GISPlatformDetailed';
+import SmartCityIntegrationDetailed from './pages/SmartCityIntegrationDetailed';
+import DroneMonitoringDetailed from './pages/DroneMonitoringDetailed';
+import SatelliteIntelligenceDetailed from './pages/SatelliteIntelligenceDetailed';
+import GeoFencingDetailed from './pages/GeoFencingDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -706,66 +699,6 @@ const AnimatedRoutes = () => {
         <Route path="/communication" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
             <CommunicationDetailed />
-          </motion.div>
-        } />
-        <Route path="/border-security" element={
-          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
-            <BorderSecurityDetailed />
-          </motion.div>
-        } />
-        <Route path="/prison-management" element={
-          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
-            <PrisonDetailed />
-          </motion.div>
-        } />
-        <Route path="/anti-terror" element={
-          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
-            <AntiTerrorDetailed />
-          </motion.div>
-        } />
-        <Route path="/financial-crime" element={
-          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
-            <FinancialCrimeDetailed />
-          </motion.div>
-        } />
-        <Route path="/narcotics" element={
-          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
-            <NarcoticsDetailed />
-          </motion.div>
-        } />
-        <Route path="/police-station" element={
-          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
-            <PoliceStationDetailed />
-          </motion.div>
-        } />
-        <Route path="/fleet-logistics" element={
-          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
-            <FleetDetailed />
-          </motion.div>
-        } />
-        <Route path="/radio-comms" element={
-          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
-            <RadioCommsDetailed />
-          </motion.div>
-        } />
-        <Route path="/public-safety" element={
-          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
-            <PublicSafetyDetailed />
-          </motion.div>
-        } />
-        <Route path="/emerging-tech" element={
-          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
-            <EmergingTechDetailed />
-          </motion.div>
-        } />
-        <Route path="/tech-services" element={
-          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
-            <TechServicesDetailed />
-          </motion.div>
-        } />
-        <Route path="/infrastructure" element={
-          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
-            <InfrastructureDetailed />
           </motion.div>
         } />
         <Route path="/internal-security" element={
@@ -1721,6 +1654,31 @@ const AnimatedRoutes = () => {
         <Route path="/international-cooperation-dashboard" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
             <InternationalCooperationDashboardDetailed />
+          </motion.div>
+        } />
+        <Route path="/gis-platform" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <GISPlatformDetailed />
+          </motion.div>
+        } />
+        <Route path="/smart-city-integration" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <SmartCityIntegrationDetailed />
+          </motion.div>
+        } />
+        <Route path="/drone-monitoring" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <DroneMonitoringDetailed />
+          </motion.div>
+        } />
+        <Route path="/satellite-intelligence" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <SatelliteIntelligenceDetailed />
+          </motion.div>
+        } />
+        <Route path="/geo-fencing" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <GeoFencingDetailed />
           </motion.div>
         } />
         <Route path="/business-compliance" element={

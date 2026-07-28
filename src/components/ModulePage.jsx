@@ -480,6 +480,13 @@ const ModulePage = () => {
                       'AI FSL Report Tracking': '/fsl-report-tracking',
                       'AI Evidence Integrity Monitoring': '/evidence-integrity-monitoring',
 
+                      // Module 22: GIS & Smart City
+                      'AI GIS Platform': '/gis-platform', 'एआई जीआईएस (GIS) प्लेटफॉर्म': '/gis-platform',
+                      'AI Smart City Integration': '/smart-city-integration', 'एआई स्मार्ट सिटी एकीकरण': '/smart-city-integration',
+                      'AI Drone Monitoring': '/drone-monitoring', 'एआई ड्रोन निगरानी': '/drone-monitoring',
+                      'AI Satellite Intelligence': '/satellite-intelligence', 'एआई सैटेलाइट इंटेलिजेंस': '/satellite-intelligence',
+                      'AI Geo-Fencing': '/geo-fencing', 'एआई जियो-फेंसिंग': '/geo-fencing',
+
                       // Module 26: Future Vision Modules
                       'AI Border Security': '/border-security',
                       'AI Prison Management': '/prison-management',
