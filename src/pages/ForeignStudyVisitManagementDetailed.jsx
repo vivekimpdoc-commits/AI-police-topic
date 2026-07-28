@@ -77,11 +77,11 @@ const ForeignStudyVisitManagementDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <ShieldAlert className="inline-icon" size={28} /> AI ELECTION FORCE ALLOCATION
+              <ShieldAlert className="inline-icon" size={28} /> AI FOREIGN STUDY VISIT MANAGEMENT
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>AI ELECTION FORCE ALLOCATION</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in deploying capf, state police & home guards based on booth sensitivity.
+              <strong>AI FOREIGN STUDY VISIT MANAGEMENT</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in managing its core operations efficiently.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
@@ -245,7 +245,7 @@ const ForeignStudyVisitManagementDetailed = () => {
             <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
-            <h1 className="cyber-title">AI ELECTION FORCE <span>ALLOCATION</span></h1>
+            <h1 className="cyber-title">AI FOREIGN STUDY VISIT <span>MANAGEMENT</span></h1>
             <p className="cyber-subtitle">Deploying CAPF, State Police & Home Guards based on Booth Sensitivity</p>
           </div>
         </div>
