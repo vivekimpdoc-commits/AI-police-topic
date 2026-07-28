@@ -137,7 +137,7 @@ const InvestigationQualityDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <ShieldAlert className="inline-icon" size={28} /> AI State Border Check Management
+              <ShieldAlert className="inline-icon" size={28} /> AI INVESTIGATION QUALITY REVIEW
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
@@ -281,7 +281,7 @@ const InvestigationQualityDetailed = () => {
             <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
-            <h1 className="cyber-title">AI STATE BORDER <span>CHECK QUALITY REVIEW</span></h1>
+            <h1 className="cyber-title">AI INVESTIGATION QUALITY <span>REVIEW</span></h1>
             <p className="cyber-subtitle">Interstate Verification, Contraband & Security Sync</p>
           </div>
         </div>
