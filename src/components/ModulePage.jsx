@@ -342,6 +342,17 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 106: Judicial & Administrative Coordination
+                      'AI Commission of Inquiry Coordination': '/commission-of-inquiry',
+                      'AI Magisterial Inquiry Workflow': '/magisterial-inquiry',
+                      'AI Human Rights Commission Case Coordination': '/human-rights-commission',
+                      'AI State Information Commission Case Tracker': '/state-information-commission',
+                      'AI Lokayukta Reference Management': '/lokayukta-reference',
+                      'AI Legislative Assembly Question Coordination': '/legislative-assembly-question',
+                      'AI Parliament Question Coordination': '/parliament-question',
+                      'AI Assurance Monitoring Cell': '/assurance-monitoring',
+                      'AI Government Reference Monitoring': '/government-reference',
+                      'AI Cabinet Decision Compliance Tracker': '/cabinet-decision-compliance',
                       // Module 42: Intelligence Support
                       'AI OSINT Workspace': '/osint-workspace',
                       'AI Anonymous Tip Management': '/anonymous-tip-management',

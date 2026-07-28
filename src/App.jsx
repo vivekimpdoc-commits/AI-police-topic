@@ -397,6 +397,16 @@ import WitnessManagementDetailed from './pages/WitnessManagementDetailed';
 import SuspectAnalysisDetailed from './pages/SuspectAnalysisDetailed';
 import InvestigationDashboardDetailed from './pages/InvestigationDashboardDetailed';
 import ColdCaseAnalysisDetailed from './pages/ColdCaseAnalysisDetailed';
+import CommissionOfInquiryCoordinationDetailed from './pages/CommissionOfInquiryCoordinationDetailed';
+import MagisterialInquiryWorkflowDetailed from './pages/MagisterialInquiryWorkflowDetailed';
+import HumanRightsCommissionCaseDetailed from './pages/HumanRightsCommissionCaseDetailed';
+import StateInformationCommissionCaseDetailed from './pages/StateInformationCommissionCaseDetailed';
+import LokayuktaReferenceManagementDetailed from './pages/LokayuktaReferenceManagementDetailed';
+import LegislativeAssemblyQuestionDetailed from './pages/LegislativeAssemblyQuestionDetailed';
+import ParliamentQuestionCoordinationDetailed from './pages/ParliamentQuestionCoordinationDetailed';
+import AssuranceMonitoringCellDetailed from './pages/AssuranceMonitoringCellDetailed';
+import GovernmentReferenceMonitoringDetailed from './pages/GovernmentReferenceMonitoringDetailed';
+import CabinetDecisionComplianceDetailed from './pages/CabinetDecisionComplianceDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2297,6 +2307,16 @@ const AnimatedRoutes = () => {
         <Route path="/intelligence-knowledge-base" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><IntelligenceKnowledgeBaseDetailed /></motion.div>} />
         <Route path="/cross-agency-exchange" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CrossAgencyInformationExchangeDetailed /></motion.div>} />
         <Route path="/intelligence-brief" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><IntelligenceBriefGeneratorDetailed /></motion.div>} />
+        <Route path="/commission-of-inquiry" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CommissionOfInquiryCoordinationDetailed /></motion.div>} />
+        <Route path="/magisterial-inquiry" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><MagisterialInquiryWorkflowDetailed /></motion.div>} />
+        <Route path="/human-rights-commission" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><HumanRightsCommissionCaseDetailed /></motion.div>} />
+        <Route path="/state-information-commission" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><StateInformationCommissionCaseDetailed /></motion.div>} />
+        <Route path="/lokayukta-reference" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><LokayuktaReferenceManagementDetailed /></motion.div>} />
+        <Route path="/legislative-assembly-question" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><LegislativeAssemblyQuestionDetailed /></motion.div>} />
+        <Route path="/parliament-question" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ParliamentQuestionCoordinationDetailed /></motion.div>} />
+        <Route path="/assurance-monitoring" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><AssuranceMonitoringCellDetailed /></motion.div>} />
+        <Route path="/government-reference" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><GovernmentReferenceMonitoringDetailed /></motion.div>} />
+        <Route path="/cabinet-decision-compliance" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CabinetDecisionComplianceDetailed /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );
