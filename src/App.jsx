@@ -490,6 +490,16 @@ import BoundaryWallInspectionDetailed from './pages/BoundaryWallInspectionDetail
 import ElectricalSafetyInspectionDetailed from './pages/ElectricalSafetyInspectionDetailed';
 import DrainageInspectionDetailed from './pages/DrainageInspectionDetailed';
 import SolarPowerMonitoringDetailed from './pages/SolarPowerMonitoringDetailed';
+import DakManagementDetailed from './pages/DakManagementDetailed';
+import EOfficeIntegrationDetailed from './pages/EOfficeIntegrationDetailed';
+import DispatchRegisterDetailed from './pages/DispatchRegisterDetailed';
+import ReceiptRegisterDetailed from './pages/ReceiptRegisterDetailed';
+import GovernmentCommunicationTrackerDetailed from './pages/GovernmentCommunicationTrackerDetailed';
+import ConfidentialLetterRegisterDetailed from './pages/ConfidentialLetterRegisterDetailed';
+import OfficeMemorandumManagementDetailed from './pages/OfficeMemorandumManagementDetailed';
+import ReminderManagementDetailed from './pages/ReminderManagementDetailed';
+import PendingLetterDashboardDetailed from './pages/PendingLetterDashboardDetailed';
+import CorrespondenceAnalyticsDetailed from './pages/CorrespondenceAnalyticsDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2482,6 +2492,16 @@ const AnimatedRoutes = () => {
         <Route path="/electrical-safety-inspection" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ElectricalSafetyInspectionDetailed /></motion.div>} />
         <Route path="/drainage-inspection" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><DrainageInspectionDetailed /></motion.div>} />
         <Route path="/solar-power-monitoring" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><SolarPowerMonitoringDetailed /></motion.div>} />
+        <Route path="/dak-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><DakManagementDetailed /></motion.div>} />
+        <Route path="/e-office-integration" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><EOfficeIntegrationDetailed /></motion.div>} />
+        <Route path="/dispatch-register" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><DispatchRegisterDetailed /></motion.div>} />
+        <Route path="/receipt-register" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ReceiptRegisterDetailed /></motion.div>} />
+        <Route path="/government-communication-tracker" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><GovernmentCommunicationTrackerDetailed /></motion.div>} />
+        <Route path="/confidential-letter-register" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ConfidentialLetterRegisterDetailed /></motion.div>} />
+        <Route path="/office-memorandum-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><OfficeMemorandumManagementDetailed /></motion.div>} />
+        <Route path="/reminder-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ReminderManagementDetailed /></motion.div>} />
+        <Route path="/pending-letter-dashboard" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PendingLetterDashboardDetailed /></motion.div>} />
+        <Route path="/correspondence-analytics" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CorrespondenceAnalyticsDetailed /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );

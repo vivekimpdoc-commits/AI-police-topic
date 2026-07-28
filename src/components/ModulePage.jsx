@@ -342,6 +342,17 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 49: Police Correspondence
+                      'AI Dak Management': '/dak-management',
+                      'AI eOffice Integration': '/e-office-integration',
+                      'AI Dispatch Register': '/dispatch-register',
+                      'AI Receipt Register': '/receipt-register',
+                      'AI Government Communication Tracker': '/government-communication-tracker',
+                      'AI Confidential Letter Register': '/confidential-letter-register',
+                      'AI Office Memorandum Management': '/office-memorandum-management',
+                      'AI Reminder Management': '/reminder-management',
+                      'AI Pending Letter Dashboard': '/pending-letter-dashboard',
+                      'AI Correspondence Analytics': '/correspondence-analytics',
                       // Module 84: Police Buildings
                       'AI Building Structural Inspection': '/building-structural-inspection',
                       'AI Roof Maintenance Planner': '/roof-maintenance-planner',
