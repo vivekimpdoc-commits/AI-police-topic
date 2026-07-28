@@ -342,6 +342,12 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 15: Missing Persons & Identification
+                      'AI Missing Person': '/missing-person',
+                      'AI Facial Recognition': '/facial-recognition',
+                      'AI Age Progression': '/age-progression',
+                      'AI Unknown Person Identification': '/unknown-person-identification',
+                      'AI Dead Body Identification': '/dead-body-identification',
                       // Module 63: Licensing & Business Compliance
                       'AI Pawn Shop Monitoring': '/pawn-shop-monitoring',
                       'AI Scrap Dealer Verification': '/scrap-dealer-verification',

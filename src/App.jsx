@@ -445,6 +445,11 @@ import ATMSecurityComplianceDetailed from './pages/ATMSecurityComplianceDetailed
 import CashVanMovementDetailed from './pages/CashVanMovementDetailed';
 import WarehouseSecurityDetailed from './pages/WarehouseSecurityDetailed';
 import CriticalInfrastructureDetailed from './pages/CriticalInfrastructureDetailed';
+import MissingPersonDetailed from './pages/MissingPersonDetailed';
+import FacialRecognitionDetailed from './pages/FacialRecognitionDetailed';
+import AgeProgressionDetailed from './pages/AgeProgressionDetailed';
+import UnknownPersonIdentificationDetailed from './pages/UnknownPersonIdentificationDetailed';
+import DeadBodyIdentificationDetailed from './pages/DeadBodyIdentificationDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2393,6 +2398,11 @@ const AnimatedRoutes = () => {
         <Route path="/cash-van-movement" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CashVanMovementDetailed /></motion.div>} />
         <Route path="/warehouse-security" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><WarehouseSecurityDetailed /></motion.div>} />
         <Route path="/critical-infrastructure" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CriticalInfrastructureDetailed /></motion.div>} />
+        <Route path="/missing-person" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><MissingPersonDetailed /></motion.div>} />
+        <Route path="/facial-recognition" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><FacialRecognitionDetailed /></motion.div>} />
+        <Route path="/age-progression" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><AgeProgressionDetailed /></motion.div>} />
+        <Route path="/unknown-person-identification" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><UnknownPersonIdentificationDetailed /></motion.div>} />
+        <Route path="/dead-body-identification" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><DeadBodyIdentificationDetailed /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );
