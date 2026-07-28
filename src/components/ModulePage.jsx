@@ -342,6 +342,17 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 74: Police Intelligence & Coordination
+                      'AI Police Informant Reward Management': '/police-informant-reward-management',
+                      'AI Sensitive Person Registry': '/sensitive-person-registry',
+                      'AI History of Major Incidents Repository': '/history-of-major-incidents-repository',
+                      'AI District Security Assessment': '/district-security-assessment',
+                      'AI High-Risk Village Monitoring': '/high-risk-village-monitoring',
+                      'AI High-Risk Urban Area Monitoring': '/high-risk-urban-area-monitoring',
+                      'AI Cross-Border Intelligence Exchange Dashboard': '/cross-border-intelligence-exchange-dashboard',
+                      'AI Multi-Agency Coordination Center': '/multi-agency-coordination-center',
+                      'AI Intelligence Dissemination Workflow': '/intelligence-dissemination-workflow',
+                      'AI Confidential Source Access Control': '/confidential-source-access-control',
                       // Module 50: Police Inspection
                       'AI Annual Inspection Planner': '/annual-inspection-planner',
                       'AI Surprise Inspection System': '/surprise-inspection-system',

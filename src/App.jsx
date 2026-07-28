@@ -590,6 +590,16 @@ import RecordInspectionDetailed from './pages/RecordInspectionDetailed';
 import InspectionDeficiencyTrackerDetailed from './pages/InspectionDeficiencyTrackerDetailed';
 import ComplianceVerificationDetailed from './pages/ComplianceVerificationDetailed';
 import InspectionScoringEngineDetailed from './pages/InspectionScoringEngineDetailed';
+import PoliceInformantRewardManagementDetailed from './pages/PoliceInformantRewardManagementDetailed';
+import SensitivePersonRegistryDetailed from './pages/SensitivePersonRegistryDetailed';
+import HistoryOfMajorIncidentsRepositoryDetailed from './pages/HistoryOfMajorIncidentsRepositoryDetailed';
+import DistrictSecurityAssessmentDetailed from './pages/DistrictSecurityAssessmentDetailed';
+import HighRiskVillageMonitoringDetailed from './pages/HighRiskVillageMonitoringDetailed';
+import HighRiskUrbanAreaMonitoringDetailed from './pages/HighRiskUrbanAreaMonitoringDetailed';
+import CrossBorderIntelligenceExchangeDashboardDetailed from './pages/CrossBorderIntelligenceExchangeDashboardDetailed';
+import MultiAgencyCoordinationCenterDetailed from './pages/MultiAgencyCoordinationCenterDetailed';
+import IntelligenceDisseminationWorkflowDetailed from './pages/IntelligenceDisseminationWorkflowDetailed';
+import ConfidentialSourceAccessControlDetailed from './pages/ConfidentialSourceAccessControlDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2682,6 +2692,16 @@ const AnimatedRoutes = () => {
         <Route path="/inspection-deficiency-tracker" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><InspectionDeficiencyTrackerDetailed /></motion.div>} />
         <Route path="/compliance-verification" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ComplianceVerificationDetailed /></motion.div>} />
         <Route path="/inspection-scoring-engine" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><InspectionScoringEngineDetailed /></motion.div>} />
+        <Route path="/police-informant-reward-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PoliceInformantRewardManagementDetailed /></motion.div>} />
+        <Route path="/sensitive-person-registry" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><SensitivePersonRegistryDetailed /></motion.div>} />
+        <Route path="/history-of-major-incidents-repository" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><HistoryOfMajorIncidentsRepositoryDetailed /></motion.div>} />
+        <Route path="/district-security-assessment" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><DistrictSecurityAssessmentDetailed /></motion.div>} />
+        <Route path="/high-risk-village-monitoring" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><HighRiskVillageMonitoringDetailed /></motion.div>} />
+        <Route path="/high-risk-urban-area-monitoring" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><HighRiskUrbanAreaMonitoringDetailed /></motion.div>} />
+        <Route path="/cross-border-intelligence-exchange-dashboard" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CrossBorderIntelligenceExchangeDashboardDetailed /></motion.div>} />
+        <Route path="/multi-agency-coordination-center" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><MultiAgencyCoordinationCenterDetailed /></motion.div>} />
+        <Route path="/intelligence-dissemination-workflow" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><IntelligenceDisseminationWorkflowDetailed /></motion.div>} />
+        <Route path="/confidential-source-access-control" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ConfidentialSourceAccessControlDetailed /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );
