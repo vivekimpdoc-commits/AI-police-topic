@@ -520,6 +520,16 @@ import WaterBillAnalyticsDetailed from './pages/WaterBillAnalyticsDetailed';
 import TelephoneExpenseAnalyticsDetailed from './pages/TelephoneExpenseAnalyticsDetailed';
 import InternetExpenseMonitoringDetailed from './pages/InternetExpenseMonitoringDetailed';
 import CostCenterDashboardDetailed from './pages/CostCenterDashboardDetailed';
+import DGPSecretariatManagementDetailed from './pages/DGPSecretariatManagementDetailed';
+import ADGOfficeManagementDetailed from './pages/ADGOfficeManagementDetailed';
+import IGOfficeWorkflowDetailed from './pages/IGOfficeWorkflowDetailed';
+import DIGOfficeDashboardDetailed from './pages/DIGOfficeDashboardDetailed';
+import SPOfficeAutomationDetailed from './pages/SPOfficeAutomationDetailed';
+import PoliceHeadquartersFileRoomDetailed from './pages/PoliceHeadquartersFileRoomDetailed';
+import HeadquartersVisitorPassDetailed from './pages/HeadquartersVisitorPassDetailed';
+import HeadquartersMeetingSchedulerDetailed from './pages/HeadquartersMeetingSchedulerDetailed';
+import HeadquartersApprovalWorkflowDetailed from './pages/HeadquartersApprovalWorkflowDetailed';
+import HeadquartersCircularMonitoringDetailed from './pages/HeadquartersCircularMonitoringDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2542,6 +2552,16 @@ const AnimatedRoutes = () => {
         <Route path="/telephone-expense-analytics" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><TelephoneExpenseAnalyticsDetailed /></motion.div>} />
         <Route path="/internet-expense-monitoring" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><InternetExpenseMonitoringDetailed /></motion.div>} />
         <Route path="/cost-center-dashboard" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CostCenterDashboardDetailed /></motion.div>} />
+        <Route path="/dgp-secretariat-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><DGPSecretariatManagementDetailed /></motion.div>} />
+        <Route path="/adg-office-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ADGOfficeManagementDetailed /></motion.div>} />
+        <Route path="/ig-office-workflow" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><IGOfficeWorkflowDetailed /></motion.div>} />
+        <Route path="/dig-office-dashboard" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><DIGOfficeDashboardDetailed /></motion.div>} />
+        <Route path="/sp-office-automation" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><SPOfficeAutomationDetailed /></motion.div>} />
+        <Route path="/police-headquarters-file-room" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PoliceHeadquartersFileRoomDetailed /></motion.div>} />
+        <Route path="/headquarters-visitor-pass" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><HeadquartersVisitorPassDetailed /></motion.div>} />
+        <Route path="/headquarters-meeting-scheduler" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><HeadquartersMeetingSchedulerDetailed /></motion.div>} />
+        <Route path="/headquarters-approval-workflow" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><HeadquartersApprovalWorkflowDetailed /></motion.div>} />
+        <Route path="/headquarters-circular-monitoring" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><HeadquartersCircularMonitoringDetailed /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );

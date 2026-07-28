@@ -342,6 +342,17 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 48: Police Headquarters Management
+                      'AI DGP Secretariat Management': '/dgp-secretariat-management',
+                      'AI ADG Office Management': '/adg-office-management',
+                      'AI IG Office Workflow': '/ig-office-workflow',
+                      'AI DIG Office Dashboard': '/dig-office-dashboard',
+                      'AI SP Office Automation': '/sp-office-automation',
+                      'AI Police Headquarters File Room': '/police-headquarters-file-room',
+                      'AI Headquarters Visitor Pass': '/headquarters-visitor-pass',
+                      'AI Headquarters Meeting Scheduler': '/headquarters-meeting-scheduler',
+                      'AI Headquarters Approval Workflow': '/headquarters-approval-workflow',
+                      'AI Headquarters Circular Monitoring': '/headquarters-circular-monitoring',
                       // Module 85: Police Finance
                       'AI Salary Projection': '/salary-projection',
                       'AI Overtime Calculator': '/overtime-calculator',
