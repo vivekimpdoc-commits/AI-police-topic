@@ -342,6 +342,17 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 63: Licensing & Business Compliance
+                      'AI Pawn Shop Monitoring': '/pawn-shop-monitoring',
+                      'AI Scrap Dealer Verification': '/scrap-dealer-verification',
+                      'AI Second-Hand Goods Register': '/second-hand-goods-register',
+                      'AI Jewellery Shop Security Audit': '/jewellery-shop-security',
+                      'AI Petrol Pump Security Audit': '/petrol-pump-security',
+                      'AI Bank Security Inspection': '/bank-security-inspection',
+                      'AI ATM Security Compliance': '/atm-security-compliance',
+                      'AI Cash Van Movement Coordination': '/cash-van-movement',
+                      'AI Warehouse Security Assessment': '/warehouse-security',
+                      'AI Critical Infrastructure Security Register': '/critical-infrastructure',
                       // Module 40: Legal Process
                       'AI Warrant Management': '/warrant-management',
                       'AI Summons Management': '/summons-management',

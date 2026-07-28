@@ -435,6 +435,16 @@ import CourtProductionPlanningDetailed from './pages/CourtProductionPlanningDeta
 import LegalDeadlineTrackerDetailed from './pages/LegalDeadlineTrackerDetailed';
 import JudicialOrderTrackerDetailed from './pages/JudicialOrderTrackerDetailed';
 import ComplianceMonitoringDetailed from './pages/ComplianceMonitoringDetailed';
+import PawnShopMonitoringDetailed from './pages/PawnShopMonitoringDetailed';
+import ScrapDealerVerificationDetailed from './pages/ScrapDealerVerificationDetailed';
+import SecondHandGoodsRegisterDetailed from './pages/SecondHandGoodsRegisterDetailed';
+import JewelleryShopSecurityDetailed from './pages/JewelleryShopSecurityDetailed';
+import PetrolPumpSecurityDetailed from './pages/PetrolPumpSecurityDetailed';
+import BankSecurityInspectionDetailed from './pages/BankSecurityInspectionDetailed';
+import ATMSecurityComplianceDetailed from './pages/ATMSecurityComplianceDetailed';
+import CashVanMovementDetailed from './pages/CashVanMovementDetailed';
+import WarehouseSecurityDetailed from './pages/WarehouseSecurityDetailed';
+import CriticalInfrastructureDetailed from './pages/CriticalInfrastructureDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2373,6 +2383,16 @@ const AnimatedRoutes = () => {
         <Route path="/legal-deadline-tracker" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><LegalDeadlineTrackerDetailed /></motion.div>} />
         <Route path="/judicial-order-tracker" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><JudicialOrderTrackerDetailed /></motion.div>} />
         <Route path="/compliance-monitoring" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ComplianceMonitoringDetailed /></motion.div>} />
+        <Route path="/pawn-shop-monitoring" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PawnShopMonitoringDetailed /></motion.div>} />
+        <Route path="/scrap-dealer-verification" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ScrapDealerVerificationDetailed /></motion.div>} />
+        <Route path="/second-hand-goods-register" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><SecondHandGoodsRegisterDetailed /></motion.div>} />
+        <Route path="/jewellery-shop-security" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><JewelleryShopSecurityDetailed /></motion.div>} />
+        <Route path="/petrol-pump-security" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PetrolPumpSecurityDetailed /></motion.div>} />
+        <Route path="/bank-security-inspection" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><BankSecurityInspectionDetailed /></motion.div>} />
+        <Route path="/atm-security-compliance" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ATMSecurityComplianceDetailed /></motion.div>} />
+        <Route path="/cash-van-movement" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CashVanMovementDetailed /></motion.div>} />
+        <Route path="/warehouse-security" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><WarehouseSecurityDetailed /></motion.div>} />
+        <Route path="/critical-infrastructure" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CriticalInfrastructureDetailed /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );
