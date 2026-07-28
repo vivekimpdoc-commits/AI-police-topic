@@ -460,6 +460,26 @@ import LongTermEquipmentPlanningDetailed from './pages/LongTermEquipmentPlanning
 import PoliceInnovationIndexDetailed from './pages/PoliceInnovationIndexDetailed';
 import OrganizationalBenchmarkingDetailed from './pages/OrganizationalBenchmarkingDetailed';
 import StrategicReviewRepositoryDetailed from './pages/StrategicReviewRepositoryDetailed';
+import OfficeOrderManagementDetailed from './pages/OfficeOrderManagementDetailed';
+import CircularDistributionDetailed from './pages/CircularDistributionDetailed';
+import MeetingAgendaGeneratorDetailed from './pages/MeetingAgendaGeneratorDetailed';
+import MeetingAttendanceTrackerDetailed from './pages/MeetingAttendanceTrackerDetailed';
+import ActionTakenReportManagerDetailed from './pages/ActionTakenReportManagerDetailed';
+import FileMovementTrackerDetailed from './pages/FileMovementTrackerDetailed';
+import GovernmentLetterTrackingDetailed from './pages/GovernmentLetterTrackingDetailed';
+import RecordRetentionSchedulerDetailed from './pages/RecordRetentionSchedulerDetailed';
+import RTIAssistanceSystemDetailed from './pages/RTIAssistanceSystemDetailed';
+import OfficeProductivityDashboardDetailed from './pages/OfficeProductivityDashboardDetailed';
+import OfficeShiftCalendarDetailed from './pages/OfficeShiftCalendarDetailed';
+import HolidayDutyRotationDetailed from './pages/HolidayDutyRotationDetailed';
+import OfficialDiaryManagementDetailed from './pages/OfficialDiaryManagementDetailed';
+import DigitalAttendanceBoardDetailed from './pages/DigitalAttendanceBoardDetailed';
+import OfficeSeatingPlanDetailed from './pages/OfficeSeatingPlanDetailed';
+import DepartmentContactDirectoryDetailed from './pages/DepartmentContactDirectoryDetailed';
+import InternalTelephoneDirectoryDetailed from './pages/InternalTelephoneDirectoryDetailed';
+import OfficialNoticeAutomationDetailed from './pages/OfficialNoticeAutomationDetailed';
+import OfficeWorkflowDesignerDetailed from './pages/OfficeWorkflowDesignerDetailed';
+import OfficeProcessAutomationDetailed from './pages/OfficeProcessAutomationDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2422,7 +2442,26 @@ const AnimatedRoutes = () => {
         <Route path="/long-term-equipment-planning" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><LongTermEquipmentPlanningDetailed /></motion.div>} />
         <Route path="/police-innovation-index" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PoliceInnovationIndexDetailed /></motion.div>} />
         <Route path="/organizational-benchmarking" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><OrganizationalBenchmarkingDetailed /></motion.div>} />
-        <Route path="/strategic-review-repository" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><StrategicReviewRepositoryDetailed /></motion.div>} />
+        <Route path="/office-order-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><OfficeOrderManagementDetailed /></motion.div>} />
+        <Route path="/circular-distribution" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CircularDistributionDetailed /></motion.div>} />
+        <Route path="/meeting-agenda-generator" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><MeetingAgendaGeneratorDetailed /></motion.div>} />
+        <Route path="/meeting-attendance-tracker" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><MeetingAttendanceTrackerDetailed /></motion.div>} />
+        <Route path="/action-taken-report-manager" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ActionTakenReportManagerDetailed /></motion.div>} />
+        <Route path="/file-movement-tracker" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><FileMovementTrackerDetailed /></motion.div>} />
+        <Route path="/government-letter-tracking" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><GovernmentLetterTrackingDetailed /></motion.div>} />
+        <Route path="/record-retention-scheduler" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><RecordRetentionSchedulerDetailed /></motion.div>} />
+        <Route path="/rti-assistance-system" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><RTIAssistanceSystemDetailed /></motion.div>} />
+        <Route path="/office-productivity-dashboard" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><OfficeProductivityDashboardDetailed /></motion.div>} />
+        <Route path="/office-shift-calendar" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><OfficeShiftCalendarDetailed /></motion.div>} />
+        <Route path="/holiday-duty-rotation" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><HolidayDutyRotationDetailed /></motion.div>} />
+        <Route path="/official-diary-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><OfficialDiaryManagementDetailed /></motion.div>} />
+        <Route path="/digital-attendance-board" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><DigitalAttendanceBoardDetailed /></motion.div>} />
+        <Route path="/office-seating-plan" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><OfficeSeatingPlanDetailed /></motion.div>} />
+        <Route path="/department-contact-directory" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><DepartmentContactDirectoryDetailed /></motion.div>} />
+        <Route path="/internal-telephone-directory" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><InternalTelephoneDirectoryDetailed /></motion.div>} />
+        <Route path="/official-notice-automation" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><OfficialNoticeAutomationDetailed /></motion.div>} />
+        <Route path="/office-workflow-designer" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><OfficeWorkflowDesignerDetailed /></motion.div>} />
+        <Route path="/office-process-automation" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><OfficeProcessAutomationDetailed /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );

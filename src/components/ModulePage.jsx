@@ -342,6 +342,28 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 44: Police Administration
+                      'AI Office Order Management': '/office-order-management',
+                      'AI Circular Distribution System': '/circular-distribution',
+                      'AI Meeting Agenda Generator': '/meeting-agenda-generator',
+                      'AI Meeting Attendance Tracker': '/meeting-attendance-tracker',
+                      'AI Action Taken Report (ATR) Manager': '/action-taken-report-manager',
+                      'AI File Movement Tracker': '/file-movement-tracker',
+                      'AI Government Letter Tracking': '/government-letter-tracking',
+                      'AI Record Retention Scheduler': '/record-retention-scheduler',
+                      'AI RTI Assistance System': '/rti-assistance-system',
+                      'AI Office Productivity Dashboard': '/office-productivity-dashboard',
+                      // Module 88: Police Administration
+                      'AI Office Shift Calendar': '/office-shift-calendar',
+                      'AI Holiday Duty Rotation': '/holiday-duty-rotation',
+                      'AI Official Diary Management': '/official-diary-management',
+                      'AI Digital Attendance Board': '/digital-attendance-board',
+                      'AI Office Seating Plan': '/office-seating-plan',
+                      'AI Department Contact Directory': '/department-contact-directory',
+                      'AI Internal Telephone Directory': '/internal-telephone-directory',
+                      'AI Official Notice Automation': '/official-notice-automation',
+                      'AI Office Workflow Designer': '/office-workflow-designer',
+                      'AI Office Process Automation': '/office-process-automation',
                       // Module 81: Planning & Strategy
                       'AI Annual Policing Calendar': '/annual-policing-calendar',
                       'AI Resource Readiness Score': '/resource-readiness-score',
