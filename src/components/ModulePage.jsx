@@ -499,6 +499,18 @@ const ModulePage = () => {
                       'AI Cross-Agency Information Exchange': '/cross-agency-information-exchange', 'एआई क्रॉस-एजेंसी सूचना विनिमय': '/cross-agency-information-exchange',
                       'AI Intelligence Brief Generator': '/intelligence-brief-generator', 'एआई इंटेलिजेंस ब्रीफ जेनरेटर': '/intelligence-brief-generator',
 
+                      // Module 78: Internal Administration
+                      'AI Office Seating Allocation': '/office-seating-allocation', 'एआई कार्यालय बैठने की व्यवस्था (Seating Allocation)': '/office-seating-allocation',
+                      'AI Meeting Room Booking': '/meeting-room-booking', 'एआई बैठक कक्ष बुकिंग': '/meeting-room-booking',
+                      'AI Visitor Queue Management': '/visitor-queue-management', 'एआई आगंतुक कतार प्रबंधन': '/visitor-queue-management',
+                      'AI Digital Notice Board': '/digital-notice-board', 'एआई डिजिटल नोटिस बोर्ड': '/digital-notice-board',
+                      'AI Office Asset Reservation': '/office-asset-reservation', 'एआई कार्यालय संपत्ति (Asset) आरक्षण': '/office-asset-reservation',
+                      'AI Official Vehicle Booking': '/official-vehicle-booking', 'एआई आधिकारिक वाहन बुकिंग': '/official-vehicle-booking',
+                      'AI Conference Hall Scheduler': '/conference-hall-scheduler', 'एआई सम्मेलन कक्ष शेड्यूलर': '/conference-hall-scheduler',
+                      'AI Intercom Directory': '/intercom-directory', 'एआई इंटरकॉम निर्देशिका (Directory)': '/intercom-directory',
+                      'AI Office Consumables Tracking': '/office-consumables-tracking', 'एआई कार्यालय उपभोज्य (Consumables) ट्रैकिंग': '/office-consumables-tracking',
+                      'AI Stationery Distribution Management': '/stationery-distribution-management', 'एआई स्टेशनरी वितरण प्रबंधन': '/stationery-distribution-management',
+
                       // Module 26: Future Vision Modules
                       'AI Border Security': '/border-security',
                       'AI Prison Management': '/prison-management',

@@ -347,6 +347,16 @@ import GeographicIntelligenceDashboardDetailed from './pages/GeographicIntellige
 import IntelligenceKnowledgeBaseDetailed from './pages/IntelligenceKnowledgeBaseDetailed';
 import CrossAgencyInformationExchangeDetailed from './pages/CrossAgencyInformationExchangeDetailed';
 import IntelligenceBriefGeneratorDetailed from './pages/IntelligenceBriefGeneratorDetailed';
+import OfficeSeatingAllocationDetailed from './pages/OfficeSeatingAllocationDetailed';
+import MeetingRoomBookingDetailed from './pages/MeetingRoomBookingDetailed';
+import VisitorQueueManagementDetailed from './pages/VisitorQueueManagementDetailed';
+import DigitalNoticeBoardDetailed from './pages/DigitalNoticeBoardDetailed';
+import OfficeAssetReservationDetailed from './pages/OfficeAssetReservationDetailed';
+import OfficialVehicleBookingDetailed from './pages/OfficialVehicleBookingDetailed';
+import ConferenceHallSchedulerDetailed from './pages/ConferenceHallSchedulerDetailed';
+import IntercomDirectoryDetailed from './pages/IntercomDirectoryDetailed';
+import OfficeConsumablesTrackingDetailed from './pages/OfficeConsumablesTrackingDetailed';
+import StationeryDistributionManagementDetailed from './pages/StationeryDistributionManagementDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -1739,6 +1749,56 @@ const AnimatedRoutes = () => {
         <Route path="/intelligence-brief-generator" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
             <IntelligenceBriefGeneratorDetailed />
+          </motion.div>
+        } />
+        <Route path="/office-seating-allocation" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <OfficeSeatingAllocationDetailed />
+          </motion.div>
+        } />
+        <Route path="/meeting-room-booking" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <MeetingRoomBookingDetailed />
+          </motion.div>
+        } />
+        <Route path="/visitor-queue-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <VisitorQueueManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/digital-notice-board" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <DigitalNoticeBoardDetailed />
+          </motion.div>
+        } />
+        <Route path="/office-asset-reservation" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <OfficeAssetReservationDetailed />
+          </motion.div>
+        } />
+        <Route path="/official-vehicle-booking" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <OfficialVehicleBookingDetailed />
+          </motion.div>
+        } />
+        <Route path="/conference-hall-scheduler" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ConferenceHallSchedulerDetailed />
+          </motion.div>
+        } />
+        <Route path="/intercom-directory" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <IntercomDirectoryDetailed />
+          </motion.div>
+        } />
+        <Route path="/office-consumables-tracking" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <OfficeConsumablesTrackingDetailed />
+          </motion.div>
+        } />
+        <Route path="/stationery-distribution-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <StationeryDistributionManagementDetailed />
           </motion.div>
         } />
         <Route path="/business-compliance" element={
