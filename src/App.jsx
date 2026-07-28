@@ -420,6 +420,11 @@ import EmergencyManagementDetailed from './pages/EmergencyManagementDetailed';
 import VIPSecurityDetailed from './pages/VIPSecurityDetailed';
 import ElectionDutyManagementDetailed from './pages/ElectionDutyManagementDetailed';
 import FestivalSecurityDetailed from './pages/FestivalSecurityDetailed';
+import LegalAssistantDetailed from './pages/LegalAssistantDetailed';
+import CourtCaseTrackingDetailed from './pages/CourtCaseTrackingDetailed';
+import ProsecutionSupportDetailed from './pages/ProsecutionSupportDetailed';
+import LegalResearchDetailed from './pages/LegalResearchDetailed';
+import JudgmentAnalyticsDetailed from './pages/JudgmentAnalyticsDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2343,6 +2348,11 @@ const AnimatedRoutes = () => {
         <Route path="/vip-security" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><VIPSecurityDetailed /></motion.div>} />
         <Route path="/election-duty-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ElectionDutyManagementDetailed /></motion.div>} />
         <Route path="/festival-security" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><FestivalSecurityDetailed /></motion.div>} />
+        <Route path="/legal-assistant" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><LegalAssistantDetailed /></motion.div>} />
+        <Route path="/court-case-tracking" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CourtCaseTrackingDetailed /></motion.div>} />
+        <Route path="/prosecution-support" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ProsecutionSupportDetailed /></motion.div>} />
+        <Route path="/legal-research" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><LegalResearchDetailed /></motion.div>} />
+        <Route path="/judgment-analytics" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><JudgmentAnalyticsDetailed /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );

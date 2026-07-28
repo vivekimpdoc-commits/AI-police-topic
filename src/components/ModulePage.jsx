@@ -342,6 +342,12 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 19: Legal & Court
+                      'AI Legal Assistant': '/legal-assistant',
+                      'AI Court Case Tracking': '/court-case-tracking',
+                      'AI Prosecution Support': '/prosecution-support',
+                      'AI Legal Research': '/legal-research',
+                      'AI Judgment Analytics': '/judgment-analytics',
                       // Module 18: Law & Order
                       'AI Event Management': '/event-management',
                       'AI Crowd Management': '/crowd-management',
