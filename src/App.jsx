@@ -367,6 +367,16 @@ import IntegrityMonitoringDashboardDetailed from './pages/IntegrityMonitoringDas
 import InternalEthicsMonitoringDetailed from './pages/InternalEthicsMonitoringDetailed';
 import MisconductPatternAnalysisDetailed from './pages/MisconductPatternAnalysisDetailed';
 import InternalRiskRegisterDetailed from './pages/InternalRiskRegisterDetailed';
+import InterpolNoticeTrackerDetailed from './pages/InterpolNoticeTrackerDetailed';
+import InterstateCoordinationHubDetailed from './pages/InterstateCoordinationHubDetailed';
+import BorderCheckCoordinationDetailed from './pages/BorderCheckCoordinationDetailed';
+import EmbassyLiaisonTrackerDetailed from './pages/EmbassyLiaisonTrackerDetailed';
+import ForeignNationalCaseManagementDetailed from './pages/ForeignNationalCaseManagementDetailed';
+import InternationalRequestTrackingDetailed from './pages/InternationalRequestTrackingDetailed';
+import ImmigrationCoordinationSupportDetailed from './pages/ImmigrationCoordinationSupportDetailed';
+import CrossBorderIntelligenceExchangeDetailed from './pages/CrossBorderIntelligenceExchangeDetailed';
+import MutualLegalAssistanceTrackerDetailed from './pages/MutualLegalAssistanceTrackerDetailed';
+import GlobalCrimeTrendDashboardDetailed from './pages/GlobalCrimeTrendDashboardDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -1859,6 +1869,56 @@ const AnimatedRoutes = () => {
         <Route path="/internal-risk-register" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
             <InternalRiskRegisterDetailed />
+          </motion.div>
+        } />
+        <Route path="/interpol-notice-tracker" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <InterpolNoticeTrackerDetailed />
+          </motion.div>
+        } />
+        <Route path="/interstate-coordination-hub" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <InterstateCoordinationHubDetailed />
+          </motion.div>
+        } />
+        <Route path="/border-check-coordination" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <BorderCheckCoordinationDetailed />
+          </motion.div>
+        } />
+        <Route path="/embassy-liaison-tracker" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <EmbassyLiaisonTrackerDetailed />
+          </motion.div>
+        } />
+        <Route path="/foreign-national-case-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ForeignNationalCaseManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/international-request-tracking" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <InternationalRequestTrackingDetailed />
+          </motion.div>
+        } />
+        <Route path="/immigration-coordination-support" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ImmigrationCoordinationSupportDetailed />
+          </motion.div>
+        } />
+        <Route path="/cross-border-intelligence-exchange" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CrossBorderIntelligenceExchangeDetailed />
+          </motion.div>
+        } />
+        <Route path="/mutual-legal-assistance-tracker" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <MutualLegalAssistanceTrackerDetailed />
+          </motion.div>
+        } />
+        <Route path="/global-crime-trend-dashboard" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <GlobalCrimeTrendDashboardDetailed />
           </motion.div>
         } />
         <Route path="/business-compliance" element={

@@ -523,6 +523,18 @@ const ModulePage = () => {
                       'AI Misconduct Pattern Analysis': '/misconduct-pattern-analysis', 'एआई कदाचार पैटर्न विश्लेषण': '/misconduct-pattern-analysis',
                       'AI Internal Risk Register': '/internal-risk-register', 'एआई आंतरिक जोखिम रजिस्टर': '/internal-risk-register',
 
+                      // Module 46: International & Coordination
+                      'AI Interpol Notice Tracker': '/interpol-notice-tracker', 'एआई इंटरपोल नोटिस ट्रैकर': '/interpol-notice-tracker',
+                      'AI Interstate Coordination Hub': '/interstate-coordination-hub', 'एआई अंतरराज्यीय समन्वय हब': '/interstate-coordination-hub',
+                      'AI Border Check Coordination': '/border-check-coordination', 'एआई सीमा जांच समन्वय': '/border-check-coordination',
+                      'AI Embassy Liaison Tracker': '/embassy-liaison-tracker', 'एआई दूतावास संपर्क ट्रैकर': '/embassy-liaison-tracker',
+                      'AI Foreign National Case Management': '/foreign-national-case-management', 'एआई विदेशी राष्ट्रीय केस प्रबंधन': '/foreign-national-case-management',
+                      'AI International Request Tracking': '/international-request-tracking', 'एआई अंतर्राष्ट्रीय अनुरोध ट्रैकिंग': '/international-request-tracking',
+                      'AI Immigration Coordination Support': '/immigration-coordination-support', 'एआई आप्रवासन समन्वय सहायता': '/immigration-coordination-support',
+                      'AI Cross-Border Intelligence Exchange': '/cross-border-intelligence-exchange', 'एआई सीमा पार इंटेलिजेंस विनिमय': '/cross-border-intelligence-exchange',
+                      'AI Mutual Legal Assistance Tracker': '/mutual-legal-assistance-tracker', 'एआई पारस्परिक कानूनी सहायता ट्रैकर': '/mutual-legal-assistance-tracker',
+                      'AI Global Crime Trend Dashboard': '/global-crime-trend-dashboard', 'एआई वैश्विक अपराध प्रवृत्ति डैशबोर्ड': '/global-crime-trend-dashboard',
+
                       // Module 26: Future Vision Modules
                       'AI Border Security': '/border-security',
                       'AI Prison Management': '/prison-management',
