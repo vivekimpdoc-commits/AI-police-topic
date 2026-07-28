@@ -530,6 +530,16 @@ import HeadquartersVisitorPassDetailed from './pages/HeadquartersVisitorPassDeta
 import HeadquartersMeetingSchedulerDetailed from './pages/HeadquartersMeetingSchedulerDetailed';
 import HeadquartersApprovalWorkflowDetailed from './pages/HeadquartersApprovalWorkflowDetailed';
 import HeadquartersCircularMonitoringDetailed from './pages/HeadquartersCircularMonitoringDetailed';
+import VIPLoungeManagementDetailed from './pages/VIPLoungeManagementDetailed';
+import ConferenceHospitalityPlannerDetailed from './pages/ConferenceHospitalityPlannerDetailed';
+import GuestRefreshmentInventoryDetailed from './pages/GuestRefreshmentInventoryDetailed';
+import OfficialCateringCoordinationDetailed from './pages/OfficialCateringCoordinationDetailed';
+import GovernmentGuestReceptionDetailed from './pages/GovernmentGuestReceptionDetailed';
+import AccommodationPreparationChecklistDetailed from './pages/AccommodationPreparationChecklistDetailed';
+import ProtocolDiningPlannerDetailed from './pages/ProtocolDiningPlannerDetailed';
+import KitchenHygieneAuditDetailed from './pages/KitchenHygieneAuditDetailed';
+import FoodSafetyComplianceDetailed from './pages/FoodSafetyComplianceDetailed';
+import HospitalityFeedbackDashboardDetailed from './pages/HospitalityFeedbackDashboardDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2562,6 +2572,16 @@ const AnimatedRoutes = () => {
         <Route path="/headquarters-meeting-scheduler" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><HeadquartersMeetingSchedulerDetailed /></motion.div>} />
         <Route path="/headquarters-approval-workflow" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><HeadquartersApprovalWorkflowDetailed /></motion.div>} />
         <Route path="/headquarters-circular-monitoring" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><HeadquartersCircularMonitoringDetailed /></motion.div>} />
+        <Route path="/vip-lounge-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><VIPLoungeManagementDetailed /></motion.div>} />
+        <Route path="/conference-hospitality-planner" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ConferenceHospitalityPlannerDetailed /></motion.div>} />
+        <Route path="/guest-refreshment-inventory" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><GuestRefreshmentInventoryDetailed /></motion.div>} />
+        <Route path="/official-catering-coordination" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><OfficialCateringCoordinationDetailed /></motion.div>} />
+        <Route path="/government-guest-reception" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><GovernmentGuestReceptionDetailed /></motion.div>} />
+        <Route path="/accommodation-preparation-checklist" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><AccommodationPreparationChecklistDetailed /></motion.div>} />
+        <Route path="/protocol-dining-planner" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ProtocolDiningPlannerDetailed /></motion.div>} />
+        <Route path="/kitchen-hygiene-audit" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><KitchenHygieneAuditDetailed /></motion.div>} />
+        <Route path="/food-safety-compliance" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><FoodSafetyComplianceDetailed /></motion.div>} />
+        <Route path="/hospitality-feedback-dashboard" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><HospitalityFeedbackDashboardDetailed /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );

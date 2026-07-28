@@ -342,6 +342,17 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 97: Police Hospitality
+                      'AI VIP Lounge Management': '/vip-lounge-management',
+                      'AI Conference Hospitality Planner': '/conference-hospitality-planner',
+                      'AI Guest Refreshment Inventory': '/guest-refreshment-inventory',
+                      'AI Official Catering Coordination': '/official-catering-coordination',
+                      'AI Government Guest Reception': '/government-guest-reception',
+                      'AI Accommodation Preparation Checklist': '/accommodation-preparation-checklist',
+                      'AI Protocol Dining Planner': '/protocol-dining-planner',
+                      'AI Kitchen Hygiene Audit': '/kitchen-hygiene-audit',
+                      'AI Food Safety Compliance': '/food-safety-compliance',
+                      'AI Hospitality Feedback Dashboard': '/hospitality-feedback-dashboard',
                       // Module 48: Police Headquarters Management
                       'AI DGP Secretariat Management': '/dgp-secretariat-management',
                       'AI ADG Office Management': '/adg-office-management',
