@@ -580,6 +580,16 @@ import StartupPartnershipRegisterDetailed from './pages/StartupPartnershipRegist
 import SandboxEnvironmentManagerDetailed from './pages/SandboxEnvironmentManagerDetailed';
 import ExperimentalPolicyRegisterDetailed from './pages/ExperimentalPolicyRegisterDetailed';
 import InnovationAdoptionAnalyticsDetailed from './pages/InnovationAdoptionAnalyticsDetailed';
+import AnnualInspectionPlannerDetailed from './pages/AnnualInspectionPlannerDetailed';
+import SurpriseInspectionSystemDetailed from './pages/SurpriseInspectionSystemDetailed';
+import PoliceLineInspectionDetailed from './pages/PoliceLineInspectionDetailed';
+import StationCleanlinessAuditDetailed from './pages/StationCleanlinessAuditDetailed';
+import VehicleInspectionRegisterDetailed from './pages/VehicleInspectionRegisterDetailed';
+import EquipmentInspectionDetailed from './pages/EquipmentInspectionDetailed';
+import RecordInspectionDetailed from './pages/RecordInspectionDetailed';
+import InspectionDeficiencyTrackerDetailed from './pages/InspectionDeficiencyTrackerDetailed';
+import ComplianceVerificationDetailed from './pages/ComplianceVerificationDetailed';
+import InspectionScoringEngineDetailed from './pages/InspectionScoringEngineDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2662,6 +2672,16 @@ const AnimatedRoutes = () => {
         <Route path="/sandbox-environment-manager" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><SandboxEnvironmentManagerDetailed /></motion.div>} />
         <Route path="/experimental-policy-register" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ExperimentalPolicyRegisterDetailed /></motion.div>} />
         <Route path="/innovation-adoption-analytics" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><InnovationAdoptionAnalyticsDetailed /></motion.div>} />
+        <Route path="/annual-inspection-planner" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><AnnualInspectionPlannerDetailed /></motion.div>} />
+        <Route path="/surprise-inspection-system" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><SurpriseInspectionSystemDetailed /></motion.div>} />
+        <Route path="/police-line-inspection" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PoliceLineInspectionDetailed /></motion.div>} />
+        <Route path="/station-cleanliness-audit" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><StationCleanlinessAuditDetailed /></motion.div>} />
+        <Route path="/vehicle-inspection-register" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><VehicleInspectionRegisterDetailed /></motion.div>} />
+        <Route path="/equipment-inspection" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><EquipmentInspectionDetailed /></motion.div>} />
+        <Route path="/record-inspection" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><RecordInspectionDetailed /></motion.div>} />
+        <Route path="/inspection-deficiency-tracker" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><InspectionDeficiencyTrackerDetailed /></motion.div>} />
+        <Route path="/compliance-verification" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ComplianceVerificationDetailed /></motion.div>} />
+        <Route path="/inspection-scoring-engine" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><InspectionScoringEngineDetailed /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );

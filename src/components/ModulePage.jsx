@@ -342,6 +342,17 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 50: Police Inspection
+                      'AI Annual Inspection Planner': '/annual-inspection-planner',
+                      'AI Surprise Inspection System': '/surprise-inspection-system',
+                      'AI Police Line Inspection': '/police-line-inspection',
+                      'AI Station Cleanliness Audit': '/station-cleanliness-audit',
+                      'AI Vehicle Inspection Register': '/vehicle-inspection-register',
+                      'AI Equipment Inspection': '/equipment-inspection',
+                      'AI Record Inspection': '/record-inspection',
+                      'AI Inspection Deficiency Tracker': '/inspection-deficiency-tracker',
+                      'AI Compliance Verification': '/compliance-verification',
+                      'AI Inspection Scoring Engine': '/inspection-scoring-engine',
                       // Module 100: Police Innovation
                       'AI Idea Submission Portal': '/idea-submission-portal',
                       'AI Hackathon Management': '/hackathon-management',
