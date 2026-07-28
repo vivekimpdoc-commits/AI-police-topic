@@ -342,6 +342,17 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 94: Police Documentation
+                      'AI Government Order Repository': '/government-order-repository',
+                      'AI Circular Impact Analyzer': '/circular-impact-analyzer',
+                      'AI Standing Order Management': '/standing-order-management',
+                      'AI Office Note Sheet Assistant': '/office-note-sheet-assistant',
+                      'AI Dispatch Envelope Tracking': '/dispatch-envelope-tracking',
+                      'AI Gazette Notification Archive': '/gazette-notification-archive',
+                      'AI Record Classification Engine': '/record-classification-engine',
+                      'AI Legacy Record Conversion Tracker': '/legacy-record-conversion-tracker',
+                      'AI Microfilm Digitization Manager': '/microfilm-digitization-manager',
+                      'AI Official Record Authentication': '/official-record-authentication',
                       // Module 49: Police Correspondence
                       'AI Dak Management': '/dak-management',
                       'AI eOffice Integration': '/e-office-integration',

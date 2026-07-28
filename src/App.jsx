@@ -500,6 +500,16 @@ import OfficeMemorandumManagementDetailed from './pages/OfficeMemorandumManageme
 import ReminderManagementDetailed from './pages/ReminderManagementDetailed';
 import PendingLetterDashboardDetailed from './pages/PendingLetterDashboardDetailed';
 import CorrespondenceAnalyticsDetailed from './pages/CorrespondenceAnalyticsDetailed';
+import GovernmentOrderRepositoryDetailed from './pages/GovernmentOrderRepositoryDetailed';
+import CircularImpactAnalyzerDetailed from './pages/CircularImpactAnalyzerDetailed';
+import StandingOrderManagementDetailed from './pages/StandingOrderManagementDetailed';
+import OfficeNoteSheetAssistantDetailed from './pages/OfficeNoteSheetAssistantDetailed';
+import DispatchEnvelopeTrackingDetailed from './pages/DispatchEnvelopeTrackingDetailed';
+import GazetteNotificationArchiveDetailed from './pages/GazetteNotificationArchiveDetailed';
+import RecordClassificationEngineDetailed from './pages/RecordClassificationEngineDetailed';
+import LegacyRecordConversionTrackerDetailed from './pages/LegacyRecordConversionTrackerDetailed';
+import MicrofilmDigitizationManagerDetailed from './pages/MicrofilmDigitizationManagerDetailed';
+import OfficialRecordAuthenticationDetailed from './pages/OfficialRecordAuthenticationDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2502,6 +2512,16 @@ const AnimatedRoutes = () => {
         <Route path="/reminder-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ReminderManagementDetailed /></motion.div>} />
         <Route path="/pending-letter-dashboard" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PendingLetterDashboardDetailed /></motion.div>} />
         <Route path="/correspondence-analytics" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CorrespondenceAnalyticsDetailed /></motion.div>} />
+        <Route path="/government-order-repository" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><GovernmentOrderRepositoryDetailed /></motion.div>} />
+        <Route path="/circular-impact-analyzer" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CircularImpactAnalyzerDetailed /></motion.div>} />
+        <Route path="/standing-order-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><StandingOrderManagementDetailed /></motion.div>} />
+        <Route path="/office-note-sheet-assistant" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><OfficeNoteSheetAssistantDetailed /></motion.div>} />
+        <Route path="/dispatch-envelope-tracking" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><DispatchEnvelopeTrackingDetailed /></motion.div>} />
+        <Route path="/gazette-notification-archive" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><GazetteNotificationArchiveDetailed /></motion.div>} />
+        <Route path="/record-classification-engine" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><RecordClassificationEngineDetailed /></motion.div>} />
+        <Route path="/legacy-record-conversion-tracker" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><LegacyRecordConversionTrackerDetailed /></motion.div>} />
+        <Route path="/microfilm-digitization-manager" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><MicrofilmDigitizationManagerDetailed /></motion.div>} />
+        <Route path="/official-record-authentication" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><OfficialRecordAuthenticationDetailed /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );
