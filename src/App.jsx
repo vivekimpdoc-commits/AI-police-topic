@@ -377,6 +377,16 @@ import ImmigrationCoordinationSupportDetailed from './pages/ImmigrationCoordinat
 import CrossBorderIntelligenceExchangeDetailed from './pages/CrossBorderIntelligenceExchangeDetailed';
 import MutualLegalAssistanceTrackerDetailed from './pages/MutualLegalAssistanceTrackerDetailed';
 import GlobalCrimeTrendDashboardDetailed from './pages/GlobalCrimeTrendDashboardDetailed';
+import InternationalTrainingCoordinationDetailed from './pages/InternationalTrainingCoordinationDetailed';
+import ForeignStudyVisitManagementDetailed from './pages/ForeignStudyVisitManagementDetailed';
+import PoliceExchangeProgramDetailed from './pages/PoliceExchangeProgramDetailed';
+import InternationalConferenceManagementDetailed from './pages/InternationalConferenceManagementDetailed';
+import GlobalBestPracticesLibraryDetailed from './pages/GlobalBestPracticesLibraryDetailed';
+import UNPolicingStandardsRepositoryDetailed from './pages/UNPolicingStandardsRepositoryDetailed';
+import BilateralCooperationTrackerDetailed from './pages/BilateralCooperationTrackerDetailed';
+import InternationalDelegationVisitsDetailed from './pages/InternationalDelegationVisitsDetailed';
+import GlobalSecurityResearchHubDetailed from './pages/GlobalSecurityResearchHubDetailed';
+import PoliceDiplomacyDashboardDetailed from './pages/PoliceDiplomacyDashboardDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -1919,6 +1929,56 @@ const AnimatedRoutes = () => {
         <Route path="/global-crime-trend-dashboard" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
             <GlobalCrimeTrendDashboardDetailed />
+          </motion.div>
+        } />
+        <Route path="/international-training-coordination" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <InternationalTrainingCoordinationDetailed />
+          </motion.div>
+        } />
+        <Route path="/foreign-study-visit-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <ForeignStudyVisitManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/police-exchange-program" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PoliceExchangeProgramDetailed />
+          </motion.div>
+        } />
+        <Route path="/international-conference-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <InternationalConferenceManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/global-best-practices-library" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <GlobalBestPracticesLibraryDetailed />
+          </motion.div>
+        } />
+        <Route path="/un-policing-standards-repository" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <UNPolicingStandardsRepositoryDetailed />
+          </motion.div>
+        } />
+        <Route path="/bilateral-cooperation-tracker" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <BilateralCooperationTrackerDetailed />
+          </motion.div>
+        } />
+        <Route path="/international-delegation-visits" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <InternationalDelegationVisitsDetailed />
+          </motion.div>
+        } />
+        <Route path="/global-security-research-hub" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <GlobalSecurityResearchHubDetailed />
+          </motion.div>
+        } />
+        <Route path="/police-diplomacy-dashboard" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PoliceDiplomacyDashboardDetailed />
           </motion.div>
         } />
         <Route path="/business-compliance" element={

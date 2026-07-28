@@ -535,6 +535,18 @@ const ModulePage = () => {
                       'AI Mutual Legal Assistance Tracker': '/mutual-legal-assistance-tracker', 'एआई पारस्परिक कानूनी सहायता ट्रैकर': '/mutual-legal-assistance-tracker',
                       'AI Global Crime Trend Dashboard': '/global-crime-trend-dashboard', 'एआई वैश्विक अपराध प्रवृत्ति डैशबोर्ड': '/global-crime-trend-dashboard',
 
+                      // Module 82: International & External Relations
+                      'AI International Training Coordination': '/international-training-coordination', 'एआई अंतर्राष्ट्रीय प्रशिक्षण समन्वय': '/international-training-coordination',
+                      'AI Foreign Study Visit Management': '/foreign-study-visit-management', 'एआई विदेशी अध्ययन यात्रा प्रबंधन': '/foreign-study-visit-management',
+                      'AI Police Exchange Program': '/police-exchange-program', 'एआई पुलिस विनिमय (Exchange) कार्यक्रम': '/police-exchange-program',
+                      'AI International Conference Management': '/international-conference-management', 'एआई अंतर्राष्ट्रीय सम्मेलन प्रबंधन': '/international-conference-management',
+                      'AI Global Best Practices Library': '/global-best-practices-library', 'एआई वैश्विक सर्वोत्तम अभ्यास (Best Practices) लाइब्रेरी': '/global-best-practices-library',
+                      'AI UN Policing Standards Repository': '/un-policing-standards-repository', 'एआई संयुक्त राष्ट्र (UN) पुलिसिंग मानक रिपॉजिटरी': '/un-policing-standards-repository',
+                      'AI Bilateral Cooperation Tracker': '/bilateral-cooperation-tracker', 'एआई द्विपक्षीय सहयोग ट्रैकर': '/bilateral-cooperation-tracker',
+                      'AI International Delegation Visits': '/international-delegation-visits', 'एआई अंतर्राष्ट्रीय प्रतिनिधिमंडल (Delegation) यात्राएं': '/international-delegation-visits',
+                      'AI Global Security Research Hub': '/global-security-research-hub', 'एआई वैश्विक सुरक्षा अनुसंधान हब': '/global-security-research-hub',
+                      'AI Police Diplomacy Dashboard': '/police-diplomacy-dashboard', 'एआई पुलिस कूटनीति (Diplomacy) डैशबोर्ड': '/police-diplomacy-dashboard',
+
                       // Module 26: Future Vision Modules
                       'AI Border Security': '/border-security',
                       'AI Prison Management': '/prison-management',
