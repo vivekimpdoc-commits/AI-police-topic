@@ -480,6 +480,16 @@ import InternalTelephoneDirectoryDetailed from './pages/InternalTelephoneDirecto
 import OfficialNoticeAutomationDetailed from './pages/OfficialNoticeAutomationDetailed';
 import OfficeWorkflowDesignerDetailed from './pages/OfficeWorkflowDesignerDetailed';
 import OfficeProcessAutomationDetailed from './pages/OfficeProcessAutomationDetailed';
+import BuildingStructuralInspectionDetailed from './pages/BuildingStructuralInspectionDetailed';
+import RoofMaintenancePlannerDetailed from './pages/RoofMaintenancePlannerDetailed';
+import WaterTankCleaningScheduleDetailed from './pages/WaterTankCleaningScheduleDetailed';
+import LiftMaintenanceMonitorDetailed from './pages/LiftMaintenanceMonitorDetailed';
+import AirConditionerMaintenanceDetailed from './pages/AirConditionerMaintenanceDetailed';
+import CCTVPoleMaintenanceDetailed from './pages/CCTVPoleMaintenanceDetailed';
+import BoundaryWallInspectionDetailed from './pages/BoundaryWallInspectionDetailed';
+import ElectricalSafetyInspectionDetailed from './pages/ElectricalSafetyInspectionDetailed';
+import DrainageInspectionDetailed from './pages/DrainageInspectionDetailed';
+import SolarPowerMonitoringDetailed from './pages/SolarPowerMonitoringDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2462,6 +2472,16 @@ const AnimatedRoutes = () => {
         <Route path="/official-notice-automation" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><OfficialNoticeAutomationDetailed /></motion.div>} />
         <Route path="/office-workflow-designer" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><OfficeWorkflowDesignerDetailed /></motion.div>} />
         <Route path="/office-process-automation" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><OfficeProcessAutomationDetailed /></motion.div>} />
+        <Route path="/building-structural-inspection" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><BuildingStructuralInspectionDetailed /></motion.div>} />
+        <Route path="/roof-maintenance-planner" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><RoofMaintenancePlannerDetailed /></motion.div>} />
+        <Route path="/water-tank-cleaning-schedule" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><WaterTankCleaningScheduleDetailed /></motion.div>} />
+        <Route path="/lift-maintenance-monitor" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><LiftMaintenanceMonitorDetailed /></motion.div>} />
+        <Route path="/air-conditioner-maintenance" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><AirConditionerMaintenanceDetailed /></motion.div>} />
+        <Route path="/cctv-pole-maintenance" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CCTVPoleMaintenanceDetailed /></motion.div>} />
+        <Route path="/boundary-wall-inspection" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><BoundaryWallInspectionDetailed /></motion.div>} />
+        <Route path="/electrical-safety-inspection" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ElectricalSafetyInspectionDetailed /></motion.div>} />
+        <Route path="/drainage-inspection" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><DrainageInspectionDetailed /></motion.div>} />
+        <Route path="/solar-power-monitoring" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><SolarPowerMonitoringDetailed /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );

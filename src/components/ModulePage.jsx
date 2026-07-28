@@ -342,6 +342,17 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 84: Police Buildings
+                      'AI Building Structural Inspection': '/building-structural-inspection',
+                      'AI Roof Maintenance Planner': '/roof-maintenance-planner',
+                      'AI Water Tank Cleaning Schedule': '/water-tank-cleaning-schedule',
+                      'AI Lift Maintenance Monitor': '/lift-maintenance-monitor',
+                      'AI Air Conditioner Maintenance': '/air-conditioner-maintenance',
+                      'AI CCTV Pole Maintenance': '/cctv-pole-maintenance',
+                      'AI Boundary Wall Inspection': '/boundary-wall-inspection',
+                      'AI Electrical Safety Inspection': '/electrical-safety-inspection',
+                      'AI Drainage Inspection': '/drainage-inspection',
+                      'AI Solar Power Monitoring': '/solar-power-monitoring',
                       // Module 44: Police Administration
                       'AI Office Order Management': '/office-order-management',
                       'AI Circular Distribution System': '/circular-distribution',
