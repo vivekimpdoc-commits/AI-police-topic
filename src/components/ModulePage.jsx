@@ -342,6 +342,17 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 95: Police Infrastructure Engineering
+                      'AI Building Structural Health Index': '/building-structural-health-index',
+                      'AI Earthquake Safety Inspection': '/earthquake-safety-inspection',
+                      'AI Fire Exit Readiness Monitor': '/fire-exit-readiness-monitor',
+                      'AI Rain Leakage Monitoring': '/rain-leakage-monitoring',
+                      'AI Building Renovation Planner': '/building-renovation-planner',
+                      'AI Smart Water Meter Dashboard': '/smart-water-meter-dashboard',
+                      'AI Energy Efficiency Audit': '/energy-efficiency-audit',
+                      'AI HVAC Performance Monitoring': '/hvac-performance-monitoring',
+                      'AI Generator Fuel Consumption Analytics': '/generator-fuel-consumption-analytics',
+                      'AI Lift Breakdown Prediction': '/lift-breakdown-prediction',
                       // Module 37: Police Infrastructure
                       'AI Police Building Maintenance': '/police-building-maintenance',
                       'AI Police Barrack Management': '/police-barrack-management',
