@@ -540,6 +540,16 @@ import ProtocolDiningPlannerDetailed from './pages/ProtocolDiningPlannerDetailed
 import KitchenHygieneAuditDetailed from './pages/KitchenHygieneAuditDetailed';
 import FoodSafetyComplianceDetailed from './pages/FoodSafetyComplianceDetailed';
 import HospitalityFeedbackDashboardDetailed from './pages/HospitalityFeedbackDashboardDetailed';
+import PoliceIdentityLifecycleManagementDetailed from './pages/PoliceIdentityLifecycleManagementDetailed';
+import SmartAccessPassManagementDetailed from './pages/SmartAccessPassManagementDetailed';
+import BiometricDeviceAdministrationDetailed from './pages/BiometricDeviceAdministrationDetailed';
+import OfficerDigitalIdentityWalletDetailed from './pages/OfficerDigitalIdentityWalletDetailed';
+import SecureVisitorIdentityExchangeDetailed from './pages/SecureVisitorIdentityExchangeDetailed';
+import TemporaryDutyPassGeneratorDetailed from './pages/TemporaryDutyPassGeneratorDetailed';
+import LostIDCardRecoveryWorkflowDetailed from './pages/LostIDCardRecoveryWorkflowDetailed';
+import MultiFactorAccessComplianceDetailed from './pages/MultiFactorAccessComplianceDetailed';
+import AccessPrivilegeReviewSystemDetailed from './pages/AccessPrivilegeReviewSystemDetailed';
+import IdentityRevocationManagerDetailed from './pages/IdentityRevocationManagerDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2582,6 +2592,16 @@ const AnimatedRoutes = () => {
         <Route path="/kitchen-hygiene-audit" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><KitchenHygieneAuditDetailed /></motion.div>} />
         <Route path="/food-safety-compliance" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><FoodSafetyComplianceDetailed /></motion.div>} />
         <Route path="/hospitality-feedback-dashboard" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><HospitalityFeedbackDashboardDetailed /></motion.div>} />
+        <Route path="/police-identity-lifecycle-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PoliceIdentityLifecycleManagementDetailed /></motion.div>} />
+        <Route path="/smart-access-pass-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><SmartAccessPassManagementDetailed /></motion.div>} />
+        <Route path="/biometric-device-administration" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><BiometricDeviceAdministrationDetailed /></motion.div>} />
+        <Route path="/officer-digital-identity-wallet" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><OfficerDigitalIdentityWalletDetailed /></motion.div>} />
+        <Route path="/secure-visitor-identity-exchange" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><SecureVisitorIdentityExchangeDetailed /></motion.div>} />
+        <Route path="/temporary-duty-pass-generator" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><TemporaryDutyPassGeneratorDetailed /></motion.div>} />
+        <Route path="/lost-id-card-recovery-workflow" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><LostIDCardRecoveryWorkflowDetailed /></motion.div>} />
+        <Route path="/multi-factor-access-compliance" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><MultiFactorAccessComplianceDetailed /></motion.div>} />
+        <Route path="/access-privilege-review-system" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><AccessPrivilegeReviewSystemDetailed /></motion.div>} />
+        <Route path="/identity-revocation-manager" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><IdentityRevocationManagerDetailed /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );

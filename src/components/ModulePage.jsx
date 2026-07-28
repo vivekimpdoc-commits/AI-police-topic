@@ -342,6 +342,17 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 102: Police Identification & Authentication
+                      'AI Police Identity Lifecycle Management': '/police-identity-lifecycle-management',
+                      'AI Smart Access Pass Management': '/smart-access-pass-management',
+                      'AI Biometric Device Administration': '/biometric-device-administration',
+                      'AI Officer Digital Identity Wallet': '/officer-digital-identity-wallet',
+                      'AI Secure Visitor Identity Exchange': '/secure-visitor-identity-exchange',
+                      'AI Temporary Duty Pass Generator': '/temporary-duty-pass-generator',
+                      'AI Lost ID Card Recovery Workflow': '/lost-id-card-recovery-workflow',
+                      'AI Multi-Factor Access Compliance': '/multi-factor-access-compliance',
+                      'AI Access Privilege Review System': '/access-privilege-review-system',
+                      'AI Identity Revocation Manager': '/identity-revocation-manager',
                       // Module 97: Police Hospitality
                       'AI VIP Lounge Management': '/vip-lounge-management',
                       'AI Conference Hospitality Planner': '/conference-hospitality-planner',
