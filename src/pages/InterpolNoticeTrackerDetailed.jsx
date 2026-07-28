@@ -246,7 +246,7 @@ const InterpolNoticeTrackerDetailed = () => {
           </motion.div>
           <div>
             <h1 className="cyber-title">AI INTERPOL NOTICE <span>TRACKER</span></h1>
-            <p className="cyber-subtitle">Deploying CAPF, State Police & Home Guards based on Booth Sensitivity</p>
+            <p className="cyber-subtitle">Detailed overview and advanced AI capabilities for this module.</p>
           </div>
         </div>
       </header>
