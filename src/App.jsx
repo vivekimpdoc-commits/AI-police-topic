@@ -337,6 +337,16 @@ import SmartCityIntegrationDetailed from './pages/SmartCityIntegrationDetailed';
 import DroneMonitoringDetailed from './pages/DroneMonitoringDetailed';
 import SatelliteIntelligenceDetailed from './pages/SatelliteIntelligenceDetailed';
 import GeoFencingDetailed from './pages/GeoFencingDetailed';
+import OSINTWorkspaceDetailed from './pages/OSINTWorkspaceDetailed';
+import AnonymousTipManagementDetailed from './pages/AnonymousTipManagementDetailed';
+import InformationCredibilityScoringDetailed from './pages/InformationCredibilityScoringDetailed';
+import IntelligenceTimelineBuilderDetailed from './pages/IntelligenceTimelineBuilderDetailed';
+import SubjectDossierGeneratorDetailed from './pages/SubjectDossierGeneratorDetailed';
+import EventCorrelationEngineDetailed from './pages/EventCorrelationEngineDetailed';
+import GeographicIntelligenceDashboardDetailed from './pages/GeographicIntelligenceDashboardDetailed';
+import IntelligenceKnowledgeBaseDetailed from './pages/IntelligenceKnowledgeBaseDetailed';
+import CrossAgencyInformationExchangeDetailed from './pages/CrossAgencyInformationExchangeDetailed';
+import IntelligenceBriefGeneratorDetailed from './pages/IntelligenceBriefGeneratorDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -1679,6 +1689,56 @@ const AnimatedRoutes = () => {
         <Route path="/geo-fencing" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
             <GeoFencingDetailed />
+          </motion.div>
+        } />
+        <Route path="/osint-workspace" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <OSINTWorkspaceDetailed />
+          </motion.div>
+        } />
+        <Route path="/anonymous-tip-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <AnonymousTipManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/information-credibility-scoring" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <InformationCredibilityScoringDetailed />
+          </motion.div>
+        } />
+        <Route path="/intelligence-timeline-builder" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <IntelligenceTimelineBuilderDetailed />
+          </motion.div>
+        } />
+        <Route path="/subject-dossier-generator" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <SubjectDossierGeneratorDetailed />
+          </motion.div>
+        } />
+        <Route path="/event-correlation-engine" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <EventCorrelationEngineDetailed />
+          </motion.div>
+        } />
+        <Route path="/geographic-intelligence-dashboard" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <GeographicIntelligenceDashboardDetailed />
+          </motion.div>
+        } />
+        <Route path="/intelligence-knowledge-base" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <IntelligenceKnowledgeBaseDetailed />
+          </motion.div>
+        } />
+        <Route path="/cross-agency-information-exchange" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <CrossAgencyInformationExchangeDetailed />
+          </motion.div>
+        } />
+        <Route path="/intelligence-brief-generator" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <IntelligenceBriefGeneratorDetailed />
           </motion.div>
         } />
         <Route path="/business-compliance" element={

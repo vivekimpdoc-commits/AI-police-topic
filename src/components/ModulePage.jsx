@@ -487,6 +487,18 @@ const ModulePage = () => {
                       'AI Satellite Intelligence': '/satellite-intelligence', 'एआई सैटेलाइट इंटेलिजेंस': '/satellite-intelligence',
                       'AI Geo-Fencing': '/geo-fencing', 'एआई जियो-फेंसिंग': '/geo-fencing',
 
+                      // Module 42: Intelligence Support
+                      'AI Open Source Intelligence (OSINT) Workspace': '/osint-workspace', 'एआई ओपन सोर्स इंटेलिजेंस (OSINT) वर्कस्पेस': '/osint-workspace',
+                      'AI Anonymous Tip Management': '/anonymous-tip-management', 'एआई अनाम (Anonymous) टिप प्रबंधन': '/anonymous-tip-management',
+                      'AI Information Credibility Scoring': '/information-credibility-scoring', 'एआई सूचना विश्वसनीयता स्कोरिंग': '/information-credibility-scoring',
+                      'AI Intelligence Timeline Builder': '/intelligence-timeline-builder', 'एआई इंटेलिजेंस टाइमलाइन बिल्डर': '/intelligence-timeline-builder',
+                      'AI Subject Dossier Generator': '/subject-dossier-generator', 'एआई सब्जेक्ट डोजियर (Dossier) जेनरेटर': '/subject-dossier-generator',
+                      'AI Event Correlation Engine': '/event-correlation-engine', 'एआई घटना सहसंबंध (Correlation) इंजन': '/event-correlation-engine',
+                      'AI Geographic Intelligence Dashboard': '/geographic-intelligence-dashboard', 'एआई भौगोलिक इंटेलिजेंस डैशबोर्ड': '/geographic-intelligence-dashboard',
+                      'AI Intelligence Knowledge Base': '/intelligence-knowledge-base', 'एआई इंटेलिजेंस नॉलेज बेस': '/intelligence-knowledge-base',
+                      'AI Cross-Agency Information Exchange': '/cross-agency-information-exchange', 'एआई क्रॉस-एजेंसी सूचना विनिमय': '/cross-agency-information-exchange',
+                      'AI Intelligence Brief Generator': '/intelligence-brief-generator', 'एआई इंटेलिजेंस ब्रीफ जेनरेटर': '/intelligence-brief-generator',
+
                       // Module 26: Future Vision Modules
                       'AI Border Security': '/border-security',
                       'AI Prison Management': '/prison-management',
