@@ -342,6 +342,18 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 42: Intelligence Support
+                      'AI OSINT Workspace': '/osint-workspace',
+                      'AI Anonymous Tip Management': '/anonymous-tip-management',
+                      'AI Information Credibility Scoring': '/information-credibility',
+                      'AI Intelligence Timeline Builder': '/intelligence-timeline',
+                      'AI Subject Dossier Generator': '/subject-dossier',
+                      'AI Event Correlation Engine': '/event-correlation',
+                      'AI Geographic Intelligence Dashboard': '/geographic-intelligence',
+                      'AI Intelligence Knowledge Base': '/intelligence-knowledge-base',
+                      'AI Cross-Agency Information Exchange': '/cross-agency-exchange',
+                      'AI Intelligence Brief Generator': '/intelligence-brief',
+
                       // Module 09: Investigation
                       'AI Investigation Assistant': '/investigation-assistant',
                       'AI Case Management': '/case-management',
