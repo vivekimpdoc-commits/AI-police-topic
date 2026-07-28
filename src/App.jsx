@@ -387,6 +387,16 @@ import BilateralCooperationTrackerDetailed from './pages/BilateralCooperationTra
 import InternationalDelegationVisitsDetailed from './pages/InternationalDelegationVisitsDetailed';
 import GlobalSecurityResearchHubDetailed from './pages/GlobalSecurityResearchHubDetailed';
 import PoliceDiplomacyDashboardDetailed from './pages/PoliceDiplomacyDashboardDetailed';
+import InvestigationAssistantDetailed from './pages/InvestigationAssistantDetailed';
+import CaseManagementDetailed from './pages/CaseManagementDetailed';
+import StatementAnalysisDetailed from './pages/StatementAnalysisDetailed';
+import EvidenceCorrelationDetailed from './pages/EvidenceCorrelationDetailed';
+import InvestigationTimelineDetailed from './pages/InvestigationTimelineDetailed';
+import ChargeSheetAssistantDetailed from './pages/ChargeSheetAssistantDetailed';
+import WitnessManagementDetailed from './pages/WitnessManagementDetailed';
+import SuspectAnalysisDetailed from './pages/SuspectAnalysisDetailed';
+import InvestigationDashboardDetailed from './pages/InvestigationDashboardDetailed';
+import ColdCaseAnalysisDetailed from './pages/ColdCaseAnalysisDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2267,6 +2277,16 @@ const AnimatedRoutes = () => {
         <Route path="/explosive-storage" element={<ExplosiveStorageDetailed />} />
         <Route path="/equipment-calibration" element={<EquipmentCalibrationDetailed />} />
         <Route path="/armoury-inspection" element={<ArmouryInspectionDetailed />} />
+        <Route path="/investigation-assistant" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><InvestigationAssistantDetailed /></motion.div>} />
+        <Route path="/case-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CaseManagementDetailed /></motion.div>} />
+        <Route path="/statement-analysis" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><StatementAnalysisDetailed /></motion.div>} />
+        <Route path="/evidence-correlation" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><EvidenceCorrelationDetailed /></motion.div>} />
+        <Route path="/investigation-timeline" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><InvestigationTimelineDetailed /></motion.div>} />
+        <Route path="/charge-sheet-assistant" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ChargeSheetAssistantDetailed /></motion.div>} />
+        <Route path="/witness-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><WitnessManagementDetailed /></motion.div>} />
+        <Route path="/suspect-analysis" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><SuspectAnalysisDetailed /></motion.div>} />
+        <Route path="/investigation-dashboard" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><InvestigationDashboardDetailed /></motion.div>} />
+        <Route path="/cold-case-analysis" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ColdCaseAnalysisDetailed /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );

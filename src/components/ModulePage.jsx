@@ -342,6 +342,18 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 09: Investigation
+                      'AI Investigation Assistant': '/investigation-assistant',
+                      'AI Case Management': '/case-management',
+                      'AI Statement Analysis': '/statement-analysis',
+                      'AI Evidence Correlation': '/evidence-correlation',
+                      'AI Investigation Timeline': '/investigation-timeline',
+                      'AI Charge Sheet Assistant': '/charge-sheet-assistant',
+                      'AI Witness Management': '/witness-management',
+                      'AI Suspect Analysis': '/suspect-analysis',
+                      'AI Investigation Dashboard': '/investigation-dashboard',
+                      'AI Cold Case Analysis': '/cold-case-analysis',
+                      
                       // Module 62: Border & Check Posts
                       'AI Highway Check Post Operations': '/border-check-post',
                       'AI State Border Check Management': '/state-border-check',
