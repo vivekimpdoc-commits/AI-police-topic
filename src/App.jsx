@@ -407,6 +407,11 @@ import ParliamentQuestionCoordinationDetailed from './pages/ParliamentQuestionCo
 import AssuranceMonitoringCellDetailed from './pages/AssuranceMonitoringCellDetailed';
 import GovernmentReferenceMonitoringDetailed from './pages/GovernmentReferenceMonitoringDetailed';
 import CabinetDecisionComplianceDetailed from './pages/CabinetDecisionComplianceDetailed';
+import KnowledgeHubDetailed from './pages/KnowledgeHubDetailed';
+import PoliceTrainingAcademyDetailed from './pages/PoliceTrainingAcademyDetailed';
+import SOPAssistantDetailed from './pages/SOPAssistantDetailed';
+import PolicyCircularSearchDetailed from './pages/PolicyCircularSearchDetailed';
+import ELearningPlatformDetailed from './pages/ELearningPlatformDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2317,6 +2322,11 @@ const AnimatedRoutes = () => {
         <Route path="/assurance-monitoring" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><AssuranceMonitoringCellDetailed /></motion.div>} />
         <Route path="/government-reference" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><GovernmentReferenceMonitoringDetailed /></motion.div>} />
         <Route path="/cabinet-decision-compliance" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CabinetDecisionComplianceDetailed /></motion.div>} />
+        <Route path="/knowledge-hub" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><KnowledgeHubDetailed /></motion.div>} />
+        <Route path="/police-training-academy" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PoliceTrainingAcademyDetailed /></motion.div>} />
+        <Route path="/sop-assistant" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><SOPAssistantDetailed /></motion.div>} />
+        <Route path="/policy-circular-search" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PolicyCircularSearchDetailed /></motion.div>} />
+        <Route path="/e-learning-platform" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ELearningPlatformDetailed /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );

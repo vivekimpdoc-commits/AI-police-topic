@@ -342,6 +342,12 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 20: Knowledge & Training
+                      'AI Knowledge Hub': '/knowledge-hub',
+                      'AI Police Training Academy': '/police-training-academy',
+                      'AI SOP Assistant': '/sop-assistant',
+                      'AI Policy & Circular Search': '/policy-circular-search',
+                      'AI e-Learning Platform': '/e-learning-platform',
                       // Module 106: Judicial & Administrative Coordination
                       'AI Commission of Inquiry Coordination': '/commission-of-inquiry',
                       'AI Magisterial Inquiry Workflow': '/magisterial-inquiry',
