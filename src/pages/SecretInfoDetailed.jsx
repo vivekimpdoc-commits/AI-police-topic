@@ -7,17 +7,123 @@ import {
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-"AI Secret Information Analysis AI Analyst", "Data Validator Bot", "Risk Scorer Engine", 
-    "Pattern Recognizer AI", "Link Analysis Bot", "Predictive Profiler"
+  "Confidential Document OCR Reader",
+  "Covert Audio Intercept Analyzer",
+  "Threat Keyword Extraction Engine",
+  "Sentiment/Urgency Classifier Bot",
+  "Information Silo Linker AI",
+  "Source-Agnostic Fact Correlator",
+  "Code-Word/Slang Decoder Bot",
+  "Information Verification Risk Scorer",
+  "Secret Info Command Dashboard",
+  "Voice-Command Info Query Bot",
+  "Automated Intel Summary Generator",
+  "Cross-Agency Secure Info Exchange Bot",
+  "Time-Critical Intel Dispatcher",
+  "Suspicious Data Leak Detector AI",
+  "Info Authenticity Filter Engine",
+  "Cryptographic Data Vault Manager",
+  "AI Evaluator for Intel Actionability",
+  "Audit/Intel View Log Generator",
+  "Data Privacy/Redaction Engine AI",
+  "National Security Agency Sync Bot",
+  "Field Operator Intel Push App",
+  "Cold Case Intel Resurfacing Engine",
+  "DGP Level Executive Briefing AI",
+  "Secure Multi-Party Computation Bot",
+  "Blockchain Immutable Intel Hash Registry",
+  "Anti-Leak Intel Access Shield AI",
+  "Mobile App for Secure Intel View",
+  "Geo-Tagged Intel Spatial Matcher",
+  "Multi-Lingual Intel Translation Bot",
+  "Historical Intel Validation Analyzer",
+  "Staff Intel Handling Trainer AI",
+  "Intel Ingestion API Health Monitor",
+  "Imminent Terror Threat Alert Bot",
+  "Organized Crime Intel Profiler",
+  "VIP Assassination Threat Classifier",
+  "AI Assisted Raid Plan Drafter",
+  "Intel Database Storage Forecaster",
+  "Secure Intel Dissemination Router",
+  "Integration with Defense Databases",
+  "Citizen Secure Upload Portal Analyzer",
+  "Extreme Threat Event Modeler",
+  "Disaster Intel Coordinator Bot",
+  "Intel Ops Budget Tracker AI",
+  "Custom Workflow for Intel Declassification",
+  "AI Driven Emerging Threat Predictor",
+  "Predictive Need for Surveillance",
+  "Custom Alert Trigger for Intel Commander",
+  "Info Grading Standardizer AI"
+];
+
+const borderModules = [
+  {
+    title: "Highway Patrol & Toll Sync",
+    icon: <Activity size={20} />,
+    items: ["Automated Toll Plaza Integration", "Highway Patrol GPS Routing", "Hit & Run Vehicle Tracking", "Speed Camera Sync"]
+  },
+  {
+    title: "Commercial & Goods Transit",
+    icon: <Truck size={20} />,
+    items: ["E-Waybill Verification API", "Overloading Detection", "Hazardous Material Tracking", "Livestock Smuggling Alerts"]
+  },
+  {
+    title: "State Border Security",
+    icon: <Shield size={20} />,
+    items: ["Interstate Criminal Alert Exchange", "Border Checkpoint Duty Roster", "Suspect Vehicle ANPR", "Drone Border Surveillance"]
+  },
+  {
+    title: "Dynamic Mobile Checkpoints",
+    icon: <Map size={20} />,
+    items: ["AI Nakabandi Point Suggestions", "Temporary Barricade Deployment Logs", "Search & Seizure Register", "Surprise Audit Trails"]
+  }
+];
+
+const aiFeatures = [
+  "AI Automatic Number Plate Recognition (ANPR) at Tolls", "AI E-Waybill Forgery Detection", "AI Predictive Routing for Highway Patrols",
+  "AI Smuggling Pattern Recognition", "AI Facial Recognition for Wanted Criminals at Borders", "AI Optimal Placement of Mobile Checkpoints",
+  "AI Anomaly Detection in Commercial Freight Weights", "AI Real-time Translation for Interstate Drivers"
+];
+
+const databases = [
+  "Border_Transit_Logs", "Commercial_E_Waybills", "ANPR_Read_Archive", "Highway_Patrol_GPS", "Interstate_Alert_DB", 
+  "Seizure_Manifests", "Mobile_Checkpoint_History", "Toll_Plaza_Crossings"
+];
+
+const dashboards = [
+  "Live Border Crossing Radar", "Highway Patrol Density Map", "Commercial Transit Heatmap", 
+  "Interstate Alert Hits", "Mobile Checkpoint Efficacy", "Toll Plaza Choke Points"
+];
+
+const apis = [
+  "NHAI (FASTag) API Integration", "GSTN E-Waybill API", "Vahan/Sarathi (RTO) Database", "Inter-State Police Networks (CCTNS)",
+  "Weighbridge IoT Sensors", "Smart City Surveillance Grids"
+];
+
+const reports = [
+  "Daily Border Transit Volume", "Highway Smuggling Seizure Report", "Commercial Vehicle Compliance", 
+  "Interstate Alert Success Rate", "Mobile Checkpoint ROI", "Hit & Run Resolution Rate"
+];
+
+const security = [
+  "End-to-End Encryption for ANPR Feeds", "Strict RBAC for Interstate Alerts", "Tamper-proof Digital Seizure Logs", 
+  "Geofencing for Highway Patrol Vehicles", "Blockchain for Inter-State Evidence Transfer", 
+  "Zero-Trust API Gateways for FASTag", "Rate Limiting on Vehicle Queries", "Hardware Security Modules at Border Servers"
+];
+
+const futureScope = [
+  "Fully Autonomous Highway Patrol Drones", "X-Ray Scanning Gantries for Trucks", "AI Multi-lingual Voice Assistants for Checkposts",
+  "Predictive Cross-Border Terrorism Models", "Blockchain Verified Digital Driver Licenses", "V2X Integration for Pursuit Modes"
 ];
 
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
-  { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
-  { id: 'modules', label: 'Advanced Modules', icon: <LayoutDashboard size={18} /> },
+  { id: 'experts', label: 'Border Bots', icon: <Bot size={18} /> },
+  { id: 'modules', label: 'Check Post Modules', icon: <LayoutDashboard size={18} /> },
   { id: 'features', label: 'AI Capabilities', icon: <Cpu size={18} /> },
   { id: 'architecture', label: 'Tech Stack & DB', icon: <Database size={18} /> },
-  { id: 'reports', label: 'Dashboards', icon: <PieChart size={18} /> },
+  { id: 'reports', label: 'Border Dashboards', icon: <PieChart size={18} /> },
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
@@ -31,29 +137,29 @@ const SecretInfoDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <ShieldAlert className="inline-icon" size={28} /> AI Secret Information Analysis ENTERPRISE PLATFORM
+              <ShieldAlert className="inline-icon" size={28} /> AI State Border Check Management
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>AI Secret Information Analysis ENTERPRISE PLATFORM</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in .
+              <strong>State Border Check Management</strong> secures the state's perimeter. By integrating ANPR cameras, FASTag toll APIs, and E-Waybill systems, the AI creates an invisible net that catches escaping criminals, intercepts smuggled goods, and synchronizes data with neighboring states.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#3b82f6" /> Real-time Monitoring</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Continuous AI-driven surveillance and data collection ensuring immediate anomaly detection and rapid response protocols.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Map className="inline-icon" color="#3b82f6" /> Interstate Alert Sync</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>If a crime occurs in a neighboring state, the AI instantly syncs the suspect's vehicle plate across all border ANPR cameras, triggering automatic barricades if the vehicle attempts to cross.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Cpu className="inline-icon" color="#10b981" /> Predictive Analytics</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Utilizes machine learning to forecast trends, identify potential risks before they occur, and suggest optimized resource allocation.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Truck className="inline-icon" color="#10b981" /> Commercial Freight Scrutiny</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Automatically verifies GST E-Waybills against Vahan databases. AI detects mismatches in declared goods vs truck weight, flagging potential smuggling of liquor, arms, or narcotics.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#f59e0b" /> Seamless Integration</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Hooks into existing national and state-level databases, providing a unified, interoperable platform across all departments.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Activity className="inline-icon" color="#f59e0b" /> Toll Plaza Integration</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Hooks into the National FASTag network. If a stolen vehicle passes a toll booth, the Highway Patrol is instantly routed via GPS to intercept the vehicle further down the highway.</p>
               </div>
               <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Shield className="inline-icon" color="#ef4444" /> Automated Compliance</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Ensures all operations strictly adhere to legal and procedural guidelines, generating instant audit trails and compliance reports.</p>
+                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}><Network className="inline-icon" color="#ef4444" /> Dynamic Nakabandi</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Uses predictive crime data to suggest optimal locations for temporary, surprise check posts (Nakabandis), preventing criminals from bypassing known, static border stations.</p>
               </div>
             </div>
           </motion.div>
@@ -72,15 +178,10 @@ const SecretInfoDetailed = () => {
       case 'modules':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="module-accordion">
-            {[
-              { title: "Real-time Monitoring Module", items: ["Live Data Stream", "Alert Engine", "Geospatial Tracking"] },
-              { title: "Predictive Analytics Engine", items: ["Risk Forecasting", "Resource Optimization", "Pattern Recognition"] },
-              { title: "Automated Reporting System", items: ["Compliance Audits", "Daily Briefings", "Incident Logs"] },
-              { title: "Cloud Integration Hub", items: ["State DB Sync", "Third-party API Webhooks", "Encrypted Data Transfer"] }
-            ].map((mod, i) => (
+            {borderModules.map((mod, i) => (
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} key={i} className="premium-module-panel">
                 <div className="module-header">
-                  <LayoutDashboard size={20} color="#3b82f6" />
+                  {mod.icon}
                   <h3>{mod.title}</h3>
                 </div>
                 <div className="module-tags">
@@ -95,10 +196,7 @@ const SecretInfoDetailed = () => {
       case 'features':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid">
-            {[
-              "24/7 AI Processing", "Advanced Machine Learning Models", "Real-time Data Sync", 
-              "Automated Alerts & Notifications", "Cross-Platform Accessibility", "Role-Based Access Control"
-            ].map((feat, i) => (
+            {aiFeatures.map((feat, i) => (
               <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-purple">
                 <Cpu className="card-icon" />
                 <h4>{feat}</h4>
@@ -111,19 +209,15 @@ const SecretInfoDetailed = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
             <div className="split-section">
               <div className="panel">
-                <h3><Database className="inline-icon" color="#06b6d4" /> Database Integration</h3>
+                <h3><Database className="inline-icon" color="#06b6d4" /> Database Tables</h3>
                 <div className="tag-cloud">
-                  {["Primary_Transaction_DB", "Analytics_Data_Warehouse", "Audit_Logs_Archive", "User_Access_Registry", "System_Configuration_DB"].map((db, i) => (
-                    <span key={i} className="tech-tag">{db}</span>
-                  ))}
+                  {databases.map((db, i) => <span key={i} className="tech-tag">{db}</span>)}
                 </div>
               </div>
               <div className="panel">
                 <h3><Network className="inline-icon" color="#8b5cf6" /> System APIs</h3>
                 <div className="tag-cloud">
-                  {["RESTful Core API", "Real-time WebSocket Feed", "Third-party Webhooks", "Authentication Gateway", "Data Export API"].map((api, i) => (
-                    <span key={i} className="tech-tag tech-tag-alt">{api}</span>
-                  ))}
+                  {apis.map((api, i) => <span key={i} className="tech-tag tech-tag-alt">{api}</span>)}
                 </div>
               </div>
             </div>
@@ -136,17 +230,13 @@ const SecretInfoDetailed = () => {
               <div className="panel">
                 <h3><LayoutDashboard className="inline-icon" color="#3b82f6" /> Dashboards</h3>
                 <ul className="premium-list">
-                  {["Executive Overview Dashboard", "Live Operations Monitor", "Historical Trend Analysis", "System Health & Status"].map((d, i) => (
-                    <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>
-                  ))}
+                  {dashboards.map((d, i) => <li key={i}><CheckCircle size={16} color="#3b82f6"/> {d}</li>)}
                 </ul>
               </div>
               <div className="panel">
                 <h3><FileText className="inline-icon" color="#10b981" /> Generated Reports</h3>
                 <ul className="premium-list">
-                  {["Daily Summary Report", "Weekly Performance Analytics", "Monthly Compliance Audit", "System Exception Logs"].map((r, i) => (
-                    <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>
-                  ))}
+                  {reports.map((r, i) => <li key={i}><CheckCircle size={16} color="#10b981"/> {r}</li>)}
                 </ul>
               </div>
             </div>
@@ -159,21 +249,13 @@ const SecretInfoDetailed = () => {
               <div className="panel highlight-red">
                 <h3><ShieldAlert className="inline-icon" color="#ef4444" /> Security Protocols</h3>
                 <ul className="premium-list">
-                  {[
-                    "End-to-End Data Encryption (AES-256)", "Multi-Factor Authentication (MFA)", 
-                    "Strict Role-Based Access Control (RBAC)", "Tamper-proof Audit Trails", 
-                    "Automated Threat Detection", "Regular Security Penetration Testing"
-                  ].map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
+                  {security.map((s, i) => <li key={i}><Shield size={16} color="#ef4444"/> {s}</li>)}
                 </ul>
               </div>
               <div className="panel highlight-green">
                 <h3><Rocket className="inline-icon" color="#10b981" /> Future Enhancements</h3>
                 <ul className="premium-list">
-                  {[
-                    "Integration with Advanced LLMs", "Predictive Autonomous Actions", 
-                    "Enhanced Mobile Accessibility", "Cross-Agency Data Federation", 
-                    "Blockchain-based Immutability", "Next-Gen UI/UX Overhaul"
-                  ].map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
+                  {futureScope.map((f, i) => <li key={i}><Terminal size={16} color="#10b981"/> {f}</li>)}
                 </ul>
               </div>
             </div>
@@ -199,8 +281,8 @@ const SecretInfoDetailed = () => {
             <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
-            <h1 className="cyber-title">AI Secret Information Analysis <span>ENTERPRISE PLATFORM</span></h1>
-            <p className="cyber-subtitle"></p>
+            <h1 className="cyber-title">AI STATE BORDER <span>CHECK ANALYSIS</span></h1>
+            <p className="cyber-subtitle">Interstate Verification, Contraband & Security Sync</p>
           </div>
         </div>
       </header>
