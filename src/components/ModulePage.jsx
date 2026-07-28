@@ -342,6 +342,17 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 100: Police Innovation
+                      'AI Idea Submission Portal': '/idea-submission-portal',
+                      'AI Hackathon Management': '/hackathon-management',
+                      'AI Pilot Deployment Tracker': '/pilot-deployment-tracker',
+                      'AI Innovation Scorecard': '/innovation-scorecard',
+                      'AI Technology Watch Dashboard': '/technology-watch-dashboard',
+                      'AI Patent Monitoring': '/patent-monitoring',
+                      'AI Startup Partnership Register': '/startup-partnership-register',
+                      'AI Sandbox Environment Manager': '/sandbox-environment-manager',
+                      'AI Experimental Policy Register': '/experimental-policy-register',
+                      'AI Innovation Adoption Analytics': '/innovation-adoption-analytics',
                       // Module 95: Police Infrastructure Engineering
                       'AI Building Structural Health Index': '/building-structural-health-index',
                       'AI Earthquake Safety Inspection': '/earthquake-safety-inspection',

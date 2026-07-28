@@ -570,6 +570,16 @@ import EnergyEfficiencyAuditDetailed from './pages/EnergyEfficiencyAuditDetailed
 import HVACPerformanceMonitoringDetailed from './pages/HVACPerformanceMonitoringDetailed';
 import GeneratorFuelConsumptionAnalyticsDetailed from './pages/GeneratorFuelConsumptionAnalyticsDetailed';
 import LiftBreakdownPredictionDetailed from './pages/LiftBreakdownPredictionDetailed';
+import IdeaSubmissionPortalDetailed from './pages/IdeaSubmissionPortalDetailed';
+import HackathonManagementDetailed from './pages/HackathonManagementDetailed';
+import PilotDeploymentTrackerDetailed from './pages/PilotDeploymentTrackerDetailed';
+import InnovationScorecardDetailed from './pages/InnovationScorecardDetailed';
+import TechnologyWatchDashboardDetailed from './pages/TechnologyWatchDashboardDetailed';
+import PatentMonitoringDetailed from './pages/PatentMonitoringDetailed';
+import StartupPartnershipRegisterDetailed from './pages/StartupPartnershipRegisterDetailed';
+import SandboxEnvironmentManagerDetailed from './pages/SandboxEnvironmentManagerDetailed';
+import ExperimentalPolicyRegisterDetailed from './pages/ExperimentalPolicyRegisterDetailed';
+import InnovationAdoptionAnalyticsDetailed from './pages/InnovationAdoptionAnalyticsDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2642,6 +2652,16 @@ const AnimatedRoutes = () => {
         <Route path="/hvac-performance-monitoring" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><HVACPerformanceMonitoringDetailed /></motion.div>} />
         <Route path="/generator-fuel-consumption-analytics" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><GeneratorFuelConsumptionAnalyticsDetailed /></motion.div>} />
         <Route path="/lift-breakdown-prediction" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><LiftBreakdownPredictionDetailed /></motion.div>} />
+        <Route path="/idea-submission-portal" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><IdeaSubmissionPortalDetailed /></motion.div>} />
+        <Route path="/hackathon-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><HackathonManagementDetailed /></motion.div>} />
+        <Route path="/pilot-deployment-tracker" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PilotDeploymentTrackerDetailed /></motion.div>} />
+        <Route path="/innovation-scorecard" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><InnovationScorecardDetailed /></motion.div>} />
+        <Route path="/technology-watch-dashboard" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><TechnologyWatchDashboardDetailed /></motion.div>} />
+        <Route path="/patent-monitoring" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PatentMonitoringDetailed /></motion.div>} />
+        <Route path="/startup-partnership-register" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><StartupPartnershipRegisterDetailed /></motion.div>} />
+        <Route path="/sandbox-environment-manager" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><SandboxEnvironmentManagerDetailed /></motion.div>} />
+        <Route path="/experimental-policy-register" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ExperimentalPolicyRegisterDetailed /></motion.div>} />
+        <Route path="/innovation-adoption-analytics" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><InnovationAdoptionAnalyticsDetailed /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );
