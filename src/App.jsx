@@ -450,6 +450,16 @@ import FacialRecognitionDetailed from './pages/FacialRecognitionDetailed';
 import AgeProgressionDetailed from './pages/AgeProgressionDetailed';
 import UnknownPersonIdentificationDetailed from './pages/UnknownPersonIdentificationDetailed';
 import DeadBodyIdentificationDetailed from './pages/DeadBodyIdentificationDetailed';
+import AnnualPolicingCalendarDetailed from './pages/AnnualPolicingCalendarDetailed';
+import ResourceReadinessScoreDetailed from './pages/ResourceReadinessScoreDetailed';
+import DistrictPreparednessAuditDetailed from './pages/DistrictPreparednessAuditDetailed';
+import StrategicInitiativeTrackerDetailed from './pages/StrategicInitiativeTrackerDetailed';
+import MissionObjectiveDashboardDetailed from './pages/MissionObjectiveDashboardDetailed';
+import CapabilityGapAnalysisDetailed from './pages/CapabilityGapAnalysisDetailed';
+import LongTermEquipmentPlanningDetailed from './pages/LongTermEquipmentPlanningDetailed';
+import PoliceInnovationIndexDetailed from './pages/PoliceInnovationIndexDetailed';
+import OrganizationalBenchmarkingDetailed from './pages/OrganizationalBenchmarkingDetailed';
+import StrategicReviewRepositoryDetailed from './pages/StrategicReviewRepositoryDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2403,6 +2413,16 @@ const AnimatedRoutes = () => {
         <Route path="/age-progression" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><AgeProgressionDetailed /></motion.div>} />
         <Route path="/unknown-person-identification" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><UnknownPersonIdentificationDetailed /></motion.div>} />
         <Route path="/dead-body-identification" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><DeadBodyIdentificationDetailed /></motion.div>} />
+        <Route path="/annual-policing-calendar" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><AnnualPolicingCalendarDetailed /></motion.div>} />
+        <Route path="/resource-readiness-score" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ResourceReadinessScoreDetailed /></motion.div>} />
+        <Route path="/district-preparedness-audit" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><DistrictPreparednessAuditDetailed /></motion.div>} />
+        <Route path="/strategic-initiative-tracker" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><StrategicInitiativeTrackerDetailed /></motion.div>} />
+        <Route path="/mission-objective-dashboard" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><MissionObjectiveDashboardDetailed /></motion.div>} />
+        <Route path="/capability-gap-analysis" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CapabilityGapAnalysisDetailed /></motion.div>} />
+        <Route path="/long-term-equipment-planning" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><LongTermEquipmentPlanningDetailed /></motion.div>} />
+        <Route path="/police-innovation-index" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PoliceInnovationIndexDetailed /></motion.div>} />
+        <Route path="/organizational-benchmarking" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><OrganizationalBenchmarkingDetailed /></motion.div>} />
+        <Route path="/strategic-review-repository" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><StrategicReviewRepositoryDetailed /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );

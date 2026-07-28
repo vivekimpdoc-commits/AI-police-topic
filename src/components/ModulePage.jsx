@@ -342,6 +342,17 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 81: Planning & Strategy
+                      'AI Annual Policing Calendar': '/annual-policing-calendar',
+                      'AI Resource Readiness Score': '/resource-readiness-score',
+                      'AI District Preparedness Audit': '/district-preparedness-audit',
+                      'AI Strategic Initiative Tracker': '/strategic-initiative-tracker',
+                      'AI Mission Objective Dashboard': '/mission-objective-dashboard',
+                      'AI Capability Gap Analysis': '/capability-gap-analysis',
+                      'AI Long-Term Equipment Planning': '/long-term-equipment-planning',
+                      'AI Police Innovation Index': '/police-innovation-index',
+                      'AI Organizational Benchmarking': '/organizational-benchmarking',
+                      'AI Strategic Review Repository': '/strategic-review-repository',
                       // Module 15: Missing Persons & Identification
                       'AI Missing Person': '/missing-person',
                       'AI Facial Recognition': '/facial-recognition',
