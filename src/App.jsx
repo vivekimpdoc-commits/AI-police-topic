@@ -550,6 +550,16 @@ import LostIDCardRecoveryWorkflowDetailed from './pages/LostIDCardRecoveryWorkfl
 import MultiFactorAccessComplianceDetailed from './pages/MultiFactorAccessComplianceDetailed';
 import AccessPrivilegeReviewSystemDetailed from './pages/AccessPrivilegeReviewSystemDetailed';
 import IdentityRevocationManagerDetailed from './pages/IdentityRevocationManagerDetailed';
+import PoliceBuildingMaintenanceDetailed from './pages/PoliceBuildingMaintenanceDetailed';
+import PoliceBarrackManagementDetailed from './pages/PoliceBarrackManagementDetailed';
+import PoliceGuestHouseManagementDetailed from './pages/PoliceGuestHouseManagementDetailed';
+import PoliceCampusSecurityDetailed from './pages/PoliceCampusSecurityDetailed';
+import SmartPoliceHeadquartersDetailed from './pages/SmartPoliceHeadquartersDetailed';
+import PoliceStationEnergyMonitoringDetailed from './pages/PoliceStationEnergyMonitoringDetailed';
+import WaterSupplyMonitoringDetailed from './pages/WaterSupplyMonitoringDetailed';
+import ElectricalAssetMonitoringDetailed from './pages/ElectricalAssetMonitoringDetailed';
+import GeneratorMonitoringDetailed from './pages/GeneratorMonitoringDetailed';
+import FireSafetyComplianceDetailed from './pages/FireSafetyComplianceDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2602,6 +2612,16 @@ const AnimatedRoutes = () => {
         <Route path="/multi-factor-access-compliance" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><MultiFactorAccessComplianceDetailed /></motion.div>} />
         <Route path="/access-privilege-review-system" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><AccessPrivilegeReviewSystemDetailed /></motion.div>} />
         <Route path="/identity-revocation-manager" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><IdentityRevocationManagerDetailed /></motion.div>} />
+        <Route path="/police-building-maintenance" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PoliceBuildingMaintenanceDetailed /></motion.div>} />
+        <Route path="/police-barrack-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PoliceBarrackManagementDetailed /></motion.div>} />
+        <Route path="/police-guest-house-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PoliceGuestHouseManagementDetailed /></motion.div>} />
+        <Route path="/police-campus-security" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PoliceCampusSecurityDetailed /></motion.div>} />
+        <Route path="/smart-police-headquarters" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><SmartPoliceHeadquartersDetailed /></motion.div>} />
+        <Route path="/police-station-energy-monitoring" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PoliceStationEnergyMonitoringDetailed /></motion.div>} />
+        <Route path="/water-supply-monitoring" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><WaterSupplyMonitoringDetailed /></motion.div>} />
+        <Route path="/electrical-asset-monitoring" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ElectricalAssetMonitoringDetailed /></motion.div>} />
+        <Route path="/generator-monitoring" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><GeneratorMonitoringDetailed /></motion.div>} />
+        <Route path="/fire-safety-compliance" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><FireSafetyComplianceDetailed /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );

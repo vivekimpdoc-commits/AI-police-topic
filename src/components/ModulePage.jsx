@@ -342,6 +342,17 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 37: Police Infrastructure
+                      'AI Police Building Maintenance': '/police-building-maintenance',
+                      'AI Police Barrack Management': '/police-barrack-management',
+                      'AI Police Guest House Management': '/police-guest-house-management',
+                      'AI Police Campus Security': '/police-campus-security',
+                      'AI Smart Police Headquarters': '/smart-police-headquarters',
+                      'AI Police Station Energy Monitoring': '/police-station-energy-monitoring',
+                      'AI Water Supply Monitoring': '/water-supply-monitoring',
+                      'AI Electrical Asset Monitoring': '/electrical-asset-monitoring',
+                      'AI Generator Monitoring': '/generator-monitoring',
+                      'AI Fire Safety Compliance': '/fire-safety-compliance',
                       // Module 102: Police Identification & Authentication
                       'AI Police Identity Lifecycle Management': '/police-identity-lifecycle-management',
                       'AI Smart Access Pass Management': '/smart-access-pass-management',
