@@ -480,6 +480,18 @@ const ModulePage = () => {
                       'AI FSL Report Tracking': '/fsl-report-tracking',
                       'AI Evidence Integrity Monitoring': '/evidence-integrity-monitoring',
 
+                      // Module 26: Future Vision Modules
+                      'AI Border Security': '/border-security',
+                      'AI Prison Management': '/prison-management',
+                      'AI Anti-Terror Intelligence': '/anti-terror-intelligence',
+                      'AI Financial Crime Intelligence': '/financial-crime-intelligence',
+                      'AI Environmental Crime Monitoring': '/environmental-crime-monitoring',
+                      'AI Wildlife Crime Investigation': '/wildlife-crime-investigation',
+                      'AI Narcotics Intelligence': '/narcotics-intelligence',
+                      'AI Economic Offence Wing Assistant': '/economic-offence-wing-assistant',
+                      'AI Inter-State Coordination Platform': '/inter-state-coordination-platform',
+                      'AI International Cooperation Dashboard': '/international-cooperation-dashboard',
+
                       // Module 23: Communication
                       'AI Media Management': '/media-management',
                       'AI Press Note Generator': '/press-note-generator',

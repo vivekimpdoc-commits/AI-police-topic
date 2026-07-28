@@ -7,54 +7,54 @@ import {
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "Thermal Camera Intrusion Detection AI",
-  "Drone (UAV) Acoustic/Visual Identifier Bot",
-  "Cross-Border Tunneling Seismic Detector AI",
-  "Smuggling Route Prediction Algorithm Bot",
-  "Border Fence Cut/Tamper Alert Engine AI",
-  "Night Vision Human vs Animal Classifier",
-  "Language Translation Bot for Border Interrogation",
-  "Fake/Forged Passport Verifier Engine AI",
-  "Border Security Command Dashboard",
-  "Voice-Command Border Incident Query Bot",
-  "Automated Daily Border Situation Report Gen",
-  "Cross-Agency (BSF/Police) Intel Sync Engine",
-  "Infiltration Weather Condition Modeler AI",
-  "Suspicious Vehicle Cross-Border Tracker Bot",
-  "Riverine Border Boat Movement Analyzer AI",
-  "Gunfire Origin Direction Triangulator Bot",
-  "AI Evaluator for Border Vulnerability Score",
-  "Audit/Intrusion Incident Log Generator",
-  "Data Privacy/Border Source Identity Masker",
-  "Police-Central Intelligence Agency Sync",
-  "Border Outpost (BOP) Mobile App Intel Sync",
-  "Cold Case Smuggling Network Linker AI",
-  "Senior Officer (IG Border) Briefing Bot",
-  "Public Border Village Suspicious Activity App",
-  "Blockchain Immutable Cross-Border Arrest Log",
-  "Anti-Bribe/Collusion Surveillance AI at Checkpost",
-  "Mobile App for Patrol Geofence Sync",
-  "Terrain Analysis (Forest/Mountain) Covert Route AI",
-  "Multi-Lingual Smuggler Intercept Translator",
-  "Historical Infiltration Pattern Trend Analyzer",
-  "Staff Border Patrol Fatigue/Safety Monitor AI",
-  "CCTV/PTZ Camera Health Monitor Bot at Border",
-  "Urgent Terrorist Infiltration Priority Alert AI",
-  "Traffic Cross-Border Cargo Scanner Linker",
-  "Human Trafficking Network Profiler Engine AI",
-  "VIP/VVIP Border Visit Security Route AI",
-  "AI Assisted Post-Infiltration Route Analysis",
-  "Border Outpost Rations/Ammunition Forecaster",
-  "Geo-Spatial Satellite Imagery Intel Analyzer AI",
-  "Integration with MHA/Interpol Border Database",
-  "Citizen Border Village Distress Alert Bot",
-  "Extreme Weather (Fog/Snow) Patrol Blind-spot AI",
-  "Disaster/Refugee Mass-Influx Modeler AI",
-  "Border Security Budget/Resource Tracker AI",
-  "Custom Workflow/Approval for Drone Intercept",
-  "AI Driven Weapon Smuggling Risk Predictor",
-  "Predictive Need for Additional Force Deployment",
-  "Custom Alert Trigger for Border Commander"
+  "Drug Cartel/Syndicate Network Mapping Engine",
+  "Narcotics Supply Chain/Route Interdiction AI",
+  "Dark Web Drug Market/Crypto Payment Tracer",
+  "Synthetic Drug (Meth/Fentanyl) Lab Locator Bot",
+  "Pharmacy/Precursor Chemical Diversion Tracker",
+  "Street-Level Peddler/Addict Hotspot Modeler",
+  "Drug Consignment Concealment Method Profiler",
+  "Courier/Postal Drug Package Anomaly Alert AI",
+  "Narcotics Intelligence Command Dashboard",
+  "Voice-Command Drug Intel Query Bot",
+  "Automated NCB/NDPS Case Report Generator",
+  "Cross-Agency (ANC/NCB/Customs) Intel Sync Engine",
+  "Social Media/Code-Word Drug Sale Flagging Bot",
+  "Rehab Center Admission vs Street Availability Correlator",
+  "Financial/Hawala Trail of Drug Kingpin Analyzer",
+  "Cannabis Cultivation Satellite Imagery Detector",
+  "AI Evaluator for Area Drug Proliferation Index",
+  "Audit/Seized Contraband Log Auto-Generator",
+  "Data Privacy/Undercover Informant Masker AI",
+  "Police-Narcotics Control Bureau Joint Sync Bot",
+  "Undercover Officer Covert Intel Mobile App",
+  "Cold Case Drug Seizure Signature/Stamp Matcher",
+  "Senior Officer (Anti-Narcotics Task Force) Briefing",
+  "Public Anonymous Drug Peddling Tip-Off Portal",
+  "Blockchain Immutable Drug Seizure/Destruction Log",
+  "Anti-Corruption/Leak Detection in Drug Raids AI",
+  "Mobile App for NDPS Seizure Procedure Compliance",
+  "Drug Purity/Cutting Agent Chemical Linker AI",
+  "Multi-Lingual Cartel Intercept Translator Bot",
+  "Historical Drug Route/Modus Operandi Trend Analyzer",
+  "Staff NDPS Law/Procedure Training Tracker AI",
+  "Drug Testing Kit/Spectrometer Health Monitor Bot",
+  "Urgent Large Consignment Movement Alert AI",
+  "Traffic/Transit Drug Smuggling Vehicle Intercept AI",
+  "Rave Party/Event Drug Distribution Predictor Bot",
+  "VIP/High-Profile Drug Nexus Intelligence Profiler",
+  "AI Assisted Post-Raid NDPS Seizure Memo Draft",
+  "Narcotics Raid/SWAT Resource Allocator Bot",
+  "Drug Demand Reduction/Awareness Campaign Optimizer",
+  "Integration with ICJS/NCB Seizure Database",
+  "Citizen Drug De-Addiction Helpline Router Bot",
+  "Seasonal (New Year/Festivals) Drug Demand Modeler",
+  "Disaster Relief Camp Substance Abuse Monitor",
+  "Narcotics Operation Secret Service Fund Tracker",
+  "Custom Workflow/Approval for Controlled Delivery",
+  "AI Driven Emerging Synthetic Drug Trend Predictor",
+  "Predictive Need for Narcotic Sniffer Dog Deployment",
+  "Custom Alert Trigger for Anti-Narcotics Chief"
 ];
 
 const tabs = [
@@ -67,7 +67,7 @@ const tabs = [
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
-const BorderSecurityDetailed = () => {
+const NarcoticsIntelligenceDetailed = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('overview');
 
@@ -77,11 +77,11 @@ const BorderSecurityDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <ShieldAlert className="inline-icon" size={28} /> AI BORDER SECURITY
+              <ShieldAlert className="inline-icon" size={28} /> AI NARCOTICS INTELLIGENCE
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>AI BORDER SECURITY</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in drone/intrusion detection, smuggling route prediction & cross-border intelligence.
+              <strong>AI NARCOTICS INTELLIGENCE</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in drug cartel network mapping, supply chain interdiction, crypto payment tracing & addict hotspots.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
@@ -245,8 +245,8 @@ const BorderSecurityDetailed = () => {
             <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
-            <h1 className="cyber-title">AI BORDER <span>SECURITY</span></h1>
-            <p className="cyber-subtitle">Drone/Intrusion Detection, Smuggling Route Prediction & Cross-Border Intelligence</p>
+            <h1 className="cyber-title">AI NARCOTICS <span>INTELLIGENCE</span></h1>
+            <p className="cyber-subtitle">Drug Cartel Network Mapping, Supply Chain Interdiction, Crypto Payment Tracing & Addict Hotspots</p>
           </div>
         </div>
       </header>
@@ -279,4 +279,4 @@ const BorderSecurityDetailed = () => {
   );
 };
 
-export default BorderSecurityDetailed;
+export default NarcoticsIntelligenceDetailed;

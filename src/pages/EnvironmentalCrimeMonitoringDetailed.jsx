@@ -7,54 +7,54 @@ import {
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "Thermal Camera Intrusion Detection AI",
-  "Drone (UAV) Acoustic/Visual Identifier Bot",
-  "Cross-Border Tunneling Seismic Detector AI",
-  "Smuggling Route Prediction Algorithm Bot",
-  "Border Fence Cut/Tamper Alert Engine AI",
-  "Night Vision Human vs Animal Classifier",
-  "Language Translation Bot for Border Interrogation",
-  "Fake/Forged Passport Verifier Engine AI",
-  "Border Security Command Dashboard",
-  "Voice-Command Border Incident Query Bot",
-  "Automated Daily Border Situation Report Gen",
-  "Cross-Agency (BSF/Police) Intel Sync Engine",
-  "Infiltration Weather Condition Modeler AI",
-  "Suspicious Vehicle Cross-Border Tracker Bot",
-  "Riverine Border Boat Movement Analyzer AI",
-  "Gunfire Origin Direction Triangulator Bot",
-  "AI Evaluator for Border Vulnerability Score",
-  "Audit/Intrusion Incident Log Generator",
-  "Data Privacy/Border Source Identity Masker",
-  "Police-Central Intelligence Agency Sync",
-  "Border Outpost (BOP) Mobile App Intel Sync",
-  "Cold Case Smuggling Network Linker AI",
-  "Senior Officer (IG Border) Briefing Bot",
-  "Public Border Village Suspicious Activity App",
-  "Blockchain Immutable Cross-Border Arrest Log",
-  "Anti-Bribe/Collusion Surveillance AI at Checkpost",
-  "Mobile App for Patrol Geofence Sync",
-  "Terrain Analysis (Forest/Mountain) Covert Route AI",
-  "Multi-Lingual Smuggler Intercept Translator",
-  "Historical Infiltration Pattern Trend Analyzer",
-  "Staff Border Patrol Fatigue/Safety Monitor AI",
-  "CCTV/PTZ Camera Health Monitor Bot at Border",
-  "Urgent Terrorist Infiltration Priority Alert AI",
-  "Traffic Cross-Border Cargo Scanner Linker",
-  "Human Trafficking Network Profiler Engine AI",
-  "VIP/VVIP Border Visit Security Route AI",
-  "AI Assisted Post-Infiltration Route Analysis",
-  "Border Outpost Rations/Ammunition Forecaster",
-  "Geo-Spatial Satellite Imagery Intel Analyzer AI",
-  "Integration with MHA/Interpol Border Database",
-  "Citizen Border Village Distress Alert Bot",
-  "Extreme Weather (Fog/Snow) Patrol Blind-spot AI",
-  "Disaster/Refugee Mass-Influx Modeler AI",
-  "Border Security Budget/Resource Tracker AI",
-  "Custom Workflow/Approval for Drone Intercept",
-  "AI Driven Weapon Smuggling Risk Predictor",
-  "Predictive Need for Additional Force Deployment",
-  "Custom Alert Trigger for Border Commander"
+  "Illegal Sand Mining Drone/Satellite Detector AI",
+  "Forest Fire/Arson Ignition Point Predictor Bot",
+  "Toxic Chemical Waste Dumping Tracker AI",
+  "Timber/Teak Smuggling Route Analyzer Engine",
+  "River/Waterbody Pollution Source Triangulator",
+  "Illegal Encroachment on Forest Land Modeler",
+  "Noise Pollution/DJ Decibel Limit Enforcer AI",
+  "Protected Area Geofence Breach Alert Bot",
+  "Environmental Crime Command Dashboard",
+  "Voice-Command Eco-Crime Query Bot",
+  "Automated Green Tribunal (NGT) Report Gen",
+  "Cross-Agency (Forest Dept/Police) Sync Engine",
+  "Stone Crusher/Quarry Compliance Checker AI",
+  "Air Pollution/Stubble Burning Satellite Alert",
+  "Industrial Effluent Night-Discharge Monitor Bot",
+  "Dynamite/Explosive Fishing Detection AI",
+  "AI Evaluator for Ecosystem Damage Score",
+  "Audit/Seized Sand/Timber Log Auto-Generator",
+  "Data Privacy/Eco-Activist Informant Masker AI",
+  "Police-Pollution Control Board Sync Bot",
+  "Patrol Officer Eco-Crime Scene Mobile App",
+  "Cold Case Illegal Mining Syndicate Linker",
+  "Senior Officer (Environment Wing) Briefing Bot",
+  "Public Illegal Dumping/Mining Tip-Off Portal",
+  "Blockchain Immutable Seizure/Fine Record Log",
+  "Anti-Bribe/Collusion at Mining Checkpost AI",
+  "Mobile App for Drone Flight Path Sync",
+  "Soil/Water Contamination Spread Modeler AI",
+  "Multi-Lingual Eco-Crime Report Translator Bot",
+  "Historical Seasonal Deforestation Trend Analyzer",
+  "Staff Environmental Law Training Tracker AI",
+  "Air/Water Quality Sensor Network Health Monitor",
+  "Urgent Toxic Gas Leak Emergency Alert AI",
+  "Traffic/Transit Sand/Timber Truck Intercept AI",
+  "Corporate Eco-Fraud/Falsified Report Detector",
+  "VIP Encroachment/Land-Grab Profiler Engine AI",
+  "AI Assisted Post-Raid NGT Damage Valuation Draft",
+  "Eco-Task Force Resource Allocator Bot",
+  "Re-forestation/Land Recovery Progress Tracker",
+  "Integration with Vahan/Mining Dept E-Transit Pass",
+  "Citizen Noise Pollution Complaint Router Bot",
+  "Extreme Weather (Flood) Sand Shifting Modeler",
+  "Disaster (Forest Fire) Evacuation/Response AI",
+  "Eco-Task Force Operation Budget Tracker AI",
+  "Custom Workflow/Approval for Drone Surveillance",
+  "AI Driven New Deforestation Hotspot Predictor",
+  "Predictive Need for Armed Escort for Eco-Raid",
+  "Custom Alert Trigger for Eco-Task Force Commander"
 ];
 
 const tabs = [
@@ -67,7 +67,7 @@ const tabs = [
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
-const BorderSecurityDetailed = () => {
+const EnvironmentalCrimeMonitoringDetailed = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('overview');
 
@@ -77,11 +77,11 @@ const BorderSecurityDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <ShieldAlert className="inline-icon" size={28} /> AI BORDER SECURITY
+              <ShieldAlert className="inline-icon" size={28} /> AI ENVIRONMENTAL CRIME MONITORING
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>AI BORDER SECURITY</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in drone/intrusion detection, smuggling route prediction & cross-border intelligence.
+              <strong>AI ENVIRONMENTAL CRIME MONITORING</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in illegal mining, forest fire arson, toxic dumping & sand smuggling satellite analytics.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
@@ -245,8 +245,8 @@ const BorderSecurityDetailed = () => {
             <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
-            <h1 className="cyber-title">AI BORDER <span>SECURITY</span></h1>
-            <p className="cyber-subtitle">Drone/Intrusion Detection, Smuggling Route Prediction & Cross-Border Intelligence</p>
+            <h1 className="cyber-title">AI ENVIRONMENTAL CRIME <span>MONITORING</span></h1>
+            <p className="cyber-subtitle">Illegal Mining, Forest Fire Arson, Toxic Dumping & Sand Smuggling Satellite Analytics</p>
           </div>
         </div>
       </header>
@@ -279,4 +279,4 @@ const BorderSecurityDetailed = () => {
   );
 };
 
-export default BorderSecurityDetailed;
+export default EnvironmentalCrimeMonitoringDetailed;

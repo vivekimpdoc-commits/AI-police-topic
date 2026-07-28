@@ -7,54 +7,54 @@ import {
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "Thermal Camera Intrusion Detection AI",
-  "Drone (UAV) Acoustic/Visual Identifier Bot",
-  "Cross-Border Tunneling Seismic Detector AI",
-  "Smuggling Route Prediction Algorithm Bot",
-  "Border Fence Cut/Tamper Alert Engine AI",
-  "Night Vision Human vs Animal Classifier",
-  "Language Translation Bot for Border Interrogation",
-  "Fake/Forged Passport Verifier Engine AI",
-  "Border Security Command Dashboard",
-  "Voice-Command Border Incident Query Bot",
-  "Automated Daily Border Situation Report Gen",
-  "Cross-Agency (BSF/Police) Intel Sync Engine",
-  "Infiltration Weather Condition Modeler AI",
-  "Suspicious Vehicle Cross-Border Tracker Bot",
-  "Riverine Border Boat Movement Analyzer AI",
-  "Gunfire Origin Direction Triangulator Bot",
-  "AI Evaluator for Border Vulnerability Score",
-  "Audit/Intrusion Incident Log Generator",
-  "Data Privacy/Border Source Identity Masker",
-  "Police-Central Intelligence Agency Sync",
-  "Border Outpost (BOP) Mobile App Intel Sync",
-  "Cold Case Smuggling Network Linker AI",
-  "Senior Officer (IG Border) Briefing Bot",
-  "Public Border Village Suspicious Activity App",
-  "Blockchain Immutable Cross-Border Arrest Log",
-  "Anti-Bribe/Collusion Surveillance AI at Checkpost",
-  "Mobile App for Patrol Geofence Sync",
-  "Terrain Analysis (Forest/Mountain) Covert Route AI",
-  "Multi-Lingual Smuggler Intercept Translator",
-  "Historical Infiltration Pattern Trend Analyzer",
-  "Staff Border Patrol Fatigue/Safety Monitor AI",
-  "CCTV/PTZ Camera Health Monitor Bot at Border",
-  "Urgent Terrorist Infiltration Priority Alert AI",
-  "Traffic Cross-Border Cargo Scanner Linker",
-  "Human Trafficking Network Profiler Engine AI",
-  "VIP/VVIP Border Visit Security Route AI",
-  "AI Assisted Post-Infiltration Route Analysis",
-  "Border Outpost Rations/Ammunition Forecaster",
-  "Geo-Spatial Satellite Imagery Intel Analyzer AI",
-  "Integration with MHA/Interpol Border Database",
-  "Citizen Border Village Distress Alert Bot",
-  "Extreme Weather (Fog/Snow) Patrol Blind-spot AI",
-  "Disaster/Refugee Mass-Influx Modeler AI",
-  "Border Security Budget/Resource Tracker AI",
-  "Custom Workflow/Approval for Drone Intercept",
-  "AI Driven Weapon Smuggling Risk Predictor",
-  "Predictive Need for Additional Force Deployment",
-  "Custom Alert Trigger for Border Commander"
+  "Interpol Red/Blue/Yellow Notice Tracking Engine",
+  "Extradition Case Documentation/Drafting Assistant AI",
+  "MLAT (Mutual Legal Assistance Treaty) Protocol Bot",
+  "Transnational Crime Syndicate Network Mapper",
+  "International Fugitive Location/Travel Predictor",
+  "Passport/Visa Forgery International Database Linker",
+  "Human Trafficking/Smuggling Global Route Analyzer",
+  "Cyber Crime/Crypto Offshore Safe Haven Tracker",
+  "International Cooperation Command Dashboard",
+  "Voice-Command Interpol Query Bot",
+  "Automated Extradition Status Report Generator AI",
+  "Cross-Agency (CBI/Interpol/MEA) Sync Engine",
+  "Foreign National Arrest/Consular Access Tracker",
+  "International Terror/Radicalization Linkage Modeler",
+  "Global Stolen Vehicle/Art Recovery Matcher Bot",
+  "International Financial Fraud/Hawala Trail Analyzer",
+  "AI Evaluator for Extradition Success Probability",
+  "Audit/International Communication Log Generator",
+  "Data Privacy/Diplomatic Cable Encryption AI",
+  "Police-Interpol Nodal Agency (CBI) Sync Bot",
+  "IO Foreign Travel/Investigation Approval Tracker",
+  "Cold Case International Fugitive Re-Activation AI",
+  "Senior Officer (DG/ADG Intel) Briefing Bot",
+  "Public Foreign National Registration (FRRO) Portal",
+  "Blockchain Immutable MLAT Document Handover Record",
+  "Anti-Leak Diplomatic Sensitivity Alert AI",
+  "Mobile App for Airport Immigration Intercept Sync",
+  "Voice/Face Matcher against Global Terror Database",
+  "Multi-Lingual (Global) Legal Document Translator",
+  "Historical Extradition Precedent/Loophole Analyzer",
+  "Staff International Law/Treaty Training Tracker AI",
+  "Secure Interpol I-24/7 Channel Health Monitor",
+  "Urgent Airport Look Out Circular (LOC) Broadcast AI",
+  "Maritime/Port International Cargo Smuggling Intercept",
+  "International Child Exploitation (CSAM) Network Tracer",
+  "VIP/VVIP International Security Coordination Bot",
+  "AI Assisted Post-Extradition Trial Prep Documenter",
+  "International Task Force Resource/Travel Planner",
+  "Foreign Prisoner Deportation/Transfer Security AI",
+  "Integration with Interpol/FRRO/MEA Database",
+  "Citizen NRI/Foreigner Distress SOS Router Bot",
+  "Global Geopolitical Event Crime Impact Modeler AI",
+  "International Disaster/Hostage Police Response AI",
+  "International Operation/Travel Budget Tracker AI",
+  "Custom Workflow/Approval for MLAT/Letter Rogatory",
+  "AI Driven Emerging Transnational Crime Trend Predictor",
+  "Predictive Need for CBI/Interpol Intervention",
+  "Custom Alert Trigger for Interpol Nodal Officer"
 ];
 
 const tabs = [
@@ -67,7 +67,7 @@ const tabs = [
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
-const BorderSecurityDetailed = () => {
+const InternationalCooperationDashboardDetailed = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('overview');
 
@@ -77,11 +77,11 @@ const BorderSecurityDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <ShieldAlert className="inline-icon" size={28} /> AI BORDER SECURITY
+              <ShieldAlert className="inline-icon" size={28} /> AI INTERNATIONAL COOPERATION DASHBOARD
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>AI BORDER SECURITY</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in drone/intrusion detection, smuggling route prediction & cross-border intelligence.
+              <strong>AI INTERNATIONAL COOPERATION DASHBOARD</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in interpol notice tracking, extradition case prep, mlat assistance & transnational crime intel.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
@@ -245,8 +245,8 @@ const BorderSecurityDetailed = () => {
             <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
-            <h1 className="cyber-title">AI BORDER <span>SECURITY</span></h1>
-            <p className="cyber-subtitle">Drone/Intrusion Detection, Smuggling Route Prediction & Cross-Border Intelligence</p>
+            <h1 className="cyber-title">AI INTERNATIONAL COOPERATION <span>DASHBOARD</span></h1>
+            <p className="cyber-subtitle">Interpol Notice Tracking, Extradition Case Prep, MLAT Assistance & Transnational Crime Intel</p>
           </div>
         </div>
       </header>
@@ -279,4 +279,4 @@ const BorderSecurityDetailed = () => {
   );
 };
 
-export default BorderSecurityDetailed;
+export default InternationalCooperationDashboardDetailed;

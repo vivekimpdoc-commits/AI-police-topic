@@ -7,54 +7,54 @@ import {
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "Thermal Camera Intrusion Detection AI",
-  "Drone (UAV) Acoustic/Visual Identifier Bot",
-  "Cross-Border Tunneling Seismic Detector AI",
-  "Smuggling Route Prediction Algorithm Bot",
-  "Border Fence Cut/Tamper Alert Engine AI",
-  "Night Vision Human vs Animal Classifier",
-  "Language Translation Bot for Border Interrogation",
-  "Fake/Forged Passport Verifier Engine AI",
-  "Border Security Command Dashboard",
-  "Voice-Command Border Incident Query Bot",
-  "Automated Daily Border Situation Report Gen",
-  "Cross-Agency (BSF/Police) Intel Sync Engine",
-  "Infiltration Weather Condition Modeler AI",
-  "Suspicious Vehicle Cross-Border Tracker Bot",
-  "Riverine Border Boat Movement Analyzer AI",
-  "Gunfire Origin Direction Triangulator Bot",
-  "AI Evaluator for Border Vulnerability Score",
-  "Audit/Intrusion Incident Log Generator",
-  "Data Privacy/Border Source Identity Masker",
-  "Police-Central Intelligence Agency Sync",
-  "Border Outpost (BOP) Mobile App Intel Sync",
-  "Cold Case Smuggling Network Linker AI",
-  "Senior Officer (IG Border) Briefing Bot",
-  "Public Border Village Suspicious Activity App",
-  "Blockchain Immutable Cross-Border Arrest Log",
-  "Anti-Bribe/Collusion Surveillance AI at Checkpost",
-  "Mobile App for Patrol Geofence Sync",
-  "Terrain Analysis (Forest/Mountain) Covert Route AI",
-  "Multi-Lingual Smuggler Intercept Translator",
-  "Historical Infiltration Pattern Trend Analyzer",
-  "Staff Border Patrol Fatigue/Safety Monitor AI",
-  "CCTV/PTZ Camera Health Monitor Bot at Border",
-  "Urgent Terrorist Infiltration Priority Alert AI",
-  "Traffic Cross-Border Cargo Scanner Linker",
-  "Human Trafficking Network Profiler Engine AI",
-  "VIP/VVIP Border Visit Security Route AI",
-  "AI Assisted Post-Infiltration Route Analysis",
-  "Border Outpost Rations/Ammunition Forecaster",
-  "Geo-Spatial Satellite Imagery Intel Analyzer AI",
-  "Integration with MHA/Interpol Border Database",
-  "Citizen Border Village Distress Alert Bot",
-  "Extreme Weather (Fog/Snow) Patrol Blind-spot AI",
-  "Disaster/Refugee Mass-Influx Modeler AI",
-  "Border Security Budget/Resource Tracker AI",
-  "Custom Workflow/Approval for Drone Intercept",
-  "AI Driven Weapon Smuggling Risk Predictor",
-  "Predictive Need for Additional Force Deployment",
-  "Custom Alert Trigger for Border Commander"
+  "Money Laundering Layering Detector Engine",
+  "Cryptocurrency (Bitcoin/USDT) Wallet Tracer AI",
+  "Hawala/Hundi Operator Network Mapping Bot",
+  "Shell Company/Fake Director Profiler AI",
+  "Bank Transaction Anomaly/Structuring Alert",
+  "Ponzi Scheme/MLM Fraud Early Warning Bot",
+  "Cross-Border Wire Transfer Suspicion Scorer",
+  "Tax Evasion/GST Fraud Linkage Analyzer",
+  "Financial Crime Command Dashboard",
+  "Voice-Command Financial Intel Query Bot",
+  "Automated Suspicious Activity Report (SAR) Gen",
+  "Cross-Agency (EOW/ED/FIU) Intel Sync Engine",
+  "Social Media Wealth Display vs Income Matcher",
+  "Dark Web Stolen Credit Card Forum Monitor Bot",
+  "Corporate Fraud/Balance Sheet Manipulation AI",
+  "Loan App/Micro-Finance Extortion Tracker",
+  "AI Evaluator for Financial Fraud Risk Score",
+  "Audit/Seized Asset Recovery Log Generator",
+  "Data Privacy/Whistleblower Identity Masker AI",
+  "Police-Bank Nodal Officer Joint Sync Bot",
+  "Investigator Financial Ledger Sync Mobile App",
+  "Cold Case Bank Fraud Modus Operandi Linker",
+  "Senior Officer (IG EOW) Briefing Bot",
+  "Public Financial Fraud Reporting Portal (NCRP)",
+  "Blockchain Immutable Transaction Evidence Hasher",
+  "Anti-Tipping Off/Leak Detection in Banks AI",
+  "Mobile App for Field Search/Seizure Log Sync",
+  "Offshore Tax Haven Entity Resolution Engine",
+  "Multi-Lingual Scammer Audio/Chat Translator",
+  "Historical Financial Crisis/Scam Pattern Matcher",
+  "Staff Investigator Financial Forensics Trainer AI",
+  "Financial Intel Server/Database Health Monitor",
+  "Urgent Cyber Bank Heist/Wire Transfer Freeze AI",
+  "Real Estate/Property Benami Transaction Tracer",
+  "Stock Market Pump-and-Dump Scheme Detector",
+  "VIP/Politician Corruption Trail Mapper AI",
+  "AI Assisted Post-Raid Asset Valuation Draft",
+  "Financial Forensics Audit Resource Allocator",
+  "Money Mule Account Identification Algorithm",
+  "Integration with FIU-IND/Interpol Database",
+  "Citizen Phishing/Vishing Scam Alert Broadcaster",
+  "Economic Slowdown Fraud Surge Modeler AI",
+  "Disaster Relief Fund Misappropriation Tracker",
+  "Financial Investigation Expense Tracker AI",
+  "Custom Workflow/Approval for Bank Freeze Request",
+  "AI Driven New Crypto-Scam Topology Predictor",
+  "Predictive Need for Forensic Auditor Engagement",
+  "Custom Alert Trigger for EOW Chief"
 ];
 
 const tabs = [
@@ -67,7 +67,7 @@ const tabs = [
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
-const BorderSecurityDetailed = () => {
+const FinancialCrimeIntelligenceDetailed = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('overview');
 
@@ -77,11 +77,11 @@ const BorderSecurityDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <ShieldAlert className="inline-icon" size={28} /> AI BORDER SECURITY
+              <ShieldAlert className="inline-icon" size={28} /> AI FINANCIAL CRIME INTELLIGENCE
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>AI BORDER SECURITY</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in drone/intrusion detection, smuggling route prediction & cross-border intelligence.
+              <strong>AI FINANCIAL CRIME INTELLIGENCE</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in money laundering networks, cryptocurrency tracing, hawala rings & shell company analytics.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
@@ -245,8 +245,8 @@ const BorderSecurityDetailed = () => {
             <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
-            <h1 className="cyber-title">AI BORDER <span>SECURITY</span></h1>
-            <p className="cyber-subtitle">Drone/Intrusion Detection, Smuggling Route Prediction & Cross-Border Intelligence</p>
+            <h1 className="cyber-title">AI FINANCIAL CRIME <span>INTELLIGENCE</span></h1>
+            <p className="cyber-subtitle">Money Laundering Networks, Cryptocurrency Tracing, Hawala Rings & Shell Company Analytics</p>
           </div>
         </div>
       </header>
@@ -279,4 +279,4 @@ const BorderSecurityDetailed = () => {
   );
 };
 
-export default BorderSecurityDetailed;
+export default FinancialCrimeIntelligenceDetailed;

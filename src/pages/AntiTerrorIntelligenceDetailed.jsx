@@ -7,54 +7,54 @@ import {
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "Thermal Camera Intrusion Detection AI",
-  "Drone (UAV) Acoustic/Visual Identifier Bot",
-  "Cross-Border Tunneling Seismic Detector AI",
-  "Smuggling Route Prediction Algorithm Bot",
-  "Border Fence Cut/Tamper Alert Engine AI",
-  "Night Vision Human vs Animal Classifier",
-  "Language Translation Bot for Border Interrogation",
-  "Fake/Forged Passport Verifier Engine AI",
-  "Border Security Command Dashboard",
-  "Voice-Command Border Incident Query Bot",
-  "Automated Daily Border Situation Report Gen",
-  "Cross-Agency (BSF/Police) Intel Sync Engine",
-  "Infiltration Weather Condition Modeler AI",
-  "Suspicious Vehicle Cross-Border Tracker Bot",
-  "Riverine Border Boat Movement Analyzer AI",
-  "Gunfire Origin Direction Triangulator Bot",
-  "AI Evaluator for Border Vulnerability Score",
-  "Audit/Intrusion Incident Log Generator",
-  "Data Privacy/Border Source Identity Masker",
-  "Police-Central Intelligence Agency Sync",
-  "Border Outpost (BOP) Mobile App Intel Sync",
-  "Cold Case Smuggling Network Linker AI",
-  "Senior Officer (IG Border) Briefing Bot",
-  "Public Border Village Suspicious Activity App",
-  "Blockchain Immutable Cross-Border Arrest Log",
-  "Anti-Bribe/Collusion Surveillance AI at Checkpost",
-  "Mobile App for Patrol Geofence Sync",
-  "Terrain Analysis (Forest/Mountain) Covert Route AI",
-  "Multi-Lingual Smuggler Intercept Translator",
-  "Historical Infiltration Pattern Trend Analyzer",
-  "Staff Border Patrol Fatigue/Safety Monitor AI",
-  "CCTV/PTZ Camera Health Monitor Bot at Border",
-  "Urgent Terrorist Infiltration Priority Alert AI",
-  "Traffic Cross-Border Cargo Scanner Linker",
-  "Human Trafficking Network Profiler Engine AI",
-  "VIP/VVIP Border Visit Security Route AI",
-  "AI Assisted Post-Infiltration Route Analysis",
-  "Border Outpost Rations/Ammunition Forecaster",
-  "Geo-Spatial Satellite Imagery Intel Analyzer AI",
-  "Integration with MHA/Interpol Border Database",
-  "Citizen Border Village Distress Alert Bot",
-  "Extreme Weather (Fog/Snow) Patrol Blind-spot AI",
-  "Disaster/Refugee Mass-Influx Modeler AI",
-  "Border Security Budget/Resource Tracker AI",
-  "Custom Workflow/Approval for Drone Intercept",
-  "AI Driven Weapon Smuggling Risk Predictor",
-  "Predictive Need for Additional Force Deployment",
-  "Custom Alert Trigger for Border Commander"
+  "Sleeper Cell Network Mapping Engine AI",
+  "Dark Web Terror Financing/Chat Monitor Bot",
+  "Online Radicalization/Propaganda Tracker",
+  "Bomb Threat/IED Imminent Attack Assessor",
+  "Lone Wolf Attacker Profiling Algorithm",
+  "Terror Funding/Hawala Transaction Tracer AI",
+  "Explosive Precursor Purchase Anomaly Alert",
+  "Fake ID/Alias Resolution for Terror Suspects",
+  "Anti-Terror Command Control Dashboard",
+  "Voice-Command Terror Intel Query Bot",
+  "Automated Threat Level Assessment Report Gen",
+  "Cross-Agency (ATS/NIA) Intel Sync Engine",
+  "Social Media Extremist Keyword Flagging Bot",
+  "Encrypted Messaging (Telegram/Signal) Meta-Analyzer",
+  "Suspect Travel/Visa Route Modeler AI",
+  "Safehouse/Hideout Location Predictor Bot",
+  "AI Evaluator for Imminent Threat Probability",
+  "Audit/Counter-Terror Operation Log Generator",
+  "Data Privacy/Informant Identity Encryption AI",
+  "Police-Central Intel (IB/RAW) Sync Bot",
+  "ATS Officer Covert Operation Mobile App Sync",
+  "Cold Case Terror Attack Signature Matcher",
+  "Senior Officer (ADG ATS) Briefing Bot",
+  "Public Suspicious Object/Person Tip-Off Portal",
+  "Blockchain Immutable Intercept Record Hasher",
+  "Anti-Surveillance/Counter-Intel Detection AI",
+  "Mobile App for Suspect Geo-Fencing Alert",
+  "Voice Print Matcher for Terrorist Audio/Video",
+  "Multi-Lingual (Arabic/Urdu/Pashto) Translator",
+  "Historical Terror Modus Operandi (MO) Matcher",
+  "Staff/ATS Officer Cover/Safety Monitor AI",
+  "Covert Listening Device Health Monitor Bot",
+  "Urgent Terror Attack Response/Lockdown AI",
+  "Traffic/Naka Suspect Vehicle Intercept AI",
+  "Cyber-Terror/Critical Infrastructure Threat Monitor",
+  "VIP/VVIP Assassination Threat Profiler AI",
+  "AI Assisted Post-Blast Investigation Analyzer",
+  "Tactical Raid/SWAT Resource Allocator Bot",
+  "De-Radicalization Program Efficacy Scorer",
+  "Integration with NATGRID/Interpol Database",
+  "Citizen Anonymous Terror Tip-Off Analyzer Bot",
+  "Extreme Event (Election/Festival) Threat Modeler",
+  "Disaster/CBRN (Chemical/Bio) Attack Predictor",
+  "Anti-Terror Operation Budget Tracker AI",
+  "Custom Workflow/Approval for Covert Intel",
+  "AI Driven New Terror Outfit Formation Predictor",
+  "Predictive Need for Specialized NSG Request",
+  "Custom Alert Trigger for ATS Commander"
 ];
 
 const tabs = [
@@ -67,7 +67,7 @@ const tabs = [
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
-const BorderSecurityDetailed = () => {
+const AntiTerrorIntelligenceDetailed = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('overview');
 
@@ -77,11 +77,11 @@ const BorderSecurityDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <ShieldAlert className="inline-icon" size={28} /> AI BORDER SECURITY
+              <ShieldAlert className="inline-icon" size={28} /> AI ANTI-TERROR INTELLIGENCE
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>AI BORDER SECURITY</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in drone/intrusion detection, smuggling route prediction & cross-border intelligence.
+              <strong>AI ANTI-TERROR INTELLIGENCE</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in sleeper cell profiling, dark web surveillance, radicalization tracking & bomb threat assessment.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
@@ -245,8 +245,8 @@ const BorderSecurityDetailed = () => {
             <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
-            <h1 className="cyber-title">AI BORDER <span>SECURITY</span></h1>
-            <p className="cyber-subtitle">Drone/Intrusion Detection, Smuggling Route Prediction & Cross-Border Intelligence</p>
+            <h1 className="cyber-title">AI ANTI-TERROR <span>INTELLIGENCE</span></h1>
+            <p className="cyber-subtitle">Sleeper Cell Profiling, Dark Web Surveillance, Radicalization Tracking & Bomb Threat Assessment</p>
           </div>
         </div>
       </header>
@@ -279,4 +279,4 @@ const BorderSecurityDetailed = () => {
   );
 };
 
-export default BorderSecurityDetailed;
+export default AntiTerrorIntelligenceDetailed;

@@ -334,6 +334,16 @@ import SignatureVerificationSupportDetailed from './pages/SignatureVerificationS
 import ForensicEvidenceRequestManagementDetailed from './pages/ForensicEvidenceRequestManagementDetailed';
 import FSLReportTrackingDetailed from './pages/FSLReportTrackingDetailed';
 import EvidenceIntegrityMonitoringDetailed from './pages/EvidenceIntegrityMonitoringDetailed';
+import BorderSecurityDetailed from './pages/BorderSecurityDetailed';
+import PrisonManagementDetailed from './pages/PrisonManagementDetailed';
+import AntiTerrorIntelligenceDetailed from './pages/AntiTerrorIntelligenceDetailed';
+import FinancialCrimeIntelligenceDetailed from './pages/FinancialCrimeIntelligenceDetailed';
+import EnvironmentalCrimeMonitoringDetailed from './pages/EnvironmentalCrimeMonitoringDetailed';
+import WildlifeCrimeInvestigationDetailed from './pages/WildlifeCrimeInvestigationDetailed';
+import NarcoticsIntelligenceDetailed from './pages/NarcoticsIntelligenceDetailed';
+import EconomicOffenceWingAssistantDetailed from './pages/EconomicOffenceWingAssistantDetailed';
+import InterStateCoordinationPlatformDetailed from './pages/InterStateCoordinationPlatformDetailed';
+import InternationalCooperationDashboardDetailed from './pages/InternationalCooperationDashboardDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -1661,6 +1671,56 @@ const AnimatedRoutes = () => {
         <Route path="/evidence-integrity-monitoring" element={
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
             <EvidenceIntegrityMonitoringDetailed />
+          </motion.div>
+        } />
+        <Route path="/border-security" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <BorderSecurityDetailed />
+          </motion.div>
+        } />
+        <Route path="/prison-management" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <PrisonManagementDetailed />
+          </motion.div>
+        } />
+        <Route path="/anti-terror-intelligence" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <AntiTerrorIntelligenceDetailed />
+          </motion.div>
+        } />
+        <Route path="/financial-crime-intelligence" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <FinancialCrimeIntelligenceDetailed />
+          </motion.div>
+        } />
+        <Route path="/environmental-crime-monitoring" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <EnvironmentalCrimeMonitoringDetailed />
+          </motion.div>
+        } />
+        <Route path="/wildlife-crime-investigation" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <WildlifeCrimeInvestigationDetailed />
+          </motion.div>
+        } />
+        <Route path="/narcotics-intelligence" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <NarcoticsIntelligenceDetailed />
+          </motion.div>
+        } />
+        <Route path="/economic-offence-wing-assistant" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <EconomicOffenceWingAssistantDetailed />
+          </motion.div>
+        } />
+        <Route path="/inter-state-coordination-platform" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <InterStateCoordinationPlatformDetailed />
+          </motion.div>
+        } />
+        <Route path="/international-cooperation-dashboard" element={
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition">
+            <InternationalCooperationDashboardDetailed />
           </motion.div>
         } />
         <Route path="/business-compliance" element={

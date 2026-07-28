@@ -7,54 +7,54 @@ import {
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "Thermal Camera Intrusion Detection AI",
-  "Drone (UAV) Acoustic/Visual Identifier Bot",
-  "Cross-Border Tunneling Seismic Detector AI",
-  "Smuggling Route Prediction Algorithm Bot",
-  "Border Fence Cut/Tamper Alert Engine AI",
-  "Night Vision Human vs Animal Classifier",
-  "Language Translation Bot for Border Interrogation",
-  "Fake/Forged Passport Verifier Engine AI",
-  "Border Security Command Dashboard",
-  "Voice-Command Border Incident Query Bot",
-  "Automated Daily Border Situation Report Gen",
-  "Cross-Agency (BSF/Police) Intel Sync Engine",
-  "Infiltration Weather Condition Modeler AI",
-  "Suspicious Vehicle Cross-Border Tracker Bot",
-  "Riverine Border Boat Movement Analyzer AI",
-  "Gunfire Origin Direction Triangulator Bot",
-  "AI Evaluator for Border Vulnerability Score",
-  "Audit/Intrusion Incident Log Generator",
-  "Data Privacy/Border Source Identity Masker",
-  "Police-Central Intelligence Agency Sync",
-  "Border Outpost (BOP) Mobile App Intel Sync",
-  "Cold Case Smuggling Network Linker AI",
-  "Senior Officer (IG Border) Briefing Bot",
-  "Public Border Village Suspicious Activity App",
-  "Blockchain Immutable Cross-Border Arrest Log",
-  "Anti-Bribe/Collusion Surveillance AI at Checkpost",
-  "Mobile App for Patrol Geofence Sync",
-  "Terrain Analysis (Forest/Mountain) Covert Route AI",
-  "Multi-Lingual Smuggler Intercept Translator",
-  "Historical Infiltration Pattern Trend Analyzer",
-  "Staff Border Patrol Fatigue/Safety Monitor AI",
-  "CCTV/PTZ Camera Health Monitor Bot at Border",
-  "Urgent Terrorist Infiltration Priority Alert AI",
-  "Traffic Cross-Border Cargo Scanner Linker",
-  "Human Trafficking Network Profiler Engine AI",
-  "VIP/VVIP Border Visit Security Route AI",
-  "AI Assisted Post-Infiltration Route Analysis",
-  "Border Outpost Rations/Ammunition Forecaster",
-  "Geo-Spatial Satellite Imagery Intel Analyzer AI",
-  "Integration with MHA/Interpol Border Database",
-  "Citizen Border Village Distress Alert Bot",
-  "Extreme Weather (Fog/Snow) Patrol Blind-spot AI",
-  "Disaster/Refugee Mass-Influx Modeler AI",
-  "Border Security Budget/Resource Tracker AI",
-  "Custom Workflow/Approval for Drone Intercept",
-  "AI Driven Weapon Smuggling Risk Predictor",
-  "Predictive Need for Additional Force Deployment",
-  "Custom Alert Trigger for Border Commander"
+  "Inter-State Fugitive/Absconder Tracking Engine",
+  "Multi-State Gang Operation Network Mapper AI",
+  "Standardized Inter-State Arrest/Transit Protocol Bot",
+  "Cross-Border Vehicle Theft/Smuggling Linker",
+  "Inter-State Warrant/Summons Execution Tracker",
+  "Kidnapping/Human Trafficking Cross-State Route Predictor",
+  "Wanted Criminal Face/Biometric Inter-State Matcher",
+  "Cyber Crime Multi-Jurisdiction Conflict Resolver AI",
+  "Inter-State Coordination Command Dashboard",
+  "Voice-Command Inter-State Query Bot",
+  "Automated Joint-Operation Report Generator AI",
+  "Cross-State Police Database (CCTNS) Sync Engine",
+  "Language Translation for Inter-State Intel Sharing",
+  "Criminal Modus Operandi (MO) Cross-State Matcher",
+  "Inter-State Checkpost/Border Naka Alert Broadcaster",
+  "Stolen Property/Asset Multi-State Recovery Tracker",
+  "AI Evaluator for Inter-State Collaboration Index",
+  "Audit/Inter-State Transit Log Auto-Generator",
+  "Data Privacy/Covert Operation Plan Masker AI",
+  "Police-Nodal Officer (Other States) Sync Bot",
+  "Visiting IO Covert Operations Mobile App Sync",
+  "Cold Case Serial Offender Cross-State Matcher",
+  "Senior Officer (DG CID) Briefing Bot",
+  "Public Inter-State Missing Person Match Portal",
+  "Blockchain Immutable Inter-State Handover Record",
+  "Anti-Leak/Jurisdictional Dispute Early Warning AI",
+  "Mobile App for Inter-State Transit Remand Sync",
+  "Inter-State Arms/Narcotics Supply Chain Linker",
+  "Multi-Lingual Extradition Document Translator Bot",
+  "Historical Inter-State Gang Rivalry Pattern Analyzer",
+  "Staff Inter-State Protocol Training Tracker AI",
+  "Secure Inter-State Communication Channel Health Bot",
+  "Urgent Terror Suspect Inter-State Alert Broadcast",
+  "Highway/Transit Corridor Multi-State Chase AI",
+  "Inter-State Financial Fraud Syndicate Mapper AI",
+  "VIP Inter-State Movement Security Coordination Bot",
+  "AI Assisted Post-Joint Operation Audit Report Draft",
+  "Inter-State Task Force Resource Allocator Bot",
+  "Prisoner Inter-State Transfer Security Planner",
+  "Integration with NCRB/CCTNS National Database",
+  "Citizen Inter-State Crime Tip-Off Router Bot",
+  "Election/Festival Multi-State Crowd/Criminal Movement AI",
+  "Disaster Relief Multi-State Police Deployment AI",
+  "Inter-State Operation Budget/Expense Tracker AI",
+  "Custom Workflow/Approval for Inter-State Raid",
+  "AI Driven Cross-Border Crime Shift Predictor",
+  "Predictive Need for Joint Multi-State Task Force",
+  "Custom Alert Trigger for CID Nodal Officer"
 ];
 
 const tabs = [
@@ -67,7 +67,7 @@ const tabs = [
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
-const BorderSecurityDetailed = () => {
+const InterStateCoordinationPlatformDetailed = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('overview');
 
@@ -77,11 +77,11 @@ const BorderSecurityDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <ShieldAlert className="inline-icon" size={28} /> AI BORDER SECURITY
+              <ShieldAlert className="inline-icon" size={28} /> AI INTER-STATE COORDINATION PLATFORM
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>AI BORDER SECURITY</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in drone/intrusion detection, smuggling route prediction & cross-border intelligence.
+              <strong>AI INTER-STATE COORDINATION PLATFORM</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in fugitive tracking across borders, multi-state gang operations & standardized extradition protocol.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
@@ -245,8 +245,8 @@ const BorderSecurityDetailed = () => {
             <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
-            <h1 className="cyber-title">AI BORDER <span>SECURITY</span></h1>
-            <p className="cyber-subtitle">Drone/Intrusion Detection, Smuggling Route Prediction & Cross-Border Intelligence</p>
+            <h1 className="cyber-title">AI INTER-STATE COORDINATION <span>PLATFORM</span></h1>
+            <p className="cyber-subtitle">Fugitive Tracking across Borders, Multi-State Gang Operations & Standardized Extradition Protocol</p>
           </div>
         </div>
       </header>
@@ -279,4 +279,4 @@ const BorderSecurityDetailed = () => {
   );
 };
 
-export default BorderSecurityDetailed;
+export default InterStateCoordinationPlatformDetailed;

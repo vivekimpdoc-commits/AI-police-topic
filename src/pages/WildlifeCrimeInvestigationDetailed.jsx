@@ -7,54 +7,54 @@ import {
 import '../styles/hrmsDetailed.css'; 
 
 const aiExperts = [
-  "Thermal Camera Intrusion Detection AI",
-  "Drone (UAV) Acoustic/Visual Identifier Bot",
-  "Cross-Border Tunneling Seismic Detector AI",
-  "Smuggling Route Prediction Algorithm Bot",
-  "Border Fence Cut/Tamper Alert Engine AI",
-  "Night Vision Human vs Animal Classifier",
-  "Language Translation Bot for Border Interrogation",
-  "Fake/Forged Passport Verifier Engine AI",
-  "Border Security Command Dashboard",
-  "Voice-Command Border Incident Query Bot",
-  "Automated Daily Border Situation Report Gen",
-  "Cross-Agency (BSF/Police) Intel Sync Engine",
-  "Infiltration Weather Condition Modeler AI",
-  "Suspicious Vehicle Cross-Border Tracker Bot",
-  "Riverine Border Boat Movement Analyzer AI",
-  "Gunfire Origin Direction Triangulator Bot",
-  "AI Evaluator for Border Vulnerability Score",
-  "Audit/Intrusion Incident Log Generator",
-  "Data Privacy/Border Source Identity Masker",
-  "Police-Central Intelligence Agency Sync",
-  "Border Outpost (BOP) Mobile App Intel Sync",
-  "Cold Case Smuggling Network Linker AI",
-  "Senior Officer (IG Border) Briefing Bot",
-  "Public Border Village Suspicious Activity App",
-  "Blockchain Immutable Cross-Border Arrest Log",
-  "Anti-Bribe/Collusion Surveillance AI at Checkpost",
-  "Mobile App for Patrol Geofence Sync",
-  "Terrain Analysis (Forest/Mountain) Covert Route AI",
-  "Multi-Lingual Smuggler Intercept Translator",
-  "Historical Infiltration Pattern Trend Analyzer",
-  "Staff Border Patrol Fatigue/Safety Monitor AI",
-  "CCTV/PTZ Camera Health Monitor Bot at Border",
-  "Urgent Terrorist Infiltration Priority Alert AI",
-  "Traffic Cross-Border Cargo Scanner Linker",
-  "Human Trafficking Network Profiler Engine AI",
-  "VIP/VVIP Border Visit Security Route AI",
-  "AI Assisted Post-Infiltration Route Analysis",
-  "Border Outpost Rations/Ammunition Forecaster",
-  "Geo-Spatial Satellite Imagery Intel Analyzer AI",
-  "Integration with MHA/Interpol Border Database",
-  "Citizen Border Village Distress Alert Bot",
-  "Extreme Weather (Fog/Snow) Patrol Blind-spot AI",
-  "Disaster/Refugee Mass-Influx Modeler AI",
-  "Border Security Budget/Resource Tracker AI",
-  "Custom Workflow/Approval for Drone Intercept",
-  "AI Driven Weapon Smuggling Risk Predictor",
-  "Predictive Need for Additional Force Deployment",
-  "Custom Alert Trigger for Border Commander"
+  "Poaching Hotspot/Route Prediction Engine AI",
+  "Tiger/Leopard Skin Pattern Matcher DB AI",
+  "Rhino Horn/Ivory Trafficking Network Profiler",
+  "Dark Web Exotic Pet Sale Monitor Bot",
+  "Gunshot/Snare Acoustic Sensor Alert AI",
+  "Wildlife Product (Pangolin Scale) Image Classifier",
+  "Smuggler Travel/Transit Route Modeler AI",
+  "Forest Guard/Patrol Geofence Breach Alert",
+  "Wildlife Crime Command Dashboard",
+  "Voice-Command Poaching Incident Query Bot",
+  "Automated Wildlife Crime Bureau (WCCB) Report",
+  "Cross-Agency (Forest Dept/STF) Intel Sync Engine",
+  "Social Media Wildlife Trophy Photo Flagging Bot",
+  "Courier/Cargo Wildlife Contraband Scanner Linker",
+  "Medicinal/Quack Demand Source Triangulator",
+  "Poacher Syndicate Financial Trail Analyzer AI",
+  "AI Evaluator for Species Endangerment Threat",
+  "Audit/Seized Wildlife Part Log Auto-Generator",
+  "Data Privacy/Forest Informant Identity Masker",
+  "Police-WCCB/Interpol Wildlife Wing Sync Bot",
+  "Forest Guard Covert Geo-Tagging Mobile App",
+  "Cold Case Unsolved Poaching Signature Matcher",
+  "Senior Officer (Wildlife Crime STF) Briefing",
+  "Public Poaching/Snare Sighting Tip-Off Portal",
+  "Blockchain Immutable Seizure/DNA Sample Log",
+  "Anti-Collusion Forest Checkpost Surveillance AI",
+  "Mobile App for Drone Anti-Poaching Patrol Sync",
+  "Animal DNA/Forensic Report Priority Queue Manager",
+  "Multi-Lingual Smuggler Intercept Translator Bot",
+  "Historical Seasonal Poaching Trend Analyzer",
+  "Staff Anti-Poaching Tactics Training Tracker AI",
+  "Jungle Camera Trap/Acoustic Sensor Health Bot",
+  "Urgent Endangered Species Threat Alert AI",
+  "Traffic/Transit Wildlife Contraband Intercept AI",
+  "Marine Wildlife (Sea Cucumber) Smuggling Profiler",
+  "VIP/High-Profile Exotic Pet Ownership Verifier",
+  "AI Assisted Post-Raid Court Seizure Report Draft",
+  "Anti-Poaching Task Force Resource Allocator Bot",
+  "Wildlife Rehabilitation/Release Tracking Engine",
+  "Integration with National Tiger Conservation Authority",
+  "Citizen Injured Animal Rescue Router Bot",
+  "Extreme Weather (Drought) Poaching Vulnerability Modeler",
+  "Disaster (Flood) Animal Displacement Poaching AI",
+  "Wildlife STF Operation Budget/Expense Tracker",
+  "Custom Workflow/Approval for Forest Entry/Raid",
+  "AI Driven Emerging Exotic Species Demand Predictor",
+  "Predictive Need for Sniffer Dog Squad Deployment",
+  "Custom Alert Trigger for Wildlife STF Commander"
 ];
 
 const tabs = [
@@ -67,7 +67,7 @@ const tabs = [
   { id: 'security', label: 'Security & Roadmap', icon: <Shield size={18} /> }
 ];
 
-const BorderSecurityDetailed = () => {
+const WildlifeCrimeInvestigationDetailed = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('overview');
 
@@ -77,11 +77,11 @@ const BorderSecurityDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
             <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
-              <ShieldAlert className="inline-icon" size={28} /> AI BORDER SECURITY
+              <ShieldAlert className="inline-icon" size={28} /> AI WILDLIFE CRIME INVESTIGATION
             </h2>
             
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              <strong>AI BORDER SECURITY</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in drone/intrusion detection, smuggling route prediction & cross-border intelligence.
+              <strong>AI WILDLIFE CRIME INVESTIGATION</strong> provides advanced enterprise capabilities. By leveraging predictive analytics, real-time data sync, and multi-modal AI sensors, this module ensures total dominance in poaching route prediction, animal body part trafficking, dark web exotic pet sales.
             </p>
 
             <div className="split-section" style={{ gap: '1.5rem' }}>
@@ -245,8 +245,8 @@ const BorderSecurityDetailed = () => {
             <ShieldAlert size={40} color="#06b6d4" />
           </motion.div>
           <div>
-            <h1 className="cyber-title">AI BORDER <span>SECURITY</span></h1>
-            <p className="cyber-subtitle">Drone/Intrusion Detection, Smuggling Route Prediction & Cross-Border Intelligence</p>
+            <h1 className="cyber-title">AI WILDLIFE CRIME <span>INVESTIGATION</span></h1>
+            <p className="cyber-subtitle">Poaching Route Prediction, Animal Body Part Trafficking, Dark Web Exotic Pet Sales</p>
           </div>
         </div>
       </header>
@@ -279,4 +279,4 @@ const BorderSecurityDetailed = () => {
   );
 };
 
-export default BorderSecurityDetailed;
+export default WildlifeCrimeInvestigationDetailed;
