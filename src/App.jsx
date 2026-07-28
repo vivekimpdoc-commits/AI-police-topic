@@ -425,6 +425,16 @@ import CourtCaseTrackingDetailed from './pages/CourtCaseTrackingDetailed';
 import ProsecutionSupportDetailed from './pages/ProsecutionSupportDetailed';
 import LegalResearchDetailed from './pages/LegalResearchDetailed';
 import JudgmentAnalyticsDetailed from './pages/JudgmentAnalyticsDetailed';
+import WarrantManagementDetailed from './pages/WarrantManagementDetailed';
+import SummonsManagementDetailed from './pages/SummonsManagementDetailed';
+import NoticeManagementDetailed from './pages/NoticeManagementDetailed';
+import BailComplianceTrackerDetailed from './pages/BailComplianceTrackerDetailed';
+import RemandMonitoringDetailed from './pages/RemandMonitoringDetailed';
+import PrisonerEscortManagementDetailed from './pages/PrisonerEscortManagementDetailed';
+import CourtProductionPlanningDetailed from './pages/CourtProductionPlanningDetailed';
+import LegalDeadlineTrackerDetailed from './pages/LegalDeadlineTrackerDetailed';
+import JudicialOrderTrackerDetailed from './pages/JudicialOrderTrackerDetailed';
+import ComplianceMonitoringDetailed from './pages/ComplianceMonitoringDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2353,6 +2363,16 @@ const AnimatedRoutes = () => {
         <Route path="/prosecution-support" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ProsecutionSupportDetailed /></motion.div>} />
         <Route path="/legal-research" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><LegalResearchDetailed /></motion.div>} />
         <Route path="/judgment-analytics" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><JudgmentAnalyticsDetailed /></motion.div>} />
+        <Route path="/warrant-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><WarrantManagementDetailed /></motion.div>} />
+        <Route path="/summons-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><SummonsManagementDetailed /></motion.div>} />
+        <Route path="/notice-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><NoticeManagementDetailed /></motion.div>} />
+        <Route path="/bail-compliance-tracker" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><BailComplianceTrackerDetailed /></motion.div>} />
+        <Route path="/remand-monitoring" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><RemandMonitoringDetailed /></motion.div>} />
+        <Route path="/prisoner-escort-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PrisonerEscortManagementDetailed /></motion.div>} />
+        <Route path="/court-production-planning" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CourtProductionPlanningDetailed /></motion.div>} />
+        <Route path="/legal-deadline-tracker" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><LegalDeadlineTrackerDetailed /></motion.div>} />
+        <Route path="/judicial-order-tracker" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><JudicialOrderTrackerDetailed /></motion.div>} />
+        <Route path="/compliance-monitoring" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ComplianceMonitoringDetailed /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );

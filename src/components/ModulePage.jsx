@@ -342,6 +342,17 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 40: Legal Process
+                      'AI Warrant Management': '/warrant-management',
+                      'AI Summons Management': '/summons-management',
+                      'AI Notice Management': '/notice-management',
+                      'AI Bail Compliance Tracker': '/bail-compliance-tracker',
+                      'AI Remand Monitoring': '/remand-monitoring',
+                      'AI Prisoner Escort Management': '/prisoner-escort-management',
+                      'AI Court Production Planning': '/court-production-planning',
+                      'AI Legal Deadline Tracker': '/legal-deadline-tracker',
+                      'AI Judicial Order Tracker': '/judicial-order-tracker',
+                      'AI Compliance Monitoring': '/compliance-monitoring',
                       // Module 19: Legal & Court
                       'AI Legal Assistant': '/legal-assistant',
                       'AI Court Case Tracking': '/court-case-tracking',
