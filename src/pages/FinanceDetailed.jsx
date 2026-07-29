@@ -79,12 +79,24 @@ const FinanceDetailed = () => {
       case 'experts':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid experts-grid">
-            {aiExperts.map((expert, i) => (
-              <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-cyan">
-                <Bot className="card-icon" />
-                <h4>{expert}</h4>
-              </motion.div>
-            ))}
+            {aiExperts.map((expert, i) => {
+              const isBudgetPlanner = expert === "Police Budget Planner AI";
+              return (
+                <motion.div 
+                  initial={{ opacity: 0, scale: 0.8 }} 
+                  animate={{ opacity: 1, scale: 1 }} 
+                  transition={{ delay: i * 0.03 }} 
+                  key={i} 
+                  className={`premium-card highlight-cyan ${isBudgetPlanner ? 'clickable-agent-card' : ''}`}
+                  onClick={isBudgetPlanner ? () => navigate('/police-budget-planner-agent') : undefined}
+                  style={isBudgetPlanner ? { cursor: 'pointer', border: '1px solid #00f0ff', boxShadow: '0 0 15px rgba(0, 240, 255, 0.3)' } : {}}
+                >
+                  <Bot className="card-icon" />
+                  <h4>{expert}</h4>
+                  {isBudgetPlanner && <div style={{ fontSize: '0.75rem', color: '#00f0ff', marginTop: '5px' }}>Click to view Agent details</div>}
+                </motion.div>
+              );
+            })}
           </motion.div>
         );
       case 'modules':
