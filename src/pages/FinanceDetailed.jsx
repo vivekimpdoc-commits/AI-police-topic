@@ -83,7 +83,8 @@ const FinanceDetailed = () => {
               const isBudgetPlanner = expert === "Police Budget Planner AI";
               const isFundAllocation = expert === "Fund Allocation Expert AI";
               const isBudgetForecast = expert === "Budget Forecast AI";
-              const isClickable = isBudgetPlanner || isFundAllocation || isBudgetForecast;
+              const isUtilization = expert === "Budget Utilization Monitor AI";
+              const isClickable = isBudgetPlanner || isFundAllocation || isBudgetForecast || isUtilization;
               return (
                 <motion.div 
                   initial={{ opacity: 0, scale: 0.8 }} 
@@ -91,7 +92,7 @@ const FinanceDetailed = () => {
                   transition={{ delay: i * 0.03 }} 
                   key={i} 
                   className={`premium-card highlight-cyan ${isClickable ? 'clickable-agent-card' : ''}`}
-                  onClick={isBudgetPlanner ? () => navigate('/police-budget-planner-agent') : isFundAllocation ? () => navigate('/fund-allocation-expert-agent') : isBudgetForecast ? () => navigate('/budget-forecast-ai-agent') : undefined}
+                  onClick={isBudgetPlanner ? () => navigate('/police-budget-planner-agent') : isFundAllocation ? () => navigate('/fund-allocation-expert-agent') : isBudgetForecast ? () => navigate('/budget-forecast-ai-agent') : isUtilization ? () => navigate('/budget-utilization-monitor-agent') : undefined}
                   style={isClickable ? { cursor: 'pointer', border: '1px solid #00f0ff', boxShadow: '0 0 15px rgba(0, 240, 255, 0.3)' } : {}}
                 >
                   <Bot className="card-icon" />
