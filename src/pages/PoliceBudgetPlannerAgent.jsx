@@ -2,13 +2,14 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bot, ArrowLeft, Terminal, Cpu, ShieldAlert, PieChart, Database, Network, Server, Code, FileText, LayoutDashboard, Zap, Target, MessageSquare, Send, AlertTriangle, CheckCircle2, TrendingUp, Activity
+  Bot, ArrowLeft, Terminal, Cpu, ShieldAlert, PieChart, Database, Network, Server, Code, FileText, LayoutDashboard, Zap, Target, MessageSquare, Send, AlertTriangle, CheckCircle2, TrendingUp, Activity, FileSpreadsheet, Mic, Download, Loader2
 } from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
 const tabs = [
   { id: 'overview', label: 'Agent Overview', icon: <FileText size={18} /> },
   { id: 'dashboard', label: 'Live Dashboard', icon: <LayoutDashboard size={18} /> },
+  { id: 'ledger', label: 'AI Ledger', icon: <FileSpreadsheet size={18} /> },
   { id: 'demo', label: 'Live AI Demo', icon: <MessageSquare size={18} /> },
   { id: 'features', label: 'Deep Capabilities', icon: <Zap size={18} /> },
   { id: 'use-cases', label: 'Real-World Scenarios', icon: <Target size={18} /> },
@@ -30,6 +31,10 @@ const predefinedResponses = {
     text: "Compiling financial utilization data for the past 6 months. CAG compliant format verified.",
     success: "Fund Utilization Certificate (UC) successfully generated and cryptographically signed."
   },
+  "voice input": {
+    text: "Voice Command Recognized. Processing upcoming Mega-Event deployment costs...",
+    alert: "Kumbh Mela Deployment Estimate: ₹12.5 Cr required for CAPF accommodation, transport, and temporary comms. Suggesting reallocation from 'General Admin' head."
+  },
   "default": {
     text: "I am the Police Budget Planner AI. I can analyze financial trends, detect invoice fraud, generate CAG reports, and forecast election deployment costs. Click one of the suggested prompts to see my capabilities."
   }
@@ -45,7 +50,12 @@ const PoliceBudgetPlannerAgent = () => {
   ]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const [isListening, setIsListening] = useState(false);
   const chatEndRef = useRef(null);
+
+  // Report Modal State
+  const [showReportModal, setShowReportModal] = useState(false);
+  const [reportStep, setReportStep] = useState(0);
 
   const scrollToBottom = () => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -77,6 +87,8 @@ const PoliceBudgetPlannerAgent = () => {
         response = predefinedResponses["check vehicles"];
       } else if (lowerText.includes("cag") || lowerText.includes("report") || lowerText.includes("uc")) {
         response = predefinedResponses["generate cag"];
+      } else if (lowerText.includes("kumbh mela") || lowerText.includes("voice")) {
+        response = predefinedResponses["voice input"];
       }
 
       setMessages(prev => [...prev, { sender: 'ai', ...response }]);
@@ -84,14 +96,35 @@ const PoliceBudgetPlannerAgent = () => {
     }, 1500);
   };
 
+  const handleVoiceCommand = () => {
+    setIsListening(true);
+    setTimeout(() => {
+      setIsListening(false);
+      handleSendMessage("Voice input: What is the budget estimate for Kumbh Mela deployment?");
+    }, 2500);
+  };
+
+  const handleGenerateReport = () => {
+    setShowReportModal(true);
+    setReportStep(1);
+    setTimeout(() => setReportStep(2), 1500);
+    setTimeout(() => setReportStep(3), 3000);
+    setTimeout(() => setReportStep(4), 4500);
+  };
+
   const renderContent = () => {
     switch (activeTab) {
       case 'dashboard':
         return (
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} className="overview-panel">
-            <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-              <Activity className="inline-icon" size={28} /> AI COMMAND CENTER
-            </h2>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem' }}>
+              <h2 style={{ color: '#06b6d4', margin: 0, display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
+                <Activity className="inline-icon" size={28} /> AI COMMAND CENTER
+              </h2>
+              <button onClick={handleGenerateReport} style={{ background: '#06b6d4', color: '#000', border: 'none', padding: '0.6rem 1.2rem', borderRadius: '8px', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', transition: 'all 0.2s' }} onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                <Download size={18} /> Export CAG Report
+              </button>
+            </div>
             
             {/* Top Stat Cards */}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem', marginBottom: '2rem' }}>
@@ -166,13 +199,123 @@ const PoliceBudgetPlannerAgent = () => {
                 </div>
               </div>
             </div>
+            
+            {/* Report Modal */}
+            <AnimatePresence>
+              {showReportModal && (
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.8)', zIndex: 100, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <div style={{ background: '#0f172a', border: '1px solid #06b6d4', borderRadius: '16px', padding: '2rem', width: '90%', maxWidth: '500px', position: 'relative' }}>
+                    <h3 style={{ color: '#06b6d4', marginTop: 0, marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><FileText size={24}/> Generating CAG Audit Report</h3>
+                    
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2rem' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: reportStep >= 1 ? '#10b981' : '#64748b' }}>
+                        {reportStep >= 1 ? <CheckCircle2 size={18}/> : <Loader2 size={18} className="spin-anim" />}
+                        <span>Pulling Treasury Ledger Data...</span>
+                      </div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: reportStep >= 2 ? '#10b981' : '#64748b' }}>
+                        {reportStep >= 2 ? <CheckCircle2 size={18}/> : reportStep === 1 ? <Loader2 size={18} className="spin-anim" /> : <div style={{width:'18px'}}/>}
+                        <span>Cross-referencing GeM Invoices...</span>
+                      </div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: reportStep >= 3 ? '#10b981' : '#64748b' }}>
+                        {reportStep >= 3 ? <CheckCircle2 size={18}/> : reportStep === 2 ? <Loader2 size={18} className="spin-anim" /> : <div style={{width:'18px'}}/>}
+                        <span>Applying Vector DB Compliance Rules...</span>
+                      </div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: reportStep >= 4 ? '#10b981' : '#64748b' }}>
+                        {reportStep >= 4 ? <CheckCircle2 size={18}/> : reportStep === 3 ? <Loader2 size={18} className="spin-anim" /> : <div style={{width:'18px'}}/>}
+                        <span>Signing Final PDF...</span>
+                      </div>
+                    </div>
+                    
+                    {reportStep >= 4 && (
+                      <button onClick={() => setShowReportModal(false)} style={{ width: '100%', background: '#06b6d4', color: '#000', border: 'none', padding: '0.8rem', borderRadius: '8px', fontWeight: 'bold', cursor: 'pointer' }}>
+                        Download Report (.PDF)
+                      </button>
+                    )}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+            <style>{`
+              .spin-anim { animation: spin 1s linear infinite; }
+              @keyframes spin { 100% { transform: rotate(360deg); } }
+            `}</style>
+          </motion.div>
+        );
+
+      case 'ledger':
+        return (
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} className="overview-panel">
+            <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
+              <FileSpreadsheet className="inline-icon" size={28} /> AI FINANCIAL LEDGER
+            </h2>
+            <p style={{ color: '#94a3b8', marginBottom: '1.5rem' }}>Live transaction stream being audited by the Agent in real-time.</p>
+            
+            <div style={{ background: 'rgba(15,23,42,0.8)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', overflow: 'hidden' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', color: '#e2e8f0' }}>
+                <thead>
+                  <tr style={{ background: 'rgba(6,182,212,0.1)', textAlign: 'left', borderBottom: '1px solid rgba(6,182,212,0.3)' }}>
+                    <th style={{ padding: '1rem', fontWeight: '600', color: '#06b6d4' }}>Date</th>
+                    <th style={{ padding: '1rem', fontWeight: '600', color: '#06b6d4' }}>Vendor / Dept</th>
+                    <th style={{ padding: '1rem', fontWeight: '600', color: '#06b6d4' }}>Amount</th>
+                    <th style={{ padding: '1rem', fontWeight: '600', color: '#06b6d4' }}>Category</th>
+                    <th style={{ padding: '1rem', fontWeight: '600', color: '#06b6d4' }}>AI Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                    <td style={{ padding: '1rem', color: '#94a3b8' }}>Oct 12, 2023</td>
+                    <td style={{ padding: '1rem' }}>Indian Oil Corp (Fuel)</td>
+                    <td style={{ padding: '1rem', fontFamily: 'monospace', color: '#e2e8f0' }}>₹4,50,000</td>
+                    <td style={{ padding: '1rem' }}><span style={{ padding: '0.3rem 0.6rem', background: 'rgba(255,255,255,0.1)', borderRadius: '20px', fontSize: '0.8rem' }}>POL / Fuel</span></td>
+                    <td style={{ padding: '1rem' }}><span style={{ color: '#10b981', display: 'flex', alignItems: 'center', gap: '0.4rem' }}><CheckCircle2 size={16}/> Approved</span></td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)', background: 'rgba(239,68,68,0.05)' }}>
+                    <td style={{ padding: '1rem', color: '#94a3b8' }}>Oct 11, 2023</td>
+                    <td style={{ padding: '1rem' }}>Shree Motors (Garage)</td>
+                    <td style={{ padding: '1rem', fontFamily: 'monospace', color: '#e2e8f0' }}>₹82,500</td>
+                    <td style={{ padding: '1rem' }}><span style={{ padding: '0.3rem 0.6rem', background: 'rgba(255,255,255,0.1)', borderRadius: '20px', fontSize: '0.8rem' }}>Maintenance</span></td>
+                    <td style={{ padding: '1rem' }}><span style={{ color: '#ef4444', display: 'flex', alignItems: 'center', gap: '0.4rem' }}><AlertTriangle size={16}/> Blocked: Fraud</span></td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                    <td style={{ padding: '1rem', color: '#94a3b8' }}>Oct 10, 2023</td>
+                    <td style={{ padding: '1rem' }}>CyberTech Solutions</td>
+                    <td style={{ padding: '1rem', fontFamily: 'monospace', color: '#e2e8f0' }}>₹12,00,000</td>
+                    <td style={{ padding: '1rem' }}><span style={{ padding: '0.3rem 0.6rem', background: 'rgba(255,255,255,0.1)', borderRadius: '20px', fontSize: '0.8rem' }}>IT & Cyber</span></td>
+                    <td style={{ padding: '1rem' }}><span style={{ color: '#10b981', display: 'flex', alignItems: 'center', gap: '0.4rem' }}><CheckCircle2 size={16}/> Approved</span></td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                    <td style={{ padding: '1rem', color: '#94a3b8' }}>Oct 09, 2023</td>
+                    <td style={{ padding: '1rem' }}>Govt Press (Stationary)</td>
+                    <td style={{ padding: '1rem', fontFamily: 'monospace', color: '#e2e8f0' }}>₹1,15,000</td>
+                    <td style={{ padding: '1rem' }}><span style={{ padding: '0.3rem 0.6rem', background: 'rgba(255,255,255,0.1)', borderRadius: '20px', fontSize: '0.8rem' }}>Office Expense</span></td>
+                    <td style={{ padding: '1rem' }}><span style={{ color: '#10b981', display: 'flex', alignItems: 'center', gap: '0.4rem' }}><CheckCircle2 size={16}/> Approved</span></td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)', background: 'rgba(245,158,11,0.05)' }}>
+                    <td style={{ padding: '1rem', color: '#94a3b8' }}>Oct 08, 2023</td>
+                    <td style={{ padding: '1rem' }}>Alpha Security Pvt Ltd</td>
+                    <td style={{ padding: '1rem', fontFamily: 'monospace', color: '#e2e8f0' }}>₹45,00,000</td>
+                    <td style={{ padding: '1rem' }}><span style={{ padding: '0.3rem 0.6rem', background: 'rgba(255,255,255,0.1)', borderRadius: '20px', fontSize: '0.8rem' }}>CCTV Project</span></td>
+                    <td style={{ padding: '1rem' }}><span style={{ color: '#f59e0b', display: 'flex', alignItems: 'center', gap: '0.4rem' }}><Loader2 size={16} className="spin-anim"/> Pending Manual Review</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </motion.div>
         );
 
       case 'demo':
         return (
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} className="overview-panel" style={{ height: '600px', display: 'flex', flexDirection: 'column' }}>
-            <div style={{ background: 'rgba(15,23,42,0.9)', border: '1px solid rgba(6,182,212,0.3)', borderRadius: '16px', display: 'flex', flexDirection: 'column', height: '100%', overflow: 'hidden' }}>
+            {isListening && (
+              <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.7)', zIndex: 50, display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '16px', flexDirection: 'column', gap: '1rem' }}>
+                <div style={{ width: '80px', height: '80px', borderRadius: '50%', background: 'rgba(139,92,246,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', animation: 'pulse 1.5s infinite' }}>
+                  <Mic size={40} color="#c4b5fd" />
+                </div>
+                <h3 style={{ color: '#c4b5fd', fontWeight: 'normal' }}>Listening to Voice Command...</h3>
+              </div>
+            )}
+            
+            <div style={{ background: 'rgba(15,23,42,0.9)', border: '1px solid rgba(6,182,212,0.3)', borderRadius: '16px', display: 'flex', flexDirection: 'column', height: '100%', overflow: 'hidden', position: 'relative' }}>
               
               {/* Chat Header */}
               <div style={{ padding: '1rem 1.5rem', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', gap: '1rem', background: 'rgba(6,182,212,0.05)' }}>
@@ -197,7 +340,11 @@ const PoliceBudgetPlannerAgent = () => {
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', color: msg.sender === 'user' ? '#c4b5fd' : '#67e8f9', fontSize: '0.85rem', fontWeight: 'bold' }}>
                         {msg.sender === 'user' ? 'Authorized Officer' : <><Bot size={14}/> Budget AI</>}
                       </div>
-                      <div style={{ lineHeight: '1.6' }}>{msg.text}</div>
+                      <div style={{ lineHeight: '1.6' }}>
+                        {msg.text.includes("Voice input:") ? (
+                           <span><Mic size={14} style={{ marginRight: '5px', verticalAlign: 'middle', color: '#c4b5fd' }}/> {msg.text.replace("Voice input: ", "")}</span>
+                        ) : msg.text}
+                      </div>
                       
                       {msg.table && (
                         <div style={{ marginTop: '1rem', background: 'rgba(0,0,0,0.3)', borderRadius: '8px', padding: '1rem', border: '1px solid rgba(255,255,255,0.1)' }}>
@@ -257,7 +404,16 @@ const PoliceBudgetPlannerAgent = () => {
                      Generate CAG Report
                    </button>
                 </div>
-                <div style={{ display: 'flex', gap: '1rem' }}>
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                  <button 
+                    onClick={handleVoiceCommand}
+                    title="Use Voice Command"
+                    style={{ padding: '1rem', background: 'rgba(139,92,246,0.1)', border: '1px solid rgba(139,92,246,0.3)', borderRadius: '50%', color: '#c4b5fd', cursor: 'pointer', transition: 'all 0.2s', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                    onMouseOver={(e) => { e.currentTarget.style.background = 'rgba(139,92,246,0.3)'; e.currentTarget.style.transform = 'scale(1.1)'; }}
+                    onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(139,92,246,0.1)'; e.currentTarget.style.transform = 'scale(1)'; }}
+                  >
+                    <Mic size={20} />
+                  </button>
                   <input 
                     type="text" 
                     value={inputValue}
@@ -268,7 +424,7 @@ const PoliceBudgetPlannerAgent = () => {
                   />
                   <button 
                     onClick={() => handleSendMessage(inputValue)}
-                    style={{ padding: '0 1.5rem', background: '#06b6d4', border: 'none', borderRadius: '8px', color: '#000', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.2s' }}
+                    style={{ padding: '0 1.5rem', height: '100%', background: '#06b6d4', border: 'none', borderRadius: '8px', color: '#000', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.2s' }}
                     onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
                     onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
                   >
@@ -281,6 +437,11 @@ const PoliceBudgetPlannerAgent = () => {
               @keyframes bounce {
                 0%, 80%, 100% { transform: scale(0); }
                 40% { transform: scale(1); }
+              }
+              @keyframes pulse {
+                0% { box-shadow: 0 0 0 0 rgba(139,92,246,0.4); }
+                70% { box-shadow: 0 0 0 20px rgba(139,92,246,0); }
+                100% { box-shadow: 0 0 0 0 rgba(139,92,246,0); }
               }
             `}</style>
           </motion.div>
