@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bot, ArrowLeft, Terminal, Cpu, ShieldAlert, PieChart, Database, Network, Server, Code, FileText, LayoutDashboard, Zap, Target, MessageSquare, Send, AlertTriangle, CheckCircle2, TrendingUp, Activity, FileSpreadsheet, Mic, Download, Loader2, DollarSign, Map
+  Bot, ArrowLeft, Terminal, Cpu, ShieldAlert, PieChart, Database, Network, Server, Code, FileText, LayoutDashboard, Zap, Target, MessageSquare, Send, AlertTriangle, CheckCircle2, TrendingUp, Activity, FileSpreadsheet, Mic, Download, Loader2, Compass, Layers, Globe
 } from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
@@ -10,7 +10,7 @@ const tabs = [
   { id: 'overview', label: 'Agent Overview', icon: <FileText size={18} /> },
   { id: 'dashboard', label: 'Live Dashboard', icon: <LayoutDashboard size={18} /> },
   { id: 'ledger', label: 'Allocation Ledger', icon: <FileSpreadsheet size={18} /> },
-  { id: 'demo', label: 'Live AI Demo', icon: <MessageSquare size={18} /> },
+  { id: 'demo', label: 'AI Simulations', icon: <MessageSquare size={18} /> },
   { id: 'features', label: 'Deep Capabilities', icon: <Zap size={18} /> },
   { id: 'use-cases', label: 'Real-World Scenarios', icon: <Target size={18} /> },
   { id: 'architecture', label: 'Architecture', icon: <Database size={18} /> },
@@ -19,21 +19,21 @@ const tabs = [
 ];
 
 const predefinedResponses = {
-  "distribute funds": {
-    text: "Analyzing crime density and population data across 75 districts for Q4 allocation...",
-    table: true
+  "crime rate": {
+    text: "Analyzing recent crime wave in Zone 4 (Armed Robberies)...",
+    alert: "Dynamic Allocation Active: Shifting ₹1.2 Cr from 'General Maintenance' to 'Rapid Response Fuel & Arms' for Zone 4 effective immediately."
   },
-  "emergency allocation": {
-    text: "Emergency protocol initiated. Analyzing rapid deployment fund requirements for Coastal Districts.",
-    alert: "Priority Alert: Cyclone Warning active. Re-routing ₹12.5 Cr from 'Stationary & Admin' to 'Disaster Relief & Logistics' for Coastal Zone."
+  "population": {
+    text: "Correlating latest census data with current station capacities...",
+    success: "New Urban District (Pop: 1.2M) identified as under-funded by 34%. Proposing ₹4.5 Cr budget adjustment for Q3."
   },
-  "generate audit": {
-    text: "Compiling allocation rationale and predictive models for DGP review. Verification complete.",
+  "generate fajr": {
+    text: "Compiling multi-variable threat indices, crime rates, and demographic shifts.",
     success: "Fund Allocation Justification Report (FAJR) generated and cryptographically signed."
   },
   "voice input": {
-    text: "Voice Command Recognized. Processing high-priority allocation for Anti-Naxal Operations...",
-    alert: "Allocation Approved: ₹5.5 Crore dispersed to LWE (Left Wing Extremism) affected districts for immediate procurement of Mine Protected Vehicles (MPVs)."
+    text: "Voice Command Recognized. Processing emergency disaster fund allocation...",
+    alert: "Flood Response Activated: Diverting ₹5.5 Cr from 'Stationery & Admin' directly to 'Emergency Logistics & Rescue' in Coastal Districts."
   },
   "default": {
     text: "I am the Fund Allocation Expert AI. I optimize the distribution of state police budgets across districts based on real-time crime rates, population density, and emergency requirements. Click a prompt to test my capabilities."
@@ -46,7 +46,7 @@ const FundAllocationExpertAgent = () => {
   
   // Chat Demo State
   const [messages, setMessages] = useState([
-    { sender: 'ai', text: 'System Online. Secure connection established to State Treasury and Crime Records Bureau (NCRB). How can I optimize allocations today?' }
+    { sender: 'ai', text: 'Fund Allocation Engine Online. Hooked into State Crime Records Bureau (SCRB) and Census APIs. Awaiting allocation parameters.' }
   ]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -70,24 +70,22 @@ const FundAllocationExpertAgent = () => {
   const handleSendMessage = (text) => {
     if (!text.trim()) return;
     
-    // Add user message
     const newMsg = { sender: 'user', text };
     setMessages(prev => [...prev, newMsg]);
     setInputValue('');
     setIsTyping(true);
 
-    // Simulate AI thinking and response
     setTimeout(() => {
       let response = predefinedResponses["default"];
       const lowerText = text.toLowerCase();
       
-      if (lowerText.includes("distribute") || lowerText.includes("district")) {
-        response = predefinedResponses["distribute funds"];
-      } else if (lowerText.includes("emergency") || lowerText.includes("cyclone")) {
-        response = predefinedResponses["emergency allocation"];
-      } else if (lowerText.includes("audit") || lowerText.includes("report")) {
-        response = predefinedResponses["generate audit"];
-      } else if (lowerText.includes("naxal") || lowerText.includes("voice")) {
+      if (lowerText.includes("crime") || lowerText.includes("wave")) {
+        response = predefinedResponses["crime rate"];
+      } else if (lowerText.includes("population") || lowerText.includes("demographic")) {
+        response = predefinedResponses["population"];
+      } else if (lowerText.includes("fajr") || lowerText.includes("report") || lowerText.includes("justification")) {
+        response = predefinedResponses["generate fajr"];
+      } else if (lowerText.includes("flood") || lowerText.includes("voice") || lowerText.includes("emergency")) {
         response = predefinedResponses["voice input"];
       }
 
@@ -100,7 +98,7 @@ const FundAllocationExpertAgent = () => {
     setIsListening(true);
     setTimeout(() => {
       setIsListening(false);
-      handleSendMessage("Voice input: Allocate emergency funds for Anti-Naxal operations in affected districts.");
+      handleSendMessage("Voice input: Allocate emergency disaster funds for coastal districts.");
     }, 2500);
   };
 
@@ -114,121 +112,140 @@ const FundAllocationExpertAgent = () => {
 
   const renderContent = () => {
     switch (activeTab) {
+      case 'overview':
+        return (
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel" style={{ background: 'rgba(15,23,42,0.8)', border: '1px solid rgba(139,92,246,0.4)', borderRadius: '16px', padding: '3rem', position: 'relative', overflow: 'hidden' }}>
+            <div style={{ position: 'absolute', top: '-10%', left: '-5%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(139,92,246,0.15) 0%, transparent 70%)', zIndex: 0 }}></div>
+            
+            <div style={{ position: 'relative', zIndex: 1, display: 'flex', gap: '3rem', alignItems: 'center' }}>
+              <div style={{ width: '400px', height: '300px', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
+                <motion.div animate={{ rotate: -360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }} style={{ position: 'absolute', width: '250px', height: '250px', border: '2px dashed rgba(139,92,246,0.3)', borderRadius: '50%' }} />
+                <motion.div animate={{ rotate: 360 }} transition={{ duration: 15, repeat: Infinity, ease: "linear" }} style={{ position: 'absolute', width: '200px', height: '200px', border: '2px solid rgba(139,92,246,0.1)', borderRadius: '50%' }} />
+                <div style={{ width: '120px', height: '120px', background: 'rgba(15,23,42,0.9)', border: '2px solid #8b5cf6', borderRadius: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: '0 0 30px rgba(139,92,246,0.5)', zIndex: 2 }}>
+                  <Compass size={50} color="#8b5cf6" />
+                </div>
+              </div>
+              <div style={{ flex: 1 }}>
+                <h2 style={{ fontSize: '2.5rem', color: '#fff', marginBottom: '1rem', textShadow: '0 0 20px rgba(139,92,246,0.5)' }}>Fund Allocation <span style={{ color: '#a78bfa' }}>Expert AI</span></h2>
+                <p style={{ fontSize: '1.2rem', color: '#cbd5e1', lineHeight: '1.8', marginBottom: '2rem' }}>
+                  The Fund Allocation Expert AI completely transforms how state police budgets are distributed. Instead of politically motivated or static historical allocations, this AI uses real-time crime data, population metrics, and threat intelligence to dynamically dispatch funds exactly where they are needed most.
+                </p>
+                <div style={{ display: 'flex', gap: '1rem' }}>
+                  <div style={{ background: 'rgba(139,92,246,0.1)', borderLeft: '4px solid #8b5cf6', padding: '1rem', borderRadius: '0 8px 8px 0' }}>
+                     <h4 style={{ color: '#c4b5fd', margin: '0 0 0.5rem 0' }}>Dynamic Re-routing</h4>
+                     <p style={{ color: '#94a3b8', margin: 0, fontSize: '0.9rem' }}>Shifts funds mid-year based on sudden crime waves.</p>
+                  </div>
+                  <div style={{ background: 'rgba(16,185,129,0.1)', borderLeft: '4px solid #10b981', padding: '1rem', borderRadius: '0 8px 8px 0' }}>
+                     <h4 style={{ color: '#10b981', margin: '0 0 0.5rem 0' }}>Data-Backed Justification</h4>
+                     <p style={{ color: '#94a3b8', margin: 0, fontSize: '0.9rem' }}>Every allocation comes with a cryptographically signed FAJR report.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        );
+
       case 'dashboard':
         return (
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} className="overview-panel">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', borderBottom: '1px solid rgba(139,92,246,0.3)', paddingBottom: '1rem' }}>
-              <h2 style={{ color: '#c4b5fd', margin: 0, display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-                <Activity className="inline-icon" size={28} color="#c4b5fd"/> ALLOCATION COMMAND CENTER
+              <h2 style={{ color: '#a78bfa', margin: 0, display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
+                <Activity className="inline-icon" size={28} /> DYNAMIC ALLOCATION DASHBOARD
               </h2>
               <button onClick={handleGenerateReport} style={{ background: '#8b5cf6', color: '#fff', border: 'none', padding: '0.6rem 1.2rem', borderRadius: '8px', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', transition: 'all 0.2s' }} onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}>
-                <Download size={18} /> Export Allocation Strategy
+                <Download size={18} /> Export FAJR Report
               </button>
             </div>
             
-            {/* Top Stat Cards */}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem', marginBottom: '2rem' }}>
               <div style={{ background: 'rgba(15,23,42,0.8)', border: '1px solid rgba(139,92,246,0.4)', borderRadius: '12px', padding: '1.5rem', position: 'relative', overflow: 'hidden' }}>
-                <div style={{ position: 'absolute', top: 0, right: 0, background: 'rgba(139,92,246,0.2)', padding: '0.5rem', borderBottomLeftRadius: '12px' }}><DollarSign size={20} color="#c4b5fd" /></div>
-                <h4 style={{ color: '#94a3b8', fontSize: '0.9rem', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Total Distributable Funds</h4>
+                <div style={{ position: 'absolute', top: 0, right: 0, background: 'rgba(139,92,246,0.2)', padding: '0.5rem', borderBottomLeftRadius: '12px' }}><Layers size={20} color="#8b5cf6" /></div>
+                <h4 style={{ color: '#94a3b8', fontSize: '0.9rem', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Re-allocated (Q3)</h4>
                 <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#fff', display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
-                  ₹450 Cr <span style={{ fontSize: '1rem', color: '#10b981', display: 'flex', alignItems: 'center' }}><TrendingUp size={16}/> Q4 Influx</span>
+                  ₹18.5 Cr <span style={{ fontSize: '1rem', color: '#10b981', display: 'flex', alignItems: 'center' }}><TrendingUp size={16}/> Dynamic</span>
                 </div>
                 <div style={{ marginTop: '1rem', height: '6px', background: 'rgba(255,255,255,0.1)', borderRadius: '3px', overflow: 'hidden' }}>
-                  <motion.div initial={{ width: 0 }} animate={{ width: '85%' }} transition={{ duration: 1.5, ease: "easeOut" }} style={{ height: '100%', background: 'linear-gradient(90deg, #8b5cf6, #ec4899)' }} />
+                  <motion.div initial={{ width: 0 }} animate={{ width: '65%' }} transition={{ duration: 1.5, ease: "easeOut" }} style={{ height: '100%', background: 'linear-gradient(90deg, #8b5cf6, #c4b5fd)' }} />
                 </div>
-              </div>
-
-              <div style={{ background: 'rgba(15,23,42,0.8)', border: '1px solid rgba(6,182,212,0.4)', borderRadius: '12px', padding: '1.5rem', position: 'relative', overflow: 'hidden' }}>
-                <div style={{ position: 'absolute', top: 0, right: 0, background: 'rgba(6,182,212,0.2)', padding: '0.5rem', borderBottomLeftRadius: '12px' }}><Map size={20} color="#06b6d4" /></div>
-                <h4 style={{ color: '#94a3b8', fontSize: '0.9rem', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Districts Optimized</h4>
-                <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#67e8f9', display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
-                  75/75 <span style={{ fontSize: '1rem', color: '#cbd5e1' }}>Statewide</span>
-                </div>
-                <p style={{ color: '#94a3b8', fontSize: '0.85rem', marginTop: '0.5rem' }}>AI mapped 100% of spatial crime data.</p>
               </div>
 
               <div style={{ background: 'rgba(15,23,42,0.8)', border: '1px solid rgba(239,68,68,0.4)', borderRadius: '12px', padding: '1.5rem', position: 'relative', overflow: 'hidden' }}>
-                <div style={{ position: 'absolute', top: 0, right: 0, background: 'rgba(239,68,68,0.2)', padding: '0.5rem', borderBottomLeftRadius: '12px' }}><AlertTriangle size={20} color="#ef4444" /></div>
-                <h4 style={{ color: '#94a3b8', fontSize: '0.9rem', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Under-funded High-Risk Zones</h4>
-                <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#fca5a5', display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
-                  3 <span style={{ fontSize: '1rem', color: '#ef4444', display: 'flex', alignItems: 'center' }}>Critical Deficit</span>
+                <div style={{ position: 'absolute', top: 0, right: 0, background: 'rgba(239,68,68,0.2)', padding: '0.5rem', borderBottomLeftRadius: '12px' }}><ShieldAlert size={20} color="#ef4444" /></div>
+                <h4 style={{ color: '#94a3b8', fontSize: '0.9rem', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Under-funded Zones</h4>
+                <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#ef4444', display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
+                  3 <span style={{ fontSize: '1rem', color: '#cbd5e1' }}>Zones</span>
                 </div>
-                <p style={{ color: '#fca5a5', fontSize: '0.85rem', marginTop: '0.5rem' }}>AI is re-routing ₹25 Cr to cover deficits.</p>
+                <p style={{ color: '#fca5a5', fontSize: '0.85rem', marginTop: '0.5rem' }}>Deficit: ₹4.2 Cr (Auto-adjusting)</p>
+              </div>
+
+              <div style={{ background: 'rgba(15,23,42,0.8)', border: '1px solid rgba(16,185,129,0.4)', borderRadius: '12px', padding: '1.5rem', position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', top: 0, right: 0, background: 'rgba(16,185,129,0.2)', padding: '0.5rem', borderBottomLeftRadius: '12px' }}><Globe size={20} color="#10b981" /></div>
+                <h4 style={{ color: '#94a3b8', fontSize: '0.9rem', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Demographic Parity</h4>
+                <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#10b981', display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
+                  94.2% <span style={{ fontSize: '1rem', color: '#10b981', display: 'flex', alignItems: 'center' }}>Aligned</span>
+                </div>
+                <p style={{ color: '#6ee7b7', fontSize: '0.85rem', marginTop: '0.5rem' }}>Budget per capita optimized.</p>
               </div>
             </div>
 
-            {/* Department Breakdown */}
-            <div className="panel" style={{ padding: '2rem' }}>
+            <div className="panel" style={{ padding: '2rem', border: '1px solid rgba(139,92,246,0.3)' }}>
               <h3 style={{ color: '#e2e8f0', marginBottom: '1.5rem', fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <Target size={20} color="#8b5cf6"/> Live District Allocation Priorities
+                <Database size={20} color="#8b5cf6"/> AI Fund Re-Routing (Live)
               </h3>
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                 <div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                    <span style={{ color: '#cbd5e1', fontWeight: 'bold' }}>District A (High Cyber Crime Density)</span>
-                    <span style={{ color: '#10b981', fontWeight: 'bold' }}>₹42 Cr (Allocated)</span>
+                    <span style={{ color: '#cbd5e1', fontWeight: 'bold' }}>West Zone (Crime Spike: +15%)</span>
+                    <span style={{ color: '#ef4444', fontWeight: 'bold' }}>+ ₹2.5 Cr (Emergency Route)</span>
                   </div>
                   <div style={{ height: '8px', background: 'rgba(255,255,255,0.1)', borderRadius: '4px', overflow: 'hidden' }}>
-                    <motion.div initial={{ width: 0 }} animate={{ width: '90%' }} transition={{ duration: 1 }} style={{ height: '100%', background: '#10b981', boxShadow: '0 0 10px #10b981' }} />
+                    <motion.div initial={{ width: 0 }} animate={{ width: '85%' }} transition={{ duration: 1 }} style={{ height: '100%', background: '#ef4444', boxShadow: '0 0 10px #ef4444' }} />
                   </div>
-                  <p style={{ color: '#94a3b8', fontSize: '0.85rem', marginTop: '0.5rem' }}>AI Action: Increased IT budget by 22% due to 40% spike in financial frauds last quarter.</p>
+                  <p style={{ color: '#94a3b8', fontSize: '0.85rem', marginTop: '0.5rem' }}>AI Action: Diverting funds from HQ unutilized capital to West Zone operational fund.</p>
                 </div>
 
                 <div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                    <span style={{ color: '#cbd5e1', fontWeight: 'bold' }}>District B (Border/Smuggling Prone)</span>
-                    <span style={{ color: '#f59e0b', fontWeight: 'bold' }}>₹28 Cr (Allocating...)</span>
+                    <span style={{ color: '#cbd5e1', fontWeight: 'bold' }}>South Zone (Population Growth: +8%)</span>
+                    <span style={{ color: '#8b5cf6', fontWeight: 'bold' }}>+ ₹1.2 Cr (Structural Route)</span>
                   </div>
                   <div style={{ height: '8px', background: 'rgba(255,255,255,0.1)', borderRadius: '4px', overflow: 'hidden' }}>
-                    <motion.div initial={{ width: 0 }} animate={{ width: '65%' }} transition={{ duration: 1, delay: 0.2 }} style={{ height: '100%', background: '#f59e0b' }} />
+                    <motion.div initial={{ width: 0 }} animate={{ width: '55%' }} transition={{ duration: 1, delay: 0.2 }} style={{ height: '100%', background: '#8b5cf6' }} />
                   </div>
-                  <p style={{ color: '#94a3b8', fontSize: '0.85rem', marginTop: '0.5rem' }}>AI Action: Directing funds specifically to Night-Vision Drone procurement and Checkpost modernization.</p>
-                </div>
-
-                <div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                    <span style={{ color: '#cbd5e1', fontWeight: 'bold' }}>District C (Low Crime / Rural)</span>
-                    <span style={{ color: '#3b82f6', fontWeight: 'bold' }}>₹12 Cr (Optimized)</span>
-                  </div>
-                  <div style={{ height: '8px', background: 'rgba(255,255,255,0.1)', borderRadius: '4px', overflow: 'hidden' }}>
-                    <motion.div initial={{ width: 0 }} animate={{ width: '25%' }} transition={{ duration: 1, delay: 0.4 }} style={{ height: '100%', background: '#3b82f6' }} />
-                  </div>
-                  <p style={{ color: '#94a3b8', fontSize: '0.85rem', marginTop: '0.5rem' }}>AI Action: Reduced VIP security budget. Redirected surplus ₹3 Cr to District A.</p>
+                  <p style={{ color: '#94a3b8', fontSize: '0.85rem', marginTop: '0.5rem' }}>AI Action: Permanent budget baseline increased for next fiscal year.</p>
                 </div>
               </div>
             </div>
-            
-            {/* Report Modal */}
+
             <AnimatePresence>
               {showReportModal && (
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.8)', zIndex: 100, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <div style={{ background: '#0f172a', border: '1px solid #8b5cf6', borderRadius: '16px', padding: '2rem', width: '90%', maxWidth: '500px', position: 'relative' }}>
-                    <h3 style={{ color: '#c4b5fd', marginTop: 0, marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><FileText size={24}/> Generating Allocation Strategy Report</h3>
+                    <h3 style={{ color: '#c4b5fd', marginTop: 0, marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><FileText size={24}/> Generating FAJR Report</h3>
                     
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2rem' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: reportStep >= 1 ? '#10b981' : '#64748b' }}>
                         {reportStep >= 1 ? <CheckCircle2 size={18}/> : <Loader2 size={18} className="spin-anim" />}
-                        <span>Ingesting State Crime Records (NCRB)...</span>
+                        <span>Pulling CCTNS Crime Density Data...</span>
                       </div>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: reportStep >= 2 ? '#10b981' : '#64748b' }}>
                         {reportStep >= 2 ? <CheckCircle2 size={18}/> : reportStep === 1 ? <Loader2 size={18} className="spin-anim" /> : <div style={{width:'18px'}}/>}
-                        <span>Running Resource Distribution Algorithm...</span>
+                        <span>Correlating with Demographic Shifts...</span>
                       </div>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: reportStep >= 3 ? '#10b981' : '#64748b' }}>
                         {reportStep >= 3 ? <CheckCircle2 size={18}/> : reportStep === 2 ? <Loader2 size={18} className="spin-anim" /> : <div style={{width:'18px'}}/>}
-                        <span>Validating Home Ministry Equity Rules...</span>
+                        <span>Calculating Parity Formulas...</span>
                       </div>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: reportStep >= 4 ? '#10b981' : '#64748b' }}>
                         {reportStep >= 4 ? <CheckCircle2 size={18}/> : reportStep === 3 ? <Loader2 size={18} className="spin-anim" /> : <div style={{width:'18px'}}/>}
-                        <span>Generating District-wise PDF...</span>
+                        <span>Signing Final Justification PDF...</span>
                       </div>
                     </div>
                     
                     {reportStep >= 4 && (
                       <button onClick={() => setShowReportModal(false)} style={{ width: '100%', background: '#8b5cf6', color: '#fff', border: 'none', padding: '0.8rem', borderRadius: '8px', fontWeight: 'bold', cursor: 'pointer' }}>
-                        Download Strategy (.PDF)
+                        Download Report (.PDF)
                       </button>
                     )}
                   </div>
@@ -244,51 +261,44 @@ const FundAllocationExpertAgent = () => {
 
       case 'ledger':
         return (
-          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} className="overview-panel">
-            <h2 style={{ color: '#c4b5fd', marginBottom: '1.5rem', borderBottom: '1px solid rgba(139,92,246,0.3)', paddingBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-              <FileSpreadsheet className="inline-icon" size={28} /> DYNAMIC ALLOCATION LEDGER
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} className="overview-panel" style={{ border: '1px solid rgba(139,92,246, 0.3)' }}>
+            <h2 style={{ color: '#a78bfa', marginBottom: '1.5rem', borderBottom: '1px solid rgba(139,92,246,0.3)', paddingBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
+              <FileSpreadsheet className="inline-icon" size={28} /> AI ALLOCATION LEDGER
             </h2>
-            <p style={{ color: '#94a3b8', marginBottom: '1.5rem' }}>Real-time fund dispatch log managed autonomously by the AI.</p>
+            <p style={{ color: '#94a3b8', marginBottom: '1.5rem' }}>Dynamic fund shifts recorded immutably on the ledger.</p>
             
             <div style={{ background: 'rgba(15,23,42,0.8)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', overflow: 'hidden' }}>
               <table style={{ width: '100%', borderCollapse: 'collapse', color: '#e2e8f0' }}>
                 <thead>
                   <tr style={{ background: 'rgba(139,92,246,0.1)', textAlign: 'left', borderBottom: '1px solid rgba(139,92,246,0.3)' }}>
-                    <th style={{ padding: '1rem', fontWeight: '600', color: '#c4b5fd' }}>Dispatch Date</th>
-                    <th style={{ padding: '1rem', fontWeight: '600', color: '#c4b5fd' }}>Target District</th>
-                    <th style={{ padding: '1rem', fontWeight: '600', color: '#c4b5fd' }}>Allocated Amount</th>
-                    <th style={{ padding: '1rem', fontWeight: '600', color: '#c4b5fd' }}>Primary Purpose</th>
+                    <th style={{ padding: '1rem', fontWeight: '600', color: '#c4b5fd' }}>Date</th>
+                    <th style={{ padding: '1rem', fontWeight: '600', color: '#c4b5fd' }}>From Node</th>
+                    <th style={{ padding: '1rem', fontWeight: '600', color: '#c4b5fd' }}>To Node</th>
+                    <th style={{ padding: '1rem', fontWeight: '600', color: '#c4b5fd' }}>Amount</th>
                     <th style={{ padding: '1rem', fontWeight: '600', color: '#c4b5fd' }}>AI Justification</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                    <td style={{ padding: '1rem', color: '#94a3b8' }}>Nov 02, 2023</td>
-                    <td style={{ padding: '1rem' }}>Varanasi (Zone 1)</td>
-                    <td style={{ padding: '1rem', fontFamily: 'monospace', color: '#e2e8f0' }}>₹15,00,00,000</td>
-                    <td style={{ padding: '1rem' }}><span style={{ padding: '0.3rem 0.6rem', background: 'rgba(255,255,255,0.1)', borderRadius: '20px', fontSize: '0.8rem' }}>Mega Event</span></td>
-                    <td style={{ padding: '1rem' }}><span style={{ color: '#10b981', display: 'flex', alignItems: 'center', gap: '0.4rem' }}><CheckCircle2 size={16}/> High Crowd Density</span></td>
+                    <td style={{ padding: '1rem', color: '#94a3b8' }}>Oct 12, 2023</td>
+                    <td style={{ padding: '1rem' }}>HQ Admin</td>
+                    <td style={{ padding: '1rem' }}>Zone 4 (Armed)</td>
+                    <td style={{ padding: '1rem', fontFamily: 'monospace', color: '#10b981' }}>+ ₹1,20,00,000</td>
+                    <td style={{ padding: '1rem', fontSize: '0.85rem' }}>Crime Spike (+15%)</td>
                   </tr>
                   <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                    <td style={{ padding: '1rem', color: '#94a3b8' }}>Nov 01, 2023</td>
-                    <td style={{ padding: '1rem' }}>Bastar Region</td>
-                    <td style={{ padding: '1rem', fontFamily: 'monospace', color: '#e2e8f0' }}>₹8,50,00,000</td>
-                    <td style={{ padding: '1rem' }}><span style={{ padding: '0.3rem 0.6rem', background: 'rgba(255,255,255,0.1)', borderRadius: '20px', fontSize: '0.8rem' }}>Tactical Gear</span></td>
-                    <td style={{ padding: '1rem' }}><span style={{ color: '#ef4444', display: 'flex', alignItems: 'center', gap: '0.4rem' }}><AlertTriangle size={16}/> Critical Threat Level</span></td>
+                    <td style={{ padding: '1rem', color: '#94a3b8' }}>Oct 11, 2023</td>
+                    <td style={{ padding: '1rem' }}>Central Pool</td>
+                    <td style={{ padding: '1rem' }}>Coastal Dist.</td>
+                    <td style={{ padding: '1rem', fontFamily: 'monospace', color: '#10b981' }}>+ ₹5,50,00,000</td>
+                    <td style={{ padding: '1rem', fontSize: '0.85rem' }}>Flood Emergency</td>
                   </tr>
                   <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                    <td style={{ padding: '1rem', color: '#94a3b8' }}>Oct 28, 2023</td>
-                    <td style={{ padding: '1rem' }}>Gurugram City</td>
-                    <td style={{ padding: '1rem', fontFamily: 'monospace', color: '#e2e8f0' }}>₹22,00,00,000</td>
-                    <td style={{ padding: '1rem' }}><span style={{ padding: '0.3rem 0.6rem', background: 'rgba(255,255,255,0.1)', borderRadius: '20px', fontSize: '0.8rem' }}>Cyber Infra</span></td>
-                    <td style={{ padding: '1rem' }}><span style={{ color: '#10b981', display: 'flex', alignItems: 'center', gap: '0.4rem' }}><CheckCircle2 size={16}/> IT Crime Spike</span></td>
-                  </tr>
-                  <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                    <td style={{ padding: '1rem', color: '#94a3b8' }}>Oct 25, 2023</td>
-                    <td style={{ padding: '1rem' }}>District Rural-3</td>
-                    <td style={{ padding: '1rem', fontFamily: 'monospace', color: '#e2e8f0' }}>-₹3,00,00,000</td>
-                    <td style={{ padding: '1rem' }}><span style={{ padding: '0.3rem 0.6rem', background: 'rgba(239,68,68,0.2)', color: '#fca5a5', borderRadius: '20px', fontSize: '0.8rem' }}>Fund Recall</span></td>
-                    <td style={{ padding: '1rem' }}><span style={{ color: '#f59e0b', display: 'flex', alignItems: 'center', gap: '0.4rem' }}><CheckCircle2 size={16}/> Surplus Unused</span></td>
+                    <td style={{ padding: '1rem', color: '#94a3b8' }}>Oct 10, 2023</td>
+                    <td style={{ padding: '1rem' }}>Zone 2</td>
+                    <td style={{ padding: '1rem' }}>Central Pool</td>
+                    <td style={{ padding: '1rem', fontFamily: 'monospace', color: '#ef4444' }}>- ₹45,00,000</td>
+                    <td style={{ padding: '1rem', fontSize: '0.85rem' }}>Underutilization Reclaim</td>
                   </tr>
                 </tbody>
               </table>
@@ -298,25 +308,23 @@ const FundAllocationExpertAgent = () => {
 
       case 'demo':
         return (
-          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} className="overview-panel" style={{ height: '600px', display: 'flex', flexDirection: 'column' }}>
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} className="overview-panel" style={{ height: '600px', display: 'flex', flexDirection: 'column', border: '1px solid rgba(139,92,246, 0.3)' }}>
             {isListening && (
               <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.7)', zIndex: 50, display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '16px', flexDirection: 'column', gap: '1rem' }}>
-                <div style={{ width: '80px', height: '80px', borderRadius: '50%', background: 'rgba(139,92,246,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', animation: 'pulse 1.5s infinite' }}>
-                  <Mic size={40} color="#c4b5fd" />
+                <div style={{ width: '80px', height: '80px', borderRadius: '50%', background: 'rgba(139,92,246, 0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', animation: 'pulse 1.5s infinite' }}>
+                  <Mic size={40} color="#a78bfa" />
                 </div>
-                <h3 style={{ color: '#c4b5fd', fontWeight: 'normal' }}>Listening to Voice Command...</h3>
+                <h3 style={{ color: '#a78bfa', fontWeight: 'normal' }}>Listening to Voice Command...</h3>
               </div>
             )}
             
-            <div style={{ background: 'rgba(15,23,42,0.9)', border: '1px solid rgba(139,92,246,0.3)', borderRadius: '16px', display: 'flex', flexDirection: 'column', height: '100%', overflow: 'hidden', position: 'relative' }}>
+            <div style={{ background: 'rgba(15,23,42,0.9)', border: '1px solid rgba(139,92,246, 0.3)', borderRadius: '16px', display: 'flex', flexDirection: 'column', height: '100%', overflow: 'hidden', position: 'relative' }}>
               
-              {/* Chat Header */}
-              <div style={{ padding: '1rem 1.5rem', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', gap: '1rem', background: 'rgba(139,92,246,0.05)' }}>
-                <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#10b981', boxShadow: '0 0 10px #10b981' }}></div>
+              <div style={{ padding: '1rem 1.5rem', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', gap: '1rem', background: 'rgba(139,92,246, 0.05)' }}>
+                <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#8b5cf6', boxShadow: '0 0 10px #8b5cf6' }}></div>
                 <h3 style={{ margin: 0, color: '#e2e8f0', fontSize: '1.1rem' }}>Allocation Expert - Interactive Terminal</h3>
               </div>
 
-              {/* Chat Messages */}
               <div style={{ flex: 1, overflowY: 'auto', padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                 {messages.map((msg, idx) => (
                   <div key={idx} style={{ display: 'flex', justifyContent: msg.sender === 'user' ? 'flex-end' : 'flex-start' }}>
@@ -324,14 +332,14 @@ const FundAllocationExpertAgent = () => {
                       maxWidth: '80%', 
                       padding: '1rem 1.5rem', 
                       borderRadius: '12px',
-                      background: msg.sender === 'user' ? 'rgba(14,165,233,0.2)' : 'rgba(139,92,246,0.1)',
-                      border: `1px solid ${msg.sender === 'user' ? 'rgba(14,165,233,0.4)' : 'rgba(139,92,246,0.3)'}`,
+                      background: msg.sender === 'user' ? 'rgba(139,92,246,0.2)' : 'rgba(139,92,246,0.05)',
+                      border: `1px solid ${msg.sender === 'user' ? 'rgba(139,92,246,0.4)' : 'rgba(139,92,246,0.3)'}`,
                       color: '#f8fafc',
                       borderBottomRightRadius: msg.sender === 'user' ? '4px' : '12px',
                       borderBottomLeftRadius: msg.sender === 'ai' ? '4px' : '12px'
                     }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', color: msg.sender === 'user' ? '#7dd3fc' : '#c4b5fd', fontSize: '0.85rem', fontWeight: 'bold' }}>
-                        {msg.sender === 'user' ? 'DGP Finance' : <><Bot size={14}/> Allocation AI</>}
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', color: msg.sender === 'user' ? '#c4b5fd' : '#8b5cf6', fontSize: '0.85rem', fontWeight: 'bold' }}>
+                        {msg.sender === 'user' ? 'Strategy Officer' : <><Bot size={14}/> Allocation AI</>}
                       </div>
                       <div style={{ lineHeight: '1.6' }}>
                         {msg.text.includes("Voice input:") ? (
@@ -339,20 +347,6 @@ const FundAllocationExpertAgent = () => {
                         ) : msg.text}
                       </div>
                       
-                      {msg.table && (
-                        <div style={{ marginTop: '1rem', background: 'rgba(0,0,0,0.3)', borderRadius: '8px', padding: '1rem', border: '1px solid rgba(255,255,255,0.1)' }}>
-                          <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '0.5rem', marginBottom: '0.5rem', color: '#cbd5e1' }}>
-                            <span>Target Zone</span><span>Requested</span><span>AI Allocated</span><span>Priority</span>
-                          </div>
-                          <div style={{ display: 'flex', justifyContent: 'space-between', color: '#94a3b8', fontSize: '0.9rem', marginBottom: '0.4rem' }}>
-                            <span>Metro City IT Cell</span><span>₹15 Cr</span><span style={{ color: '#10b981' }}>₹15 Cr</span><span>High</span>
-                          </div>
-                          <div style={{ display: 'flex', justifyContent: 'space-between', color: '#94a3b8', fontSize: '0.9rem' }}>
-                            <span>Rural Station Dev</span><span>₹10 Cr</span><span style={{ color: '#f59e0b' }}>₹6 Cr</span><span>Med</span>
-                          </div>
-                        </div>
-                      )}
-
                       {msg.alert && (
                         <div style={{ marginTop: '1rem', background: 'rgba(239,68,68,0.1)', borderLeft: '4px solid #ef4444', padding: '1rem', borderRadius: '4px', display: 'flex', gap: '0.8rem', alignItems: 'flex-start' }}>
                           <AlertTriangle color="#ef4444" size={20} style={{ flexShrink: 0, marginTop: '2px' }}/>
@@ -384,27 +378,20 @@ const FundAllocationExpertAgent = () => {
                 <div ref={chatEndRef} />
               </div>
 
-              {/* Chat Input Area */}
               <div style={{ padding: '1.5rem', borderTop: '1px solid rgba(255,255,255,0.05)', background: 'rgba(0,0,0,0.2)' }}>
                 <div style={{ display: 'flex', gap: '0.8rem', marginBottom: '1rem', overflowX: 'auto', paddingBottom: '0.5rem' }}>
-                   <button onClick={() => handleSendMessage("Distribute Q4 funds across 75 districts")} style={{ whiteSpace: 'nowrap', padding: '0.5rem 1rem', background: 'rgba(14,165,233,0.1)', border: '1px solid rgba(14,165,233,0.4)', borderRadius: '20px', color: '#7dd3fc', fontSize: '0.85rem', cursor: 'pointer', transition: 'all 0.2s' }}>
-                     Distribute Q4 Funds
+                   <button onClick={() => handleSendMessage("Correlate crime rates in Zone 4 for budget shifts.")} style={{ whiteSpace: 'nowrap', padding: '0.5rem 1rem', background: 'rgba(139,92,246,0.1)', border: '1px solid rgba(139,92,246,0.4)', borderRadius: '20px', color: '#c4b5fd', fontSize: '0.85rem', cursor: 'pointer', transition: 'all 0.2s' }}>
+                     Crime Rate Shift
                    </button>
-                   <button onClick={() => handleSendMessage("Need emergency allocation for coastal cyclone")} style={{ whiteSpace: 'nowrap', padding: '0.5rem 1rem', background: 'rgba(14,165,233,0.1)', border: '1px solid rgba(14,165,233,0.4)', borderRadius: '20px', color: '#7dd3fc', fontSize: '0.85rem', cursor: 'pointer', transition: 'all 0.2s' }}>
-                     Cyclone Emergency
+                   <button onClick={() => handleSendMessage("Analyze population data for under-funded districts.")} style={{ whiteSpace: 'nowrap', padding: '0.5rem 1rem', background: 'rgba(139,92,246,0.1)', border: '1px solid rgba(139,92,246,0.4)', borderRadius: '20px', color: '#c4b5fd', fontSize: '0.85rem', cursor: 'pointer', transition: 'all 0.2s' }}>
+                     Population Parity
                    </button>
-                   <button onClick={() => handleSendMessage("Generate audit report for allocations")} style={{ whiteSpace: 'nowrap', padding: '0.5rem 1rem', background: 'rgba(14,165,233,0.1)', border: '1px solid rgba(14,165,233,0.4)', borderRadius: '20px', color: '#7dd3fc', fontSize: '0.85rem', cursor: 'pointer', transition: 'all 0.2s' }}>
-                     Generate Justification Audit
+                   <button onClick={() => handleSendMessage("Generate FAJR Report")} style={{ whiteSpace: 'nowrap', padding: '0.5rem 1rem', background: 'rgba(139,92,246,0.1)', border: '1px solid rgba(139,92,246,0.4)', borderRadius: '20px', color: '#c4b5fd', fontSize: '0.85rem', cursor: 'pointer', transition: 'all 0.2s' }}>
+                     Generate FAJR
                    </button>
                 </div>
                 <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-                  <button 
-                    onClick={handleVoiceCommand}
-                    title="Use Voice Command"
-                    style={{ padding: '1rem', background: 'rgba(14,165,233,0.1)', border: '1px solid rgba(14,165,233,0.3)', borderRadius: '50%', color: '#7dd3fc', cursor: 'pointer', transition: 'all 0.2s', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-                    onMouseOver={(e) => { e.currentTarget.style.background = 'rgba(14,165,233,0.3)'; e.currentTarget.style.transform = 'scale(1.1)'; }}
-                    onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(14,165,233,0.1)'; e.currentTarget.style.transform = 'scale(1)'; }}
-                  >
+                  <button onClick={handleVoiceCommand} style={{ background: 'rgba(139,92,246,0.2)', border: '1px solid rgba(139,92,246,0.4)', borderRadius: '50%', width: '50px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', color: '#a78bfa', transition: 'all 0.2s' }} onMouseOver={e=>e.currentTarget.style.background='rgba(139,92,246,0.4)'} onMouseOut={e=>e.currentTarget.style.background='rgba(139,92,246,0.2)'}>
                     <Mic size={20} />
                   </button>
                   <input 
@@ -412,101 +399,39 @@ const FundAllocationExpertAgent = () => {
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyPress={(e) => e.key === 'Enter' && handleSendMessage(inputValue)}
-                    placeholder="Ask Allocation AI (e.g., 'Allocate funds to District X')"
-                    style={{ flex: 1, padding: '1rem 1.5rem', borderRadius: '8px', background: 'rgba(15,23,42,0.8)', border: '1px solid rgba(255,255,255,0.1)', color: '#fff', outline: 'none', fontSize: '1rem' }}
+                    placeholder="Type a command for the Allocation AI..." 
+                    style={{ flex: 1, background: 'rgba(0,0,0,0.5)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '1rem', color: '#fff', fontSize: '1rem', outline: 'none' }}
+                    onFocus={e => e.target.style.border = '1px solid rgba(139,92,246,0.5)'}
+                    onBlur={e => e.target.style.border = '1px solid rgba(255,255,255,0.1)'}
                   />
-                  <button 
-                    onClick={() => handleSendMessage(inputValue)}
-                    style={{ padding: '0 1.5rem', height: '100%', background: '#8b5cf6', border: 'none', borderRadius: '8px', color: '#fff', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.2s' }}
-                    onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                    onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
-                  >
+                  <button onClick={() => handleSendMessage(inputValue)} style={{ background: '#8b5cf6', color: '#fff', border: 'none', borderRadius: '12px', padding: '0 1.5rem', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', fontWeight: 'bold' }}>
                     <Send size={20} />
                   </button>
                 </div>
               </div>
             </div>
-            <style>{`
-              @keyframes bounce {
-                0%, 80%, 100% { transform: scale(0); }
-                40% { transform: scale(1); }
-              }
-              @keyframes pulse {
-                0% { box-shadow: 0 0 0 0 rgba(139,92,246,0.4); }
-                70% { box-shadow: 0 0 0 20px rgba(139,92,246,0); }
-                100% { box-shadow: 0 0 0 0 rgba(139,92,246,0); }
-              }
-            `}</style>
           </motion.div>
         );
 
-      case 'overview':
-        return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
-            <h2 style={{ color: '#c4b5fd', marginBottom: '1.5rem', borderBottom: '1px solid rgba(139,92,246,0.3)', paddingBottom: '1rem' }}>
-              <Bot className="inline-icon" size={28} /> AGENT OVERVIEW & NECESSITY
-            </h2>
-            
-            <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '2rem' }}>
-              The <strong>Fund Allocation Expert AI</strong> completely transforms how state police budgets are distributed across different districts, stations, and operational heads. Instead of politically motivated or static historical allocations, this AI uses real-time crime data, population metrics, and threat intelligence to dynamically dispatch funds exactly where they are needed most.
-            </p>
-
-            <div className="split-section" style={{ gap: '1.5rem', marginBottom: '1.5rem' }}>
-              <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#3b82f6', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <Map size={20}/> Why is this AI Needed?
-                </h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6', marginBottom: '0.8rem' }}>• <strong>Inequitable Distribution:</strong> Historically, influential districts get surplus funds while high-crime rural belts suffer from shortages.</p>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6', marginBottom: '0.8rem' }}>• <strong>Static Models:</strong> Current allocation relies on last year's spending, ignoring newly emerged cyber-crime hubs or riot-prone zones.</p>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>• <strong>Emergency Delays:</strong> Disbursing disaster relief or anti-terror operation funds takes weeks of paperwork.</p>
-              </div>
-              <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#3b82f6', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <ShieldAlert size={20}/> The AI Solution
-                </h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6', marginBottom: '0.8rem' }}>• <strong>Spatial Crime Mapping:</strong> Integrates with NCRB data to identify crime hotspots and automatically allocates more budget for patrols and CCTV.</p>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6', marginBottom: '0.8rem' }}>• <strong>Dynamic Re-routing:</strong> Auto-recalls unutilized funds from peaceful districts to fund sudden deployments (e.g., Election duties).</p>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>• <strong>Algorithmic Fairness:</strong> Ensures fund equity per capita and per FIR registered, creating an unbiased financial ecosystem.</p>
-              </div>
-            </div>
-          </motion.div>
-        );
-      
       case 'features':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
-            <h2 style={{ color: '#c4b5fd', marginBottom: '1.5rem', borderBottom: '1px solid rgba(139,92,246,0.3)', paddingBottom: '1rem' }}>
-              <Zap className="inline-icon" size={28} /> DEEP CAPABILITIES
-            </h2>
-            <p style={{ color: '#cbd5e1', marginBottom: '2rem' }}>The AI acts as an impartial, high-speed Financial Commissioner for the Police Force.</p>
-            
-            <div className="split-section" style={{ gap: '1.5rem', marginBottom: '1.5rem' }}>
-              <div className="panel" style={{ padding: '1.5rem', borderLeft: '4px solid #8b5cf6' }}>
-                <h3 style={{ color: '#e2e8f0', marginBottom: '1rem' }}>Crime-Density Indexed Funding</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>
-                  The AI doesn't allocate patrol fuel equally. If District X sees a 30% rise in highway robberies, the AI automatically increases its Motor Transport (MT) and Night Patrol allocation, while slightly reducing MT funds for District Y where crime has dropped.
-                </p>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel" style={{ border: '1px solid rgba(139,92,246, 0.3)' }}>
+            <h2 style={{ color: '#a78bfa', marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '10px' }}><Zap size={28}/> Core Allocation Features</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+              <div className="feature-card" style={{ background: 'rgba(15,23,42,0.8)', padding: '2rem', borderRadius: '12px', border: '1px solid rgba(139,92,246,0.2)' }}>
+                <Globe size={32} color="#8b5cf6" style={{ marginBottom: '1rem' }} />
+                <h3 style={{ color: '#fff', marginBottom: '1rem' }}>Demographic Scaling</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Automatically adjusts district budgets based on rapid population influx, ensuring growing urban centers are never under-funded.</p>
               </div>
-              <div className="panel" style={{ padding: '1.5rem', borderLeft: '4px solid #3b82f6' }}>
-                <h3 style={{ color: '#e2e8f0', marginBottom: '1rem' }}>Rapid Emergency Dispatch</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>
-                  During a natural disaster (e.g., Floods) or severe riots, the DGP can command the AI to "Fund emergency deployment". The AI instantly pauses non-essential procurement across the state and unlocks ₹50 Crore in liquid funds for immediate SDRF operations.
-                </p>
+              <div className="feature-card" style={{ background: 'rgba(15,23,42,0.8)', padding: '2rem', borderRadius: '12px', border: '1px solid rgba(139,92,246,0.2)' }}>
+                <ShieldAlert size={32} color="#8b5cf6" style={{ marginBottom: '1rem' }} />
+                <h3 style={{ color: '#fff', marginBottom: '1rem' }}>Crime-Linked Routing</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Hooks into CCTNS. If cybercrime spikes in a zone by 20%, the AI automatically routes additional funds to cyber-training heads in that specific zone.</p>
               </div>
-            </div>
-
-            <div className="split-section" style={{ gap: '1.5rem' }}>
-              <div className="panel" style={{ padding: '1.5rem', borderLeft: '4px solid #8b5cf6' }}>
-                <h3 style={{ color: '#e2e8f0', marginBottom: '1rem' }}>Predictive Resource Exhaustion</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>
-                  Using Machine Learning on past financial years, the AI predicts exactly which Police Station will run out of 'Stationary & Admin' funds by November and proactively allocates a supplementary budget before their operations stall.
-                </p>
-              </div>
-              <div className="panel" style={{ padding: '1.5rem', borderLeft: '4px solid #3b82f6' }}>
-                <h3 style={{ color: '#e2e8f0', marginBottom: '1rem' }}>Sovereign Fairness Audit</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>
-                  Every time funds are dispatched, the AI generates a "Justification Score". If a political leader requests ₹10 Cr for a low-crime area, the AI flags it with a low justification score, ensuring transparency for CAG and Home Ministry auditors.
-                </p>
+              <div className="feature-card" style={{ background: 'rgba(15,23,42,0.8)', padding: '2rem', borderRadius: '12px', border: '1px solid rgba(139,92,246,0.2)' }}>
+                <FileText size={32} color="#8b5cf6" style={{ marginBottom: '1rem' }} />
+                <h3 style={{ color: '#fff', marginBottom: '1rem' }}>FAJR Generation</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Produces Fund Allocation Justification Reports mathematically proving why one district received more funds than another, ensuring political neutrality.</p>
               </div>
             </div>
           </motion.div>
@@ -514,39 +439,21 @@ const FundAllocationExpertAgent = () => {
 
       case 'use-cases':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
-            <h2 style={{ color: '#c4b5fd', marginBottom: '1.5rem', borderBottom: '1px solid rgba(139,92,246,0.3)', paddingBottom: '1rem' }}>
-              <Target className="inline-icon" size={28} /> REAL-WORLD SCENARIOS
-            </h2>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel" style={{ border: '1px solid rgba(139,92,246, 0.3)' }}>
+            <h2 style={{ color: '#a78bfa', marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '10px' }}><Target size={28}/> Real-World Parity</h2>
             
-            <div className="timeline-container">
-              <div className="panel" style={{ padding: '1.5rem', marginBottom: '1.5rem' }}>
-                <h3 style={{ color: '#8b5cf6', marginBottom: '0.8rem' }}>Scenario 1: The Cyber Crime Hub Shift</h3>
-                <p style={{ color: '#cbd5e1', lineHeight: '1.6', marginBottom: '1rem' }}>
-                  <strong>The Problem:</strong> A small Tier-2 city suddenly becomes a massive hub for Jamtara-style cyber frauds. The local police station lacks the budget for forensic software and high-speed internet.
-                </p>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>
-                  <strong>AI Intervention:</strong> The AI detects a 300% spike in IT-Act FIRs from that city via the CCTNS database. It autonomously reallocates ₹2 Crore from the "Rural Traffic" budget of a peaceful district directly to this city's "Cyber Cell Setup" fund.
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+              <div style={{ background: 'linear-gradient(90deg, rgba(15,23,42,0.9), rgba(15,23,42,0.4))', borderLeft: '4px solid #8b5cf6', padding: '2rem', borderRadius: '12px' }}>
+                <h3 style={{ color: '#fff', margin: '0 0 1rem 0' }}>1. The Urban Expansion Problem</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6', margin: 0 }}>
+                  Historically, police stations in rapidly growing tech hubs receive the same static budget increment as rural stations, leading to severe resource crunches. The AI dynamically links the allocation algorithm to municipal tax data and telecom population density, automatically correcting the budget baseline.
                 </p>
               </div>
 
-              <div className="panel" style={{ padding: '1.5rem', marginBottom: '1.5rem' }}>
-                <h3 style={{ color: '#3b82f6', marginBottom: '0.8rem' }}>Scenario 2: Pre-Election Force Deployment</h3>
-                <p style={{ color: '#cbd5e1', lineHeight: '1.6', marginBottom: '1rem' }}>
-                  <strong>The Problem:</strong> State elections require the sudden movement of 50,000 CAPF personnel. Calculating their accommodation, food, and transport budget district-by-district takes manual accountants months.
-                </p>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>
-                  <strong>AI Intervention:</strong> The DGP uses Voice Command: *"Allocate funds for Phase 1 Elections"*. The AI ingests the Election Commission's deployment plan, calculates per-diem costs, and instantly deposits accurate funds into the accounts of 25 District SPs in seconds.
-                </p>
-              </div>
-
-              <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#8b5cf6', marginBottom: '0.8rem' }}>Scenario 3: Preventing Fund Lapsing</h3>
-                <p style={{ color: '#cbd5e1', lineHeight: '1.6', marginBottom: '1rem' }}>
-                  <strong>The Problem:</strong> District A has ₹5 Crore unspent for 'Police Quarters Construction', which will lapse and return to the center on March 31st if unused.
-                </p>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>
-                  <strong>AI Intervention:</strong> In January, the AI realizes District A hasn't even floated tenders. It legally 'recalls' that ₹5 Crore and allocates it to District B, which has pending approved bills for 'Barrack Repairs', saving the state's budget from lapsing.
+              <div style={{ background: 'linear-gradient(90deg, rgba(15,23,42,0.9), rgba(15,23,42,0.4))', borderLeft: '4px solid #8b5cf6', padding: '2rem', borderRadius: '12px' }}>
+                <h3 style={{ color: '#fff', margin: '0 0 1rem 0' }}>2. Emergency Re-allocation</h3>
+                <p style={{ color: '#94a3b8', lineHeight: '1.6', margin: 0 }}>
+                  During a natural disaster, DDOs struggle with red tape to move funds. The AI operates an 'Emergency Route' protocol, temporarily freezing non-essential budgets (like office renovation) across the state to instantly inject liquidity into disaster response units.
                 </p>
               </div>
             </div>
@@ -555,205 +462,212 @@ const FundAllocationExpertAgent = () => {
 
       case 'architecture':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
-             <h2 style={{ color: '#c4b5fd', marginBottom: '1.5rem', borderBottom: '1px solid rgba(139,92,246,0.3)', paddingBottom: '1rem' }}>
-              <Network className="inline-icon" size={28} /> SYSTEM ARCHITECTURE
-            </h2>
-            
-            <div className="panel" style={{ padding: '2rem', marginBottom: '1.5rem', textAlign: 'center' }}>
-                <h3 style={{ color: '#cbd5e1', marginBottom: '2rem' }}>Decision Flow Diagram</h3>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: '#8b5cf6' }}>
-                   <div style={{ padding: '1rem', border: '1px solid #334155', borderRadius: '8px', background: 'rgba(15, 23, 42, 0.6)' }}>
-                      <Database size={32} style={{ margin: '0 auto', marginBottom: '0.5rem' }}/>
-                      <div style={{ fontSize: '0.9rem' }}>CCTNS Crime Data<br/><span style={{ color: '#64748b', fontSize: '0.75rem' }}>FIRs, Threat Intel</span></div>
-                   </div>
-                   <div>→</div>
-                   <div style={{ padding: '1rem', border: '1px solid #334155', borderRadius: '8px', background: 'rgba(15, 23, 42, 0.6)' }}>
-                      <Server size={32} style={{ margin: '0 auto', marginBottom: '0.5rem' }}/>
-                      <div style={{ fontSize: '0.9rem' }}>Allocation Rules<br/><span style={{ color: '#64748b', fontSize: '0.75rem' }}>Vector DB (RAG)</span></div>
-                   </div>
-                   <div>→</div>
-                   <div style={{ padding: '1rem', border: '1px solid #8b5cf6', borderRadius: '8px', background: 'rgba(139, 92, 246, 0.1)', boxShadow: '0 0 15px rgba(139,92,246,0.2)' }}>
-                      <Cpu size={32} style={{ margin: '0 auto', marginBottom: '0.5rem' }}/>
-                      <div style={{ fontSize: '0.9rem' }}>Resource Optimizer AI<br/><span style={{ color: '#64748b', fontSize: '0.75rem' }}>Deep Q-Learning</span></div>
-                   </div>
-                   <div>→</div>
-                   <div style={{ padding: '1rem', border: '1px solid #334155', borderRadius: '8px', background: 'rgba(15, 23, 42, 0.6)' }}>
-                      <Activity size={32} style={{ margin: '0 auto', marginBottom: '0.5rem' }}/>
-                      <div style={{ fontSize: '0.9rem' }}>Treasury Dispatch<br/><span style={{ color: '#64748b', fontSize: '0.75rem' }}>API to State Bank</span></div>
-                   </div>
-                </div>
-            </div>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel" style={{ border: '1px solid rgba(139,92,246, 0.3)' }}>
+            <h2 style={{ color: '#a78bfa', marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '10px' }}><Database size={28}/> System Architecture</h2>
+            <div style={{ background: 'rgba(15,23,42,0.8)', padding: '2rem', borderRadius: '12px', border: '1px solid rgba(139,92,246,0.2)', textAlign: 'center' }}>
+               <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', flexWrap: 'wrap', gap: '2rem' }}>
+                  
+                  <div style={{ width: '200px' }}>
+                    <div style={{ background: 'rgba(239,68,68,0.1)', border: '1px solid #ef4444', padding: '1.5rem', borderRadius: '8px' }}>
+                      <Database color="#ef4444" size={32} style={{marginBottom:'1rem'}}/>
+                      <h4 style={{color:'#fff', margin:0}}>CCTNS Data</h4>
+                      <p style={{color:'#94a3b8', fontSize:'0.8rem', marginTop:'0.5rem'}}>Crime Density</p>
+                    </div>
+                  </div>
 
-            <div className="split-section" style={{ gap: '1.5rem' }}>
-              <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#3b82f6', marginBottom: '1rem' }}>Reinforcement Learning (RL)</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>The AI uses RL (Deep Q-Networks) to learn optimal allocations. If allocating funds to Cyber Cells leads to a drop in cyber-crime over 6 months, the AI's algorithm rewards itself, improving future decisions.</p>
-              </div>
-              <div className="panel" style={{ padding: '1.5rem' }}>
-                <h3 style={{ color: '#3b82f6', marginBottom: '1rem' }}>Treasury API Integration</h3>
-                <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Once an allocation is approved by the DGP, the AI communicates directly with the state's IFMS (Integrated Financial Management System) via secure REST APIs to execute the fund transfer.</p>
-              </div>
+                  <div style={{ color: '#8b5cf6' }}>
+                    <ArrowLeft size={32} style={{ transform: 'rotate(180deg)' }}/>
+                  </div>
+
+                  <div style={{ width: '250px' }}>
+                    <div style={{ background: 'rgba(139,92,246,0.1)', border: '2px solid #8b5cf6', padding: '2rem', borderRadius: '12px', boxShadow: '0 0 20px rgba(139,92,246,0.2)' }}>
+                      <Cpu color="#8b5cf6" size={40} style={{marginBottom:'1rem'}}/>
+                      <h3 style={{color:'#fff', margin:0}}>Allocation Engine</h3>
+                      <p style={{color:'#cbd5e1', fontSize:'0.85rem', marginTop:'0.5rem'}}>Multi-variable Optimization</p>
+                    </div>
+                  </div>
+
+                  <div style={{ color: '#8b5cf6' }}>
+                    <ArrowLeft size={32} style={{ transform: 'rotate(180deg)' }}/>
+                  </div>
+
+                  <div style={{ width: '200px' }}>
+                    <div style={{ background: 'rgba(16,185,129,0.1)', border: '1px solid #10b981', padding: '1.5rem', borderRadius: '8px' }}>
+                      <FileText color="#10b981" size={32} style={{marginBottom:'1rem'}}/>
+                      <h4 style={{color:'#fff', margin:0}}>Treasury API</h4>
+                      <p style={{color:'#94a3b8', fontSize:'0.8rem', marginTop:'0.5rem'}}>Automated Dispatch</p>
+                    </div>
+                  </div>
+
+               </div>
+               <p style={{ color: '#94a3b8', marginTop: '3rem', fontSize: '0.9rem', lineHeight: '1.6' }}>
+                 The Allocation Engine utilizes a weighted graph algorithm, ingesting real-time nodes from CCTNS and Census data to solve a multi-objective optimization problem, maximizing utility while maintaining baseline operational budgets.
+               </p>
             </div>
           </motion.div>
         );
+
       case 'tech-stack':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel">
-            <div className="split-section" style={{ gap: '1.5rem', marginBottom: '1.5rem' }}>
-              <div className="panel" style={{ padding: '1.5rem', borderTop: '3px solid #8b5cf6' }}>
-                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#e2e8f0', marginBottom: '1rem' }}>
-                  <Code color="#8b5cf6" size={20} /> Core Framework
-                </h3>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                  <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#8b5cf6' }}>Ray RLlib:</strong> Distributed reinforcement learning framework for training the allocation algorithms.</p>
-                  <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#8b5cf6' }}>Django (Python):</strong> High-security backend to process financial transfers and manage RBAC.</p>
-                </div>
-              </div>
-              
-              <div className="panel" style={{ padding: '1.5rem', borderTop: '3px solid #3b82f6' }}>
-                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#e2e8f0', marginBottom: '1rem' }}>
-                  <Cpu color="#3b82f6" size={20} /> AI & Models
-                </h3>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                  <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#3b82f6' }}>LLM:</strong> GPT-4 (used purely for parsing Voice Commands and explaining logic in natural language).</p>
-                  <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#3b82f6' }}>XGBoost:</strong> Predictive model to forecast future crime spikes based on historical trends.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="split-section" style={{ gap: '1.5rem' }}>
-              <div className="panel" style={{ padding: '1.5rem', borderTop: '3px solid #8b5cf6' }}>
-                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#e2e8f0', marginBottom: '1rem' }}>
-                  <Database color="#8b5cf6" size={20} /> Data & Storage
-                </h3>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                  <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#8b5cf6' }}>Apache Cassandra:</strong> Distributed NoSQL database capable of handling real-time nationwide crime telemetry.</p>
-                  <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#8b5cf6' }}>Redis:</strong> In-memory caching for lightning-fast dashboard metrics.</p>
-                </div>
-              </div>
-
-              <div className="panel" style={{ padding: '1.5rem', borderTop: '3px solid #3b82f6' }}>
-                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#e2e8f0', marginBottom: '1rem' }}>
-                  <LayoutDashboard color="#3b82f6" size={20} /> Frontend UI
-                </h3>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                  <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#3b82f6' }}>React + Vite:</strong> Ultra-fast client rendering for the Allocation Command Center.</p>
-                  <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#3b82f6' }}>Framer Motion:</strong> Provides the premium, high-tech animations for the Voice Demo and Ledger.</p>
-                </div>
-              </div>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel" style={{ border: '1px solid rgba(139,92,246, 0.3)' }}>
+            <h2 style={{ color: '#a78bfa', marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '10px' }}><Cpu size={28}/> Technologies Used</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem' }}>
+               {['Python Scipy (Optimization)', 'PyTorch (Forecasting)', 'Neo4j (Graph DB)', 'Kafka (Event Stream)', 'PostgreSQL', 'GraphQL API', 'React.js', 'Docker/K8s'].map((tech, i) => (
+                 <div key={i} style={{ background: 'rgba(15,23,42,0.6)', border: '1px solid rgba(255,255,255,0.1)', padding: '1.5rem', borderRadius: '8px', textAlign: 'center', transition: 'all 0.2s', cursor: 'default' }} onMouseOver={e=>e.currentTarget.style.borderColor='#8b5cf6'} onMouseOut={e=>e.currentTarget.style.borderColor='rgba(255,255,255,0.1)'}>
+                   <h4 style={{ color: '#e2e8f0', margin: 0 }}>{tech}</h4>
+                 </div>
+               ))}
             </div>
           </motion.div>
         );
+
       case 'implementation':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
-             <h2 style={{ color: '#c4b5fd', marginBottom: '1.5rem', borderBottom: '1px solid rgba(139,92,246,0.3)', paddingBottom: '1rem' }}>
-              <Terminal className="inline-icon" size={28} /> IMPLEMENTATION ROADMAP
-            </h2>
-            
-            <div className="split-section" style={{ gap: '1.5rem', marginBottom: '1.5rem' }}>
-                <div className="panel" style={{ padding: '1.5rem', display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
-                  <div style={{ background: 'rgba(139,92,246,0.1)', color: '#8b5cf6', padding: '0.8rem 1.2rem', borderRadius: '50%', fontWeight: 'bold', fontSize: '1.2rem', flexShrink: 0 }}>1</div>
-                  <div>
-                    <h3 style={{ color: '#e2e8f0', marginBottom: '0.5rem' }}>Data Pipeline Setup (Month 1)</h3>
-                    <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Connect the AI to the CCTNS (Crime and Criminal Tracking Network) via APIs to receive daily FIR data. Establish a read-only link to the State Treasury IFMS.</p>
-                  </div>
-                </div>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel" style={{ border: '1px solid rgba(139,92,246, 0.3)' }}>
+            <h2 style={{ color: '#a78bfa', marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '10px' }}><Terminal size={28}/> Technical Implementation</h2>
+            <div style={{ background: '#0f172a', border: '1px solid #1e293b', borderRadius: '12px', overflow: 'hidden' }}>
+              <div style={{ background: '#1e293b', padding: '0.8rem 1.5rem', display: 'flex', gap: '10px', alignItems: 'center' }}>
+                <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ef4444' }}></div>
+                <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#f59e0b' }}></div>
+                <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#10b981' }}></div>
+                <span style={{ color: '#94a3b8', fontSize: '0.9rem', marginLeft: '1rem', fontFamily: 'monospace' }}>allocation_optimizer.py</span>
+              </div>
+              <div style={{ padding: '1.5rem', overflowX: 'auto' }}>
+                <pre style={{ margin: 0, color: '#e2e8f0', fontSize: '0.9rem', fontFamily: "'Fira Code', monospace", lineHeight: '1.5' }}>
+                  <code dangerouslySetInnerHTML={{__html: `
+<span style="color: #c678dd">from</span> scipy.optimize <span style="color: #c678dd">import</span> linprog
+<span style="color: #c678dd">import</span> numpy <span style="color: #c678dd">as</span> np
 
-                <div className="panel" style={{ padding: '1.5rem', display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
-                  <div style={{ background: 'rgba(59,130,246,0.1)', color: '#3b82f6', padding: '0.8rem 1.2rem', borderRadius: '50%', fontWeight: 'bold', fontSize: '1.2rem', flexShrink: 0 }}>2</div>
-                  <div>
-                    <h3 style={{ color: '#e2e8f0', marginBottom: '0.5rem' }}>Model Training (Month 2-3)</h3>
-                    <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Train the XGBoost predictive models on the last 15 years of crime statistics vs. budget spending to establish correlations and optimal funding thresholds.</p>
-                  </div>
-                </div>
-            </div>
+<span style="color: #c678dd">def</span> <span style="color: #61afef">optimize_distribution</span>(districts, total_budget):
+    <span style="color: #5c6370"># Multi-variable objective function: Maximize utility based on crime & pop</span>
+    weights = []
+    bounds = []
+    
+    <span style="color: #c678dd">for</span> d <span style="color: #c678dd">in</span> districts:
+        crime_weight = d.crime_index * <span style="color: #d19a66">0.6</span>
+        pop_weight = d.population_density * <span style="color: #d19a66">0.4</span>
+        weights.append(-(crime_weight + pop_weight))
+        
+        <span style="color: #5c6370"># Baseline operational bound vs Max capacity</span>
+        bounds.append((d.baseline_budget, d.max_absorbable))
 
-            <div className="split-section" style={{ gap: '1.5rem', marginBottom: '1.5rem' }}>
-                <div className="panel" style={{ padding: '1.5rem', display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
-                  <div style={{ background: 'rgba(139,92,246,0.1)', color: '#8b5cf6', padding: '0.8rem 1.2rem', borderRadius: '50%', fontWeight: 'bold', fontSize: '1.2rem', flexShrink: 0 }}>3</div>
-                  <div>
-                    <h3 style={{ color: '#e2e8f0', marginBottom: '0.5rem' }}>Shadow Testing (Month 4)</h3>
-                    <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Run the AI in 'Shadow Mode'. It will generate allocation suggestions but will not execute transfers. Human finance officers will validate its logic and fairness scores.</p>
-                  </div>
-                </div>
+    A_eq = [np.ones(<span style="color: #e5c07b">len</span>(districts))]
+    b_eq = [total_budget]
 
-                <div className="panel" style={{ padding: '1.5rem', display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
-                  <div style={{ background: 'rgba(59,130,246,0.1)', color: '#3b82f6', padding: '0.8rem 1.2rem', borderRadius: '50%', fontWeight: 'bold', fontSize: '1.2rem', flexShrink: 0 }}>4</div>
-                  <div>
-                    <h3 style={{ color: '#e2e8f0', marginBottom: '0.5rem' }}>Live Deployment (Month 5)</h3>
-                    <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Grant the AI read-write access to the Treasury. Implement the Voice Command interface for the DGP's tablet for emergency dispatch overrides.</p>
-                  </div>
-                </div>
+    res = linprog(weights, A_eq=A_eq, b_eq=b_eq, bounds=bounds, method=<span style="color: #98c379">'highs'</span>)
+    
+    <span style="color: #c678dd">return</span> res.x <span style="color: #5c6370"># Optimized allocation array</span>
+                  `}} />
+                </pre>
+              </div>
             </div>
           </motion.div>
         );
+
       default:
         return null;
     }
   };
 
   return (
-    <div className="hrms-detailed-page">
-      <div className="hrms-bg-fx" style={{ background: 'radial-gradient(circle at top right, rgba(139,92,246,0.15) 0%, transparent 40%)' }}></div>
-      <div className="hrms-grid-overlay"></div>
+    <div style={{
+      minHeight: '100vh',
+      background: '#020617',
+      color: '#f8fafc',
+      fontFamily: "'Inter', sans-serif",
+      padding: '2rem'
+    }}>
+      <div style={{
+        position: 'fixed', top: 0, left: 0, width: '100%', height: '100%',
+        background: 'radial-gradient(circle at 50% 80%, rgba(139,92,246, 0.05), transparent 40%)',
+        backgroundImage: 'linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)',
+        backgroundSize: '30px 30px',
+        zIndex: 0,
+        pointerEvents: 'none'
+      }}></div>
 
-      <header className="hrms-header">
-        <button className="back-btn" onClick={() => navigate(-1)}>
-          <ArrowLeft size={18} />
-          <span>Back to Module</span>
-        </button>
+      <div style={{ position: 'relative', zIndex: 1, maxWidth: '1400px', margin: '0 auto' }}>
         
-        <div className="header-titles">
-          <div className="icon-wrapper" style={{ background: 'rgba(139,92,246,0.1)', border: '1px solid rgba(139,92,246,0.3)' }}>
-            <Map size={40} color="#c4b5fd" />
+        {/* Header */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '3rem', borderBottom: '1px solid rgba(139,92,246, 0.2)', paddingBottom: '1.5rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+            <button
+              onClick={() => navigate(-1)}
+              style={{
+                background: 'rgba(15, 23, 42, 0.8)', border: '1px solid rgba(139,92,246, 0.4)',
+                color: '#a78bfa', padding: '0.8rem', borderRadius: '10px', cursor: 'pointer',
+                display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s'
+              }}
+              onMouseOver={(e) => { e.currentTarget.style.background = '#8b5cf6'; e.currentTarget.style.color = '#fff'; }}
+              onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(15, 23, 42, 0.8)'; e.currentTarget.style.color = '#a78bfa'; }}
+            >
+              <ArrowLeft size={20} />
+            </button>
+            <div>
+              <h1 style={{ margin: 0, fontSize: '2.5rem', color: '#fff', textTransform: 'uppercase', letterSpacing: '2px' }}>
+                FUND ALLOCATION <span style={{ color: '#a78bfa' }}>EXPERT</span>
+              </h1>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginTop: '0.5rem' }}>
+                <span style={{ background: 'rgba(139,92,246, 0.2)', color: '#c4b5fd', padding: '4px 10px', borderRadius: '4px', fontSize: '0.8rem', fontWeight: 'bold', border: '1px solid rgba(139,92,246, 0.5)' }}>
+                  NEURAL OPTIMIZER ACTIVE
+                </span>
+                <span style={{ color: '#64748b', fontSize: '0.9rem' }}><Terminal size={12} style={{display:'inline', marginRight:'5px'}}/> Agent ID: FAE-1120-Z</span>
+              </div>
+            </div>
           </div>
-          <div>
-            <h1 className="cyber-title" style={{ color: '#fff' }}>FUND ALLOCATION EXPERT <span style={{ color: '#c4b5fd' }}>AI AGENT</span></h1>
-            <p className="cyber-subtitle">Dynamic Resource Optimizer & Treasury Integration</p>
+          
+          <div style={{ textAlign: 'right' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', justifyContent: 'flex-end', marginBottom: '5px' }}>
+              <div style={{ width: '8px', height: '8px', background: '#10b981', borderRadius: '50%', boxShadow: '0 0 10px #10b981', animation: 'pulse 1.5s infinite' }}></div>
+              <span style={{ color: '#10b981', fontWeight: 'bold', fontSize: '0.9rem', letterSpacing: '1px' }}>SYSTEM ONLINE</span>
+            </div>
+            <p style={{ margin: 0, color: '#64748b', fontSize: '0.8rem' }}>Mathematical Parity Matrix</p>
           </div>
         </div>
-      </header>
 
-      <div className="hrms-layout">
-        <nav className="hrms-sidebar">
+        <style>
+          {`
+            @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+            @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+            .glow-text-purple { text-shadow: 0 0 10px rgba(139,92,246,0.7); }
+            .custom-scroll-purple::-webkit-scrollbar { width: 8px; height: 8px; }
+            .custom-scroll-purple::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.6); borderRadius: 4px; }
+            .custom-scroll-purple::-webkit-scrollbar-thumb { background: rgba(139,92,246, 0.4); borderRadius: 4px; }
+            .custom-scroll-purple::-webkit-scrollbar-thumb:hover { background: rgba(139,92,246, 0.7); }
+          `}
+        </style>
+
+        {/* Dynamic Nav Menu */}
+        <div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
           {tabs.map((tab) => (
             <button
               key={tab.id}
-              className={`tab-btn ${activeTab === tab.id ? 'active' : ''}`}
               onClick={() => setActiveTab(tab.id)}
+              style={{
+                background: activeTab === tab.id ? 'rgba(139,92,246, 0.2)' : 'rgba(15,23,42,0.6)',
+                border: `1px solid ${activeTab === tab.id ? '#8b5cf6' : 'rgba(255,255,255,0.1)'}`,
+                color: activeTab === tab.id ? '#c4b5fd' : '#94a3b8',
+                padding: '0.8rem 1.2rem',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                fontWeight: 'bold',
+                transition: 'all 0.2s'
+              }}
+              onMouseOver={(e) => { if(activeTab !== tab.id) { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.borderColor = 'rgba(139,92,246, 0.3)'; } }}
+              onMouseOut={(e) => { if(activeTab !== tab.id) { e.currentTarget.style.background = 'rgba(15,23,42,0.6)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'; } }}
             >
               {tab.icon} {tab.label}
             </button>
           ))}
-          
-          <div className="module-stats-box" style={{ marginTop: '2rem', borderTopColor: 'rgba(139,92,246,0.3)' }}>
-            <h4 style={{ color: '#c4b5fd', marginBottom: '1rem' }}>System Specs</h4>
-            <div className="stat-item">
-              <span className="stat-label">Logic Core</span>
-              <span className="stat-value">Deep Q-Learning</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-label">Crime Data Sync</span>
-              <span className="stat-value">Real-time CCTNS</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-label">Treasury Bridge</span>
-              <span className="stat-value">IFMS API v3</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-label">Equity Score</span>
-              <span className="stat-value">98.5%</span>
-            </div>
-          </div>
-        </nav>
+        </div>
 
-        <main className="hrms-content-area">
-          <AnimatePresence mode="wait">
-            {renderContent()}
-          </AnimatePresence>
-        </main>
+        <AnimatePresence mode="wait">
+          {renderContent()}
+        </AnimatePresence>
+
       </div>
     </div>
   );
