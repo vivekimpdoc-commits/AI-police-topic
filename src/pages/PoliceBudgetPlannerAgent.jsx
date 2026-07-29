@@ -207,15 +207,14 @@ const PoliceBudgetPlannerAgent = () => {
       </header>
 
       <div className="hrms-layout">
-        <aside className="hrms-sidebar">
+        <nav className="hrms-sidebar">
           {tabs.map((tab) => (
             <button
               key={tab.id}
-              className={`sidebar-tab ${activeTab === tab.id ? 'active' : ''}`}
+              className={`tab-btn ${activeTab === tab.id ? 'active' : ''}`}
               onClick={() => setActiveTab(tab.id)}
             >
-              {tab.icon}
-              <span>{tab.label}</span>
+              {tab.icon} {tab.label}
             </button>
           ))}
           
@@ -238,7 +237,7 @@ const PoliceBudgetPlannerAgent = () => {
               <span className="stat-value">99.9%</span>
             </div>
           </div>
-        </aside>
+        </nav>
 
         <main className="hrms-main-content">
           <AnimatePresence mode="wait">
