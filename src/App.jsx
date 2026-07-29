@@ -645,6 +645,8 @@ import FundAllocationExpertAgent from './pages/FundAllocationExpertAgent';
 import BudgetForecastAIAgent from './pages/BudgetForecastAIAgent';
 import BudgetUtilizationMonitorAgent from './pages/BudgetUtilizationMonitorAgent';
 import FinancialPlanningAIAgent from './pages/FinancialPlanningAIAgent';
+import TreasuryManagementAIAgent from './pages/TreasuryManagementAIAgent';
+
 
 import { Globe, ShieldAlert } from 'lucide-react';
 
@@ -2792,6 +2794,9 @@ const AnimatedRoutes = () => {
         <Route path="/fund-allocation-expert-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><FundAllocationExpertAgent /></motion.div>} />
         <Route path="/budget-forecast-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><BudgetForecastAIAgent /></motion.div>} />
         <Route path="/budget-utilization-monitor-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><BudgetUtilizationMonitorAgent /></motion.div>} />
+        <Route path="/financial-planning-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><FinancialPlanningAIAgent /></motion.div>} />
+        <Route path="/treasury-management-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><TreasuryManagementAIAgent /></motion.div>} />
+
 </Routes>
     </AnimatePresence>
   );
