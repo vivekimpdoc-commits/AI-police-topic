@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bot, ArrowLeft, Terminal, Cpu, ShieldAlert, PieChart, Database, Network, Server, Settings, Code, FileText, CheckCircle, LayoutDashboard, Shield, Zap, Target, BookOpen, Layers
+  Bot, ArrowLeft, Terminal, Cpu, ShieldAlert, PieChart, Database, Network, Server, Code, FileText, LayoutDashboard, Zap, Target, MessageSquare, Send, AlertTriangle, CheckCircle2, IndianRupee
 } from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
@@ -10,17 +10,198 @@ const tabs = [
   { id: 'overview', label: 'Agent Overview', icon: <FileText size={18} /> },
   { id: 'features', label: 'Deep Capabilities', icon: <Zap size={18} /> },
   { id: 'use-cases', label: 'Real-World Scenarios', icon: <Target size={18} /> },
+  { id: 'demo', label: 'Live AI Demo', icon: <MessageSquare size={18} /> },
   { id: 'architecture', label: 'Architecture', icon: <Database size={18} /> },
   { id: 'tech-stack', label: 'Tech Stack', icon: <Cpu size={18} /> },
   { id: 'implementation', label: 'Implementation', icon: <Terminal size={18} /> }
 ];
 
+const predefinedResponses = {
+  "analyze budget": {
+    text: "Analyzing Q3 expenditures against the approved treasury budget...",
+    table: true
+  },
+  "check vehicles": {
+    text: "Scanning all vehicle maintenance bills from local vendors in District HQ. Found 1 anomaly.",
+    alert: "Fraud Alert: Invoice #4409 for UP-32-BG-1021 claims 2 clutch replacements in 40 days. Vendor rate is 25% above GeM approved rates."
+  },
+  "generate cag": {
+    text: "Compiling financial utilization data for the past 6 months. CAG compliant format verified.",
+    success: "Fund Utilization Certificate (UC) successfully generated and cryptographically signed."
+  },
+  "default": {
+    text: "I am the Police Budget Planner AI. I can analyze financial trends, detect invoice fraud, generate CAG reports, and forecast election deployment costs. Click one of the suggested prompts to see my capabilities."
+  }
+};
+
 const PoliceBudgetPlannerAgent = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('overview');
+  
+  // Chat Demo State
+  const [messages, setMessages] = useState([
+    { sender: 'ai', text: 'System Online. Secure connection established to State Treasury API and Police Procurement DB. How can I assist you today?' }
+  ]);
+  const [inputValue, setInputValue] = useState('');
+  const [isTyping, setIsTyping] = useState(false);
+  const chatEndRef = useRef(null);
+
+  const scrollToBottom = () => {
+    chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    if (activeTab === 'demo') {
+      scrollToBottom();
+    }
+  }, [messages, isTyping, activeTab]);
+
+  const handleSendMessage = (text) => {
+    if (!text.trim()) return;
+    
+    // Add user message
+    const newMsg = { sender: 'user', text };
+    setMessages(prev => [...prev, newMsg]);
+    setInputValue('');
+    setIsTyping(true);
+
+    // Simulate AI thinking and response
+    setTimeout(() => {
+      let response = predefinedResponses["default"];
+      const lowerText = text.toLowerCase();
+      
+      if (lowerText.includes("budget") || lowerText.includes("analyze")) {
+        response = predefinedResponses["analyze budget"];
+      } else if (lowerText.includes("vehicle") || lowerText.includes("fraud") || lowerText.includes("repair")) {
+        response = predefinedResponses["check vehicles"];
+      } else if (lowerText.includes("cag") || lowerText.includes("report") || lowerText.includes("uc")) {
+        response = predefinedResponses["generate cag"];
+      }
+
+      setMessages(prev => [...prev, { sender: 'ai', ...response }]);
+      setIsTyping(false);
+    }, 1500);
+  };
 
   const renderContent = () => {
     switch (activeTab) {
+      case 'demo':
+        return (
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} className="overview-panel" style={{ height: '600px', display: 'flex', flexDirection: 'column' }}>
+            <div style={{ background: 'rgba(15,23,42,0.9)', border: '1px solid rgba(6,182,212,0.3)', borderRadius: '16px', display: 'flex', flexDirection: 'column', height: '100%', overflow: 'hidden' }}>
+              
+              {/* Chat Header */}
+              <div style={{ padding: '1rem 1.5rem', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', gap: '1rem', background: 'rgba(6,182,212,0.05)' }}>
+                <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#10b981', boxShadow: '0 0 10px #10b981' }}></div>
+                <h3 style={{ margin: 0, color: '#e2e8f0', fontSize: '1.1rem' }}>Budget Planner Agent - Interactive Terminal</h3>
+              </div>
+
+              {/* Chat Messages */}
+              <div style={{ flex: 1, overflowY: 'auto', padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                {messages.map((msg, idx) => (
+                  <div key={idx} style={{ display: 'flex', justifyContent: msg.sender === 'user' ? 'flex-end' : 'flex-start' }}>
+                    <div style={{ 
+                      maxWidth: '80%', 
+                      padding: '1rem 1.5rem', 
+                      borderRadius: '12px',
+                      background: msg.sender === 'user' ? 'rgba(139,92,246,0.2)' : 'rgba(6,182,212,0.1)',
+                      border: `1px solid ${msg.sender === 'user' ? 'rgba(139,92,246,0.4)' : 'rgba(6,182,212,0.3)'}`,
+                      color: '#f8fafc',
+                      borderBottomRightRadius: msg.sender === 'user' ? '4px' : '12px',
+                      borderBottomLeftRadius: msg.sender === 'ai' ? '4px' : '12px'
+                    }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', color: msg.sender === 'user' ? '#c4b5fd' : '#67e8f9', fontSize: '0.85rem', fontWeight: 'bold' }}>
+                        {msg.sender === 'user' ? 'Authorized Officer' : <><Bot size={14}/> Budget AI</>}
+                      </div>
+                      <div style={{ lineHeight: '1.6' }}>{msg.text}</div>
+                      
+                      {msg.table && (
+                        <div style={{ marginTop: '1rem', background: 'rgba(0,0,0,0.3)', borderRadius: '8px', padding: '1rem', border: '1px solid rgba(255,255,255,0.1)' }}>
+                          <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '0.5rem', marginBottom: '0.5rem', color: '#cbd5e1' }}>
+                            <span>Category</span><span>Allocated</span><span>Spent</span><span>Status</span>
+                          </div>
+                          <div style={{ display: 'flex', justifyContent: 'space-between', color: '#94a3b8', fontSize: '0.9rem', marginBottom: '0.4rem' }}>
+                            <span>Fuel (POL)</span><span>₹12.5 Cr</span><span style={{ color: '#ef4444' }}>₹11.8 Cr</span><span>94%</span>
+                          </div>
+                          <div style={{ display: 'flex', justifyContent: 'space-between', color: '#94a3b8', fontSize: '0.9rem' }}>
+                            <span>Arms & Ammo</span><span>₹4.2 Cr</span><span style={{ color: '#10b981' }}>₹1.1 Cr</span><span>26%</span>
+                          </div>
+                        </div>
+                      )}
+
+                      {msg.alert && (
+                        <div style={{ marginTop: '1rem', background: 'rgba(239,68,68,0.1)', borderLeft: '4px solid #ef4444', padding: '1rem', borderRadius: '4px', display: 'flex', gap: '0.8rem', alignItems: 'flex-start' }}>
+                          <AlertTriangle color="#ef4444" size={20} style={{ flexShrink: 0, marginTop: '2px' }}/>
+                          <span style={{ color: '#fca5a5', fontSize: '0.95rem', lineHeight: '1.5' }}>{msg.alert}</span>
+                        </div>
+                      )}
+
+                      {msg.success && (
+                        <div style={{ marginTop: '1rem', background: 'rgba(16,185,129,0.1)', borderLeft: '4px solid #10b981', padding: '1rem', borderRadius: '4px', display: 'flex', gap: '0.8rem', alignItems: 'center' }}>
+                          <CheckCircle2 color="#10b981" size={20} style={{ flexShrink: 0 }}/>
+                          <span style={{ color: '#a7f3d0', fontSize: '0.95rem' }}>{msg.success}</span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+                
+                {isTyping && (
+                  <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+                     <div style={{ padding: '1rem 1.5rem', borderRadius: '12px', background: 'rgba(6,182,212,0.05)', border: '1px solid rgba(6,182,212,0.2)'}}>
+                        <div className="typing-indicator" style={{ display: 'flex', gap: '0.4rem' }}>
+                           <span style={{ width: '8px', height: '8px', background: '#06b6d4', borderRadius: '50%', animation: 'bounce 1.4s infinite ease-in-out both', animationDelay: '-0.32s' }}></span>
+                           <span style={{ width: '8px', height: '8px', background: '#06b6d4', borderRadius: '50%', animation: 'bounce 1.4s infinite ease-in-out both', animationDelay: '-0.16s' }}></span>
+                           <span style={{ width: '8px', height: '8px', background: '#06b6d4', borderRadius: '50%', animation: 'bounce 1.4s infinite ease-in-out both' }}></span>
+                        </div>
+                     </div>
+                  </div>
+                )}
+                <div ref={chatEndRef} />
+              </div>
+
+              {/* Chat Input Area */}
+              <div style={{ padding: '1.5rem', borderTop: '1px solid rgba(255,255,255,0.05)', background: 'rgba(0,0,0,0.2)' }}>
+                <div style={{ display: 'flex', gap: '0.8rem', marginBottom: '1rem', overflowX: 'auto', paddingBottom: '0.5rem' }}>
+                   <button onClick={() => handleSendMessage("Analyze Q3 budget expenditure")} style={{ whiteSpace: 'nowrap', padding: '0.5rem 1rem', background: 'rgba(139,92,246,0.1)', border: '1px solid rgba(139,92,246,0.4)', borderRadius: '20px', color: '#c4b5fd', fontSize: '0.85rem', cursor: 'pointer', transition: 'all 0.2s' }}>
+                     Analyze Q3 Budget
+                   </button>
+                   <button onClick={() => handleSendMessage("Check vehicle repair bills for anomalies")} style={{ whiteSpace: 'nowrap', padding: '0.5rem 1rem', background: 'rgba(139,92,246,0.1)', border: '1px solid rgba(139,92,246,0.4)', borderRadius: '20px', color: '#c4b5fd', fontSize: '0.85rem', cursor: 'pointer', transition: 'all 0.2s' }}>
+                     Scan Repair Bills
+                   </button>
+                   <button onClick={() => handleSendMessage("Generate CAG compliance report")} style={{ whiteSpace: 'nowrap', padding: '0.5rem 1rem', background: 'rgba(139,92,246,0.1)', border: '1px solid rgba(139,92,246,0.4)', borderRadius: '20px', color: '#c4b5fd', fontSize: '0.85rem', cursor: 'pointer', transition: 'all 0.2s' }}>
+                     Generate CAG Report
+                   </button>
+                </div>
+                <div style={{ display: 'flex', gap: '1rem' }}>
+                  <input 
+                    type="text" 
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
+                    onKeyPress={(e) => e.key === 'Enter' && handleSendMessage(inputValue)}
+                    placeholder="Ask the Budget AI (e.g., 'What is the fuel budget deficit?')"
+                    style={{ flex: 1, padding: '1rem 1.5rem', borderRadius: '8px', background: 'rgba(15,23,42,0.8)', border: '1px solid rgba(255,255,255,0.1)', color: '#fff', outline: 'none', fontSize: '1rem' }}
+                  />
+                  <button 
+                    onClick={() => handleSendMessage(inputValue)}
+                    style={{ padding: '0 1.5rem', background: '#06b6d4', border: 'none', borderRadius: '8px', color: '#000', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.2s' }}
+                    onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                    onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                  >
+                    <Send size={20} />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <style>{`
+              @keyframes bounce {
+                0%, 80%, 100% { transform: scale(0); }
+                40% { transform: scale(1); }
+              }
+            `}</style>
+          </motion.div>
+        );
+
       case 'overview':
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel premium-module-panel">
