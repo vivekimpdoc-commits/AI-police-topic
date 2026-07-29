@@ -620,6 +620,16 @@ import TestRequestWorkflowDetailed from './pages/TestRequestWorkflowDetailed';
 import SampleStorageMonitoringDetailed from './pages/SampleStorageMonitoringDetailed';
 import ReportTurnaroundAnalyticsDetailed from './pages/ReportTurnaroundAnalyticsDetailed';
 import AccreditationComplianceDetailed from './pages/AccreditationComplianceDetailed';
+import CasePropertyAuctionManagementDetailed from './pages/CasePropertyAuctionManagementDetailed';
+import CourtPropertyDisposalMonitoringDetailed from './pages/CourtPropertyDisposalMonitoringDetailed';
+import SeizedVehicleDisposalManagementDetailed from './pages/SeizedVehicleDisposalManagementDetailed';
+import UnclaimedPropertyManagementDetailed from './pages/UnclaimedPropertyManagementDetailed';
+import CourtOrderComplianceMonitorDetailed from './pages/CourtOrderComplianceMonitorDetailed';
+import MagistrateCommunicationPortalDetailed from './pages/MagistrateCommunicationPortalDetailed';
+import JudicialCorrespondenceTrackerDetailed from './pages/JudicialCorrespondenceTrackerDetailed';
+import ProductionWarrantSchedulerDetailed from './pages/ProductionWarrantSchedulerDetailed';
+import LegalNoticeDispatchCenterDetailed from './pages/LegalNoticeDispatchCenterDetailed';
+import CaseLimitationPeriodMonitorDetailed from './pages/CaseLimitationPeriodMonitorDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2742,6 +2752,16 @@ const AnimatedRoutes = () => {
         <Route path="/sample-storage-monitoring" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><SampleStorageMonitoringDetailed /></motion.div>} />
         <Route path="/report-turnaround-analytics" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ReportTurnaroundAnalyticsDetailed /></motion.div>} />
         <Route path="/accreditation-compliance" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><AccreditationComplianceDetailed /></motion.div>} />
+        <Route path="/case-property-auction-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CasePropertyAuctionManagementDetailed /></motion.div>} />
+        <Route path="/court-property-disposal-monitoring" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CourtPropertyDisposalMonitoringDetailed /></motion.div>} />
+        <Route path="/seized-vehicle-disposal-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><SeizedVehicleDisposalManagementDetailed /></motion.div>} />
+        <Route path="/unclaimed-property-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><UnclaimedPropertyManagementDetailed /></motion.div>} />
+        <Route path="/court-order-compliance-monitor" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CourtOrderComplianceMonitorDetailed /></motion.div>} />
+        <Route path="/magistrate-communication-portal" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><MagistrateCommunicationPortalDetailed /></motion.div>} />
+        <Route path="/judicial-correspondence-tracker" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><JudicialCorrespondenceTrackerDetailed /></motion.div>} />
+        <Route path="/production-warrant-scheduler" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ProductionWarrantSchedulerDetailed /></motion.div>} />
+        <Route path="/legal-notice-dispatch-center" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><LegalNoticeDispatchCenterDetailed /></motion.div>} />
+        <Route path="/case-limitation-period-monitor" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CaseLimitationPeriodMonitorDetailed /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );

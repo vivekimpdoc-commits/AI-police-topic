@@ -342,6 +342,17 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 83: Police Legal Process
+                      'AI Case Property Auction Management': '/case-property-auction-management',
+                      'AI Court Property Disposal Monitoring': '/court-property-disposal-monitoring',
+                      'AI Seized Vehicle Disposal Management': '/seized-vehicle-disposal-management',
+                      'AI Unclaimed Property Management': '/unclaimed-property-management',
+                      'AI Court Order Compliance Monitor': '/court-order-compliance-monitor',
+                      'AI Magistrate Communication Portal': '/magistrate-communication-portal',
+                      'AI Judicial Correspondence Tracker': '/judicial-correspondence-tracker',
+                      'AI Production Warrant Scheduler': '/production-warrant-scheduler',
+                      'AI Legal Notice Dispatch Center': '/legal-notice-dispatch-center',
+                      'AI Case Limitation Period Monitor': '/case-limitation-period-monitor',
                       // Module 72: Police Laboratories
                       'AI Equipment Calibration Register': '/equipment-calibration-register',
                       'AI Sample Dispatch Tracking': '/sample-dispatch-tracking',
