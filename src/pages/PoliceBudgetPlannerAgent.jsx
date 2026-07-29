@@ -107,33 +107,45 @@ const PoliceBudgetPlannerAgent = () => {
         );
       case 'tech-stack':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid experts-grid">
-            <div className="premium-card highlight-cyan" style={{ textAlign: 'left', padding: '1.5rem' }}>
-              <Code className="card-icon" />
-              <h4 style={{ marginBottom: '1rem' }}>Core Framework</h4>
-              <p style={{ color: '#94a3b8', fontSize: '0.9rem', marginBottom: '0.5rem' }}><strong style={{ color: '#e2e8f0' }}>LangChain:</strong> Orchestrates the agent workflow.</p>
-              <p style={{ color: '#94a3b8', fontSize: '0.9rem' }}><strong style={{ color: '#e2e8f0' }}>FastAPI:</strong> High-performance backend API.</p>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid">
+            <div className="panel" style={{ padding: '1.5rem', borderTop: '3px solid #06b6d4' }}>
+              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#e2e8f0', marginBottom: '1rem' }}>
+                <Code color="#06b6d4" size={20} /> Core Framework
+              </h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#06b6d4' }}>LangChain:</strong> Orchestrates the agent workflow.</p>
+                <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#06b6d4' }}>FastAPI:</strong> High-performance backend API.</p>
+              </div>
             </div>
             
-            <div className="premium-card highlight-purple" style={{ textAlign: 'left', padding: '1.5rem' }}>
-              <Cpu className="card-icon" />
-              <h4 style={{ marginBottom: '1rem' }}>AI & Models</h4>
-              <p style={{ color: '#94a3b8', fontSize: '0.9rem', marginBottom: '0.5rem' }}><strong style={{ color: '#e2e8f0' }}>LLM:</strong> GPT-4 or fine-tuned Llama-3.</p>
-              <p style={{ color: '#94a3b8', fontSize: '0.9rem' }}><strong style={{ color: '#e2e8f0' }}>Embeddings:</strong> HuggingFace embeddings for RAG.</p>
+            <div className="panel" style={{ padding: '1.5rem', borderTop: '3px solid #8b5cf6' }}>
+              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#e2e8f0', marginBottom: '1rem' }}>
+                <Cpu color="#8b5cf6" size={20} /> AI & Models
+              </h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#8b5cf6' }}>LLM:</strong> GPT-4 or fine-tuned Llama-3.</p>
+                <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#8b5cf6' }}>Embeddings:</strong> HuggingFace embeddings for RAG.</p>
+              </div>
             </div>
 
-            <div className="premium-card highlight-cyan" style={{ textAlign: 'left', padding: '1.5rem' }}>
-              <Database className="card-icon" />
-              <h4 style={{ marginBottom: '1rem' }}>Data & Storage</h4>
-              <p style={{ color: '#94a3b8', fontSize: '0.9rem', marginBottom: '0.5rem' }}><strong style={{ color: '#e2e8f0' }}>PostgreSQL:</strong> Primary relational database.</p>
-              <p style={{ color: '#94a3b8', fontSize: '0.9rem' }}><strong style={{ color: '#e2e8f0' }}>PGVector:</strong> Vector database for financial rules.</p>
+            <div className="panel" style={{ padding: '1.5rem', borderTop: '3px solid #06b6d4' }}>
+              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#e2e8f0', marginBottom: '1rem' }}>
+                <Database color="#06b6d4" size={20} /> Data & Storage
+              </h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#06b6d4' }}>PostgreSQL:</strong> Primary relational database.</p>
+                <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#06b6d4' }}>PGVector:</strong> Vector database for financial rules.</p>
+              </div>
             </div>
 
-            <div className="premium-card highlight-purple" style={{ textAlign: 'left', padding: '1.5rem' }}>
-              <LayoutDashboard className="card-icon" />
-              <h4 style={{ marginBottom: '1rem' }}>Frontend UI</h4>
-              <p style={{ color: '#94a3b8', fontSize: '0.9rem', marginBottom: '0.5rem' }}><strong style={{ color: '#e2e8f0' }}>React + Vite:</strong> Dynamic, fast UI components.</p>
-              <p style={{ color: '#94a3b8', fontSize: '0.9rem' }}><strong style={{ color: '#e2e8f0' }}>Recharts:</strong> Financial data visualization.</p>
+            <div className="panel" style={{ padding: '1.5rem', borderTop: '3px solid #8b5cf6' }}>
+              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#e2e8f0', marginBottom: '1rem' }}>
+                <LayoutDashboard color="#8b5cf6" size={20} /> Frontend UI
+              </h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#8b5cf6' }}>React + Vite:</strong> Dynamic, fast UI components.</p>
+                <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#8b5cf6' }}>Recharts:</strong> Financial data visualization.</p>
+              </div>
             </div>
           </motion.div>
         );
