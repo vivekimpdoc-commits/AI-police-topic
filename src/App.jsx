@@ -644,6 +644,8 @@ import PoliceBudgetPlannerAgent from './pages/PoliceBudgetPlannerAgent';
 import FundAllocationExpertAgent from './pages/FundAllocationExpertAgent';
 import BudgetForecastAIAgent from './pages/BudgetForecastAIAgent';
 import BudgetUtilizationMonitorAgent from './pages/BudgetUtilizationMonitorAgent';
+import FinancialPlanningAIAgent from './pages/FinancialPlanningAIAgent';
+
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
