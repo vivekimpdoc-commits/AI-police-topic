@@ -630,6 +630,16 @@ import JudicialCorrespondenceTrackerDetailed from './pages/JudicialCorrespondenc
 import ProductionWarrantSchedulerDetailed from './pages/ProductionWarrantSchedulerDetailed';
 import LegalNoticeDispatchCenterDetailed from './pages/LegalNoticeDispatchCenterDetailed';
 import CaseLimitationPeriodMonitorDetailed from './pages/CaseLimitationPeriodMonitorDetailed';
+import ArmsLicenseAdministrationDetailed from './pages/ArmsLicenseAdministrationDetailed';
+import ArmsDealerInspectionDetailed from './pages/ArmsDealerInspectionDetailed';
+import ArmsRenewalMonitoringDetailed from './pages/ArmsRenewalMonitoringDetailed';
+import ExplosivesLicenseCoordinationDetailed from './pages/ExplosivesLicenseCoordinationDetailed';
+import FireworksPermissionManagementDetailed from './pages/FireworksPermissionManagementDetailed';
+import LoudspeakerPermissionManagementDetailed from './pages/LoudspeakerPermissionManagementDetailed';
+import ProcessionRoutePermissionDetailed from './pages/ProcessionRoutePermissionDetailed';
+import TemporaryEventPermissionDetailed from './pages/TemporaryEventPermissionDetailed';
+import CinemaSecurityCoordinationDetailed from './pages/CinemaSecurityCoordinationDetailed';
+import HotelVerificationManagementDetailed from './pages/HotelVerificationManagementDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2762,6 +2772,16 @@ const AnimatedRoutes = () => {
         <Route path="/production-warrant-scheduler" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ProductionWarrantSchedulerDetailed /></motion.div>} />
         <Route path="/legal-notice-dispatch-center" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><LegalNoticeDispatchCenterDetailed /></motion.div>} />
         <Route path="/case-limitation-period-monitor" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CaseLimitationPeriodMonitorDetailed /></motion.div>} />
+        <Route path="/arms-license-administration" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ArmsLicenseAdministrationDetailed /></motion.div>} />
+        <Route path="/arms-dealer-inspection" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ArmsDealerInspectionDetailed /></motion.div>} />
+        <Route path="/arms-renewal-monitoring" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ArmsRenewalMonitoringDetailed /></motion.div>} />
+        <Route path="/explosives-license-coordination" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ExplosivesLicenseCoordinationDetailed /></motion.div>} />
+        <Route path="/fireworks-permission-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><FireworksPermissionManagementDetailed /></motion.div>} />
+        <Route path="/loudspeaker-permission-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><LoudspeakerPermissionManagementDetailed /></motion.div>} />
+        <Route path="/procession-route-permission" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ProcessionRoutePermissionDetailed /></motion.div>} />
+        <Route path="/temporary-event-permission" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><TemporaryEventPermissionDetailed /></motion.div>} />
+        <Route path="/cinema-security-coordination" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CinemaSecurityCoordinationDetailed /></motion.div>} />
+        <Route path="/hotel-verification-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><HotelVerificationManagementDetailed /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );

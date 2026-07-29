@@ -342,6 +342,17 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 58: Police Licensing Regulation
+                      'AI Arms License Administration': '/arms-license-administration',
+                      'AI Arms Dealer Inspection': '/arms-dealer-inspection',
+                      'AI Arms Renewal Monitoring': '/arms-renewal-monitoring',
+                      'AI Explosives License Coordination': '/explosives-license-coordination',
+                      'AI Fireworks Permission Management': '/fireworks-permission-management',
+                      'AI Loudspeaker Permission Management': '/loudspeaker-permission-management',
+                      'AI Procession Route Permission': '/procession-route-permission',
+                      'AI Temporary Event Permission': '/temporary-event-permission',
+                      'AI Cinema Security Coordination': '/cinema-security-coordination',
+                      'AI Hotel Verification Management': '/hotel-verification-management',
                       // Module 83: Police Legal Process
                       'AI Case Property Auction Management': '/case-property-auction-management',
                       'AI Court Property Disposal Monitoring': '/court-property-disposal-monitoring',
