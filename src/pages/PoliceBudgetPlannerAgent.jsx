@@ -151,6 +151,7 @@ const PoliceBudgetPlannerAgent = () => {
                   <div style={{ height: '8px', background: 'rgba(255,255,255,0.1)', borderRadius: '4px', overflow: 'hidden' }}>
                     <motion.div initial={{ width: 0 }} animate={{ width: '32%' }} transition={{ duration: 1, delay: 0.2 }} style={{ height: '100%', background: '#10b981' }} />
                   </div>
+                  <p style={{ color: '#94a3b8', fontSize: '0.85rem', marginTop: '0.5rem' }}>AI Action: Analyzed current stock levels. Recommends delaying new tear-gas procurement until Q4 to maximize fund liquidity.</p>
                 </div>
 
                 <div>
@@ -161,6 +162,7 @@ const PoliceBudgetPlannerAgent = () => {
                   <div style={{ height: '8px', background: 'rgba(255,255,255,0.1)', borderRadius: '4px', overflow: 'hidden' }}>
                     <motion.div initial={{ width: 0 }} animate={{ width: '78%' }} transition={{ duration: 1, delay: 0.4 }} style={{ height: '100%', background: '#8b5cf6' }} />
                   </div>
+                  <p style={{ color: '#94a3b8', fontSize: '0.85rem', marginTop: '0.5rem' }}>AI Action: Approved ₹45 Lakhs for new forensic software licenses. Utilization certificate (UC) auto-generated for Home Ministry.</p>
                 </div>
               </div>
             </div>
