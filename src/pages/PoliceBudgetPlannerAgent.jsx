@@ -107,44 +107,48 @@ const PoliceBudgetPlannerAgent = () => {
         );
       case 'tech-stack':
         return (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid">
-            <div className="panel" style={{ padding: '1.5rem', borderTop: '3px solid #06b6d4' }}>
-              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#e2e8f0', marginBottom: '1rem' }}>
-                <Code color="#06b6d4" size={20} /> Core Framework
-              </h3>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#06b6d4' }}>LangChain:</strong> Orchestrates the agent workflow.</p>
-                <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#06b6d4' }}>FastAPI:</strong> High-performance backend API.</p>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="overview-panel">
+            <div className="split-section" style={{ gap: '1.5rem', marginBottom: '1.5rem' }}>
+              <div className="panel" style={{ padding: '1.5rem', borderTop: '3px solid #06b6d4' }}>
+                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#e2e8f0', marginBottom: '1rem' }}>
+                  <Code color="#06b6d4" size={20} /> Core Framework
+                </h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                  <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#06b6d4' }}>LangChain:</strong> Orchestrates the agent workflow.</p>
+                  <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#06b6d4' }}>FastAPI:</strong> High-performance backend API.</p>
+                </div>
               </div>
-            </div>
-            
-            <div className="panel" style={{ padding: '1.5rem', borderTop: '3px solid #8b5cf6' }}>
-              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#e2e8f0', marginBottom: '1rem' }}>
-                <Cpu color="#8b5cf6" size={20} /> AI & Models
-              </h3>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#8b5cf6' }}>LLM:</strong> GPT-4 or fine-tuned Llama-3.</p>
-                <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#8b5cf6' }}>Embeddings:</strong> HuggingFace embeddings for RAG.</p>
-              </div>
-            </div>
-
-            <div className="panel" style={{ padding: '1.5rem', borderTop: '3px solid #06b6d4' }}>
-              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#e2e8f0', marginBottom: '1rem' }}>
-                <Database color="#06b6d4" size={20} /> Data & Storage
-              </h3>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#06b6d4' }}>PostgreSQL:</strong> Primary relational database.</p>
-                <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#06b6d4' }}>PGVector:</strong> Vector database for financial rules.</p>
+              
+              <div className="panel" style={{ padding: '1.5rem', borderTop: '3px solid #8b5cf6' }}>
+                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#e2e8f0', marginBottom: '1rem' }}>
+                  <Cpu color="#8b5cf6" size={20} /> AI & Models
+                </h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                  <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#8b5cf6' }}>LLM:</strong> GPT-4 or fine-tuned Llama-3.</p>
+                  <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#8b5cf6' }}>Embeddings:</strong> HuggingFace embeddings for RAG.</p>
+                </div>
               </div>
             </div>
 
-            <div className="panel" style={{ padding: '1.5rem', borderTop: '3px solid #8b5cf6' }}>
-              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#e2e8f0', marginBottom: '1rem' }}>
-                <LayoutDashboard color="#8b5cf6" size={20} /> Frontend UI
-              </h3>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#8b5cf6' }}>React + Vite:</strong> Dynamic, fast UI components.</p>
-                <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#8b5cf6' }}>Recharts:</strong> Financial data visualization.</p>
+            <div className="split-section" style={{ gap: '1.5rem' }}>
+              <div className="panel" style={{ padding: '1.5rem', borderTop: '3px solid #06b6d4' }}>
+                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#e2e8f0', marginBottom: '1rem' }}>
+                  <Database color="#06b6d4" size={20} /> Data & Storage
+                </h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                  <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#06b6d4' }}>PostgreSQL:</strong> Primary relational database.</p>
+                  <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#06b6d4' }}>PGVector:</strong> Vector database for financial rules.</p>
+                </div>
+              </div>
+
+              <div className="panel" style={{ padding: '1.5rem', borderTop: '3px solid #8b5cf6' }}>
+                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#e2e8f0', marginBottom: '1rem' }}>
+                  <LayoutDashboard color="#8b5cf6" size={20} /> Frontend UI
+                </h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                  <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#8b5cf6' }}>React + Vite:</strong> Dynamic, fast UI components.</p>
+                  <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5' }}><strong style={{ color: '#8b5cf6' }}>Recharts:</strong> Financial data visualization.</p>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -156,33 +160,35 @@ const PoliceBudgetPlannerAgent = () => {
               <Terminal className="inline-icon" size={28} /> IMPLEMENTATION ROADMAP
             </h2>
             
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                <div className="panel" style={{ padding: '1.5rem', display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-                  <div style={{ background: 'rgba(6,182,212,0.1)', color: '#06b6d4', padding: '1rem', borderRadius: '50%', fontWeight: 'bold', fontSize: '1.5rem' }}>1</div>
+            <div className="split-section" style={{ gap: '1.5rem', marginBottom: '1.5rem' }}>
+                <div className="panel" style={{ padding: '1.5rem', display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
+                  <div style={{ background: 'rgba(6,182,212,0.1)', color: '#06b6d4', padding: '0.8rem 1.2rem', borderRadius: '50%', fontWeight: 'bold', fontSize: '1.2rem', flexShrink: 0 }}>1</div>
                   <div>
                     <h3 style={{ color: '#e2e8f0', marginBottom: '0.5rem' }}>Data Integration Phase</h3>
                     <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Connect backend APIs to state treasury, HRMS, and procurement portals. Establish ETL pipelines.</p>
                   </div>
                 </div>
 
-                <div className="panel" style={{ padding: '1.5rem', display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-                  <div style={{ background: 'rgba(139,92,246,0.1)', color: '#8b5cf6', padding: '1rem', borderRadius: '50%', fontWeight: 'bold', fontSize: '1.5rem' }}>2</div>
+                <div className="panel" style={{ padding: '1.5rem', display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
+                  <div style={{ background: 'rgba(139,92,246,0.1)', color: '#8b5cf6', padding: '0.8rem 1.2rem', borderRadius: '50%', fontWeight: 'bold', fontSize: '1.2rem', flexShrink: 0 }}>2</div>
                   <div>
                     <h3 style={{ color: '#e2e8f0', marginBottom: '0.5rem' }}>RAG System Setup</h3>
                     <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Digitize financial manuals and CAG audit rules. Embed chunks into PGVector for compliance checks.</p>
                   </div>
                 </div>
+            </div>
 
-                <div className="panel" style={{ padding: '1.5rem', display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-                  <div style={{ background: 'rgba(6,182,212,0.1)', color: '#06b6d4', padding: '1rem', borderRadius: '50%', fontWeight: 'bold', fontSize: '1.5rem' }}>3</div>
+            <div className="split-section" style={{ gap: '1.5rem' }}>
+                <div className="panel" style={{ padding: '1.5rem', display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
+                  <div style={{ background: 'rgba(6,182,212,0.1)', color: '#06b6d4', padding: '0.8rem 1.2rem', borderRadius: '50%', fontWeight: 'bold', fontSize: '1.2rem', flexShrink: 0 }}>3</div>
                   <div>
                     <h3 style={{ color: '#e2e8f0', marginBottom: '0.5rem' }}>Agent Tooling & Prompts</h3>
                     <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Configure LangChain agent with tools like `query_database()` and strict system prompts preventing hallucination.</p>
                   </div>
                 </div>
 
-                <div className="panel" style={{ padding: '1.5rem', display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-                  <div style={{ background: 'rgba(139,92,246,0.1)', color: '#8b5cf6', padding: '1rem', borderRadius: '50%', fontWeight: 'bold', fontSize: '1.5rem' }}>4</div>
+                <div className="panel" style={{ padding: '1.5rem', display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
+                  <div style={{ background: 'rgba(139,92,246,0.1)', color: '#8b5cf6', padding: '0.8rem 1.2rem', borderRadius: '50%', fontWeight: 'bold', fontSize: '1.2rem', flexShrink: 0 }}>4</div>
                   <div>
                     <h3 style={{ color: '#e2e8f0', marginBottom: '0.5rem' }}>Frontend Dashboard</h3>
                     <p style={{ color: '#94a3b8', lineHeight: '1.6' }}>Build the React interface where executives can view dashboards or use natural language queries.</p>
@@ -251,7 +257,7 @@ const PoliceBudgetPlannerAgent = () => {
           </div>
         </nav>
 
-        <main className="hrms-main-content">
+        <main className="hrms-content-area">
           <AnimatePresence mode="wait">
             {renderContent()}
           </AnimatePresence>
