@@ -610,6 +610,16 @@ import PoliceTerminologyDictionaryDetailed from './pages/PoliceTerminologyDictio
 import AcronymKnowledgeBaseDetailed from './pages/AcronymKnowledgeBaseDetailed';
 import OrganizationalMemoryPlatformDetailed from './pages/OrganizationalMemoryPlatformDetailed';
 import KnowledgeContinuityManagerDetailed from './pages/KnowledgeContinuityManagerDetailed';
+import EquipmentCalibrationRegisterDetailed from './pages/EquipmentCalibrationRegisterDetailed';
+import SampleDispatchTrackingDetailed from './pages/SampleDispatchTrackingDetailed';
+import LaboratoryCapacityDashboardDetailed from './pages/LaboratoryCapacityDashboardDetailed';
+import InstrumentMaintenancePlannerDetailed from './pages/InstrumentMaintenancePlannerDetailed';
+import LabQualityAssuranceDetailed from './pages/LabQualityAssuranceDetailed';
+import ChemicalInventoryDetailed from './pages/ChemicalInventoryDetailed';
+import TestRequestWorkflowDetailed from './pages/TestRequestWorkflowDetailed';
+import SampleStorageMonitoringDetailed from './pages/SampleStorageMonitoringDetailed';
+import ReportTurnaroundAnalyticsDetailed from './pages/ReportTurnaroundAnalyticsDetailed';
+import AccreditationComplianceDetailed from './pages/AccreditationComplianceDetailed';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2722,6 +2732,16 @@ const AnimatedRoutes = () => {
         <Route path="/acronym-knowledge-base" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><AcronymKnowledgeBaseDetailed /></motion.div>} />
         <Route path="/organizational-memory-platform" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><OrganizationalMemoryPlatformDetailed /></motion.div>} />
         <Route path="/knowledge-continuity-manager" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><KnowledgeContinuityManagerDetailed /></motion.div>} />
+        <Route path="/equipment-calibration-register" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><EquipmentCalibrationRegisterDetailed /></motion.div>} />
+        <Route path="/sample-dispatch-tracking" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><SampleDispatchTrackingDetailed /></motion.div>} />
+        <Route path="/laboratory-capacity-dashboard" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><LaboratoryCapacityDashboardDetailed /></motion.div>} />
+        <Route path="/instrument-maintenance-planner" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><InstrumentMaintenancePlannerDetailed /></motion.div>} />
+        <Route path="/lab-quality-assurance" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><LabQualityAssuranceDetailed /></motion.div>} />
+        <Route path="/chemical-inventory" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ChemicalInventoryDetailed /></motion.div>} />
+        <Route path="/test-request-workflow" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><TestRequestWorkflowDetailed /></motion.div>} />
+        <Route path="/sample-storage-monitoring" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><SampleStorageMonitoringDetailed /></motion.div>} />
+        <Route path="/report-turnaround-analytics" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ReportTurnaroundAnalyticsDetailed /></motion.div>} />
+        <Route path="/accreditation-compliance" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><AccreditationComplianceDetailed /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );

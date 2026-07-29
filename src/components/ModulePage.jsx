@@ -342,6 +342,17 @@ const ModulePage = () => {
                   };
 
                   const topicMap = {
+                      // Module 72: Police Laboratories
+                      'AI Equipment Calibration Register': '/equipment-calibration-register',
+                      'AI Sample Dispatch Tracking': '/sample-dispatch-tracking',
+                      'AI Laboratory Capacity Dashboard': '/laboratory-capacity-dashboard',
+                      'AI Instrument Maintenance Planner': '/instrument-maintenance-planner',
+                      'AI Lab Quality Assurance': '/lab-quality-assurance',
+                      'AI Chemical Inventory': '/chemical-inventory',
+                      'AI Test Request Workflow': '/test-request-workflow',
+                      'AI Sample Storage Monitoring': '/sample-storage-monitoring',
+                      'AI Report Turnaround Analytics': '/report-turnaround-analytics',
+                      'AI Accreditation Compliance': '/accreditation-compliance',
                       // Module 92: Police Knowledge Preservation
                       'AI Retired Officer Experience Archive': '/retired-officer-experience-archive',
                       'AI Best Investigation Practices Library': '/best-investigation-practices-library',
