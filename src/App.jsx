@@ -642,6 +642,7 @@ import CinemaSecurityCoordinationDetailed from './pages/CinemaSecurityCoordinati
 import HotelVerificationManagementDetailed from './pages/HotelVerificationManagementDetailed';
 import PoliceBudgetPlannerAgent from './pages/PoliceBudgetPlannerAgent';
 import FundAllocationExpertAgent from './pages/FundAllocationExpertAgent';
+import BudgetForecastAIAgent from './pages/BudgetForecastAIAgent';
 import { Globe, ShieldAlert } from 'lucide-react';
 
 const TopNav = () => {
@@ -2786,6 +2787,7 @@ const AnimatedRoutes = () => {
         <Route path="/hotel-verification-management" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><HotelVerificationManagementDetailed /></motion.div>} />
         <Route path="/police-budget-planner-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PoliceBudgetPlannerAgent /></motion.div>} />
         <Route path="/fund-allocation-expert-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><FundAllocationExpertAgent /></motion.div>} />
+        <Route path="/budget-forecast-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><BudgetForecastAIAgent /></motion.div>} />
 </Routes>
     </AnimatePresence>
   );
