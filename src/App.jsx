@@ -647,6 +647,59 @@ import BudgetUtilizationMonitorAgent from './pages/BudgetUtilizationMonitorAgent
 import FinancialPlanningAIAgent from './pages/FinancialPlanningAIAgent';
 import TreasuryManagementAIAgent from './pages/TreasuryManagementAIAgent';
 import RevenueGrantManagementAIAgent from './pages/RevenueGrantManagementAIAgent';
+import ProcurementPlanningAIAgent from './pages/ProcurementPlanningAIAgent';
+import VendorPaymentAuditorAIAgent from './pages/VendorPaymentAuditorAIAgent';
+import SalaryPayrollAIAgent from './pages/SalaryPayrollAIAgent';
+import PensionGratuityAIAgent from './pages/PensionGratuityAIAgent';
+import FleetExpenseAIAgent from './pages/FleetExpenseAIAgent';
+import AmmunitionCostAnalyzerAIAgent from './pages/AmmunitionCostAnalyzerAIAgent';
+import ExpenseFraudAuditorAIAgent from './pages/ExpenseFraudAuditorAIAgent';
+import FinancialComplianceBotAIAgent from './pages/FinancialComplianceBotAIAgent';
+import InternalAuditAIAgent from './pages/InternalAuditAIAgent';
+import FinancialRiskIntelligenceAIAgent from './pages/FinancialRiskIntelligenceAIAgent';
+import ExecutiveFinanceCopilotAIAgent from './pages/ExecutiveFinanceCopilotAIAgent';
+import FinancialAnalyticsAIAgent from './pages/FinancialAnalyticsAIAgent';
+import RiskAllowancePredictorAIAgent from './pages/RiskAllowancePredictorAIAgent';
+import StationUpkeepBudgetAIAgent from './pages/StationUpkeepBudgetAIAgent';
+import TaxOptimizationExpertAIAgent from './pages/TaxOptimizationExpertAIAgent';
+import ContingencyFundPredictorAIAgent from './pages/ContingencyFundPredictorAIAgent';
+import OvertimeSpendForecasterAIAgent from './pages/OvertimeSpendForecasterAIAgent';
+import StateGrantROIAnalyzerAIAgent from './pages/StateGrantROIAnalyzerAIAgent';
+import CentralFundingSyncBotAgent from './pages/CentralFundingSyncBotAgent';
+import UniformKitAllowanceAIAgent from './pages/UniformKitAllowanceAIAgent';
+import TravelDATAOptimizerAIAgent from './pages/TravelDATAOptimizerAIAgent';
+import InvestigationExpenseTrackerAIAgent from './pages/InvestigationExpenseTrackerAIAgent';
+import SecretInformantSSFundAuditorAIAgent from './pages/SecretInformantSSFundAuditorAIAgent';
+import PCRVanFuelLogAIAgent from './pages/PCRVanFuelLogAIAgent';
+import VehicleMaintenanceBudgetBotAgent from './pages/VehicleMaintenanceBudgetBotAgent';
+import TollTransportExpenseAIAgent from './pages/TollTransportExpenseAIAgent';
+import FuelCardIntegrationSyncAIAgent from './pages/FuelCardIntegrationSyncAIAgent';
+import PostRetirementMedicalFundAIAgent from './pages/PostRetirementMedicalFundAIAgent';
+import FamilyPensionCalculatorBotAgent from './pages/FamilyPensionCalculatorBotAgent';
+import CAGComplianceAuditorAIAgent from './pages/CAGComplianceAuditorAIAgent';
+import ExpenseAnomalyDetectorAIAgent from './pages/ExpenseAnomalyDetectorAIAgent';
+import FundUtilizationCertificateBotAgent from './pages/FundUtilizationCertificateBotAgent';
+import BudgetDeficitAlertAIAgent from './pages/BudgetDeficitAlertAIAgent';
+import FakeBillOCRScannerAIAgent from './pages/FakeBillOCRScannerAIAgent';
+import VendorOverpricingAlertBotAgent from './pages/VendorOverpricingAlertBotAgent';
+import MulticurrencyForensicAIAgent from './pages/MulticurrencyForensicAIAgent';
+import SmartContractPaymentExecAIAgent from './pages/SmartContractPaymentExecAIAgent';
+import CryptoAssetSeizureValuatorAIAgent from './pages/CryptoAssetSeizureValuatorAIAgent';
+import DistrictwiseAllocationOptimizerAIAgent from './pages/DistrictwiseAllocationOptimizerAIAgent';
+import ZonewiseFundDistrubutionAIAgent from './pages/ZonewiseFundDistrubutionAIAgent';
+import EventSecurityCostPredictorAIAgent from './pages/EventSecurityCostPredictorAIAgent';
+import ElectionDeploymentBudgetAIAgent from './pages/ElectionDeploymentBudgetAIAgent';
+import SpecializedUnitTrainingCostAIAgent from './pages/SpecializedUnitTrainingCostAIAgent';
+import K9UnitUpkeepForecasterAIAgent from './pages/K9UnitUpkeepForecasterAIAgent';
+import DroneFleetDepreciationModelerAIAgent from './pages/DroneFleetDepreciationModelerAIAgent';
+import CyberSecurityInvestmentROIAIAgent from './pages/CyberSecurityInvestmentROIAIAgent';
+import CloudStorageBillingOptimizerAIAgent from './pages/CloudStorageBillingOptimizerAIAgent';
+import HeadquartersUtilityExpenseAIAgent from './pages/HeadquartersUtilityExpenseAIAgent';
+import OfficerLoanAdvanceTrackerAIAgent from './pages/OfficerLoanAdvanceTrackerAIAgent';
+import FinancialHardshipPredictorBotAgent from './pages/FinancialHardshipPredictorBotAgent';
+import StationRenovationBudgetAIAgent from './pages/StationRenovationBudgetAIAgent';
+import RewardBountyPayoutBotAgent from './pages/RewardBountyPayoutBotAgent';
+import FutureInflationAdjustmentAIAgent from './pages/FutureInflationAdjustmentAIAgent';
 
 
 
@@ -2799,6 +2852,59 @@ const AnimatedRoutes = () => {
         <Route path="/financial-planning-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><FinancialPlanningAIAgent /></motion.div>} />
         <Route path="/treasury-management-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><TreasuryManagementAIAgent /></motion.div>} />
         <Route path="/revenue-grant-management-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><RevenueGrantManagementAIAgent /></motion.div>} />
+        <Route path="/procurement-planning-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ProcurementPlanningAIAgent /></motion.div>} />
+        <Route path="/vendor-payment-auditor-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><VendorPaymentAuditorAIAgent /></motion.div>} />
+        <Route path="/salary-payroll-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><SalaryPayrollAIAgent /></motion.div>} />
+        <Route path="/pension-gratuity-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PensionGratuityAIAgent /></motion.div>} />
+        <Route path="/fleet-expense-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><FleetExpenseAIAgent /></motion.div>} />
+        <Route path="/ammunition-cost-analyzer-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><AmmunitionCostAnalyzerAIAgent /></motion.div>} />
+        <Route path="/expense-fraud-auditor-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ExpenseFraudAuditorAIAgent /></motion.div>} />
+        <Route path="/financial-compliance-bot-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><FinancialComplianceBotAIAgent /></motion.div>} />
+        <Route path="/internal-audit-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><InternalAuditAIAgent /></motion.div>} />
+        <Route path="/financial-risk-intelligence-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><FinancialRiskIntelligenceAIAgent /></motion.div>} />
+        <Route path="/executive-finance-copilot-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ExecutiveFinanceCopilotAIAgent /></motion.div>} />
+        <Route path="/financial-analytics-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><FinancialAnalyticsAIAgent /></motion.div>} />
+        <Route path="/risk-allowance-predictor-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><RiskAllowancePredictorAIAgent /></motion.div>} />
+        <Route path="/station-upkeep-budget-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><StationUpkeepBudgetAIAgent /></motion.div>} />
+        <Route path="/tax-optimization-expert-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><TaxOptimizationExpertAIAgent /></motion.div>} />
+        <Route path="/contingency-fund-predictor-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ContingencyFundPredictorAIAgent /></motion.div>} />
+        <Route path="/overtime-spend-forecaster-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><OvertimeSpendForecasterAIAgent /></motion.div>} />
+        <Route path="/state-grant-roi-analyzer-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><StateGrantROIAnalyzerAIAgent /></motion.div>} />
+        <Route path="/central-funding-sync-bot-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CentralFundingSyncBotAgent /></motion.div>} />
+        <Route path="/uniform-kit-allowance-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><UniformKitAllowanceAIAgent /></motion.div>} />
+        <Route path="/travel-data-optimizer-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><TravelDATAOptimizerAIAgent /></motion.div>} />
+        <Route path="/investigation-expense-tracker-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><InvestigationExpenseTrackerAIAgent /></motion.div>} />
+        <Route path="/secret-informant-ss-fund-auditor-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><SecretInformantSSFundAuditorAIAgent /></motion.div>} />
+        <Route path="/pcr-van-fuel-log-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PCRVanFuelLogAIAgent /></motion.div>} />
+        <Route path="/vehicle-maintenance-budget-bot-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><VehicleMaintenanceBudgetBotAgent /></motion.div>} />
+        <Route path="/toll-transport-expense-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><TollTransportExpenseAIAgent /></motion.div>} />
+        <Route path="/fuel-card-integration-sync-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><FuelCardIntegrationSyncAIAgent /></motion.div>} />
+        <Route path="/postretirement-medical-fund-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><PostRetirementMedicalFundAIAgent /></motion.div>} />
+        <Route path="/family-pension-calculator-bot-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><FamilyPensionCalculatorBotAgent /></motion.div>} />
+        <Route path="/cag-compliance-auditor-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CAGComplianceAuditorAIAgent /></motion.div>} />
+        <Route path="/expense-anomaly-detector-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ExpenseAnomalyDetectorAIAgent /></motion.div>} />
+        <Route path="/fund-utilization-certificate-bot-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><FundUtilizationCertificateBotAgent /></motion.div>} />
+        <Route path="/budget-deficit-alert-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><BudgetDeficitAlertAIAgent /></motion.div>} />
+        <Route path="/fake-bill-ocr-scanner-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><FakeBillOCRScannerAIAgent /></motion.div>} />
+        <Route path="/vendor-overpricing-alert-bot-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><VendorOverpricingAlertBotAgent /></motion.div>} />
+        <Route path="/multicurrency-forensic-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><MulticurrencyForensicAIAgent /></motion.div>} />
+        <Route path="/smart-contract-payment-exec-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><SmartContractPaymentExecAIAgent /></motion.div>} />
+        <Route path="/crypto-asset-seizure-valuator-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CryptoAssetSeizureValuatorAIAgent /></motion.div>} />
+        <Route path="/districtwise-allocation-optimizer-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><DistrictwiseAllocationOptimizerAIAgent /></motion.div>} />
+        <Route path="/zonewise-fund-distrubution-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ZonewiseFundDistrubutionAIAgent /></motion.div>} />
+        <Route path="/event-security-cost-predictor-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><EventSecurityCostPredictorAIAgent /></motion.div>} />
+        <Route path="/election-deployment-budget-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><ElectionDeploymentBudgetAIAgent /></motion.div>} />
+        <Route path="/specialized-unit-training-cost-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><SpecializedUnitTrainingCostAIAgent /></motion.div>} />
+        <Route path="/k9-unit-upkeep-forecaster-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><K9UnitUpkeepForecasterAIAgent /></motion.div>} />
+        <Route path="/drone-fleet-depreciation-modeler-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><DroneFleetDepreciationModelerAIAgent /></motion.div>} />
+        <Route path="/cyber-security-investment-roi-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CyberSecurityInvestmentROIAIAgent /></motion.div>} />
+        <Route path="/cloud-storage-billing-optimizer-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><CloudStorageBillingOptimizerAIAgent /></motion.div>} />
+        <Route path="/headquarters-utility-expense-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><HeadquartersUtilityExpenseAIAgent /></motion.div>} />
+        <Route path="/officer-loan-advance-tracker-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><OfficerLoanAdvanceTrackerAIAgent /></motion.div>} />
+        <Route path="/financial-hardship-predictor-bot-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><FinancialHardshipPredictorBotAgent /></motion.div>} />
+        <Route path="/station-renovation-budget-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><StationRenovationBudgetAIAgent /></motion.div>} />
+        <Route path="/reward-bounty-payout-bot-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><RewardBountyPayoutBotAgent /></motion.div>} />
+        <Route path="/future-inflation-adjustment-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><FutureInflationAdjustmentAIAgent /></motion.div>} />
 
 
 </Routes>

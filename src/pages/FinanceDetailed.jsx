@@ -80,14 +80,69 @@ const FinanceDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid experts-grid">
             {aiExperts.map((expert, i) => {
-              const isBudgetPlanner = expert === "Police Budget Planner AI";
-              const isFundAllocation = expert === "Fund Allocation Expert AI";
-              const isBudgetForecast = expert === "Budget Forecast AI";
-              const isUtilization = expert === "Budget Utilization Monitor AI";
-              const isFinancialPlanning = expert === "Financial Planning AI";
-              const isTreasury = expert === "Treasury Management AI";
-              const isRevenueGrant = expert === "Revenue & Grant Management AI";
-              const isClickable = isBudgetPlanner || isFundAllocation || isBudgetForecast || isUtilization || isFinancialPlanning || isTreasury || isRevenueGrant;
+              const expertRoutes = {
+      "Police Budget Planner AI": "/police-budget-planner-ai-agent",
+      "Fund Allocation Expert AI": "/fund-allocation-expert-ai-agent",
+      "Budget Forecast AI": "/budget-forecast-ai-agent",
+      "Budget Utilization Monitor AI": "/budget-utilization-monitor-ai-agent",
+      "Financial Planning AI": "/financial-planning-ai-agent",
+      "Treasury Management AI": "/treasury-management-ai-agent",
+      "Revenue & Grant Management AI": "/revenue-grant-management-ai-agent",
+      "Procurement Planning AI": "/procurement-planning-ai-agent",
+      "Vendor Payment Auditor AI": "/vendor-payment-auditor-ai-agent",
+      "Salary & Payroll AI": "/salary-payroll-ai-agent",
+      "Pension & Gratuity AI": "/pension-gratuity-ai-agent",
+      "Fleet Expense AI": "/fleet-expense-ai-agent",
+      "Ammunition Cost Analyzer AI": "/ammunition-cost-analyzer-ai-agent",
+      "Expense Fraud Auditor AI": "/expense-fraud-auditor-ai-agent",
+      "Financial Compliance Bot AI": "/financial-compliance-bot-ai-agent",
+      "Internal Audit AI": "/internal-audit-ai-agent",
+      "Financial Risk Intelligence AI": "/financial-risk-intelligence-ai-agent",
+      "Executive Finance Copilot AI": "/executive-finance-copilot-ai-agent",
+      "Financial Analytics AI": "/financial-analytics-ai-agent",
+      "Risk Allowance Predictor AI": "/risk-allowance-predictor-ai-agent",
+      "Station Upkeep Budget AI": "/station-upkeep-budget-ai-agent",
+      "Tax Optimization Expert AI": "/tax-optimization-expert-ai-agent",
+      "Contingency Fund Predictor": "/contingency-fund-predictor-agent",
+      "Overtime Spend Forecaster": "/overtime-spend-forecaster-agent",
+      "State Grant ROI Analyzer": "/state-grant-roi-analyzer-agent",
+      "Central Funding Sync Bot": "/central-funding-sync-bot-agent",
+      "Uniform & Kit Allowance AI": "/uniform-kit-allowance-ai-agent",
+      "Travel DA/TA Optimizer": "/travel-data-optimizer-agent",
+      "Investigation Expense Tracker": "/investigation-expense-tracker-agent",
+      "Secret Informant (SS Fund) Auditor": "/secret-informant-ss-fund-auditor-agent",
+      "PCR Van Fuel Log AI": "/pcr-van-fuel-log-ai-agent",
+      "Vehicle Maintenance Budget Bot": "/vehicle-maintenance-budget-bot-agent",
+      "Toll & Transport Expense AI": "/toll-transport-expense-ai-agent",
+      "Fuel Card Integration Sync": "/fuel-card-integration-sync-agent",
+      "Post-Retirement Medical Fund AI": "/postretirement-medical-fund-ai-agent",
+      "Family Pension Calculator Bot": "/family-pension-calculator-bot-agent",
+      "CAG Compliance Auditor": "/cag-compliance-auditor-agent",
+      "Expense Anomaly Detector": "/expense-anomaly-detector-agent",
+      "Fund Utilization Certificate Bot": "/fund-utilization-certificate-bot-agent",
+      "Budget Deficit Alert AI": "/budget-deficit-alert-ai-agent",
+      "Fake Bill OCR Scanner": "/fake-bill-ocr-scanner-agent",
+      "Vendor Overpricing Alert Bot": "/vendor-overpricing-alert-bot-agent",
+      "Multi-currency Forensic AI": "/multicurrency-forensic-ai-agent",
+      "Smart Contract Payment Exec": "/smart-contract-payment-exec-agent",
+      "Crypto Asset Seizure Valuator": "/crypto-asset-seizure-valuator-agent",
+      "District-wise Allocation Optimizer": "/districtwise-allocation-optimizer-agent",
+      "Zone-wise Fund Distrubution AI": "/zonewise-fund-distrubution-ai-agent",
+      "Event Security Cost Predictor": "/event-security-cost-predictor-agent",
+      "Election Deployment Budget AI": "/election-deployment-budget-ai-agent",
+      "Specialized Unit Training Cost AI": "/specialized-unit-training-cost-ai-agent",
+      "K9 Unit Upkeep Forecaster": "/k9-unit-upkeep-forecaster-agent",
+      "Drone Fleet Depreciation Modeler": "/drone-fleet-depreciation-modeler-agent",
+      "Cyber Security Investment ROI AI": "/cyber-security-investment-roi-ai-agent",
+      "Cloud Storage Billing Optimizer": "/cloud-storage-billing-optimizer-agent",
+      "Headquarters Utility Expense AI": "/headquarters-utility-expense-ai-agent",
+      "Officer Loan & Advance Tracker": "/officer-loan-advance-tracker-agent",
+      "Financial Hardship Predictor Bot": "/financial-hardship-predictor-bot-agent",
+      "Station Renovation Budget AI": "/station-renovation-budget-ai-agent",
+      "Reward & Bounty Payout Bot": "/reward-bounty-payout-bot-agent",
+      "Future Inflation Adjustment AI": "/future-inflation-adjustment-ai-agent"
+};
+const isClickable = !!expertRoutes[expert];
               return (
                 <motion.div 
                   initial={{ opacity: 0, scale: 0.8 }} 
@@ -95,7 +150,7 @@ const FinanceDetailed = () => {
                   transition={{ delay: i * 0.03 }} 
                   key={i} 
                   className={`premium-card highlight-cyan ${isClickable ? 'clickable-agent-card' : ''}`}
-                  onClick={isBudgetPlanner ? () => navigate('/police-budget-planner-agent') : isFundAllocation ? () => navigate('/fund-allocation-expert-agent') : isBudgetForecast ? () => navigate('/budget-forecast-ai-agent') : isUtilization ? () => navigate('/budget-utilization-monitor-agent') : isFinancialPlanning ? () => navigate('/financial-planning-ai-agent') : isTreasury ? () => navigate('/treasury-management-ai-agent') : isRevenueGrant ? () => navigate('/revenue-grant-management-ai-agent') : undefined}
+                  onClick={() => { if (isClickable) navigate(expertRoutes[expert]); }}
                   style={isClickable ? { cursor: 'pointer', border: '1px solid #00f0ff', boxShadow: '0 0 15px rgba(0, 240, 255, 0.3)' } : {}}
                 >
                   <Bot className="card-icon" />
