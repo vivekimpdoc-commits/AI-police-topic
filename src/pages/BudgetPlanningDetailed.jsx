@@ -81,19 +81,21 @@ const BudgetPlanningDetailed = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid experts-grid">
             {aiExperts.map((expert, i) => {
               const isBudgetPlanner = expert === "Police Budget Planner AI";
+              const isFundAllocation = expert === "Fund Allocation Expert AI";
+              const isClickable = isBudgetPlanner || isFundAllocation;
               return (
                 <motion.div 
                   initial={{ opacity: 0, scale: 0.8 }} 
                   animate={{ opacity: 1, scale: 1 }} 
                   transition={{ delay: i * 0.03 }} 
                   key={i} 
-                  className={`premium-card highlight-cyan ${isBudgetPlanner ? 'clickable-agent-card' : ''}`}
-                  onClick={isBudgetPlanner ? () => navigate('/police-budget-planner-agent') : undefined}
-                  style={isBudgetPlanner ? { cursor: 'pointer', border: '1px solid #00f0ff', boxShadow: '0 0 15px rgba(0, 240, 255, 0.3)' } : {}}
+                  className={`premium-card highlight-cyan ${isClickable ? 'clickable-agent-card' : ''}`}
+                  onClick={isBudgetPlanner ? () => navigate('/police-budget-planner-agent') : isFundAllocation ? () => navigate('/fund-allocation-expert-agent') : undefined}
+                  style={isClickable ? { cursor: 'pointer', border: '1px solid #00f0ff', boxShadow: '0 0 15px rgba(0, 240, 255, 0.3)' } : {}}
                 >
                   <Bot className="card-icon" />
                   <h4>{expert}</h4>
-                  {isBudgetPlanner && <div style={{ fontSize: '0.75rem', color: '#00f0ff', marginTop: '5px' }}>Click to view Agent details</div>}
+                  {isClickable && <div style={{ fontSize: '0.75rem', color: '#00f0ff', marginTop: '5px' }}>Click to view Agent details</div>}
                 </motion.div>
               );
             })}
