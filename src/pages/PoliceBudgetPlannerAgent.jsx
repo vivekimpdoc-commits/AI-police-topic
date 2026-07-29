@@ -2,15 +2,16 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bot, ArrowLeft, Terminal, Cpu, ShieldAlert, PieChart, Database, Network, Server, Code, FileText, LayoutDashboard, Zap, Target, MessageSquare, Send, AlertTriangle, CheckCircle2, IndianRupee
+  Bot, ArrowLeft, Terminal, Cpu, ShieldAlert, PieChart, Database, Network, Server, Code, FileText, LayoutDashboard, Zap, Target, MessageSquare, Send, AlertTriangle, CheckCircle2, TrendingUp, Activity
 } from "lucide-react";
 import '../styles/hrmsDetailed.css'; 
 
 const tabs = [
   { id: 'overview', label: 'Agent Overview', icon: <FileText size={18} /> },
+  { id: 'dashboard', label: 'Live Dashboard', icon: <LayoutDashboard size={18} /> },
+  { id: 'demo', label: 'Live AI Demo', icon: <MessageSquare size={18} /> },
   { id: 'features', label: 'Deep Capabilities', icon: <Zap size={18} /> },
   { id: 'use-cases', label: 'Real-World Scenarios', icon: <Target size={18} /> },
-  { id: 'demo', label: 'Live AI Demo', icon: <MessageSquare size={18} /> },
   { id: 'architecture', label: 'Architecture', icon: <Database size={18} /> },
   { id: 'tech-stack', label: 'Tech Stack', icon: <Cpu size={18} /> },
   { id: 'implementation', label: 'Implementation', icon: <Terminal size={18} /> }
@@ -85,6 +86,87 @@ const PoliceBudgetPlannerAgent = () => {
 
   const renderContent = () => {
     switch (activeTab) {
+      case 'dashboard':
+        return (
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} className="overview-panel">
+            <h2 style={{ color: '#06b6d4', marginBottom: '1.5rem', borderBottom: '1px solid rgba(6,182,212,0.3)', paddingBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
+              <Activity className="inline-icon" size={28} /> AI COMMAND CENTER
+            </h2>
+            
+            {/* Top Stat Cards */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem', marginBottom: '2rem' }}>
+              <div style={{ background: 'rgba(15,23,42,0.8)', border: '1px solid rgba(6,182,212,0.4)', borderRadius: '12px', padding: '1.5rem', position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', top: 0, right: 0, background: 'rgba(6,182,212,0.2)', padding: '0.5rem', borderBottomLeftRadius: '12px' }}><PieChart size={20} color="#06b6d4" /></div>
+                <h4 style={{ color: '#94a3b8', fontSize: '0.9rem', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Total Budget Utilized</h4>
+                <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#fff', display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
+                  62% <span style={{ fontSize: '1rem', color: '#10b981', display: 'flex', alignItems: 'center' }}><TrendingUp size={16}/> +2% from Q2</span>
+                </div>
+                <div style={{ marginTop: '1rem', height: '6px', background: 'rgba(255,255,255,0.1)', borderRadius: '3px', overflow: 'hidden' }}>
+                  <motion.div initial={{ width: 0 }} animate={{ width: '62%' }} transition={{ duration: 1.5, ease: "easeOut" }} style={{ height: '100%', background: 'linear-gradient(90deg, #06b6d4, #3b82f6)' }} />
+                </div>
+              </div>
+
+              <div style={{ background: 'rgba(15,23,42,0.8)', border: '1px solid rgba(239,68,68,0.4)', borderRadius: '12px', padding: '1.5rem', position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', top: 0, right: 0, background: 'rgba(239,68,68,0.2)', padding: '0.5rem', borderBottomLeftRadius: '12px' }}><ShieldAlert size={20} color="#ef4444" /></div>
+                <h4 style={{ color: '#94a3b8', fontSize: '0.9rem', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Anomalies Detected</h4>
+                <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#ef4444', display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
+                  142 <span style={{ fontSize: '1rem', color: '#cbd5e1' }}>Invoices Flagged</span>
+                </div>
+                <p style={{ color: '#fca5a5', fontSize: '0.85rem', marginTop: '0.5rem' }}>Estimated Savings: ₹1.2 Cr</p>
+              </div>
+
+              <div style={{ background: 'rgba(15,23,42,0.8)', border: '1px solid rgba(139,92,246,0.4)', borderRadius: '12px', padding: '1.5rem', position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', top: 0, right: 0, background: 'rgba(139,92,246,0.2)', padding: '0.5rem', borderBottomLeftRadius: '12px' }}><CheckCircle2 size={20} color="#8b5cf6" /></div>
+                <h4 style={{ color: '#94a3b8', fontSize: '0.9rem', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '1px' }}>CAG Compliance Score</h4>
+                <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#c4b5fd', display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
+                  99.8% <span style={{ fontSize: '1rem', color: '#10b981', display: 'flex', alignItems: 'center' }}><TrendingUp size={16}/> Perfect</span>
+                </div>
+                <p style={{ color: '#a78bfa', fontSize: '0.85rem', marginTop: '0.5rem' }}>Next audit ready in 14 days.</p>
+              </div>
+            </div>
+
+            {/* Department Breakdown */}
+            <div className="panel" style={{ padding: '2rem' }}>
+              <h3 style={{ color: '#e2e8f0', marginBottom: '1.5rem', fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <Database size={20} color="#06b6d4"/> Sub-Head Allocation Burn Rate
+              </h3>
+              
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                <div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
+                    <span style={{ color: '#cbd5e1', fontWeight: 'bold' }}>Fuel (POL) for PCR Fleet</span>
+                    <span style={{ color: '#ef4444', fontWeight: 'bold' }}>94% Burned (Warning)</span>
+                  </div>
+                  <div style={{ height: '8px', background: 'rgba(255,255,255,0.1)', borderRadius: '4px', overflow: 'hidden' }}>
+                    <motion.div initial={{ width: 0 }} animate={{ width: '94%' }} transition={{ duration: 1 }} style={{ height: '100%', background: '#ef4444', boxShadow: '0 0 10px #ef4444' }} />
+                  </div>
+                  <p style={{ color: '#94a3b8', fontSize: '0.85rem', marginTop: '0.5rem' }}>AI Action: Initiated alert to DGP for supplementary ₹5 Cr budget request before Diwali deployment.</p>
+                </div>
+
+                <div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
+                    <span style={{ color: '#cbd5e1', fontWeight: 'bold' }}>Arms, Ammunition & Riot Gear</span>
+                    <span style={{ color: '#10b981', fontWeight: 'bold' }}>32% Burned (Safe)</span>
+                  </div>
+                  <div style={{ height: '8px', background: 'rgba(255,255,255,0.1)', borderRadius: '4px', overflow: 'hidden' }}>
+                    <motion.div initial={{ width: 0 }} animate={{ width: '32%' }} transition={{ duration: 1, delay: 0.2 }} style={{ height: '100%', background: '#10b981' }} />
+                  </div>
+                </div>
+
+                <div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
+                    <span style={{ color: '#cbd5e1', fontWeight: 'bold' }}>Cyber Crime Training & Software</span>
+                    <span style={{ color: '#8b5cf6', fontWeight: 'bold' }}>78% Burned (Optimal)</span>
+                  </div>
+                  <div style={{ height: '8px', background: 'rgba(255,255,255,0.1)', borderRadius: '4px', overflow: 'hidden' }}>
+                    <motion.div initial={{ width: 0 }} animate={{ width: '78%' }} transition={{ duration: 1, delay: 0.4 }} style={{ height: '100%', background: '#8b5cf6' }} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        );
+
       case 'demo':
         return (
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} className="overview-panel" style={{ height: '600px', display: 'flex', flexDirection: 'column' }}>
