@@ -8,6 +8,17 @@ import Home from './pages/Home';
 import HRMSDetailed from './pages/HrmsDetailed';
 import FinanceDetailed from './pages/FinanceDetailed';
 import BudgetPlanningDetailed from './pages/BudgetPlanningDetailed';
+import ArmsLicenseBotAgent from './pages/ArmsLicenseBotAgent';
+import BackgroundVettingAIAgent from './pages/BackgroundVettingAIAgent';
+import ExplosivesAuditBotAgent from './pages/ExplosivesAuditBotAgent';
+import EventPermissionRouterAgent from './pages/EventPermissionRouterAgent';
+import LoudspeakerMonitorAIAgent from './pages/LoudspeakerMonitorAIAgent';
+import HotelDBSyncBotAgent from './pages/HotelDBSyncBotAgent';
+import ProcessionSafetyAnalystAgent from './pages/ProcessionSafetyAnalystAgent';
+import CinemaSecurityEvaluatorAgent from './pages/CinemaSecurityEvaluatorAgent';
+import RenewalPredictorAgent from './pages/RenewalPredictorAgent';
+import ForgeryDetectorAIAgent from './pages/ForgeryDetectorAIAgent';
+import RiskProfilingEngineAgent from './pages/RiskProfilingEngineAgent';
 import BudgetApprovalDetailed from './pages/BudgetApprovalDetailed';
 import FundAllocationDetailed from './pages/FundAllocationDetailed';
 import GrantManagementDetailed from './pages/GrantManagementDetailed';
@@ -2943,6 +2954,17 @@ const AnimatedRoutes = () => {
         <Route path="/ai-procurement-copilot-agent" element={<AIProcurementCopilotAgent />} />
         <Route path="/asset-lifecycle-management-ai-agent" element={<AssetLifecycleManagementAIAgent />} />
         <Route path="/quality-control-ai-agent" element={<QualityControlAIAgent />} />
+              <Route path="/arms-license-bot-agent" element={<ArmsLicenseBotAgent />} />
+        <Route path="/background-vetting-ai-agent" element={<BackgroundVettingAIAgent />} />
+        <Route path="/explosives-audit-bot-agent" element={<ExplosivesAuditBotAgent />} />
+        <Route path="/event-permission-router-agent" element={<EventPermissionRouterAgent />} />
+        <Route path="/loudspeaker-monitor-ai-agent" element={<LoudspeakerMonitorAIAgent />} />
+        <Route path="/hotel-db-sync-bot-agent" element={<HotelDBSyncBotAgent />} />
+        <Route path="/procession-safety-analyst-agent" element={<ProcessionSafetyAnalystAgent />} />
+        <Route path="/cinema-security-evaluator-agent" element={<CinemaSecurityEvaluatorAgent />} />
+        <Route path="/renewal-predictor-agent" element={<RenewalPredictorAgent />} />
+        <Route path="/forgery-detector-ai-agent" element={<ForgeryDetectorAIAgent />} />
+        <Route path="/risk-profiling-engine-agent" element={<RiskProfilingEngineAgent />} />
       </Routes>
     </AnimatePresence>
   );
