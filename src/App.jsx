@@ -647,6 +647,24 @@ import BudgetUtilizationMonitorAgent from './pages/BudgetUtilizationMonitorAgent
 import FinancialPlanningAIAgent from './pages/FinancialPlanningAIAgent';
 import TreasuryManagementAIAgent from './pages/TreasuryManagementAIAgent';
 import RevenueGrantManagementAIAgent from './pages/RevenueGrantManagementAIAgent';
+import VendorManagementAIAgent from './pages/VendorManagementAIAgent';
+import TenderAnalysisAIAgent from './pages/TenderAnalysisAIAgent';
+import VendorScoringAIAgent from './pages/VendorScoringAIAgent';
+import BidEvaluationAIAgent from './pages/BidEvaluationAIAgent';
+import InventoryForecastingAIAgent from './pages/InventoryForecastingAIAgent';
+import SupplyChainOptimizationAIAgent from './pages/SupplyChainOptimizationAIAgent';
+import PriceBenchmarkingAIAgent from './pages/PriceBenchmarkingAIAgent';
+import CostOptimizationAIAgent from './pages/CostOptimizationAIAgent';
+import ArmouryProcurementExpertAIAgent from './pages/ArmouryProcurementExpertAIAgent';
+import VehicleSourcingExpertAIAgent from './pages/VehicleSourcingExpertAIAgent';
+import LegalComplianceBotAIAgent from './pages/LegalComplianceBotAIAgent';
+import ContractRiskAssessorAIAgent from './pages/ContractRiskAssessorAIAgent';
+import ProcurementFraudDetectionAIAgent from './pages/ProcurementFraudDetectionAIAgent';
+import ProcurementAnalyticsAIAgent from './pages/ProcurementAnalyticsAIAgent';
+import ExecutiveProcurementDashboardAIAgent from './pages/ExecutiveProcurementDashboardAIAgent';
+import AIProcurementCopilotAgent from './pages/AIProcurementCopilotAgent';
+import AssetLifecycleManagementAIAgent from './pages/AssetLifecycleManagementAIAgent';
+import QualityControlAIAgent from './pages/QualityControlAIAgent';
 import ProcurementPlanningAIAgent from './pages/ProcurementPlanningAIAgent';
 import VendorPaymentAuditorAIAgent from './pages/VendorPaymentAuditorAIAgent';
 import SalaryPayrollAIAgent from './pages/SalaryPayrollAIAgent';
@@ -2907,7 +2925,25 @@ const AnimatedRoutes = () => {
         <Route path="/future-inflation-adjustment-ai-agent" element={<motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.3 }} className="page-transition"><FutureInflationAdjustmentAIAgent /></motion.div>} />
 
 
-</Routes>
+        <Route path="/vendor-management-ai-agent" element={<VendorManagementAIAgent />} />
+        <Route path="/tender-analysis-ai-agent" element={<TenderAnalysisAIAgent />} />
+        <Route path="/vendor-scoring-ai-agent" element={<VendorScoringAIAgent />} />
+        <Route path="/bid-evaluation-ai-agent" element={<BidEvaluationAIAgent />} />
+        <Route path="/inventory-forecasting-ai-agent" element={<InventoryForecastingAIAgent />} />
+        <Route path="/supply-chain-optimization-ai-agent" element={<SupplyChainOptimizationAIAgent />} />
+        <Route path="/price-benchmarking-ai-agent" element={<PriceBenchmarkingAIAgent />} />
+        <Route path="/cost-optimization-ai-agent" element={<CostOptimizationAIAgent />} />
+        <Route path="/armoury-procurement-expert-ai-agent" element={<ArmouryProcurementExpertAIAgent />} />
+        <Route path="/vehicle-sourcing-expert-ai-agent" element={<VehicleSourcingExpertAIAgent />} />
+        <Route path="/legal-compliance-bot-ai-agent" element={<LegalComplianceBotAIAgent />} />
+        <Route path="/contract-risk-assessor-ai-agent" element={<ContractRiskAssessorAIAgent />} />
+        <Route path="/procurement-fraud-detection-ai-agent" element={<ProcurementFraudDetectionAIAgent />} />
+        <Route path="/procurement-analytics-ai-agent" element={<ProcurementAnalyticsAIAgent />} />
+        <Route path="/executive-procurement-dashboard-ai-agent" element={<ExecutiveProcurementDashboardAIAgent />} />
+        <Route path="/ai-procurement-copilot-agent" element={<AIProcurementCopilotAgent />} />
+        <Route path="/asset-lifecycle-management-ai-agent" element={<AssetLifecycleManagementAIAgent />} />
+        <Route path="/quality-control-ai-agent" element={<QualityControlAIAgent />} />
+      </Routes>
     </AnimatePresence>
   );
 };
