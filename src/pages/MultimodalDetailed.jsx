@@ -29,6 +29,71 @@ const aiExperts = [
   "Forensic Blood-Spatter Analyzer AI", "Crime Scene Blueprint Generator", "Virtual Reality Reconstruction Agent"
 ];
 
+
+const expertRoutes = {
+  "Video Analytics Engine AI": "/video-analytics-engine-ai-agent",
+  "Audio Forensics AI": "/audio-forensics-ai-agent",
+  "Geospatial Threat Mapper": "/geospatial-threat-mapper-agent",
+  "Dark Web Scraper Bot": "/dark-web-scraper-bot-agent",
+  "Live CCTV Anomaly Detector": "/live-cctv-anomaly-detector-agent",
+  "Facial Recognition AI": "/facial-recognition-ai-agent",
+  "Gait & Posture Analyzer": "/gait-posture-analyzer-agent",
+  "Lip-Reading AI": "/lip-reading-ai-agent",
+  "Deepfake Video Detector": "/deepfake-video-detector-agent",
+  "Deepfake Audio Detector": "/deepfake-audio-detector-agent",
+  "License Plate Recognition AI": "/license-plate-recognition-ai-agent",
+  "Crowd Sentiment Analyzer (Visual)": "/crowd-sentiment-analyzer-visual-agent",
+  "Social Media Image Scraper": "/social-media-image-scraper-agent",
+  "Voice-print Matching Agent": "/voice-print-matching-agent-agent",
+  "Drone Video Summarizer": "/drone-video-summarizer-agent",
+  "Satellite Imagery Correlator": "/satellite-imagery-correlator-agent",
+  "Object Tracking Bot (Across CCTVs)": "/object-tracking-bot-across-cctvs-agent",
+  "Weapon Detection AI": "/weapon-detection-ai-agent",
+  "Hidden Compartment Identifier (X-Ray AI)": "/hidden-compartment-identifier-x-ray-ai-agent",
+  "Traffic Pattern Visualizer": "/traffic-pattern-visualizer-agent",
+  "Abandoned Object Detector": "/abandoned-object-detector-agent",
+  "Crowd Density Estimator": "/crowd-density-estimator-agent",
+  "Thermal Imaging Interpreter": "/thermal-imaging-interpreter-agent",
+  "Infrared Night-Vision Enhancer AI": "/infrared-night-vision-enhancer-ai-agent",
+  "3D Spatial Reconstruction Bot": "/3d-spatial-reconstruction-bot-agent",
+  "Audio Distress Signal Detector": "/audio-distress-signal-detector-agent",
+  "Gunshot Acoustic Triangulator": "/gunshot-acoustic-triangulator-agent",
+  "Glass-Break Sensor AI": "/glass-break-sensor-ai-agent",
+  "Voice Emotion Analyzer": "/voice-emotion-analyzer-agent",
+  "Hate Speech Audio Detector": "/hate-speech-audio-detector-agent",
+  "Social Network Graph Modeler": "/social-network-graph-modeler-agent",
+  "Geolocation Spoofing Detector": "/geolocation-spoofing-detector-agent",
+  "Crypto Wallet Transaction Tracer": "/crypto-wallet-transaction-tracer-agent",
+  "Dark Web Vendor Linker AI": "/dark-web-vendor-linker-ai-agent",
+  "Illicit Marketplace Scraper": "/illicit-marketplace-scraper-agent",
+  "Cyber-Threat Intelligence Bot": "/cyber-threat-intelligence-bot-agent",
+  "Encrypted Chat Traffic Analyzer": "/encrypted-chat-traffic-analyzer-agent",
+  "Phishing Domain Detector": "/phishing-domain-detector-agent",
+  "Botnet Traffic Analyzer": "/botnet-traffic-analyzer-agent",
+  "Open-Source Intelligence (OSINT) Bot": "/open-source-intelligence-osint-bot-agent",
+  "Suspect Route Predictor": "/suspect-route-predictor-agent",
+  "Border Infiltration Visualizer": "/border-infiltration-visualizer-agent",
+  "Maritime Smuggling Predictor": "/maritime-smuggling-predictor-agent",
+  "Cargo Container Scanner AI": "/cargo-container-scanner-ai-agent",
+  "Fake Currency Pattern Matcher": "/fake-currency-pattern-matcher-agent",
+  "Document Forgery Detector": "/document-forgery-detector-agent",
+  "Signature Verification AI": "/signature-verification-ai-agent",
+  "Biometric Spoofing Detector": "/biometric-spoofing-detector-agent",
+  "Multi-Camera Sync AI": "/multi-camera-sync-ai-agent",
+  "Cross-District Video Correlator": "/cross-district-video-correlator-agent",
+  "News Broadcast Sentiment Bot": "/news-broadcast-sentiment-bot-agent",
+  "Radicalization Content Flagging AI": "/radicalization-content-flagging-ai-agent",
+  "Event Ticket Scalping Detector": "/event-ticket-scalping-detector-agent",
+  "VIP Proximity Alert AI": "/vip-proximity-alert-ai-agent",
+  "Automated Redaction AI (Privacy)": "/automated-redaction-ai-privacy-agent",
+  "Visual Evidence Timeline Builder": "/visual-evidence-timeline-builder-agent",
+  "Body-Cam Footage Auditor": "/body-cam-footage-auditor-agent",
+  "Forensic Blood-Spatter Analyzer AI": "/forensic-blood-spatter-analyzer-ai-agent",
+  "Crime Scene Blueprint Generator": "/crime-scene-blueprint-generator-agent",
+  "Virtual Reality Reconstruction Agent": "/virtual-reality-reconstruction-agent-agent"
+};
+const isClickable = (expert) => !!expertRoutes[expert];
+
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
   { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
@@ -80,10 +145,19 @@ const MultimodalDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid experts-grid">
             {aiExperts.map((expert, i) => (
-              <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-cyan">
-                <Bot className="card-icon" />
-                <h4>{expert}</h4>
-              </motion.div>
+              <motion.div 
+                    initial={{ opacity: 0, scale: 0.8 }} 
+                    animate={{ opacity: 1, scale: 1 }} 
+                    transition={{ delay: i * 0.03 }} 
+                    key={i} 
+                    className={`premium-card highlight-cyan ${isClickable(expert) ? 'clickable-agent-card' : ''}`}
+                    onClick={() => { if (isClickable(expert)) navigate(expertRoutes[expert]); }}
+                    style={isClickable(expert) ? { cursor: 'pointer', border: '1px solid #00f0ff', boxShadow: '0 0 15px rgba(0, 240, 255, 0.3)' } : {}}
+                  >
+                    <Bot className="card-icon" />
+                    <h4>{expert}</h4>
+                    {isClickable(expert) && <div style={{ fontSize: '0.75rem', color: '#00f0ff', marginTop: '5px' }}>Click to view Agent details</div>}
+                  </motion.div>
             ))}
           </motion.div>
         );

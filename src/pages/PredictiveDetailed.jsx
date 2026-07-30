@@ -13,6 +13,22 @@ const aiExperts = [
   "Election Security Analyst", "Historical Crime Trend Bot"
 ];
 
+
+const expertRoutes = {
+  "Patrol Route Optimizer AI": "/patrol-route-optimizer-ai-agent",
+  "Riot Risk Assessor": "/riot-risk-assessor-agent",
+  "Event Crowd Modeler": "/event-crowd-modeler-agent",
+  "Festival Deployment Planner": "/festival-deployment-planner-agent",
+  "Weather-Crime Correlator": "/weather-crime-correlator-agent",
+  "VVIP Convoy Simulator": "/vvip-convoy-simulator-agent",
+  "Emergency Response Router": "/emergency-response-router-agent",
+  "Manpower Fatigue Predictor": "/manpower-fatigue-predictor-agent",
+  "Supply Chain Disruption AI": "/supply-chain-disruption-ai-agent",
+  "Election Security Analyst": "/election-security-analyst-agent",
+  "Historical Crime Trend Bot": "/historical-crime-trend-bot-agent"
+};
+const isClickable = (expert) => !!expertRoutes[expert];
+
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
   { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
@@ -64,10 +80,19 @@ const PredictiveDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid experts-grid">
             {aiExperts.map((expert, i) => (
-              <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-cyan">
-                <Bot className="card-icon" />
-                <h4>{expert}</h4>
-              </motion.div>
+              <motion.div 
+                    initial={{ opacity: 0, scale: 0.8 }} 
+                    animate={{ opacity: 1, scale: 1 }} 
+                    transition={{ delay: i * 0.03 }} 
+                    key={i} 
+                    className={`premium-card highlight-cyan ${isClickable(expert) ? 'clickable-agent-card' : ''}`}
+                    onClick={() => { if (isClickable(expert)) navigate(expertRoutes[expert]); }}
+                    style={isClickable(expert) ? { cursor: 'pointer', border: '1px solid #00f0ff', boxShadow: '0 0 15px rgba(0, 240, 255, 0.3)' } : {}}
+                  >
+                    <Bot className="card-icon" />
+                    <h4>{expert}</h4>
+                    {isClickable(expert) && <div style={{ fontSize: '0.75rem', color: '#00f0ff', marginTop: '5px' }}>Click to view Agent details</div>}
+                  </motion.div>
             ))}
           </motion.div>
         );

@@ -29,6 +29,71 @@ const aiExperts = [
   "Data Lineage Tracker", "Sandbox Testing Coordinator", "MLOps Workflow Orchestrator"
 ];
 
+
+const expertRoutes = {
+  "Model Drift Detector AI": "/model-drift-detector-ai-agent",
+  "Weight Encryption Specialist": "/weight-encryption-specialist-agent",
+  "Hyperparameter Tuning Bot": "/hyperparameter-tuning-bot-agent",
+  "Bias & Fairness Auditor AI": "/bias-fairness-auditor-ai-agent",
+  "Edge Deployment Coordinator": "/edge-deployment-coordinator-agent",
+  "Federated Learning Sync Agent": "/federated-learning-sync-agent-agent",
+  "A/B Testing Evaluator AI": "/a-b-testing-evaluator-ai-agent",
+  "GPU Resource Allocator": "/gpu-resource-allocator-agent",
+  "Synthetic Data Generator AI": "/synthetic-data-generator-ai-agent",
+  "Model Rollback Agent": "/model-rollback-agent-agent",
+  "Adversarial Attack Defender": "/adversarial-attack-defender-agent",
+  "Concept Drift Alert Bot": "/concept-drift-alert-bot-agent",
+  "Accuracy Degradation Monitor": "/accuracy-degradation-monitor-agent",
+  "Real-world Metrics Validator": "/real-world-metrics-validator-agent",
+  "Automated Retraining Trigger AI": "/automated-retraining-trigger-ai-agent",
+  "Hardware-aware Quantization Bot": "/hardware-aware-quantization-bot-agent",
+  "Demographic Bias Scanner": "/demographic-bias-scanner-agent",
+  "False-Positive Rate Tester": "/false-positive-rate-tester-agent",
+  "Legal Compliance Checker AI": "/legal-compliance-checker-ai-agent",
+  "Explainability (XAI) Reporter": "/explainability-xai-reporter-agent",
+  "Model Weight Hashing Agent": "/model-weight-hashing-agent-agent",
+  "OTA Drone Update Coordinator": "/ota-drone-update-coordinator-agent",
+  "Bodycam Edge Sync AI": "/bodycam-edge-sync-ai-agent",
+  "Smart CCTV Deployment Bot": "/smart-cctv-deployment-bot-agent",
+  "LLM Fine-tuning Assistant": "/llm-fine-tuning-assistant-agent",
+  "NLP Pipeline Optimizer": "/nlp-pipeline-optimizer-agent",
+  "Computer Vision Retraining Agent": "/computer-vision-retraining-agent-agent",
+  "Zero-Downtime Hot Swapper": "/zero-downtime-hot-swapper-agent",
+  "Data Privacy Auditor AI": "/data-privacy-auditor-ai-agent",
+  "Anonymization Pipeline Bot": "/anonymization-pipeline-bot-agent",
+  "Pipeline Telemetry Collector": "/pipeline-telemetry-collector-agent",
+  "Model Registry Webhook AI": "/model-registry-webhook-ai-agent",
+  "Kubernetes GPU Scaler Bot": "/kubernetes-gpu-scaler-bot-agent",
+  "Triton Inference Optimizer": "/triton-inference-optimizer-agent",
+  "HuggingFace Hub Sync Bot": "/huggingface-hub-sync-bot-agent",
+  "Poisoned Data Detector AI": "/poisoned-data-detector-ai-agent",
+  "Zero-Trust Edge Sync Agent": "/zero-trust-edge-sync-agent-agent",
+  "Immutable Version Logger": "/immutable-version-logger-agent",
+  "Air-gapped Training Supervisor": "/air-gapped-training-supervisor-agent",
+  "Cloud-to-Edge Bridge AI": "/cloud-to-edge-bridge-ai-agent",
+  "Self-Evolving Model Monitor": "/self-evolving-model-monitor-agent",
+  "Predictive Maintenance AI (GPU)": "/predictive-maintenance-ai-gpu-agent",
+  "TensorRT Optimization Agent": "/tensorrt-optimization-agent-agent",
+  "Sparsity & Pruning Specialist": "/sparsity-pruning-specialist-agent",
+  "Dataset Balancing Bot": "/dataset-balancing-bot-agent",
+  "Out-of-Distribution Detector": "/out-of-distribution-detector-agent",
+  "Multi-tenant Model Router": "/multi-tenant-model-router-agent",
+  "Latency Benchmark Tester": "/latency-benchmark-tester-agent",
+  "Memory Leak Detector AI": "/memory-leak-detector-ai-agent",
+  "Model API Rate Limiter": "/model-api-rate-limiter-agent",
+  "Feature Store Sync Agent": "/feature-store-sync-agent-agent",
+  "Training Cost Estimator AI": "/training-cost-estimator-ai-agent",
+  "Energy Efficiency Optimizer": "/energy-efficiency-optimizer-agent",
+  "Gradient Vanishing Alert Bot": "/gradient-vanishing-alert-bot-agent",
+  "Overfitting Detection AI": "/overfitting-detection-ai-agent",
+  "Continuous Integration (CI) Bot": "/continuous-integration-ci-bot-agent",
+  "Artifact Registry Manager": "/artifact-registry-manager-agent",
+  "Data Lineage Tracker": "/data-lineage-tracker-agent",
+  "Sandbox Testing Coordinator": "/sandbox-testing-coordinator-agent",
+  "MLOps Workflow Orchestrator": "/mlops-workflow-orchestrator-agent"
+};
+const isClickable = (expert) => !!expertRoutes[expert];
+
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
   { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
@@ -80,10 +145,19 @@ const ModelManagementDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid experts-grid">
             {aiExperts.map((expert, i) => (
-              <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-cyan">
-                <Bot className="card-icon" />
-                <h4>{expert}</h4>
-              </motion.div>
+              <motion.div 
+                    initial={{ opacity: 0, scale: 0.8 }} 
+                    animate={{ opacity: 1, scale: 1 }} 
+                    transition={{ delay: i * 0.03 }} 
+                    key={i} 
+                    className={`premium-card highlight-cyan ${isClickable(expert) ? 'clickable-agent-card' : ''}`}
+                    onClick={() => { if (isClickable(expert)) navigate(expertRoutes[expert]); }}
+                    style={isClickable(expert) ? { cursor: 'pointer', border: '1px solid #00f0ff', boxShadow: '0 0 15px rgba(0, 240, 255, 0.3)' } : {}}
+                  >
+                    <Bot className="card-icon" />
+                    <h4>{expert}</h4>
+                    {isClickable(expert) && <div style={{ fontSize: '0.75rem', color: '#00f0ff', marginTop: '5px' }}>Click to view Agent details</div>}
+                  </motion.div>
             ))}
           </motion.div>
         );

@@ -29,6 +29,71 @@ const aiExperts = [
   "Data Lake Health Indexer", "Zero-Trust Data Governor", "Blockchain Evidence Hasher"
 ];
 
+
+const expertRoutes = {
+  "Big Data Architect AI": "/big-data-architect-ai-agent",
+  "ETL Pipeline Optimizer": "/etl-pipeline-optimizer-agent",
+  "Unstructured Data Parser AI": "/unstructured-data-parser-ai-agent",
+  "Metadata Tagging Engine": "/metadata-tagging-engine-agent",
+  "Data Governance Auditor AI": "/data-governance-auditor-ai-agent",
+  "Dark Data Miner AI": "/dark-data-miner-ai-agent",
+  "Cross-Schema Query Optimizer": "/cross-schema-query-optimizer-agent",
+  "Cold-Storage Archival Bot": "/cold-storage-archival-bot-agent",
+  "Data Lake Security Enforcer": "/data-lake-security-enforcer-agent",
+  "Anomaly Detection Agent AI": "/anomaly-detection-agent-ai-agent",
+  "Semantic Lake Search AI": "/semantic-lake-search-ai-agent",
+  "Batch Ingestion Coordinator": "/batch-ingestion-coordinator-agent",
+  "Real-Time Stream Processor AI": "/real-time-stream-processor-ai-agent",
+  "Telecom CDR Parsing Bot": "/telecom-cdr-parsing-bot-agent",
+  "Social Media Firehose Sync": "/social-media-firehose-sync-agent",
+  "Interrogation Audio Indexer": "/interrogation-audio-indexer-agent",
+  "Handwritten OCR Extraction AI": "/handwritten-ocr-extraction-ai-agent",
+  "Video Metadata Indexing Agent": "/video-metadata-indexing-agent-agent",
+  "Cross-DB Unified Search Bot": "/cross-db-unified-search-bot-agent",
+  "Natural Language to SQL Agent": "/natural-language-to-sql-agent-agent",
+  "Graph-Relational Join Optimizer": "/graph-relational-join-optimizer-agent",
+  "Millisecond Query Executor": "/millisecond-query-executor-agent",
+  "Automated Data Redaction AI": "/automated-data-redaction-ai-agent",
+  "PII Masking & Hashing Bot": "/pii-masking-hashing-bot-agent",
+  "Access Audit Logger AI": "/access-audit-logger-ai-agent",
+  "Court-ordered Data Purge Bot": "/court-ordered-data-purge-bot-agent",
+  "Closed Case Archival AI": "/closed-case-archival-ai-agent",
+  "Automated Glacier Tiering Bot": "/automated-glacier-tiering-bot-agent",
+  "Data Compression Optimizer": "/data-compression-optimizer-agent",
+  "Digital Evidence Hashing AI": "/digital-evidence-hashing-ai-agent",
+  "Auto-Schema Inference Bot": "/auto-schema-inference-bot-agent",
+  "PII Auto-Masking Coordinator": "/pii-auto-masking-coordinator-agent",
+  "Unstructured Text Structuring AI": "/unstructured-text-structuring-ai-agent",
+  "Video Frame Indexing Bot": "/video-frame-indexing-bot-agent",
+  "Duplicate Record Merging AI": "/duplicate-record-merging-ai-agent",
+  "Cold-Data Retrieval Predictor": "/cold-data-retrieval-predictor-agent",
+  "Cross-lingual Metadata Translator": "/cross-lingual-metadata-translator-agent",
+  "Automated Data Quality Scorer": "/automated-data-quality-scorer-agent",
+  "NLP Database Query Agent": "/nlp-database-query-agent-agent",
+  "Hadoop Cluster Manager AI": "/hadoop-cluster-manager-ai-agent",
+  "S3 Bucket Cost Optimizer": "/s3-bucket-cost-optimizer-agent",
+  "Elasticsearch Index Manager": "/elasticsearch-index-manager-agent",
+  "Vector Database Sync AI": "/vector-database-sync-ai-agent",
+  "Relational CCTNS Bridge AI": "/relational-cctns-bridge-ai-agent",
+  "Graph DB Neo4j Integrator": "/graph-db-neo4j-integrator-agent",
+  "Time-Series IoT Data Miner": "/time-series-iot-data-miner-agent",
+  "Metadata Catalog Organizer": "/metadata-catalog-organizer-agent",
+  "Ingestion Pipeline Monitor": "/ingestion-pipeline-monitor-agent",
+  "Storage Cost Optimization Bot": "/storage-cost-optimization-bot-agent",
+  "Cross-Department Access Auditor": "/cross-department-access-auditor-agent",
+  "CCTNS State DB Sync AI": "/cctns-state-db-sync-ai-agent",
+  "Telecom Bulk CDR Uploader": "/telecom-bulk-cdr-uploader-agent",
+  "Forensic Lab Integration Bot": "/forensic-lab-integration-bot-agent",
+  "Transport RTO API Bridge": "/transport-rto-api-bridge-agent",
+  "Bank Transaction Webhook AI": "/bank-transaction-webhook-ai-agent",
+  "OSINT Data Harvester Bot": "/osint-data-harvester-bot-agent",
+  "Federated GraphQL Resolver": "/federated-graphql-resolver-agent",
+  "Data Lake Health Indexer": "/data-lake-health-indexer-agent",
+  "Zero-Trust Data Governor": "/zero-trust-data-governor-agent",
+  "Blockchain Evidence Hasher": "/blockchain-evidence-hasher-agent"
+};
+const isClickable = (expert) => !!expertRoutes[expert];
+
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
   { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
@@ -80,10 +145,19 @@ const DataLakeDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid experts-grid">
             {aiExperts.map((expert, i) => (
-              <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-cyan">
-                <Bot className="card-icon" />
-                <h4>{expert}</h4>
-              </motion.div>
+              <motion.div 
+                    initial={{ opacity: 0, scale: 0.8 }} 
+                    animate={{ opacity: 1, scale: 1 }} 
+                    transition={{ delay: i * 0.03 }} 
+                    key={i} 
+                    className={`premium-card highlight-cyan ${isClickable(expert) ? 'clickable-agent-card' : ''}`}
+                    onClick={() => { if (isClickable(expert)) navigate(expertRoutes[expert]); }}
+                    style={isClickable(expert) ? { cursor: 'pointer', border: '1px solid #00f0ff', boxShadow: '0 0 15px rgba(0, 240, 255, 0.3)' } : {}}
+                  >
+                    <Bot className="card-icon" />
+                    <h4>{expert}</h4>
+                    {isClickable(expert) && <div style={{ fontSize: '0.75rem', color: '#00f0ff', marginTop: '5px' }}>Click to view Agent details</div>}
+                  </motion.div>
             ))}
           </motion.div>
         );

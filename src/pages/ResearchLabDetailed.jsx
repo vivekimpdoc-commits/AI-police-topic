@@ -29,6 +29,71 @@ const aiExperts = [
   "Cyber-Telepathy Comms R&D", "Virtual Reality Empathy Trainer", "Post-Quantum Cryptanalysis AI"
 ];
 
+
+const expertRoutes = {
+  "Quantum Cryptography AI": "/quantum-cryptography-ai-agent",
+  "Synthetic Criminal Data Generator": "/synthetic-criminal-data-generator-agent",
+  "Robotics K9 Pathfinding AI": "/robotics-k9-pathfinding-ai-agent",
+  "Brain-Computer Interface Researcher": "/brain-computer-interface-researcher-agent",
+  "Neuromorphic Vision Analyst": "/neuromorphic-vision-analyst-agent",
+  "Autonomous Drone Swarm R&D": "/autonomous-drone-swarm-r-d-agent",
+  "Predictive Pre-Crime Theorist": "/predictive-pre-crime-theorist-agent",
+  "Holographic Evidence Mapper": "/holographic-evidence-mapper-agent",
+  "AI Legal Arbitrator Bot": "/ai-legal-arbitrator-bot-agent",
+  "Metaverse Police Academy Trainer": "/metaverse-police-academy-trainer-agent",
+  "Cyber-Warfare Simulation Bot": "/cyber-warfare-simulation-bot-agent",
+  "Quantum Key Distribution (QKD) Bot": "/quantum-key-distribution-qkd-bot-agent",
+  "Shor's Algorithm Defense AI": "/shor-s-algorithm-defense-ai-agent",
+  "Unhackable Evidence Chain AI": "/unhackable-evidence-chain-ai-agent",
+  "Qubit Communication Grid Manager": "/qubit-communication-grid-manager-agent",
+  "AI-Generated Riot Simulator": "/ai-generated-riot-simulator-agent",
+  "Deepfake Face Training Set Generator": "/deepfake-face-training-set-generator-agent",
+  "Synthetic Voice Clone R&D": "/synthetic-voice-clone-r-d-agent",
+  "Virtual Crime Scene Generator": "/virtual-crime-scene-generator-agent",
+  "Robo-Dog Bomb Detection AI": "/robo-dog-bomb-detection-ai-agent",
+  "Autonomous Swarm Pursuit Modeler": "/autonomous-swarm-pursuit-modeler-agent",
+  "Hostage Rescue Micro-Drone AI": "/hostage-rescue-micro-drone-ai-agent",
+  "Bipedal Riot Control Bot R&D": "/bipedal-riot-control-bot-r-d-agent",
+  "Brainwave Lie Detection (EEG) AI": "/brainwave-lie-detection-eeg-ai-agent",
+  "Stress Biometric Wearables R&D": "/stress-biometric-wearables-r-d-agent",
+  "Cognitive Load Monitoring AI": "/cognitive-load-monitoring-ai-agent",
+  "Neural-Link Command Interface Bot": "/neural-link-command-interface-bot-agent",
+  "VR Active Shooter Trainer": "/vr-active-shooter-trainer-agent",
+  "Holographic Forensic Lab Guide": "/holographic-forensic-lab-guide-agent",
+  "Global AI Interpol Sync R&D": "/global-ai-interpol-sync-r-d-agent",
+  "Virtual Suspect Interrogation AI": "/virtual-suspect-interrogation-ai-agent",
+  "Quantum Probability Modeler": "/quantum-probability-modeler-agent",
+  "Neuromorphic Computing Simulator": "/neuromorphic-computing-simulator-agent",
+  "Holographic Ray-Tracing AI": "/holographic-ray-tracing-ai-agent",
+  "Predictive Behavior Theorist Bot": "/predictive-behavior-theorist-bot-agent",
+  "Autonomous Lethal Decision Tree AI": "/autonomous-lethal-decision-tree-ai-agent",
+  "Metaverse Voxel Rendering AI": "/metaverse-voxel-rendering-ai-agent",
+  "DNA/Genomic Data Integrator R&D": "/dna-genomic-data-integrator-r-d-agent",
+  "Quantum-Safe Encryption R&D": "/quantum-safe-encryption-r-d-agent",
+  "Decentralized IPFS Evidence Chain AI": "/decentralized-ipfs-evidence-chain-ai-agent",
+  "Brain-Computer Search Interface AI": "/brain-computer-search-interface-ai-agent",
+  "Self-Healing Pipeline Theorist": "/self-healing-pipeline-theorist-agent",
+  "Time-Temporal Policing R&D": "/time-temporal-policing-r-d-agent",
+  "Cybernetic Officer Augmentation AI": "/cybernetic-officer-augmentation-ai-agent",
+  "Orbital Command Satellite Sync AI": "/orbital-command-satellite-sync-ai-agent",
+  "Telepathic Interrogation Interface": "/telepathic-interrogation-interface-agent",
+  "AGI (Artificial General Intelligence) Sync": "/agi-artificial-general-intelligence-sync-agent",
+  "Automated Justice System Simulator": "/automated-justice-system-simulator-agent",
+  "Synthetic Bio-Signature Generator": "/synthetic-bio-signature-generator-agent",
+  "Exo-Skeleton Pursuit Enhancer AI": "/exo-skeleton-pursuit-enhancer-ai-agent",
+  "Drone EMP Hardening R&D": "/drone-emp-hardening-r-d-agent",
+  "Acoustic Weaponry Simulation AI": "/acoustic-weaponry-simulation-ai-agent",
+  "Anti-Gravity Drone R&D": "/anti-gravity-drone-r-d-agent",
+  "Invisibility Cloak Metamaterial AI": "/invisibility-cloak-metamaterial-ai-agent",
+  "Sub-dermal Tracker Chip R&D": "/sub-dermal-tracker-chip-r-d-agent",
+  "Neural Memory Extraction Theorist": "/neural-memory-extraction-theorist-agent",
+  "Smart-Bullet Trajectory Modeler": "/smart-bullet-trajectory-modeler-agent",
+  "Cyber-Telepathy Comms R&D": "/cyber-telepathy-comms-r-d-agent",
+  "Virtual Reality Empathy Trainer": "/virtual-reality-empathy-trainer-agent",
+  "Post-Quantum Cryptanalysis AI": "/post-quantum-cryptanalysis-ai-agent"
+};
+const isClickable = (expert) => !!expertRoutes[expert];
+
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
   { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
@@ -80,10 +145,19 @@ const ResearchLabDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid experts-grid">
             {aiExperts.map((expert, i) => (
-              <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-cyan">
-                <Bot className="card-icon" />
-                <h4>{expert}</h4>
-              </motion.div>
+              <motion.div 
+                    initial={{ opacity: 0, scale: 0.8 }} 
+                    animate={{ opacity: 1, scale: 1 }} 
+                    transition={{ delay: i * 0.03 }} 
+                    key={i} 
+                    className={`premium-card highlight-cyan ${isClickable(expert) ? 'clickable-agent-card' : ''}`}
+                    onClick={() => { if (isClickable(expert)) navigate(expertRoutes[expert]); }}
+                    style={isClickable(expert) ? { cursor: 'pointer', border: '1px solid #00f0ff', boxShadow: '0 0 15px rgba(0, 240, 255, 0.3)' } : {}}
+                  >
+                    <Bot className="card-icon" />
+                    <h4>{expert}</h4>
+                    {isClickable(expert) && <div style={{ fontSize: '0.75rem', color: '#00f0ff', marginTop: '5px' }}>Click to view Agent details</div>}
+                  </motion.div>
             ))}
           </motion.div>
         );
