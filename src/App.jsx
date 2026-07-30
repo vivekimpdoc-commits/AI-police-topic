@@ -8,6 +8,15 @@ import Home from './pages/Home';
 import HRMSDetailed from './pages/HrmsDetailed';
 import FinanceDetailed from './pages/FinanceDetailed';
 import BudgetPlanningDetailed from './pages/BudgetPlanningDetailed';
+import LegacyExtractorAIAgent from './pages/LegacyExtractorAIAgent';
+import OralHistoryTranscriberAgent from './pages/OralHistoryTranscriberAgent';
+import CaseArchiverBotAgent from './pages/CaseArchiverBotAgent';
+import TacKnowledgeGrapherAgent from './pages/TacKnowledgeGrapherAgent';
+import SOPGenerationAIAgent from './pages/SOPGenerationAIAgent';
+import InterrogationPatternBotAgent from './pages/InterrogationPatternBotAgent';
+import EvidenceHandlingAIAgent from './pages/EvidenceHandlingAIAgent';
+import WisdomTransferBotAgent from './pages/WisdomTransferBotAgent';
+import HistoricalTrendsAnalyzerAgent from './pages/HistoricalTrendsAnalyzerAgent';
 import ArmsLicenseBotAgent from './pages/ArmsLicenseBotAgent';
 import BackgroundVettingAIAgent from './pages/BackgroundVettingAIAgent';
 import ExplosivesAuditBotAgent from './pages/ExplosivesAuditBotAgent';
@@ -2965,6 +2974,15 @@ const AnimatedRoutes = () => {
         <Route path="/renewal-predictor-agent" element={<RenewalPredictorAgent />} />
         <Route path="/forgery-detector-ai-agent" element={<ForgeryDetectorAIAgent />} />
         <Route path="/risk-profiling-engine-agent" element={<RiskProfilingEngineAgent />} />
+              <Route path="/legacy-extractor-ai-agent" element={<LegacyExtractorAIAgent />} />
+        <Route path="/oral-history-transcriber-agent" element={<OralHistoryTranscriberAgent />} />
+        <Route path="/case-archiver-bot-agent" element={<CaseArchiverBotAgent />} />
+        <Route path="/tac-knowledge-grapher-agent" element={<TacKnowledgeGrapherAgent />} />
+        <Route path="/sop-generation-ai-agent" element={<SOPGenerationAIAgent />} />
+        <Route path="/interrogation-pattern-bot-agent" element={<InterrogationPatternBotAgent />} />
+        <Route path="/evidence-handling-ai-agent" element={<EvidenceHandlingAIAgent />} />
+        <Route path="/wisdom-transfer-bot-agent" element={<WisdomTransferBotAgent />} />
+        <Route path="/historical-trends-analyzer-agent" element={<HistoricalTrendsAnalyzerAgent />} />
       </Routes>
     </AnimatePresence>
   );
