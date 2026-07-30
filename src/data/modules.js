@@ -2813,4 +2813,46 @@ export const modules = [
       'एआई कैबिनेट निर्णय अनुपालन ट्रैकर'
     ]
   }
+,
+  {
+    id: "global-threat-intelligence",
+    nameEn: "AI Global Threat Intelligence & Interpol Sync",
+    nameHi: "एआई ग्लोबल थ्रेट इंटेलिजेंस",
+    subTopicsEn: [
+      "Interpol Database Sync Agent",
+      "Global Terror Watchlist Monitor",
+      "Cross-Border Smuggling Predictor",
+      "International Extradition Tracker",
+      "Dark Web Global Arms Tracker",
+      "Crypto Terrorism Finance Tracer",
+      "Global Biometric Matcher",
+      "Human Trafficking Route Analyst",
+      "Transnational Gang Link Predictor",
+      "Global Cyber Attack Warning AI",
+      "Deep Web Narcotic Sales Tracker",
+      "Global OSINT Aggregator"
+    ]
+  }
+
+,
+  {
+    id: "metaverse-vr-training",
+    nameEn: "AI Metaverse & VR Police Training Platform",
+    nameHi: "एआई मेटावर्स और वीआर ट्रेनिंग प्लेटफॉर्म",
+    subTopicsEn: [
+      "VR Hostage Negotiation Simulator",
+      "Active Shooter VR Trainer",
+      "Virtual Crime Scene Reconstructor",
+      "Riot Control Phalanx AI Bot",
+      "Interrogation Stress Test AI",
+      "High-Speed Chase VR Engine",
+      "Cyber Warfare Tabletop VR",
+      "Virtual Courtroom Testify Bot",
+      "Drone Swarm Tactical VR",
+      "Metaverse Undercover Avatar",
+      "Biometric Combat Stress Tracker",
+      "AI Scenario Director"
+    ]
+  }
+
 ];
