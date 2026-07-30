@@ -8,6 +8,37 @@ import Home from './pages/Home';
 import HRMSDetailed from './pages/HrmsDetailed';
 import FinanceDetailed from './pages/FinanceDetailed';
 import BudgetPlanningDetailed from './pages/BudgetPlanningDetailed';
+import DocumentClassificationAIAgent from './pages/DocumentClassificationAIAgent';
+import SmartOCRHandwritingRecognitionAIAgent from './pages/SmartOCRHandwritingRecognitionAIAgent';
+import IntelligentDocumentIndexingAIAgent from './pages/IntelligentDocumentIndexingAIAgent';
+import DigitalFileOrganizerAIAgent from './pages/DigitalFileOrganizerAIAgent';
+import DocumentApprovalWorkflowAIAgent from './pages/DocumentApprovalWorkflowAIAgent';
+import DocumentAccessControlAIAgent from './pages/DocumentAccessControlAIAgent';
+import DocumentLifecycleManagementAIAgent from './pages/DocumentLifecycleManagementAIAgent';
+import RecordArchivalAIAgent from './pages/RecordArchivalAIAgent';
+import ArchiveRetrievalAIAgent from './pages/ArchiveRetrievalAIAgent';
+import DuplicateDocumentDetectionAIAgent from './pages/DuplicateDocumentDetectionAIAgent';
+import DigitalSignatureVerificationAIAgent from './pages/DigitalSignatureVerificationAIAgent';
+import ChainOfCustodyTrackerAIAgent from './pages/ChainOfCustodyTrackerAIAgent';
+import CourtDocumentManagementAIAgent from './pages/CourtDocumentManagementAIAgent';
+import DataLossPreventionAIAgent from './pages/DataLossPreventionAIAgent';
+import TamperDetectionAIAgent from './pages/TamperDetectionAIAgent';
+import AIDocumentChatAssistantAgent from './pages/AIDocumentChatAssistantAgent';
+import KnowledgeBaseAIAgent from './pages/KnowledgeBaseAIAgent';
+import DocumentAnalyticsAIAgent from './pages/DocumentAnalyticsAIAgent';
+import ExecutiveDocumentDashboardAIAgent from './pages/ExecutiveDocumentDashboardAIAgent';
+import DocumentKPIDashboardAIAgent from './pages/DocumentKPIDashboardAIAgent';
+import FIRDigitizationExpertAIAgent from './pages/FIRDigitizationExpertAIAgent';
+import CaseFileSummarizationAIAgent from './pages/CaseFileSummarizationAIAgent';
+import ConfidentialVaultGuardianAIAgent from './pages/ConfidentialVaultGuardianAIAgent';
+import SemanticSearchAssistantAIAgent from './pages/SemanticSearchAssistantAIAgent';
+import OldRecordsRestorationAIAgent from './pages/OldRecordsRestorationAIAgent';
+import ForensicDocumentAnalystAIAgent from './pages/ForensicDocumentAnalystAIAgent';
+import MultiLingualTranslatorAIAgent from './pages/MultiLingualTranslatorAIAgent';
+import DocumentRedactionBotAIAgent from './pages/DocumentRedactionBotAIAgent';
+import CrossReferenceEngineAIAgent from './pages/CrossReferenceEngineAIAgent';
+import LegalActCrossCheckerAIAgent from './pages/LegalActCrossCheckerAIAgent';
+import EvidenceIntegrityValidatorAIAgent from './pages/EvidenceIntegrityValidatorAIAgent';
 import InternalAuditPlanningAIAgent from './pages/InternalAuditPlanningAIAgent';
 import AuditWorkflowManagerAIAgent from './pages/AuditWorkflowManagerAIAgent';
 import AuditSchedulingAIAgent from './pages/AuditSchedulingAIAgent';
@@ -3151,6 +3182,37 @@ const AnimatedRoutes = () => {
         <Route path="/armoury-inspector-ai-agent" element={<ArmouryInspectorAIAgent />} />
         <Route path="/legal-audit-bot-ai-agent" element={<LegalAuditBotAIAgent />} />
         <Route path="/evidence-chain-auditor-ai-agent" element={<EvidenceChainAuditorAIAgent />} />
+              <Route path="/document-classification-ai-agent" element={<DocumentClassificationAIAgent />} />
+        <Route path="/smart-ocr-handwriting-recognition-ai-agent" element={<SmartOCRHandwritingRecognitionAIAgent />} />
+        <Route path="/intelligent-document-indexing-ai-agent" element={<IntelligentDocumentIndexingAIAgent />} />
+        <Route path="/digital-file-organizer-ai-agent" element={<DigitalFileOrganizerAIAgent />} />
+        <Route path="/document-approval-workflow-ai-agent" element={<DocumentApprovalWorkflowAIAgent />} />
+        <Route path="/document-access-control-ai-agent" element={<DocumentAccessControlAIAgent />} />
+        <Route path="/document-lifecycle-management-ai-agent" element={<DocumentLifecycleManagementAIAgent />} />
+        <Route path="/record-archival-ai-agent" element={<RecordArchivalAIAgent />} />
+        <Route path="/archive-retrieval-ai-agent" element={<ArchiveRetrievalAIAgent />} />
+        <Route path="/duplicate-document-detection-ai-agent" element={<DuplicateDocumentDetectionAIAgent />} />
+        <Route path="/digital-signature-verification-ai-agent" element={<DigitalSignatureVerificationAIAgent />} />
+        <Route path="/chain-of-custody-tracker-ai-agent" element={<ChainOfCustodyTrackerAIAgent />} />
+        <Route path="/court-document-management-ai-agent" element={<CourtDocumentManagementAIAgent />} />
+        <Route path="/data-loss-prevention-ai-agent" element={<DataLossPreventionAIAgent />} />
+        <Route path="/tamper-detection-ai-agent" element={<TamperDetectionAIAgent />} />
+        <Route path="/ai-document-chat-assistant-agent" element={<AIDocumentChatAssistantAgent />} />
+        <Route path="/knowledge-base-ai-agent" element={<KnowledgeBaseAIAgent />} />
+        <Route path="/document-analytics-ai-agent" element={<DocumentAnalyticsAIAgent />} />
+        <Route path="/executive-document-dashboard-ai-agent" element={<ExecutiveDocumentDashboardAIAgent />} />
+        <Route path="/document-kpi-dashboard-ai-agent" element={<DocumentKPIDashboardAIAgent />} />
+        <Route path="/fir-digitization-expert-ai-agent" element={<FIRDigitizationExpertAIAgent />} />
+        <Route path="/case-file-summarization-ai-agent" element={<CaseFileSummarizationAIAgent />} />
+        <Route path="/confidential-vault-guardian-ai-agent" element={<ConfidentialVaultGuardianAIAgent />} />
+        <Route path="/semantic-search-assistant-ai-agent" element={<SemanticSearchAssistantAIAgent />} />
+        <Route path="/old-records-restoration-ai-agent" element={<OldRecordsRestorationAIAgent />} />
+        <Route path="/forensic-document-analyst-ai-agent" element={<ForensicDocumentAnalystAIAgent />} />
+        <Route path="/multi-lingual-translator-ai-agent" element={<MultiLingualTranslatorAIAgent />} />
+        <Route path="/document-redaction-bot-ai-agent" element={<DocumentRedactionBotAIAgent />} />
+        <Route path="/cross-reference-engine-ai-agent" element={<CrossReferenceEngineAIAgent />} />
+        <Route path="/legal-act-cross-checker-ai-agent" element={<LegalActCrossCheckerAIAgent />} />
+        <Route path="/evidence-integrity-validator-ai-agent" element={<EvidenceIntegrityValidatorAIAgent />} />
       </Routes>
     </AnimatePresence>
   );

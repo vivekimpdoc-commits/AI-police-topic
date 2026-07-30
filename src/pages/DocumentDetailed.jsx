@@ -22,6 +22,42 @@ const aiExperts = [
   "Legal Act Cross-Checker AI", "Evidence Integrity Validator AI"
 ];
 
+
+const expertRoutes = {
+  "Document Classification AI": "/document-classification-ai-agent",
+  "Smart OCR & Handwriting Recognition AI": "/smart-ocr-handwriting-recognition-ai-agent",
+  "Intelligent Document Indexing AI": "/intelligent-document-indexing-ai-agent",
+  "Digital File Organizer AI": "/digital-file-organizer-ai-agent",
+  "Document Approval Workflow AI": "/document-approval-workflow-ai-agent",
+  "Document Access Control AI": "/document-access-control-ai-agent",
+  "Document Lifecycle Management AI": "/document-lifecycle-management-ai-agent",
+  "Record Archival AI": "/record-archival-ai-agent",
+  "Archive Retrieval AI": "/archive-retrieval-ai-agent",
+  "Duplicate Document Detection AI": "/duplicate-document-detection-ai-agent",
+  "Digital Signature Verification AI": "/digital-signature-verification-ai-agent",
+  "Chain of Custody Tracker AI": "/chain-of-custody-tracker-ai-agent",
+  "Court Document Management AI": "/court-document-management-ai-agent",
+  "Data Loss Prevention AI": "/data-loss-prevention-ai-agent",
+  "Tamper Detection AI": "/tamper-detection-ai-agent",
+  "AI Document Chat Assistant": "/ai-document-chat-assistant-agent",
+  "Knowledge Base AI": "/knowledge-base-ai-agent",
+  "Document Analytics AI": "/document-analytics-ai-agent",
+  "Executive Document Dashboard AI": "/executive-document-dashboard-ai-agent",
+  "Document KPI Dashboard AI": "/document-kpi-dashboard-ai-agent",
+  "FIR Digitization Expert AI": "/fir-digitization-expert-ai-agent",
+  "Case File Summarization AI": "/case-file-summarization-ai-agent",
+  "Confidential Vault Guardian AI": "/confidential-vault-guardian-ai-agent",
+  "Semantic Search Assistant AI": "/semantic-search-assistant-ai-agent",
+  "Old Records Restoration AI": "/old-records-restoration-ai-agent",
+  "Forensic Document Analyst AI": "/forensic-document-analyst-ai-agent",
+  "Multi-lingual Translator AI": "/multi-lingual-translator-ai-agent",
+  "Document Redaction Bot AI": "/document-redaction-bot-ai-agent",
+  "Cross-Reference Engine AI": "/cross-reference-engine-ai-agent",
+  "Legal Act Cross-Checker AI": "/legal-act-cross-checker-ai-agent",
+  "Evidence Integrity Validator AI": "/evidence-integrity-validator-ai-agent"
+};
+const isClickable = (expert) => !!expertRoutes[expert];
+
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
   { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
@@ -73,10 +109,19 @@ const DocumentDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid experts-grid">
             {aiExperts.map((expert, i) => (
-              <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-cyan">
-                <Bot className="card-icon" />
-                <h4>{expert}</h4>
-              </motion.div>
+              <motion.div 
+                    initial={{ opacity: 0, scale: 0.8 }} 
+                    animate={{ opacity: 1, scale: 1 }} 
+                    transition={{ delay: i * 0.03 }} 
+                    key={i} 
+                    className={`premium-card highlight-cyan ${isClickable(expert) ? 'clickable-agent-card' : ''}`}
+                    onClick={() => { if (isClickable(expert)) navigate(expertRoutes[expert]); }}
+                    style={isClickable(expert) ? { cursor: 'pointer', border: '1px solid #00f0ff', boxShadow: '0 0 15px rgba(0, 240, 255, 0.3)' } : {}}
+                  >
+                    <Bot className="card-icon" />
+                    <h4>{expert}</h4>
+                    {isClickable(expert) && <div style={{ fontSize: '0.75rem', color: '#00f0ff', marginTop: '5px' }}>Click to view Agent details</div>}
+                  </motion.div>
             ))}
           </motion.div>
         );
