@@ -8,6 +8,31 @@ import Home from './pages/Home';
 import HRMSDetailed from './pages/HrmsDetailed';
 import FinanceDetailed from './pages/FinanceDetailed';
 import BudgetPlanningDetailed from './pages/BudgetPlanningDetailed';
+import InternalAuditPlanningAIAgent from './pages/InternalAuditPlanningAIAgent';
+import AuditWorkflowManagerAIAgent from './pages/AuditWorkflowManagerAIAgent';
+import AuditSchedulingAIAgent from './pages/AuditSchedulingAIAgent';
+import AuditFindingsAIAgent from './pages/AuditFindingsAIAgent';
+import CorrectiveActionTrackerAIAgent from './pages/CorrectiveActionTrackerAIAgent';
+import AuditReportGeneratorAIAgent from './pages/AuditReportGeneratorAIAgent';
+import AuditAnalyticsAIAgent from './pages/AuditAnalyticsAIAgent';
+import ExecutiveAuditDashboardAIAgent from './pages/ExecutiveAuditDashboardAIAgent';
+import InternalControlAssessmentAIAgent from './pages/InternalControlAssessmentAIAgent';
+import FinancialAuditAIAgent from './pages/FinancialAuditAIAgent';
+import ProcurementAuditAIAgent from './pages/ProcurementAuditAIAgent';
+import InventoryAuditAIAgent from './pages/InventoryAuditAIAgent';
+import DataIntegrityAuditAIAgent from './pages/DataIntegrityAuditAIAgent';
+import PredictiveAuditAIAgent from './pages/PredictiveAuditAIAgent';
+import AuditKPIDashboardAIAgent from './pages/AuditKPIDashboardAIAgent';
+import FraudDetectionAIAgent from './pages/FraudDetectionAIAgent';
+import StationAuditExpertAIAgent from './pages/StationAuditExpertAIAgent';
+import AssetVerificationAIAgent from './pages/AssetVerificationAIAgent';
+import ComplianceCheckerAIAgent from './pages/ComplianceCheckerAIAgent';
+import DisciplinaryAuditorAIAgent from './pages/DisciplinaryAuditorAIAgent';
+import CyberForensicsAuditorAIAgent from './pages/CyberForensicsAuditorAIAgent';
+import RiskManagementAIAgent from './pages/RiskManagementAIAgent';
+import ArmouryInspectorAIAgent from './pages/ArmouryInspectorAIAgent';
+import LegalAuditBotAIAgent from './pages/LegalAuditBotAIAgent';
+import EvidenceChainAuditorAIAgent from './pages/EvidenceChainAuditorAIAgent';
 import CAGAuditPredictorAIAgent from './pages/CAGAuditPredictorAIAgent';
 import InternalAuditAutomationBotAgent from './pages/InternalAuditAutomationBotAgent';
 import FraudTriangleAnalyzerAgent from './pages/FraudTriangleAnalyzerAgent';
@@ -3101,6 +3126,31 @@ const AnimatedRoutes = () => {
         <Route path="/construction-capex-auditor-agent" element={<ConstructionCapExAuditorAgent />} />
         <Route path="/housing-maintenance-audit-agent" element={<HousingMaintenanceAuditAgent />} />
         <Route path="/green-energy-roi-auditor-agent" element={<GreenEnergyROIAuditorAgent />} />
+              <Route path="/internal-audit-planning-ai-agent" element={<InternalAuditPlanningAIAgent />} />
+        <Route path="/audit-workflow-manager-ai-agent" element={<AuditWorkflowManagerAIAgent />} />
+        <Route path="/audit-scheduling-ai-agent" element={<AuditSchedulingAIAgent />} />
+        <Route path="/audit-findings-ai-agent" element={<AuditFindingsAIAgent />} />
+        <Route path="/corrective-action-tracker-ai-agent" element={<CorrectiveActionTrackerAIAgent />} />
+        <Route path="/audit-report-generator-ai-agent" element={<AuditReportGeneratorAIAgent />} />
+        <Route path="/audit-analytics-ai-agent" element={<AuditAnalyticsAIAgent />} />
+        <Route path="/executive-audit-dashboard-ai-agent" element={<ExecutiveAuditDashboardAIAgent />} />
+        <Route path="/internal-control-assessment-ai-agent" element={<InternalControlAssessmentAIAgent />} />
+        <Route path="/financial-audit-ai-agent" element={<FinancialAuditAIAgent />} />
+        <Route path="/procurement-audit-ai-agent" element={<ProcurementAuditAIAgent />} />
+        <Route path="/inventory-audit-ai-agent" element={<InventoryAuditAIAgent />} />
+        <Route path="/data-integrity-audit-ai-agent" element={<DataIntegrityAuditAIAgent />} />
+        <Route path="/predictive-audit-ai-agent" element={<PredictiveAuditAIAgent />} />
+        <Route path="/audit-kpi-dashboard-ai-agent" element={<AuditKPIDashboardAIAgent />} />
+        <Route path="/fraud-detection-ai-agent" element={<FraudDetectionAIAgent />} />
+        <Route path="/station-audit-expert-ai-agent" element={<StationAuditExpertAIAgent />} />
+        <Route path="/asset-verification-ai-agent" element={<AssetVerificationAIAgent />} />
+        <Route path="/compliance-checker-ai-agent" element={<ComplianceCheckerAIAgent />} />
+        <Route path="/disciplinary-auditor-ai-agent" element={<DisciplinaryAuditorAIAgent />} />
+        <Route path="/cyber-forensics-auditor-ai-agent" element={<CyberForensicsAuditorAIAgent />} />
+        <Route path="/risk-management-ai-agent" element={<RiskManagementAIAgent />} />
+        <Route path="/armoury-inspector-ai-agent" element={<ArmouryInspectorAIAgent />} />
+        <Route path="/legal-audit-bot-ai-agent" element={<LegalAuditBotAIAgent />} />
+        <Route path="/evidence-chain-auditor-ai-agent" element={<EvidenceChainAuditorAIAgent />} />
       </Routes>
     </AnimatePresence>
   );

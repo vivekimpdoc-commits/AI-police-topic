@@ -17,6 +17,36 @@ const aiExperts = [
   "Risk Management AI", "Armoury Inspector AI", "Legal Audit Bot AI", "Evidence Chain Auditor AI"
 ];
 
+
+const expertRoutes = {
+  "Internal Audit Planning AI": "/internal-audit-planning-ai-agent",
+  "Audit Workflow Manager AI": "/audit-workflow-manager-ai-agent",
+  "Audit Scheduling AI": "/audit-scheduling-ai-agent",
+  "Audit Findings AI": "/audit-findings-ai-agent",
+  "Corrective Action Tracker AI": "/corrective-action-tracker-ai-agent",
+  "Audit Report Generator AI": "/audit-report-generator-ai-agent",
+  "Audit Analytics AI": "/audit-analytics-ai-agent",
+  "Executive Audit Dashboard AI": "/executive-audit-dashboard-ai-agent",
+  "Internal Control Assessment AI": "/internal-control-assessment-ai-agent",
+  "Financial Audit AI": "/financial-audit-ai-agent",
+  "Procurement Audit AI": "/procurement-audit-ai-agent",
+  "Inventory Audit AI": "/inventory-audit-ai-agent",
+  "Data Integrity Audit AI": "/data-integrity-audit-ai-agent",
+  "Predictive Audit AI": "/predictive-audit-ai-agent",
+  "Audit KPI Dashboard AI": "/audit-kpi-dashboard-ai-agent",
+  "Fraud Detection AI": "/fraud-detection-ai-agent",
+  "Station Audit Expert AI": "/station-audit-expert-ai-agent",
+  "Asset Verification AI": "/asset-verification-ai-agent",
+  "Compliance Checker AI": "/compliance-checker-ai-agent",
+  "Disciplinary Auditor AI": "/disciplinary-auditor-ai-agent",
+  "Cyber Forensics Auditor AI": "/cyber-forensics-auditor-ai-agent",
+  "Risk Management AI": "/risk-management-ai-agent",
+  "Armoury Inspector AI": "/armoury-inspector-ai-agent",
+  "Legal Audit Bot AI": "/legal-audit-bot-ai-agent",
+  "Evidence Chain Auditor AI": "/evidence-chain-auditor-ai-agent"
+};
+const isClickable = (expert) => !!expertRoutes[expert];
+
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
   { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
@@ -68,10 +98,19 @@ const AuditDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid experts-grid">
             {aiExperts.map((expert, i) => (
-              <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-cyan">
-                <Bot className="card-icon" />
-                <h4>{expert}</h4>
-              </motion.div>
+              <motion.div 
+                    initial={{ opacity: 0, scale: 0.8 }} 
+                    animate={{ opacity: 1, scale: 1 }} 
+                    transition={{ delay: i * 0.03 }} 
+                    key={i} 
+                    className={`premium-card highlight-cyan ${isClickable(expert) ? 'clickable-agent-card' : ''}`}
+                    onClick={() => { if (isClickable(expert)) navigate(expertRoutes[expert]); }}
+                    style={isClickable(expert) ? { cursor: 'pointer', border: '1px solid #00f0ff', boxShadow: '0 0 15px rgba(0, 240, 255, 0.3)' } : {}}
+                  >
+                    <Bot className="card-icon" />
+                    <h4>{expert}</h4>
+                    {isClickable(expert) && <div style={{ fontSize: '0.75rem', color: '#00f0ff', marginTop: '5px' }}>Click to view Agent details</div>}
+                  </motion.div>
             ))}
           </motion.div>
         );
