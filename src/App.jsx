@@ -8,6 +8,26 @@ import Home from './pages/Home';
 import HRMSDetailed from './pages/HrmsDetailed';
 import FinanceDetailed from './pages/FinanceDetailed';
 import BudgetPlanningDetailed from './pages/BudgetPlanningDetailed';
+import PoliceHRDomainExpertAIAgent from './pages/PoliceHRDomainExpertAIAgent';
+import OfficerRecruitmentExpertAIAgent from './pages/OfficerRecruitmentExpertAIAgent';
+import DutyLeaveExpertAIAgent from './pages/DutyLeaveExpertAIAgent';
+import PayrollAllowancesExpertAIAgent from './pages/PayrollAllowancesExpertAIAgent';
+import PerformanceMedalsExpertAIAgent from './pages/PerformanceMedalsExpertAIAgent';
+import PoliceTrainingExpertAIAgent from './pages/PoliceTrainingExpertAIAgent';
+import ForceEngagementExpertAIAgent from './pages/ForceEngagementExpertAIAgent';
+import PoliceActComplianceExpertAIAgent from './pages/PoliceActComplianceExpertAIAgent';
+import ArmouryManagementAIAgent from './pages/ArmouryManagementAIAgent';
+import MentalHealthStressAIAgent from './pages/MentalHealthStressAIAgent';
+import PhysicalFitnessTrackerAIAgent from './pages/PhysicalFitnessTrackerAIAgent';
+import GrievanceRedressalAIAgent from './pages/GrievanceRedressalAIAgent';
+import SmartShiftOptimizationAIAgent from './pages/SmartShiftOptimizationAIAgent';
+import FleetFuelManagementAIAgent from './pages/FleetFuelManagementAIAgent';
+import K9UnitManagementAIAgent from './pages/K9UnitManagementAIAgent';
+import CourtSummonLegalSyncAIAgent from './pages/CourtSummonLegalSyncAIAgent';
+import CyberSecurityAccessAIAgent from './pages/CyberSecurityAccessAIAgent';
+import DisciplinaryActionTrackerAIAgent from './pages/DisciplinaryActionTrackerAIAgent';
+import PensionGratuityCalculatorAIAgent from './pages/PensionGratuityCalculatorAIAgent';
+import ResettlementVeteranSupportAIAgent from './pages/ResettlementVeteranSupportAIAgent';
 import DocumentClassificationAIAgent from './pages/DocumentClassificationAIAgent';
 import SmartOCRHandwritingRecognitionAIAgent from './pages/SmartOCRHandwritingRecognitionAIAgent';
 import IntelligentDocumentIndexingAIAgent from './pages/IntelligentDocumentIndexingAIAgent';
@@ -3213,6 +3233,26 @@ const AnimatedRoutes = () => {
         <Route path="/cross-reference-engine-ai-agent" element={<CrossReferenceEngineAIAgent />} />
         <Route path="/legal-act-cross-checker-ai-agent" element={<LegalActCrossCheckerAIAgent />} />
         <Route path="/evidence-integrity-validator-ai-agent" element={<EvidenceIntegrityValidatorAIAgent />} />
+              <Route path="/police-hr-domain-expert-ai-agent" element={<PoliceHRDomainExpertAIAgent />} />
+        <Route path="/officer-recruitment-expert-ai-agent" element={<OfficerRecruitmentExpertAIAgent />} />
+        <Route path="/duty-leave-expert-ai-agent" element={<DutyLeaveExpertAIAgent />} />
+        <Route path="/payroll-allowances-expert-ai-agent" element={<PayrollAllowancesExpertAIAgent />} />
+        <Route path="/performance-medals-expert-ai-agent" element={<PerformanceMedalsExpertAIAgent />} />
+        <Route path="/police-training-expert-ai-agent" element={<PoliceTrainingExpertAIAgent />} />
+        <Route path="/force-engagement-expert-ai-agent" element={<ForceEngagementExpertAIAgent />} />
+        <Route path="/police-act-compliance-expert-ai-agent" element={<PoliceActComplianceExpertAIAgent />} />
+        <Route path="/armoury-management-ai-agent" element={<ArmouryManagementAIAgent />} />
+        <Route path="/mental-health-stress-ai-agent" element={<MentalHealthStressAIAgent />} />
+        <Route path="/physical-fitness-tracker-ai-agent" element={<PhysicalFitnessTrackerAIAgent />} />
+        <Route path="/grievance-redressal-ai-agent" element={<GrievanceRedressalAIAgent />} />
+        <Route path="/smart-shift-optimization-ai-agent" element={<SmartShiftOptimizationAIAgent />} />
+        <Route path="/fleet-fuel-management-ai-agent" element={<FleetFuelManagementAIAgent />} />
+        <Route path="/k9-unit-management-ai-agent" element={<K9UnitManagementAIAgent />} />
+        <Route path="/court-summon-legal-sync-ai-agent" element={<CourtSummonLegalSyncAIAgent />} />
+        <Route path="/cyber-security-access-ai-agent" element={<CyberSecurityAccessAIAgent />} />
+        <Route path="/disciplinary-action-tracker-ai-agent" element={<DisciplinaryActionTrackerAIAgent />} />
+        <Route path="/pension-gratuity-calculator-ai-agent" element={<PensionGratuityCalculatorAIAgent />} />
+        <Route path="/resettlement-veteran-support-ai-agent" element={<ResettlementVeteranSupportAIAgent />} />
       </Routes>
     </AnimatePresence>
   );
