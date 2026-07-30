@@ -191,7 +191,7 @@ const ResearchLabDetailed = () => {
               "24/7 AI Processing", "Advanced Machine Learning Models", "Real-time Data Sync", 
               "Automated Alerts & Notifications", "Cross-Platform Accessibility", "Role-Based Access Control"
             ].map((feat, i) => (
-              <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-purple">
+              <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-purple" onClick={() => navigate(`/agent/${encodeURIComponent(expert)}`)} style={{cursor: 'pointer'}}>
                 <Cpu className="card-icon" />
                 <h4>{feat}</h4>
               </motion.div>
