@@ -8,6 +8,65 @@ import Home from './pages/Home';
 import HRMSDetailed from './pages/HrmsDetailed';
 import FinanceDetailed from './pages/FinanceDetailed';
 import BudgetPlanningDetailed from './pages/BudgetPlanningDetailed';
+import CAGAuditPredictorAIAgent from './pages/CAGAuditPredictorAIAgent';
+import InternalAuditAutomationBotAgent from './pages/InternalAuditAutomationBotAgent';
+import FraudTriangleAnalyzerAgent from './pages/FraudTriangleAnalyzerAgent';
+import GhostVendorAuditBotAgent from './pages/GhostVendorAuditBotAgent';
+import DuplicateInvoiceScannerAgent from './pages/DuplicateInvoiceScannerAgent';
+import PayrollFraudAuditorAgent from './pages/PayrollFraudAuditorAgent';
+import PettyCashReconciliationAIAgent from './pages/PettyCashReconciliationAIAgent';
+import TenderCartelAuditAIAgent from './pages/TenderCartelAuditAIAgent';
+import ProcurementPriceBenchmarkerAgent from './pages/ProcurementPriceBenchmarkerAgent';
+import SSFundEncryptedAuditorAgent from './pages/SSFundEncryptedAuditorAgent';
+import GrantUtilizationAuditorAgent from './pages/GrantUtilizationAuditorAgent';
+import FundDiversionDetectorAIAgent from './pages/FundDiversionDetectorAIAgent';
+import TaxationTDSGSTAuditBotAgent from './pages/TaxationTDSGSTAuditBotAgent';
+import AssetDepreciationAuditorAgent from './pages/AssetDepreciationAuditorAgent';
+import InventoryShrinkageAuditAIAgent from './pages/InventoryShrinkageAuditAIAgent';
+import StationLevelAuditBotAgent from './pages/StationLevelAuditBotAgent';
+import HeadquartersAuditSweeperAgent from './pages/HeadquartersAuditSweeperAgent';
+import TreasuryDiscrepancyFinderAgent from './pages/TreasuryDiscrepancyFinderAgent';
+import BankReconciliationAIAgent from './pages/BankReconciliationAIAgent';
+import DigitalSignatureValidatorAgent from './pages/DigitalSignatureValidatorAgent';
+import BiometricAuditTrailAIAgent from './pages/BiometricAuditTrailAIAgent';
+import BlockchainLedgerAuditorAgent from './pages/BlockchainLedgerAuditorAgent';
+import ZeroTrustAccessAuditorAgent from './pages/ZeroTrustAccessAuditorAgent';
+import AuditQueryAutoResponderAgent from './pages/AuditQueryAutoResponderAgent';
+import ComplianceDeviationAlerterAgent from './pages/ComplianceDeviationAlerterAgent';
+import SOPBreachAuditAIAgent from './pages/SOPBreachAuditAIAgent';
+import MedicalClaimFraudAuditorAgent from './pages/MedicalClaimFraudAuditorAgent';
+import TADATravelAuditBotAgent from './pages/TADATravelAuditBotAgent';
+import FuelLogAnomalyDetectorAgent from './pages/FuelLogAnomalyDetectorAgent';
+import LogisticsShippingAuditorAgent from './pages/LogisticsShippingAuditorAgent';
+import WeaponryStockAuditAIAgent from './pages/WeaponryStockAuditAIAgent';
+import AmmunitionDiscrepancyBotAgent from './pages/AmmunitionDiscrepancyBotAgent';
+import RiotGearInventoryAuditorAgent from './pages/RiotGearInventoryAuditorAgent';
+import ConfiscatedAssetAuditAIAgent from './pages/ConfiscatedAssetAuditAIAgent';
+import SeizedCashVaultAuditorAgent from './pages/SeizedCashVaultAuditorAgent';
+import NarcoticsSeizureAuditBotAgent from './pages/NarcoticsSeizureAuditBotAgent';
+import ForensicLabAuditAIAgent from './pages/ForensicLabAuditAIAgent';
+import CyberCellCapExAuditorAgent from './pages/CyberCellCapExAuditorAgent';
+import ITHardwareLifespanAuditAgent from './pages/ITHardwareLifespanAuditAgent';
+import SoftwareLicenseUsageAuditAgent from './pages/SoftwareLicenseUsageAuditAgent';
+import CloudServerBillingAuditorAgent from './pages/CloudServerBillingAuditorAgent';
+import SmartCityCCTVAuditAIAgent from './pages/SmartCityCCTVAuditAIAgent';
+import DroneFlightLogAuditorAgent from './pages/DroneFlightLogAuditorAgent';
+import MarineFuelAuditBotAgent from './pages/MarineFuelAuditBotAgent';
+import AviationMaintenanceAuditorAgent from './pages/AviationMaintenanceAuditorAgent';
+import K9UnitExpenseAuditAIAgent from './pages/K9UnitExpenseAuditAIAgent';
+import WelfareFundAuditBotAgent from './pages/WelfareFundAuditBotAgent';
+import HospitalPharmacyAuditorAgent from './pages/HospitalPharmacyAuditorAgent';
+import CanteenSalesAuditAIAgent from './pages/CanteenSalesAuditAIAgent';
+import GuestHouseRevenueAuditAgent from './pages/GuestHouseRevenueAuditAgent';
+import EventSecurityBillingAuditAgent from './pages/EventSecurityBillingAuditAgent';
+import TrafficFineCollectionAuditAgent from './pages/TrafficFineCollectionAuditAgent';
+import LokAdalatSettlementAuditAgent from './pages/LokAdalatSettlementAuditAgent';
+import VendorSLABreachAuditorAgent from './pages/VendorSLABreachAuditorAgent';
+import PenaltyDeductionAuditAIAgent from './pages/PenaltyDeductionAuditAIAgent';
+import InsuranceClaimAuditBotAgent from './pages/InsuranceClaimAuditBotAgent';
+import ConstructionCapExAuditorAgent from './pages/ConstructionCapExAuditorAgent';
+import HousingMaintenanceAuditAgent from './pages/HousingMaintenanceAuditAgent';
+import GreenEnergyROIAuditorAgent from './pages/GreenEnergyROIAuditorAgent';
 import LegacyExtractorAIAgent from './pages/LegacyExtractorAIAgent';
 import OralHistoryTranscriberAgent from './pages/OralHistoryTranscriberAgent';
 import CaseArchiverBotAgent from './pages/CaseArchiverBotAgent';
@@ -2983,6 +3042,65 @@ const AnimatedRoutes = () => {
         <Route path="/evidence-handling-ai-agent" element={<EvidenceHandlingAIAgent />} />
         <Route path="/wisdom-transfer-bot-agent" element={<WisdomTransferBotAgent />} />
         <Route path="/historical-trends-analyzer-agent" element={<HistoricalTrendsAnalyzerAgent />} />
+              <Route path="/cag-audit-predictor-ai-agent" element={<CAGAuditPredictorAIAgent />} />
+        <Route path="/internal-audit-automation-bot-agent" element={<InternalAuditAutomationBotAgent />} />
+        <Route path="/fraud-triangle-analyzer-agent" element={<FraudTriangleAnalyzerAgent />} />
+        <Route path="/ghost-vendor-audit-bot-agent" element={<GhostVendorAuditBotAgent />} />
+        <Route path="/duplicate-invoice-scanner-agent" element={<DuplicateInvoiceScannerAgent />} />
+        <Route path="/payroll-fraud-auditor-agent" element={<PayrollFraudAuditorAgent />} />
+        <Route path="/petty-cash-reconciliation-ai-agent" element={<PettyCashReconciliationAIAgent />} />
+        <Route path="/tender-cartel-audit-ai-agent" element={<TenderCartelAuditAIAgent />} />
+        <Route path="/procurement-price-benchmarker-agent" element={<ProcurementPriceBenchmarkerAgent />} />
+        <Route path="/ss-fund-encrypted-auditor-agent" element={<SSFundEncryptedAuditorAgent />} />
+        <Route path="/grant-utilization-auditor-agent" element={<GrantUtilizationAuditorAgent />} />
+        <Route path="/fund-diversion-detector-ai-agent" element={<FundDiversionDetectorAIAgent />} />
+        <Route path="/taxation-tds-gst-audit-bot-agent" element={<TaxationTDSGSTAuditBotAgent />} />
+        <Route path="/asset-depreciation-auditor-agent" element={<AssetDepreciationAuditorAgent />} />
+        <Route path="/inventory-shrinkage-audit-ai-agent" element={<InventoryShrinkageAuditAIAgent />} />
+        <Route path="/station-level-audit-bot-agent" element={<StationLevelAuditBotAgent />} />
+        <Route path="/headquarters-audit-sweeper-agent" element={<HeadquartersAuditSweeperAgent />} />
+        <Route path="/treasury-discrepancy-finder-agent" element={<TreasuryDiscrepancyFinderAgent />} />
+        <Route path="/bank-reconciliation-ai-agent" element={<BankReconciliationAIAgent />} />
+        <Route path="/digital-signature-validator-agent" element={<DigitalSignatureValidatorAgent />} />
+        <Route path="/biometric-audit-trail-ai-agent" element={<BiometricAuditTrailAIAgent />} />
+        <Route path="/blockchain-ledger-auditor-agent" element={<BlockchainLedgerAuditorAgent />} />
+        <Route path="/zero-trust-access-auditor-agent" element={<ZeroTrustAccessAuditorAgent />} />
+        <Route path="/audit-query-auto-responder-agent" element={<AuditQueryAutoResponderAgent />} />
+        <Route path="/compliance-deviation-alerter-agent" element={<ComplianceDeviationAlerterAgent />} />
+        <Route path="/sop-breach-audit-ai-agent" element={<SOPBreachAuditAIAgent />} />
+        <Route path="/medical-claim-fraud-auditor-agent" element={<MedicalClaimFraudAuditorAgent />} />
+        <Route path="/ta-da-travel-audit-bot-agent" element={<TADATravelAuditBotAgent />} />
+        <Route path="/fuel-log-anomaly-detector-agent" element={<FuelLogAnomalyDetectorAgent />} />
+        <Route path="/logistics-shipping-auditor-agent" element={<LogisticsShippingAuditorAgent />} />
+        <Route path="/weaponry-stock-audit-ai-agent" element={<WeaponryStockAuditAIAgent />} />
+        <Route path="/ammunition-discrepancy-bot-agent" element={<AmmunitionDiscrepancyBotAgent />} />
+        <Route path="/riot-gear-inventory-auditor-agent" element={<RiotGearInventoryAuditorAgent />} />
+        <Route path="/confiscated-asset-audit-ai-agent" element={<ConfiscatedAssetAuditAIAgent />} />
+        <Route path="/seized-cash-vault-auditor-agent" element={<SeizedCashVaultAuditorAgent />} />
+        <Route path="/narcotics-seizure-audit-bot-agent" element={<NarcoticsSeizureAuditBotAgent />} />
+        <Route path="/forensic-lab-audit-ai-agent" element={<ForensicLabAuditAIAgent />} />
+        <Route path="/cyber-cell-capex-auditor-agent" element={<CyberCellCapExAuditorAgent />} />
+        <Route path="/it-hardware-lifespan-audit-agent" element={<ITHardwareLifespanAuditAgent />} />
+        <Route path="/software-license-usage-audit-agent" element={<SoftwareLicenseUsageAuditAgent />} />
+        <Route path="/cloud-server-billing-auditor-agent" element={<CloudServerBillingAuditorAgent />} />
+        <Route path="/smart-city-cctv-audit-ai-agent" element={<SmartCityCCTVAuditAIAgent />} />
+        <Route path="/drone-flight-log-auditor-agent" element={<DroneFlightLogAuditorAgent />} />
+        <Route path="/marine-fuel-audit-bot-agent" element={<MarineFuelAuditBotAgent />} />
+        <Route path="/aviation-maintenance-auditor-agent" element={<AviationMaintenanceAuditorAgent />} />
+        <Route path="/k9-unit-expense-audit-ai-agent" element={<K9UnitExpenseAuditAIAgent />} />
+        <Route path="/welfare-fund-audit-bot-agent" element={<WelfareFundAuditBotAgent />} />
+        <Route path="/hospital-pharmacy-auditor-agent" element={<HospitalPharmacyAuditorAgent />} />
+        <Route path="/canteen-sales-audit-ai-agent" element={<CanteenSalesAuditAIAgent />} />
+        <Route path="/guest-house-revenue-audit-agent" element={<GuestHouseRevenueAuditAgent />} />
+        <Route path="/event-security-billing-audit-agent" element={<EventSecurityBillingAuditAgent />} />
+        <Route path="/traffic-fine-collection-audit-agent" element={<TrafficFineCollectionAuditAgent />} />
+        <Route path="/lok-adalat-settlement-audit-agent" element={<LokAdalatSettlementAuditAgent />} />
+        <Route path="/vendor-sla-breach-auditor-agent" element={<VendorSLABreachAuditorAgent />} />
+        <Route path="/penalty-deduction-audit-ai-agent" element={<PenaltyDeductionAuditAIAgent />} />
+        <Route path="/insurance-claim-audit-bot-agent" element={<InsuranceClaimAuditBotAgent />} />
+        <Route path="/construction-capex-auditor-agent" element={<ConstructionCapExAuditorAgent />} />
+        <Route path="/housing-maintenance-audit-agent" element={<HousingMaintenanceAuditAgent />} />
+        <Route path="/green-energy-roi-auditor-agent" element={<GreenEnergyROIAuditorAgent />} />
       </Routes>
     </AnimatePresence>
   );
