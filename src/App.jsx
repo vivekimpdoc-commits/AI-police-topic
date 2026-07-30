@@ -8,6 +8,263 @@ import Home from './pages/Home';
 import HRMSDetailed from './pages/HrmsDetailed';
 import FinanceDetailed from './pages/FinanceDetailed';
 import BudgetPlanningDetailed from './pages/BudgetPlanningDetailed';
+import SwarmIntelligenceCoordinatorAIAgent from './pages/SwarmIntelligenceCoordinatorAIAgent';
+import CrossDepartmentOrchestratorAIAgent from './pages/CrossDepartmentOrchestratorAIAgent';
+import DynamicResourceAllocatorAIAgent from './pages/DynamicResourceAllocatorAIAgent';
+import ConflictResolutionAgentAIAgent from './pages/ConflictResolutionAgentAIAgent';
+import TaskDelegationMasterAIAgent from './pages/TaskDelegationMasterAIAgent';
+import InterAgencyProtocolAIAgent from './pages/InterAgencyProtocolAIAgent';
+import LoadBalancingAIAgent from './pages/LoadBalancingAIAgent';
+import AgentHealthMonitorAIAgent from './pages/AgentHealthMonitorAIAgent';
+import DecentralizedCommandAIAgent from './pages/DecentralizedCommandAIAgent';
+import IntelligenceFusionCenterAIAgent from './pages/IntelligenceFusionCenterAIAgent';
+import HumanInTheLoopAIAgent from './pages/HumanInTheLoopAIAgent';
+import SecurityPolicyAIAgent from './pages/SecurityPolicyAIAgent';
+import IntegrationManagerAIAgent from './pages/IntegrationManagerAIAgent';
+import RiskPredictionAIAgent from './pages/RiskPredictionAIAgent';
+import AnomalyDetectionAIAgent from './pages/AnomalyDetectionAIAgent';
+import ExecutiveCommandDashboardAIAgent from './pages/ExecutiveCommandDashboardAIAgent';
+import AuditTrailAIAgent from './pages/AuditTrailAIAgent';
+import EntityResolutionAIAgent from './pages/EntityResolutionAIAgent';
+import EntityExtractionAIAgent from './pages/EntityExtractionAIAgent';
+import SemanticEntityLinkingAIAgent from './pages/SemanticEntityLinkingAIAgent';
+import RelationshipDiscoveryAIAgent from './pages/RelationshipDiscoveryAIAgent';
+import MultiHopRelationshipExplorerAIAgent from './pages/MultiHopRelationshipExplorerAIAgent';
+import GraphEmbeddingAIAgent from './pages/GraphEmbeddingAIAgent';
+import KnowledgeGraphBuilderAIAgent from './pages/KnowledgeGraphBuilderAIAgent';
+import OntologyManagementAIAgent from './pages/OntologyManagementAIAgent';
+import KnowledgeBaseManagerAIAgent from './pages/KnowledgeBaseManagerAIAgent';
+import CriminalNetworkAnalyzerAIAgent from './pages/CriminalNetworkAnalyzerAIAgent';
+import CriminalLinkPredictionAIAgent from './pages/CriminalLinkPredictionAIAgent';
+import AssociationRuleMiningAIAgent from './pages/AssociationRuleMiningAIAgent';
+import CommunityDetectionAIAgent from './pages/CommunityDetectionAIAgent';
+import NetworkCentralityAnalyzerAIAgent from './pages/NetworkCentralityAnalyzerAIAgent';
+import InfluenceAnalysisAIAgent from './pages/InfluenceAnalysisAIAgent';
+import UnknownEntityDiscoveryAIAgent from './pages/UnknownEntityDiscoveryAIAgent';
+import SuspiciousClusterDetectionAIAgent from './pages/SuspiciousClusterDetectionAIAgent';
+import HiddenPatternDiscoveryAIAgent from './pages/HiddenPatternDiscoveryAIAgent';
+import GraphPatternMatchingAIAgent from './pages/GraphPatternMatchingAIAgent';
+import GraphSimilarityAIAgent from './pages/GraphSimilarityAIAgent';
+import IdentityResolutionAIAgent from './pages/IdentityResolutionAIAgent';
+import CrossDatabaseEntityMatchingAIAgent from './pages/CrossDatabaseEntityMatchingAIAgent';
+import MultiSourceDataFusionAIAgent from './pages/MultiSourceDataFusionAIAgent';
+import IntelligenceFusionAIAgent from './pages/IntelligenceFusionAIAgent';
+import EventCorrelationAIAgent from './pages/EventCorrelationAIAgent';
+import TimelineCorrelationAIAgent from './pages/TimelineCorrelationAIAgent';
+import BehavioralPatternAnalysisAIAgent from './pages/BehavioralPatternAnalysisAIAgent';
+import CriminalProfileBuilderAIAgent from './pages/CriminalProfileBuilderAIAgent';
+import OrganizationRelationshipMapperAIAgent from './pages/OrganizationRelationshipMapperAIAgent';
+import SocialNetworkIntelligenceAIAgent from './pages/SocialNetworkIntelligenceAIAgent';
+import CommunicationNetworkIntelligenceAIAgent from './pages/CommunicationNetworkIntelligenceAIAgent';
+import FinancialNetworkIntelligenceAIAgent from './pages/FinancialNetworkIntelligenceAIAgent';
+import LocationIntelligenceAIAgent from './pages/LocationIntelligenceAIAgent';
+import MobilityPatternAnalysisAIAgent from './pages/MobilityPatternAnalysisAIAgent';
+import DeviceCorrelationAIAgent from './pages/DeviceCorrelationAIAgent';
+import DigitalIdentityCorrelationAIAgent from './pages/DigitalIdentityCorrelationAIAgent';
+import RiskScoringAIAgent from './pages/RiskScoringAIAgent';
+import ThreatPredictionAIAgent from './pages/ThreatPredictionAIAgent';
+import CriminalActivityPredictionAIAgent from './pages/CriminalActivityPredictionAIAgent';
+import NetworkEvolutionPredictionAIAgent from './pages/NetworkEvolutionPredictionAIAgent';
+import AIGraphSearchAssistantAgent from './pages/AIGraphSearchAssistantAgent';
+import NaturalLanguageGraphQueryAIAgent from './pages/NaturalLanguageGraphQueryAIAgent';
+import GraphRecommendationEngineAIAgent from './pages/GraphRecommendationEngineAIAgent';
+import GraphVisualizationAIAgent from './pages/GraphVisualizationAIAgent';
+import InteractiveLinkExplorerAIAgent from './pages/InteractiveLinkExplorerAIAgent';
+import ExplainableAIForLinkPredictionAgent from './pages/ExplainableAIForLinkPredictionAgent';
+import GraphAnalyticsAIAgent from './pages/GraphAnalyticsAIAgent';
+import KnowledgeGraphQualityValidatorAIAgent from './pages/KnowledgeGraphQualityValidatorAIAgent';
+import GraphConsistencyCheckerAIAgent from './pages/GraphConsistencyCheckerAIAgent';
+import RealTimeKnowledgeGraphUpdateAIAgent from './pages/RealTimeKnowledgeGraphUpdateAIAgent';
+import StreamingDataCorrelationAIAgent from './pages/StreamingDataCorrelationAIAgent';
+import GraphVersionControlAIAgent from './pages/GraphVersionControlAIAgent';
+import KnowledgeGraphGovernanceAIAgent from './pages/KnowledgeGraphGovernanceAIAgent';
+import MetadataIntelligenceAIAgent from './pages/MetadataIntelligenceAIAgent';
+import DataLineageAIAgent from './pages/DataLineageAIAgent';
+import AIInvestigationCopilotAgent from './pages/AIInvestigationCopilotAgent';
+import CaseIntelligenceAIAgent from './pages/CaseIntelligenceAIAgent';
+import DecisionSupportAIAgent from './pages/DecisionSupportAIAgent';
+import StrategicIntelligenceAIAgent from './pages/StrategicIntelligenceAIAgent';
+import ExecutiveKnowledgeGraphDashboardAIAgent from './pages/ExecutiveKnowledgeGraphDashboardAIAgent';
+import RiotPredictionAIAgent from './pages/RiotPredictionAIAgent';
+import ForceDeploymentScorerAgent from './pages/ForceDeploymentScorerAgent';
+import RealTimeThreatAssessorAgent from './pages/RealTimeThreatAssessorAgent';
+import PublicSentimentAnalystAIAgent from './pages/PublicSentimentAnalystAIAgent';
+import EventSecurityPlannerAIAgent from './pages/EventSecurityPlannerAIAgent';
+import TacticalEvacuationAgentAgent from './pages/TacticalEvacuationAgentAgent';
+import EmergencyTriageCoordinatorAgent from './pages/EmergencyTriageCoordinatorAgent';
+import ResourceOptimizationAIAgent from './pages/ResourceOptimizationAIAgent';
+import WeatherDisasterImpactAIAgent from './pages/WeatherDisasterImpactAIAgent';
+import VIPRouteSecurityAIAgent from './pages/VIPRouteSecurityAIAgent';
+import CrowdDensityAnalyzerAIAgent from './pages/CrowdDensityAnalyzerAIAgent';
+import FlashMobPredictorAIAgent from './pages/FlashMobPredictorAIAgent';
+import ElectionViolenceHeatmapperAgent from './pages/ElectionViolenceHeatmapperAgent';
+import FestivalCrowdSurgeForecasterAgent from './pages/FestivalCrowdSurgeForecasterAgent';
+import OptimalStationStaffingAIAgent from './pages/OptimalStationStaffingAIAgent';
+import AntiRiotGearAllocatorAgent from './pages/AntiRiotGearAllocatorAgent';
+import RapidActionForceDispatcherAgent from './pages/RapidActionForceDispatcherAgent';
+import BeatPatrolRoutingOptimizerAgent from './pages/BeatPatrolRoutingOptimizerAgent';
+import EmergencyCallPrioritizationAgentAgent from './pages/EmergencyCallPrioritizationAgentAgent';
+import ActiveShooterTriangulatorAIAgent from './pages/ActiveShooterTriangulatorAIAgent';
+import HostageSituationModelerAgent from './pages/HostageSituationModelerAgent';
+import SimultaneousAttackCorrelatorAgent from './pages/SimultaneousAttackCorrelatorAgent';
+import VVIPRouteVulnerabilityAssessorAgent from './pages/VVIPRouteVulnerabilityAssessorAgent';
+import ConvoySpeedOptimizerAgent from './pages/ConvoySpeedOptimizerAgent';
+import StadiumCrowdDynamicsModelerAgent from './pages/StadiumCrowdDynamicsModelerAgent';
+import SniperOverWatchPositioningAIAgent from './pages/SniperOverWatchPositioningAIAgent';
+import FloodEvacuationRoutingAgentAgent from './pages/FloodEvacuationRoutingAgentAgent';
+import EarthquakeTriageAIAgent from './pages/EarthquakeTriageAIAgent';
+import HospitalBedSyncCoordinatorAgent from './pages/HospitalBedSyncCoordinatorAgent';
+import ReliefMaterialSupplyChainAIAgent from './pages/ReliefMaterialSupplyChainAIAgent';
+import MultiVariableThreatScorerAgent from './pages/MultiVariableThreatScorerAgent';
+import SentimentShiftTriggerAIAgent from './pages/SentimentShiftTriggerAIAgent';
+import RouteVulnerabilityIndexerAgent from './pages/RouteVulnerabilityIndexerAgent';
+import OptimalPathfindingAIAgent from './pages/OptimalPathfindingAIAgent';
+import AutomaticEscalationProtocolAIAgent from './pages/AutomaticEscalationProtocolAIAgent';
+import DroneReconDeploymentAIAgent from './pages/DroneReconDeploymentAIAgent';
+import GunfireAcousticTriangulatorAgent from './pages/GunfireAcousticTriangulatorAgent';
+import PredictiveForceExhaustionAIAgent from './pages/PredictiveForceExhaustionAIAgent';
+import LegalUseOfForcePrompterAgent from './pages/LegalUseOfForcePrompterAgent';
+import DGPDecisionSupportMatrixAIAgent from './pages/DGPDecisionSupportMatrixAIAgent';
+import LiveThreatHeatmapGeneratorAgent from './pages/LiveThreatHeatmapGeneratorAgent';
+import ForceReadinessBoardAIAgent from './pages/ForceReadinessBoardAIAgent';
+import VVIPConvoyTrackerAIAgent from './pages/VVIPConvoyTrackerAIAgent';
+import DisasterCommandBoardAIAgent from './pages/DisasterCommandBoardAIAgent';
+import PreEventRiskAssessorAgent from './pages/PreEventRiskAssessorAgent';
+import RiotPostMortemAnalystAgent from './pages/RiotPostMortemAnalystAgent';
+import ForceDeploymentEfficiencyAIAgent from './pages/ForceDeploymentEfficiencyAIAgent';
+import VVIPSecurityAuditorAgent from './pages/VVIPSecurityAuditorAgent';
+import EmergencyResponseTimeProfilerAgent from './pages/EmergencyResponseTimeProfilerAgent';
+import ResourceDepletionForecasterAgent from './pages/ResourceDepletionForecasterAgent';
+import RankBasedOverrideValidatorAgent from './pages/RankBasedOverrideValidatorAgent';
+import EncryptedTacticalCommRouterAgent from './pages/EncryptedTacticalCommRouterAgent';
+import DecisionAuditTrailAnalyzerAgent from './pages/DecisionAuditTrailAnalyzerAgent';
+import AntiTamperSensorFeedAIAgent from './pages/AntiTamperSensorFeedAIAgent';
+import ZeroTrustAPIGatewayMonitorAgent from './pages/ZeroTrustAPIGatewayMonitorAgent';
+import OfflineFailSafeModeTriggerAgent from './pages/OfflineFailSafeModeTriggerAgent';
+import HolographicTacticalTableManagerAgent from './pages/HolographicTacticalTableManagerAgent';
+import NeuralLinkCommandParserAgent from './pages/NeuralLinkCommandParserAgent';
+import AutonomousDroneCoordinatorAgent from './pages/AutonomousDroneCoordinatorAgent';
+import PreCrimeLegalArbitratorAgent from './pages/PreCrimeLegalArbitratorAgent';
+import ThreeDCitySimulatorAIAgent from './pages/ThreeDCitySimulatorAIAgent';
+import TrafficGridModelerAIAgent from './pages/TrafficGridModelerAIAgent';
+import VirtualStationLoadTesterAgent from './pages/VirtualStationLoadTesterAgent';
+import CrowdPhysicsSimulatorAgent from './pages/CrowdPhysicsSimulatorAgent';
+import DisasterImpactModelerAIAgent from './pages/DisasterImpactModelerAIAgent';
+import VVIPRouteSimulationAgentAgent from './pages/VVIPRouteSimulationAgentAgent';
+import CyberTwinVulnerabilityTesterAgent from './pages/CyberTwinVulnerabilityTesterAgent';
+import EmergencyResponseOptimizerAgent from './pages/EmergencyResponseOptimizerAgent';
+import RiotControlSimulatorAIAgent from './pages/RiotControlSimulatorAIAgent';
+import SpatialAnalyticsExpertAIAgent from './pages/SpatialAnalyticsExpertAIAgent';
+import TacticalBreachPlannerAIAgent from './pages/TacticalBreachPlannerAIAgent';
+import FloodDynamicsSimulatorAIAgent from './pages/FloodDynamicsSimulatorAIAgent';
+import EarthquakeStructuralIntegrityAIAgent from './pages/EarthquakeStructuralIntegrityAIAgent';
+import DroneSwarmSandboxModelerAgent from './pages/DroneSwarmSandboxModelerAgent';
+import AutonomousVehicleTrafficAIAgent from './pages/AutonomousVehicleTrafficAIAgent';
+import SniperLineOfSightCalculatorAgent from './pages/SniperLineOfSightCalculatorAgent';
+import BlastRadiusPhysicsEngineAgent from './pages/BlastRadiusPhysicsEngineAgent';
+import AcousticReverberationModelerAgent from './pages/AcousticReverberationModelerAgent';
+import TearGasDispersionPhysicsAIAgent from './pages/TearGasDispersionPhysicsAIAgent';
+import VirtualVIPDecoySimulatorAgent from './pages/VirtualVIPDecoySimulatorAgent';
+import EscapeRouteViabilityTesterAgent from './pages/EscapeRouteViabilityTesterAgent';
+import CyberAttackTabletopExerciserAgent from './pages/CyberAttackTabletopExerciserAgent';
+import SubterraneanNetworkModelerAgent from './pages/SubterraneanNetworkModelerAgent';
+import HospitalSurgeCapacitySimulatorAgent from './pages/HospitalSurgeCapacitySimulatorAgent';
+import EmergencyCallCenterLoadTesterAgent from './pages/EmergencyCallCenterLoadTesterAgent';
+import EvacuationBottleneckAnalyzerAgent from './pages/EvacuationBottleneckAnalyzerAgent';
+import CellBlockCapacityPredictorAgent from './pages/CellBlockCapacityPredictorAgent';
+import SmartCitySensorVirtualizerAgent from './pages/SmartCitySensorVirtualizerAgent';
+import GreenCorridorTimingSimulatorAgent from './pages/GreenCorridorTimingSimulatorAgent';
+import StadiumStampedeModelerAgent from './pages/StadiumStampedeModelerAgent';
+import FestivalCrowdFlowPredictorAgent from './pages/FestivalCrowdFlowPredictorAgent';
+import FlashMobConvergenceAIAgent from './pages/FlashMobConvergenceAIAgent';
+import RiotGearEfficacyTesterAgent from './pages/RiotGearEfficacyTesterAgent';
+import ActiveShooterVRScenarioAIAgent from './pages/ActiveShooterVRScenarioAIAgent';
+import HostageNegotiationVRTrainerAgent from './pages/HostageNegotiationVRTrainerAgent';
+import AirborneToxinDriftModelerAgent from './pages/AirborneToxinDriftModelerAgent';
+import RadioFrequencyShadowMapperAgent from './pages/RadioFrequencyShadowMapperAgent';
+import CCTVBlindSpotIdentifierAIAgent from './pages/CCTVBlindSpotIdentifierAIAgent';
+import TelecomNetworkOverloadModelerAgent from './pages/TelecomNetworkOverloadModelerAgent';
+import PowerGridFailureSimulatorAgent from './pages/PowerGridFailureSimulatorAgent';
+import VirtualInterrogationRoomAIAgent from './pages/VirtualInterrogationRoomAIAgent';
+import EvidenceTamperingSimulatorAgent from './pages/EvidenceTamperingSimulatorAgent';
+import CrimeSceneRecreationAIAgent from './pages/CrimeSceneRecreationAIAgent';
+import BulletTrajectorySimulatorAgent from './pages/BulletTrajectorySimulatorAgent';
+import HighSpeedChasePhysicsAIAgent from './pages/HighSpeedChasePhysicsAIAgent';
+import VirtualPerimeterSecurityAIAgent from './pages/VirtualPerimeterSecurityAIAgent';
+import FacialRecognitionLoadTesterAgent from './pages/FacialRecognitionLoadTesterAgent';
+import BorderInfiltrationModelerAgent from './pages/BorderInfiltrationModelerAgent';
+import SmugglingRouteSimulatorAIAgent from './pages/SmugglingRouteSimulatorAIAgent';
+import MaritimePortLogisticsTwinAgent from './pages/MaritimePortLogisticsTwinAgent';
+import AirspaceViolationModelerAIAgent from './pages/AirspaceViolationModelerAIAgent';
+import WeaponIssueBottleneckAIAgent from './pages/WeaponIssueBottleneckAIAgent';
+import ShiftHandoverOptimizationAIAgent from './pages/ShiftHandoverOptimizationAIAgent';
+import SupplyChainDisruptionTwinAgent from './pages/SupplyChainDisruptionTwinAgent';
+import RansomwareBlastRadiusAIAgent from './pages/RansomwareBlastRadiusAIAgent';
+import MultiAgencyCoordinationTwinAgent from './pages/MultiAgencyCoordinationTwinAgent';
+import RealTimeResourceMirrorAIAgent from './pages/RealTimeResourceMirrorAIAgent';
+import GeolocationSpoofingSimulatorAgent from './pages/GeolocationSpoofingSimulatorAgent';
+import VirtualCommandoTrainerAIAgent from './pages/VirtualCommandoTrainerAIAgent';
+import FutureCrimeScenarioGeneratorAgent from './pages/FutureCrimeScenarioGeneratorAgent';
+import FIRDraftingAssistantAIAgent from './pages/FIRDraftingAssistantAIAgent';
+import LegalCodeMatcherAIAgent from './pages/LegalCodeMatcherAIAgent';
+import ChargeSheetSummarizerAgent from './pages/ChargeSheetSummarizerAgent';
+import PreTrialEvidenceScorerAgent from './pages/PreTrialEvidenceScorerAgent';
+import InterrogationInsightAIAgent from './pages/InterrogationInsightAIAgent';
+import ColdCaseCorrelationBotAgent from './pages/ColdCaseCorrelationBotAgent';
+import WitnessTestimonyAnalyzerAgent from './pages/WitnessTestimonyAnalyzerAgent';
+import JurisdictionMapperAIAgent from './pages/JurisdictionMapperAIAgent';
+import AlibiVerificationAgentAgent from './pages/AlibiVerificationAgentAgent';
+import CourtPrecedentSearchAIAgent from './pages/CourtPrecedentSearchAIAgent';
+import BailRiskAssessorAIAgent from './pages/BailRiskAssessorAIAgent';
+import VoiceToFIRDictationAIAgent from './pages/VoiceToFIRDictationAIAgent';
+import IPCBNSSectionSuggesterAgent from './pages/IPCBNSSectionSuggesterAgent';
+import MultiLingualStatementTranslatorAgent from './pages/MultiLingualStatementTranslatorAgent';
+import SuspectEntityExtractorAgent from './pages/SuspectEntityExtractorAgent';
+import TimelineReconstructionAgentAgent from './pages/TimelineReconstructionAgentAgent';
+import TestimonyContradictionDetectorAgent from './pages/TestimonyContradictionDetectorAgent';
+import HistoricalJudgementAnalyzerAgent from './pages/HistoricalJudgementAnalyzerAgent';
+import BailRejectionPredictorAIAgent from './pages/BailRejectionPredictorAIAgent';
+import ProsecutionStrategyPrompterAgent from './pages/ProsecutionStrategyPrompterAgent';
+import ModusOperandiProfilerAgent from './pages/ModusOperandiProfilerAgent';
+import ForensicReportParserAIAgent from './pages/ForensicReportParserAIAgent';
+import BallisticsPatternMatcherAgent from './pages/BallisticsPatternMatcherAgent';
+import DigitalEvidenceTimestampAnalyzerAgent from './pages/DigitalEvidenceTimestampAnalyzerAgent';
+import MicroExpressionDetectorAIAgent from './pages/MicroExpressionDetectorAIAgent';
+import VoiceStressAnalysisBotAgent from './pages/VoiceStressAnalysisBotAgent';
+import PolygraphDataInterpreterAgent from './pages/PolygraphDataInterpreterAgent';
+import CaseSolvabilityScorerAgent from './pages/CaseSolvabilityScorerAgent';
+import AudioTranscriptionAgentAgent from './pages/AudioTranscriptionAgentAgent';
+import EmotionClassificationAIAgent from './pages/EmotionClassificationAIAgent';
+import WitnessSentimentAnalyzerAgent from './pages/WitnessSentimentAnalyzerAgent';
+import AutomatedEvidenceTaggerAgent from './pages/AutomatedEvidenceTaggerAgent';
+import CrossCaseSimilarityMatcherAgent from './pages/CrossCaseSimilarityMatcherAgent';
+import DefenseArgumentPredictorAgent from './pages/DefenseArgumentPredictorAgent';
+import CrimeScenePhotoAnalyzerAgent from './pages/CrimeScenePhotoAnalyzerAgent';
+import MissingPersonsCorrelatorAgent from './pages/MissingPersonsCorrelatorAgent';
+import UnidentifiedBodyMatcherAIAgent from './pages/UnidentifiedBodyMatcherAIAgent';
+import BankStatementFraudFinderAgent from './pages/BankStatementFraudFinderAgent';
+import CyberFootprintTracerAIAgent from './pages/CyberFootprintTracerAIAgent';
+import DeepfakeAudioDetectorAgent from './pages/DeepfakeAudioDetectorAgent';
+import ThreatLetterAuthorshipAIAgent from './pages/ThreatLetterAuthorshipAIAgent';
+import HandwritingAnalysisAssistantAgent from './pages/HandwritingAnalysisAssistantAgent';
+import SketchToMugshotAIAgent from './pages/SketchToMugshotAIAgent';
+import CriminalNicknameResolverAgent from './pages/CriminalNicknameResolverAgent';
+import CallDataRecordCDRSummarizerAgent from './pages/CallDataRecordCDRSummarizerAgent';
+import GPSPingTriangulationAIAgent from './pages/GPSPingTriangulationAIAgent';
+import DroneFootageAnalystAIAgent from './pages/DroneFootageAnalystAIAgent';
+import VictimVulnerabilityScorerAgent from './pages/VictimVulnerabilityScorerAgent';
+import ParoleViolationPredictorAgent from './pages/ParoleViolationPredictorAgent';
+import JailhouseInformantCredibilityAIAgent from './pages/JailhouseInformantCredibilityAIAgent';
+import EvidenceChainOfCustodyAuditorAgent from './pages/EvidenceChainOfCustodyAuditorAgent';
+import PostMortemReportInterpreterAgent from './pages/PostMortemReportInterpreterAgent';
+import DNAMatchProbabilityCalculatorAgent from './pages/DNAMatchProbabilityCalculatorAgent';
+import SurveillanceVideoSummarizerAgent from './pages/SurveillanceVideoSummarizerAgent';
+import SocialMediaConfessionScraperAgent from './pages/SocialMediaConfessionScraperAgent';
+import DarkWebCredentialSearcherAgent from './pages/DarkWebCredentialSearcherAgent';
+import LegalLoopholeFlaggingAIAgent from './pages/LegalLoopholeFlaggingAIAgent';
+import JudgeSentencingTrendAnalyzerAgent from './pages/JudgeSentencingTrendAnalyzerAgent';
+import WarrantApplicationDrafterAgent from './pages/WarrantApplicationDrafterAgent';
+import VirtualJuryBiasModelerAgent from './pages/VirtualJuryBiasModelerAgent';
 import PoliceHRDomainExpertAIAgent from './pages/PoliceHRDomainExpertAIAgent';
 import OfficerRecruitmentExpertAIAgent from './pages/OfficerRecruitmentExpertAIAgent';
 import DutyLeaveExpertAIAgent from './pages/DutyLeaveExpertAIAgent';
@@ -3253,6 +3510,263 @@ const AnimatedRoutes = () => {
         <Route path="/disciplinary-action-tracker-ai-agent" element={<DisciplinaryActionTrackerAIAgent />} />
         <Route path="/pension-gratuity-calculator-ai-agent" element={<PensionGratuityCalculatorAIAgent />} />
         <Route path="/resettlement-veteran-support-ai-agent" element={<ResettlementVeteranSupportAIAgent />} />
+              <Route path="/swarm-intelligence-coordinator-ai-agent" element={<SwarmIntelligenceCoordinatorAIAgent />} />
+        <Route path="/cross-department-orchestrator-ai-agent" element={<CrossDepartmentOrchestratorAIAgent />} />
+        <Route path="/dynamic-resource-allocator-ai-agent" element={<DynamicResourceAllocatorAIAgent />} />
+        <Route path="/conflict-resolution-agent-ai-agent" element={<ConflictResolutionAgentAIAgent />} />
+        <Route path="/task-delegation-master-ai-agent" element={<TaskDelegationMasterAIAgent />} />
+        <Route path="/inter-agency-protocol-ai-agent" element={<InterAgencyProtocolAIAgent />} />
+        <Route path="/load-balancing-ai-agent" element={<LoadBalancingAIAgent />} />
+        <Route path="/agent-health-monitor-ai-agent" element={<AgentHealthMonitorAIAgent />} />
+        <Route path="/decentralized-command-ai-agent" element={<DecentralizedCommandAIAgent />} />
+        <Route path="/intelligence-fusion-center-ai-agent" element={<IntelligenceFusionCenterAIAgent />} />
+        <Route path="/human-in-the-loop-ai-agent" element={<HumanInTheLoopAIAgent />} />
+        <Route path="/security-policy-ai-agent" element={<SecurityPolicyAIAgent />} />
+        <Route path="/integration-manager-ai-agent" element={<IntegrationManagerAIAgent />} />
+        <Route path="/risk-prediction-ai-agent" element={<RiskPredictionAIAgent />} />
+        <Route path="/anomaly-detection-ai-agent" element={<AnomalyDetectionAIAgent />} />
+        <Route path="/executive-command-dashboard-ai-agent" element={<ExecutiveCommandDashboardAIAgent />} />
+        <Route path="/audit-trail-ai-agent" element={<AuditTrailAIAgent />} />
+        <Route path="/entity-resolution-ai-agent" element={<EntityResolutionAIAgent />} />
+        <Route path="/entity-extraction-ai-agent" element={<EntityExtractionAIAgent />} />
+        <Route path="/semantic-entity-linking-ai-agent" element={<SemanticEntityLinkingAIAgent />} />
+        <Route path="/relationship-discovery-ai-agent" element={<RelationshipDiscoveryAIAgent />} />
+        <Route path="/multi-hop-relationship-explorer-ai-agent" element={<MultiHopRelationshipExplorerAIAgent />} />
+        <Route path="/graph-embedding-ai-agent" element={<GraphEmbeddingAIAgent />} />
+        <Route path="/knowledge-graph-builder-ai-agent" element={<KnowledgeGraphBuilderAIAgent />} />
+        <Route path="/ontology-management-ai-agent" element={<OntologyManagementAIAgent />} />
+        <Route path="/knowledge-base-manager-ai-agent" element={<KnowledgeBaseManagerAIAgent />} />
+        <Route path="/criminal-network-analyzer-ai-agent" element={<CriminalNetworkAnalyzerAIAgent />} />
+        <Route path="/criminal-link-prediction-ai-agent" element={<CriminalLinkPredictionAIAgent />} />
+        <Route path="/association-rule-mining-ai-agent" element={<AssociationRuleMiningAIAgent />} />
+        <Route path="/community-detection-ai-agent" element={<CommunityDetectionAIAgent />} />
+        <Route path="/network-centrality-analyzer-ai-agent" element={<NetworkCentralityAnalyzerAIAgent />} />
+        <Route path="/influence-analysis-ai-agent" element={<InfluenceAnalysisAIAgent />} />
+        <Route path="/unknown-entity-discovery-ai-agent" element={<UnknownEntityDiscoveryAIAgent />} />
+        <Route path="/suspicious-cluster-detection-ai-agent" element={<SuspiciousClusterDetectionAIAgent />} />
+        <Route path="/hidden-pattern-discovery-ai-agent" element={<HiddenPatternDiscoveryAIAgent />} />
+        <Route path="/graph-pattern-matching-ai-agent" element={<GraphPatternMatchingAIAgent />} />
+        <Route path="/graph-similarity-ai-agent" element={<GraphSimilarityAIAgent />} />
+        <Route path="/identity-resolution-ai-agent" element={<IdentityResolutionAIAgent />} />
+        <Route path="/cross-database-entity-matching-ai-agent" element={<CrossDatabaseEntityMatchingAIAgent />} />
+        <Route path="/multi-source-data-fusion-ai-agent" element={<MultiSourceDataFusionAIAgent />} />
+        <Route path="/intelligence-fusion-ai-agent" element={<IntelligenceFusionAIAgent />} />
+        <Route path="/event-correlation-ai-agent" element={<EventCorrelationAIAgent />} />
+        <Route path="/timeline-correlation-ai-agent" element={<TimelineCorrelationAIAgent />} />
+        <Route path="/behavioral-pattern-analysis-ai-agent" element={<BehavioralPatternAnalysisAIAgent />} />
+        <Route path="/criminal-profile-builder-ai-agent" element={<CriminalProfileBuilderAIAgent />} />
+        <Route path="/organization-relationship-mapper-ai-agent" element={<OrganizationRelationshipMapperAIAgent />} />
+        <Route path="/social-network-intelligence-ai-agent" element={<SocialNetworkIntelligenceAIAgent />} />
+        <Route path="/communication-network-intelligence-ai-agent" element={<CommunicationNetworkIntelligenceAIAgent />} />
+        <Route path="/financial-network-intelligence-ai-agent" element={<FinancialNetworkIntelligenceAIAgent />} />
+        <Route path="/location-intelligence-ai-agent" element={<LocationIntelligenceAIAgent />} />
+        <Route path="/mobility-pattern-analysis-ai-agent" element={<MobilityPatternAnalysisAIAgent />} />
+        <Route path="/device-correlation-ai-agent" element={<DeviceCorrelationAIAgent />} />
+        <Route path="/digital-identity-correlation-ai-agent" element={<DigitalIdentityCorrelationAIAgent />} />
+        <Route path="/risk-scoring-ai-agent" element={<RiskScoringAIAgent />} />
+        <Route path="/threat-prediction-ai-agent" element={<ThreatPredictionAIAgent />} />
+        <Route path="/criminal-activity-prediction-ai-agent" element={<CriminalActivityPredictionAIAgent />} />
+        <Route path="/network-evolution-prediction-ai-agent" element={<NetworkEvolutionPredictionAIAgent />} />
+        <Route path="/ai-graph-search-assistant-agent" element={<AIGraphSearchAssistantAgent />} />
+        <Route path="/natural-language-graph-query-ai-agent" element={<NaturalLanguageGraphQueryAIAgent />} />
+        <Route path="/graph-recommendation-engine-ai-agent" element={<GraphRecommendationEngineAIAgent />} />
+        <Route path="/graph-visualization-ai-agent" element={<GraphVisualizationAIAgent />} />
+        <Route path="/interactive-link-explorer-ai-agent" element={<InteractiveLinkExplorerAIAgent />} />
+        <Route path="/explainable-ai-for-link-prediction-agent" element={<ExplainableAIForLinkPredictionAgent />} />
+        <Route path="/graph-analytics-ai-agent" element={<GraphAnalyticsAIAgent />} />
+        <Route path="/knowledge-graph-quality-validator-ai-agent" element={<KnowledgeGraphQualityValidatorAIAgent />} />
+        <Route path="/graph-consistency-checker-ai-agent" element={<GraphConsistencyCheckerAIAgent />} />
+        <Route path="/real-time-knowledge-graph-update-ai-agent" element={<RealTimeKnowledgeGraphUpdateAIAgent />} />
+        <Route path="/streaming-data-correlation-ai-agent" element={<StreamingDataCorrelationAIAgent />} />
+        <Route path="/graph-version-control-ai-agent" element={<GraphVersionControlAIAgent />} />
+        <Route path="/knowledge-graph-governance-ai-agent" element={<KnowledgeGraphGovernanceAIAgent />} />
+        <Route path="/metadata-intelligence-ai-agent" element={<MetadataIntelligenceAIAgent />} />
+        <Route path="/data-lineage-ai-agent" element={<DataLineageAIAgent />} />
+        <Route path="/ai-investigation-copilot-agent" element={<AIInvestigationCopilotAgent />} />
+        <Route path="/case-intelligence-ai-agent" element={<CaseIntelligenceAIAgent />} />
+        <Route path="/decision-support-ai-agent" element={<DecisionSupportAIAgent />} />
+        <Route path="/strategic-intelligence-ai-agent" element={<StrategicIntelligenceAIAgent />} />
+        <Route path="/executive-knowledge-graph-dashboard-ai-agent" element={<ExecutiveKnowledgeGraphDashboardAIAgent />} />
+        <Route path="/riot-prediction-ai-agent" element={<RiotPredictionAIAgent />} />
+        <Route path="/force-deployment-scorer-agent" element={<ForceDeploymentScorerAgent />} />
+        <Route path="/real-time-threat-assessor-agent" element={<RealTimeThreatAssessorAgent />} />
+        <Route path="/public-sentiment-analyst-ai-agent" element={<PublicSentimentAnalystAIAgent />} />
+        <Route path="/event-security-planner-ai-agent" element={<EventSecurityPlannerAIAgent />} />
+        <Route path="/tactical-evacuation-agent-agent" element={<TacticalEvacuationAgentAgent />} />
+        <Route path="/emergency-triage-coordinator-agent" element={<EmergencyTriageCoordinatorAgent />} />
+        <Route path="/resource-optimization-ai-agent" element={<ResourceOptimizationAIAgent />} />
+        <Route path="/weather-disaster-impact-ai-agent" element={<WeatherDisasterImpactAIAgent />} />
+        <Route path="/vip-route-security-ai-agent" element={<VIPRouteSecurityAIAgent />} />
+        <Route path="/crowd-density-analyzer-ai-agent" element={<CrowdDensityAnalyzerAIAgent />} />
+        <Route path="/flash-mob-predictor-ai-agent" element={<FlashMobPredictorAIAgent />} />
+        <Route path="/election-violence-heatmapper-agent" element={<ElectionViolenceHeatmapperAgent />} />
+        <Route path="/festival-crowd-surge-forecaster-agent" element={<FestivalCrowdSurgeForecasterAgent />} />
+        <Route path="/optimal-station-staffing-ai-agent" element={<OptimalStationStaffingAIAgent />} />
+        <Route path="/anti-riot-gear-allocator-agent" element={<AntiRiotGearAllocatorAgent />} />
+        <Route path="/rapid-action-force-dispatcher-agent" element={<RapidActionForceDispatcherAgent />} />
+        <Route path="/beat-patrol-routing-optimizer-agent" element={<BeatPatrolRoutingOptimizerAgent />} />
+        <Route path="/emergency-call-prioritization-agent-agent" element={<EmergencyCallPrioritizationAgentAgent />} />
+        <Route path="/active-shooter-triangulator-ai-agent" element={<ActiveShooterTriangulatorAIAgent />} />
+        <Route path="/hostage-situation-modeler-agent" element={<HostageSituationModelerAgent />} />
+        <Route path="/simultaneous-attack-correlator-agent" element={<SimultaneousAttackCorrelatorAgent />} />
+        <Route path="/vvip-route-vulnerability-assessor-agent" element={<VVIPRouteVulnerabilityAssessorAgent />} />
+        <Route path="/convoy-speed-optimizer-agent" element={<ConvoySpeedOptimizerAgent />} />
+        <Route path="/stadium-crowd-dynamics-modeler-agent" element={<StadiumCrowdDynamicsModelerAgent />} />
+        <Route path="/sniper-over-watch-positioning-ai-agent" element={<SniperOverWatchPositioningAIAgent />} />
+        <Route path="/flood-evacuation-routing-agent-agent" element={<FloodEvacuationRoutingAgentAgent />} />
+        <Route path="/earthquake-triage-ai-agent" element={<EarthquakeTriageAIAgent />} />
+        <Route path="/hospital-bed-sync-coordinator-agent" element={<HospitalBedSyncCoordinatorAgent />} />
+        <Route path="/relief-material-supply-chain-ai-agent" element={<ReliefMaterialSupplyChainAIAgent />} />
+        <Route path="/multi-variable-threat-scorer-agent" element={<MultiVariableThreatScorerAgent />} />
+        <Route path="/sentiment-shift-trigger-ai-agent" element={<SentimentShiftTriggerAIAgent />} />
+        <Route path="/route-vulnerability-indexer-agent" element={<RouteVulnerabilityIndexerAgent />} />
+        <Route path="/optimal-pathfinding-ai-agent" element={<OptimalPathfindingAIAgent />} />
+        <Route path="/automatic-escalation-protocol-ai-agent" element={<AutomaticEscalationProtocolAIAgent />} />
+        <Route path="/drone-recon-deployment-ai-agent" element={<DroneReconDeploymentAIAgent />} />
+        <Route path="/gunfire-acoustic-triangulator-agent" element={<GunfireAcousticTriangulatorAgent />} />
+        <Route path="/predictive-force-exhaustion-ai-agent" element={<PredictiveForceExhaustionAIAgent />} />
+        <Route path="/legal-use-of-force-prompter-agent" element={<LegalUseOfForcePrompterAgent />} />
+        <Route path="/dgp-decision-support-matrix-ai-agent" element={<DGPDecisionSupportMatrixAIAgent />} />
+        <Route path="/live-threat-heatmap-generator-agent" element={<LiveThreatHeatmapGeneratorAgent />} />
+        <Route path="/force-readiness-board-ai-agent" element={<ForceReadinessBoardAIAgent />} />
+        <Route path="/vvip-convoy-tracker-ai-agent" element={<VVIPConvoyTrackerAIAgent />} />
+        <Route path="/disaster-command-board-ai-agent" element={<DisasterCommandBoardAIAgent />} />
+        <Route path="/pre-event-risk-assessor-agent" element={<PreEventRiskAssessorAgent />} />
+        <Route path="/riot-post-mortem-analyst-agent" element={<RiotPostMortemAnalystAgent />} />
+        <Route path="/force-deployment-efficiency-ai-agent" element={<ForceDeploymentEfficiencyAIAgent />} />
+        <Route path="/vvip-security-auditor-agent" element={<VVIPSecurityAuditorAgent />} />
+        <Route path="/emergency-response-time-profiler-agent" element={<EmergencyResponseTimeProfilerAgent />} />
+        <Route path="/resource-depletion-forecaster-agent" element={<ResourceDepletionForecasterAgent />} />
+        <Route path="/rank-based-override-validator-agent" element={<RankBasedOverrideValidatorAgent />} />
+        <Route path="/encrypted-tactical-comm-router-agent" element={<EncryptedTacticalCommRouterAgent />} />
+        <Route path="/decision-audit-trail-analyzer-agent" element={<DecisionAuditTrailAnalyzerAgent />} />
+        <Route path="/anti-tamper-sensor-feed-ai-agent" element={<AntiTamperSensorFeedAIAgent />} />
+        <Route path="/zero-trust-api-gateway-monitor-agent" element={<ZeroTrustAPIGatewayMonitorAgent />} />
+        <Route path="/offline-fail-safe-mode-trigger-agent" element={<OfflineFailSafeModeTriggerAgent />} />
+        <Route path="/holographic-tactical-table-manager-agent" element={<HolographicTacticalTableManagerAgent />} />
+        <Route path="/neural-link-command-parser-agent" element={<NeuralLinkCommandParserAgent />} />
+        <Route path="/autonomous-drone-coordinator-agent" element={<AutonomousDroneCoordinatorAgent />} />
+        <Route path="/pre-crime-legal-arbitrator-agent" element={<PreCrimeLegalArbitratorAgent />} />
+        <Route path="/3d-city-simulator-ai-agent" element={<ThreeDCitySimulatorAIAgent />} />
+        <Route path="/traffic-grid-modeler-ai-agent" element={<TrafficGridModelerAIAgent />} />
+        <Route path="/virtual-station-load-tester-agent" element={<VirtualStationLoadTesterAgent />} />
+        <Route path="/crowd-physics-simulator-agent" element={<CrowdPhysicsSimulatorAgent />} />
+        <Route path="/disaster-impact-modeler-ai-agent" element={<DisasterImpactModelerAIAgent />} />
+        <Route path="/vvip-route-simulation-agent-agent" element={<VVIPRouteSimulationAgentAgent />} />
+        <Route path="/cyber-twin-vulnerability-tester-agent" element={<CyberTwinVulnerabilityTesterAgent />} />
+        <Route path="/emergency-response-optimizer-agent" element={<EmergencyResponseOptimizerAgent />} />
+        <Route path="/riot-control-simulator-ai-agent" element={<RiotControlSimulatorAIAgent />} />
+        <Route path="/spatial-analytics-expert-ai-agent" element={<SpatialAnalyticsExpertAIAgent />} />
+        <Route path="/tactical-breach-planner-ai-agent" element={<TacticalBreachPlannerAIAgent />} />
+        <Route path="/flood-dynamics-simulator-ai-agent" element={<FloodDynamicsSimulatorAIAgent />} />
+        <Route path="/earthquake-structural-integrity-ai-agent" element={<EarthquakeStructuralIntegrityAIAgent />} />
+        <Route path="/drone-swarm-sandbox-modeler-agent" element={<DroneSwarmSandboxModelerAgent />} />
+        <Route path="/autonomous-vehicle-traffic-ai-agent" element={<AutonomousVehicleTrafficAIAgent />} />
+        <Route path="/sniper-line-of-sight-calculator-agent" element={<SniperLineOfSightCalculatorAgent />} />
+        <Route path="/blast-radius-physics-engine-agent" element={<BlastRadiusPhysicsEngineAgent />} />
+        <Route path="/acoustic-reverberation-modeler-agent" element={<AcousticReverberationModelerAgent />} />
+        <Route path="/tear-gas-dispersion-physics-ai-agent" element={<TearGasDispersionPhysicsAIAgent />} />
+        <Route path="/virtual-vip-decoy-simulator-agent" element={<VirtualVIPDecoySimulatorAgent />} />
+        <Route path="/escape-route-viability-tester-agent" element={<EscapeRouteViabilityTesterAgent />} />
+        <Route path="/cyber-attack-tabletop-exerciser-agent" element={<CyberAttackTabletopExerciserAgent />} />
+        <Route path="/subterranean-network-modeler-agent" element={<SubterraneanNetworkModelerAgent />} />
+        <Route path="/hospital-surge-capacity-simulator-agent" element={<HospitalSurgeCapacitySimulatorAgent />} />
+        <Route path="/emergency-call-center-load-tester-agent" element={<EmergencyCallCenterLoadTesterAgent />} />
+        <Route path="/evacuation-bottleneck-analyzer-agent" element={<EvacuationBottleneckAnalyzerAgent />} />
+        <Route path="/cell-block-capacity-predictor-agent" element={<CellBlockCapacityPredictorAgent />} />
+        <Route path="/smart-city-sensor-virtualizer-agent" element={<SmartCitySensorVirtualizerAgent />} />
+        <Route path="/green-corridor-timing-simulator-agent" element={<GreenCorridorTimingSimulatorAgent />} />
+        <Route path="/stadium-stampede-modeler-agent" element={<StadiumStampedeModelerAgent />} />
+        <Route path="/festival-crowd-flow-predictor-agent" element={<FestivalCrowdFlowPredictorAgent />} />
+        <Route path="/flash-mob-convergence-ai-agent" element={<FlashMobConvergenceAIAgent />} />
+        <Route path="/riot-gear-efficacy-tester-agent" element={<RiotGearEfficacyTesterAgent />} />
+        <Route path="/active-shooter-vr-scenario-ai-agent" element={<ActiveShooterVRScenarioAIAgent />} />
+        <Route path="/hostage-negotiation-vr-trainer-agent" element={<HostageNegotiationVRTrainerAgent />} />
+        <Route path="/airborne-toxin-drift-modeler-agent" element={<AirborneToxinDriftModelerAgent />} />
+        <Route path="/radio-frequency-shadow-mapper-agent" element={<RadioFrequencyShadowMapperAgent />} />
+        <Route path="/cctv-blind-spot-identifier-ai-agent" element={<CCTVBlindSpotIdentifierAIAgent />} />
+        <Route path="/telecom-network-overload-modeler-agent" element={<TelecomNetworkOverloadModelerAgent />} />
+        <Route path="/power-grid-failure-simulator-agent" element={<PowerGridFailureSimulatorAgent />} />
+        <Route path="/virtual-interrogation-room-ai-agent" element={<VirtualInterrogationRoomAIAgent />} />
+        <Route path="/evidence-tampering-simulator-agent" element={<EvidenceTamperingSimulatorAgent />} />
+        <Route path="/crime-scene-recreation-ai-agent" element={<CrimeSceneRecreationAIAgent />} />
+        <Route path="/bullet-trajectory-simulator-agent" element={<BulletTrajectorySimulatorAgent />} />
+        <Route path="/high-speed-chase-physics-ai-agent" element={<HighSpeedChasePhysicsAIAgent />} />
+        <Route path="/virtual-perimeter-security-ai-agent" element={<VirtualPerimeterSecurityAIAgent />} />
+        <Route path="/facial-recognition-load-tester-agent" element={<FacialRecognitionLoadTesterAgent />} />
+        <Route path="/border-infiltration-modeler-agent" element={<BorderInfiltrationModelerAgent />} />
+        <Route path="/smuggling-route-simulator-ai-agent" element={<SmugglingRouteSimulatorAIAgent />} />
+        <Route path="/maritime-port-logistics-twin-agent" element={<MaritimePortLogisticsTwinAgent />} />
+        <Route path="/airspace-violation-modeler-ai-agent" element={<AirspaceViolationModelerAIAgent />} />
+        <Route path="/weapon-issue-bottleneck-ai-agent" element={<WeaponIssueBottleneckAIAgent />} />
+        <Route path="/shift-handover-optimization-ai-agent" element={<ShiftHandoverOptimizationAIAgent />} />
+        <Route path="/supply-chain-disruption-twin-agent" element={<SupplyChainDisruptionTwinAgent />} />
+        <Route path="/ransomware-blast-radius-ai-agent" element={<RansomwareBlastRadiusAIAgent />} />
+        <Route path="/multi-agency-coordination-twin-agent" element={<MultiAgencyCoordinationTwinAgent />} />
+        <Route path="/real-time-resource-mirror-ai-agent" element={<RealTimeResourceMirrorAIAgent />} />
+        <Route path="/geolocation-spoofing-simulator-agent" element={<GeolocationSpoofingSimulatorAgent />} />
+        <Route path="/virtual-commando-trainer-ai-agent" element={<VirtualCommandoTrainerAIAgent />} />
+        <Route path="/future-crime-scenario-generator-agent" element={<FutureCrimeScenarioGeneratorAgent />} />
+        <Route path="/fir-drafting-assistant-ai-agent" element={<FIRDraftingAssistantAIAgent />} />
+        <Route path="/legal-code-matcher-ai-agent" element={<LegalCodeMatcherAIAgent />} />
+        <Route path="/charge-sheet-summarizer-agent" element={<ChargeSheetSummarizerAgent />} />
+        <Route path="/pre-trial-evidence-scorer-agent" element={<PreTrialEvidenceScorerAgent />} />
+        <Route path="/interrogation-insight-ai-agent" element={<InterrogationInsightAIAgent />} />
+        <Route path="/cold-case-correlation-bot-agent" element={<ColdCaseCorrelationBotAgent />} />
+        <Route path="/witness-testimony-analyzer-agent" element={<WitnessTestimonyAnalyzerAgent />} />
+        <Route path="/jurisdiction-mapper-ai-agent" element={<JurisdictionMapperAIAgent />} />
+        <Route path="/alibi-verification-agent-agent" element={<AlibiVerificationAgentAgent />} />
+        <Route path="/court-precedent-search-ai-agent" element={<CourtPrecedentSearchAIAgent />} />
+        <Route path="/bail-risk-assessor-ai-agent" element={<BailRiskAssessorAIAgent />} />
+        <Route path="/voice-to-fir-dictation-ai-agent" element={<VoiceToFIRDictationAIAgent />} />
+        <Route path="/ipc-bns-section-suggester-agent" element={<IPCBNSSectionSuggesterAgent />} />
+        <Route path="/multi-lingual-statement-translator-agent" element={<MultiLingualStatementTranslatorAgent />} />
+        <Route path="/suspect-entity-extractor-agent" element={<SuspectEntityExtractorAgent />} />
+        <Route path="/timeline-reconstruction-agent-agent" element={<TimelineReconstructionAgentAgent />} />
+        <Route path="/testimony-contradiction-detector-agent" element={<TestimonyContradictionDetectorAgent />} />
+        <Route path="/historical-judgement-analyzer-agent" element={<HistoricalJudgementAnalyzerAgent />} />
+        <Route path="/bail-rejection-predictor-ai-agent" element={<BailRejectionPredictorAIAgent />} />
+        <Route path="/prosecution-strategy-prompter-agent" element={<ProsecutionStrategyPrompterAgent />} />
+        <Route path="/modus-operandi-profiler-agent" element={<ModusOperandiProfilerAgent />} />
+        <Route path="/forensic-report-parser-ai-agent" element={<ForensicReportParserAIAgent />} />
+        <Route path="/ballistics-pattern-matcher-agent" element={<BallisticsPatternMatcherAgent />} />
+        <Route path="/digital-evidence-timestamp-analyzer-agent" element={<DigitalEvidenceTimestampAnalyzerAgent />} />
+        <Route path="/micro-expression-detector-ai-agent" element={<MicroExpressionDetectorAIAgent />} />
+        <Route path="/voice-stress-analysis-bot-agent" element={<VoiceStressAnalysisBotAgent />} />
+        <Route path="/polygraph-data-interpreter-agent" element={<PolygraphDataInterpreterAgent />} />
+        <Route path="/case-solvability-scorer-agent" element={<CaseSolvabilityScorerAgent />} />
+        <Route path="/audio-transcription-agent-agent" element={<AudioTranscriptionAgentAgent />} />
+        <Route path="/emotion-classification-ai-agent" element={<EmotionClassificationAIAgent />} />
+        <Route path="/witness-sentiment-analyzer-agent" element={<WitnessSentimentAnalyzerAgent />} />
+        <Route path="/automated-evidence-tagger-agent" element={<AutomatedEvidenceTaggerAgent />} />
+        <Route path="/cross-case-similarity-matcher-agent" element={<CrossCaseSimilarityMatcherAgent />} />
+        <Route path="/defense-argument-predictor-agent" element={<DefenseArgumentPredictorAgent />} />
+        <Route path="/crime-scene-photo-analyzer-agent" element={<CrimeScenePhotoAnalyzerAgent />} />
+        <Route path="/missing-persons-correlator-agent" element={<MissingPersonsCorrelatorAgent />} />
+        <Route path="/unidentified-body-matcher-ai-agent" element={<UnidentifiedBodyMatcherAIAgent />} />
+        <Route path="/bank-statement-fraud-finder-agent" element={<BankStatementFraudFinderAgent />} />
+        <Route path="/cyber-footprint-tracer-ai-agent" element={<CyberFootprintTracerAIAgent />} />
+        <Route path="/deepfake-audio-detector-agent" element={<DeepfakeAudioDetectorAgent />} />
+        <Route path="/threat-letter-authorship-ai-agent" element={<ThreatLetterAuthorshipAIAgent />} />
+        <Route path="/handwriting-analysis-assistant-agent" element={<HandwritingAnalysisAssistantAgent />} />
+        <Route path="/sketch-to-mugshot-ai-agent" element={<SketchToMugshotAIAgent />} />
+        <Route path="/criminal-nickname-resolver-agent" element={<CriminalNicknameResolverAgent />} />
+        <Route path="/call-data-record-cdr-summarizer-agent" element={<CallDataRecordCDRSummarizerAgent />} />
+        <Route path="/gps-ping-triangulation-ai-agent" element={<GPSPingTriangulationAIAgent />} />
+        <Route path="/drone-footage-analyst-ai-agent" element={<DroneFootageAnalystAIAgent />} />
+        <Route path="/victim-vulnerability-scorer-agent" element={<VictimVulnerabilityScorerAgent />} />
+        <Route path="/parole-violation-predictor-agent" element={<ParoleViolationPredictorAgent />} />
+        <Route path="/jailhouse-informant-credibility-ai-agent" element={<JailhouseInformantCredibilityAIAgent />} />
+        <Route path="/evidence-chain-of-custody-auditor-agent" element={<EvidenceChainOfCustodyAuditorAgent />} />
+        <Route path="/post-mortem-report-interpreter-agent" element={<PostMortemReportInterpreterAgent />} />
+        <Route path="/dna-match-probability-calculator-agent" element={<DNAMatchProbabilityCalculatorAgent />} />
+        <Route path="/surveillance-video-summarizer-agent" element={<SurveillanceVideoSummarizerAgent />} />
+        <Route path="/social-media-confession-scraper-agent" element={<SocialMediaConfessionScraperAgent />} />
+        <Route path="/dark-web-credential-searcher-agent" element={<DarkWebCredentialSearcherAgent />} />
+        <Route path="/legal-loophole-flagging-ai-agent" element={<LegalLoopholeFlaggingAIAgent />} />
+        <Route path="/judge-sentencing-trend-analyzer-agent" element={<JudgeSentencingTrendAnalyzerAgent />} />
+        <Route path="/warrant-application-drafter-agent" element={<WarrantApplicationDrafterAgent />} />
+        <Route path="/virtual-jury-bias-modeler-agent" element={<VirtualJuryBiasModelerAgent />} />
       </Routes>
     </AnimatePresence>
   );

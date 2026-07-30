@@ -29,6 +29,71 @@ const aiExperts = [
   "Judge Sentencing Trend Analyzer", "Warrant Application Drafter", "Virtual Jury Bias Modeler"
 ];
 
+
+const expertRoutes = {
+  "FIR Drafting Assistant AI": "/fir-drafting-assistant-ai-agent",
+  "Legal Code Matcher AI": "/legal-code-matcher-ai-agent",
+  "Charge-sheet Summarizer": "/charge-sheet-summarizer-agent",
+  "Pre-Trial Evidence Scorer": "/pre-trial-evidence-scorer-agent",
+  "Interrogation Insight AI": "/interrogation-insight-ai-agent",
+  "Cold-Case Correlation Bot": "/cold-case-correlation-bot-agent",
+  "Witness Testimony Analyzer": "/witness-testimony-analyzer-agent",
+  "Jurisdiction Mapper AI": "/jurisdiction-mapper-ai-agent",
+  "Alibi Verification Agent": "/alibi-verification-agent-agent",
+  "Court Precedent Search AI": "/court-precedent-search-ai-agent",
+  "Bail Risk Assessor AI": "/bail-risk-assessor-ai-agent",
+  "Voice-to-FIR Dictation AI": "/voice-to-fir-dictation-ai-agent",
+  "IPC/BNS Section Suggester": "/ipc-bns-section-suggester-agent",
+  "Multi-lingual Statement Translator": "/multi-lingual-statement-translator-agent",
+  "Suspect Entity Extractor": "/suspect-entity-extractor-agent",
+  "Timeline Reconstruction Agent": "/timeline-reconstruction-agent-agent",
+  "Testimony Contradiction Detector": "/testimony-contradiction-detector-agent",
+  "Historical Judgement Analyzer": "/historical-judgement-analyzer-agent",
+  "Bail Rejection Predictor AI": "/bail-rejection-predictor-ai-agent",
+  "Prosecution Strategy Prompter": "/prosecution-strategy-prompter-agent",
+  "Modus Operandi Profiler": "/modus-operandi-profiler-agent",
+  "Forensic Report Parser AI": "/forensic-report-parser-ai-agent",
+  "Ballistics Pattern Matcher": "/ballistics-pattern-matcher-agent",
+  "Digital Evidence Timestamp Analyzer": "/digital-evidence-timestamp-analyzer-agent",
+  "Micro-Expression Detector AI": "/micro-expression-detector-ai-agent",
+  "Voice Stress Analysis Bot": "/voice-stress-analysis-bot-agent",
+  "Polygraph Data Interpreter": "/polygraph-data-interpreter-agent",
+  "Case Solvability Scorer": "/case-solvability-scorer-agent",
+  "Audio Transcription Agent": "/audio-transcription-agent-agent",
+  "Emotion Classification AI": "/emotion-classification-ai-agent",
+  "Witness Sentiment Analyzer": "/witness-sentiment-analyzer-agent",
+  "Automated Evidence Tagger": "/automated-evidence-tagger-agent",
+  "Cross-Case Similarity Matcher": "/cross-case-similarity-matcher-agent",
+  "Defense Argument Predictor": "/defense-argument-predictor-agent",
+  "Crime Scene Photo Analyzer": "/crime-scene-photo-analyzer-agent",
+  "Missing Persons Correlator": "/missing-persons-correlator-agent",
+  "Unidentified Body Matcher AI": "/unidentified-body-matcher-ai-agent",
+  "Bank Statement Fraud Finder": "/bank-statement-fraud-finder-agent",
+  "Cyber-Footprint Tracer AI": "/cyber-footprint-tracer-ai-agent",
+  "Deepfake Audio Detector": "/deepfake-audio-detector-agent",
+  "Threat Letter Authorship AI": "/threat-letter-authorship-ai-agent",
+  "Handwriting Analysis Assistant": "/handwriting-analysis-assistant-agent",
+  "Sketch-to-Mugshot AI": "/sketch-to-mugshot-ai-agent",
+  "Criminal Nickname Resolver": "/criminal-nickname-resolver-agent",
+  "Call Data Record (CDR) Summarizer": "/call-data-record-cdr-summarizer-agent",
+  "GPS Ping Triangulation AI": "/gps-ping-triangulation-ai-agent",
+  "Drone Footage Analyst AI": "/drone-footage-analyst-ai-agent",
+  "Victim Vulnerability Scorer": "/victim-vulnerability-scorer-agent",
+  "Parole Violation Predictor": "/parole-violation-predictor-agent",
+  "Jailhouse Informant Credibility AI": "/jailhouse-informant-credibility-ai-agent",
+  "Evidence Chain-of-Custody Auditor": "/evidence-chain-of-custody-auditor-agent",
+  "Post-Mortem Report Interpreter": "/post-mortem-report-interpreter-agent",
+  "DNA Match Probability Calculator": "/dna-match-probability-calculator-agent",
+  "Surveillance Video Summarizer": "/surveillance-video-summarizer-agent",
+  "Social Media Confession Scraper": "/social-media-confession-scraper-agent",
+  "Dark Web Credential Searcher": "/dark-web-credential-searcher-agent",
+  "Legal Loophole Flagging AI": "/legal-loophole-flagging-ai-agent",
+  "Judge Sentencing Trend Analyzer": "/judge-sentencing-trend-analyzer-agent",
+  "Warrant Application Drafter": "/warrant-application-drafter-agent",
+  "Virtual Jury Bias Modeler": "/virtual-jury-bias-modeler-agent"
+};
+const isClickable = (expert) => !!expertRoutes[expert];
+
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
   { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
@@ -80,10 +145,19 @@ const InvestigationDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid experts-grid">
             {aiExperts.map((expert, i) => (
-              <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-cyan">
-                <Bot className="card-icon" />
-                <h4>{expert}</h4>
-              </motion.div>
+              <motion.div 
+                    initial={{ opacity: 0, scale: 0.8 }} 
+                    animate={{ opacity: 1, scale: 1 }} 
+                    transition={{ delay: i * 0.03 }} 
+                    key={i} 
+                    className={`premium-card highlight-cyan ${isClickable(expert) ? 'clickable-agent-card' : ''}`}
+                    onClick={() => { if (isClickable(expert)) navigate(expertRoutes[expert]); }}
+                    style={isClickable(expert) ? { cursor: 'pointer', border: '1px solid #00f0ff', boxShadow: '0 0 15px rgba(0, 240, 255, 0.3)' } : {}}
+                  >
+                    <Bot className="card-icon" />
+                    <h4>{expert}</h4>
+                    {isClickable(expert) && <div style={{ fontSize: '0.75rem', color: '#00f0ff', marginTop: '5px' }}>Click to view Agent details</div>}
+                  </motion.div>
             ))}
           </motion.div>
         );

@@ -29,6 +29,71 @@ const aiExperts = [
   "Decision Support AI", "Strategic Intelligence AI", "Executive Knowledge Graph Dashboard AI"
 ];
 
+
+const expertRoutes = {
+  "Entity Resolution AI": "/entity-resolution-ai-agent",
+  "Entity Extraction AI": "/entity-extraction-ai-agent",
+  "Semantic Entity Linking AI": "/semantic-entity-linking-ai-agent",
+  "Relationship Discovery AI": "/relationship-discovery-ai-agent",
+  "Multi-Hop Relationship Explorer AI": "/multi-hop-relationship-explorer-ai-agent",
+  "Graph Embedding AI": "/graph-embedding-ai-agent",
+  "Knowledge Graph Builder AI": "/knowledge-graph-builder-ai-agent",
+  "Ontology Management AI": "/ontology-management-ai-agent",
+  "Knowledge Base Manager AI": "/knowledge-base-manager-ai-agent",
+  "Criminal Network Analyzer AI": "/criminal-network-analyzer-ai-agent",
+  "Criminal Link Prediction AI": "/criminal-link-prediction-ai-agent",
+  "Association Rule Mining AI": "/association-rule-mining-ai-agent",
+  "Community Detection AI": "/community-detection-ai-agent",
+  "Network Centrality Analyzer AI": "/network-centrality-analyzer-ai-agent",
+  "Influence Analysis AI": "/influence-analysis-ai-agent",
+  "Unknown Entity Discovery AI": "/unknown-entity-discovery-ai-agent",
+  "Suspicious Cluster Detection AI": "/suspicious-cluster-detection-ai-agent",
+  "Hidden Pattern Discovery AI": "/hidden-pattern-discovery-ai-agent",
+  "Graph Pattern Matching AI": "/graph-pattern-matching-ai-agent",
+  "Graph Similarity AI": "/graph-similarity-ai-agent",
+  "Identity Resolution AI": "/identity-resolution-ai-agent",
+  "Cross-Database Entity Matching AI": "/cross-database-entity-matching-ai-agent",
+  "Multi-Source Data Fusion AI": "/multi-source-data-fusion-ai-agent",
+  "Intelligence Fusion AI": "/intelligence-fusion-ai-agent",
+  "Event Correlation AI": "/event-correlation-ai-agent",
+  "Timeline Correlation AI": "/timeline-correlation-ai-agent",
+  "Behavioral Pattern Analysis AI": "/behavioral-pattern-analysis-ai-agent",
+  "Criminal Profile Builder AI": "/criminal-profile-builder-ai-agent",
+  "Organization Relationship Mapper AI": "/organization-relationship-mapper-ai-agent",
+  "Social Network Intelligence AI": "/social-network-intelligence-ai-agent",
+  "Communication Network Intelligence AI": "/communication-network-intelligence-ai-agent",
+  "Financial Network Intelligence AI": "/financial-network-intelligence-ai-agent",
+  "Location Intelligence AI": "/location-intelligence-ai-agent",
+  "Mobility Pattern Analysis AI": "/mobility-pattern-analysis-ai-agent",
+  "Device Correlation AI": "/device-correlation-ai-agent",
+  "Digital Identity Correlation AI": "/digital-identity-correlation-ai-agent",
+  "Risk Scoring AI": "/risk-scoring-ai-agent",
+  "Threat Prediction AI": "/threat-prediction-ai-agent",
+  "Criminal Activity Prediction AI": "/criminal-activity-prediction-ai-agent",
+  "Network Evolution Prediction AI": "/network-evolution-prediction-ai-agent",
+  "AI Graph Search Assistant": "/ai-graph-search-assistant-agent",
+  "Natural Language Graph Query AI": "/natural-language-graph-query-ai-agent",
+  "Graph Recommendation Engine AI": "/graph-recommendation-engine-ai-agent",
+  "Graph Visualization AI": "/graph-visualization-ai-agent",
+  "Interactive Link Explorer AI": "/interactive-link-explorer-ai-agent",
+  "Explainable AI for Link Prediction": "/explainable-ai-for-link-prediction-agent",
+  "Graph Analytics AI": "/graph-analytics-ai-agent",
+  "Knowledge Graph Quality Validator AI": "/knowledge-graph-quality-validator-ai-agent",
+  "Graph Consistency Checker AI": "/graph-consistency-checker-ai-agent",
+  "Real-Time Knowledge Graph Update AI": "/real-time-knowledge-graph-update-ai-agent",
+  "Streaming Data Correlation AI": "/streaming-data-correlation-ai-agent",
+  "Graph Version Control AI": "/graph-version-control-ai-agent",
+  "Knowledge Graph Governance AI": "/knowledge-graph-governance-ai-agent",
+  "Metadata Intelligence AI": "/metadata-intelligence-ai-agent",
+  "Data Lineage AI": "/data-lineage-ai-agent",
+  "AI Investigation Copilot": "/ai-investigation-copilot-agent",
+  "Case Intelligence AI": "/case-intelligence-ai-agent",
+  "Decision Support AI": "/decision-support-ai-agent",
+  "Strategic Intelligence AI": "/strategic-intelligence-ai-agent",
+  "Executive Knowledge Graph Dashboard AI": "/executive-knowledge-graph-dashboard-ai-agent"
+};
+const isClickable = (expert) => !!expertRoutes[expert];
+
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
   { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
@@ -80,10 +145,19 @@ const KnowledgeDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid experts-grid">
             {aiExperts.map((expert, i) => (
-              <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-cyan">
-                <Bot className="card-icon" />
-                <h4>{expert}</h4>
-              </motion.div>
+              <motion.div 
+                    initial={{ opacity: 0, scale: 0.8 }} 
+                    animate={{ opacity: 1, scale: 1 }} 
+                    transition={{ delay: i * 0.03 }} 
+                    key={i} 
+                    className={`premium-card highlight-cyan ${isClickable(expert) ? 'clickable-agent-card' : ''}`}
+                    onClick={() => { if (isClickable(expert)) navigate(expertRoutes[expert]); }}
+                    style={isClickable(expert) ? { cursor: 'pointer', border: '1px solid #00f0ff', boxShadow: '0 0 15px rgba(0, 240, 255, 0.3)' } : {}}
+                  >
+                    <Bot className="card-icon" />
+                    <h4>{expert}</h4>
+                    {isClickable(expert) && <div style={{ fontSize: '0.75rem', color: '#00f0ff', marginTop: '5px' }}>Click to view Agent details</div>}
+                  </motion.div>
             ))}
           </motion.div>
         );

@@ -29,6 +29,71 @@ const aiExperts = [
   "Neural-Link Command Parser", "Autonomous Drone Coordinator", "Pre-Crime Legal Arbitrator"
 ];
 
+
+const expertRoutes = {
+  "Riot Prediction AI": "/riot-prediction-ai-agent",
+  "Force Deployment Scorer": "/force-deployment-scorer-agent",
+  "Real-Time Threat Assessor": "/real-time-threat-assessor-agent",
+  "Public Sentiment Analyst AI": "/public-sentiment-analyst-ai-agent",
+  "Event Security Planner AI": "/event-security-planner-ai-agent",
+  "Tactical Evacuation Agent": "/tactical-evacuation-agent-agent",
+  "Emergency Triage Coordinator": "/emergency-triage-coordinator-agent",
+  "Resource Optimization AI": "/resource-optimization-ai-agent",
+  "Weather & Disaster Impact AI": "/weather-disaster-impact-ai-agent",
+  "VIP Route Security AI": "/vip-route-security-ai-agent",
+  "Crowd Density Analyzer AI": "/crowd-density-analyzer-ai-agent",
+  "Flash Mob Predictor AI": "/flash-mob-predictor-ai-agent",
+  "Election Violence Heatmapper": "/election-violence-heatmapper-agent",
+  "Festival Crowd Surge Forecaster": "/festival-crowd-surge-forecaster-agent",
+  "Optimal Station Staffing AI": "/optimal-station-staffing-ai-agent",
+  "Anti-Riot Gear Allocator": "/anti-riot-gear-allocator-agent",
+  "Rapid Action Force Dispatcher": "/rapid-action-force-dispatcher-agent",
+  "Beat Patrol Routing Optimizer": "/beat-patrol-routing-optimizer-agent",
+  "Emergency Call Prioritization Agent": "/emergency-call-prioritization-agent-agent",
+  "Active Shooter Triangulator AI": "/active-shooter-triangulator-ai-agent",
+  "Hostage Situation Modeler": "/hostage-situation-modeler-agent",
+  "Simultaneous Attack Correlator": "/simultaneous-attack-correlator-agent",
+  "VVIP Route Vulnerability Assessor": "/vvip-route-vulnerability-assessor-agent",
+  "Convoy Speed Optimizer": "/convoy-speed-optimizer-agent",
+  "Stadium Crowd Dynamics Modeler": "/stadium-crowd-dynamics-modeler-agent",
+  "Sniper Over-watch Positioning AI": "/sniper-over-watch-positioning-ai-agent",
+  "Flood Evacuation Routing Agent": "/flood-evacuation-routing-agent-agent",
+  "Earthquake Triage AI": "/earthquake-triage-ai-agent",
+  "Hospital Bed Sync Coordinator": "/hospital-bed-sync-coordinator-agent",
+  "Relief Material Supply Chain AI": "/relief-material-supply-chain-ai-agent",
+  "Multi-Variable Threat Scorer": "/multi-variable-threat-scorer-agent",
+  "Sentiment Shift Trigger AI": "/sentiment-shift-trigger-ai-agent",
+  "Route Vulnerability Indexer": "/route-vulnerability-indexer-agent",
+  "Optimal Pathfinding AI": "/optimal-pathfinding-ai-agent",
+  "Automatic Escalation Protocol AI": "/automatic-escalation-protocol-ai-agent",
+  "Drone Recon Deployment AI": "/drone-recon-deployment-ai-agent",
+  "Gunfire Acoustic Triangulator": "/gunfire-acoustic-triangulator-agent",
+  "Predictive Force Exhaustion AI": "/predictive-force-exhaustion-ai-agent",
+  "Legal Use-of-Force Prompter": "/legal-use-of-force-prompter-agent",
+  "DGP Decision Support Matrix AI": "/dgp-decision-support-matrix-ai-agent",
+  "Live Threat Heatmap Generator": "/live-threat-heatmap-generator-agent",
+  "Force Readiness Board AI": "/force-readiness-board-ai-agent",
+  "VVIP Convoy Tracker AI": "/vvip-convoy-tracker-ai-agent",
+  "Disaster Command Board AI": "/disaster-command-board-ai-agent",
+  "Pre-Event Risk Assessor": "/pre-event-risk-assessor-agent",
+  "Riot Post-Mortem Analyst": "/riot-post-mortem-analyst-agent",
+  "Force Deployment Efficiency AI": "/force-deployment-efficiency-ai-agent",
+  "VVIP Security Auditor": "/vvip-security-auditor-agent",
+  "Emergency Response Time Profiler": "/emergency-response-time-profiler-agent",
+  "Resource Depletion Forecaster": "/resource-depletion-forecaster-agent",
+  "Rank-Based Override Validator": "/rank-based-override-validator-agent",
+  "Encrypted Tactical Comm Router": "/encrypted-tactical-comm-router-agent",
+  "Decision Audit Trail Analyzer": "/decision-audit-trail-analyzer-agent",
+  "Anti-Tamper Sensor Feed AI": "/anti-tamper-sensor-feed-ai-agent",
+  "Zero-Trust API Gateway Monitor": "/zero-trust-api-gateway-monitor-agent",
+  "Offline Fail-safe Mode Trigger": "/offline-fail-safe-mode-trigger-agent",
+  "Holographic Tactical Table Manager": "/holographic-tactical-table-manager-agent",
+  "Neural-Link Command Parser": "/neural-link-command-parser-agent",
+  "Autonomous Drone Coordinator": "/autonomous-drone-coordinator-agent",
+  "Pre-Crime Legal Arbitrator": "/pre-crime-legal-arbitrator-agent"
+};
+const isClickable = (expert) => !!expertRoutes[expert];
+
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
   { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
@@ -80,10 +145,19 @@ const DecisionDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid experts-grid">
             {aiExperts.map((expert, i) => (
-              <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-cyan">
-                <Bot className="card-icon" />
-                <h4>{expert}</h4>
-              </motion.div>
+              <motion.div 
+                    initial={{ opacity: 0, scale: 0.8 }} 
+                    animate={{ opacity: 1, scale: 1 }} 
+                    transition={{ delay: i * 0.03 }} 
+                    key={i} 
+                    className={`premium-card highlight-cyan ${isClickable(expert) ? 'clickable-agent-card' : ''}`}
+                    onClick={() => { if (isClickable(expert)) navigate(expertRoutes[expert]); }}
+                    style={isClickable(expert) ? { cursor: 'pointer', border: '1px solid #00f0ff', boxShadow: '0 0 15px rgba(0, 240, 255, 0.3)' } : {}}
+                  >
+                    <Bot className="card-icon" />
+                    <h4>{expert}</h4>
+                    {isClickable(expert) && <div style={{ fontSize: '0.75rem', color: '#00f0ff', marginTop: '5px' }}>Click to view Agent details</div>}
+                  </motion.div>
             ))}
           </motion.div>
         );

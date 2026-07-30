@@ -16,6 +16,28 @@ const aiExperts = [
   "Executive Command Dashboard AI", "Audit Trail AI"
 ];
 
+
+const expertRoutes = {
+  "Swarm Intelligence Coordinator AI": "/swarm-intelligence-coordinator-ai-agent",
+  "Cross-Department Orchestrator AI": "/cross-department-orchestrator-ai-agent",
+  "Dynamic Resource Allocator AI": "/dynamic-resource-allocator-ai-agent",
+  "Conflict Resolution Agent AI": "/conflict-resolution-agent-ai-agent",
+  "Task Delegation Master AI": "/task-delegation-master-ai-agent",
+  "Inter-Agency Protocol AI": "/inter-agency-protocol-ai-agent",
+  "Load Balancing AI": "/load-balancing-ai-agent",
+  "Agent Health Monitor AI": "/agent-health-monitor-ai-agent",
+  "Decentralized Command AI": "/decentralized-command-ai-agent",
+  "Intelligence Fusion Center AI": "/intelligence-fusion-center-ai-agent",
+  "Human-in-the-Loop AI": "/human-in-the-loop-ai-agent",
+  "Security Policy AI": "/security-policy-ai-agent",
+  "Integration Manager AI": "/integration-manager-ai-agent",
+  "Risk Prediction AI": "/risk-prediction-ai-agent",
+  "Anomaly Detection AI": "/anomaly-detection-ai-agent",
+  "Executive Command Dashboard AI": "/executive-command-dashboard-ai-agent",
+  "Audit Trail AI": "/audit-trail-ai-agent"
+};
+const isClickable = (expert) => !!expertRoutes[expert];
+
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
   { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
@@ -67,10 +89,19 @@ const MultiAgentDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid experts-grid">
             {aiExperts.map((expert, i) => (
-              <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-cyan">
-                <Bot className="card-icon" />
-                <h4>{expert}</h4>
-              </motion.div>
+              <motion.div 
+                    initial={{ opacity: 0, scale: 0.8 }} 
+                    animate={{ opacity: 1, scale: 1 }} 
+                    transition={{ delay: i * 0.03 }} 
+                    key={i} 
+                    className={`premium-card highlight-cyan ${isClickable(expert) ? 'clickable-agent-card' : ''}`}
+                    onClick={() => { if (isClickable(expert)) navigate(expertRoutes[expert]); }}
+                    style={isClickable(expert) ? { cursor: 'pointer', border: '1px solid #00f0ff', boxShadow: '0 0 15px rgba(0, 240, 255, 0.3)' } : {}}
+                  >
+                    <Bot className="card-icon" />
+                    <h4>{expert}</h4>
+                    {isClickable(expert) && <div style={{ fontSize: '0.75rem', color: '#00f0ff', marginTop: '5px' }}>Click to view Agent details</div>}
+                  </motion.div>
             ))}
           </motion.div>
         );

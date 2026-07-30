@@ -29,6 +29,71 @@ const aiExperts = [
   "Geolocation Spoofing Simulator", "Virtual Commando Trainer AI", "Future Crime Scenario Generator"
 ];
 
+
+const expertRoutes = {
+  "3D City Simulator AI": "/3d-city-simulator-ai-agent",
+  "Traffic Grid Modeler AI": "/traffic-grid-modeler-ai-agent",
+  "Virtual Station Load Tester": "/virtual-station-load-tester-agent",
+  "Crowd Physics Simulator": "/crowd-physics-simulator-agent",
+  "Disaster Impact Modeler AI": "/disaster-impact-modeler-ai-agent",
+  "VVIP Route Simulation Agent": "/vvip-route-simulation-agent-agent",
+  "Cyber-Twin Vulnerability Tester": "/cyber-twin-vulnerability-tester-agent",
+  "Emergency Response Optimizer": "/emergency-response-optimizer-agent",
+  "Riot Control Simulator AI": "/riot-control-simulator-ai-agent",
+  "Spatial Analytics Expert AI": "/spatial-analytics-expert-ai-agent",
+  "Tactical Breach Planner AI": "/tactical-breach-planner-ai-agent",
+  "Flood Dynamics Simulator AI": "/flood-dynamics-simulator-ai-agent",
+  "Earthquake Structural Integrity AI": "/earthquake-structural-integrity-ai-agent",
+  "Drone Swarm Sandbox Modeler": "/drone-swarm-sandbox-modeler-agent",
+  "Autonomous Vehicle Traffic AI": "/autonomous-vehicle-traffic-ai-agent",
+  "Sniper Line-of-Sight Calculator": "/sniper-line-of-sight-calculator-agent",
+  "Blast Radius Physics Engine": "/blast-radius-physics-engine-agent",
+  "Acoustic Reverberation Modeler": "/acoustic-reverberation-modeler-agent",
+  "Tear-Gas Dispersion Physics AI": "/tear-gas-dispersion-physics-ai-agent",
+  "Virtual VIP Decoy Simulator": "/virtual-vip-decoy-simulator-agent",
+  "Escape Route Viability Tester": "/escape-route-viability-tester-agent",
+  "Cyber-Attack Tabletop Exerciser": "/cyber-attack-tabletop-exerciser-agent",
+  "Subterranean Network Modeler": "/subterranean-network-modeler-agent",
+  "Hospital Surge Capacity Simulator": "/hospital-surge-capacity-simulator-agent",
+  "Emergency Call Center Load Tester": "/emergency-call-center-load-tester-agent",
+  "Evacuation Bottleneck Analyzer": "/evacuation-bottleneck-analyzer-agent",
+  "Cell-Block Capacity Predictor": "/cell-block-capacity-predictor-agent",
+  "Smart City Sensor Virtualizer": "/smart-city-sensor-virtualizer-agent",
+  "Green-Corridor Timing Simulator": "/green-corridor-timing-simulator-agent",
+  "Stadium Stampede Modeler": "/stadium-stampede-modeler-agent",
+  "Festival Crowd Flow Predictor": "/festival-crowd-flow-predictor-agent",
+  "Flash-Mob Convergence AI": "/flash-mob-convergence-ai-agent",
+  "Riot Gear Efficacy Tester": "/riot-gear-efficacy-tester-agent",
+  "Active Shooter VR Scenario AI": "/active-shooter-vr-scenario-ai-agent",
+  "Hostage Negotiation VR Trainer": "/hostage-negotiation-vr-trainer-agent",
+  "Airborne Toxin Drift Modeler": "/airborne-toxin-drift-modeler-agent",
+  "Radio-Frequency Shadow Mapper": "/radio-frequency-shadow-mapper-agent",
+  "CCTV Blind-Spot Identifier AI": "/cctv-blind-spot-identifier-ai-agent",
+  "Telecom Network Overload Modeler": "/telecom-network-overload-modeler-agent",
+  "Power Grid Failure Simulator": "/power-grid-failure-simulator-agent",
+  "Virtual Interrogation Room AI": "/virtual-interrogation-room-ai-agent",
+  "Evidence Tampering Simulator": "/evidence-tampering-simulator-agent",
+  "Crime Scene Recreation AI": "/crime-scene-recreation-ai-agent",
+  "Bullet Trajectory Simulator": "/bullet-trajectory-simulator-agent",
+  "High-Speed Chase Physics AI": "/high-speed-chase-physics-ai-agent",
+  "Virtual Perimeter Security AI": "/virtual-perimeter-security-ai-agent",
+  "Facial Recognition Load Tester": "/facial-recognition-load-tester-agent",
+  "Border Infiltration Modeler": "/border-infiltration-modeler-agent",
+  "Smuggling Route Simulator AI": "/smuggling-route-simulator-ai-agent",
+  "Maritime Port Logistics Twin": "/maritime-port-logistics-twin-agent",
+  "Airspace Violation Modeler AI": "/airspace-violation-modeler-ai-agent",
+  "Weapon Issue Bottleneck AI": "/weapon-issue-bottleneck-ai-agent",
+  "Shift Handover Optimization AI": "/shift-handover-optimization-ai-agent",
+  "Supply Chain Disruption Twin": "/supply-chain-disruption-twin-agent",
+  "Ransomware Blast Radius AI": "/ransomware-blast-radius-ai-agent",
+  "Multi-Agency Coordination Twin": "/multi-agency-coordination-twin-agent",
+  "Real-Time Resource Mirror AI": "/real-time-resource-mirror-ai-agent",
+  "Geolocation Spoofing Simulator": "/geolocation-spoofing-simulator-agent",
+  "Virtual Commando Trainer AI": "/virtual-commando-trainer-ai-agent",
+  "Future Crime Scenario Generator": "/future-crime-scenario-generator-agent"
+};
+const isClickable = (expert) => !!expertRoutes[expert];
+
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
   { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
@@ -80,10 +145,19 @@ const TwinDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid experts-grid">
             {aiExperts.map((expert, i) => (
-              <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-cyan">
-                <Bot className="card-icon" />
-                <h4>{expert}</h4>
-              </motion.div>
+              <motion.div 
+                    initial={{ opacity: 0, scale: 0.8 }} 
+                    animate={{ opacity: 1, scale: 1 }} 
+                    transition={{ delay: i * 0.03 }} 
+                    key={i} 
+                    className={`premium-card highlight-cyan ${isClickable(expert) ? 'clickable-agent-card' : ''}`}
+                    onClick={() => { if (isClickable(expert)) navigate(expertRoutes[expert]); }}
+                    style={isClickable(expert) ? { cursor: 'pointer', border: '1px solid #00f0ff', boxShadow: '0 0 15px rgba(0, 240, 255, 0.3)' } : {}}
+                  >
+                    <Bot className="card-icon" />
+                    <h4>{expert}</h4>
+                    {isClickable(expert) && <div style={{ fontSize: '0.75rem', color: '#00f0ff', marginTop: '5px' }}>Click to view Agent details</div>}
+                  </motion.div>
             ))}
           </motion.div>
         );
