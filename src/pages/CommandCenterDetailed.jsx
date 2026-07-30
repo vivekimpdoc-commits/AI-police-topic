@@ -29,6 +29,70 @@ const aiExperts = [
   "Geofence Breach Alert Agent", "Suspicious Vehicle Tracker AI", "City-wide Lockdown Coordinator"
 ];
 
+const agentRoutes = {
+  "ICCC Operations Commander AI": "/command-center/icccoperationscommanderaiagent",
+  "Emergency Dispatch Priority AI": "/command-center/emergencydispatchpriorityaiagent",
+  "City-wide Sensor Aggregator AI": "/command-center/citywidesensoraggregatoraiagent",
+  "Live Threat Triangulation AI": "/command-center/livethreattriangulationaiagent",
+  "Drone Fleet Over-watch AI": "/command-center/dronefleetoverwatchaiagent",
+  "Public Broadcast Controller AI": "/command-center/publicbroadcastcontrolleraiagent",
+  "VIP Convoy Coordinator AI": "/command-center/vipconvoycoordinatoraiagent",
+  "Riot Control Logistics AI": "/command-center/riotcontrollogisticsaiagent",
+  "Weather/Traffic Impact Analyzer": "/command-center/weathertrafficimpactanalyzeragent",
+  "Cyber-Command Defense Bot": "/command-center/cybercommanddefensebotagent",
+  "Force Readiness Optimizer AI": "/command-center/forcereadinessoptimizeraiagent",
+  "112 Call Triage Bot": "/command-center/one12calltriagebotagent",
+  "SOS Voice Stress Analyzer": "/command-center/sosvoicestressanalyzeragent",
+  "Nearest PCR Van Dispatcher": "/command-center/nearestpcrvandispatcheragent",
+  "Ambulance/Fire Co-routing AI": "/command-center/ambulancefirecoroutingaiagent",
+  "Traffic Light Override Manager": "/command-center/trafficlightoverridemanageragent",
+  "Smart Streetlight Dimming AI": "/command-center/smartstreetlightdimmingaiagent",
+  "Environmental Sensor Alert Bot": "/command-center/environmentalsensoralertbotagent",
+  "Body-Cam Feed Analyzer": "/command-center/bodycamfeedanalyzeragent",
+  "Helicopter FLIR (Thermal) Sync AI": "/command-center/helicopterflirthermalsyncaiagent",
+  "Sniper Scope Feed Integrator": "/command-center/sniperscopefeedintegratoragent",
+  "Hostage Situation Command Bot": "/command-center/hostagesituationcommandbotagent",
+  "Active Shooter Tracker AI": "/command-center/activeshootertrackeraiagent",
+  "Terrorist Siege Logistics Agent": "/command-center/terroristsiegelogisticsagent",
+  "Natural Disaster War-Room AI": "/command-center/naturaldisasterwarroomaiagent",
+  "CM/DGP Briefing Mode Auto-Generator": "/command-center/cmdgpbriefingmodeautogeneratoragent",
+  "Multi-Screen Video Analytics Bot": "/command-center/multiscreenvideoanalyticsbotagent",
+  "Crowd Panic Detection AI": "/command-center/crowdpanicdetectionaiagent",
+  "Force Depletion Alert Agent": "/command-center/forcedepletionalertagent",
+  "112 Multi-lingual Live Translator": "/command-center/one12multilinguallivetranslatoragent",
+  "VIP Route Dynamic Threat Scorer": "/command-center/viproutedynamicthreatscoreragent",
+  "Drone Swarm Target Locking AI": "/command-center/droneswarmtargetlockingaiagent",
+  "Gunshot Acoustic Triangulator": "/command-center/gunshotacoustictriangulatoragent",
+  "Real-time Hospital Bed Sync AI": "/command-center/realtimehospitalbedsyncaiagent",
+  "City-wide Evacuation Router": "/command-center/citywideevacuationrouteragent",
+  "Cyber-Attack Tabletop AI": "/command-center/cyberattacktabletopaiagent",
+  "Fire Spread Predictor AI": "/command-center/firespreadpredictoraiagent",
+  "Flood Level Monitoring Agent": "/command-center/floodlevelmonitoringagent",
+  "High-Speed Chase Over-watch Bot": "/command-center/highspeedchaseoverwatchbotagent",
+  "Automated Press Release Drafter": "/command-center/automatedpressreleasedrafteragent",
+  "Social Media Panic Assuager Bot": "/command-center/socialmediapanicassuagerbotagent",
+  "Rogue Drone Interceptor AI": "/command-center/roguedroneinterceptoraiagent",
+  "Subway/Metro System Sync Bot": "/command-center/subwaymetrosystemsyncbotagent",
+  "Power Grid Failure Over-watch": "/command-center/powergridfailureoverwatchagent",
+  "Mobile Cell-Tower Deployment AI": "/command-center/mobilecelltowerdeploymentaiagent",
+  "SWAT Team Gear Readiness Bot": "/command-center/swatteamgearreadinessbotagent",
+  "Hostage Negotiation Prompter": "/command-center/hostagenegotiationprompteragent",
+  "Airborne Bio-Threat Sensor AI": "/command-center/airbornebiothreatsensoraiagent",
+  "Radiation Leak Heatmapper": "/command-center/radiationleakheatmapperagent",
+  "Maritime Port Over-watch AI": "/command-center/maritimeportoverwatchaiagent",
+  "Airport Security Sync Agent": "/command-center/airportsecuritysyncagent",
+  "Border Checkpoint Integrator": "/command-center/bordercheckpointintegratoragent",
+  "Public Sentiment Radar (Real-Time)": "/command-center/publicsentimentradarrealtimeagent",
+  "Crisis Volunteer Coordinator AI": "/command-center/crisisvolunteercoordinatoraiagent",
+  "Automated Kill-Switch Executor": "/command-center/automatedkillswitchexecutoragent",
+  "ICCC EMP Failover AI": "/command-center/icccempfailoveraiagent",
+  "Multi-agency Intel Fusion Bot": "/command-center/multiagencyintelfusionbotagent",
+  "Geofence Breach Alert Agent": "/command-center/geofencebreachalertagent",
+  "Suspicious Vehicle Tracker AI": "/command-center/suspiciousvehicletrackeraiagent",
+  "City-wide Lockdown Coordinator": "/command-center/citywidelockdowncoordinatoragent",
+};
+
+
 const tabs = [
   { id: 'overview', label: 'Platform Overview', icon: <FileText size={18} /> },
   { id: 'experts', label: 'Core AI Topics', icon: <Bot size={18} /> },
@@ -80,7 +144,7 @@ const CommandCenterDetailed = () => {
         return (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="content-grid experts-grid">
             {aiExperts.map((expert, i) => (
-              <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-cyan">
+              <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.03 }} key={i} className="premium-card highlight-cyan" onClick={() => agentRoutes[expert] && navigate(agentRoutes[expert])} style={{cursor: 'pointer'}}>
                 <Bot className="card-icon" />
                 <h4>{expert}</h4>
               </motion.div>

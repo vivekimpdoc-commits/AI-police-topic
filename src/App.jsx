@@ -1477,6 +1477,65 @@ import FutureInflationAdjustmentAIAgent from './pages/FutureInflationAdjustmentA
 
 
 import { Globe, ShieldAlert } from 'lucide-react';
+import IcccOperationsCommanderAiAgent from './pages/IcccOperationsCommanderAiAgent';
+import EmergencyDispatchPriorityAiAgent from './pages/EmergencyDispatchPriorityAiAgent';
+import CityWideSensorAggregatorAiAgent from './pages/CityWideSensorAggregatorAiAgent';
+import LiveThreatTriangulationAiAgent from './pages/LiveThreatTriangulationAiAgent';
+import DroneFleetOverWatchAiAgent from './pages/DroneFleetOverWatchAiAgent';
+import PublicBroadcastControllerAiAgent from './pages/PublicBroadcastControllerAiAgent';
+import VipConvoyCoordinatorAiAgent from './pages/VipConvoyCoordinatorAiAgent';
+import RiotControlLogisticsAiAgent from './pages/RiotControlLogisticsAiAgent';
+import WeatherTrafficImpactAnalyzerAgent from './pages/WeatherTrafficImpactAnalyzerAgent';
+import CyberCommandDefenseBotAgent from './pages/CyberCommandDefenseBotAgent';
+import ForceReadinessOptimizerAiAgent from './pages/ForceReadinessOptimizerAiAgent';
+import One12CallTriageBotAgent from './pages/One12CallTriageBotAgent';
+import SosVoiceStressAnalyzerAgent from './pages/SosVoiceStressAnalyzerAgent';
+import NearestPcrVanDispatcherAgent from './pages/NearestPcrVanDispatcherAgent';
+import AmbulanceFireCoRoutingAiAgent from './pages/AmbulanceFireCoRoutingAiAgent';
+import TrafficLightOverrideManagerAgent from './pages/TrafficLightOverrideManagerAgent';
+import SmartStreetlightDimmingAiAgent from './pages/SmartStreetlightDimmingAiAgent';
+import EnvironmentalSensorAlertBotAgent from './pages/EnvironmentalSensorAlertBotAgent';
+import BodyCamFeedAnalyzerAgent from './pages/BodyCamFeedAnalyzerAgent';
+import HelicopterFlirThermalSyncAiAgent from './pages/HelicopterFlirThermalSyncAiAgent';
+import SniperScopeFeedIntegratorAgent from './pages/SniperScopeFeedIntegratorAgent';
+import HostageSituationCommandBotAgent from './pages/HostageSituationCommandBotAgent';
+import ActiveShooterTrackerAiAgent from './pages/ActiveShooterTrackerAiAgent';
+import TerroristSiegeLogisticsAgent from './pages/TerroristSiegeLogisticsAgent';
+import NaturalDisasterWarRoomAiAgent from './pages/NaturalDisasterWarRoomAiAgent';
+import CmDgpBriefingModeAutoGeneratorAgent from './pages/CmDgpBriefingModeAutoGeneratorAgent';
+import MultiScreenVideoAnalyticsBotAgent from './pages/MultiScreenVideoAnalyticsBotAgent';
+import CrowdPanicDetectionAiAgent from './pages/CrowdPanicDetectionAiAgent';
+import ForceDepletionAlertAgent from './pages/ForceDepletionAlertAgent';
+import One12MultiLingualLiveTranslatorAgent from './pages/One12MultiLingualLiveTranslatorAgent';
+import VipRouteDynamicThreatScorerAgent from './pages/VipRouteDynamicThreatScorerAgent';
+import DroneSwarmTargetLockingAiAgent from './pages/DroneSwarmTargetLockingAiAgent';
+import RealTimeHospitalBedSyncAiAgent from './pages/RealTimeHospitalBedSyncAiAgent';
+import CityWideEvacuationRouterAgent from './pages/CityWideEvacuationRouterAgent';
+import CyberAttackTabletopAiAgent from './pages/CyberAttackTabletopAiAgent';
+import FireSpreadPredictorAiAgent from './pages/FireSpreadPredictorAiAgent';
+import FloodLevelMonitoringAgent from './pages/FloodLevelMonitoringAgent';
+import HighSpeedChaseOverWatchBotAgent from './pages/HighSpeedChaseOverWatchBotAgent';
+import AutomatedPressReleaseDrafterAgent from './pages/AutomatedPressReleaseDrafterAgent';
+import SocialMediaPanicAssuagerBotAgent from './pages/SocialMediaPanicAssuagerBotAgent';
+import RogueDroneInterceptorAiAgent from './pages/RogueDroneInterceptorAiAgent';
+import SubwayMetroSystemSyncBotAgent from './pages/SubwayMetroSystemSyncBotAgent';
+import PowerGridFailureOverWatchAgent from './pages/PowerGridFailureOverWatchAgent';
+import MobileCellTowerDeploymentAiAgent from './pages/MobileCellTowerDeploymentAiAgent';
+import SwatTeamGearReadinessBotAgent from './pages/SwatTeamGearReadinessBotAgent';
+import HostageNegotiationPrompterAgent from './pages/HostageNegotiationPrompterAgent';
+import AirborneBioThreatSensorAiAgent from './pages/AirborneBioThreatSensorAiAgent';
+import RadiationLeakHeatmapperAgent from './pages/RadiationLeakHeatmapperAgent';
+import MaritimePortOverWatchAiAgent from './pages/MaritimePortOverWatchAiAgent';
+import AirportSecuritySyncAgent from './pages/AirportSecuritySyncAgent';
+import BorderCheckpointIntegratorAgent from './pages/BorderCheckpointIntegratorAgent';
+import PublicSentimentRadarRealTimeAgent from './pages/PublicSentimentRadarRealTimeAgent';
+import CrisisVolunteerCoordinatorAiAgent from './pages/CrisisVolunteerCoordinatorAiAgent';
+import AutomatedKillSwitchExecutorAgent from './pages/AutomatedKillSwitchExecutorAgent';
+import IcccEmpFailoverAiAgent from './pages/IcccEmpFailoverAiAgent';
+import MultiAgencyIntelFusionBotAgent from './pages/MultiAgencyIntelFusionBotAgent';
+import GeofenceBreachAlertAgent from './pages/GeofenceBreachAlertAgent';
+import SuspiciousVehicleTrackerAiAgent from './pages/SuspiciousVehicleTrackerAiAgent';
+import CityWideLockdownCoordinatorAgent from './pages/CityWideLockdownCoordinatorAgent';
 
 const TopNav = () => {
   const { language, toggleLanguage } = useLanguage();
@@ -4453,7 +4512,67 @@ const AnimatedRoutes = () => {
         <Route path="/social-media-radicalization-bot-agent" element={<SocialMediaRadicalizationBotAgent />} />
         <Route path="/arms-smuggling-predictor-agent" element={<ArmsSmugglingPredictorAgent />} />
         <Route path="/criminal-profiler-agent-agent" element={<CriminalProfilerAgentAgent />} />
-      </Routes>
+                <Route path="/command-center/icccoperationscommanderaiagent" element={<IcccOperationsCommanderAiAgent />} />
+          <Route path="/command-center/emergencydispatchpriorityaiagent" element={<EmergencyDispatchPriorityAiAgent />} />
+          <Route path="/command-center/citywidesensoraggregatoraiagent" element={<CityWideSensorAggregatorAiAgent />} />
+          <Route path="/command-center/livethreattriangulationaiagent" element={<LiveThreatTriangulationAiAgent />} />
+          <Route path="/command-center/dronefleetoverwatchaiagent" element={<DroneFleetOverWatchAiAgent />} />
+          <Route path="/command-center/publicbroadcastcontrolleraiagent" element={<PublicBroadcastControllerAiAgent />} />
+          <Route path="/command-center/vipconvoycoordinatoraiagent" element={<VipConvoyCoordinatorAiAgent />} />
+          <Route path="/command-center/riotcontrollogisticsaiagent" element={<RiotControlLogisticsAiAgent />} />
+          <Route path="/command-center/weathertrafficimpactanalyzeragent" element={<WeatherTrafficImpactAnalyzerAgent />} />
+          <Route path="/command-center/cybercommanddefensebotagent" element={<CyberCommandDefenseBotAgent />} />
+          <Route path="/command-center/forcereadinessoptimizeraiagent" element={<ForceReadinessOptimizerAiAgent />} />
+          <Route path="/command-center/one12calltriagebotagent" element={<One12CallTriageBotAgent />} />
+          <Route path="/command-center/sosvoicestressanalyzeragent" element={<SosVoiceStressAnalyzerAgent />} />
+          <Route path="/command-center/nearestpcrvandispatcheragent" element={<NearestPcrVanDispatcherAgent />} />
+          <Route path="/command-center/ambulancefirecoroutingaiagent" element={<AmbulanceFireCoRoutingAiAgent />} />
+          <Route path="/command-center/trafficlightoverridemanageragent" element={<TrafficLightOverrideManagerAgent />} />
+          <Route path="/command-center/smartstreetlightdimmingaiagent" element={<SmartStreetlightDimmingAiAgent />} />
+          <Route path="/command-center/environmentalsensoralertbotagent" element={<EnvironmentalSensorAlertBotAgent />} />
+          <Route path="/command-center/bodycamfeedanalyzeragent" element={<BodyCamFeedAnalyzerAgent />} />
+          <Route path="/command-center/helicopterflirthermalsyncaiagent" element={<HelicopterFlirThermalSyncAiAgent />} />
+          <Route path="/command-center/sniperscopefeedintegratoragent" element={<SniperScopeFeedIntegratorAgent />} />
+          <Route path="/command-center/hostagesituationcommandbotagent" element={<HostageSituationCommandBotAgent />} />
+          <Route path="/command-center/activeshootertrackeraiagent" element={<ActiveShooterTrackerAiAgent />} />
+          <Route path="/command-center/terroristsiegelogisticsagent" element={<TerroristSiegeLogisticsAgent />} />
+          <Route path="/command-center/naturaldisasterwarroomaiagent" element={<NaturalDisasterWarRoomAiAgent />} />
+          <Route path="/command-center/cmdgpbriefingmodeautogeneratoragent" element={<CmDgpBriefingModeAutoGeneratorAgent />} />
+          <Route path="/command-center/multiscreenvideoanalyticsbotagent" element={<MultiScreenVideoAnalyticsBotAgent />} />
+          <Route path="/command-center/crowdpanicdetectionaiagent" element={<CrowdPanicDetectionAiAgent />} />
+          <Route path="/command-center/forcedepletionalertagent" element={<ForceDepletionAlertAgent />} />
+          <Route path="/command-center/one12multilinguallivetranslatoragent" element={<One12MultiLingualLiveTranslatorAgent />} />
+          <Route path="/command-center/viproutedynamicthreatscoreragent" element={<VipRouteDynamicThreatScorerAgent />} />
+          <Route path="/command-center/droneswarmtargetlockingaiagent" element={<DroneSwarmTargetLockingAiAgent />} />
+          <Route path="/command-center/gunshotacoustictriangulatoragent" element={<GunshotAcousticTriangulatorAgent />} />
+          <Route path="/command-center/realtimehospitalbedsyncaiagent" element={<RealTimeHospitalBedSyncAiAgent />} />
+          <Route path="/command-center/citywideevacuationrouteragent" element={<CityWideEvacuationRouterAgent />} />
+          <Route path="/command-center/cyberattacktabletopaiagent" element={<CyberAttackTabletopAiAgent />} />
+          <Route path="/command-center/firespreadpredictoraiagent" element={<FireSpreadPredictorAiAgent />} />
+          <Route path="/command-center/floodlevelmonitoringagent" element={<FloodLevelMonitoringAgent />} />
+          <Route path="/command-center/highspeedchaseoverwatchbotagent" element={<HighSpeedChaseOverWatchBotAgent />} />
+          <Route path="/command-center/automatedpressreleasedrafteragent" element={<AutomatedPressReleaseDrafterAgent />} />
+          <Route path="/command-center/socialmediapanicassuagerbotagent" element={<SocialMediaPanicAssuagerBotAgent />} />
+          <Route path="/command-center/roguedroneinterceptoraiagent" element={<RogueDroneInterceptorAiAgent />} />
+          <Route path="/command-center/subwaymetrosystemsyncbotagent" element={<SubwayMetroSystemSyncBotAgent />} />
+          <Route path="/command-center/powergridfailureoverwatchagent" element={<PowerGridFailureOverWatchAgent />} />
+          <Route path="/command-center/mobilecelltowerdeploymentaiagent" element={<MobileCellTowerDeploymentAiAgent />} />
+          <Route path="/command-center/swatteamgearreadinessbotagent" element={<SwatTeamGearReadinessBotAgent />} />
+          <Route path="/command-center/hostagenegotiationprompteragent" element={<HostageNegotiationPrompterAgent />} />
+          <Route path="/command-center/airbornebiothreatsensoraiagent" element={<AirborneBioThreatSensorAiAgent />} />
+          <Route path="/command-center/radiationleakheatmapperagent" element={<RadiationLeakHeatmapperAgent />} />
+          <Route path="/command-center/maritimeportoverwatchaiagent" element={<MaritimePortOverWatchAiAgent />} />
+          <Route path="/command-center/airportsecuritysyncagent" element={<AirportSecuritySyncAgent />} />
+          <Route path="/command-center/bordercheckpointintegratoragent" element={<BorderCheckpointIntegratorAgent />} />
+          <Route path="/command-center/publicsentimentradarrealtimeagent" element={<PublicSentimentRadarRealTimeAgent />} />
+          <Route path="/command-center/crisisvolunteercoordinatoraiagent" element={<CrisisVolunteerCoordinatorAiAgent />} />
+          <Route path="/command-center/automatedkillswitchexecutoragent" element={<AutomatedKillSwitchExecutorAgent />} />
+          <Route path="/command-center/icccempfailoveraiagent" element={<IcccEmpFailoverAiAgent />} />
+          <Route path="/command-center/multiagencyintelfusionbotagent" element={<MultiAgencyIntelFusionBotAgent />} />
+          <Route path="/command-center/geofencebreachalertagent" element={<GeofenceBreachAlertAgent />} />
+          <Route path="/command-center/suspiciousvehicletrackeraiagent" element={<SuspiciousVehicleTrackerAiAgent />} />
+          <Route path="/command-center/citywidelockdowncoordinatoragent" element={<CityWideLockdownCoordinatorAgent />} />
+        </Routes>
     </AnimatePresence>
   );
 };
