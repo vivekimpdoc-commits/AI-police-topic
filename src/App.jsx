@@ -4590,7 +4590,9 @@ function App() {
         <div className="hud-grid"></div>
         <div className="hud-scanlines"></div>
         <div className="hud-glow"></div>
+        <NetworkBackground />
         <TopNav />
+        <AICopilotWidget />
         
         <div className="dashboard-layout">
           <main className="main-content scrollbar-hide" style={{ paddingTop: '80px' }}>

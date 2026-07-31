@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Search, ShieldAlert, Fingerprint, Database, Cpu, Activity, GlobeLock, FolderKanban, Zap, Network, ChevronLeft, ChevronRight, Clock, CalendarDays } from 'lucide-react';
+import { Search, ShieldAlert, Fingerprint, Database, Cpu, Activity, GlobeLock, FolderKanban, Zap, Network, ChevronLeft, ChevronRight, Clock, CalendarDays, Mic, MicOff } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
 import { modules } from '../data/modules';
@@ -39,6 +39,30 @@ const Home = () => {
   
   // State for Filtering and Pagination
   const [searchTerm, setSearchTerm] = useState('');
+  const [isListening, setIsListening] = useState(false);
+
+  const startListening = () => {
+    if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      const recognition = new SpeechRecognition();
+      recognition.lang = language === 'en' ? 'en-US' : 'hi-IN';
+      recognition.interimResults = false;
+      recognition.maxAlternatives = 1;
+
+      recognition.onstart = () => setIsListening(true);
+      recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript;
+        setSearchTerm(transcript);
+        setIsListening(false);
+      };
+      recognition.onerror = () => setIsListening(false);
+      recognition.onend = () => setIsListening(false);
+
+      recognition.start();
+    } else {
+      alert("Voice search is not supported in this browser.");
+    }
+  };
   const [selectedLetter, setSelectedLetter] = useState('ALL');
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
