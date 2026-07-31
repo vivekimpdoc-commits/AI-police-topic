@@ -123,8 +123,6 @@ const Home = () => {
           </div>
         </div>
 
-        <LiveTelemetry />
-
         {/* Modules Grid */}
         <div style={{
           display: 'grid',
