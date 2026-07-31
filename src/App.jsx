@@ -1,4 +1,7 @@
 import React from 'react';
+import DynamicAgent from './pages/DynamicAgent';
+import GlobalThreatIntelligenceDetailed from './pages/GlobalThreatIntelligenceDetailed';
+import MetaverseVRTrainingDetailed from './pages/MetaverseVRTrainingDetailed';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import './index.css';
@@ -4572,6 +4575,9 @@ const AnimatedRoutes = () => {
           <Route path="/command-center/geofencebreachalertagent" element={<GeofenceBreachAlertAgent />} />
           <Route path="/command-center/suspiciousvehicletrackeraiagent" element={<SuspiciousVehicleTrackerAiAgent />} />
           <Route path="/command-center/citywidelockdowncoordinatoragent" element={<CityWideLockdownCoordinatorAgent />} />
+          <Route path="/module/global-threat-intelligence" element={<GlobalThreatIntelligenceDetailed />} />
+          <Route path="/module/metaverse-vr-training" element={<MetaverseVRTrainingDetailed />} />
+          <Route path="/agent/:agentName" element={<DynamicAgent />} />
         </Routes>
     </AnimatePresence>
   );
