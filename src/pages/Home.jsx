@@ -8,40 +8,41 @@ import { modules } from '../data/modules';
 
 // A dynamic sub-component for the live telemetry bar
 const LiveTelemetry = () => {
-  const [nodes, setNodes] = useState(1042);
-  const [latency, setLatency] = useState(12);
-  const [processed, setProcessed] = useState(8459200);
+  const { language } = useLanguage();
+  const [patrols, setPatrols] = useState(1042);
+  const [threats, setThreats] = useState(12);
+  const [sos, setSos] = useState(845);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setNodes(prev => prev + Math.floor(Math.random() * 5) - 2);
-      setLatency(Math.floor(Math.random() * 10) + 8);
-      setProcessed(prev => prev + Math.floor(Math.random() * 150));
-    }, 2000);
+      setPatrols(prev => prev + Math.floor(Math.random() * 5) - 2);
+      setThreats(Math.floor(Math.random() * 5) + 2);
+      setSos(prev => prev + Math.floor(Math.random() * 3));
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div style={{ display: 'flex', gap: '2rem', padding: '1.5rem', background: 'var(--color-panel)', backdropFilter: 'blur(10px)', border: '1px solid var(--glass-border)', borderRadius: '12px', marginBottom: '2rem', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>
       <div style={{ flex: 1, display: 'flex', alignItems: 'center', gap: '15px', borderRight: '1px solid rgba(255,255,255,0.1)' }}>
-        <Network size={32} color="var(--color-primary)" />
+        <ShieldAlert size={32} color="var(--color-primary)" />
         <div>
-          <div style={{ fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px' }}>Active AI Nodes</div>
-          <div style={{ fontSize: '1.5rem', fontWeight: 800, color: '#fff', textShadow: '0 0 10px var(--glass-border)' }}>{nodes.toLocaleString()}</div>
+          <div style={{ fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px' }}>{language === 'en' ? 'Active AI Patrol Units' : 'सक्रिय एआई गश्त इकाइयाँ'}</div>
+          <div style={{ fontSize: '1.5rem', fontWeight: 800, color: '#fff', textShadow: '0 0 10px var(--glass-border)' }}>{patrols.toLocaleString()}</div>
         </div>
       </div>
       <div style={{ flex: 1, display: 'flex', alignItems: 'center', gap: '15px', borderRight: '1px solid rgba(255,255,255,0.1)' }}>
-        <Zap size={32} color="#10b981" />
+        <Activity size={32} color="#ef4444" />
         <div>
-          <div style={{ fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px' }}>Network Latency</div>
-          <div style={{ fontSize: '1.5rem', fontWeight: 800, color: '#10b981', textShadow: '0 0 10px rgba(16, 185, 129, 0.5)' }}>{latency} ms</div>
+          <div style={{ fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px' }}>{language === 'en' ? 'Live Threats Detected' : 'लाइव खतरे का पता चला'}</div>
+          <div style={{ fontSize: '1.5rem', fontWeight: 800, color: '#ef4444', textShadow: '0 0 10px rgba(239, 68, 68, 0.5)' }}>{threats}</div>
         </div>
       </div>
       <div style={{ flex: 1, display: 'flex', alignItems: 'center', gap: '15px' }}>
-        <Database size={32} color="#3b82f6" />
+        <Zap size={32} color="#f59e0b" />
         <div>
-          <div style={{ fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px' }}>Data Processed (TB)</div>
-          <div style={{ fontSize: '1.5rem', fontWeight: 800, color: '#3b82f6', textShadow: '0 0 10px rgba(59, 130, 246, 0.5)' }}>{(processed / 1000).toFixed(2)}</div>
+          <div style={{ fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px' }}>{language === 'en' ? 'Emergency SOS Signals' : 'आपातकालीन एसओएस सिग्नल'}</div>
+          <div style={{ fontSize: '1.5rem', fontWeight: 800, color: '#f59e0b', textShadow: '0 0 10px rgba(245, 158, 11, 0.5)' }}>{sos.toLocaleString()}</div>
         </div>
       </div>
     </div>
