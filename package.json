@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tsparticles/react": "^4.3.2",
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "framer-motion": "^12.42.2",
@@ -18,7 +19,7 @@
     "react-dom": "^19.2.7",
     "react-intersection-observer": "^10.1.0",
     "react-router-dom": "^7.18.1",
-    "react-tsparticles": "^2.12.2"
+    "tsparticles": "^4.3.2"
   },
   "devDependencies": {
     "@prisma/client": "^5.22.0",
